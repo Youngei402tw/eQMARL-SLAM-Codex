@@ -1,0 +1,163 @@
+{
+  "schema_version": "0.1.0",
+  "branch_creation_policy": "Create on stage start from the verified dependency completion commit; retain after integration.",
+  "quantum_advantage_required_to_complete": false,
+  "stages": [
+    {
+      "id": "00",
+      "name": "plan",
+      "title": "Design and publication scaffold",
+      "branch": "stage/00-plan",
+      "depends_on": [],
+      "initial_status": "planned",
+      "report": "docs/stages/00-plan.md",
+      "status": "passed",
+      "branch_created": true
+    },
+    {
+      "id": "01",
+      "name": "reference-port",
+      "title": "Dependency lock and faithful reference port",
+      "branch": "stage/01-reference-port",
+      "depends_on": [
+        "00"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/01-reference-port.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "02",
+      "name": "exploration-controls",
+      "title": "Grid environment and evaluation controls",
+      "branch": "stage/02-exploration-controls",
+      "depends_on": [
+        "01"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/02-exploration-controls.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "03",
+      "name": "slam-beliefs",
+      "title": "Genuine 2D estimator and uncertainty tests",
+      "branch": "stage/03-slam-beliefs",
+      "depends_on": [
+        "02"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/03-slam-beliefs.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "04",
+      "name": "classical-controller",
+      "title": "Common recurrent high-level controller",
+      "branch": "stage/04-classical-controller",
+      "depends_on": [
+        "03"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/04-classical-controller.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "05",
+      "name": "critic-ablation",
+      "title": "Matched classical and quantum critics",
+      "branch": "stage/05-critic-ablation",
+      "depends_on": [
+        "04"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/05-critic-ablation.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "06",
+      "name": "interaction-model",
+      "title": "Interaction mechanism and matched classical control",
+      "branch": "stage/06-interaction-model",
+      "depends_on": [
+        "05"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/06-interaction-model.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "07",
+      "name": "shot-noise",
+      "title": "Finite-shot noise and resource frontier",
+      "branch": "stage/07-shot-noise",
+      "depends_on": [
+        "05"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/07-shot-noise.md",
+      "conditional_dependencies": [
+        {
+          "stage": "06",
+          "when": "Using the interaction-study candidate"
+        }
+      ],
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "08",
+      "name": "confirmatory",
+      "title": "Frozen held-out multi-seed comparison",
+      "branch": "stage/08-confirmatory",
+      "depends_on": [
+        "05"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/08-confirmatory.md",
+      "conditional_dependencies": [
+        {
+          "stage": "06",
+          "when": "Confirming an interaction-model claim"
+        },
+        {
+          "stage": "07",
+          "when": "Confirming a finite-shot or noise-robustness claim"
+        }
+      ],
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "09",
+      "name": "release",
+      "title": "Reproducible report and final evidence audit",
+      "branch": "stage/09-release",
+      "depends_on": [
+        "08"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/09-release.md",
+      "status": "planned",
+      "branch_created": false
+    }
+  ],
+  "recommended_execution_order": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09"
+  ]
+}

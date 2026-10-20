@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1.0",
+  "paper": {
+    "arxiv": "2405.17486",
+    "reviewed_version": "v2",
+    "url": "https://arxiv.org/abs/2405.17486"
+  },
+  "repositories": [
+    {
+      "role": "official_reference",
+      "repository": "news-vt/eqmarl",
+      "commit": "6b1b2e3817f661da81aad5e7188a362380dbdd1d",
+      "url": "https://github.com/news-vt/eqmarl",
+      "license_observed": "CC BY 4.0"
+    },
+    {
+      "role": "user_older_implementation",
+      "repository": "Youngei402tw/eQMARL-SLAM",
+      "commit": "60388c4641a6ce23b4b750f6bde4bc97b7621036",
+      "url": "https://github.com/Youngei402tw/eQMARL-SLAM"
+    },
+    {
+      "role": "user_new_main",
+      "repository": "Youngei402tw/eQMARL-SLAM-NEW",
+      "ref": "main",
+      "commit": "d16916f42e8e39eb69dbfe84d5f2c5ecec9db30f",
+      "url": "https://github.com/Youngei402tw/eQMARL-SLAM-NEW"
+    },
+    {
+      "role": "user_active_slam_branch",
+      "repository": "Youngei402tw/eQMARL-SLAM-NEW",
+      "ref": "active-slam-improvements",
+      "commit": "4ff242a69f33ac76a3127b6a960552f6b9a629d5",
+      "url": "https://github.com/Youngei402tw/eQMARL-SLAM-NEW/tree/active-slam-improvements"
+    }
+  ]
+}

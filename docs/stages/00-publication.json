@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "stage": "00",
+  "verified_at_utc": "2026-10-20T09:01:43.124685+00:00",
+  "repository": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+  "visibility": "public",
+  "verified_branch": "stage/00-plan",
+  "verified_planning_commit": "4348371bc2afb573ddff2d4884f373b28f3df685",
+  "verified_tree": "2615fd0460c56a354bd3d0db794c235ac5c12cd3",
+  "planning_files_verified": 20,
+  "verification": [
+    "GitHub branch head matched the published planning commit",
+    "All remote file Git blob hashes matched the prepared local bytes",
+    "AGENTS.md content was read back through the GitHub plugin",
+    "Planning validator passed locally"
+  ],
+  "training_runs_executed": 0,
+  "note": "This receipt records the planning commit verified before the receipt itself was committed. The main-branch project index records the later Stage 00 completion commit and PR integration."
+}

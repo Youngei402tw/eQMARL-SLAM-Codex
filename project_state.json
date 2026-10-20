@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "updated_utc": "2026-10-20T09:01:43.124685+00:00",
+  "repository": {
+    "owner": "Youngei402tw",
+    "name": "eQMARL-SLAM-Codex",
+    "visibility": "public",
+    "created": true,
+    "remote_verified": true,
+    "url": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+    "last_check": "All 20 files of the published planning commit matched their local Git blob hashes; the stage branch head and AGENTS.md content were read back through the GitHub plugin."
+  },
+  "authorized_current_scope": "Stage 00 planning and repository initialization. Training begins in a future session instructed to execute the plan or a stage.",
+  "active_stage": "00",
+  "stage_status": "passed",
+  "training_runs_executed": 0,
+  "current_branch": "stage/00-plan",
+  "dependency_commit": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
+  "completion_commit": null,
+  "publication_status": "verified",
+  "verified_remote_commits": {
+    "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
+    "stage/00-plan": "4348371bc2afb573ddff2d4884f373b28f3df685"
+  },
+  "blockers": [],
+  "next_action": "On an instruction to execute the plan or Stage 01, create stage/01-reference-port from the Stage 00 completion commit recorded on main, read docs/adr/0001-pytorch-stack.md and the Stage 01 preflight, resolve a compatible Python/PyTorch/PennyLane environment, and implement the numerical reference fixtures and model contracts.",
+  "planning_validation": "passed",
+  "review_findings_resolved": [
+    "EKF versus historical smoothing scope",
+    "same-step revisit comparison",
+    "trainable actor versus frozen architecture",
+    "source commit publication before runs",
+    "typed compute counters",
+    "schema and numerical tolerance consistency"
+  ],
+  "next_stage": "01",
+  "verification_note": "These are the verified heads before this receipt was committed. The final immutable Stage 00 completion commit is recorded by the subsequent main-branch index update.",
+  "completion_commit_location": "main:project_state.json",
+  "next_stage_status": "planned"
+}
