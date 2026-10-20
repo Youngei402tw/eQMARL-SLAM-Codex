@@ -29,7 +29,9 @@
       "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
-      "publication_receipt": "docs/stages/01-publication.json"
+      "publication_receipt": "docs/stages/01-publication.json",
+      "completion_commit": "6b49e7010d9c0667acb41854b1d008f303ea0355",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/2"
     },
     {
       "id": "02",
@@ -41,8 +43,9 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/02-exploration-controls.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "running",
+      "branch_created": true,
+      "dependency_completion_commit": "6b49e7010d9c0667acb41854b1d008f303ea0355"
     },
     {
       "id": "03",

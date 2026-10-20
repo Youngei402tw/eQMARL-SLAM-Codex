@@ -1,0 +1,14 @@
+{
+  "stage": "02",
+  "dependency_completion_commit": "6b49e7010d9c0667acb41854b1d008f303ea0355",
+  "runs": [
+    {
+      "run_id": "02-exploration-controls-v1_seedset-1101_attempt-01",
+      "status": "planned",
+      "config": "configs/stage02/controls.yaml",
+      "config_sha256": "d230e61b9abe0bb6089c7956d73b1d69ab5bab25b3dc71edd501ee3c2e3fa7ed",
+      "source_commit": null,
+      "results_commit": null
+    }
+  ]
+}

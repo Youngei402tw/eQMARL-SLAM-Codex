@@ -2,7 +2,7 @@
 
 A staged research project to test whether an entangled quantum critic improves cooperative active SLAM under controlled information, model, and compute budgets.
 
-**Stage 00 is complete: the execution plan and repository scaffold are published and verified. Stage 01 is next and has not started. No training experiments have run.** See [project_state.json](project_state.json) for the verified commits and next action, and the [publication receipt](docs/stages/00-publication.json) for the file verification evidence.
+**Stages 00 and 01 passed with verified evidence; Stage 02 is running. No policy training has run.** See [project_state.json](project_state.json) for the verified commits and next action, and the [publication receipt](docs/stages/00-publication.json) for the file verification evidence.
 
 ## Start here
 
@@ -40,17 +40,19 @@ A positive, null, or negative quantum comparison can all complete the project. C
 | 08 | `stage/08-confirmatory` | Frozen protocol and held-out multi-seed evaluation |
 | 09 | `stage/09-release` | Reproduction bundle, final report, and claim audit |
 
-The existing branches are `main` and `stage/00-plan`. Create stages 01–09 when each stage starts, from its recorded dependency commit. Keep every completed stage branch. `main` is the stable project index and completed work; planned names in this table do not imply execution.
+Stages 00 and 01 have retained completion branches; Stage 02 has begun from Stage 01 completion `6b49e70`. Create later branches only when their stage begins. Keep every completed stage branch. `main` is the stable project index and completed work; planned names in this table do not imply execution.
 
 ## What is runnable today
 
-Only the planning scaffold validator is implemented:
+The Python 3.11 CPU stack, circuit port, classical model contracts, checkpoint tools, numerical diagnostics and archive verifier are implemented. Install `requirements.lock` with the official CPU Torch extra index, or use `requirements-classical.lock` for a classical-only environment. Legacy reference requirements are isolated under `configs/stage01/legacy/`.
 
 ```bash
 python scripts/validate_plan.py
+python -m pytest -q
+python -m eqmarl_slam.cli verify --run experiments/01/01-reference-circuit-v1_seed-1701_attempt-01
 ```
 
-Training, evaluation, estimator, and archive commands described in the plan are contracts for subsequent stages. They are not implemented by Stage 00. No package installation is needed to validate the plan.
+Run execution requires a preregistered config, a clean source tree and a verified published-source receipt. Existing run directories are immutable; reproduction uses a separately registered attempt.
 
 ## Resume in Codex
 
@@ -58,10 +60,10 @@ Open this repository in Codex and use:
 
 > Read AGENTS.md, project_state.json, stages.json, and docs/EXECUTION_PLAN.md. Resume the earliest authorized unfinished stage. Validate its dependency commit, protocol, budget, and publication route before execution. Work on its stage branch, preserve all run outcomes, publish and verify every experiment bundle, and update its stage report. Do not start confirmatory tests until the protocol is frozen. Report completed work, evidence, remaining limits, and the next stage.
 
-Stage 00 is published. The next execution session begins with Stage 01 when instructed to execute the plan or that stage. The stage reports and recorded commits are the continuation record; no unattended training job has been launched.
+The user has authorized execution through the recorded plan. The active stage and exact next action are recorded in project_state.json. The stage reports and recorded commits are the continuation record; no unattended training job has been launched.
 
 ## References and attribution
 
 The reference is [eQMARL: Entangled Quantum Multi-Agent Reinforcement Learning for Distributed Cooperation over Quantum Channels](https://arxiv.org/abs/2405.17486), with the authors' [official repository](https://github.com/news-vt/eqmarl). The existing user repositories are [eQMARL-SLAM](https://github.com/Youngei402tw/eQMARL-SLAM) and [eQMARL-SLAM-NEW](https://github.com/Youngei402tw/eQMARL-SLAM-NEW), including its active-SLAM branch. Exact audited commits are in [references.json](references.json).
 
-Stage 00 contains newly written planning documents and a validator. It does not vendor the reference implementation. Preserve upstream notices when porting or adapting code; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Stage 01 includes attributed source extracts and separately named faithful and corrected implementation paths. Preserve upstream notices when porting or adapting code; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

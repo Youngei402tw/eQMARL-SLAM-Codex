@@ -112,6 +112,9 @@ def execute(config_path, source_receipt):
         elif config["experiment"] == "model-contracts":
             from .diagnostics_contracts import run_contract_diagnostics
             diagnostics = run_contract_diagnostics(config, output, emit)
+        elif config["experiment"] == "exploration-controls":
+            from .diagnostics02 import run_diagnostics
+            diagnostics = run_diagnostics(config, output, emit, progress=progress)
         elif config["experiment"] == "legacy-reference":
             command = [config["interpreter"], str(ROOT / "eqmarl_slam/reference_probe.py"),
                        "--fixtures", str(ROOT / config["fixtures"]),
@@ -127,6 +130,8 @@ def execute(config_path, source_receipt):
                 raise RuntimeError(f"Legacy reference returned {process.returncode}; see execution.log")
         else:
             raise ValueError("Unknown registered experiment")
+        if diagnostics.get("resources", {}).get("primitive_steps", 0) > config.get("max_primitive_steps", 0):
+            raise TimeoutError("Registered primitive-step cap exceeded")
         if not diagnostics.get("passed"):
             status, failure = "failed", {"reason": "One or more registered correctness gates failed", "attempt": 1}
     except Exception as exc:
@@ -136,8 +141,10 @@ def execute(config_path, source_receipt):
         diagnostics.update(passed=False, exception=failure)
         if progress.get("resources"):
             diagnostics["resources"] = progress["resources"]
-    consumed = {"primitive_steps": 0, "decisions": 0,
-                "updates": diagnostics.get("resources", {}).get("synthetic_optimization_updates", 0),
+    resources = diagnostics.get("resources", {})
+    consumed = {"primitive_steps": resources.get("primitive_steps", 0),
+                "decisions": resources.get("decisions", 0),
+                "updates": resources.get("updates", resources.get("synthetic_optimization_updates", 0)),
                 "wall_seconds": time.perf_counter() - started,
                 "cpu_core_hours": (_cpu_seconds() - cpu_start) / 3600,
                 "gpu_device_hours": 0, "circuit_evaluations": diagnostics.get("resources", {}).get("circuit_evaluations", 0),
@@ -156,10 +163,10 @@ def execute(config_path, source_receipt):
         "dirty_tree": False, "config_sha256": sha256_file(output / "resolved_config.yaml"),
         "seed_streams": config["seed_streams"], "split_manifests": config["split_manifests"],
         "runtime": runtime, "model": config["model"], "quantum": config["quantum"],
-        "budget": {"profile": config["profile"], "primitive_steps": 0, "wall_seconds": wall_limit},
+        "budget": {"profile": config["profile"], "primitive_steps": config.get("max_primitive_steps", 0), "wall_seconds": wall_limit},
         "resources_consumed": consumed,
         "execution_segments": [{"started_utc": started_utc, "ended_utc": datetime.now(timezone.utc).isoformat(), **consumed}],
-        "evaluation": {"policy_mode": None, "checkpoint_selection": "fixture_only_no_policy_selection", "metrics_protocol": config["protocol_id"]},
+        "evaluation": {"policy_mode": config.get("action_modes"), "checkpoint_selection": "fixture_only_no_policy_selection", "metrics_protocol": config["protocol_id"]},
         "artifacts": "artifact_manifest.json", "failure": failure,
         "publication": {"status": "pending", "source_remote_verified": True}}
     write_json(output / "manifest.json", manifest)
@@ -169,11 +176,12 @@ def execute(config_path, source_receipt):
         "metrics_sha256": sha256_file(metrics_path), "metrics_rows": rows,
         "analysis_version": "stage01-v1", "passed": diagnostics.get("passed", False),
         "gates": diagnostics.get("gates", {}), "resources_consumed": consumed,
-        "interpretation": "Numerical and runtime correctness only; no training or task-performance claim."})
+        "interpretation": config.get("interpretation", "Numerical and runtime correctness only; no training or task-performance claim."),
+        "analysis": diagnostics.get("summary", {})})
     (output / "report.md").write_text(
         f"# {run_id}\n\nHypothesis: {config['hypothesis']}\n\n"
         f"Outcome: {status}. Gates passed: {diagnostics.get('passed', False)}.\n\n"
-        "Raw records and diagnostics are authoritative. This is a fixed diagnostic, not a policy-performance experiment. "
+        f"Raw records and diagnostics are authoritative. {config.get('interpretation', 'Fixed numerical diagnostic; no training or policy-performance claim.')} "
         "No physical quantum shots were sampled. Failed outcomes remain archived.\n\n"
         f"Reproduce from source {source} with the committed config after publishing a fresh source receipt; "
         "use a new attempt ID to retain this bundle. Verify with `python -m eqmarl_slam.cli verify --run "
