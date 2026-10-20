@@ -8,8 +8,8 @@
       "config": "configs/stage01/circuit.yaml",
       "config_sha256": "4c1746f57c6306c640534563cf3cc73d5cdd8c9770298c1212a80c9a7c68f12a",
       "source_commit": "09f8e1c48f8d4632e921130ceff3429ce445ca08",
-      "results_commit": null,
-      "publication_status": "pending",
+      "results_commit": "2c96db5959189d3255c782a11c3b7d81913b633c",
+      "publication_status": "verified",
       "resources_consumed": {
         "primitive_steps": 0,
         "decisions": 0,
@@ -23,11 +23,22 @@
     },
     {
       "run_id": "01-model-contracts-v1_seed-1701_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage01/contracts.yaml",
       "config_sha256": "7ca90d114e0675fb51da43acc7663ab19b5bed8ebe9979e7433293cca8adca79",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2c96db5959189d3255c782a11c3b7d81913b633c",
+      "results_commit": null,
+      "publication_status": "pending",
+      "resources_consumed": {
+        "primitive_steps": 0,
+        "decisions": 0,
+        "updates": 3,
+        "wall_seconds": 2.006524544000058,
+        "cpu_core_hours": 0.0005571952777777778,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
     },
     {
       "run_id": "01-legacy-reference-v1_seed-2701_attempt-01",

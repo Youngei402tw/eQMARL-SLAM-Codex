@@ -1,0 +1,30 @@
+{
+  "run_id": "01-model-contracts-v1_seed-1701_attempt-01",
+  "source_commit": "2c96db5959189d3255c782a11c3b7d81913b633c",
+  "config_sha256": "7ca90d114e0675fb51da43acc7663ab19b5bed8ebe9979e7433293cca8adca79",
+  "metrics_sha256": "1aab3ebb87ee7f2170b6170882a44aea7cfe6c7fd18868f52dc03f8b7f0f3fa8",
+  "metrics_rows": 22,
+  "analysis_version": "stage01-v1",
+  "passed": true,
+  "gates": {
+    "faithful_objective_numpy_parity": true,
+    "faithful_bootstrap_gradient_retained": true,
+    "corrected_gradient_boundary": true,
+    "duration_and_truncation_bootstrap": true,
+    "checkpoint_complete_next_update": true,
+    "gymnasium_terminal_truncation_contract": true,
+    "observation_private_information_isolation": true,
+    "actor_masks_per_agent_memory_and_resets": true
+  },
+  "resources_consumed": {
+    "primitive_steps": 0,
+    "decisions": 0,
+    "updates": 3,
+    "wall_seconds": 2.006524544000058,
+    "cpu_core_hours": 0.0005571952777777778,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "interpretation": "Numerical and runtime correctness only; no training or task-performance claim."
+}
