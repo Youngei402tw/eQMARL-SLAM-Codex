@@ -1,0 +1,56 @@
+{
+  "python": "3.9.25 (main, Oct 31 2025, 23:00:23) \n[Clang 21.1.4 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "original_commit": "6b1b2e3817f661da81aad5e7188a362380dbdd1d",
+  "packages": {
+    "tensorflow": "2.7.0",
+    "tensorflow-quantum": "0.7.2",
+    "cirq-core": "0.13.1",
+    "cirq-google": "0.13.1",
+    "numpy": "1.26.4",
+    "protobuf": "3.17.3",
+    "sympy": "1.8"
+  },
+  "modules": {
+    "numpy": {
+      "imported": true,
+      "version": "1.26.4"
+    },
+    "cirq": {
+      "imported": true,
+      "version": "0.13.1"
+    },
+    "tensorflow": {
+      "imported": true,
+      "version": "2.7.0"
+    },
+    "tensorflow_quantum": {
+      "imported": true,
+      "version": "0.7.2"
+    }
+  },
+  "scientific_experiments_executed": false,
+  "status": "imports_passed_pending_registered_parity",
+  "requirements_source": "https://github.com/news-vt/eqmarl/blob/6b1b2e3817f661da81aad5e7188a362380dbdd1d/requirements.txt",
+  "upstream_constraints_preserved": true,
+  "compatibility_adjustments": [
+    {
+      "requirement": "setuptools<82",
+      "resolved": "81.0.0",
+      "reason": "setuptools82 removed pkg_resources, required by google-api-core1.21.0; attempt1 import failure retained"
+    }
+  ],
+  "package_index": "https://pypi.org/simple",
+  "lockfile": "requirements-legacy.lock",
+  "lockfile_sha256": "bf21f4df89487b7b9d75d29cb19a7c5918580437a8e634c633e64fb44ed09a77",
+  "scope": "Isolated Python3.9 upstream installation/import feasibility only; no circuit parity or historical training reproduction yet.",
+  "source_sha256": {
+    "third_party/eqmarl/tools.py": "9a37521aabe5e06f970dec7ea8eecc85c7749d6aa4987fd23301ee41f8350fed",
+    "third_party/eqmarl/ops.py": "01db5f42c60ac8ced19942f655d59c4a6f91e28eb355cb87599635cd68935bca",
+    "third_party/eqmarl/circuits.py": "d8bde915425a80449a2d9a40744ee8ccb3c5ef42e14208764a708e9a8b8c8842",
+    "third_party/eqmarl/layers.py": "f0c3f1deeede44a65449e52304bc1678db0c1b0b4d7e8529f5f1cb91a742df98",
+    "third_party/eqmarl/requirements.txt": "3c62ed322a0fe895409c0854f4f50709d5be175f5219cb1c8157ff83986c55a2",
+    "third_party/eqmarl/pyproject.toml": "466fd292aac801e1d0e2d1d4fa7614fe8926927e3d3660d5152f3f4ceac142a7"
+  },
+  "original_source_imports": "passed; private package namespace imports unchanged tools/ops/circuits/layers without invoking upstream __init__"
+}

@@ -1,0 +1,1 @@
+{"verified": true, "source_commit": "2c96db5959189d3255c782a11c3b7d81913b633c", "branch": "stage/01-reference-port", "verified_utc": "2026-10-20T09:30:30.665112+00:00", "mechanism": "pushed head verified by git ls-remote and fresh shallow clone", "retrieval_root": "/workspace/verify-stage01"}

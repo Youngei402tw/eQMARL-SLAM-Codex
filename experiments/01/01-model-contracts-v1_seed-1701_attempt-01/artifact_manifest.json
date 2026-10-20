@@ -1,0 +1,67 @@
+{
+  "artifacts": [
+    {
+      "path": "continued.pt",
+      "size_bytes": 25615,
+      "sha256": "c670bd720e7cd2a361e7344ef01551c0e2c86437bd5baaa22d415c1b4325d6ed",
+      "purpose": "continued.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "diagnostics.json",
+      "size_bytes": 1421,
+      "sha256": "7e235c4c5d9d648d11ea95f147ecf50b5a7aad7ef3a45c0fd84781bc174ee093",
+      "purpose": "diagnostics.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "initial.pt",
+      "size_bytes": 25615,
+      "sha256": "c102ca962befa2a117809208aef426a3bbe0f450967986f2e52d6a8cc3663f20",
+      "purpose": "initial.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "manifest.json",
+      "size_bytes": 4055,
+      "sha256": "5e2fd36a710e6c54f6ba30ff48cf36a241c31a922948772fa66abea3edd70c39",
+      "purpose": "manifest.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "metrics.jsonl",
+      "size_bytes": 8527,
+      "sha256": "1aab3ebb87ee7f2170b6170882a44aea7cfe6c7fd18868f52dc03f8b7f0f3fa8",
+      "purpose": "metrics.jsonl",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "report.md",
+      "size_bytes": 704,
+      "sha256": "d02e296470dcaf0a50116fe94920437481ad887a3cd7dc6f1a9476ed3cae100b",
+      "purpose": "report.md",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "resolved_config.yaml",
+      "size_bytes": 1291,
+      "sha256": "7ca90d114e0675fb51da43acc7663ab19b5bed8ebe9979e7433293cca8adca79",
+      "purpose": "resolved_config.yaml",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "source_publication.json",
+      "size_bytes": 293,
+      "sha256": "785c40e3ca1a73227b6c012930321a251c8a46a05f3b428cb3f2c0b7254034ef",
+      "purpose": "source_publication.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "summary.json",
+      "size_bytes": 1133,
+      "sha256": "b31a8e6a30e41bdcb028bb5537a6de078ca3ad2af63cb66d20433e12fd8de7b5",
+      "purpose": "summary.json",
+      "retention": "permanent_git_history"
+    }
+  ]
+}

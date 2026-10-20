@@ -2,7 +2,7 @@
 
 ## Status and scope
 
-**Stage 00 is complete and remotely verified. Stage 01 is next and has not started. No training, benchmark reproduction, or experimental improvement is claimed.**
+**Stages 00 and 01 passed with remotely verified evidence. Stage 02 is next. No policy training or experimental improvement is claimed.**
 
 This document defines how a later authorized Codex implementation session should proceed. A plan is not a background job: work resumes when Codex is actively executing this project. Read this document together with [EXPERIMENT_PROTOCOL.md](EXPERIMENT_PROTOCOL.md), the [stack decision](adr/0001-pytorch-stack.md), the [reference audit](REFERENCE_AUDIT.md), and the repository's [AGENTS.md](../AGENTS.md).
 

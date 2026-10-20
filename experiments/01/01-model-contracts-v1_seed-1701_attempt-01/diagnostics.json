@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "gates": {
+    "faithful_objective_numpy_parity": true,
+    "faithful_bootstrap_gradient_retained": true,
+    "corrected_gradient_boundary": true,
+    "duration_and_truncation_bootstrap": true,
+    "checkpoint_complete_next_update": true,
+    "gymnasium_terminal_truncation_contract": true,
+    "observation_private_information_isolation": true,
+    "actor_masks_per_agent_memory_and_resets": true
+  },
+  "resources": {
+    "primitive_steps": 0,
+    "contract_env_steps": 3,
+    "synthetic_optimization_updates": 3,
+    "actor_gradient_evaluations": 1,
+    "objective_gradient_evaluations": 3,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "artifacts": [
+    {
+      "path": "initial.pt",
+      "size_bytes": 25615,
+      "sha256": "c102ca962befa2a117809208aef426a3bbe0f450967986f2e52d6a8cc3663f20",
+      "purpose": "Synthetic checkpoint exact-continuation gate",
+      "retention": "permanent"
+    },
+    {
+      "path": "continued.pt",
+      "size_bytes": 25615,
+      "sha256": "c670bd720e7cd2a361e7344ef01551c0e2c86437bd5baaa22d415c1b4325d6ed",
+      "purpose": "Synthetic checkpoint exact-continuation gate",
+      "retention": "permanent"
+    }
+  ],
+  "parameter_counts": {
+    "checkpoint_fixture": 113,
+    "shared_actor_fixture": 218
+  },
+  "limitations": "Synthetic fixed-batch and API contracts only; no policy training, exploration, estimator or SLAM performance was measured."
+}

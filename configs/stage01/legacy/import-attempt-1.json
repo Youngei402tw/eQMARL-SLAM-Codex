@@ -1,0 +1,35 @@
+{
+  "python": "3.9.25 (main, Oct 31 2025, 23:00:23) \n[Clang 21.1.4 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "original_commit": "6b1b2e3817f661da81aad5e7188a362380dbdd1d",
+  "packages": {
+    "tensorflow": "2.7.0",
+    "tensorflow-quantum": "0.7.2",
+    "cirq-core": "0.13.1",
+    "cirq-google": "0.13.1",
+    "numpy": "1.26.4",
+    "protobuf": "3.17.3",
+    "sympy": "1.8"
+  },
+  "modules": {
+    "numpy": {
+      "imported": true,
+      "version": "1.26.4"
+    },
+    "cirq": {
+      "imported": true,
+      "version": "0.13.1"
+    },
+    "tensorflow": {
+      "imported": true,
+      "version": "2.7.0"
+    },
+    "tensorflow_quantum": {
+      "imported": false,
+      "error_type": "ModuleNotFoundError",
+      "message": "No module named 'pkg_resources'",
+      "traceback": "Traceback (most recent call last):\n  File \"/workspace/reference-env/check_imports.py\", line 12, in <module>\n    module = __import__(name)\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/tensorflow_quantum/__init__.py\", line 18, in <module>\n    from tensorflow_quantum.core import (append_circuit, get_expectation_op,\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/tensorflow_quantum/core/__init__.py\", line 17, in <module>\n    from tensorflow_quantum.core.ops import (get_expectation_op,\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/tensorflow_quantum/core/ops/__init__.py\", line 18, in <module>\n    from tensorflow_quantum.core.ops.circuit_execution_ops import (\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/tensorflow_quantum/core/ops/circuit_execution_ops.py\", line 20, in <module>\n    from tensorflow_quantum.core.ops import (cirq_ops, tfq_simulate_ops,\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/tensorflow_quantum/core/ops/cirq_ops.py\", line 22, in <module>\n    import cirq_google\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/cirq_google/__init__.py\", line 19, in <module>\n    from cirq_google.calibration import (\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/cirq_google/calibration/__init__.py\", line 15, in <module>\n    from cirq_google.calibration.engine_simulator import (\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/cirq_google/calibration/engine_simulator.py\", line 18, in <module>\n    from cirq_google.calibration.phased_fsim import (\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/cirq_google/calibration/phased_fsim.py\", line 44, in <module>\n    from cirq_google.engine import Calibration, CalibrationLayer, CalibrationResult, Engine, EngineJob\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/cirq_google/engine/__init__.py\", line 28, in <module>\n    from cirq_google.engine.engine import (\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/cirq_google/engine/engine.py\", line 37, in <module>\n    from cirq_google.engine import engine_client\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/cirq_google/engine/engine_client.py\", line 21, in <module>\n    from google.api_core.exceptions import GoogleAPICallError, NotFound\n  File \"/workspace/reference-env/legacy/lib/python3.9/site-packages/google/api_core/__init__.py\", line 20, in <module>\n    from pkg_resources import get_distribution\nModuleNotFoundError: No module named 'pkg_resources'\n"
+    }
+  },
+  "scientific_experiments_executed": false
+}

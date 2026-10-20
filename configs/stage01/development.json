@@ -1,0 +1,23 @@
+{
+  "split": "development",
+  "protocol_id": "reference-circuit-v1",
+  "scenario_ids": [
+    "q2_phi+",
+    "q2_phi-",
+    "q2_psi+",
+    "q2_psi-",
+    "q2_noent",
+    "q4_phi+",
+    "q4_phi-",
+    "q4_psi+",
+    "q4_psi-",
+    "q4_noent",
+    "q8_phi+",
+    "q8_phi-",
+    "q8_psi+",
+    "q8_psi-",
+    "q8_noent"
+  ],
+  "generator": "NumPy default_rng(1701), in diagnostics01.py; full arrays retained in raw results",
+  "final_test_accessed": false
+}

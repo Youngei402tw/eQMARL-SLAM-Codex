@@ -1,0 +1,3 @@
+Initial CLI postcheck after successful scientific execution exited 1:
+ArchiveValidationError: development split manifest must be an object
+Diagnosis: verifier imposed an undocumented object-only restriction on a committed hashed JSON fixture array. No experiment output or resolved scientific config was changed. The verifier was corrected to support nonempty arrays of fixture objects; scalar/malformed arrays remain invalid.

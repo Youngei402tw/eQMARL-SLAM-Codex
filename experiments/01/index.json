@@ -1,0 +1,64 @@
+{
+  "stage": "01",
+  "dependency_completion_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
+  "runs": [
+    {
+      "run_id": "01-reference-circuit-v1_seed-1701_attempt-01",
+      "status": "completed",
+      "config": "configs/stage01/circuit.yaml",
+      "config_sha256": "4c1746f57c6306c640534563cf3cc73d5cdd8c9770298c1212a80c9a7c68f12a",
+      "source_commit": "09f8e1c48f8d4632e921130ceff3429ce445ca08",
+      "results_commit": "2c96db5959189d3255c782a11c3b7d81913b633c",
+      "publication_status": "verified",
+      "resources_consumed": {
+        "primitive_steps": 0,
+        "decisions": 0,
+        "updates": 0,
+        "wall_seconds": 6.7528808470000286,
+        "cpu_core_hours": 0.0018754758333333335,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 96,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "01-model-contracts-v1_seed-1701_attempt-01",
+      "status": "completed",
+      "config": "configs/stage01/contracts.yaml",
+      "config_sha256": "7ca90d114e0675fb51da43acc7663ab19b5bed8ebe9979e7433293cca8adca79",
+      "source_commit": "2c96db5959189d3255c782a11c3b7d81913b633c",
+      "results_commit": "144a548d3422004f3d0d5120621f48d6c7041e04",
+      "publication_status": "verified",
+      "resources_consumed": {
+        "primitive_steps": 0,
+        "decisions": 0,
+        "updates": 3,
+        "wall_seconds": 2.006524544000058,
+        "cpu_core_hours": 0.0005571952777777778,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "01-legacy-reference-v1_seed-2701_attempt-01",
+      "status": "completed",
+      "config": "configs/stage01/legacy.yaml",
+      "config_sha256": "26cc05f07bafd502408d1f1902e56db42a00ca8bfef744bd895a5b56adc013d9",
+      "source_commit": "787d12e4dedbea50ab8a8958528039494aa04643",
+      "results_commit": "8bdd0d5b8225a3489bacaabfc839da5400089fd4",
+      "publication_status": "verified",
+      "resources_consumed": {
+        "primitive_steps": 0,
+        "decisions": 0,
+        "updates": 0,
+        "wall_seconds": 5.782491490999973,
+        "cpu_core_hours": 0.0016042944444444442,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 20,
+        "shots": 0
+      },
+      "archive_postcheck": "Initial validator object-only restriction repaired; retained error and original inventory; no scientific rerun."
+    }
+  ]
+}

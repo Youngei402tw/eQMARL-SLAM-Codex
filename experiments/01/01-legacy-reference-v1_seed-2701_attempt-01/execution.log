@@ -1,0 +1,4 @@
+Fontconfig error: No writable cache directories
+/workspace/reference-env/legacy/lib/python3.9/site-packages/google/api_core/__init__.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import get_distribution
+{"passed": true, "cases": 10, "output": "/workspace/eQMARL-SLAM-Codex/experiments/01/01-legacy-reference-v1_seed-2701_attempt-01/legacy_results.json", "wall_seconds": 5.168799290999914}

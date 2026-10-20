@@ -1,0 +1,38 @@
+mkdir -p failed for path /home/agent/.config/matplotlib: [Errno 30] Read-only file system: '/home/agent/.config/matplotlib'
+Matplotlib created a temporary cache directory at /tmp/matplotlib-qn_vfm9c because there was an issue with the default path (/home/agent/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Fontconfig error: No writable cache directories
+/workspace/reference-env/legacy/lib/python3.9/site-packages/google/api_core/__init__.py:20: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import get_distribution
+{
+  "python": "3.9.25 (main, Oct 31 2025, 23:00:23) \n[Clang 21.1.4 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "original_commit": "6b1b2e3817f661da81aad5e7188a362380dbdd1d",
+  "packages": {
+    "tensorflow": "2.7.0",
+    "tensorflow-quantum": "0.7.2",
+    "cirq-core": "0.13.1",
+    "cirq-google": "0.13.1",
+    "numpy": "1.26.4",
+    "protobuf": "3.17.3",
+    "sympy": "1.8"
+  },
+  "modules": {
+    "numpy": {
+      "imported": true,
+      "version": "1.26.4"
+    },
+    "cirq": {
+      "imported": true,
+      "version": "0.13.1"
+    },
+    "tensorflow": {
+      "imported": true,
+      "version": "2.7.0"
+    },
+    "tensorflow_quantum": {
+      "imported": true,
+      "version": "0.7.2"
+    }
+  },
+  "scientific_experiments_executed": false
+}

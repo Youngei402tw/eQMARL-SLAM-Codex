@@ -1,0 +1,43 @@
+{
+  "stage": "01",
+  "protocol_id": "reference-contracts-v1",
+  "profile": "diagnostic",
+  "wall_seconds": 3600,
+  "dependency_completion_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
+  "seed_streams": {
+    "model_init": 1701,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/stage01/contracts-development.json",
+      "sha256": "fe36254dfabf3bec866601badee5553572f1e72b98a32337402cf163a85c7dfe"
+    },
+    "validation": null,
+    "test": null
+  },
+  "model": {
+    "actor": "shared GRU synthetic fixture",
+    "encoder": "linear",
+    "critic": "fixed-batch values and GRU scalar fixture",
+    "parameter_counts": "recorded in diagnostics",
+    "optimizer": {
+      "fixture": "Adam",
+      "learning_rate": 0.012
+    }
+  },
+  "quantum": null,
+  "max_cpu_threads": 1,
+  "run_id": "01-model-contracts-v1_seed-1701_attempt-01",
+  "experiment": "model-contracts",
+  "method": "faithful_and_corrected_contracts",
+  "hypothesis": "Faithful fixed-batch terms match independent arithmetic; checkpoint continuation and local actor information/memory contracts hold.",
+  "seed": 1701
+}
