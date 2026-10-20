@@ -1,0 +1,9 @@
+# Resolved after actual installation/import checks; CPU Torch comes from official CPU index.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.1+cpu
+numpy==2.4.6
+pennylane==0.45.1
+gymnasium==1.4.0
+jsonschema==4.26.0
+PyYAML==6.0.3
+pytest==9.1.1

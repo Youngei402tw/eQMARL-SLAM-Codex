@@ -1,0 +1,9 @@
+Using Python 3.9.25 environment at: reference-env/legacy
+Resolved 1 package in 531ms
+Downloading setuptools (1.0MiB)
+ Downloaded setuptools
+Prepared 1 package in 408ms
+Uninstalled 1 package in 5ms
+Installed 1 package in 6ms
+ - setuptools==82.0.1
+ + setuptools==81.0.0

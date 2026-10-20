@@ -1,0 +1,30 @@
+{
+  "stage": "01",
+  "dependency_completion_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
+  "runs": [
+    {
+      "run_id": "01-reference-circuit-v1_seed-1701_attempt-01",
+      "status": "planned",
+      "config": "configs/stage01/circuit.yaml",
+      "config_sha256": "4c1746f57c6306c640534563cf3cc73d5cdd8c9770298c1212a80c9a7c68f12a",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "01-model-contracts-v1_seed-1701_attempt-01",
+      "status": "planned",
+      "config": "configs/stage01/contracts.yaml",
+      "config_sha256": "7ca90d114e0675fb51da43acc7663ab19b5bed8ebe9979e7433293cca8adca79",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "01-legacy-reference-v1_seed-2701_attempt-01",
+      "status": "planned",
+      "config": "configs/stage01/legacy.yaml",
+      "config_sha256": "26cc05f07bafd502408d1f1902e56db42a00ca8bfef744bd895a5b56adc013d9",
+      "source_commit": null,
+      "results_commit": null
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "protocol_id": "reference-circuit-v1",
+  "purpose": "Fixed unchanged upstream Cirq128/TFQ32 forward comparison against independent NumPy fixtures; no training or TFQ derivative claim",
+  "fixture_seed": 2701,
+  "fixtures_sha256": "08a14c514ec43a001d3237752a56af68ce83243d6092aaf4be1033bf227a1467",
+  "fixture_count": 10,
+  "oracle_source_path": "eqmarl_slam/oracle.py",
+  "oracle_source_sha256": "2017b35743006db4487fc4f94b26861782a10c69d84871c4652950ff406977a0",
+  "source_commit": "6b1b2e3817f661da81aad5e7188a362380dbdd1d",
+  "total_qubits": [
+    4,
+    8
+  ],
+  "partitions": 2,
+  "layers": 2,
+  "shots": null,
+  "dtype_cirq": "complex128",
+  "dtype_tfq": "float32",
+  "gradients": false,
+  "float64_atol": 1e-08,
+  "tfq_atol": 2e-05,
+  "state_norm_atol": 1e-10,
+  "max_wall_seconds": 3600,
+  "cpu_threads": 1,
+  "noent_intervention": "Only initial entanglement disabled; feature/theta/scales arrays identical to entangled circuits",
+  "tfq_tolerance_reason": "Original layer owns float32 variables and native TFQ expectation computes float32; 2e-5 is preregistered independent of observed outputs and does not replace float64 oracle gate",
+  "two_qubit_note": "Independent NumPy/PennyLane diagnostics exercise 2 qubits; original d=1 circuit self-CZ is unsupported and no upstream gate patch is used."
+}

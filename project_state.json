@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-20T09:01:43.124685+00:00",
+  "updated_utc": "2026-10-20T09:23:22.381452+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -10,20 +10,20 @@
     "url": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
     "last_check": "All 20 files of the published planning commit matched their local Git blob hashes; the stage branch head and AGENTS.md content were read back through the GitHub plugin."
   },
-  "authorized_current_scope": "Stage 00 planning and repository initialization. Training begins in a future session instructed to execute the plan or a stage.",
-  "active_stage": "00",
-  "stage_status": "passed",
+  "authorized_current_scope": "Execute Stages 01\u201309 autonomously under the recorded plan, stage gates and resource caps; user instruction 2026-10-20.",
+  "active_stage": "01",
+  "stage_status": "running",
   "training_runs_executed": 0,
-  "current_branch": "stage/00-plan",
-  "dependency_commit": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
+  "current_branch": "stage/01-reference-port",
+  "dependency_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
   "completion_commit": null,
-  "publication_status": "verified",
+  "publication_status": "pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
-    "stage/00-plan": "4348371bc2afb573ddff2d4884f373b28f3df685"
+    "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26"
   },
   "blockers": [],
-  "next_action": "On an instruction to execute the plan or Stage 01, create stage/01-reference-port from the Stage 00 completion commit recorded on main, read docs/adr/0001-pytorch-stack.md and the Stage 01 preflight, resolve a compatible Python/PyTorch/PennyLane environment, and implement the numerical reference fixtures and model contracts.",
+  "next_action": "Publish Stage 01 source and run definitions, verify SHA, execute registered numerical and runtime diagnostics, archive every outcome.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -33,8 +33,15 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "01",
+  "next_stage": "02",
   "verification_note": "These are the verified heads before this receipt was committed. The final immutable Stage 00 completion commit is recorded by the subsequent main-branch index update.",
   "completion_commit_location": "main:project_state.json",
-  "next_stage_status": "planned"
+  "next_stage_status": "planned",
+  "stage_budget": {
+    "cap_wall_seconds": 86400,
+    "consumed_wall_seconds": 1517.5222470760345,
+    "accounting": "Execution segments sum across all diagnostics, attempts and resumes; implementation time recorded separately.",
+    "setup_wall_seconds_charged": 1517.5222470760345,
+    "setup_charge_convention": "Conservative elapsed envelope from stage branch creation to source preregistration, including setup, development and unit checks; CPU usage of bootstrap not instrumented."
+  }
 }

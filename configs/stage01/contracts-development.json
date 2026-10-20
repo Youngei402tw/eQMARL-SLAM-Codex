@@ -1,0 +1,14 @@
+{
+  "split": "development",
+  "protocol_id": "reference-contracts-v1",
+  "scenario_ids": [
+    "three-transition-two-agent-float64-v1",
+    "stochastic-gru-adam-checkpoint-v1",
+    "synthetic-terminal-v1",
+    "synthetic-external-cutoff-v1",
+    "local-observation-isolation-v1"
+  ],
+  "generator": "Fixed arrays and seeded synthetic stochastic draws in diagnostics_contracts.py; full inputs archived in metrics.jsonl",
+  "seed": 1701,
+  "final_test_accessed": false
+}

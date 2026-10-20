@@ -1,0 +1,59 @@
+{
+  "stage": "01",
+  "protocol_id": "reference-circuit-v1",
+  "profile": "diagnostic",
+  "wall_seconds": 3600,
+  "dependency_completion_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/stage01/legacy/fixtures.json",
+      "sha256": "08a14c514ec43a001d3237752a56af68ce83243d6092aaf4be1033bf227a1467"
+    },
+    "validation": null,
+    "test": null
+  },
+  "model": {
+    "actor": null,
+    "encoder": null,
+    "critic": "unchanged upstream partite circuit",
+    "parameter_counts": "fixed arrays retained in fixtures.json",
+    "optimizer": null
+  },
+  "quantum": {
+    "device": "Cirq Simulator complex128 and original TFQ ControlledPQC float32",
+    "shots": null,
+    "diff_method": null,
+    "backward_executed": false,
+    "parts": 2,
+    "total_qubits": [
+      4,
+      8
+    ],
+    "layers": 2,
+    "encoding": "atan(scale*feature)",
+    "observables": [
+      "global parity"
+    ],
+    "noise": null
+  },
+  "max_cpu_threads": 1,
+  "run_id": "01-legacy-reference-v1_seed-2701_attempt-01",
+  "experiment": "legacy-reference",
+  "method": "original_cirq_tfq_vs_numpy",
+  "hypothesis": "Pinned unchanged 4/8-qubit source matches the independent exact oracle in Cirq128 and the predeclared TFQ32 tolerance.",
+  "seed": 1701,
+  "interpreter": "/workspace/reference-env/legacy/bin/python",
+  "fixtures": "configs/stage01/legacy/fixtures.json",
+  "fixture_seed": 2701
+}
