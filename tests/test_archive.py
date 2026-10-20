@@ -147,6 +147,36 @@ def test_split_hash(bundle):
         verify(bundle)
 
 
+def replace_development_split(bundle, contents):
+    split_path = bundle.parents[2] / "development.json"
+    split_path.write_text(contents)
+    manifest_path = bundle / "manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    manifest["split_manifests"]["development"]["sha256"] = sha256_file(split_path)
+    write_json(manifest_path, manifest)
+    refresh_inventory(bundle)
+
+
+def test_referenced_fixture_array_is_valid_split_manifest(bundle):
+    actual_fixtures = SCHEMA.parents[1] / "configs/stage01/legacy/fixtures.json"
+    replace_development_split(bundle, actual_fixtures.read_text())
+    assert verify(bundle)["valid"] is True
+
+
+@pytest.mark.parametrize("contents", ["[]", "[1, 2]", '[{"id":"fixture"}, "scalar"]',
+                                       '"not a manifest"', "null", "[broken JSON"])
+def test_invalid_split_fixture_manifest(bundle, contents):
+    replace_development_split(bundle, contents)
+    with pytest.raises(ArchiveValidationError, match="split manifest|Invalid JSON"):
+        verify(bundle)
+
+
+def test_object_split_identity_remains_checked(bundle):
+    replace_development_split(bundle, '{"split":"test","fixture_ids":["bell"]}')
+    with pytest.raises(ArchiveValidationError, match="development split identity mismatch"):
+        verify(bundle)
+
+
 @pytest.mark.parametrize("path", ["../outside.txt", "/tmp/outside.txt", "https://example.com/outside", "..\\outside.txt"])
 def test_unsafe_artifact_path(bundle, path):
     inventory = json.loads((bundle / "artifact_manifest.json").read_text())

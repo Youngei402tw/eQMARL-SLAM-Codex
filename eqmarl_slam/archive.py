@@ -168,9 +168,13 @@ def validate_bundle(
         split_path = _safe_file(repo, reference.get("path"))
         if sha256_file(split_path) != reference.get("sha256"):
             _fail(f"{split} split SHA-256 mismatch")
-        split_manifest = _object(_json(split_path), f"{split} split manifest")
-        if "split" in split_manifest and split_manifest["split"] != split:
-            _fail(f"{split} split identity mismatch")
+        split_manifest = _json(split_path)
+        if isinstance(split_manifest, dict):
+            if "split" in split_manifest and split_manifest["split"] != split:
+                _fail(f"{split} split identity mismatch")
+        elif not (isinstance(split_manifest, list) and split_manifest
+                  and all(isinstance(fixture, dict) for fixture in split_manifest)):
+            _fail(f"{split} split manifest must be an object or a nonempty array of fixture objects")
     inventory = _object(_json(paths["artifact_manifest.json"]), "artifact inventory")
     artifacts = inventory.get("artifacts")
     if not isinstance(artifacts, list):

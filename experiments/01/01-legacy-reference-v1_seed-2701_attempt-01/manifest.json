@@ -1,0 +1,168 @@
+{
+  "schema_version": "0.1.0",
+  "run_id": "01-legacy-reference-v1_seed-2701_attempt-01",
+  "stage": "01",
+  "protocol_id": "reference-circuit-v1",
+  "hypothesis": "Pinned unchanged 4/8-qubit source matches the independent exact oracle in Cirq128 and the predeclared TFQ32 tolerance.",
+  "method": "original_cirq_tfq_vs_numpy",
+  "status": "completed",
+  "source_commit": "787d12e4dedbea50ab8a8958528039494aa04643",
+  "dependency_completion_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
+  "dirty_tree": false,
+  "config_sha256": "26cc05f07bafd502408d1f1902e56db42a00ca8bfef744bd895a5b56adc013d9",
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/stage01/legacy/fixtures.json",
+      "sha256": "08a14c514ec43a001d3237752a56af68ce83243d6092aaf4be1033bf227a1467"
+    },
+    "validation": null,
+    "test": null
+  },
+  "runtime": {
+    "python": "3.9.25 (main, Oct 31 2025, 23:00:23) \n[Clang 21.1.4 ]",
+    "lockfile_sha256": "bf21f4df89487b7b9d75d29cb19a7c5918580437a8e634c633e64fb44ed09a77",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "hardware": {
+      "device": "CPU",
+      "available_cpus": 5,
+      "max_job_threads": 1
+    },
+    "dependencies": {
+      "tensorflow": "2.7.0",
+      "tensorflow-quantum": "0.7.2",
+      "cirq-core": "0.13.1",
+      "numpy": "1.26.4",
+      "sympy": "1.8"
+    },
+    "driver_runtime": {
+      "python": "3.11.17 (main, Oct  3 2026, 01:05:36) [Clang 22.1.3 ]",
+      "lockfile_sha256": "b2773d714aca2130a7186206bde5dbc931b7d499373c141450cd76fdb436d4e8",
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+      "hardware": {
+        "device": "CPU",
+        "available_cpus": 5,
+        "max_job_threads": 1
+      },
+      "dependencies": {
+        "rustworkx": "0.18.1",
+        "attrs": "26.1.0",
+        "pytest": "9.1.1",
+        "setuptools": "84.2.0",
+        "typing_extensions": "4.16.0",
+        "scipy-openblas32": "0.3.34.237.2",
+        "mpmath": "1.3.0",
+        "numpy": "2.4.6",
+        "pennylane": "0.45.1",
+        "PyYAML": "6.0.3",
+        "scipy": "1.17.1",
+        "gast": "0.7.0",
+        "requests": "2.34.2",
+        "sympy": "1.14.0",
+        "torch": "2.14.1+cpu",
+        "jsonschema-specifications": "2025.9.1",
+        "fsspec": "2026.9.0",
+        "termcolor": "3.3.0",
+        "MarkupSafe": "3.0.4",
+        "gymnasium": "1.4.0",
+        "charset-normalizer": "3.5.2",
+        "iniconfig": "2.3.1",
+        "referencing": "0.37.0",
+        "tomlkit": "0.15.2",
+        "packaging": "26.3",
+        "pennylane_lightning": "0.45.0",
+        "certifi": "2026.10.19",
+        "jsonschema": "4.26.0",
+        "Farama-Notifications": "0.0.6",
+        "diastatic-malt": "2.15.3",
+        "Jinja2": "3.1.6",
+        "autoray": "0.8.4",
+        "cachetools": "7.2.4",
+        "rpds-py": "2026.9.1",
+        "autograd": "1.8.0",
+        "filelock": "4.2.4",
+        "pluggy": "1.7.0",
+        "urllib3": "2.8.0",
+        "cloudpickle": "3.1.2",
+        "networkx": "3.6.1",
+        "Pygments": "2.21.0",
+        "appdirs": "1.4.4",
+        "idna": "3.20"
+      }
+    }
+  },
+  "model": {
+    "actor": null,
+    "encoder": null,
+    "critic": "unchanged upstream partite circuit",
+    "parameter_counts": "fixed arrays retained in fixtures.json",
+    "optimizer": null
+  },
+  "quantum": {
+    "device": "Cirq Simulator complex128 and original TFQ ControlledPQC float32",
+    "shots": null,
+    "diff_method": null,
+    "backward_executed": false,
+    "parts": 2,
+    "total_qubits": [
+      4,
+      8
+    ],
+    "layers": 2,
+    "encoding": "atan(scale*feature)",
+    "observables": [
+      "global parity"
+    ],
+    "noise": null
+  },
+  "budget": {
+    "profile": "diagnostic",
+    "primitive_steps": 0,
+    "wall_seconds": 3600
+  },
+  "resources_consumed": {
+    "primitive_steps": 0,
+    "decisions": 0,
+    "updates": 0,
+    "wall_seconds": 5.782491490999973,
+    "cpu_core_hours": 0.0016042944444444442,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 20,
+    "shots": 0
+  },
+  "execution_segments": [
+    {
+      "started_utc": "2026-10-20T09:31:59.333074+00:00",
+      "ended_utc": "2026-10-20T09:32:05.149941+00:00",
+      "primitive_steps": 0,
+      "decisions": 0,
+      "updates": 0,
+      "wall_seconds": 5.782491490999973,
+      "cpu_core_hours": 0.0016042944444444442,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 20,
+      "shots": 0
+    }
+  ],
+  "evaluation": {
+    "policy_mode": null,
+    "checkpoint_selection": "fixture_only_no_policy_selection",
+    "metrics_protocol": "reference-circuit-v1"
+  },
+  "artifacts": "artifact_manifest.json",
+  "failure": null,
+  "publication": {
+    "status": "pending",
+    "source_remote_verified": true
+  }
+}

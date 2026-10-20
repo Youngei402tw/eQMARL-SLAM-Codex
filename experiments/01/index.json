@@ -42,11 +42,23 @@
     },
     {
       "run_id": "01-legacy-reference-v1_seed-2701_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage01/legacy.yaml",
       "config_sha256": "26cc05f07bafd502408d1f1902e56db42a00ca8bfef744bd895a5b56adc013d9",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "787d12e4dedbea50ab8a8958528039494aa04643",
+      "results_commit": null,
+      "publication_status": "pending",
+      "resources_consumed": {
+        "primitive_steps": 0,
+        "decisions": 0,
+        "updates": 0,
+        "wall_seconds": 5.782491490999973,
+        "cpu_core_hours": 0.0016042944444444442,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 20,
+        "shots": 0
+      },
+      "archive_postcheck": "Initial validator object-only restriction repaired; retained error and original inventory; no scientific rerun."
     }
   ]
 }

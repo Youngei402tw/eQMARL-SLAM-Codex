@@ -20,7 +20,8 @@
   "publication_status": "pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
-    "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26"
+    "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
+    "main_before_stage01_integration": "822d073160092a681b9966cbee1a5dfdb23b8e30"
   },
   "blockers": [],
   "next_action": "Publish Stage 01 source and run definitions, verify SHA, execute registered numerical and runtime diagnostics, archive every outcome.",
@@ -34,7 +35,7 @@
     "schema and numerical tolerance consistency"
   ],
   "next_stage": "02",
-  "verification_note": "These are the verified heads before this receipt was committed. The final immutable Stage 00 completion commit is recorded by the subsequent main-branch index update.",
+  "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "main:project_state.json",
   "next_stage_status": "planned",
   "stage_budget": {
