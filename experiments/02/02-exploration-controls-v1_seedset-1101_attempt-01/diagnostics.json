@@ -1,0 +1,179 @@
+{
+  "passed": true,
+  "gates": {
+    "corridor_physical_coverage": true,
+    "wall_occlusion": true,
+    "unreachable_and_current_target": true,
+    "wall_collision": true,
+    "same_target_collision": true,
+    "swap_collision": true,
+    "private_information_isolation": true,
+    "shared_information_charged": true,
+    "physical_coverage_independent_of_mapper": true,
+    "intrinsic_horizon_budget": true,
+    "corridor_frontier_complete": true,
+    "heuristics_progress_on_open": true,
+    "matrix_complete": true,
+    "fixed_domain_consistent": true
+  },
+  "resources": {
+    "primitive_steps": 1709,
+    "decisions": 3418,
+    "updates": 0,
+    "wall_seconds": 2.967172779999828,
+    "cpu_core_hours": 0.0008237660661111111,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "summary": {
+    "development_matrix_executed": true,
+    "episodes": 36,
+    "groups": [
+      {
+        "method": "random",
+        "scenario_id": "development-open-v1",
+        "episodes": 3,
+        "mean_physical_coverage": 0.9904761904761905,
+        "mean_estimated_coverage": 0.9904761904761905,
+        "mean_map_accuracy": 0.8571428571428571,
+        "mean_physical_coverage_auc": 0.9132275132275134,
+        "successes": 2
+      },
+      {
+        "method": "random",
+        "scenario_id": "development-bottleneck-v1",
+        "episodes": 3,
+        "mean_physical_coverage": 0.989247311827957,
+        "mean_estimated_coverage": 0.989247311827957,
+        "mean_map_accuracy": 0.8306878306878307,
+        "mean_physical_coverage_auc": 0.912783751493429,
+        "successes": 2
+      },
+      {
+        "method": "random",
+        "scenario_id": "development-deadend-v1",
+        "episodes": 3,
+        "mean_physical_coverage": 0.84375,
+        "mean_estimated_coverage": 0.84375,
+        "mean_map_accuracy": 0.757201646090535,
+        "mean_physical_coverage_auc": 0.6231995884773662,
+        "successes": 0
+      },
+      {
+        "method": "reactive",
+        "scenario_id": "development-open-v1",
+        "episodes": 3,
+        "mean_physical_coverage": 0.7714285714285715,
+        "mean_estimated_coverage": 0.7714285714285715,
+        "mean_map_accuracy": 0.6349206349206349,
+        "mean_physical_coverage_auc": 0.7597883597883605,
+        "successes": 0
+      },
+      {
+        "method": "reactive",
+        "scenario_id": "development-bottleneck-v1",
+        "episodes": 3,
+        "mean_physical_coverage": 0.8709677419354839,
+        "mean_estimated_coverage": 0.8709677419354839,
+        "mean_map_accuracy": 0.7301587301587301,
+        "mean_physical_coverage_auc": 0.8550378335324561,
+        "successes": 0
+      },
+      {
+        "method": "reactive",
+        "scenario_id": "development-deadend-v1",
+        "episodes": 3,
+        "mean_physical_coverage": 0.78125,
+        "mean_estimated_coverage": 0.78125,
+        "mean_map_accuracy": 0.6790123456790124,
+        "mean_physical_coverage_auc": 0.7507716049382717,
+        "successes": 0
+      },
+      {
+        "method": "local_frontier",
+        "scenario_id": "development-open-v1",
+        "episodes": 3,
+        "mean_physical_coverage": 0.7714285714285715,
+        "mean_estimated_coverage": 0.7714285714285715,
+        "mean_map_accuracy": 0.6349206349206349,
+        "mean_physical_coverage_auc": 0.7597883597883605,
+        "successes": 0
+      },
+      {
+        "method": "local_frontier",
+        "scenario_id": "development-bottleneck-v1",
+        "episodes": 3,
+        "mean_physical_coverage": 1.0,
+        "mean_estimated_coverage": 1.0,
+        "mean_map_accuracy": 0.746031746031746,
+        "mean_physical_coverage_auc": 0.9753086419753086,
+        "successes": 3
+      },
+      {
+        "method": "local_frontier",
+        "scenario_id": "development-deadend-v1",
+        "episodes": 3,
+        "mean_physical_coverage": 1.0,
+        "mean_estimated_coverage": 1.0,
+        "mean_map_accuracy": 0.8641975308641975,
+        "mean_physical_coverage_auc": 0.9297839506172839,
+        "successes": 3
+      },
+      {
+        "method": "shared_frontier",
+        "scenario_id": "development-open-v1",
+        "episodes": 3,
+        "mean_physical_coverage": 1.0,
+        "mean_estimated_coverage": 1.0,
+        "mean_map_accuracy": 0.9206349206349206,
+        "mean_physical_coverage_auc": 0.95978835978836,
+        "successes": 3
+      },
+      {
+        "method": "shared_frontier",
+        "scenario_id": "development-bottleneck-v1",
+        "episodes": 3,
+        "mean_physical_coverage": 1.0,
+        "mean_estimated_coverage": 1.0,
+        "mean_map_accuracy": 0.746031746031746,
+        "mean_physical_coverage_auc": 0.9753086419753086,
+        "successes": 3
+      },
+      {
+        "method": "shared_frontier",
+        "scenario_id": "development-deadend-v1",
+        "episodes": 3,
+        "mean_physical_coverage": 1.0,
+        "mean_estimated_coverage": 1.0,
+        "mean_map_accuracy": 0.8641975308641975,
+        "mean_physical_coverage_auc": 0.9390432098765432,
+        "successes": 3
+      }
+    ],
+    "heuristic_gate": "corridor_complete and every open-map local/shared frontier episode improves over initial physical coverage",
+    "primary_metric": "physical coverage on fixed reachable-free domain",
+    "auc_rule": "mean of coverage at time0 through horizon; carry final coverage after actual termination",
+    "primitive_step_unit": "one joint environment transition; decisions count two robot actions",
+    "scenario_manifest_sha256": "a45e4ba91af7b6da1b7d7ed7a3c7b1e46fbdd72996640c8c5cd0bb0ae7455cdb",
+    "policy_modes": {
+      "random": "sampled",
+      "reactive": "greedy",
+      "local_frontier": "greedy",
+      "shared_frontier": "greedy"
+    },
+    "information_conditions": {
+      "random": "local-only",
+      "reactive": "local-only",
+      "local_frontier": "local-only",
+      "shared_frontier": "shared-map"
+    },
+    "replication_interpretation": "action-seed repeats of fixed maps; greedy controls are deterministic; no independent trained models or inferential performance claim",
+    "training": false,
+    "known_pose_control": true
+  },
+  "required_artifacts": [
+    "scenario_manifest.json",
+    "trajectories.jsonl"
+  ]
+}

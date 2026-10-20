@@ -4,11 +4,22 @@
   "runs": [
     {
       "run_id": "02-exploration-controls-v1_seedset-1101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage02/controls.yaml",
       "config_sha256": "d230e61b9abe0bb6089c7956d73b1d69ab5bab25b3dc71edd501ee3c2e3fa7ed",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "facb03651a59d2bc1bbb3f559e04c0db00b48af9",
+      "results_commit": null,
+      "publication_status": "pending",
+      "resources_consumed": {
+        "primitive_steps": 1709,
+        "decisions": 3418,
+        "updates": 0,
+        "wall_seconds": 3.042046406000054,
+        "cpu_core_hours": 0.0008445561111111111,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
     }
   ]
 }

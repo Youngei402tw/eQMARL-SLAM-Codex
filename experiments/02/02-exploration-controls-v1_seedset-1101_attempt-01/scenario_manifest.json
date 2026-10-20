@@ -1,0 +1,149 @@
+{
+  "protocol_id": "exploration-controls-v1",
+  "scenario_kind": "fixed development maps",
+  "scenarios": [
+    {
+      "scenario_id": "development-open-v1",
+      "grid": [
+        "#########",
+        "#.......#",
+        "#.......#",
+        "#.......#",
+        "#.......#",
+        "#.......#",
+        "#########"
+      ],
+      "starts": [
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          7
+        ]
+      ]
+    },
+    {
+      "scenario_id": "development-bottleneck-v1",
+      "grid": [
+        "#########",
+        "#...#...#",
+        "#...#...#",
+        "#.......#",
+        "#...#...#",
+        "#...#...#",
+        "#########"
+      ],
+      "starts": [
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          7
+        ]
+      ]
+    },
+    {
+      "scenario_id": "development-deadend-v1",
+      "grid": [
+        "#########",
+        "#...#...#",
+        "#.#.#.#.#",
+        "#.#...#.#",
+        "#.#####.#",
+        "#.......#",
+        "###.#.###",
+        "#...#...#",
+        "#########"
+      ],
+      "starts": [
+        [
+          1,
+          1
+        ],
+        [
+          7,
+          7
+        ]
+      ]
+    }
+  ],
+  "development_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "train": null,
+  "validation": null,
+  "test": null,
+  "policy_modes": {
+    "random": "sampled",
+    "reactive": "greedy",
+    "local_frontier": "greedy",
+    "shared_frontier": "greedy"
+  },
+  "information_conditions": {
+    "random": "local-only",
+    "reactive": "local-only",
+    "local_frontier": "local-only",
+    "shared_frontier": "shared-map"
+  },
+  "environment_configs": {
+    "random": {
+      "sensor_range": 2,
+      "horizon": 80,
+      "n_agents": 2,
+      "coverage_target": 1.0,
+      "information_condition": "local-only",
+      "reward": {
+        "physical_coverage_gain": 1.0,
+        "step_cost": 0.0,
+        "collision_cost": 0.0,
+        "communication_cost": 0.0
+      }
+    },
+    "reactive": {
+      "sensor_range": 2,
+      "horizon": 80,
+      "n_agents": 2,
+      "coverage_target": 1.0,
+      "information_condition": "local-only",
+      "reward": {
+        "physical_coverage_gain": 1.0,
+        "step_cost": 0.0,
+        "collision_cost": 0.0,
+        "communication_cost": 0.0
+      }
+    },
+    "local_frontier": {
+      "sensor_range": 2,
+      "horizon": 80,
+      "n_agents": 2,
+      "coverage_target": 1.0,
+      "information_condition": "local-only",
+      "reward": {
+        "physical_coverage_gain": 1.0,
+        "step_cost": 0.0,
+        "collision_cost": 0.0,
+        "communication_cost": 0.0
+      }
+    },
+    "shared_frontier": {
+      "sensor_range": 2,
+      "horizon": 80,
+      "n_agents": 2,
+      "coverage_target": 1.0,
+      "information_condition": "shared-map",
+      "reward": {
+        "physical_coverage_gain": 1.0,
+        "step_cost": 0.0,
+        "collision_cost": 0.0,
+        "communication_cost": 0.0
+      }
+    }
+  },
+  "seed_rule": "action_rng SeedSequence([development_seed,scenario_index,registered_method_index]); fixed maps and noiseless sensors paired across methods"
+}
