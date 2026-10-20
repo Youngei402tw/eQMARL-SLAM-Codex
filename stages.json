@@ -12,7 +12,9 @@
       "initial_status": "planned",
       "report": "docs/stages/00-plan.md",
       "status": "passed",
-      "branch_created": true
+      "branch_created": true,
+      "completion_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/1"
     },
     {
       "id": "01",
