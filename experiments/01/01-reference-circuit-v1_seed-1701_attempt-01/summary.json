@@ -1,0 +1,32 @@
+{
+  "run_id": "01-reference-circuit-v1_seed-1701_attempt-01",
+  "source_commit": "09f8e1c48f8d4632e921130ceff3429ce445ca08",
+  "config_sha256": "4c1746f57c6306c640534563cf3cc73d5cdd8c9770298c1212a80c9a7c68f12a",
+  "metrics_sha256": "884554413cfb562b6bc53bff5dbf8df47555f6db055f6612118edc646940c052",
+  "metrics_rows": 52,
+  "analysis_version": "stage01-v1",
+  "passed": true,
+  "gates": {
+    "bell_correlations": true,
+    "expectation_parity": true,
+    "state_norm": true,
+    "gradients": true,
+    "finite_difference_convergence": true,
+    "batch_values": true,
+    "batch_gradients": true,
+    "repeated_inputs": true,
+    "local_marginal_zero": true,
+    "joint_input_sensitive": true
+  },
+  "resources_consumed": {
+    "primitive_steps": 0,
+    "decisions": 0,
+    "updates": 0,
+    "wall_seconds": 6.7528808470000286,
+    "cpu_core_hours": 0.0018754758333333335,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 96,
+    "shots": 0
+  },
+  "interpretation": "Numerical and runtime correctness only; no training or task-performance claim."
+}

@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "gates": {
+    "bell_correlations": true,
+    "expectation_parity": true,
+    "state_norm": true,
+    "gradients": true,
+    "finite_difference_convergence": true,
+    "batch_values": true,
+    "batch_gradients": true,
+    "repeated_inputs": true,
+    "local_marginal_zero": true,
+    "joint_input_sensitive": true
+  },
+  "resources": {
+    "circuit_evaluations": 96,
+    "simulations": 88,
+    "shots": 0,
+    "backward_additional_circuit_evaluations": 0,
+    "oracle_evaluations": 1374,
+    "wall_seconds": 4.646678855000005,
+    "cpu_core_hours": 0.0012906525058333333,
+    "gpu_device_hours": 0,
+    "peak_rss_bytes": 432570368,
+    "physical_shots_sampled": false,
+    "shot_interpretation": "analytic exact-expectation simulator; no hardware shot-cost claim"
+  },
+  "fixture_seed": 1701,
+  "tolerances": {
+    "expectation_atol": 1e-08,
+    "state_norm_atol": 1e-10,
+    "gradient_atol": 1e-06,
+    "gradient_rtol": 0.001,
+    "finite_difference_rounding_floor": 2e-09
+  },
+  "limits": {
+    "total_qubits": [
+      2,
+      4,
+      8
+    ],
+    "layers": 2,
+    "wall_seconds": 3600.0,
+    "gradient_scope": "all input, variational and encoding-scale coordinates; phi+ and matched no-entanglement",
+    "training": false,
+    "legacy_TFQ_parity": "separate_reference_environment_probe"
+  },
+  "record_count": 52
+}

@@ -1,0 +1,89 @@
+{
+  "stage": "01",
+  "protocol_id": "reference-circuit-v1",
+  "profile": "diagnostic",
+  "wall_seconds": 3600,
+  "dependency_completion_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/stage01/development.json",
+      "sha256": "510c4b2914529bf4414dec43233766cc5c69c193304d6fbc36f935a14d0f1a09"
+    },
+    "validation": null,
+    "test": null
+  },
+  "model": {
+    "actor": null,
+    "encoder": "separate contract fixture",
+    "critic": "pinned split RX/RY/RZ circuit",
+    "parameter_counts": "dimensions fixed in fixture; raw records contain all arrays",
+    "optimizer": null
+  },
+  "quantum": {
+    "device": "default.qubit",
+    "shots": null,
+    "diff_method": "backprop",
+    "real_dtype": "float64",
+    "complex_dtype": "complex128",
+    "total_qubits": [
+      2,
+      4,
+      8
+    ],
+    "parts": 2,
+    "qubits_per_partition": [
+      1,
+      2,
+      4
+    ],
+    "layers": 2,
+    "encoding": "atan(scale*feature) with RX",
+    "input_entanglement": [
+      "phi+",
+      "phi-",
+      "psi+",
+      "psi-",
+      "none"
+    ],
+    "observables": [
+      "global parity",
+      "local Z",
+      "partition parity"
+    ],
+    "noise": null,
+    "physical_hardware_claim": false
+  },
+  "max_cpu_threads": 1,
+  "run_id": "01-reference-circuit-v1_seed-1701_attempt-01",
+  "experiment": "reference-circuit",
+  "method": "torch_pennylane_vs_numpy",
+  "hypothesis": "The port matches independent float64 exact expectations and nonsymmetric gradients, retaining joint information and zero Bell local marginals.",
+  "fixture_seed": 1701,
+  "total_qubits": [
+    2,
+    4,
+    8
+  ],
+  "layers": 2,
+  "finite_difference_steps": [
+    0.0001,
+    1e-05
+  ],
+  "throughput_repetitions": 3,
+  "fixture_generator": {
+    "seed": 1701,
+    "rng": "NumPy default_rng",
+    "scope": "deterministic numerical fixtures only, not independent training replications"
+  }
+}
