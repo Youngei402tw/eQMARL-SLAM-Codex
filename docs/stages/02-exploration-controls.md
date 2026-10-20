@@ -1,6 +1,6 @@
 # Stage 02 — Controlled known-pose exploration
 
-Status: running. Dependency completion: `6b49e7010d9c0667acb41854b1d008f303ea0355`.
+Status: passed. Dependency completion: `6b49e7010d9c0667acb41854b1d008f303ea0355`.
 Branch `stage/02-exploration-controls` was created from that exact commit.
 
 ## Question and falsifier
@@ -49,3 +49,13 @@ training. Code/configs are published and verified before executing the matrix.
 Run definitions, outcomes and artifact identities will be recorded in
 `experiments/02/index.json`. All raw per-step and episode records, exact maps,
 resolved settings and fixture evidence are permanent Git artifacts.
+
+## Observed results and limitation diagnosis
+
+All 14 registered correctness/progress gates passed and the 36-episode matrix completed. There were 1,709 joint primitive transitions including seven scripted fixture transitions, 3,418 robot decisions, no optimization updates, 3.042s recorded experiment wall, 0.000845 CPU core-hours, no GPU use and no quantum calls. The separate conservative setup envelope is charged in project_state.json.
+
+The shared-map frontier controller completed all nine episodes across all three maps. Local-only frontier completed bottleneck and dead-end maps but stalled at 27/35 physical free cells on the open map. Inspection of the retained trace shows repeated east/west collision attempts with no planner progress (152 blocked robot moves by step80 for each deterministic seed repeat). This is a stateless coordination limitation under the registered local-only sensing contract, not an unreachable-target or physical-coverage accounting error. Reactive controls also stall; random controls fail some episodes. Every episode remains in the raw data. No controller was changed after observing these outcomes.
+
+The shared controller explicitly receives exchanged maps and poses and incurs payload costs, so its completion rate is not an equal-information policy improvement claim. Deterministic greedy repeats are not independent trained models. Physical and estimated coverage agree in noiseless known-pose episodes; the separate corruption fixture proves their accounting is independent. Full-grid mapping accuracy remains below100% in some physically covered maps because unreachable/occluded walls remain unknown; coverage is not relabeled mapping accuracy.
+
+All required maps, 1,785 raw records, trajectories, diagnostics and source identities were retrieved from GitHub and validated. The full source suite passed76 tests before execution. Stage03 can proceed to genuine uncertain poses and unknown landmarks; this stage makes no SLAM, learning or quantum claim.

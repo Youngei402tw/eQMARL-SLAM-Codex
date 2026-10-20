@@ -8,8 +8,8 @@
       "config": "configs/stage02/controls.yaml",
       "config_sha256": "d230e61b9abe0bb6089c7956d73b1d69ab5bab25b3dc71edd501ee3c2e3fa7ed",
       "source_commit": "facb03651a59d2bc1bbb3f559e04c0db00b48af9",
-      "results_commit": null,
-      "publication_status": "pending",
+      "results_commit": "e049d8c118f15e3ae113ff060bb7be71684fd10f",
+      "publication_status": "verified",
       "resources_consumed": {
         "primitive_steps": 1709,
         "decisions": 3418,

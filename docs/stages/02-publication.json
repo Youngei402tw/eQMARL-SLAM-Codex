@@ -1,0 +1,20 @@
+{
+  "stage": "02",
+  "verified_utc": "2026-10-20T09:46:32.128888+00:00",
+  "verified_remote_head": "e049d8c118f15e3ae113ff060bb7be71684fd10f",
+  "source_commit": "facb03651a59d2bc1bbb3f559e04c0db00b48af9",
+  "results_commit": "e049d8c118f15e3ae113ff060bb7be71684fd10f",
+  "mechanism": "Fresh independent shallow Git clone; all bundle bytes and SHA256 identities checked including scenario manifest and trajectories",
+  "retrieved_tree": "b91a1e54ecfd771ddf11ff65b6b20b55c9b28539",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "02-exploration-controls-v1_seedset-1101_attempt-01",
+      "status": "completed",
+      "verified_files": 9,
+      "metrics_rows": 1785,
+      "metrics_sha256": "ab8f521a5edb7fbfbfa10435da8d28953d65e77a449a049d79422553798c0495"
+    }
+  ],
+  "large_external_artifacts": []
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-20T09:38:44.664265+00:00",
+  "updated_utc": "2026-10-20T09:46:32.131567+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,20 +12,21 @@
   },
   "authorized_current_scope": "Execute Stages 01\u201309 autonomously under the recorded plan, stage gates and resource caps; user instruction 2026-10-20.",
   "active_stage": "02",
-  "stage_status": "running",
+  "stage_status": "passed",
   "training_runs_executed": 0,
   "current_branch": "stage/02-exploration-controls",
   "dependency_commit": "6b49e7010d9c0667acb41854b1d008f303ea0355",
   "completion_commit": null,
-  "publication_status": "pending",
+  "publication_status": "verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
     "main_before_stage01_integration": "822d073160092a681b9966cbee1a5dfdb23b8e30",
-    "stage/01-reference-port": "6b49e7010d9c0667acb41854b1d008f303ea0355"
+    "stage/01-reference-port": "6b49e7010d9c0667acb41854b1d008f303ea0355",
+    "stage/02-exploration-controls": "e049d8c118f15e3ae113ff060bb7be71684fd10f"
   },
   "blockers": [],
-  "next_action": "Implement known-pose local/shared information controls, register fixed diagnostics, publish source before execution, and verify all artifacts.",
+  "next_action": "Index Stage 02 immutable completion, then create stage/03-slam-beliefs from that verified commit and validate a genuine 2D smoother.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -60,8 +61,18 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 506.6793429851532,
+    "consumed_wall_seconds": 509.72138939115325,
     "setup_wall_seconds_charged": 506.6793429851532,
-    "setup_charge_convention": "Conservative elapsed setup/development envelope from branch creation to preregistration, includes unit diagnostics; bootstrap CPU not instrumented."
+    "setup_charge_convention": "Conservative elapsed setup/development envelope from branch creation to preregistration, includes unit diagnostics; bootstrap CPU not instrumented.",
+    "recorded_experiment_resources": {
+      "primitive_steps": 1709,
+      "decisions": 3418,
+      "updates": 0,
+      "wall_seconds": 3.042046406000054,
+      "cpu_core_hours": 0.0008445561111111111,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 0,
+      "shots": 0
+    }
   }
 }

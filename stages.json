@@ -43,9 +43,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/02-exploration-controls.md",
-      "status": "running",
+      "status": "passed",
       "branch_created": true,
-      "dependency_completion_commit": "6b49e7010d9c0667acb41854b1d008f303ea0355"
+      "dependency_completion_commit": "6b49e7010d9c0667acb41854b1d008f303ea0355",
+      "publication_receipt": "docs/stages/02-publication.json"
     },
     {
       "id": "03",
