@@ -1,6 +1,6 @@
 # Stage 00 — plan and repository scaffold
 
-Status: **design prepared and structurally validated; remote publication verification in progress.** The repository creation blocker is resolved. The planning validator output is recorded in `00-validation.txt`, and `project_state.json` records publication evidence.
+Status: **completed and remotely verified.** The user-created repository is public. The planning validator output is in [00-validation.txt](00-validation.txt), and [00-publication.json](00-publication.json) records the verified planning commit and all-file hash check. The subsequent index on `main` records the immutable final Stage 00 completion commit, avoiding a self-referential SHA.
 
 ## Question
 
@@ -26,7 +26,7 @@ Reference commits are frozen in `references.json`. Future dependency versions wi
 
 This stage prepares research instructions and files. It has not trained a policy, ported the quantum implementation, installed the research dependency stack, validated a SLAM estimator, or measured a quantum advantage. The validator output is planning evidence only.
 
-Remote repository creation, branch creation, and publication must be verified independently. A local directory is not a GitHub repository. Consult `project_state.json` for the actual publication status and blocker, if any.
+The GitHub plugin verified the repository and both initial branches. The published planning commit contains 20 files; all remote Git blob hashes matched the prepared local bytes. The completion receipt adds the publication record. The final stage branch is retained after integration into `main`.
 
 ## Exit gates
 
@@ -39,4 +39,4 @@ A publication blocker leaves gate 3 incomplete even if the design is ready. Reso
 
 ## Next action
 
-Finish publication if needed. On an instruction to execute Stage 01, start `stage/01-reference-port` from the verified Stage 00 completion state, read the architecture decision, and run the compatibility and numerical preflight before any learning experiment.
+On an instruction to execute Stage 01, create `stage/01-reference-port` from the completion commit recorded in `main:project_state.json`. Read the architecture decision and Stage 01 preflight, resolve the compatible Python/PyTorch/PennyLane environment, and implement the numerical reference fixtures and model contracts before any learning experiment.

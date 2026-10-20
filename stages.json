@@ -10,7 +10,9 @@
       "branch": "stage/00-plan",
       "depends_on": [],
       "initial_status": "planned",
-      "report": "docs/stages/00-plan.md"
+      "report": "docs/stages/00-plan.md",
+      "status": "passed",
+      "branch_created": true
     },
     {
       "id": "01",
@@ -21,7 +23,9 @@
         "00"
       ],
       "initial_status": "planned",
-      "report": "docs/stages/01-reference-port.md"
+      "report": "docs/stages/01-reference-port.md",
+      "status": "planned",
+      "branch_created": false
     },
     {
       "id": "02",
@@ -32,7 +36,9 @@
         "01"
       ],
       "initial_status": "planned",
-      "report": "docs/stages/02-exploration-controls.md"
+      "report": "docs/stages/02-exploration-controls.md",
+      "status": "planned",
+      "branch_created": false
     },
     {
       "id": "03",
@@ -43,7 +49,9 @@
         "02"
       ],
       "initial_status": "planned",
-      "report": "docs/stages/03-slam-beliefs.md"
+      "report": "docs/stages/03-slam-beliefs.md",
+      "status": "planned",
+      "branch_created": false
     },
     {
       "id": "04",
@@ -54,7 +62,9 @@
         "03"
       ],
       "initial_status": "planned",
-      "report": "docs/stages/04-classical-controller.md"
+      "report": "docs/stages/04-classical-controller.md",
+      "status": "planned",
+      "branch_created": false
     },
     {
       "id": "05",
@@ -65,7 +75,9 @@
         "04"
       ],
       "initial_status": "planned",
-      "report": "docs/stages/05-critic-ablation.md"
+      "report": "docs/stages/05-critic-ablation.md",
+      "status": "planned",
+      "branch_created": false
     },
     {
       "id": "06",
@@ -76,7 +88,9 @@
         "05"
       ],
       "initial_status": "planned",
-      "report": "docs/stages/06-interaction-model.md"
+      "report": "docs/stages/06-interaction-model.md",
+      "status": "planned",
+      "branch_created": false
     },
     {
       "id": "07",
@@ -93,7 +107,9 @@
           "stage": "06",
           "when": "Using the interaction-study candidate"
         }
-      ]
+      ],
+      "status": "planned",
+      "branch_created": false
     },
     {
       "id": "08",
@@ -114,7 +130,9 @@
           "stage": "07",
           "when": "Confirming a finite-shot or noise-robustness claim"
         }
-      ]
+      ],
+      "status": "planned",
+      "branch_created": false
     },
     {
       "id": "09",
@@ -125,7 +143,9 @@
         "08"
       ],
       "initial_status": "planned",
-      "report": "docs/stages/09-release.md"
+      "report": "docs/stages/09-release.md",
+      "status": "planned",
+      "branch_created": false
     }
   ],
   "recommended_execution_order": [

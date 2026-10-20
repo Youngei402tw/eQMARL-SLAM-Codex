@@ -1,5 +1,5 @@
 Planning validation PASSED
-Required files: 17; JSON files parsed: 5
-Stages: 10; pinned references: 4; relative links checked: 26
+Required files: 17; JSON files parsed: 6
+Stages: 10; pinned references: 4; relative links checked: 29
 Validated structure, dependency order, provenance fields, and links.
 This is not a training result or proof of GitHub publication.

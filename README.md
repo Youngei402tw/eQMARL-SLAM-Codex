@@ -2,7 +2,7 @@
 
 A staged research project to test whether an entangled quantum critic improves cooperative active SLAM under controlled information, model, and compute budgets.
 
-**Current scope: Stage 00 — execution plan and repository scaffold. No training experiments have run in this repository.** Remote publication state is recorded in [project_state.json](project_state.json); a planned branch name is not evidence that the branch has been created.
+**Stage 00 is complete: the execution plan and repository scaffold are published and verified. Stage 01 is next and has not started. No training experiments have run.** See [project_state.json](project_state.json) for the verified commits and next action, and the [publication receipt](docs/stages/00-publication.json) for the file verification evidence.
 
 ## Start here
 
@@ -40,7 +40,7 @@ A positive, null, or negative quantum comparison can all complete the project. C
 | 08 | `stage/08-confirmatory` | Frozen protocol and held-out multi-seed evaluation |
 | 09 | `stage/09-release` | Reproduction bundle, final report, and claim audit |
 
-Create each future stage branch when that stage starts, from its recorded dependency commit. Keep every completed stage branch. `main` is the stable project index and completed work. Do not create ten identical branches and imply ten completed stages.
+The existing branches are `main` and `stage/00-plan`. Create stages 01–09 when each stage starts, from its recorded dependency commit. Keep every completed stage branch. `main` is the stable project index and completed work; planned names in this table do not imply execution.
 
 ## What is runnable today
 
@@ -58,7 +58,7 @@ Open this repository in Codex and use:
 
 > Read AGENTS.md, project_state.json, stages.json, and docs/EXECUTION_PLAN.md. Resume the earliest authorized unfinished stage. Validate its dependency commit, protocol, budget, and publication route before execution. Work on its stage branch, preserve all run outcomes, publish and verify every experiment bundle, and update its stage report. Do not start confirmatory tests until the protocol is frozen. Report completed work, evidence, remaining limits, and the next stage.
 
-The present request initializes Stage 00. Future execution begins when a Codex work session is instructed to execute the plan or a particular stage. A README is not a running background job.
+Stage 00 is published. The next execution session begins with Stage 01 when instructed to execute the plan or that stage. The stage reports and recorded commits are the continuation record; no unattended training job has been launched.
 
 ## References and attribution
 
