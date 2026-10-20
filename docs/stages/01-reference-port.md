@@ -1,6 +1,6 @@
 # Stage 01 — Reference port and model contracts
 
-Status: running. Dependency: Stage 00 completion `1c14d2ad833be18b1d46d0d402ab915fe4c19e26`.
+Status: passed. Dependency: Stage 00 completion `1c14d2ad833be18b1d46d0d402ab915fe4c19e26`.
 Branch: `stage/01-reference-port`, created from that exact commit on 2026-10-20.
 The user's execution instruction authorizes the complete recorded plan; the
 Stage 00 planning-only scope is superseded for this session.
@@ -59,3 +59,17 @@ Run definitions and outcomes are indexed in `experiments/01/index.json`.
 Source/config commits are published and read back before reportable execution.
 Every outcome, including failures and installation diagnostics, is retained.
 Completion and remaining budgets will be recorded after actual execution.
+
+## Observed results and limits
+
+All three registered diagnostics completed and every artifact was retrieved and hash-verified from GitHub. The circuit oracle maximum expectation error was 6.11e-16 and maximum state-norm error 9.99e-16. All input, rotation and encoding-scale coordinates passed central finite differences; maximum error at h=1e-5 was 6.18e-11. Bell local/partition marginals and their gradients remained zero within tolerance while the joint readout varied with inputs.
+
+The unchanged original source passed all ten 4/8-qubit cases: Cirq128 maximum error 5.27e-16; TFQ32 maximum error 4.60e-7, below the preregistered 2e-5 tolerance. Legacy TFQ gradients and historical training were not tested. The 2-qubit extension remains explicitly distinct from unchanged source.
+
+Fixed-batch arithmetic matched the independent NumPy calculation, corrected gradient boundaries passed, and restored model/Adam/RNG/recurrent state reproduced the next synthetic stochastic update exactly. The selected checkpoint files are retained in Git. The synthetic environment is a software contract fixture, not SLAM.
+
+The complete primary suite passed 53 tests; the classical-only environment passed its 32 applicable checks with PennyLane absent. Source CPU CI succeeded. An initial legacy import failure and a mechanical postcheck failure are retained with their fixes; numerical results were never replaced.
+
+Recorded experiment wall time: 14.542s; CPU core-hours: 0.004037; GPU device-hours: 0; simulator circuit executions: 116; physical shots sampled: 0 (exact simulation, not a hardware-cost estimate). Three optimizer updates were synthetic checkpoint checks; research training steps: 0. A separate conservative setup/development envelope of 1517.5s is charged against the 24h stage cap.
+
+The publication receipt records source/results identities and fresh retrieval of all 84 raw diagnostic records and required artifacts. The immutable completion SHA is indexed after this report is committed. Stage 02 may proceed; no policy-performance or quantum-advantage claim is made.

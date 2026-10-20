@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-20T09:23:22.381452+00:00",
+  "updated_utc": "2026-10-20T09:35:20.579315+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,19 +12,20 @@
   },
   "authorized_current_scope": "Execute Stages 01\u201309 autonomously under the recorded plan, stage gates and resource caps; user instruction 2026-10-20.",
   "active_stage": "01",
-  "stage_status": "running",
+  "stage_status": "passed",
   "training_runs_executed": 0,
   "current_branch": "stage/01-reference-port",
   "dependency_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
   "completion_commit": null,
-  "publication_status": "pending",
+  "publication_status": "verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
-    "main_before_stage01_integration": "822d073160092a681b9966cbee1a5dfdb23b8e30"
+    "main_before_stage01_integration": "822d073160092a681b9966cbee1a5dfdb23b8e30",
+    "stage/01-reference-port": "8bdd0d5b8225a3489bacaabfc839da5400089fd4"
   },
   "blockers": [],
-  "next_action": "Publish Stage 01 source and run definitions, verify SHA, execute registered numerical and runtime diagnostics, archive every outcome.",
+  "next_action": "Index immutable Stage 01 completion commit on main, then create stage/02-exploration-controls from it and run its gated protocol.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -36,13 +37,23 @@
   ],
   "next_stage": "02",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
-  "completion_commit_location": "main:project_state.json",
+  "completion_commit_location": "Subsequent main receipt or Stage 01 PR; this commit cannot contain its own hash.",
   "next_stage_status": "planned",
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 1517.5222470760345,
+    "consumed_wall_seconds": 1532.0641439580345,
     "accounting": "Execution segments sum across all diagnostics, attempts and resumes; implementation time recorded separately.",
     "setup_wall_seconds_charged": 1517.5222470760345,
-    "setup_charge_convention": "Conservative elapsed envelope from stage branch creation to source preregistration, including setup, development and unit checks; CPU usage of bootstrap not instrumented."
+    "setup_charge_convention": "Conservative elapsed envelope from stage branch creation to source preregistration, including setup, development and unit checks; CPU usage of bootstrap not instrumented.",
+    "recorded_experiment_resources": {
+      "primitive_steps": 0,
+      "decisions": 0,
+      "updates": 3,
+      "wall_seconds": 14.54189688200006,
+      "cpu_core_hours": 0.0040369655555555556,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 116,
+      "shots": 0
+    }
   }
 }

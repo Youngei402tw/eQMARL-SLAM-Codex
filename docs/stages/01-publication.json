@@ -1,0 +1,49 @@
+{
+  "stage": "01",
+  "verified_utc": "2026-10-20T09:35:20.573172+00:00",
+  "verified_remote_head": "8bdd0d5b8225a3489bacaabfc839da5400089fd4",
+  "mechanism": "Independent shallow Git clone followed by fetch of published results, full Git object integrity and every bundle artifact SHA256/size",
+  "retrieved_tree": "d9daa36f3c90a38ab974eec329760feca6e12b2c",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "01-legacy-reference-v1_seed-2701_attempt-01",
+      "status": "completed",
+      "verified_files": 11,
+      "metrics_rows": 10,
+      "metrics_sha256": "0c88225a09918b9701d7b9eb1a9786ce4b4a712e55ccdd716eeef26af8f05718"
+    },
+    {
+      "valid": true,
+      "run_id": "01-model-contracts-v1_seed-1701_attempt-01",
+      "status": "completed",
+      "verified_files": 9,
+      "metrics_rows": 22,
+      "metrics_sha256": "1aab3ebb87ee7f2170b6170882a44aea7cfe6c7fd18868f52dc03f8b7f0f3fa8"
+    },
+    {
+      "valid": true,
+      "run_id": "01-reference-circuit-v1_seed-1701_attempt-01",
+      "status": "completed",
+      "verified_files": 7,
+      "metrics_rows": 52,
+      "metrics_sha256": "884554413cfb562b6bc53bff5dbf8df47555f6db055f6612118edc646940c052"
+    }
+  ],
+  "external_large_artifacts": [],
+  "source_commits": [
+    "09f8e1c48f8d4632e921130ceff3429ce445ca08",
+    "2c96db5959189d3255c782a11c3b7d81913b633c",
+    "787d12e4dedbea50ab8a8958528039494aa04643"
+  ],
+  "results_commits": {
+    "01-reference-circuit-v1_seed-1701_attempt-01": "2c96db5959189d3255c782a11c3b7d81913b633c",
+    "01-model-contracts-v1_seed-1701_attempt-01": "144a548d3422004f3d0d5120621f48d6c7041e04",
+    "01-legacy-reference-v1_seed-2701_attempt-01": "8bdd0d5b8225a3489bacaabfc839da5400089fd4"
+  },
+  "source_ci_verified": {
+    "sha": "787d12e4dedbea50ab8a8958528039494aa04643",
+    "conclusion": "success",
+    "url": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/actions/runs/39401348610"
+  }
+}

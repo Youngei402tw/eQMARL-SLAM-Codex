@@ -26,9 +26,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/01-reference-port.md",
-      "status": "running",
+      "status": "passed",
       "branch_created": true,
-      "dependency_completion_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26"
+      "dependency_completion_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
+      "publication_receipt": "docs/stages/01-publication.json"
     },
     {
       "id": "02",
