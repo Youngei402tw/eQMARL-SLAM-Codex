@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-20T09:35:20.579315+00:00",
+  "updated_utc": "2026-10-20T09:46:32.131567+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -11,21 +11,22 @@
     "last_check": "All 20 files of the published planning commit matched their local Git blob hashes; the stage branch head and AGENTS.md content were read back through the GitHub plugin."
   },
   "authorized_current_scope": "Execute Stages 01\u201309 autonomously under the recorded plan, stage gates and resource caps; user instruction 2026-10-20.",
-  "active_stage": "01",
+  "active_stage": "02",
   "stage_status": "passed",
   "training_runs_executed": 0,
-  "current_branch": "stage/01-reference-port",
-  "dependency_commit": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
+  "current_branch": "stage/02-exploration-controls",
+  "dependency_commit": "6b49e7010d9c0667acb41854b1d008f303ea0355",
   "completion_commit": null,
   "publication_status": "verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
     "main_before_stage01_integration": "822d073160092a681b9966cbee1a5dfdb23b8e30",
-    "stage/01-reference-port": "8bdd0d5b8225a3489bacaabfc839da5400089fd4"
+    "stage/01-reference-port": "6b49e7010d9c0667acb41854b1d008f303ea0355",
+    "stage/02-exploration-controls": "e049d8c118f15e3ae113ff060bb7be71684fd10f"
   },
   "blockers": [],
-  "next_action": "Index immutable Stage 01 completion commit on main, then create stage/02-exploration-controls from it and run its gated protocol.",
+  "next_action": "Index Stage 02 immutable completion, then create stage/03-slam-beliefs from that verified commit and validate a genuine 2D smoother.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -35,24 +36,42 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "02",
+  "next_stage": "03",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Subsequent main receipt or Stage 01 PR; this commit cannot contain its own hash.",
   "next_stage_status": "planned",
+  "completed_stage_budgets": {
+    "01": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 1532.0641439580345,
+      "accounting": "Execution segments sum across all diagnostics, attempts and resumes; implementation time recorded separately.",
+      "setup_wall_seconds_charged": 1517.5222470760345,
+      "setup_charge_convention": "Conservative elapsed envelope from stage branch creation to source preregistration, including setup, development and unit checks; CPU usage of bootstrap not instrumented.",
+      "recorded_experiment_resources": {
+        "primitive_steps": 0,
+        "decisions": 0,
+        "updates": 3,
+        "wall_seconds": 14.54189688200006,
+        "cpu_core_hours": 0.0040369655555555556,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 116,
+        "shots": 0
+      }
+    }
+  },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 1532.0641439580345,
-    "accounting": "Execution segments sum across all diagnostics, attempts and resumes; implementation time recorded separately.",
-    "setup_wall_seconds_charged": 1517.5222470760345,
-    "setup_charge_convention": "Conservative elapsed envelope from stage branch creation to source preregistration, including setup, development and unit checks; CPU usage of bootstrap not instrumented.",
+    "consumed_wall_seconds": 509.72138939115325,
+    "setup_wall_seconds_charged": 506.6793429851532,
+    "setup_charge_convention": "Conservative elapsed setup/development envelope from branch creation to preregistration, includes unit diagnostics; bootstrap CPU not instrumented.",
     "recorded_experiment_resources": {
-      "primitive_steps": 0,
-      "decisions": 0,
-      "updates": 3,
-      "wall_seconds": 14.54189688200006,
-      "cpu_core_hours": 0.0040369655555555556,
+      "primitive_steps": 1709,
+      "decisions": 3418,
+      "updates": 0,
+      "wall_seconds": 3.042046406000054,
+      "cpu_core_hours": 0.0008445561111111111,
       "gpu_device_hours": 0,
-      "circuit_evaluations": 116,
+      "circuit_evaluations": 0,
       "shots": 0
     }
   }

@@ -1,0 +1,67 @@
+{
+  "artifacts": [
+    {
+      "path": "diagnostics.json",
+      "size_bytes": 6191,
+      "sha256": "4f30ef187636fbd10349315a2cbec583498f2fdb7f08ba410f031fd277b0a1c9",
+      "purpose": "diagnostics.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "manifest.json",
+      "size_bytes": 4199,
+      "sha256": "7632f59233bc68433a2f9e2efa93ebc08902eeb02425866a47d5761f4a925da1",
+      "purpose": "manifest.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "metrics.jsonl",
+      "size_bytes": 3046143,
+      "sha256": "ab8f521a5edb7fbfbfa10435da8d28953d65e77a449a049d79422553798c0495",
+      "purpose": "metrics.jsonl",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "report.md",
+      "size_bytes": 869,
+      "sha256": "99807b8a39d66426fc5f7f041a10c99b5507fb16224b165edc6f4157b6a95652",
+      "purpose": "report.md",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "resolved_config.yaml",
+      "size_bytes": 5427,
+      "sha256": "d230e61b9abe0bb6089c7956d73b1d69ab5bab25b3dc71edd501ee3c2e3fa7ed",
+      "purpose": "resolved_config.yaml",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "scenario_manifest.json",
+      "size_bytes": 3109,
+      "sha256": "a45e4ba91af7b6da1b7d7ed7a3c7b1e46fbdd72996640c8c5cd0bb0ae7455cdb",
+      "purpose": "scenario_manifest.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "source_publication.json",
+      "size_bytes": 224,
+      "sha256": "1ab3783d2590b1d2bc11a689e5b9c8d1f6edbe75fbc4afb58cd53e173815bcaa",
+      "purpose": "source_publication.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "summary.json",
+      "size_bytes": 6688,
+      "sha256": "82315f546784cca9cbd665e04e16714cf3a8877499305d1fbb885dbe69ee56ef",
+      "purpose": "summary.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "trajectories.jsonl",
+      "size_bytes": 2880107,
+      "sha256": "f838a83dc48e7f9d1b45ad4c8557728e01b02310751fb2389f123618068c37d4",
+      "purpose": "trajectories.jsonl",
+      "retention": "permanent_git_history"
+    }
+  ]
+}

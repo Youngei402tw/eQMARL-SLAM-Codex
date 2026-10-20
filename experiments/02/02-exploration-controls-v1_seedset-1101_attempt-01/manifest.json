@@ -1,0 +1,146 @@
+{
+  "schema_version": "0.1.0",
+  "run_id": "02-exploration-controls-v1_seedset-1101_attempt-01",
+  "stage": "02",
+  "protocol_id": "exploration-controls-v1",
+  "hypothesis": "Own-map exploration is information-isolated and physical coverage is measured independently; competent frontier controls make progress on simple solvable maps.",
+  "method": "registered_known_pose_control_matrix",
+  "status": "completed",
+  "source_commit": "facb03651a59d2bc1bbb3f559e04c0db00b48af9",
+  "dependency_completion_commit": "6b49e7010d9c0667acb41854b1d008f303ea0355",
+  "dirty_tree": false,
+  "config_sha256": "d230e61b9abe0bb6089c7956d73b1d69ab5bab25b3dc71edd501ee3c2e3fa7ed",
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": [
+      1101,
+      1102,
+      1103
+    ],
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/stage02/scenarios.json",
+      "sha256": "4d94ded62b335d5d34acd866ef48374847ef32462168be52b0ecd9001f323169"
+    },
+    "validation": null,
+    "test": null
+  },
+  "runtime": {
+    "python": "3.11.17 (main, Oct  3 2026, 01:05:36) [Clang 22.1.3 ]",
+    "lockfile_sha256": "b2773d714aca2130a7186206bde5dbc931b7d499373c141450cd76fdb436d4e8",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "hardware": {
+      "device": "CPU",
+      "available_cpus": 5,
+      "max_job_threads": 1
+    },
+    "dependencies": {
+      "rustworkx": "0.18.1",
+      "attrs": "26.1.0",
+      "pytest": "9.1.1",
+      "setuptools": "84.2.0",
+      "typing_extensions": "4.16.0",
+      "scipy-openblas32": "0.3.34.237.2",
+      "mpmath": "1.3.0",
+      "numpy": "2.4.6",
+      "pennylane": "0.45.1",
+      "PyYAML": "6.0.3",
+      "scipy": "1.17.1",
+      "gast": "0.7.0",
+      "requests": "2.34.2",
+      "sympy": "1.14.0",
+      "torch": "2.14.1+cpu",
+      "jsonschema-specifications": "2025.9.1",
+      "fsspec": "2026.9.0",
+      "termcolor": "3.3.0",
+      "MarkupSafe": "3.0.4",
+      "gymnasium": "1.4.0",
+      "charset-normalizer": "3.5.2",
+      "iniconfig": "2.3.1",
+      "referencing": "0.37.0",
+      "tomlkit": "0.15.2",
+      "packaging": "26.3",
+      "pennylane_lightning": "0.45.0",
+      "certifi": "2026.10.19",
+      "jsonschema": "4.26.0",
+      "Farama-Notifications": "0.0.6",
+      "diastatic-malt": "2.15.3",
+      "Jinja2": "3.1.6",
+      "autoray": "0.8.4",
+      "cachetools": "7.2.4",
+      "rpds-py": "2026.9.1",
+      "autograd": "1.8.0",
+      "filelock": "4.2.4",
+      "pluggy": "1.7.0",
+      "urllib3": "2.8.0",
+      "cloudpickle": "3.1.2",
+      "networkx": "3.6.1",
+      "Pygments": "2.21.0",
+      "appdirs": "1.4.4",
+      "idna": "3.20"
+    }
+  },
+  "model": {
+    "actor": "fixed random/reactive/frontier controllers; no learned model",
+    "encoder": null,
+    "critic": null,
+    "parameter_counts": {
+      "trainable": 0
+    },
+    "optimizer": null
+  },
+  "quantum": null,
+  "budget": {
+    "profile": "diagnostic",
+    "primitive_steps": 3200,
+    "wall_seconds": 3600
+  },
+  "resources_consumed": {
+    "primitive_steps": 1709,
+    "decisions": 3418,
+    "updates": 0,
+    "wall_seconds": 3.042046406000054,
+    "cpu_core_hours": 0.0008445561111111111,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "execution_segments": [
+    {
+      "started_utc": "2026-10-20T09:44:41.450311+00:00",
+      "ended_utc": "2026-10-20T09:44:44.521990+00:00",
+      "primitive_steps": 1709,
+      "decisions": 3418,
+      "updates": 0,
+      "wall_seconds": 3.042046406000054,
+      "cpu_core_hours": 0.0008445561111111111,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 0,
+      "shots": 0
+    }
+  ],
+  "evaluation": {
+    "policy_mode": {
+      "random": "sampled",
+      "reactive": "greedy",
+      "local_frontier": "greedy",
+      "shared_frontier": "greedy"
+    },
+    "checkpoint_selection": "fixture_only_no_policy_selection",
+    "metrics_protocol": "exploration-controls-v1"
+  },
+  "artifacts": "artifact_manifest.json",
+  "failure": null,
+  "publication": {
+    "status": "pending",
+    "source_remote_verified": true
+  }
+}

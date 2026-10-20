@@ -1,0 +1,188 @@
+{
+  "stage": "02",
+  "run_id": "02-exploration-controls-v1_seedset-1101_attempt-01",
+  "protocol_id": "exploration-controls-v1",
+  "profile": "diagnostic",
+  "experiment": "exploration-controls",
+  "method": "registered_known_pose_control_matrix",
+  "hypothesis": "Own-map exploration is information-isolated and physical coverage is measured independently; competent frontier controls make progress on simple solvable maps.",
+  "dependency_completion_commit": "6b49e7010d9c0667acb41854b1d008f303ea0355",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 3200,
+  "max_cpu_threads": 1,
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": [
+      1101,
+      1102,
+      1103
+    ],
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/stage02/scenarios.json",
+      "sha256": "4d94ded62b335d5d34acd866ef48374847ef32462168be52b0ecd9001f323169"
+    },
+    "validation": null,
+    "test": null
+  },
+  "model": {
+    "actor": "fixed random/reactive/frontier controllers; no learned model",
+    "encoder": null,
+    "critic": null,
+    "parameter_counts": {
+      "trainable": 0
+    },
+    "optimizer": null
+  },
+  "quantum": null,
+  "scenarios": [
+    {
+      "scenario_id": "development-open-v1",
+      "grid": [
+        "#########",
+        "#.......#",
+        "#.......#",
+        "#.......#",
+        "#.......#",
+        "#.......#",
+        "#########"
+      ],
+      "starts": [
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          7
+        ]
+      ]
+    },
+    {
+      "scenario_id": "development-bottleneck-v1",
+      "grid": [
+        "#########",
+        "#...#...#",
+        "#...#...#",
+        "#.......#",
+        "#...#...#",
+        "#...#...#",
+        "#########"
+      ],
+      "starts": [
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          7
+        ]
+      ]
+    },
+    {
+      "scenario_id": "development-deadend-v1",
+      "grid": [
+        "#########",
+        "#...#...#",
+        "#.#.#.#.#",
+        "#.#...#.#",
+        "#.#####.#",
+        "#.......#",
+        "###.#.###",
+        "#...#...#",
+        "#########"
+      ],
+      "starts": [
+        [
+          1,
+          1
+        ],
+        [
+          7,
+          7
+        ]
+      ]
+    }
+  ],
+  "development_seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "methods": [
+    "random",
+    "reactive",
+    "local_frontier",
+    "shared_frontier"
+  ],
+  "horizon": 80,
+  "sensor_range": 2,
+  "coverage_target": 1.0,
+  "known_pose": true,
+  "coordinate_convention": "row,column; north reduces row",
+  "actions": [
+    "wait",
+    "north",
+    "east",
+    "south",
+    "west"
+  ],
+  "motion_noise": 0,
+  "sensor_noise": 0,
+  "sensor_model": "cardinal rays range2; first wall observed and occludes later cells",
+  "map_values": {
+    "unknown": -1,
+    "free": 0,
+    "wall": 1
+  },
+  "action_masks": "own known map occupancy and fixed bounds; unknown attempts permitted; teammate true positions excluded",
+  "horizon_semantics": "intrinsic finite horizon, remaining budget supplied, terminal at horizon or coverage target",
+  "information_conditions": {
+    "random": "local-only",
+    "reactive": "local-only",
+    "local_frontier": "local-only",
+    "shared_frontier": "shared-map with delivered poses and charged bytes/messages"
+  },
+  "action_modes": {
+    "random": "sampled",
+    "reactive": "greedy",
+    "local_frontier": "greedy",
+    "shared_frontier": "greedy"
+  },
+  "metric_definitions": {
+    "physical_free_coverage": "independent simulator physical_seen intersect fixed union-start reachable-free domain divided by fixed domain size",
+    "estimated_free_coverage": "mapper known-free union intersect same fixed domain divided by domain size",
+    "map_accuracy": "correct occupied/free cells over full grid; unknown incorrect",
+    "success": "physical_free_coverage>=1.0",
+    "trajectory_error": null,
+    "collision_rate": "blocked attempted moving robot actions divided by max(1,elapsed_joint_steps*2)"
+  },
+  "reward": {
+    "physical_coverage_gain": 1.0,
+    "step_cost": 0.0,
+    "collision_cost": 0.0,
+    "communication_cost": 0.0
+  },
+  "interpretation": "Known-pose scripted and heuristic exploration diagnostics only. Shared-frontier has explicitly different delivered information; no learned-policy or SLAM/quantum performance comparison.",
+  "open_scenario_id": "development-open-v1",
+  "shared_planner_occupancy": "Conservative legal subset: never enter another robot current delivered cell, even when simultaneous follower moves would be legal.",
+  "n_agents": 2,
+  "cell_size": 1.0,
+  "communication_payload": "At reset and each transition, each sender full int8 local map plus two int64 pose coordinates to every other agent; payload bytes exclude headers; zero latency/loss.",
+  "development_replicates": "Three explicit action seeds; deterministic greedy repeats are retained but do not represent independently trained models.",
+  "correctness_fixture_definition": {
+    "source": "eqmarl_slam/diagnostics02.py",
+    "sha256": "aa49b3490330f4dc00cd22923a58092e4e212368a2dd0e419d821df0b9f0ab59",
+    "seven_scripted_primitive_transitions": true,
+    "interpretation": "fixed code-defined contract cases; maps, seeds and observations retained in raw fixture evidence"
+  }
+}
