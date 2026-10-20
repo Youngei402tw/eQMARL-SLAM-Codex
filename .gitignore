@@ -1,0 +1,20 @@
+# Local environments, caches, and disposable work only.
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.DS_Store
+.env
+.env.*
+!.env.example
+scratch/
+tmp/
+.cache/
+
+# experiments/ and checkpoint extensions are intentionally not blanket-ignored.
+# Archive policy: docs/GITHUB_WORKFLOW.md.

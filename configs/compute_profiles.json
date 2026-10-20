@@ -1,0 +1,56 @@
+{
+  "schema_version": "0.1.0",
+  "status": "provisional_design_caps_not_benchmarked",
+  "policy": {
+    "existing_allocated_hardware_only": true,
+    "new_paid_compute_authorized": false,
+    "default_max_cumulative_wall_hours_per_stage": 24,
+    "max_concurrent_training_jobs": 1,
+    "restart_resets_budget": false,
+    "qubits_initial_max": 8,
+    "preflight_required": true,
+    "do_not_retune_after_final_test": true,
+    "max_cpu_threads_per_job": 8,
+    "resource_counters": [
+      "active_wall_seconds",
+      "cpu_core_hours",
+      "gpu_device_hours",
+      "circuit_evaluations",
+      "shots"
+    ],
+    "resource_hours_are_not_interchangeable": true
+  },
+  "smoke": {
+    "training_seeds": 1,
+    "max_primitive_steps_per_run": 100,
+    "max_wall_minutes_per_run": 15,
+    "purpose": "Correctness and throughput only; not a performance claim.",
+    "max_episodes": 2,
+    "max_primitive_steps_per_episode": 50
+  },
+  "pilot": {
+    "training_seeds": 3,
+    "max_primitive_steps_per_run": 20000,
+    "purpose": "Feasibility and diagnostics on development tasks.",
+    "max_wall_hours_per_run": 2,
+    "validation_episodes_per_policy": 30
+  },
+  "tuning": {
+    "max_configs_per_method": 6,
+    "training_seeds_per_config": 2,
+    "max_primitive_steps_per_run": 10000,
+    "purpose": "Equal bounded tuning opportunity; validation checkpoint selection."
+  },
+  "confirmatory": {
+    "target_training_seeds": 8,
+    "max_selected_methods": 4,
+    "max_primitive_steps_per_run": 100000,
+    "target_test_maps_per_trained_seed": 100,
+    "purpose": "Provisional target; freeze feasible exact design and power/precision rationale before opening test results."
+  },
+  "revision_rule": "Use measured throughput and validation-only evidence to commit a revised cap before extra runs. Any new spending requires user authorization. Keep prior runs and protocol versions; do not reset consumed resources or extend final experiments to chase significance.",
+  "diagnostic": {
+    "max_wall_hours_per_family": 1,
+    "purpose": "Fixed numerical, estimator, leakage and value-fitting fixtures."
+  }
+}

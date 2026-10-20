@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "updated_utc": "2026-10-20T08:59:56.501910+00:00",
+  "repository": {
+    "owner": "Youngei402tw",
+    "name": "eQMARL-SLAM-Codex",
+    "visibility": "public",
+    "created": true,
+    "remote_verified": false,
+    "url": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+    "last_check": "GitHub plugin verified user-created empty public repository and write access; publication verification is in progress."
+  },
+  "authorized_current_scope": "Stage 00 planning and repository initialization. Training begins in a future session instructed to execute the plan or a stage.",
+  "active_stage": "00",
+  "stage_status": "running",
+  "training_runs_executed": 0,
+  "current_branch": "stage/00-plan",
+  "dependency_commit": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
+  "completion_commit": null,
+  "publication_status": "pending",
+  "verified_remote_commits": {
+    "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae"
+  },
+  "blockers": [],
+  "next_action": "Finish verifying Stage 00 publication. Stage 01 next creates stage/01-reference-port from the recorded completion commit and runs the stack compatibility and numerical reference preflight.",
+  "planning_validation": "passed",
+  "review_findings_resolved": [
+    "EKF versus historical smoothing scope",
+    "same-step revisit comparison",
+    "trainable actor versus frozen architecture",
+    "source commit publication before runs",
+    "typed compute counters",
+    "schema and numerical tolerance consistency"
+  ],
+  "next_stage": "01"
+}
