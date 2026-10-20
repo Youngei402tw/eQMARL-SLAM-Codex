@@ -27,8 +27,8 @@
       "config": "configs/stage01/contracts.yaml",
       "config_sha256": "7ca90d114e0675fb51da43acc7663ab19b5bed8ebe9979e7433293cca8adca79",
       "source_commit": "2c96db5959189d3255c782a11c3b7d81913b633c",
-      "results_commit": null,
-      "publication_status": "pending",
+      "results_commit": "144a548d3422004f3d0d5120621f48d6c7041e04",
+      "publication_status": "verified",
       "resources_consumed": {
         "primitive_steps": 0,
         "decisions": 0,

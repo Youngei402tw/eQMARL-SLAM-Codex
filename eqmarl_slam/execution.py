@@ -142,13 +142,20 @@ def execute(config_path, source_receipt):
                 "cpu_core_hours": (_cpu_seconds() - cpu_start) / 3600,
                 "gpu_device_hours": 0, "circuit_evaluations": diagnostics.get("resources", {}).get("circuit_evaluations", 0),
                 "shots": 0}
+    runtime = runtime_manifest()
+    if config["experiment"] == "legacy-reference":
+        runtime = {"python": diagnostics.get("python", "legacy child unavailable; see execution log"),
+                   "lockfile_sha256": sha256_file(ROOT / "configs/stage01/legacy/requirements-legacy.lock"),
+                   "platform": diagnostics.get("platform", platform.platform()),
+                   "hardware": runtime["hardware"], "dependencies": diagnostics.get("packages", {}),
+                   "driver_runtime": runtime}
     manifest = {
         "schema_version": "0.1.0", "run_id": run_id, "stage": stage, "protocol_id": config["protocol_id"],
         "hypothesis": config["hypothesis"], "method": config["method"], "status": status,
         "source_commit": source, "dependency_completion_commit": config["dependency_completion_commit"],
         "dirty_tree": False, "config_sha256": sha256_file(output / "resolved_config.yaml"),
         "seed_streams": config["seed_streams"], "split_manifests": config["split_manifests"],
-        "runtime": runtime_manifest(), "model": config["model"], "quantum": config["quantum"],
+        "runtime": runtime, "model": config["model"], "quantum": config["quantum"],
         "budget": {"profile": config["profile"], "primitive_steps": 0, "wall_seconds": wall_limit},
         "resources_consumed": consumed,
         "execution_segments": [{"started_utc": started_utc, "ended_utc": datetime.now(timezone.utc).isoformat(), **consumed}],
