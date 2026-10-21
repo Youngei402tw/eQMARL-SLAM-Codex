@@ -8,7 +8,7 @@
       "config": "configs/stage03/beliefs.yaml",
       "config_sha256": "44fff0224d2e8c14e378ea7cefa39416384b1d0cc14a253e5ce2dcfd04a8e7e0",
       "source_commit": "7b0e61b9bcf8ec5b24276041885ea28ff3ab87f6",
-      "results_commit": null,
+      "results_commit": "789ddd4662c34597bc072ad811a625e7d3f2bca8",
       "failure": {
         "reason": "'<=' not supported between instances of 'float' and 'str'",
         "type": "TypeError",
@@ -26,6 +26,15 @@
         "shots": 0
       },
       "publication_status": "pending"
+    },
+    {
+      "run_id": "03-belief-slam-v1_seedset-3101_attempt-02",
+      "status": "planned",
+      "config": "configs/stage03/beliefs-attempt02.yaml",
+      "config_sha256": "07dc3999f3e66ecbf9bef42d7a9073852485e5c248f2969b6dfdfcc84bf83a03",
+      "source_commit": null,
+      "results_commit": null,
+      "reason": "Correct numeric JSON parsing; all scientific values and thresholds unchanged."
     }
   ]
 }

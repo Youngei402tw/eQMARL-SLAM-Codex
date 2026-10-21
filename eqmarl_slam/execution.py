@@ -18,6 +18,12 @@ from .archive import sha256_file, validate_bundle
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def load_config(path):
+    """Use JSON numeric semantics for JSON-formatted YAML documents."""
+    content = Path(path).read_text()
+    return json.loads(content) if content.lstrip().startswith("{") else yaml.safe_load(content)
+
+
 def write_json(path, data):
     Path(path).write_text(json.dumps(data, indent=2, allow_nan=False) + "\n")
 
@@ -62,7 +68,7 @@ def _cpu_seconds():
 
 def execute(config_path, source_receipt):
     config_path = Path(config_path).resolve()
-    config = yaml.safe_load(config_path.read_text())
+    config = load_config(config_path)
     stage, run_id = config["stage"], config["run_id"]
     preflight_stage(stage, config["profile"])
     if git("status", "--porcelain"):
