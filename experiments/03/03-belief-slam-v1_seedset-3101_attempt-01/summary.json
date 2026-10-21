@@ -1,0 +1,22 @@
+{
+  "run_id": "03-belief-slam-v1_seedset-3101_attempt-01",
+  "source_commit": "7b0e61b9bcf8ec5b24276041885ea28ff3ab87f6",
+  "config_sha256": "44fff0224d2e8c14e378ea7cefa39416384b1d0cc14a253e5ce2dcfd04a8e7e0",
+  "metrics_sha256": "d83d03c36823d4f5630f66b571e5ecd01943306d3cb026408dece9b84361ae41",
+  "metrics_rows": 152,
+  "analysis_version": "stage01-v1",
+  "passed": false,
+  "gates": {},
+  "resources_consumed": {
+    "primitive_steps": 21,
+    "decisions": 0,
+    "updates": 0,
+    "wall_seconds": 0.19840587899670936,
+    "cpu_core_hours": 5.509833333333333e-05,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "interpretation": "Fixed genuine 2D SLAM estimator diagnostics, including unknown landmark locations and uncertain historical poses. No controller training, task-performance or quantum-advantage claim.",
+  "analysis": {}
+}

@@ -1,0 +1,21 @@
+{
+  "passed": false,
+  "exception": {
+    "reason": "'<=' not supported between instances of 'float' and 'str'",
+    "type": "TypeError",
+    "traceback": "failure.txt",
+    "attempt": 1
+  },
+  "resources": {
+    "primitive_steps": 21,
+    "decisions": 0,
+    "updates": 0,
+    "wall_seconds": 0.15015323500119848,
+    "cpu_core_hours": 4.170555555555553e-05,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0,
+    "solver_requests": 46,
+    "communication_bytes": 0
+  }
+}

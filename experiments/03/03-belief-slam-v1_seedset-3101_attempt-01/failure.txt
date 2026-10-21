@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/eQMARL-SLAM-Codex/eqmarl_slam/execution.py", line 124, in execute
+    diagnostics = run_diagnostics(config, output, emit, progress=progress)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/eQMARL-SLAM-Codex/eqmarl_slam/diagnostics03.py", line 266, in run_diagnostics
+    check("first_unknown_landmark_no_pose_information", new_landmark_error <= limits["new_unknown_landmark_pose_covariance_atol"],
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<=' not supported between instances of 'float' and 'str'
