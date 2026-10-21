@@ -173,6 +173,9 @@ def execute(config_path, source_receipt):
         elif config["experiment"] == "confirmatory-training":
             from .confirmatory import train_and_test
             diagnostics = train_and_test(config, output, emit, progress=progress)
+        elif config["experiment"] == "release-audit":
+            from .diagnostics09 import run_diagnostics
+            diagnostics = run_diagnostics(config, output, emit, progress=progress)
         elif config["experiment"] == "legacy-reference":
             command = [config["interpreter"], str(ROOT / "eqmarl_slam/reference_probe.py"),
                        "--fixtures", str(ROOT / config["fixtures"]),

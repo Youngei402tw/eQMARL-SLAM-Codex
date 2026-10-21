@@ -1,0 +1,24 @@
+{
+  "stage": "09",
+  "verified_utc": "2026-10-21T08:26:57.719729+00:00",
+  "verified_remote_head": "d9e130c99338200ae144c558735226ac3a6dc24d",
+  "mechanism": "Fresh independent Git retrieval; every run manifest, resolved config, raw metric, diagnostic and inventoried checkpoint hash/size validated",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "09-release-audit-v1_attempt-01",
+      "status": "failed",
+      "verified_files": 10,
+      "metrics_rows": 28,
+      "metrics_sha256": "c8e5d19e2dc12ea621ec6bfae86df1e6c2ffa77e394704c00c24c3366d8d392e"
+    },
+    {
+      "valid": true,
+      "run_id": "09-release-audit-v1_attempt-02",
+      "status": "completed",
+      "verified_files": 9,
+      "metrics_rows": 28,
+      "metrics_sha256": "e3b4aa09a2a6c640651aeee01df1db3c92749e8d00ab4df173473e20bf71a2fb"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-21T08:13:00+00:00",
+  "updated_utc": "2026-10-21T08:27:23.261199+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -11,11 +11,11 @@
     "last_check": "All 20 files of the published planning commit matched their local Git blob hashes; the stage branch head and AGENTS.md content were read back through the GitHub plugin."
   },
   "authorized_current_scope": "Execute Stages 01\u201309 autonomously under the recorded plan, stage gates and resource caps; user instruction 2026-10-20.",
-  "active_stage": "08",
+  "active_stage": "09",
   "stage_status": "passed",
   "training_runs_executed": 95,
-  "current_branch": "stage/08-confirmatory",
-  "dependency_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+  "current_branch": "stage/09-release",
+  "dependency_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080",
   "completion_commit": null,
   "publication_status": "verified_complete",
   "verified_remote_commits": {
@@ -29,10 +29,12 @@
     "stage/05-critic-ablation": "0647dc61b203825119e414189355c70d8c5410a5",
     "stage/06-interaction-model": "8f38616118c52289a99bfcd6f79662593285c958",
     "stage/07-shot-noise": "0a1cfce80f2e6c35f9c0f69c5bf290af797bec09",
-    "stage/08-confirmatory-results": "e834c9f4d7c78e74bc82f5bea2d7e9625e0eb3c8"
+    "stage/08-confirmatory-results": "e834c9f4d7c78e74bc82f5bea2d7e9625e0eb3c8",
+    "stage/08-confirmatory": "78eaab5310c880cf421ccb67415d4fbb2790d080",
+    "stage/09-release-results": "d9e130c99338200ae144c558735226ac3a6dc24d"
   },
   "blockers": [],
-  "next_action": "Create Stage 09 from the immutable Stage 08 completion commit and execute the registered release audit in a clean runtime.",
+  "next_action": "Integrate the verified Stage 09 completion through its reviewable pull request and record the immutable completion SHA on main.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -42,10 +44,10 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "09",
+  "next_stage": null,
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
-  "next_stage_status": "ready",
+  "next_stage_status": "none_plan_complete",
   "completed_stage_budgets": {
     "01": {
       "cap_wall_seconds": 86400,
@@ -168,7 +170,7 @@
       "consumed_wall_seconds": 5389.146638105958,
       "setup_wall_seconds_charged": 480.0,
       "stage_started_utc": "2026-10-21T04:38:21.387654+00:00",
-      "setup_charge_convention": "Active setup and finalization segments only; the inactive 2026-10-21T06:04:35Z–08:10:45Z session gap is excluded.",
+      "setup_charge_convention": "Active setup and finalization segments only; the inactive 2026-10-21T06:04:35Z\u201308:10:45Z session gap is excluded.",
       "recorded_experiment_resources": {
         "primitive_steps": 261879,
         "decisions": 178990,
@@ -178,30 +180,40 @@
         "gpu_device_hours": 0,
         "circuit_evaluations": 166628,
         "shots": 0
-      },
-      "test_phase": {
-        "episodes": 2400,
-        "wall_seconds": 146.22588054400694,
-        "cpu_core_hours": 0.04061626666666665,
-        "critic_executions": 0,
-        "optimizer_updates": 0
+      }
+    },
+    "09": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 718.372229,
+      "setup_wall_seconds_charged": 707.4384092569957,
+      "stage_started_utc": "2026-10-21T08:15:24.888960+00:00",
+      "setup_charge_convention": "Conservative active stage envelope less instrumented sequential experiment segments; no inactive session gap occurred.",
+      "recorded_experiment_resources": {
+        "primitive_steps": 36,
+        "decisions": 24,
+        "updates": 0,
+        "wall_seconds": 10.933819743004278,
+        "cpu_core_hours": 0.0030360341666666665,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
       }
     }
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 5389.146638105958,
-    "setup_wall_seconds_charged": 480.0,
-    "stage_started_utc": "2026-10-21T04:38:21.387654+00:00",
-    "setup_charge_convention": "Active setup and finalization segments only; the inactive 2026-10-21T06:04:35Z–08:10:45Z session gap is excluded.",
+    "consumed_wall_seconds": 718.372229,
+    "setup_wall_seconds_charged": 707.4384092569957,
+    "stage_started_utc": "2026-10-21T08:15:24.888960+00:00",
+    "setup_charge_convention": "Conservative active stage envelope less instrumented sequential experiment segments; idle across sessions must be explicitly excluded.",
     "recorded_experiment_resources": {
-      "primitive_steps": 261879,
-      "decisions": 178990,
-      "updates": 13226,
-      "wall_seconds": 4909.146638105958,
-      "cpu_core_hours": 1.3635183680555554,
+      "primitive_steps": 36,
+      "decisions": 24,
+      "updates": 0,
+      "wall_seconds": 10.933819743004278,
+      "cpu_core_hours": 0.0030360341666666665,
       "gpu_device_hours": 0,
-      "circuit_evaluations": 166628,
+      "circuit_evaluations": 0,
       "shots": 0
     }
   },
@@ -218,5 +230,5 @@
   },
   "final_test_accessed_under_locked_protocol": true,
   "final_test_lock_source": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
-  "last_progress_utc": "2026-10-21T08:13:00+00:00"
+  "last_progress_utc": "2026-10-21T08:28:00+00:00"
 }

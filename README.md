@@ -2,7 +2,7 @@
 
 A staged research project to test whether an entangled quantum critic improves cooperative active SLAM under controlled information, model, and compute budgets.
 
-**Stages 00–04 passed with verified evidence; Stage 05 is next. Three bounded classical pilot seeds are archived.** See [project_state.json](project_state.json) for the verified commits and next action, and the [publication receipt](docs/stages/00-publication.json) for the file verification evidence.
+**Stages 00–09 are complete with verified evidence.** The locked eight-seed confirmatory study found an eQMARL-minus-matched-no-entanglement physical-coverage difference of 0.00431 with a 95% paired-seed interval of [-0.01458, 0.02615]. This does not establish superiority or equivalence. See [the final report](docs/FINAL_REPORT.md), [project state](project_state.json), and [the continuation guide](docs/CONTINUATION.md).
 
 ## Start here
 
@@ -13,7 +13,7 @@ A staged research project to test whether an entangled quantum critic improves c
 - [Reference audit](docs/REFERENCE_AUDIT.md): what is retained from eQMARL and what changes from the existing SLAM implementations.
 - [GitHub workflow](docs/GITHUB_WORKFLOW.md): permanent stage branches and verified experiment publication.
 - [Research roadmap](docs/RESEARCH_ROADMAP.md): feasibility and contribution ranking, including optional ROS and 3D extensions.
-- [Stage registry](stages.json) and [Stage 00 report](docs/stages/00-plan.md).
+- [Stage registry](stages.json), [Stage 08 confirmatory report](docs/stages/08-confirmatory.md), and [Stage 09 release report](docs/stages/09-release.md).
 
 ## Technical direction
 
@@ -40,19 +40,20 @@ A positive, null, or negative quantum comparison can all complete the project. C
 | 08 | `stage/08-confirmatory` | Frozen protocol and held-out multi-seed evaluation |
 | 09 | `stage/09-release` | Reproduction bundle, final report, and claim audit |
 
-Stages 00 and 01 have retained completion branches; Stage 02 has begun from Stage 01 completion `6b49e70`. Create later branches only when their stage begins. Keep every completed stage branch. `main` is the stable project index and completed work; planned names in this table do not imply execution.
+All ten stage branches were created from their recorded dependencies and are retained. `main` is the stable integrated release; each stage branch preserves its source, raw outcomes, analysis, and completion record.
 
 ## What is runnable today
 
-The Python 3.11 CPU stack, circuit port, classical model contracts, checkpoint tools, numerical diagnostics and archive verifier are implemented. Install `requirements.lock` with the official CPU Torch extra index, or use `requirements-classical.lock` for a classical-only environment. Legacy reference requirements are isolated under `configs/stage01/legacy/`.
+The Python 3.11/3.12 CPU stack, circuit port, SLAM task, recurrent MAPPO learner, matched critic families, checkpoint tools, numerical diagnostics, and archive verifier are implemented. Install `requirements.lock` with the official CPU Torch extra index, or use `requirements-classical.lock` for a classical-only environment. Legacy reference requirements are isolated under `configs/stage01/legacy/`.
 
 ```bash
 python scripts/validate_plan.py
 python -m pytest -q
-python -m eqmarl_slam.cli verify --run experiments/01/01-reference-circuit-v1_seed-1701_attempt-01
+python scripts/reproduce_smoke.py --root .
+python -m eqmarl_slam.release_audit --root . --output /tmp/eqmarl-release-audit
 ```
 
-Run execution requires a preregistered config, a clean source tree and a verified published-source receipt. Existing run directories are immutable; reproduction uses a separately registered attempt.
+The smoke and audit commands are read-only. New reportable execution requires a preregistered config, a clean source tree, and a verified published-source receipt. Existing run directories are immutable; reproduction that creates a new bundle uses a separately registered attempt.
 
 ## Resume in Codex
 
@@ -60,7 +61,7 @@ Open this repository in Codex and use:
 
 > Read AGENTS.md, project_state.json, stages.json, and docs/EXECUTION_PLAN.md. Resume the earliest authorized unfinished stage. Validate its dependency commit, protocol, budget, and publication route before execution. Work on its stage branch, preserve all run outcomes, publish and verify every experiment bundle, and update its stage report. Do not start confirmatory tests until the protocol is frozen. Report completed work, evidence, remaining limits, and the next stage.
 
-The user has authorized execution through the recorded plan. The active stage and exact next action are recorded in project_state.json. The stage reports and recorded commits are the continuation record; no unattended training job has been launched.
+The recorded plan is complete. The stage reports and immutable commits are the continuation record; no training job remains active.
 
 ## References and attribution
 
