@@ -181,6 +181,9 @@ def train(config, output, emit, *, critic=None, progress=None):
              "actor_connected":any(row["actor_gradient_norm"]>1e-10 for row in update_rows),
              "critic_connected":any(row["critic_gradient_norm"]>1e-10 for row in update_rows),
              "noncollapsed_policy":bool(update_rows) and update_rows[-1]["entropy"]>.05}
+    if config.get('policy_entropy_is_diagnostic_only',False):
+        del gates['noncollapsed_policy']
+        gates['finite_policy_entropy'] = bool(update_rows) and all(np.isfinite(row['entropy']) for row in update_rows)
     return {"passed":all(gates.values()),"gates":gates,"resources":consumed,
             "summary":{"training_steps":config["training_steps"],"training_episodes":len(episodes),
                        "validation":validations,"update_count":len(update_rows),

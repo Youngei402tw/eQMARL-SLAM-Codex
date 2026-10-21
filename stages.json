@@ -144,7 +144,9 @@
         "scope": "Prior completed evidence integrated after branch creation; conditional scientific dependency only when its candidate/claim is used."
       },
       "publication_receipt": "docs/stages/07-publication.json",
-      "conditional_dependency_decision": "Interaction-model dependency not activated; retained Stage05 critic architectures. Stage06 evidence integrated after branch creation."
+      "conditional_dependency_decision": "Interaction-model dependency not activated; retained Stage05 critic architectures. Stage06 evidence integrated after branch creation.",
+      "completion_commit": "0a1cfce80f2e6c35f9c0f69c5bf290af797bec09",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/8"
     },
     {
       "id": "08",
@@ -166,8 +168,18 @@
           "when": "Confirming a finite-shot or noise-robustness claim"
         }
       ],
-      "status": "planned",
-      "branch_created": false
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+      "branch_created_from_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+      "integrated_completed_archive": {
+        "stage": "07",
+        "completion_commit": "0a1cfce80f2e6c35f9c0f69c5bf290af797bec09",
+        "scope": "Prior completed evidence integrated after branch creation; conditional scientific dependency only when its candidate/claim is used."
+      },
+      "conditional_dependency_decision": "No new interaction-model, finite-shot-policy or noise-robust policy claim is being confirmed; analytical Stage05 architectures. Prior06/07 completed evidence integrated after branch creation.",
+      "publication_receipt": "docs/stages/08-publication.json",
+      "results_commit": "e834c9f4d7c78e74bc82f5bea2d7e9625e0eb3c8"
     },
     {
       "id": "09",

@@ -170,6 +170,9 @@ def execute(config_path, source_receipt):
         elif config["experiment"] == "shot-noise":
             from .diagnostics07 import run_diagnostics
             diagnostics = run_diagnostics(config, output, emit, progress=progress)
+        elif config["experiment"] == "confirmatory-training":
+            from .confirmatory import train_and_test
+            diagnostics = train_and_test(config, output, emit, progress=progress)
         elif config["experiment"] == "legacy-reference":
             command = [config["interpreter"], str(ROOT / "eqmarl_slam/reference_probe.py"),
                        "--fixtures", str(ROOT / config["fixtures"]),
@@ -224,7 +227,9 @@ def execute(config_path, source_receipt):
         "budget": {"profile": config["profile"], "primitive_steps": config.get("max_primitive_steps", 0), "wall_seconds": wall_limit},
         "resources_consumed": consumed,
         "execution_segments": [{"started_utc": started_utc, "ended_utc": datetime.now(timezone.utc).isoformat(), **consumed}],
-        "evaluation": {"policy_mode": config.get("action_modes"), "checkpoint_selection": "fixture_only_no_policy_selection", "metrics_protocol": config["protocol_id"]},
+        "evaluation": {"policy_mode": config.get("action_modes"),
+                       "checkpoint_selection": config.get('checkpoint_selection', config.get('fixed_task_conventions',{}).get('checkpoint_rule','fixture_only_no_policy_selection')),
+                       "metrics_protocol": config["protocol_id"]},
         "artifacts": "artifact_manifest.json", "failure": failure,
         "publication": {"status": "pending", "source_remote_verified": True}}
     write_json(output / "manifest.json", manifest)
@@ -232,7 +237,7 @@ def execute(config_path, source_receipt):
     write_json(output / "summary.json", {
         "run_id": run_id, "source_commit": source, "config_sha256": manifest["config_sha256"],
         "metrics_sha256": sha256_file(metrics_path), "metrics_rows": rows,
-        "analysis_version": "stage01-v1", "passed": diagnostics.get("passed", False),
+        "analysis_version": config.get('analysis_version','bundle-summary-v1'), "passed": diagnostics.get("passed", False),
         "gates": diagnostics.get("gates", {}), "resources_consumed": consumed,
         "interpretation": config.get("interpretation", "Numerical and runtime correctness only; no training or task-performance claim."),
         "analysis": diagnostics.get("summary", {})})
