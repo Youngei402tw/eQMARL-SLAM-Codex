@@ -1,7 +1,7 @@
 {
   "stage": "05",
-  "verified_utc": "2026-10-21T04:02:31.027793+00:00",
-  "verified_remote_head": "ebac5755184ce6558fcf35cdbd8d1024d5039882",
+  "verified_utc": "2026-10-21T04:07:28.333319+00:00",
+  "verified_remote_head": "c84526bd5de43e243035cd5208cc810725849ad8",
   "mechanism": "Fresh independent Git retrieval; every run manifest, resolved config, raw metric, diagnostic and inventoried checkpoint hash/size validated",
   "checks": [
     {
@@ -11,6 +11,62 @@
       "verified_files": 14,
       "metrics_rows": 213,
       "metrics_sha256": "31135450280ad21385e459beeabc552c68326a7edb632a6dc79aa98056176e34"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-bilinear_seed-5401_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 285,
+      "metrics_sha256": "b403fce0f6c95368ab669596b0f6aeea96adf9bfaa052916a7046b7c5176978e"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-bilinear_seed-5402_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 303,
+      "metrics_sha256": "b476f3a5f7ddf3cb65948fc2eb115903f15567d14dd4b2384cae355ba78787bf"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-bilinear_seed-5403_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 300,
+      "metrics_sha256": "37060997019531d1d15da6b1ced65089cd4ae29e796db201e322202ec72d4b01"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-central_classical_seed-5401_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 348,
+      "metrics_sha256": "4dbfe95a7baf2b1df70dfbcb4aaa069d34f4581dc827a485ca481e0db57560da"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-central_classical_seed-5402_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 327,
+      "metrics_sha256": "b66f2cd9d34b3be63eac267cfa1bed5f83e8729ec5af0890d228ba839bf84968"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-central_classical_seed-5403_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 335,
+      "metrics_sha256": "4e5957510d90cdc0cce6cef4c7faabbe7490e0110bb96eae79341cd9819dff4f"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-eqmarl_seed-5401_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 276,
+      "metrics_sha256": "5b3eeb40efbfdb71e7f46cc8781d89d32d8bf85d09076cf2a04258e346cec4e3"
     },
     {
       "valid": true,
