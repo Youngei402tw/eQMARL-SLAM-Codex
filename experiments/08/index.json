@@ -23,179 +23,201 @@
     },
     {
       "run_id": "08-confirmatory-eqmarl_seed-8801_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-eqmarl_seed-8801_attempt-01.yaml",
       "config_sha256": "b39593e8245b0221bdf7c162c3ae60c170e30fc4e6f7cba3bdf740645815dbaa",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-central_classical_seed-8802_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-central_classical_seed-8802_attempt-01.yaml",
       "config_sha256": "acb4bf2b9fc43616e49134822bf7cef7de577f288fc5a1a1302a49b127bca253",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-quantum_noent_seed-8802_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-quantum_noent_seed-8802_attempt-01.yaml",
       "config_sha256": "2096e706278b9cb1faa40601cb3ab2df56be4305d63a46f2d4df3d737f41e49e",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-eqmarl_seed-8802_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-eqmarl_seed-8802_attempt-01.yaml",
       "config_sha256": "1db91f4a2bcdd25e2a4f0a85561087a440d5a55b8ded9c43f2631d8e8199da60",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-central_classical_seed-8803_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-central_classical_seed-8803_attempt-01.yaml",
       "config_sha256": "faf54b0d324daf4d9482717a30364e02b743aba06ab73653eaebd1b19b59a55b",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-quantum_noent_seed-8803_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-quantum_noent_seed-8803_attempt-01.yaml",
       "config_sha256": "8169652557fd3ddcf49197fdeaf0239f8a47ca579b68ef235a2c21c8fb748bf2",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-eqmarl_seed-8803_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-eqmarl_seed-8803_attempt-01.yaml",
       "config_sha256": "bc34d78e8c46a217fc413c529963df52f724ba5defe23554b3d3b25cdf7c5107",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-central_classical_seed-8804_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-central_classical_seed-8804_attempt-01.yaml",
       "config_sha256": "3f914a360bc21e9a599ff70025acfbff5074261c1cad843054b4b3ae9ce56cc7",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-quantum_noent_seed-8804_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-quantum_noent_seed-8804_attempt-01.yaml",
       "config_sha256": "993d79eafd9512a903373bcbe00c03fc2a3a28acd956fda47aa88f2ef3a795d4",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-eqmarl_seed-8804_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-eqmarl_seed-8804_attempt-01.yaml",
       "config_sha256": "7c6a0b43617e70ba8c479235cacc1f7d16de57be72fc36dd5b6edd5919fafd54",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-central_classical_seed-8805_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-central_classical_seed-8805_attempt-01.yaml",
       "config_sha256": "e53c49dda927a6cb5efbd194fcd659a9394037a6d77aecb7af6da6603d952dd7",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-quantum_noent_seed-8805_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-quantum_noent_seed-8805_attempt-01.yaml",
       "config_sha256": "514bcf1c8973dc0cb9923a00e08853b2e72e3c76f326c36502107e3ccc1f42ac",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-eqmarl_seed-8805_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-eqmarl_seed-8805_attempt-01.yaml",
       "config_sha256": "dcd7c6b5884e42d101ad233e04463745cfa0f88b5aaec748f4e6bce4df87e584",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-central_classical_seed-8806_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-central_classical_seed-8806_attempt-01.yaml",
       "config_sha256": "70e2a5d1b249fe6f133ca3b16444c2da5b15d26ddb042ef03a1cfd8fa6dea4f5",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-quantum_noent_seed-8806_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-quantum_noent_seed-8806_attempt-01.yaml",
       "config_sha256": "3cddcb5ddabb96bddda204edc3b722d405b4b75179c88b2242707416b9286885",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-eqmarl_seed-8806_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-eqmarl_seed-8806_attempt-01.yaml",
       "config_sha256": "f8f4f8e3c7f56d585eaa4bdaab05f02f3753b2d0cc5bd15d5876c0882ea2d5d3",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-central_classical_seed-8807_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-central_classical_seed-8807_attempt-01.yaml",
       "config_sha256": "6359a02ed105c06de74ab1ea15dc26507105e46aa2a071dd3c4452ff9766dfa1",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-quantum_noent_seed-8807_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-quantum_noent_seed-8807_attempt-01.yaml",
       "config_sha256": "3586965fed1ba6cbdffb646e0c48f3c6cba554a87f83070e3f55c70b1e1695a4",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-eqmarl_seed-8807_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-eqmarl_seed-8807_attempt-01.yaml",
       "config_sha256": "e07ac3c5029e0999cbd8aaa56ed61453cf4f9ac80e8f03dada5658ffb6bb4ce0",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-central_classical_seed-8808_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-central_classical_seed-8808_attempt-01.yaml",
       "config_sha256": "09e9af1667314c1e91fe743aba1df6a22d0d04d90d1b07c875722ffb55bfdf87",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-quantum_noent_seed-8808_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-quantum_noent_seed-8808_attempt-01.yaml",
       "config_sha256": "fd54961424f73e0ba496db172ffea5cf6154c6f422c168e81961d3df3d43ac14",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-eqmarl_seed-8808_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-eqmarl_seed-8808_attempt-01.yaml",
       "config_sha256": "4dc28122307b5ccb5d6f4be9e186f7639128a53adc1d1b43ba0eb09b696d9d0a",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     }
   ]
 }

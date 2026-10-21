@@ -1,0 +1,207 @@
+{
+  "schema_version": "0.1.0",
+  "run_id": "08-confirmatory-eqmarl_seed-8805_attempt-01",
+  "stage": "08",
+  "protocol_id": "confirmatory-v1",
+  "hypothesis": "The matched input-entanglement intervention changes seed-level held-out physical coverage under a locked common10000-step learning budget.",
+  "method": "eqmarl",
+  "status": "completed",
+  "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+  "dependency_completion_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+  "dirty_tree": false,
+  "config_sha256": "dcd7c6b5884e42d101ad233e04463745cfa0f88b5aaec748f4e6bce4df87e584",
+  "seed_streams": {
+    "model_init": 8805,
+    "critic_init": 9805,
+    "map": {
+      "split": "train",
+      "field": "map_seed"
+    },
+    "evaluation_map": {
+      "split": "validation",
+      "field": "map_seed"
+    },
+    "sensor": {
+      "splits": [
+        "train",
+        "validation"
+      ],
+      "base_field": "noise_seed",
+      "offsets": {
+        "motion": 0,
+        "odometry": 1,
+        "sensor": 2,
+        "relative": 3,
+        "prior": 4
+      }
+    },
+    "action": 10805,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": {
+      "path": "configs/data/train-belief-v1.json",
+      "sha256": "2a1abba3d2cab04838046257f58fc9bff25e23c23a2b9d8929a81f2a2f192aa5"
+    },
+    "development": null,
+    "validation": {
+      "path": "configs/data/validation-belief-v1.json",
+      "sha256": "d42a038f42a1ded7cc6053bb8b58e2462b4a10ae91115398551b8c84598d9f23"
+    },
+    "test": {
+      "path": "configs/data/test-belief-v1.json",
+      "sha256": "2cac5636d5866d9399d74da5c62f93c26d89a3f7cdf5968ec5bc801378df0bdb"
+    }
+  },
+  "runtime": {
+    "python": "3.11.17 (main, Oct  3 2026, 01:05:36) [Clang 22.1.3 ]",
+    "lockfile_sha256": "f70f05d7d474dde681e86c2cacbe8a43fee1e83c7adf4f7b09f73b3a57117d7e",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "hardware": {
+      "device": "CPU",
+      "available_cpus": 1,
+      "max_job_threads": 1
+    },
+    "dependencies": {
+      "rustworkx": "0.18.1",
+      "attrs": "26.1.0",
+      "pytest": "9.1.1",
+      "setuptools": "84.2.0",
+      "typing_extensions": "4.16.0",
+      "scipy-openblas32": "0.3.34.237.2",
+      "mpmath": "1.3.0",
+      "numpy": "2.4.6",
+      "pennylane": "0.45.1",
+      "PyYAML": "6.0.3",
+      "scipy": "1.17.1",
+      "gast": "0.7.0",
+      "requests": "2.34.2",
+      "sympy": "1.14.0",
+      "torch": "2.14.1+cpu",
+      "jsonschema-specifications": "2025.9.1",
+      "fsspec": "2026.9.0",
+      "termcolor": "3.3.0",
+      "MarkupSafe": "3.0.4",
+      "gymnasium": "1.4.0",
+      "charset-normalizer": "3.5.2",
+      "iniconfig": "2.3.1",
+      "referencing": "0.37.0",
+      "tomlkit": "0.15.2",
+      "packaging": "26.3",
+      "pennylane_lightning": "0.45.0",
+      "certifi": "2026.10.19",
+      "jsonschema": "4.26.0",
+      "Farama-Notifications": "0.0.6",
+      "diastatic-malt": "2.15.3",
+      "gtsam": "4.3.0",
+      "Jinja2": "3.1.6",
+      "autoray": "0.8.4",
+      "cachetools": "7.2.4",
+      "rpds-py": "2026.9.1",
+      "autograd": "1.8.0",
+      "filelock": "4.2.4",
+      "pluggy": "1.7.0",
+      "urllib3": "2.8.0",
+      "cloudpickle": "3.1.2",
+      "networkx": "3.6.1",
+      "Pygments": "2.21.0",
+      "appdirs": "1.4.4",
+      "idna": "3.20"
+    }
+  },
+  "model": {
+    "actor": "shared Linear27to16,Tanh,GRUCell16,Linear5; separate agent memory",
+    "encoder": "shared trainable Linear27to2 for the critic",
+    "critic": "eqmarl",
+    "parameter_counts": {
+      "actor": 2165,
+      "critic": 86
+    },
+    "optimizer": {
+      "type": "Adam",
+      "learning_rate": 0.001,
+      "ppo_epochs": 2,
+      "clip": 0.2,
+      "entropy": 0.01,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0,
+      "gradient_clip_norm_per_module": 0.5
+    }
+  },
+  "quantum": {
+    "device": "default.qubit",
+    "shots": null,
+    "dtype": "float64/complex128",
+    "diff_method": "backprop",
+    "wires": 4,
+    "layers": 1,
+    "observables": [
+      "ZZZZ"
+    ],
+    "head": "unconstrained affine",
+    "encoder_trainable": true,
+    "scales_trainable": true,
+    "qfctde": "one global four-wire Hadamard/ring circuit, additional topology",
+    "noent_control": "only initial Bell preparation disabled; all parameters initialized identically",
+    "input_entanglement": true,
+    "parts": 2,
+    "qubits_per_partition": 2,
+    "encoding": "atan(scale*feature) then RX",
+    "bell": "phi+",
+    "noise": null,
+    "theta_initialization": "torch Uniform[0,pi), seeded critic stream",
+    "scales_initialization": "ones",
+    "readout": "global ZZZZ then trainable affine1to1",
+    "initial_preparation": "two inter-partition Phi+ pairs",
+    "later_inter_partition_gates": 0
+  },
+  "budget": {
+    "profile": "confirmatory",
+    "primitive_steps": 14680,
+    "wall_seconds": 3600
+  },
+  "resources_consumed": {
+    "primitive_steps": 10813,
+    "decisions": 7378,
+    "updates": 546,
+    "wall_seconds": 244.9692224229948,
+    "cpu_core_hours": 0.06804123583333334,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 10318,
+    "shots": 0
+  },
+  "execution_segments": [
+    {
+      "started_utc": "2026-10-21T05:29:24.075305+00:00",
+      "ended_utc": "2026-10-21T05:33:29.073526+00:00",
+      "primitive_steps": 10813,
+      "decisions": 7378,
+      "updates": 546,
+      "wall_seconds": 244.9692224229948,
+      "cpu_core_hours": 0.06804123583333334,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 10318,
+      "shots": 0
+    }
+  ],
+  "evaluation": {
+    "policy_mode": {
+      "training": "sampled",
+      "validation": "greedy",
+      "test": "greedy"
+    },
+    "checkpoint_selection": "final_fixed_budget_weights_no_validation_or_test_selection",
+    "metrics_protocol": "confirmatory-v1"
+  },
+  "artifacts": "artifact_manifest.json",
+  "failure": null,
+  "publication": {
+    "status": "pending",
+    "source_remote_verified": true
+  }
+}
