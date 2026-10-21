@@ -11,6 +11,22 @@ from .diagnostics03 import fixed_frame_metrics
 
 class BoundedSimulator(LandmarkSimulator):
     """Simulator-only walls and swept two-robot contact; no privileged controls."""
+    def observe(self):
+        measurements = super().observe()
+        accepted = []
+        for m in measurements:
+            r, j = m["owner"], m["landmark_id"]
+            distance = np.linalg.norm(self._poses[r,:2]-self._landmarks[j])
+            if distance < self.minimum_range or m["value"][0] < self.minimum_range:
+                identity = m["measurement_id"]
+                if identity not in self._seen_sensor_events:
+                    self.sensor_events.append({"measurement_id":identity,"status":"discarded_near_field",
+                                               "minimum_range_m":self.minimum_range})
+                    self._seen_sensor_events.add(identity)
+            else:
+                accepted.append(m)
+        return accepted
+
     def step(self, commands):
         previous = self._poses.copy()
         self.timestamp += 1
@@ -37,14 +53,15 @@ class BoundedSimulator(LandmarkSimulator):
         return measurements + self.observe()
 
 
-DEFAULT_TASK = {"protocol": "belief-controller-v1", "horizon": 36, "macro_max_steps": 3,
+DEFAULT_TASK = {"protocol": "belief-controller-v2", "horizon": 36, "macro_max_steps": 3,
                 "speed": .45, "goal_tolerance": .18, "sensor_range": 1.25,
                 "landmark_count": 9, "gamma": .99, "coverage_threshold": .85,
                 "map_accuracy_threshold": .7, "landmark_error_threshold": .35,
                 "pose_error_threshold": .25, "coverage_weight": 10., "information_weight": .001,
                 "travel_weight": .01, "collision_weight": .1, "byte_weight": 1e-6,
                 "prior_sigmas": [.05, .05, .02], "motion_std": [.015, .015, .01],
-                "odometry_sigmas": [.05, .05, .02], "observation_sigmas": [.02, .1]}
+                "odometry_sigmas": [.05, .05, .02], "observation_sigmas": [.02, .1],
+                "sensor_min_range": .25, "revisit_standoff": .5}
 
 
 class BeliefTask:
@@ -59,7 +76,7 @@ class BeliefTask:
     def __init__(self, config, scenario):
         if set(DEFAULT_TASK) - set(config):
             raise ValueError("Task config must resolve every DEFAULT_TASK field")
-        if config["protocol"] != "belief-controller-v1":
+        if config["protocol"] != "belief-controller-v2":
             raise ValueError("Unknown task protocol")
         self.config, self.scenario = dict(config), dict(scenario)
         self.grid = np.array([(x, y) for x in np.linspace(1/3, 11/3, 6) for y in np.linspace(1/3, 11/3, 6)])
@@ -72,6 +89,8 @@ class BeliefTask:
                                    sensor_range=c["sensor_range"], prior_std=c["prior_sigmas"], sample_initial_prior=True,
                                    seeds={"motion":s["noise_seed"],"odometry":s["noise_seed"]+1,"sensor":s["noise_seed"]+2,
                                           "relative":s["noise_seed"]+3,"prior":s["noise_seed"]+4}, scenario_id=s["scenario_id"])
+        self.sim.minimum_range = c["sensor_min_range"]
+        self.on_primitive = None
         self.graphs = [GTSAMSmoother(prior_sigmas=c["prior_sigmas"], odometry_sigmas=c["odometry_sigmas"],
                                      observation_sigmas=c["observation_sigmas"], backend="direct") for _ in range(2)]
         self.bytes, self.messages, self.collisions, self.distance = 0, 0, 0, 0.
@@ -102,7 +121,8 @@ class BeliefTask:
     def _physical_sense(self):
         for r in range(2):
             position = self.sim.truth_trajectory(r)[-1, :2]
-            self.physical_seen |= np.linalg.norm(self.grid-position, axis=1) <= self.config["sensor_range"]
+            distances = np.linalg.norm(self.grid-position, axis=1)
+            self.physical_seen |= (distances <= self.config["sensor_range"]) & (distances >= self.config["sensor_min_range"])
 
     def belief(self, robot):
         graph = self.graphs[robot]
@@ -111,13 +131,17 @@ class BeliefTask:
         seen = np.zeros(36, bool)
         for other in range(2):
             for previous in graph.trajectory(other).values():
-                seen |= np.linalg.norm(self.grid-previous[:2], axis=1) <= self.config["sensor_range"]
+                distances = np.linalg.norm(self.grid-previous[:2], axis=1)
+                seen |= (distances <= self.config["sensor_range"]) & (distances >= self.config["sensor_min_range"])
         teammate = list(graph.trajectory(1-robot).values())[-1]
         return pose, covariance, seen, teammate, graph.landmarks()
 
     def _candidates(self, robot, belief):
         pose, covariance, seen, teammate, landmarks = belief
-        novelty = np.array([np.mean((np.linalg.norm(self.grid-point, axis=1) <= self.config["sensor_range"]) & ~seen) for point in self.grid])
+        def footprint(point):
+            distances = np.linalg.norm(self.grid-point, axis=1)
+            return (distances <= self.config["sensor_range"]) & (distances >= self.config["sensor_min_range"])
+        novelty = np.array([np.mean(footprint(point) & ~seen) for point in self.grid])
         scores = novelty - .002*np.linalg.norm(self.grid-pose[:2], axis=1)
         # Identity only breaks symmetric choices; it is not teammate state.
         order = sorted(range(36), key=lambda j: (-scores[j], (j+robot*18)%36))
@@ -129,9 +153,11 @@ class BeliefTask:
         mask[3] = bool(landmarks)
         if landmarks:
             identity = max(landmarks, key=lambda j: np.trace(self.graphs[robot].landmark_covariance(j)))
-            candidates[3] = landmarks[identity]
+            direction = pose[:2]-landmarks[identity]
+            direction /= max(np.linalg.norm(direction),1e-12)
+            candidates[3] = landmarks[identity]+self.config["revisit_standoff"]*direction
         candidates = np.clip(np.asarray(candidates), .25, 3.75)
-        gains = np.array([np.mean((np.linalg.norm(self.grid-point, axis=1) <= self.config["sensor_range"]) & ~seen) for point in candidates])
+        gains = np.array([np.mean(footprint(point) & ~seen) for point in candidates])
         return candidates, mask, gains
 
     def observe(self):
@@ -192,6 +218,7 @@ class BeliefTask:
                 commands.append([cs*delta[0]+sn*delta[1], -sn*delta[0]+cs*delta[1], 0])
             before = self.physical_seen.mean()
             measurements = self.sim.step(commands)
+            if self.on_primitive is not None: self.on_primitive(1)
             information = 0.
             for r, graph in enumerate(self.graphs):
                 own = [m for m in measurements if m["owner"] == r]
@@ -242,6 +269,7 @@ class BeliefTask:
                 "trajectory_rpe_m":float(np.mean(rpes)) if rpes else None,
                 "primitive_steps":self.sim.timestamp,"travel_distance_m":self.distance,"collisions":self.collisions,
                 "communication_bytes":self.bytes,"messages":self.messages,
+                "discarded_sensor_events":len(self.sim.sensor_events),
                 "success":bool(coverage>=self.config["coverage_threshold"] and accuracy>=self.config["map_accuracy_threshold"]
                                and np.mean(current)<=self.config["pose_error_threshold"]),
                 "localization_failure":bool(np.mean(current)>1.)}

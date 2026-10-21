@@ -27,14 +27,14 @@ def run_diagnostics(config, output, emit, progress=None):
     for method in ["random","reactive","frontier","uncertainty"]:
         for scenario in scenarios:
             env = BeliefTask(task,scenario); env.reset()
+            env.on_primitive = lambda duration: resources.__setitem__("primitive_steps",resources["primitive_steps"]+duration)
             rng = np.random.default_rng(config["action_seed"])
             done, total = False, 0.
             started = time.perf_counter()
             while not done:
                 actions = env.heuristic(method,rng)
-                obs, mask, reward, done, info = env.step(actions)
-                resources["primitive_steps"] += info["duration"]
                 resources["decisions"] += 2
+                obs, mask, reward, done, info = env.step(actions)
                 total += info["undiscounted_reward"]
                 expected = sum(task["gamma"]**i*sum(parts.values()) for i,parts in enumerate(info["reward_components"]))
                 gates["primitive_discount"] = gates.get("primitive_discount", True) and abs(reward-expected)<1e-10

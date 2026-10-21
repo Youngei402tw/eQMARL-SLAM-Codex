@@ -44,9 +44,10 @@ def duration_gae(rewards, values, next_value, durations, terminals, gamma=.99, l
     return advantages, advantages + np.asarray(values)
 
 
-def collect_episode(model, task_config, scenario, action_generator, *, primitive_limit, training=True, on_transition=None):
+def collect_episode(model, task_config, scenario, action_generator, *, primitive_limit, training=True, on_transition=None, on_decision=None):
     env = BeliefTask(task_config, scenario)
     observation, mask = env.reset()
+    if on_transition is not None: env.on_primitive = on_transition
     hidden = model.actor.initial_state(agents=2)
     rows, total_return = [], 0.
     primitive_steps = 0
@@ -60,9 +61,9 @@ def collect_episode(model, task_config, scenario, action_generator, *, primitive
                       if training else distribution.probs.argmax(-1))
             old_log = distribution.log_prob(action).clone()
             value = float(model.critic(obs))*10.
+        if on_decision is not None: on_decision()
         observation_next, mask_next, reward, done, info = env.step(action.numpy(), primitive_limit=primitive_limit-primitive_steps)
         duration = info["duration"]
-        if on_transition is not None: on_transition(duration)
         rows.append({"obs":observation.copy(),"mask":mask.copy(),"actions":action.numpy(),"old_log":old_log.numpy(),
                      "value":value,"reward":reward,"duration":duration,"terminal":done})
         primitive_steps += duration; total_return += info["undiscounted_reward"]
@@ -79,7 +80,7 @@ def collect_episode(model, task_config, scenario, action_generator, *, primitive
                   "scenario_id":scenario["scenario_id"]}
 
 
-def update(model, optimizer, episodes, *, epochs=2, clip=.2, entropy_coefficient=.01):
+def update(model, optimizer, episodes, *, epochs=2, clip=.2, entropy_coefficient=.01, on_update=None):
     flat = [row for episode in episodes for row in episode]
     advantages = np.array([row["advantage"] for row in flat])
     mean, std = advantages.mean(), max(advantages.std(), 1e-8)
@@ -116,6 +117,7 @@ def update(model, optimizer, episodes, *, epochs=2, clip=.2, entropy_coefficient
                         "mean_probability_ratio":float(torch.cat(ratios).mean().detach()),
                         "advantage_mean":float(mean),"advantage_std":float(std),
                         "target_min":min(targets),"target_max":max(targets)})
+        if on_update is not None: on_update(history[-1])
     return history
 
 
@@ -131,24 +133,27 @@ def train(config, output, emit, *, critic=None, progress=None):
     started, batch, episodes, update_rows = time.perf_counter(), [], [], []
     def charge(duration):
         consumed["primitive_steps"] += duration
-        consumed["decisions"] += 2
         if time.perf_counter()-started >= config["training_wall_seconds"]:
             raise TimeoutError("Registered training wall cap reached")
+    def decision():
+        consumed["decisions"] += 2
+    def updated(row):
+        consumed["updates"] += 1
+        update_rows.append(row)
+        emit({"kind":"ppo_update","update":consumed["updates"],**row})
     index = 0
     while consumed["primitive_steps"] < config["training_steps"]:
         if time.perf_counter()-started >= config["training_wall_seconds"]:
             raise TimeoutError("Registered training wall cap reached")
         scenario = scenarios[index % len(scenarios)]
         rows, metrics = collect_episode(model, config["task"], scenario, generator,
-                                        primitive_limit=config["training_steps"]-consumed["primitive_steps"], on_transition=charge)
+                                        primitive_limit=config["training_steps"]-consumed["primitive_steps"],
+                                        on_transition=charge,on_decision=decision)
         index += 1; batch.append(rows); episodes.append(metrics)
         emit({"kind":"training_episode","episode_index":index,**metrics})
         if len(batch)>=config["episodes_per_update"] or consumed["primitive_steps"]>=config["training_steps"]:
             current = update(model, optimizer, batch, epochs=config["ppo_epochs"], clip=config["ppo_clip"],
-                             entropy_coefficient=config["entropy_coefficient"])
-            for row in current:
-                consumed["updates"] += 1; update_rows.append(row)
-                emit({"kind":"ppo_update","update":consumed["updates"],**row})
+                             entropy_coefficient=config["entropy_coefficient"],on_update=updated)
             batch.clear()
             save_checkpoint(Path(output)/"final.pt", model, optimizer, recurrent_state=model.actor.initial_state(agents=2),
                             progress={**consumed,"episodes":index}, normalization={"return_mean":0.,"return_scale":10.},
@@ -157,8 +162,8 @@ def train(config, output, emit, *, critic=None, progress=None):
                                                "exact_mid_episode_resume_supported":False})
     validations = []
     for scenario in config["validation_scenarios"]:
-        _, metrics = collect_episode(model, config["task"], scenario, generator,
-                                     primitive_limit=config["task"]["horizon"], training=False, on_transition=charge)
+        collected, metrics = collect_episode(model, config["task"], scenario, generator,
+                                     primitive_limit=config["task"]["horizon"], training=False, on_transition=charge,on_decision=decision)
         validations.append(metrics)
         emit({"kind":"validation_episode","policy_mode":"greedy",**metrics})
     gates = {"finite_updates":bool(update_rows) and all(np.isfinite(row["loss"]) for row in update_rows),

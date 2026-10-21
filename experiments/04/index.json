@@ -8,7 +8,7 @@
       "config": "configs/stage04/preflight.yaml",
       "config_sha256": "8e2f6e1dab1f6af504972f3a21c5ab04c3786cf4f99b1e3cc37986d4bfa88a2b",
       "source_commit": "a877367ce861080b275bdc8db3baa9a7a5c990da",
-      "results_commit": null,
+      "results_commit": "0d9989cd23054877628fc03d1c0a0fbd1289995d",
       "failure": {
         "reason": "\nIndeterminate linear system detected while working near variable\n8646911284551352326 (Symbol: x6).\n\nThrown when a linear system is ill-posed.  The most common cause for this\nerror is having underconstrained variables, but the exception is also raised\nfor nearly indeterminate systems that are too poorly conditioned to solve\nreliably.  See the GTSAM Doxygen documentation for\ngtsam::IndeterminateSystemException and the user\nguide at\nhttps://github.com/borglab/gtsam/blob/develop/gtsam/linear/doc/IndeterminateSystemException.ipynb\nfor more information.",
         "type": "RuntimeError",
@@ -25,7 +25,17 @@
         "circuit_evaluations": 0,
         "shots": 0
       },
-      "publication_status": "pending"
+      "publication_status": "pending",
+      "resource_reconciliation": "configs/stage04/resource-reconciliation-v1.json"
+    },
+    {
+      "run_id": "04-controller-preflight-v2_attempt-01",
+      "status": "planned",
+      "config": "configs/stage04/preflight-v2.yaml",
+      "config_sha256": "c2aaf1f2e6992cb0ed32ec7e63e4331af737886037165786ec3ba24a9b94934b",
+      "source_commit": null,
+      "results_commit": null,
+      "reason": "Versioned near-field sensor limit and revisit standoff after ill-conditioned bearing at0.0003m; all earlier outcomes retained."
     }
   ]
 }

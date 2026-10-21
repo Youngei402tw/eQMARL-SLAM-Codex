@@ -21,3 +21,13 @@ def test_macro_steps_and_discount_use_actual_duration():
     assert reward == info["undiscounted_reward"]
     assert env.metrics()["primitive_steps"] == 1
     env.close()
+
+
+def test_near_field_measurements_are_censored_and_recorded():
+    env = BeliefTask(DEFAULT_TASK,{"scenario_id":"unit-nearfield","map_seed":5,"noise_seed":6})
+    env.reset()
+    env.sim._landmarks[0] = env.sim._poses[0,:2]+[.01,0]
+    packets = env.sim.observe()
+    assert not any(m["owner"] == 0 and m["landmark_id"] == 0 for m in packets)
+    assert any(m["status"] == "discarded_near_field" for m in env.sim.sensor_events)
+    env.close()
