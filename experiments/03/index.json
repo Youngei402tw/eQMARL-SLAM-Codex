@@ -29,12 +29,23 @@
     },
     {
       "run_id": "03-belief-slam-v1_seedset-3101_attempt-02",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage03/beliefs-attempt02.yaml",
       "config_sha256": "07dc3999f3e66ecbf9bef42d7a9073852485e5c248f2969b6dfdfcc84bf83a03",
-      "source_commit": null,
+      "source_commit": "afbde7ea75016f3410e47099b8a0f3b29cd01eef",
       "results_commit": null,
-      "reason": "Correct numeric JSON parsing; all scientific values and thresholds unchanged."
+      "reason": "Correct numeric JSON parsing; all scientific values and thresholds unchanged.",
+      "resources_consumed": {
+        "primitive_steps": 28,
+        "decisions": 0,
+        "updates": 0,
+        "wall_seconds": 0.21183234699856257,
+        "cpu_core_hours": 5.8831111111111136e-05,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "pending"
     }
   ]
 }

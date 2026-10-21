@@ -1,0 +1,112 @@
+{
+  "last_graph_factors": [
+    {
+      "factor_id": "local/0/prior",
+      "kind": "prior",
+      "robot": 0,
+      "step": 0,
+      "pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "local/0/odom",
+      "kind": "odometry",
+      "robot": 0,
+      "step": 1,
+      "delta": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "local/0/landmark",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 1,
+      "landmark": 0,
+      "bearing": 0.7853981633974483,
+      "range": 1.4142135623730951,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "local/1/prior",
+      "kind": "prior",
+      "robot": 1,
+      "step": 0,
+      "pose": [
+        0.0,
+        2.0,
+        0.0
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "local/1/odom",
+      "kind": "odometry",
+      "robot": 1,
+      "step": 1,
+      "delta": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "local/1/landmark",
+      "kind": "landmark",
+      "robot": 1,
+      "step": 1,
+      "landmark": 0,
+      "bearing": -0.7853981633974483,
+      "range": 1.4142135623730951,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "local/1/private-next",
+      "kind": "odometry",
+      "robot": 1,
+      "step": 2,
+      "delta": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    }
+  ],
+  "total_communication_bytes": 1016,
+  "owner_rule": "only explicit packet ingestion adds teammate factors; canonical measurement IDs deduplicate raw evidence"
+}
