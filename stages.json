@@ -180,7 +180,8 @@
       "conditional_dependency_decision": "No new interaction-model, finite-shot-policy or noise-robust policy claim is being confirmed; analytical Stage05 architectures. Prior06/07 completed evidence integrated after branch creation.",
       "publication_receipt": "docs/stages/08-publication.json",
       "results_commit": "e834c9f4d7c78e74bc82f5bea2d7e9625e0eb3c8",
-      "completion_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080"
+      "completion_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/9"
     },
     {
       "id": "09",
@@ -197,7 +198,9 @@
       "dependency_completion_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080",
       "branch_created_from_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080",
       "publication_receipt": "docs/stages/09-publication.json",
-      "results_commit": "d9e130c99338200ae144c558735226ac3a6dc24d"
+      "results_commit": "d9e130c99338200ae144c558735226ac3a6dc24d",
+      "completion_commit": "2fe0e3ab73711288b705643f7ea3f12cee857fa9",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/10"
     }
   ],
   "recommended_execution_order": [
