@@ -55,12 +55,23 @@
     },
     {
       "run_id": "04-controller-preflight-v2_attempt-02",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage04/preflight-v2-attempt02.yaml",
       "config_sha256": "f63b9fac0f5a5f96ac4c97684a8ffbae50f5d8fe8b8e2d98ae7091f5098b57ac",
-      "source_commit": null,
+      "source_commit": "5da996a256daaf0a8989db8c76c8f0fc419f5cf7",
       "results_commit": null,
-      "reason": "Numeric JSON serialization correction only; same task, seeds and gates."
+      "reason": "Numeric JSON serialization correction only; same task, seeds and gates.",
+      "resources_consumed": {
+        "primitive_steps": 85,
+        "decisions": 58,
+        "updates": 102,
+        "wall_seconds": 3.1820176909968723,
+        "cpu_core_hours": 0.000883813611111111,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "pending"
     }
   ]
 }
