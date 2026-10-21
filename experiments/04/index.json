@@ -77,7 +77,7 @@
       "run_id": "04-classical-pilot-v2_seed-4401_attempt-01",
       "status": "planned",
       "config": "configs/stage04/pilot-4401.yaml",
-      "config_sha256": "a3f3ca16db7c530ba86b0e33cf3559cb83ffc1bd91155eb0332f8fa3e74fca72",
+      "config_sha256": "7d9351bad71bfd45f03c40d370a170ac5a3197369f118ba509e1393702877276",
       "source_commit": null,
       "results_commit": null
     },
@@ -85,7 +85,7 @@
       "run_id": "04-classical-pilot-v2_seed-4402_attempt-01",
       "status": "planned",
       "config": "configs/stage04/pilot-4402.yaml",
-      "config_sha256": "6b638304b2541e76662c170c807aa9e987590dc77bca5b068ef92da6fe075329",
+      "config_sha256": "62acaa4d09c656c9bbac0c0ffb0b509b916d0c3932d6bac96736a36502a8101d",
       "source_commit": null,
       "results_commit": null
     },
@@ -93,7 +93,7 @@
       "run_id": "04-classical-pilot-v2_seed-4403_attempt-01",
       "status": "planned",
       "config": "configs/stage04/pilot-4403.yaml",
-      "config_sha256": "c5491d48983c2b9f0a7eb6f4d77e413c4145d23fe0610c2766c1b294122a2f88",
+      "config_sha256": "55840b9cfd6263de01fc3075e56ad06825462348c082085ea2a0961aefbe1257",
       "source_commit": null,
       "results_commit": null
     }

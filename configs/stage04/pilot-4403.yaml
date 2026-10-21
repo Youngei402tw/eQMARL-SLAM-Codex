@@ -597,9 +597,28 @@
   "seed_streams": {
     "model_init": 4403,
     "critic_init": 5403,
-    "map": null,
-    "evaluation_map": null,
-    "sensor": null,
+    "map": {
+      "split": "train",
+      "field": "map_seed"
+    },
+    "evaluation_map": {
+      "split": "validation",
+      "field": "map_seed"
+    },
+    "sensor": {
+      "splits": [
+        "train",
+        "validation"
+      ],
+      "base_field": "noise_seed",
+      "offsets": {
+        "motion": 0,
+        "odometry": 1,
+        "sensor": 2,
+        "relative": 3,
+        "prior": 4
+      }
+    },
     "action": 6403,
     "quantum_shots": null,
     "communication": null
