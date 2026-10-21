@@ -192,10 +192,12 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/09-release.md",
-      "status": "running",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080",
-      "branch_created_from_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080"
+      "branch_created_from_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080",
+      "publication_receipt": "docs/stages/09-publication.json",
+      "results_commit": "d9e130c99338200ae144c558735226ac3a6dc24d"
     }
   ],
   "recommended_execution_order": [

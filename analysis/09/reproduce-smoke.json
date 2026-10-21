@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "run_id_replayed": "08-confirmatory-central_classical_seed-8801_attempt-01",
+  "checkpoint_sha256": "ef3e5bc2cad3457bf63a1a8bba255fe32976603256542e4ab95e885f88efb0a4",
+  "integrity": {
+    "valid": true,
+    "status": "completed",
+    "verified_files": 8,
+    "metrics_rows": 2107,
+    "metrics_sha256": "47968f83daa6821b3aafad71aee90a0e3783c191a8c3a67934c71d9115c0efb3"
+  },
+  "absolute_errors": {
+    "physical_coverage": 0.0,
+    "fixed_landmark_accuracy": 0.0,
+    "pose_error_m": 0.0,
+    "trajectory_ate_m": 0.0,
+    "return": 0.0,
+    "communication_bytes": 0.0,
+    "primitive_steps": 0.0
+  },
+  "resources": {
+    "primitive_steps": 6,
+    "decisions": 4,
+    "optimizer_updates": 0,
+    "critic_executions": 0
+  },
+  "runtime": "configs/stage09/runtime-clean-environment.json"
+}
