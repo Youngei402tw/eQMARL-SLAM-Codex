@@ -8,41 +8,45 @@
       "config": "configs/stage05/fitting.yaml",
       "config_sha256": "2ef4186228d47715600135c327452a6fb6e15ca2512d10fe3385ef24a3a90143",
       "source_commit": "614879ad91f971e2ab55177cbd83d32f13f75512",
-      "results_commit": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
       "gates_passed": true,
       "publication": "verified"
     },
     {
       "run_id": "05-tuning-split_classical_lr-0.001_seed-5301_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-tuning-split_classical_lr-0.001_seed-5301_attempt-01.yaml",
       "config_sha256": "838ea1a59095a1c5e34fbad8f2200e498c89159e80651454d8507a5cdbd181b0",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "05-tuning-split_classical_lr-0.001_seed-5302_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-tuning-split_classical_lr-0.001_seed-5302_attempt-01.yaml",
       "config_sha256": "679856f5cfcdf00bfb58b88f4c3b390fa4f1319e111b0852673aae26040bf65d",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "05-tuning-split_classical_lr-0.003_seed-5301_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-tuning-split_classical_lr-0.003_seed-5301_attempt-01.yaml",
       "config_sha256": "2f109b7cba1392ce75c5d46f37b189071bb249c4a1ef0eb80c36082f3ba93067",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "05-tuning-split_classical_lr-0.003_seed-5302_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-tuning-split_classical_lr-0.003_seed-5302_attempt-01.yaml",
       "config_sha256": "753f04611ee0ea06997b8f2726c08c47f93178150f16e730e9899f3b8dc55575",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "05-tuning-central_classical_lr-0.001_seed-5301_attempt-01",
@@ -50,7 +54,7 @@
       "config": "configs/stage05/05-tuning-central_classical_lr-0.001_seed-5301_attempt-01.yaml",
       "config_sha256": "07d7dc14c026b1b8632ae9e10ead4f70ecf0932da363d4e2984ab29754b5bcc6",
       "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
-      "results_commit": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
       "gates_passed": true,
       "publication": "verified"
     },
@@ -60,7 +64,7 @@
       "config": "configs/stage05/05-tuning-central_classical_lr-0.001_seed-5302_attempt-01.yaml",
       "config_sha256": "6af5f90ded8b9181f76b598f82ea9a2cb8701c2d3e042851fb432d04ab636487",
       "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
-      "results_commit": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
       "gates_passed": true,
       "publication": "verified"
     },
@@ -70,7 +74,7 @@
       "config": "configs/stage05/05-tuning-central_classical_lr-0.003_seed-5301_attempt-01.yaml",
       "config_sha256": "bf7b848ce21ab0272bcd94c43a2adf9c9685ba27de18e77c39971da8a9ea909c",
       "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
-      "results_commit": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
       "gates_passed": true,
       "publication": "verified"
     },
@@ -80,7 +84,7 @@
       "config": "configs/stage05/05-tuning-central_classical_lr-0.003_seed-5302_attempt-01.yaml",
       "config_sha256": "a78b6eba772d9cd0c5ec7b1d30b6898b5e34c80811768b7b3c0c180d51740876",
       "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
-      "results_commit": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
       "gates_passed": true,
       "publication": "verified"
     },
@@ -90,7 +94,7 @@
       "config": "configs/stage05/05-tuning-bilinear_lr-0.001_seed-5301_attempt-01.yaml",
       "config_sha256": "2eae19dcbd98fdc4f148cb87536ed4cca28036cf385406bd5fdff91979bafe44",
       "source_commit": "66eac426233beaafb8280a6fe70b16ed734360b0",
-      "results_commit": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
       "archive_validation_initially_failed": true,
       "gates_passed": true,
       "publication": "verified"
@@ -101,7 +105,7 @@
       "config": "configs/stage05/05-tuning-bilinear_lr-0.001_seed-5302_attempt-01.yaml",
       "config_sha256": "734f67bc716fe65055635556289ec288d3a1eab94429a3fc2a8700c7188302d9",
       "source_commit": "66eac426233beaafb8280a6fe70b16ed734360b0",
-      "results_commit": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
       "archive_validation_initially_failed": true,
       "gates_passed": true,
       "publication": "verified"
@@ -112,7 +116,7 @@
       "config": "configs/stage05/05-tuning-bilinear_lr-0.003_seed-5301_attempt-01.yaml",
       "config_sha256": "017b36d91fb4763f93507e0dff6d5a10e4e27f11640c135be0a2a2df82d8a0f6",
       "source_commit": "66eac426233beaafb8280a6fe70b16ed734360b0",
-      "results_commit": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
       "archive_validation_initially_failed": true,
       "gates_passed": true,
       "publication": "verified"
@@ -123,42 +127,46 @@
       "config": "configs/stage05/05-tuning-bilinear_lr-0.003_seed-5302_attempt-01.yaml",
       "config_sha256": "712ea814b94ac1d846848c170dd8300f19ecd4ec348de88d69ac0e9239d78d9d",
       "source_commit": "66eac426233beaafb8280a6fe70b16ed734360b0",
-      "results_commit": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
       "archive_validation_initially_failed": true,
       "gates_passed": true,
       "publication": "verified"
     },
     {
       "run_id": "05-tuning-quantum_noent_lr-0.001_seed-5301_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-tuning-quantum_noent_lr-0.001_seed-5301_attempt-01.yaml",
       "config_sha256": "c9dce95ca14921d89f4f43becd21e15bec8d82899cd18007a91f103706243e0a",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "05-tuning-quantum_noent_lr-0.001_seed-5302_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-tuning-quantum_noent_lr-0.001_seed-5302_attempt-01.yaml",
       "config_sha256": "8dba9bb8c886ca931c0931cc74f83484fab57f6867e30daf3e4401086bab87b1",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "05-tuning-quantum_noent_lr-0.003_seed-5301_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-tuning-quantum_noent_lr-0.003_seed-5301_attempt-01.yaml",
       "config_sha256": "d0693830f81abdc4f27c6228f1020047b0043dee6c765e3c3c165bb946136270",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "05-tuning-quantum_noent_lr-0.003_seed-5302_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-tuning-quantum_noent_lr-0.003_seed-5302_attempt-01.yaml",
       "config_sha256": "a4812ac048aaae98c39373c377d0765c945c51a09ff457102d09e0635d73b74f",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "05-tuning-eqmarl_lr-0.001_seed-5301_attempt-01",
@@ -166,7 +174,7 @@
       "config": "configs/stage05/05-tuning-eqmarl_lr-0.001_seed-5301_attempt-01.yaml",
       "config_sha256": "ec39b35d8f82bcfa7c345399c6abb3e578f3f3845f35dc7288ffb2918030c82b",
       "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
-      "results_commit": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
       "gates_passed": true,
       "publication": "verified"
     },
@@ -176,7 +184,7 @@
       "config": "configs/stage05/05-tuning-eqmarl_lr-0.001_seed-5302_attempt-01.yaml",
       "config_sha256": "d5d430125a6122e7bf8956d4e4b48de61f9e11de28421dcbb5da53959d2de0f9",
       "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
-      "results_commit": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
       "gates_passed": true,
       "publication": "verified"
     },
@@ -186,8 +194,9 @@
       "config": "configs/stage05/05-tuning-eqmarl_lr-0.003_seed-5301_attempt-01.yaml",
       "config_sha256": "71763202b18823671a1114e03a018bae2df4317889d7eeb569dd9045f6295f21",
       "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
-      "results_commit": null,
-      "gates_passed": true
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
+      "gates_passed": true,
+      "publication": "verified"
     },
     {
       "run_id": "05-tuning-eqmarl_lr-0.003_seed-5302_attempt-01",
@@ -195,8 +204,9 @@
       "config": "configs/stage05/05-tuning-eqmarl_lr-0.003_seed-5302_attempt-01.yaml",
       "config_sha256": "0cd56d5e788f6c46551ea2aa831b364d71a0db46152196dcaa9ddab83815ed99",
       "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
-      "results_commit": null,
-      "gates_passed": true
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
+      "gates_passed": true,
+      "publication": "verified"
     },
     {
       "run_id": "05-tuning-qfctde_lr-0.001_seed-5301_attempt-01",
@@ -204,8 +214,9 @@
       "config": "configs/stage05/05-tuning-qfctde_lr-0.001_seed-5301_attempt-01.yaml",
       "config_sha256": "102d702b39e3e36f235bbdf241db1392003be5eacd4def4d4f0e69a865b25f56",
       "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
-      "results_commit": null,
-      "gates_passed": true
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
+      "gates_passed": true,
+      "publication": "verified"
     },
     {
       "run_id": "05-tuning-qfctde_lr-0.001_seed-5302_attempt-01",
@@ -213,8 +224,9 @@
       "config": "configs/stage05/05-tuning-qfctde_lr-0.001_seed-5302_attempt-01.yaml",
       "config_sha256": "c07952052163918dbbef6af641d423ed0d8b5f5ad2ea897d83ef90f62b5a69ab",
       "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
-      "results_commit": null,
-      "gates_passed": true
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
+      "gates_passed": true,
+      "publication": "verified"
     },
     {
       "run_id": "05-tuning-qfctde_lr-0.003_seed-5301_attempt-01",
@@ -222,14 +234,160 @@
       "config": "configs/stage05/05-tuning-qfctde_lr-0.003_seed-5301_attempt-01.yaml",
       "config_sha256": "ade717b95602986b1e138b3ed689f191291ab8118af379913506e397ab7e5328",
       "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
+      "results_commit": "322888d5793f0c819523504e003ab3e5f2fb9687",
+      "gates_passed": true,
+      "publication": "verified"
+    },
+    {
+      "run_id": "05-tuning-qfctde_lr-0.003_seed-5302_attempt-01",
+      "status": "completed",
+      "config": "configs/stage05/05-tuning-qfctde_lr-0.003_seed-5302_attempt-01.yaml",
+      "config_sha256": "1771a121f1652d2eb21b1d72133ac057b2b2b30c69ed54ee3b0bf1f199ac59af",
+      "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
       "results_commit": null,
       "gates_passed": true
     },
     {
-      "run_id": "05-tuning-qfctde_lr-0.003_seed-5302_attempt-01",
+      "run_id": "05-pilot-split_classical_seed-5401_attempt-01",
       "status": "planned",
-      "config": "configs/stage05/05-tuning-qfctde_lr-0.003_seed-5302_attempt-01.yaml",
-      "config_sha256": "1771a121f1652d2eb21b1d72133ac057b2b2b30c69ed54ee3b0bf1f199ac59af",
+      "config": "configs/stage05/05-pilot-split_classical_seed-5401_attempt-01.yaml",
+      "config_sha256": "58ca7ca419b0138840d2e446207d305b3c08756ec09f54b5f651c78e30f161b2",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-split_classical_seed-5402_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-split_classical_seed-5402_attempt-01.yaml",
+      "config_sha256": "a1d8d03cf71f283245b681bb6527e014ea2cf72b12241b8d9fd54694d0bb5b36",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-split_classical_seed-5403_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-split_classical_seed-5403_attempt-01.yaml",
+      "config_sha256": "a53ad9f26a516f9475cc09126a0001c49cd84420bff09c79ca680d75ab2df952",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-central_classical_seed-5401_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-central_classical_seed-5401_attempt-01.yaml",
+      "config_sha256": "bfea7e1982941b485579a3385c471eaacd7b2b690ce2a3d7919b7143a3ad215a",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-central_classical_seed-5402_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-central_classical_seed-5402_attempt-01.yaml",
+      "config_sha256": "66def7cdfb1200516b04c298041924c2ce1631e77aca93ce9b6ca13a61b42cd5",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-central_classical_seed-5403_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-central_classical_seed-5403_attempt-01.yaml",
+      "config_sha256": "824cacba3f9da4a2b39234e99a48691322aa280723428769e661f37afacf3cca",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-bilinear_seed-5401_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-bilinear_seed-5401_attempt-01.yaml",
+      "config_sha256": "114b774f09e53c94d8d8f1ce30066febb110073b79f3910704e70ae4f8fa682e",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-bilinear_seed-5402_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-bilinear_seed-5402_attempt-01.yaml",
+      "config_sha256": "c532e2472184fafbd20fcf36d595772a6cb8a74f4570354212067f920a1989c0",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-bilinear_seed-5403_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-bilinear_seed-5403_attempt-01.yaml",
+      "config_sha256": "6bac5b2aed04c9339339877fbbc7de49c8e65a1c4c7257b79bc9f54b822c492d",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-quantum_noent_seed-5401_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-quantum_noent_seed-5401_attempt-01.yaml",
+      "config_sha256": "c378ac0b7856df2275264b4b7e41d66598f9163ebb664181f602f2eb1ffbdd8e",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-quantum_noent_seed-5402_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-quantum_noent_seed-5402_attempt-01.yaml",
+      "config_sha256": "e7086e51b41d3119bda258df6320c12969426dfbe2dfed29310c556c0b050915",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-quantum_noent_seed-5403_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-quantum_noent_seed-5403_attempt-01.yaml",
+      "config_sha256": "31a685ae947669b7b6ca8ebe102983968ff5398328bccc3c1787237fd551a5b3",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-eqmarl_seed-5401_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-eqmarl_seed-5401_attempt-01.yaml",
+      "config_sha256": "c18d9978f03c05934ddc304303b6523b1e564745f0e960f710c1727f4842a6be",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-eqmarl_seed-5402_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-eqmarl_seed-5402_attempt-01.yaml",
+      "config_sha256": "21881d001c55fd18208a427ba016660433a5df1d7060277ac4e95343214fcce5",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-eqmarl_seed-5403_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-eqmarl_seed-5403_attempt-01.yaml",
+      "config_sha256": "63310319fc474c9fac22437636e82315309fd49c3108a0f04b3fc662d4d13d5c",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-qfctde_seed-5401_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-qfctde_seed-5401_attempt-01.yaml",
+      "config_sha256": "27a91cc31c59125f49ca2e150e8926d351ffcc23c4d22305d44d48362e99dad5",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-qfctde_seed-5402_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-qfctde_seed-5402_attempt-01.yaml",
+      "config_sha256": "b5c026ce58f7b2bd5c83fb9824a689050e2f33392bbced4aebea04259f18aa17",
+      "source_commit": null,
+      "results_commit": null
+    },
+    {
+      "run_id": "05-pilot-qfctde_seed-5403_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/05-pilot-qfctde_seed-5403_attempt-01.yaml",
+      "config_sha256": "0f219cbdb827f48e24c5cbc2f424fbad493b3e8f872cc38543ffc885c16fe676",
       "source_commit": null,
       "results_commit": null
     }

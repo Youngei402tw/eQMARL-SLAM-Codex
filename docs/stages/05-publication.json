@@ -1,7 +1,7 @@
 {
   "stage": "05",
-  "verified_utc": "2026-10-21T03:53:42.806288+00:00",
-  "verified_remote_head": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+  "verified_utc": "2026-10-21T03:59:41.701603+00:00",
+  "verified_remote_head": "322888d5793f0c819523504e003ab3e5f2fb9687",
   "mechanism": "Fresh independent Git retrieval; every run manifest, resolved config, raw metric, diagnostic and inventoried checkpoint hash/size validated",
   "checks": [
     {
@@ -91,6 +91,46 @@
       "verified_files": 8,
       "metrics_rows": 172,
       "metrics_sha256": "e620e8762ad327bf7c6d3d4cfa12d1cba5741b634cb50880411d7299bc745dcd"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-eqmarl_lr-0.003_seed-5301_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 144,
+      "metrics_sha256": "233cf1ead25fa4e479bc748ae5fbaf0afb4ac0b3cbe6e58affeb976a5cb29810"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-eqmarl_lr-0.003_seed-5302_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 167,
+      "metrics_sha256": "b1d39965a4862e73a812d4592251dbb41f8d79ac6f68cbc5c82ecc4021866f2c"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-qfctde_lr-0.001_seed-5301_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 165,
+      "metrics_sha256": "aebc292836b5c66a72fcfee955d26b1aecf294857263aaa602654d2c694e1902"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-qfctde_lr-0.001_seed-5302_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 174,
+      "metrics_sha256": "e06c7c59dafe9aebb7cdb439922f7cae13a02d346a689a84194d06710b38f6c0"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-qfctde_lr-0.003_seed-5301_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 144,
+      "metrics_sha256": "8dd600a0a67891d8ba3ca3a9d80a959bf4df23e693e7b7af70a4fc4454d2e4a3"
     }
   ]
 }

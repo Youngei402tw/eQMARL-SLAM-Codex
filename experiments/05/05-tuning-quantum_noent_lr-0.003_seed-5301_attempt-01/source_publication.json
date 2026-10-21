@@ -1,0 +1,1 @@
+{"verified": true, "allow_detached": true, "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a", "branch": "stage/05-critic-ablation", "verified_utc": "2026-10-21T03:50:27.883062+00:00", "mechanism": "Git push, exact ls-remote SHA and fresh independent Git fetch"}
