@@ -1,0 +1,17 @@
+{
+  "index": "https://pypi.org/simple",
+  "wheel": {
+    "version": "4.3.0",
+    "filename": "gtsam-4.3.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "url": "https://files.pythonhosted.org/packages/c4/ef/2aeaa75b39769e5a1af0cdb5c2e8d279f78e90329535fb711dfcada07a53/gtsam-4.3.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "sha256": "63cae1c925f0094832b7f8d629951d4631cac57c6d7faba140c8ecc9f3c57752",
+    "size_bytes": 34243345,
+    "requires_python": null,
+    "yanked": false
+  },
+  "retrieved_wheel_sha256": "63cae1c925f0094832b7f8d629951d4631cac57c6d7faba140c8ecc9f3c57752",
+  "retrieved_wheel_bytes": 34243345,
+  "retrieval_verified": true,
+  "installation": "uv pip install gtsam numpy==2.4.6; no renamed wheels or ignored dependency constraints",
+  "native_module_probe": "passed with official 4.3.0 cp311 wheel and NumPy2.4.6"
+}

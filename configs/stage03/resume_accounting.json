@@ -1,0 +1,10 @@
+{
+  "previous_session_interruption": "An implementation agent exhausted workspace credits before reportable Stage03 execution. Existing edits retained.",
+  "previous_active_start_utc": "2026-10-20T09:46:40Z",
+  "previous_active_end_bound_utc": "2026-10-20T10:00:00Z",
+  "previous_setup_wall_seconds_conservative": 800,
+  "idle_excluded": true,
+  "scientific_runs_before_resume": 0,
+  "accounting_note": "Conservative envelopes for active setup only; prior end bound exceeds last saved edit. No research jobs ran during idle interval.",
+  "current_active_start_bound_utc": "2026-10-21T02:55:00Z"
+}

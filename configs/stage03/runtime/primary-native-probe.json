@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "purpose": "Installation/native-wheel compatibility only; no scientific trajectory result",
+  "python": "3.11.17 (main, Oct  3 2026, 01:05:36) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "gtsam": "4.3.0",
+  "numpy": "2.4.6",
+  "graph_factors": 3,
+  "measurement_factor": "BearingRangeFactor2D",
+  "gauge": "Pose0 Gaussian prior world origin; standard deviations x/y=.01m,heading=.005rad",
+  "units": {
+    "position": "metres",
+    "heading_bearing": "radians",
+    "odometry": "body-frame Pose2 between"
+  },
+  "pose1": [
+    1.0000000000000002,
+    -3.4257271390729814e-18,
+    -3.2540679243139443e-18
+  ],
+  "landmark0": [
+    2.0000000000000004,
+    1.000000000000004
+  ],
+  "pose1_covariance": [
+    [
+      0.010099999999999993,
+      2.870979904321344e-20,
+      2.903492070789635e-18
+    ],
+    [
+      2.870979904321344e-20,
+      0.010125,
+      2.5000000000000282e-05
+    ],
+    [
+      2.903492070789635e-18,
+      2.5000000000000282e-05,
+      0.0025250000000000003
+    ]
+  ],
+  "landmark0_covariance": [
+    [
+      0.016725,
+      -0.0002500000000000117
+    ],
+    [
+      -0.0002500000000000117,
+      0.01680000000000001
+    ]
+  ],
+  "final_graph_error": 2.7505559394243745e-27
+}

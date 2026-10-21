@@ -1,0 +1,398 @@
+{
+  "schema_version": "slam-raw-factors-v1",
+  "scenario_id": "straight-script-v1",
+  "backend": "direct",
+  "coordinate_convention": "GTSAM Pose2 local tangent covariance; world xy diagnostics explicitly rotated using estimated heading; mixed position/radian dimensions separately declared",
+  "smoother_configuration": {
+    "prior_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "odometry_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "observation_sigmas": [
+      0.02,
+      0.1
+    ],
+    "relative_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "backend": "direct"
+  },
+  "factors": [
+    {
+      "factor_id": "straight-script-v1:prior:r0:t0",
+      "kind": "prior",
+      "robot": 0,
+      "step": 0,
+      "pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t0:0",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 0,
+      "landmark": 0,
+      "bearing": 0.5060327208220134,
+      "range": 2.209960164162459,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t0:1",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 0,
+      "landmark": 1,
+      "bearing": 1.3066288281714167,
+      "range": 3.0797686891028553,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t0:2",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 0,
+      "landmark": 2,
+      "bearing": 2.438434305401329,
+      "range": 1.474845258194888,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:odometry:r0:t1",
+      "kind": "odometry",
+      "robot": 0,
+      "step": 1,
+      "delta": [
+        0.9898684921111152,
+        -0.015546548396652954,
+        -0.01925077935732933
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t1:0",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 1,
+      "landmark": 0,
+      "bearing": 0.8435352457294174,
+      "range": 1.5333467508411325,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t1:1",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 1,
+      "landmark": 1,
+      "bearing": 1.5859739014123013,
+      "range": 3.010243663822427,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t1:2",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 1,
+      "landmark": 2,
+      "bearing": 2.7338504059782034,
+      "range": 2.2844906064354102,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:odometry:r0:t2",
+      "kind": "odometry",
+      "robot": 0,
+      "step": 2,
+      "delta": [
+        1.0051785075830015,
+        0.00829636546638026,
+        0.004872989176580411
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t2:0",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 2,
+      "landmark": 0,
+      "bearing": 1.6732130675441095,
+      "range": 1.0612837076724355,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t2:1",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 2,
+      "landmark": 1,
+      "bearing": 1.9454315989562971,
+      "range": 3.194581375684527,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t2:2",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 2,
+      "landmark": 2,
+      "bearing": 2.8517862863784496,
+      "range": 3.390791136794375,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:odometry:r0:t3",
+      "kind": "odometry",
+      "robot": 0,
+      "step": 3,
+      "delta": [
+        1.0577016755163091,
+        -0.06723616560199779,
+        0.026956914917651176
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t3:0",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 3,
+      "landmark": 0,
+      "bearing": 2.4047131447894277,
+      "range": 1.665302477604267,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t3:1",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 3,
+      "landmark": 1,
+      "bearing": 2.2013146088223188,
+      "range": 3.682545190849807,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t3:2",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 3,
+      "landmark": 2,
+      "bearing": 2.9209866010416246,
+      "range": 4.080922612398473,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:odometry:r0:t4",
+      "kind": "odometry",
+      "robot": 0,
+      "step": 4,
+      "delta": [
+        0.9910116955026456,
+        -0.08486288016954524,
+        -0.008521679775676638
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t4:0",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 4,
+      "landmark": 0,
+      "bearing": 2.6338673055099413,
+      "range": 2.4127659459315867,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t4:1",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 4,
+      "landmark": 1,
+      "bearing": 2.3601725178197537,
+      "range": 4.5608377111222085,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:odometry:r0:t5",
+      "kind": "odometry",
+      "robot": 0,
+      "step": 5,
+      "delta": [
+        1.049296442670083,
+        0.017611927960960443,
+        -0.03237627532536713
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t5:0",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 5,
+      "landmark": 0,
+      "bearing": 2.794092613421098,
+      "range": 3.246386758551906,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:odometry:r0:t6",
+      "kind": "odometry",
+      "robot": 0,
+      "step": 6,
+      "delta": [
+        1.0357335488036603,
+        0.041822948748961114,
+        0.03447026044732926
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:landmark:r0:t6:0",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 6,
+      "landmark": 0,
+      "bearing": 2.8644377918367283,
+      "range": 4.3135564782201445,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:odometry:r0:t7",
+      "kind": "odometry",
+      "robot": 0,
+      "step": 7,
+      "delta": [
+        0.9962816858837243,
+        -0.056378835187522014,
+        -0.013583860807552917
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "straight-script-v1:odometry:r0:t8",
+      "kind": "odometry",
+      "robot": 0,
+      "step": 8,
+      "delta": [
+        0.961535127813765,
+        -0.07462548269275142,
+        0.018856293243329603
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    }
+  ],
+  "robot_steps": [
+    [
+      0,
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    ]
+  ]
+}

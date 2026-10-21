@@ -46,7 +46,9 @@
       "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "6b49e7010d9c0667acb41854b1d008f303ea0355",
-      "publication_receipt": "docs/stages/02-publication.json"
+      "publication_receipt": "docs/stages/02-publication.json",
+      "completion_commit": "84bd6c8c150becb84ca5cdd65dcb855731d1db9c",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/3"
     },
     {
       "id": "03",
@@ -58,8 +60,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/03-slam-beliefs.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "84bd6c8c150becb84ca5cdd65dcb855731d1db9c",
+      "publication_receipt": "docs/stages/03-publication.json"
     },
     {
       "id": "04",

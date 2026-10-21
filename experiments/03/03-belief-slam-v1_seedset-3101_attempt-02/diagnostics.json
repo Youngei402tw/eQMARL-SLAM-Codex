@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "gates": {
+    "straight_finite_positive_covariance": true,
+    "replay_straight-script-v1": true,
+    "closed_loop_finite_positive_covariance": true,
+    "replay_closed-loop-script-v1": true,
+    "first_unknown_landmark_no_pose_information": true,
+    "same_step_known_landmark_revisit": true,
+    "historical_pose_correction": true,
+    "measurement_id_deduplication": true,
+    "replay_controlled-biased-square-closure-v1": true,
+    "relative_robot_information": true,
+    "replay_relative-robot-v1": true,
+    "local_owner_and_delivered_factor_boundary": true,
+    "replay_factor-delivery-v1": true
+  },
+  "resources": {
+    "primitive_steps": 28,
+    "decisions": 0,
+    "updates": 0,
+    "wall_seconds": 0.16836780000448925,
+    "cpu_core_hours": 4.676555555555557e-05,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0,
+    "solver_requests": 60,
+    "communication_bytes": 1016
+  },
+  "summary": {
+    "scenarios": [
+      {
+        "scenario_id": "straight-script-v1",
+        "frame": "fixed_common_prior_frame_no_alignment",
+        "poses": 9,
+        "translation_ate_rmse_m": 0.07403826272383222,
+        "heading_rmse_rad": 0.02467324069533767,
+        "translation_rpe_rmse_m": 0.06009760434161662,
+        "heading_rpe_rmse_rad": 0.015539699780189155,
+        "current_translation_error_m": 0.026976895161616866,
+        "current_heading_error_rad": 0.03592518574715298,
+        "fixed_landmark_ids": [
+          0,
+          1,
+          2
+        ],
+        "landmark_count": 3,
+        "observed_landmarks": 3,
+        "missing_landmark_ids": [],
+        "landmark_recall": 1.0,
+        "observed_landmark_rmse_m": 0.12370038678870514,
+        "fixed_domain_landmark_rmse_m": 0.12370038678870514
+      },
+      {
+        "scenario_id": "closed-loop-script-v1",
+        "frame": "fixed_common_prior_frame_no_alignment",
+        "poses": 13,
+        "translation_ate_rmse_m": 0.08481026960512136,
+        "heading_rmse_rad": 0.025187549198905305,
+        "translation_rpe_rmse_m": 0.04744912628428075,
+        "heading_rpe_rmse_rad": 0.013346252349057291,
+        "current_translation_error_m": 0.06414230306571554,
+        "current_heading_error_rad": 0.020138488811079824,
+        "fixed_landmark_ids": [
+          0,
+          1,
+          2
+        ],
+        "landmark_count": 3,
+        "observed_landmarks": 3,
+        "missing_landmark_ids": [],
+        "landmark_recall": 1.0,
+        "observed_landmark_rmse_m": 0.0865374841061407,
+        "fixed_domain_landmark_rmse_m": 0.0865374841061407
+      }
+    ],
+    "backend": "direct",
+    "evaluation_frame": "fixed_common_prior_frame_no_alignment",
+    "training": false,
+    "estimator_kind": "full-history Pose2/unknown-Point2 factor-graph smoother",
+    "state_source": "sensor factors and declared uncertain priors; truth is evaluation-only",
+    "primitive_step_unit": "joint simulated motion/controlled odometry timestamp; no actor or learner updates",
+    "covariance_interpretation": "Gaussian linearization marginal, tested under registered measurement/association model; NEES rows are diagnostics, not calibration evidence"
+  },
+  "required_artifacts": [
+    "measurements.jsonl",
+    "straight-script-v1_graph.json",
+    "closed-loop-script-v1_graph.json",
+    "controlled-biased-square-closure-v1_graph.json",
+    "relative-robot-v1_graph.json",
+    "delivered_factor_packet.json",
+    "factor-delivery-v1_graph.json",
+    "factor_inventory.json"
+  ]
+}

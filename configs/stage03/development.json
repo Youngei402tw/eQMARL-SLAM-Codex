@@ -1,0 +1,34 @@
+{
+  "split": "development",
+  "protocol_id": "belief-slam-v1",
+  "scenario_ids": [
+    "straight-script-v1",
+    "closed-loop-script-v1",
+    "controlled-biased-square-closure-v1",
+    "same-step-known-landmark-revisit-v1",
+    "first-unknown-landmark-v1",
+    "relative-robot-v1",
+    "factor-delivery-v1",
+    "factor-replay-v1"
+  ],
+  "landmarks": {
+    "0": [
+      2.0,
+      1.0
+    ],
+    "1": [
+      1.0,
+      3.0
+    ],
+    "2": [
+      -1.0,
+      1.0
+    ]
+  },
+  "units": {
+    "position": "metres",
+    "heading": "radians"
+  },
+  "fixed_frame": "Common initial prior reference; no per-step/per-trajectory truth alignment",
+  "test_accessed": false
+}

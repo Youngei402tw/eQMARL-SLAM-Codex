@@ -1,0 +1,51 @@
+{
+  "stage": "03",
+  "dependency_completion_commit": "84bd6c8c150becb84ca5cdd65dcb855731d1db9c",
+  "runs": [
+    {
+      "run_id": "03-belief-slam-v1_seedset-3101_attempt-01",
+      "status": "failed",
+      "config": "configs/stage03/beliefs.yaml",
+      "config_sha256": "44fff0224d2e8c14e378ea7cefa39416384b1d0cc14a253e5ce2dcfd04a8e7e0",
+      "source_commit": "7b0e61b9bcf8ec5b24276041885ea28ff3ab87f6",
+      "results_commit": "789ddd4662c34597bc072ad811a625e7d3f2bca8",
+      "failure": {
+        "reason": "'<=' not supported between instances of 'float' and 'str'",
+        "type": "TypeError",
+        "traceback": "failure.txt",
+        "attempt": 1
+      },
+      "resources_consumed": {
+        "primitive_steps": 21,
+        "decisions": 0,
+        "updates": 0,
+        "wall_seconds": 0.19840587899670936,
+        "cpu_core_hours": 5.509833333333333e-05,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "verified"
+    },
+    {
+      "run_id": "03-belief-slam-v1_seedset-3101_attempt-02",
+      "status": "completed",
+      "config": "configs/stage03/beliefs-attempt02.yaml",
+      "config_sha256": "07dc3999f3e66ecbf9bef42d7a9073852485e5c248f2969b6dfdfcc84bf83a03",
+      "source_commit": "afbde7ea75016f3410e47099b8a0f3b29cd01eef",
+      "results_commit": "dcac457be515958b259a9d32eacbcdb2e90a003e",
+      "reason": "Correct numeric JSON parsing; all scientific values and thresholds unchanged.",
+      "resources_consumed": {
+        "primitive_steps": 28,
+        "decisions": 0,
+        "updates": 0,
+        "wall_seconds": 0.21183234699856257,
+        "cpu_core_hours": 5.8831111111111136e-05,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "verified"
+    }
+  ]
+}

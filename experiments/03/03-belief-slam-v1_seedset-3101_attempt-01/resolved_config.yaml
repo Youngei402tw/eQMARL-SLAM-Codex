@@ -1,0 +1,178 @@
+{
+  "stage": "03",
+  "run_id": "03-belief-slam-v1_seedset-3101_attempt-01",
+  "protocol_id": "belief-slam-v1",
+  "profile": "diagnostic",
+  "experiment": "belief-slam",
+  "method": "full_history_gtsam_pose2_point2",
+  "hypothesis": "A genuine pose/landmark smoother improves same-step informative revisits and historical closure while deduplicating shared information and preserving local ownership.",
+  "dependency_completion_commit": "84bd6c8c150becb84ca5cdd65dcb855731d1db9c",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 1000,
+  "max_cpu_threads": 1,
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": 3102,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null,
+    "motion": 3101,
+    "initial_prior": 3103,
+    "odometry": 3102,
+    "relative_observation": 3102
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/stage03/development.json",
+      "sha256": "55feb86cd33cce76a3ccecdc2ce59c036eb6130a4a95681806391a09de92f6c1"
+    },
+    "validation": null,
+    "test": null
+  },
+  "model": {
+    "actor": null,
+    "encoder": "local or delivered-factor posterior only",
+    "critic": null,
+    "parameter_counts": {
+      "learned_parameters": 0
+    },
+    "optimizer": {
+      "type": "GTSAM Levenberg-Marquardt full-history optimization",
+      "gradient_learning_updates": 0
+    }
+  },
+  "quantum": null,
+  "backend": "direct",
+  "backend_python": "/workspace/eqmarl-venv/bin/python",
+  "prior_sigmas": [
+    0.05,
+    0.05,
+    0.02
+  ],
+  "odometry_sigmas": [
+    0.05,
+    0.05,
+    0.02
+  ],
+  "observation_sigmas": [
+    0.02,
+    0.1
+  ],
+  "relative_sigmas": [
+    0.05,
+    0.05,
+    0.02
+  ],
+  "motion_std": [
+    0.015,
+    0.015,
+    0.01
+  ],
+  "odom_std": [
+    0.05,
+    0.05,
+    0.02
+  ],
+  "sensor_std": [
+    0.1,
+    0.02
+  ],
+  "sensor_range": 5.0,
+  "motion_seed": 3101,
+  "sensor_seed": 3102,
+  "prior_seed": 3103,
+  "landmarks": {
+    "0": [
+      2.0,
+      1.0
+    ],
+    "1": [
+      1.0,
+      3.0
+    ],
+    "2": [
+      -1.0,
+      1.0
+    ]
+  },
+  "sample_initial_prior": true,
+  "controlled_closure": {
+    "body_commands": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "odometry_bias": [
+      0.1,
+      0.03,
+      0
+    ],
+    "truth_heading": 0,
+    "sensor_noise_draws": false,
+    "scope": "Deterministic observability/closure correctness fixture, separate from noisy scripted trajectories"
+  },
+  "gates": {
+    "same_step_trace_reduction_min": 1e-09,
+    "same_step_logdet_reduction_min": 1e-09,
+    "historical_pose_correction_min": 1e-06,
+    "controlled_closure_ate_must_reduce": true,
+    "new_unknown_landmark_pose_covariance_atol": 1e-07,
+    "duplicate_covariance_atol": 1e-10,
+    "relative_information_gain_min": 1e-09,
+    "replay_pose_covariance_atol": 1e-08
+  },
+  "information_conditions": [
+    "local-only factors remain private",
+    "delivered raw-factor union exactly once; costs charged"
+  ],
+  "factor_ownership": "Canonical IDs and full payload hashes; exact duplicate no-op, conflicting duplicate rejected; no posterior-to-independent-prior fusion",
+  "pose_covariance": "GTSAM Pose2 local tangent covariance; world xy diagnostics explicitly rotated using estimated heading; mixed position/radian dimensions separately declared",
+  "evaluation_frame": "fixed common prior frame, no truth alignment",
+  "interpretation": "Fixed genuine 2D SLAM estimator diagnostics, including unknown landmark locations and uncertain historical poses. No controller training, task-performance or quantum-advantage claim.",
+  "script_step_length": 1.0,
+  "script_names": [
+    "straight",
+    "closed_loop"
+  ],
+  "script_seed_policy": "Separate SHA-keyed scenario IDs and noise families with declared seeds; no independent trained-seed claim.",
+  "odometry_seed": 3102,
+  "relative_seed": 3102,
+  "exogenous_noise_keying": "SHA-keyed family+timestamp+robot/landmark using declared base seeds; matching numeric base seeds in different families still produce separate deterministic streams.",
+  "initial_poses": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "sensor_fov": 6.283185307179586,
+  "script_n_steps": 8,
+  "script_side_steps": 2,
+  "optimizer_settings": {
+    "max_iterations": 100,
+    "relative_error_tolerance": 1e-10,
+    "absolute_error_tolerance": 1e-10
+  },
+  "fixture_implementation_sha256": "c2ffbdbd5bb9f8b4c115026835e04596d426f950b1a83fad4312ba7560596a1f"
+}

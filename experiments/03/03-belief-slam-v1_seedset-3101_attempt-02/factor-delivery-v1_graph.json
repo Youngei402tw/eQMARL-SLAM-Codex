@@ -1,0 +1,153 @@
+{
+  "schema_version": "slam-raw-factors-v1",
+  "scenario_id": "factor-delivery-v1",
+  "backend": "direct",
+  "coordinate_convention": "GTSAM Pose2 local tangent covariance; world xy diagnostics explicitly rotated using estimated heading; mixed position/radian dimensions separately declared",
+  "smoother_configuration": {
+    "prior_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "odometry_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "observation_sigmas": [
+      0.02,
+      0.1
+    ],
+    "relative_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "backend": "direct"
+  },
+  "factors": [
+    {
+      "factor_id": "local/0/prior",
+      "kind": "prior",
+      "robot": 0,
+      "step": 0,
+      "pose": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "local/0/odom",
+      "kind": "odometry",
+      "robot": 0,
+      "step": 1,
+      "delta": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "local/0/landmark",
+      "kind": "landmark",
+      "robot": 0,
+      "step": 1,
+      "landmark": 0,
+      "bearing": 0.7853981633974483,
+      "range": 1.4142135623730951,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "local/1/prior",
+      "kind": "prior",
+      "robot": 1,
+      "step": 0,
+      "pose": [
+        0.0,
+        2.0,
+        0.0
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "local/1/odom",
+      "kind": "odometry",
+      "robot": 1,
+      "step": 1,
+      "delta": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "factor_id": "local/1/landmark",
+      "kind": "landmark",
+      "robot": 1,
+      "step": 1,
+      "landmark": 0,
+      "bearing": -0.7853981633974483,
+      "range": 1.4142135623730951,
+      "sigmas": [
+        0.02,
+        0.1
+      ]
+    },
+    {
+      "factor_id": "local/1/private-next",
+      "kind": "odometry",
+      "robot": 1,
+      "step": 2,
+      "delta": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "sigmas": [
+        0.05,
+        0.05,
+        0.02
+      ]
+    }
+  ],
+  "robot_steps": [
+    [
+      0,
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      1,
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  ]
+}

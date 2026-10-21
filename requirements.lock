@@ -11,6 +11,7 @@ farama-notifications==0.0.6
 filelock==4.2.4
 fsspec==2026.9.0
 gast==0.7.0
+gtsam==4.3.0
 gymnasium==1.4.0
 idna==3.20
 iniconfig==2.3.1
