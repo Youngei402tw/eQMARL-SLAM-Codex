@@ -75,19 +75,41 @@
     },
     {
       "run_id": "04-classical-pilot-v2_seed-4401_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage04/pilot-4401.yaml",
       "config_sha256": "7d9351bad71bfd45f03c40d370a170ac5a3197369f118ba509e1393702877276",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "e4a49ac3eb99fe6587c11bce55497212bd3f9fbe",
+      "results_commit": null,
+      "resources_consumed": {
+        "primitive_steps": 3080,
+        "decisions": 3284,
+        "updates": 86,
+        "wall_seconds": 63.03696439298801,
+        "cpu_core_hours": 0.017508778611111112,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "pending"
     },
     {
       "run_id": "04-classical-pilot-v2_seed-4402_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage04/pilot-4402.yaml",
       "config_sha256": "62acaa4d09c656c9bbac0c0ffb0b509b916d0c3932d6bac96736a36502a8101d",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "e4a49ac3eb99fe6587c11bce55497212bd3f9fbe",
+      "results_commit": null,
+      "resources_consumed": {
+        "primitive_steps": 3080,
+        "decisions": 3268,
+        "updates": 86,
+        "wall_seconds": 59.26734924298944,
+        "cpu_core_hours": 0.016460329722222222,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "pending"
     },
     {
       "run_id": "04-classical-pilot-v2_seed-4403_attempt-01",

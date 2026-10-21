@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-21T03:16:57.647166+00:00",
+  "updated_utc": "2026-10-21T03:32:42.067519+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -98,5 +98,14 @@
     "setup_wall_seconds_charged": 669.64714884758,
     "setup_charge_convention": "Conservative active setup/development envelope from Stage04 branch creation to first source publication."
   },
-  "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds."
+  "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
+  "active_runs": [
+    {
+      "run_id": "04-classical-pilot-v2_seed-4402_attempt-01",
+      "session_id": 61987,
+      "source_commit": "e4a49ac3eb99fe6587c11bce55497212bd3f9fbe",
+      "artifact_root": "/workspace/experiment-artifacts/04",
+      "note": "Inspect final manifest/process before resuming; never duplicate an existing directory."
+    }
+  ]
 }
