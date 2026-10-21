@@ -38,6 +38,8 @@ def main():
         manifest = json.loads((destination/'manifest.json').read_text())
         print(datetime.now(timezone.utc).isoformat(), 'END', run, manifest['status'],
               manifest['resources_consumed'], 'exit', result.returncode, flush=True)
+        if result.returncode and manifest['status'] == 'completed':
+            raise RuntimeError(f'Completed numerical outcome failed archive validation: {run}; stop before next run')
         # A finalized failed outcome remains evidence, not an implicit retry.
 
 

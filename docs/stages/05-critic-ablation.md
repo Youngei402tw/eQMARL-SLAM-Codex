@@ -33,3 +33,5 @@ unused. All configurations, raw outcomes and checkpoints are permanent artifacts
 All13 fitting gates passed (87 simulated primitives,960 regression updates,3045 device executions,43.57sec). Real targets were exclusively positive; signed fixture is separate. See immutable fitting bundle.
 
 The registered tuning matrix uses2 rates(0.001,0.003),2 seeds and1000 training primitives for every method, then3 pilots of2000 steps with30 greedy validation episodes. Select by two-seed mean validation return, lower-rate exact tie. This common short budget measures bounded learning, not convergence. Final test remains unopened.
+
+Mechanical archive recovery: first4 bilinear runs finished numerically but ID decimal points violated the old schema. No training was interrupted. Original bundles/logs retained; an explicit schema amendment admits safe decimal labels and validates identity before execution. Future runs stop on post-run archive errors. Model/task/training code unchanged.

@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import platform
 import resource
+import re
 import shutil
 import subprocess
 import sys
@@ -80,6 +81,9 @@ def execute(config_path, source_receipt):
     config_path = Path(config_path).resolve()
     config = load_config(config_path)
     stage, run_id = config["stage"], config["run_id"]
+    identity_pattern = json.loads((ROOT/'schemas/run_manifest.schema.json').read_text())['properties']['run_id']['pattern']
+    if not re.fullmatch(identity_pattern, run_id):
+        raise ValueError('Run ID violates archive schema; no experiment started')
     receipt = json.loads(Path(source_receipt).read_text())
     preflight_stage(stage, config["profile"], allow_detached=bool(receipt.get("allow_detached")))
     if git("status", "--porcelain"):

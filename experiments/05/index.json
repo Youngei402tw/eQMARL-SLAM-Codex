@@ -77,35 +77,39 @@
     },
     {
       "run_id": "05-tuning-bilinear_lr-0.001_seed-5301_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-tuning-bilinear_lr-0.001_seed-5301_attempt-01.yaml",
       "config_sha256": "2eae19dcbd98fdc4f148cb87536ed4cca28036cf385406bd5fdff91979bafe44",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "66eac426233beaafb8280a6fe70b16ed734360b0",
+      "results_commit": null,
+      "archive_validation_initially_failed": true
     },
     {
       "run_id": "05-tuning-bilinear_lr-0.001_seed-5302_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-tuning-bilinear_lr-0.001_seed-5302_attempt-01.yaml",
       "config_sha256": "734f67bc716fe65055635556289ec288d3a1eab94429a3fc2a8700c7188302d9",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "66eac426233beaafb8280a6fe70b16ed734360b0",
+      "results_commit": null,
+      "archive_validation_initially_failed": true
     },
     {
       "run_id": "05-tuning-bilinear_lr-0.003_seed-5301_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-tuning-bilinear_lr-0.003_seed-5301_attempt-01.yaml",
       "config_sha256": "017b36d91fb4763f93507e0dff6d5a10e4e27f11640c135be0a2a2df82d8a0f6",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "66eac426233beaafb8280a6fe70b16ed734360b0",
+      "results_commit": null,
+      "archive_validation_initially_failed": true
     },
     {
       "run_id": "05-tuning-bilinear_lr-0.003_seed-5302_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-tuning-bilinear_lr-0.003_seed-5302_attempt-01.yaml",
       "config_sha256": "712ea814b94ac1d846848c170dd8300f19ecd4ec348de88d69ac0e9239d78d9d",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "66eac426233beaafb8280a6fe70b16ed734360b0",
+      "results_commit": null,
+      "archive_validation_initially_failed": true
     },
     {
       "run_id": "05-tuning-quantum_noent_lr-0.001_seed-5301_attempt-01",
