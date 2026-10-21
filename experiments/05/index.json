@@ -267,19 +267,21 @@
     },
     {
       "run_id": "05-pilot-split_classical_seed-5402_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-pilot-split_classical_seed-5402_attempt-01.yaml",
       "config_sha256": "3cf763c1ce3b574020ebf3fbd72aafefb0b2e2174be3e5234533808ae6433753",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "ebac5755184ce6558fcf35cdbd8d1024d5039882",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "05-pilot-split_classical_seed-5403_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/05-pilot-split_classical_seed-5403_attempt-01.yaml",
       "config_sha256": "fe8854755568a0657dc3fc08d2c7afc777a9bcce95172a7b4e8d91212892e432",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "ebac5755184ce6558fcf35cdbd8d1024d5039882",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "05-pilot-central_classical_seed-5401_attempt-01",
@@ -422,6 +424,14 @@
       "source_commit": "ebac5755184ce6558fcf35cdbd8d1024d5039882",
       "results_commit": null,
       "gates_passed": true
+    },
+    {
+      "run_id": "05-frozen-pilot-replay-v1_attempt-01",
+      "status": "planned",
+      "config": "configs/stage05/frozen-replay.yaml",
+      "config_sha256": "76593e869bce3b749aef08b21fe92e91ddf66ffb59e86ac43d4b49dacef5e91f",
+      "source_commit": null,
+      "results_commit": null
     }
   ]
 }

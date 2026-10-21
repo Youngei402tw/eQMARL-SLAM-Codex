@@ -37,3 +37,5 @@ The registered tuning matrix uses2 rates(0.001,0.003),2 seeds and1000 training p
 Mechanical archive recovery: first4 bilinear runs finished numerically but ID decimal points violated the old schema. No training was interrupted. Original bundles/logs retained; an explicit schema amendment admits safe decimal labels and validates identity before execution. Future runs stop on post-run archive errors. Model/task/training code unchanged.
 
 Tuning complete. Rate decisions and all per-seed outcomes are in `configs/stage05/learning-rate-selection.json`; the registered selection rule is applied without modification. Pilot configs are published before execution.
+
+All18 registered pilot seeds completed with finite updates and connected actor/critic gradients. A bounded18-policy frozen replay on the first registered validation map is preregistered to verify checkpoint behavior and record action/duration/reward-component counts. Max648 primitives,1h cap; no optimizer or critic execution. Original pilot training action sequences were not retained; replay counts are explicitly separate. New logging adds these diagnostics for subsequent runs without changing optimization.

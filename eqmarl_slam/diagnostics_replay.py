@@ -18,6 +18,8 @@ def run_diagnostics(config, output, emit, progress=None):
         cfg = json.loads((folder/'resolved_config.yaml').read_text())
         checkpoint = folder/'final.pt'
         digest = hashlib.sha256(checkpoint.read_bytes()).hexdigest()
+        if digest != config['checkpoint_sha256'][run]:
+            raise ValueError('Frozen replay checkpoint differs from preregistered input')
         payload = torch.load(checkpoint,map_location='cpu',weights_only=True)
         actor = SharedGRUActor(27,cfg['actor_hidden'],5).double()
         actor.load_state_dict({k.removeprefix('actor.'):v for k,v in payload['model'].items() if k.startswith('actor.')})
