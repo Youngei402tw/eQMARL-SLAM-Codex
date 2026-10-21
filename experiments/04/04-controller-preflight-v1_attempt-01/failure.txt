@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "/workspace/eQMARL-SLAM-Codex/eqmarl_slam/execution.py", line 133, in execute
+    diagnostics = run_diagnostics(config, output, emit, progress=progress)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/eQMARL-SLAM-Codex/eqmarl_slam/diagnostics04.py", line 35, in run_diagnostics
+    obs, mask, reward, done, info = env.step(actions)
+                                    ^^^^^^^^^^^^^^^^^
+  File "/workspace/eQMARL-SLAM-Codex/eqmarl_slam/belief_task.py", line 203, in step
+    posterior = graph.pose_covariance(r, self.sim.timestamp)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/eQMARL-SLAM-Codex/eqmarl_slam/slam.py", line 436, in pose_covariance
+    return np.asarray(self._backend.pose_covariance(_index(robot_id, "robot_id"),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/eQMARL-SLAM-Codex/eqmarl_slam/slam.py", line 165, in pose_covariance
+    covariance = self._marginal(self._pose_key(robot, step))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/eQMARL-SLAM-Codex/eqmarl_slam/slam.py", line 158, in _marginal
+    self.marginals = self.gtsam.Marginals(self.graph, self.values)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: 
+Indeterminate linear system detected while working near variable
+8646911284551352326 (Symbol: x6).
+
+Thrown when a linear system is ill-posed.  The most common cause for this
+error is having underconstrained variables, but the exception is also raised
+for nearly indeterminate systems that are too poorly conditioned to solve
+reliably.  See the GTSAM Doxygen documentation for
+gtsam::IndeterminateSystemException and the user
+guide at
+https://github.com/borglab/gtsam/blob/develop/gtsam/linear/doc/IndeterminateSystemException.ipynb
+for more information.

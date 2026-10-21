@@ -1,0 +1,14 @@
+{
+  "run_id": "04-controller-preflight-v1_attempt-01",
+  "original_results_commit": "0d9989cd23054877628fc03d1c0a0fbd1289995d",
+  "reported": {
+    "primitive_steps": 12,
+    "decisions": 8
+  },
+  "reconciled": {
+    "primitive_steps": 15,
+    "decisions": 10
+  },
+  "evidence": "First completed episode9primitives/3macros; second scenario failed at posex6 after2selected macros. Deterministic numerical replay retained in recovery-v1.json confirms timestamp6 and twojointactions. Original counters updated only after a complete macro. No numerical result rows fabricated; original bundle immutable.",
+  "fix": "Future runs charge each physical primitive before factor inference and each heuristic decision before macro execution."
+}

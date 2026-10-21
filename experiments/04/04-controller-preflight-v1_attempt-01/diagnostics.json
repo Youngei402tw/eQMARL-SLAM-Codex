@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "exception": {
+    "reason": "\nIndeterminate linear system detected while working near variable\n8646911284551352326 (Symbol: x6).\n\nThrown when a linear system is ill-posed.  The most common cause for this\nerror is having underconstrained variables, but the exception is also raised\nfor nearly indeterminate systems that are too poorly conditioned to solve\nreliably.  See the GTSAM Doxygen documentation for\ngtsam::IndeterminateSystemException and the user\nguide at\nhttps://github.com/borglab/gtsam/blob/develop/gtsam/linear/doc/IndeterminateSystemException.ipynb\nfor more information.",
+    "type": "RuntimeError",
+    "traceback": "failure.txt",
+    "attempt": 1
+  },
+  "resources": {
+    "primitive_steps": 12,
+    "decisions": 8,
+    "updates": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  }
+}

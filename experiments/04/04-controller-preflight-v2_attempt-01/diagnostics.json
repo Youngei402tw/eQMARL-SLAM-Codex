@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "failure": {
+    "reason": "Post-run archive serialization failed: TypeError: Object of type bool is not JSON serializable (NumPy boolean diagnostic). Scientific raw rows and checkpoint retained; in-memory aggregate result was not serialized.",
+    "failure_mode": "archive_numeric_serialization",
+    "log": "packaging_failure.txt"
+  },
+  "raw_results_preserved": true,
+  "aggregate_gate_result_unavailable": true
+}

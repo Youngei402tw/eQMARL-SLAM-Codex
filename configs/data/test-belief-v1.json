@@ -1,0 +1,507 @@
+{
+  "split": "test",
+  "protocol": "belief-controller-v1",
+  "scenarios": [
+    {
+      "scenario_id": "test-belief-v1-000",
+      "map_seed": 990000,
+      "noise_seed": 991000
+    },
+    {
+      "scenario_id": "test-belief-v1-001",
+      "map_seed": 990001,
+      "noise_seed": 991001
+    },
+    {
+      "scenario_id": "test-belief-v1-002",
+      "map_seed": 990002,
+      "noise_seed": 991002
+    },
+    {
+      "scenario_id": "test-belief-v1-003",
+      "map_seed": 990003,
+      "noise_seed": 991003
+    },
+    {
+      "scenario_id": "test-belief-v1-004",
+      "map_seed": 990004,
+      "noise_seed": 991004
+    },
+    {
+      "scenario_id": "test-belief-v1-005",
+      "map_seed": 990005,
+      "noise_seed": 991005
+    },
+    {
+      "scenario_id": "test-belief-v1-006",
+      "map_seed": 990006,
+      "noise_seed": 991006
+    },
+    {
+      "scenario_id": "test-belief-v1-007",
+      "map_seed": 990007,
+      "noise_seed": 991007
+    },
+    {
+      "scenario_id": "test-belief-v1-008",
+      "map_seed": 990008,
+      "noise_seed": 991008
+    },
+    {
+      "scenario_id": "test-belief-v1-009",
+      "map_seed": 990009,
+      "noise_seed": 991009
+    },
+    {
+      "scenario_id": "test-belief-v1-010",
+      "map_seed": 990010,
+      "noise_seed": 991010
+    },
+    {
+      "scenario_id": "test-belief-v1-011",
+      "map_seed": 990011,
+      "noise_seed": 991011
+    },
+    {
+      "scenario_id": "test-belief-v1-012",
+      "map_seed": 990012,
+      "noise_seed": 991012
+    },
+    {
+      "scenario_id": "test-belief-v1-013",
+      "map_seed": 990013,
+      "noise_seed": 991013
+    },
+    {
+      "scenario_id": "test-belief-v1-014",
+      "map_seed": 990014,
+      "noise_seed": 991014
+    },
+    {
+      "scenario_id": "test-belief-v1-015",
+      "map_seed": 990015,
+      "noise_seed": 991015
+    },
+    {
+      "scenario_id": "test-belief-v1-016",
+      "map_seed": 990016,
+      "noise_seed": 991016
+    },
+    {
+      "scenario_id": "test-belief-v1-017",
+      "map_seed": 990017,
+      "noise_seed": 991017
+    },
+    {
+      "scenario_id": "test-belief-v1-018",
+      "map_seed": 990018,
+      "noise_seed": 991018
+    },
+    {
+      "scenario_id": "test-belief-v1-019",
+      "map_seed": 990019,
+      "noise_seed": 991019
+    },
+    {
+      "scenario_id": "test-belief-v1-020",
+      "map_seed": 990020,
+      "noise_seed": 991020
+    },
+    {
+      "scenario_id": "test-belief-v1-021",
+      "map_seed": 990021,
+      "noise_seed": 991021
+    },
+    {
+      "scenario_id": "test-belief-v1-022",
+      "map_seed": 990022,
+      "noise_seed": 991022
+    },
+    {
+      "scenario_id": "test-belief-v1-023",
+      "map_seed": 990023,
+      "noise_seed": 991023
+    },
+    {
+      "scenario_id": "test-belief-v1-024",
+      "map_seed": 990024,
+      "noise_seed": 991024
+    },
+    {
+      "scenario_id": "test-belief-v1-025",
+      "map_seed": 990025,
+      "noise_seed": 991025
+    },
+    {
+      "scenario_id": "test-belief-v1-026",
+      "map_seed": 990026,
+      "noise_seed": 991026
+    },
+    {
+      "scenario_id": "test-belief-v1-027",
+      "map_seed": 990027,
+      "noise_seed": 991027
+    },
+    {
+      "scenario_id": "test-belief-v1-028",
+      "map_seed": 990028,
+      "noise_seed": 991028
+    },
+    {
+      "scenario_id": "test-belief-v1-029",
+      "map_seed": 990029,
+      "noise_seed": 991029
+    },
+    {
+      "scenario_id": "test-belief-v1-030",
+      "map_seed": 990030,
+      "noise_seed": 991030
+    },
+    {
+      "scenario_id": "test-belief-v1-031",
+      "map_seed": 990031,
+      "noise_seed": 991031
+    },
+    {
+      "scenario_id": "test-belief-v1-032",
+      "map_seed": 990032,
+      "noise_seed": 991032
+    },
+    {
+      "scenario_id": "test-belief-v1-033",
+      "map_seed": 990033,
+      "noise_seed": 991033
+    },
+    {
+      "scenario_id": "test-belief-v1-034",
+      "map_seed": 990034,
+      "noise_seed": 991034
+    },
+    {
+      "scenario_id": "test-belief-v1-035",
+      "map_seed": 990035,
+      "noise_seed": 991035
+    },
+    {
+      "scenario_id": "test-belief-v1-036",
+      "map_seed": 990036,
+      "noise_seed": 991036
+    },
+    {
+      "scenario_id": "test-belief-v1-037",
+      "map_seed": 990037,
+      "noise_seed": 991037
+    },
+    {
+      "scenario_id": "test-belief-v1-038",
+      "map_seed": 990038,
+      "noise_seed": 991038
+    },
+    {
+      "scenario_id": "test-belief-v1-039",
+      "map_seed": 990039,
+      "noise_seed": 991039
+    },
+    {
+      "scenario_id": "test-belief-v1-040",
+      "map_seed": 990040,
+      "noise_seed": 991040
+    },
+    {
+      "scenario_id": "test-belief-v1-041",
+      "map_seed": 990041,
+      "noise_seed": 991041
+    },
+    {
+      "scenario_id": "test-belief-v1-042",
+      "map_seed": 990042,
+      "noise_seed": 991042
+    },
+    {
+      "scenario_id": "test-belief-v1-043",
+      "map_seed": 990043,
+      "noise_seed": 991043
+    },
+    {
+      "scenario_id": "test-belief-v1-044",
+      "map_seed": 990044,
+      "noise_seed": 991044
+    },
+    {
+      "scenario_id": "test-belief-v1-045",
+      "map_seed": 990045,
+      "noise_seed": 991045
+    },
+    {
+      "scenario_id": "test-belief-v1-046",
+      "map_seed": 990046,
+      "noise_seed": 991046
+    },
+    {
+      "scenario_id": "test-belief-v1-047",
+      "map_seed": 990047,
+      "noise_seed": 991047
+    },
+    {
+      "scenario_id": "test-belief-v1-048",
+      "map_seed": 990048,
+      "noise_seed": 991048
+    },
+    {
+      "scenario_id": "test-belief-v1-049",
+      "map_seed": 990049,
+      "noise_seed": 991049
+    },
+    {
+      "scenario_id": "test-belief-v1-050",
+      "map_seed": 990050,
+      "noise_seed": 991050
+    },
+    {
+      "scenario_id": "test-belief-v1-051",
+      "map_seed": 990051,
+      "noise_seed": 991051
+    },
+    {
+      "scenario_id": "test-belief-v1-052",
+      "map_seed": 990052,
+      "noise_seed": 991052
+    },
+    {
+      "scenario_id": "test-belief-v1-053",
+      "map_seed": 990053,
+      "noise_seed": 991053
+    },
+    {
+      "scenario_id": "test-belief-v1-054",
+      "map_seed": 990054,
+      "noise_seed": 991054
+    },
+    {
+      "scenario_id": "test-belief-v1-055",
+      "map_seed": 990055,
+      "noise_seed": 991055
+    },
+    {
+      "scenario_id": "test-belief-v1-056",
+      "map_seed": 990056,
+      "noise_seed": 991056
+    },
+    {
+      "scenario_id": "test-belief-v1-057",
+      "map_seed": 990057,
+      "noise_seed": 991057
+    },
+    {
+      "scenario_id": "test-belief-v1-058",
+      "map_seed": 990058,
+      "noise_seed": 991058
+    },
+    {
+      "scenario_id": "test-belief-v1-059",
+      "map_seed": 990059,
+      "noise_seed": 991059
+    },
+    {
+      "scenario_id": "test-belief-v1-060",
+      "map_seed": 990060,
+      "noise_seed": 991060
+    },
+    {
+      "scenario_id": "test-belief-v1-061",
+      "map_seed": 990061,
+      "noise_seed": 991061
+    },
+    {
+      "scenario_id": "test-belief-v1-062",
+      "map_seed": 990062,
+      "noise_seed": 991062
+    },
+    {
+      "scenario_id": "test-belief-v1-063",
+      "map_seed": 990063,
+      "noise_seed": 991063
+    },
+    {
+      "scenario_id": "test-belief-v1-064",
+      "map_seed": 990064,
+      "noise_seed": 991064
+    },
+    {
+      "scenario_id": "test-belief-v1-065",
+      "map_seed": 990065,
+      "noise_seed": 991065
+    },
+    {
+      "scenario_id": "test-belief-v1-066",
+      "map_seed": 990066,
+      "noise_seed": 991066
+    },
+    {
+      "scenario_id": "test-belief-v1-067",
+      "map_seed": 990067,
+      "noise_seed": 991067
+    },
+    {
+      "scenario_id": "test-belief-v1-068",
+      "map_seed": 990068,
+      "noise_seed": 991068
+    },
+    {
+      "scenario_id": "test-belief-v1-069",
+      "map_seed": 990069,
+      "noise_seed": 991069
+    },
+    {
+      "scenario_id": "test-belief-v1-070",
+      "map_seed": 990070,
+      "noise_seed": 991070
+    },
+    {
+      "scenario_id": "test-belief-v1-071",
+      "map_seed": 990071,
+      "noise_seed": 991071
+    },
+    {
+      "scenario_id": "test-belief-v1-072",
+      "map_seed": 990072,
+      "noise_seed": 991072
+    },
+    {
+      "scenario_id": "test-belief-v1-073",
+      "map_seed": 990073,
+      "noise_seed": 991073
+    },
+    {
+      "scenario_id": "test-belief-v1-074",
+      "map_seed": 990074,
+      "noise_seed": 991074
+    },
+    {
+      "scenario_id": "test-belief-v1-075",
+      "map_seed": 990075,
+      "noise_seed": 991075
+    },
+    {
+      "scenario_id": "test-belief-v1-076",
+      "map_seed": 990076,
+      "noise_seed": 991076
+    },
+    {
+      "scenario_id": "test-belief-v1-077",
+      "map_seed": 990077,
+      "noise_seed": 991077
+    },
+    {
+      "scenario_id": "test-belief-v1-078",
+      "map_seed": 990078,
+      "noise_seed": 991078
+    },
+    {
+      "scenario_id": "test-belief-v1-079",
+      "map_seed": 990079,
+      "noise_seed": 991079
+    },
+    {
+      "scenario_id": "test-belief-v1-080",
+      "map_seed": 990080,
+      "noise_seed": 991080
+    },
+    {
+      "scenario_id": "test-belief-v1-081",
+      "map_seed": 990081,
+      "noise_seed": 991081
+    },
+    {
+      "scenario_id": "test-belief-v1-082",
+      "map_seed": 990082,
+      "noise_seed": 991082
+    },
+    {
+      "scenario_id": "test-belief-v1-083",
+      "map_seed": 990083,
+      "noise_seed": 991083
+    },
+    {
+      "scenario_id": "test-belief-v1-084",
+      "map_seed": 990084,
+      "noise_seed": 991084
+    },
+    {
+      "scenario_id": "test-belief-v1-085",
+      "map_seed": 990085,
+      "noise_seed": 991085
+    },
+    {
+      "scenario_id": "test-belief-v1-086",
+      "map_seed": 990086,
+      "noise_seed": 991086
+    },
+    {
+      "scenario_id": "test-belief-v1-087",
+      "map_seed": 990087,
+      "noise_seed": 991087
+    },
+    {
+      "scenario_id": "test-belief-v1-088",
+      "map_seed": 990088,
+      "noise_seed": 991088
+    },
+    {
+      "scenario_id": "test-belief-v1-089",
+      "map_seed": 990089,
+      "noise_seed": 991089
+    },
+    {
+      "scenario_id": "test-belief-v1-090",
+      "map_seed": 990090,
+      "noise_seed": 991090
+    },
+    {
+      "scenario_id": "test-belief-v1-091",
+      "map_seed": 990091,
+      "noise_seed": 991091
+    },
+    {
+      "scenario_id": "test-belief-v1-092",
+      "map_seed": 990092,
+      "noise_seed": 991092
+    },
+    {
+      "scenario_id": "test-belief-v1-093",
+      "map_seed": 990093,
+      "noise_seed": 991093
+    },
+    {
+      "scenario_id": "test-belief-v1-094",
+      "map_seed": 990094,
+      "noise_seed": 991094
+    },
+    {
+      "scenario_id": "test-belief-v1-095",
+      "map_seed": 990095,
+      "noise_seed": 991095
+    },
+    {
+      "scenario_id": "test-belief-v1-096",
+      "map_seed": 990096,
+      "noise_seed": 991096
+    },
+    {
+      "scenario_id": "test-belief-v1-097",
+      "map_seed": 990097,
+      "noise_seed": 991097
+    },
+    {
+      "scenario_id": "test-belief-v1-098",
+      "map_seed": 990098,
+      "noise_seed": 991098
+    },
+    {
+      "scenario_id": "test-belief-v1-099",
+      "map_seed": 990099,
+      "noise_seed": 991099
+    }
+  ],
+  "purpose": "reserved until locked confirmatory evaluation"
+}

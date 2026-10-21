@@ -1,0 +1,327 @@
+{
+  "split": "train",
+  "protocol": "belief-controller-v1",
+  "scenarios": [
+    {
+      "scenario_id": "train-belief-v1-000",
+      "map_seed": 41000,
+      "noise_seed": 42000
+    },
+    {
+      "scenario_id": "train-belief-v1-001",
+      "map_seed": 41001,
+      "noise_seed": 42001
+    },
+    {
+      "scenario_id": "train-belief-v1-002",
+      "map_seed": 41002,
+      "noise_seed": 42002
+    },
+    {
+      "scenario_id": "train-belief-v1-003",
+      "map_seed": 41003,
+      "noise_seed": 42003
+    },
+    {
+      "scenario_id": "train-belief-v1-004",
+      "map_seed": 41004,
+      "noise_seed": 42004
+    },
+    {
+      "scenario_id": "train-belief-v1-005",
+      "map_seed": 41005,
+      "noise_seed": 42005
+    },
+    {
+      "scenario_id": "train-belief-v1-006",
+      "map_seed": 41006,
+      "noise_seed": 42006
+    },
+    {
+      "scenario_id": "train-belief-v1-007",
+      "map_seed": 41007,
+      "noise_seed": 42007
+    },
+    {
+      "scenario_id": "train-belief-v1-008",
+      "map_seed": 41008,
+      "noise_seed": 42008
+    },
+    {
+      "scenario_id": "train-belief-v1-009",
+      "map_seed": 41009,
+      "noise_seed": 42009
+    },
+    {
+      "scenario_id": "train-belief-v1-010",
+      "map_seed": 41010,
+      "noise_seed": 42010
+    },
+    {
+      "scenario_id": "train-belief-v1-011",
+      "map_seed": 41011,
+      "noise_seed": 42011
+    },
+    {
+      "scenario_id": "train-belief-v1-012",
+      "map_seed": 41012,
+      "noise_seed": 42012
+    },
+    {
+      "scenario_id": "train-belief-v1-013",
+      "map_seed": 41013,
+      "noise_seed": 42013
+    },
+    {
+      "scenario_id": "train-belief-v1-014",
+      "map_seed": 41014,
+      "noise_seed": 42014
+    },
+    {
+      "scenario_id": "train-belief-v1-015",
+      "map_seed": 41015,
+      "noise_seed": 42015
+    },
+    {
+      "scenario_id": "train-belief-v1-016",
+      "map_seed": 41016,
+      "noise_seed": 42016
+    },
+    {
+      "scenario_id": "train-belief-v1-017",
+      "map_seed": 41017,
+      "noise_seed": 42017
+    },
+    {
+      "scenario_id": "train-belief-v1-018",
+      "map_seed": 41018,
+      "noise_seed": 42018
+    },
+    {
+      "scenario_id": "train-belief-v1-019",
+      "map_seed": 41019,
+      "noise_seed": 42019
+    },
+    {
+      "scenario_id": "train-belief-v1-020",
+      "map_seed": 41020,
+      "noise_seed": 42020
+    },
+    {
+      "scenario_id": "train-belief-v1-021",
+      "map_seed": 41021,
+      "noise_seed": 42021
+    },
+    {
+      "scenario_id": "train-belief-v1-022",
+      "map_seed": 41022,
+      "noise_seed": 42022
+    },
+    {
+      "scenario_id": "train-belief-v1-023",
+      "map_seed": 41023,
+      "noise_seed": 42023
+    },
+    {
+      "scenario_id": "train-belief-v1-024",
+      "map_seed": 41024,
+      "noise_seed": 42024
+    },
+    {
+      "scenario_id": "train-belief-v1-025",
+      "map_seed": 41025,
+      "noise_seed": 42025
+    },
+    {
+      "scenario_id": "train-belief-v1-026",
+      "map_seed": 41026,
+      "noise_seed": 42026
+    },
+    {
+      "scenario_id": "train-belief-v1-027",
+      "map_seed": 41027,
+      "noise_seed": 42027
+    },
+    {
+      "scenario_id": "train-belief-v1-028",
+      "map_seed": 41028,
+      "noise_seed": 42028
+    },
+    {
+      "scenario_id": "train-belief-v1-029",
+      "map_seed": 41029,
+      "noise_seed": 42029
+    },
+    {
+      "scenario_id": "train-belief-v1-030",
+      "map_seed": 41030,
+      "noise_seed": 42030
+    },
+    {
+      "scenario_id": "train-belief-v1-031",
+      "map_seed": 41031,
+      "noise_seed": 42031
+    },
+    {
+      "scenario_id": "train-belief-v1-032",
+      "map_seed": 41032,
+      "noise_seed": 42032
+    },
+    {
+      "scenario_id": "train-belief-v1-033",
+      "map_seed": 41033,
+      "noise_seed": 42033
+    },
+    {
+      "scenario_id": "train-belief-v1-034",
+      "map_seed": 41034,
+      "noise_seed": 42034
+    },
+    {
+      "scenario_id": "train-belief-v1-035",
+      "map_seed": 41035,
+      "noise_seed": 42035
+    },
+    {
+      "scenario_id": "train-belief-v1-036",
+      "map_seed": 41036,
+      "noise_seed": 42036
+    },
+    {
+      "scenario_id": "train-belief-v1-037",
+      "map_seed": 41037,
+      "noise_seed": 42037
+    },
+    {
+      "scenario_id": "train-belief-v1-038",
+      "map_seed": 41038,
+      "noise_seed": 42038
+    },
+    {
+      "scenario_id": "train-belief-v1-039",
+      "map_seed": 41039,
+      "noise_seed": 42039
+    },
+    {
+      "scenario_id": "train-belief-v1-040",
+      "map_seed": 41040,
+      "noise_seed": 42040
+    },
+    {
+      "scenario_id": "train-belief-v1-041",
+      "map_seed": 41041,
+      "noise_seed": 42041
+    },
+    {
+      "scenario_id": "train-belief-v1-042",
+      "map_seed": 41042,
+      "noise_seed": 42042
+    },
+    {
+      "scenario_id": "train-belief-v1-043",
+      "map_seed": 41043,
+      "noise_seed": 42043
+    },
+    {
+      "scenario_id": "train-belief-v1-044",
+      "map_seed": 41044,
+      "noise_seed": 42044
+    },
+    {
+      "scenario_id": "train-belief-v1-045",
+      "map_seed": 41045,
+      "noise_seed": 42045
+    },
+    {
+      "scenario_id": "train-belief-v1-046",
+      "map_seed": 41046,
+      "noise_seed": 42046
+    },
+    {
+      "scenario_id": "train-belief-v1-047",
+      "map_seed": 41047,
+      "noise_seed": 42047
+    },
+    {
+      "scenario_id": "train-belief-v1-048",
+      "map_seed": 41048,
+      "noise_seed": 42048
+    },
+    {
+      "scenario_id": "train-belief-v1-049",
+      "map_seed": 41049,
+      "noise_seed": 42049
+    },
+    {
+      "scenario_id": "train-belief-v1-050",
+      "map_seed": 41050,
+      "noise_seed": 42050
+    },
+    {
+      "scenario_id": "train-belief-v1-051",
+      "map_seed": 41051,
+      "noise_seed": 42051
+    },
+    {
+      "scenario_id": "train-belief-v1-052",
+      "map_seed": 41052,
+      "noise_seed": 42052
+    },
+    {
+      "scenario_id": "train-belief-v1-053",
+      "map_seed": 41053,
+      "noise_seed": 42053
+    },
+    {
+      "scenario_id": "train-belief-v1-054",
+      "map_seed": 41054,
+      "noise_seed": 42054
+    },
+    {
+      "scenario_id": "train-belief-v1-055",
+      "map_seed": 41055,
+      "noise_seed": 42055
+    },
+    {
+      "scenario_id": "train-belief-v1-056",
+      "map_seed": 41056,
+      "noise_seed": 42056
+    },
+    {
+      "scenario_id": "train-belief-v1-057",
+      "map_seed": 41057,
+      "noise_seed": 42057
+    },
+    {
+      "scenario_id": "train-belief-v1-058",
+      "map_seed": 41058,
+      "noise_seed": 42058
+    },
+    {
+      "scenario_id": "train-belief-v1-059",
+      "map_seed": 41059,
+      "noise_seed": 42059
+    },
+    {
+      "scenario_id": "train-belief-v1-060",
+      "map_seed": 41060,
+      "noise_seed": 42060
+    },
+    {
+      "scenario_id": "train-belief-v1-061",
+      "map_seed": 41061,
+      "noise_seed": 42061
+    },
+    {
+      "scenario_id": "train-belief-v1-062",
+      "map_seed": 41062,
+      "noise_seed": 42062
+    },
+    {
+      "scenario_id": "train-belief-v1-063",
+      "map_seed": 41063,
+      "noise_seed": 42063
+    }
+  ],
+  "purpose": "train"
+}

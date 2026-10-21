@@ -1,0 +1,134 @@
+{
+  "stage": "04",
+  "dependency_completion_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513",
+  "runs": [
+    {
+      "run_id": "04-controller-preflight-v1_attempt-01",
+      "status": "failed",
+      "config": "configs/stage04/preflight.yaml",
+      "config_sha256": "8e2f6e1dab1f6af504972f3a21c5ab04c3786cf4f99b1e3cc37986d4bfa88a2b",
+      "source_commit": "a877367ce861080b275bdc8db3baa9a7a5c990da",
+      "results_commit": "0d9989cd23054877628fc03d1c0a0fbd1289995d",
+      "failure": {
+        "reason": "\nIndeterminate linear system detected while working near variable\n8646911284551352326 (Symbol: x6).\n\nThrown when a linear system is ill-posed.  The most common cause for this\nerror is having underconstrained variables, but the exception is also raised\nfor nearly indeterminate systems that are too poorly conditioned to solve\nreliably.  See the GTSAM Doxygen documentation for\ngtsam::IndeterminateSystemException and the user\nguide at\nhttps://github.com/borglab/gtsam/blob/develop/gtsam/linear/doc/IndeterminateSystemException.ipynb\nfor more information.",
+        "type": "RuntimeError",
+        "traceback": "failure.txt",
+        "attempt": 1
+      },
+      "resources_consumed": {
+        "primitive_steps": 12,
+        "decisions": 8,
+        "updates": 0,
+        "wall_seconds": 1.2264567249949323,
+        "cpu_core_hours": 0.00034056916666666667,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "verified",
+      "resource_reconciliation": "configs/stage04/resource-reconciliation-v1.json"
+    },
+    {
+      "run_id": "04-controller-preflight-v2_attempt-01",
+      "status": "failed",
+      "config": "configs/stage04/preflight-v2.yaml",
+      "config_sha256": "c2aaf1f2e6992cb0ed32ec7e63e4331af737886037165786ec3ba24a9b94934b",
+      "source_commit": "2bb120b6ba51a70dad2f29b43587a6993be1aa57",
+      "results_commit": "7c2c0e5ef81c76877db92e8555edb76eca3e7dff",
+      "reason": "Versioned near-field sensor limit and revisit standoff after ill-conditioned bearing at0.0003m; all earlier outcomes retained.",
+      "failure": {
+        "reason": "Post-run archive serialization failed: TypeError: Object of type bool is not JSON serializable (NumPy boolean diagnostic). Scientific raw rows and checkpoint retained; in-memory aggregate result was not serialized.",
+        "failure_mode": "archive_numeric_serialization",
+        "log": "packaging_failure.txt"
+      },
+      "resources_consumed": {
+        "primitive_steps": 85,
+        "decisions": 58,
+        "updates": 102,
+        "wall_seconds": 3.203684861997317,
+        "cpu_core_hours": 0.0008898116666666667,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "verified"
+    },
+    {
+      "run_id": "04-controller-preflight-v2_attempt-02",
+      "status": "completed",
+      "config": "configs/stage04/preflight-v2-attempt02.yaml",
+      "config_sha256": "f63b9fac0f5a5f96ac4c97684a8ffbae50f5d8fe8b8e2d98ae7091f5098b57ac",
+      "source_commit": "5da996a256daaf0a8989db8c76c8f0fc419f5cf7",
+      "results_commit": "9b31ddd4b1deb8eb386bae12ee502d890f722592",
+      "reason": "Numeric JSON serialization correction only; same task, seeds and gates.",
+      "resources_consumed": {
+        "primitive_steps": 85,
+        "decisions": 58,
+        "updates": 102,
+        "wall_seconds": 3.1820176909968723,
+        "cpu_core_hours": 0.000883813611111111,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "verified"
+    },
+    {
+      "run_id": "04-classical-pilot-v2_seed-4401_attempt-01",
+      "status": "completed",
+      "config": "configs/stage04/pilot-4401.yaml",
+      "config_sha256": "7d9351bad71bfd45f03c40d370a170ac5a3197369f118ba509e1393702877276",
+      "source_commit": "e4a49ac3eb99fe6587c11bce55497212bd3f9fbe",
+      "results_commit": "1b1afbecff6379a891cbb5652f356769a2ba8e40",
+      "resources_consumed": {
+        "primitive_steps": 3080,
+        "decisions": 3284,
+        "updates": 86,
+        "wall_seconds": 63.03696439298801,
+        "cpu_core_hours": 0.017508778611111112,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "verified"
+    },
+    {
+      "run_id": "04-classical-pilot-v2_seed-4402_attempt-01",
+      "status": "completed",
+      "config": "configs/stage04/pilot-4402.yaml",
+      "config_sha256": "62acaa4d09c656c9bbac0c0ffb0b509b916d0c3932d6bac96736a36502a8101d",
+      "source_commit": "e4a49ac3eb99fe6587c11bce55497212bd3f9fbe",
+      "results_commit": "1b1afbecff6379a891cbb5652f356769a2ba8e40",
+      "resources_consumed": {
+        "primitive_steps": 3080,
+        "decisions": 3268,
+        "updates": 86,
+        "wall_seconds": 59.26734924298944,
+        "cpu_core_hours": 0.016460329722222222,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "verified"
+    },
+    {
+      "run_id": "04-classical-pilot-v2_seed-4403_attempt-01",
+      "status": "completed",
+      "config": "configs/stage04/pilot-4403.yaml",
+      "config_sha256": "55840b9cfd6263de01fc3075e56ad06825462348c082085ea2a0961aefbe1257",
+      "source_commit": "e4a49ac3eb99fe6587c11bce55497212bd3f9fbe",
+      "results_commit": "1b1afbecff6379a891cbb5652f356769a2ba8e40",
+      "resources_consumed": {
+        "primitive_steps": 2228,
+        "decisions": 1548,
+        "updates": 86,
+        "wall_seconds": 29.196296352005447,
+        "cpu_core_hours": 0.008109320000000001,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "verified"
+    }
+  ]
+}

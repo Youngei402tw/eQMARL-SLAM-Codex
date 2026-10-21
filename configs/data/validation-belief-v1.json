@@ -1,0 +1,158 @@
+{
+  "split": "validation",
+  "protocol": "belief-controller-v1",
+  "scenarios": [
+    {
+      "scenario_id": "validation-belief-v1-000",
+      "map_seed": 43000,
+      "noise_seed": 44000
+    },
+    {
+      "scenario_id": "validation-belief-v1-001",
+      "map_seed": 43001,
+      "noise_seed": 44001
+    },
+    {
+      "scenario_id": "validation-belief-v1-002",
+      "map_seed": 43002,
+      "noise_seed": 44002
+    },
+    {
+      "scenario_id": "validation-belief-v1-003",
+      "map_seed": 43003,
+      "noise_seed": 44003
+    },
+    {
+      "scenario_id": "validation-belief-v1-004",
+      "map_seed": 43004,
+      "noise_seed": 44004
+    },
+    {
+      "scenario_id": "validation-belief-v1-005",
+      "map_seed": 43005,
+      "noise_seed": 44005
+    },
+    {
+      "scenario_id": "validation-belief-v1-006",
+      "map_seed": 43006,
+      "noise_seed": 44006
+    },
+    {
+      "scenario_id": "validation-belief-v1-007",
+      "map_seed": 43007,
+      "noise_seed": 44007
+    },
+    {
+      "scenario_id": "validation-belief-v1-008",
+      "map_seed": 43008,
+      "noise_seed": 44008
+    },
+    {
+      "scenario_id": "validation-belief-v1-009",
+      "map_seed": 43009,
+      "noise_seed": 44009
+    },
+    {
+      "scenario_id": "validation-belief-v1-010",
+      "map_seed": 43010,
+      "noise_seed": 44010
+    },
+    {
+      "scenario_id": "validation-belief-v1-011",
+      "map_seed": 43011,
+      "noise_seed": 44011
+    },
+    {
+      "scenario_id": "validation-belief-v1-012",
+      "map_seed": 43012,
+      "noise_seed": 44012
+    },
+    {
+      "scenario_id": "validation-belief-v1-013",
+      "map_seed": 43013,
+      "noise_seed": 44013
+    },
+    {
+      "scenario_id": "validation-belief-v1-014",
+      "map_seed": 43014,
+      "noise_seed": 44014
+    },
+    {
+      "scenario_id": "validation-belief-v1-015",
+      "map_seed": 43015,
+      "noise_seed": 44015
+    },
+    {
+      "scenario_id": "validation-belief-v1-016",
+      "map_seed": 43016,
+      "noise_seed": 44016
+    },
+    {
+      "scenario_id": "validation-belief-v1-017",
+      "map_seed": 43017,
+      "noise_seed": 44017
+    },
+    {
+      "scenario_id": "validation-belief-v1-018",
+      "map_seed": 43018,
+      "noise_seed": 44018
+    },
+    {
+      "scenario_id": "validation-belief-v1-019",
+      "map_seed": 43019,
+      "noise_seed": 44019
+    },
+    {
+      "scenario_id": "validation-belief-v1-020",
+      "map_seed": 43020,
+      "noise_seed": 44020
+    },
+    {
+      "scenario_id": "validation-belief-v1-021",
+      "map_seed": 43021,
+      "noise_seed": 44021
+    },
+    {
+      "scenario_id": "validation-belief-v1-022",
+      "map_seed": 43022,
+      "noise_seed": 44022
+    },
+    {
+      "scenario_id": "validation-belief-v1-023",
+      "map_seed": 43023,
+      "noise_seed": 44023
+    },
+    {
+      "scenario_id": "validation-belief-v1-024",
+      "map_seed": 43024,
+      "noise_seed": 44024
+    },
+    {
+      "scenario_id": "validation-belief-v1-025",
+      "map_seed": 43025,
+      "noise_seed": 44025
+    },
+    {
+      "scenario_id": "validation-belief-v1-026",
+      "map_seed": 43026,
+      "noise_seed": 44026
+    },
+    {
+      "scenario_id": "validation-belief-v1-027",
+      "map_seed": 43027,
+      "noise_seed": 44027
+    },
+    {
+      "scenario_id": "validation-belief-v1-028",
+      "map_seed": 43028,
+      "noise_seed": 44028
+    },
+    {
+      "scenario_id": "validation-belief-v1-029",
+      "map_seed": 43029,
+      "noise_seed": 44029
+    }
+  ],
+  "purpose": "validation",
+  "registration_note": "Expanded to the default30 validation episodes before any pilot/validation outcomes; final reserved test catalog unchanged."
+}
