@@ -427,11 +427,12 @@
     },
     {
       "run_id": "05-frozen-pilot-replay-v1_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/frozen-replay.yaml",
       "config_sha256": "76593e869bce3b749aef08b21fe92e91ddf66ffb59e86ac43d4b49dacef5e91f",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "6d3b7724e1eb89c81d9541706e72aaed578eebba",
+      "results_commit": null,
+      "gates_passed": true
     }
   ]
 }

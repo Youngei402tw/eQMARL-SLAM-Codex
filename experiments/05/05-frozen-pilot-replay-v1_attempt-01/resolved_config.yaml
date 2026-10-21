@@ -1,0 +1,145 @@
+{
+  "stage": "05",
+  "protocol_id": "critic-ablation-v1",
+  "profile": "diagnostic",
+  "dependency_completion_commit": "2f40002ca55f05ff620d25872971241d8d730223",
+  "split_manifests": {
+    "train": null,
+    "development": null,
+    "validation": {
+      "path": "configs/data/validation-belief-v1.json",
+      "sha256": "d42a038f42a1ded7cc6053bb8b58e2462b4a10ae91115398551b8c84598d9f23"
+    },
+    "test": null
+  },
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": {
+      "split": "validation",
+      "index": 0,
+      "map_seed": 43000
+    },
+    "sensor": {
+      "noise_seed": 44000,
+      "family_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "run_id": "05-frozen-pilot-replay-v1_attempt-01",
+  "experiment": "controller-replay",
+  "method": "all_frozen_pilot_actors",
+  "hypothesis": "Every saved pilot policy reproduces its registered greedy validation outcome and exposes action/reward counts without critic execution.",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 648,
+  "max_cpu_threads": 1,
+  "pilot_runs": [
+    "05-pilot-split_classical_seed-5401_attempt-01",
+    "05-pilot-split_classical_seed-5402_attempt-01",
+    "05-pilot-split_classical_seed-5403_attempt-01",
+    "05-pilot-central_classical_seed-5401_attempt-01",
+    "05-pilot-central_classical_seed-5402_attempt-01",
+    "05-pilot-central_classical_seed-5403_attempt-01",
+    "05-pilot-bilinear_seed-5401_attempt-01",
+    "05-pilot-bilinear_seed-5402_attempt-01",
+    "05-pilot-bilinear_seed-5403_attempt-01",
+    "05-pilot-quantum_noent_seed-5401_attempt-01",
+    "05-pilot-quantum_noent_seed-5402_attempt-01",
+    "05-pilot-quantum_noent_seed-5403_attempt-01",
+    "05-pilot-eqmarl_seed-5401_attempt-01",
+    "05-pilot-eqmarl_seed-5402_attempt-01",
+    "05-pilot-eqmarl_seed-5403_attempt-01",
+    "05-pilot-qfctde_seed-5401_attempt-01",
+    "05-pilot-qfctde_seed-5402_attempt-01",
+    "05-pilot-qfctde_seed-5403_attempt-01"
+  ],
+  "replay_atol": 1e-08,
+  "interpretation": "One fixed validation-map replay per saved pilot. Detailed action/duration/reward counts describe these frozen replays; original training action sequences were not retained. No optimizer updates, critic executions or final-test access.",
+  "checkpoint_sha256": {
+    "05-pilot-split_classical_seed-5401_attempt-01": "b3b8995205a7a790847df5328c6dfbcb256e4a3a165a88e66fb8d0ecf6a0cd1b",
+    "05-pilot-split_classical_seed-5402_attempt-01": "24d92b30f313225954ef7bb32a617f1bdd2f63cbdc7166322670b8cc05e46032",
+    "05-pilot-split_classical_seed-5403_attempt-01": "e82069d3f351d5beb3840ec02269dde5d357a879a981b2648e844438f2404dd3",
+    "05-pilot-central_classical_seed-5401_attempt-01": "be96ea07ec6d5e312dc6728b53776ea02b0361b540b8dfa44862e808194da106",
+    "05-pilot-central_classical_seed-5402_attempt-01": "458fe1f043eb42f5e2db3ac8ca69124e51305ef8c596ea4633e7dd93a43c0b9a",
+    "05-pilot-central_classical_seed-5403_attempt-01": "9dd8a69b57367115e973504fec595efeb1d69d017ed4070b14998ab9baa92791",
+    "05-pilot-bilinear_seed-5401_attempt-01": "1acddc79c3e8e1483ec3e8bca2c376800fc690c5369088df5a69128c6a4513fb",
+    "05-pilot-bilinear_seed-5402_attempt-01": "d362ab33c25c37f6bffb93aaed59495a5b8d361348ac32308d74dedb2a0a08ad",
+    "05-pilot-bilinear_seed-5403_attempt-01": "4238db09ee0364227096946bd3f5c6e4bb23d3fe537c60bd7f34711bd3cf264c",
+    "05-pilot-quantum_noent_seed-5401_attempt-01": "6ce98d234d574dc6cbedaeee9c16c08b3148141b88c996009abb7c81fcfa84d6",
+    "05-pilot-quantum_noent_seed-5402_attempt-01": "06d5c5c773ccee441809e53d2194585165bcfc58294e5246fb26044aee467843",
+    "05-pilot-quantum_noent_seed-5403_attempt-01": "5b21ca69282a3c9072fe37ba67c067ea2750633cb89d326869b2f6c043f2f278",
+    "05-pilot-eqmarl_seed-5401_attempt-01": "0b4c5ba6871a58e1189b7de0c57b8e4ad648bbeb6e46d207c1de06758b608762",
+    "05-pilot-eqmarl_seed-5402_attempt-01": "e62396c3d52a8ac383172329417aada03cf1148e94538850aad78d0b867b527f",
+    "05-pilot-eqmarl_seed-5403_attempt-01": "7b3520c0fad8801762cfe4c562b805cf8abd1b94a3ff924986383e7ed53fef3f",
+    "05-pilot-qfctde_seed-5401_attempt-01": "f898fd579ccfd7d424eb3796fedad5cd0f24edad9db1e88a2ae58946672174fb",
+    "05-pilot-qfctde_seed-5402_attempt-01": "c63c54266ee734c193edb35c7943ff3960b93f4cc88bd35b063c91e584c1e891",
+    "05-pilot-qfctde_seed-5403_attempt-01": "71bfd60aa7c588d8d1ce2dd4d6d2895a70f18cfc65ba6b646f391c1e09904e16"
+  },
+  "model": {
+    "actor": "frozen shared recurrent actor16, one saved model per pilot; loaded weights_only",
+    "encoder": "unchanged frozen actor encoder27to16",
+    "critic": null,
+    "parameter_counts": {
+      "actor": 2165
+    },
+    "optimizer": null
+  },
+  "quantum": null,
+  "task": {
+    "protocol": "belief-controller-v2",
+    "horizon": 36,
+    "macro_max_steps": 3,
+    "speed": 0.45,
+    "goal_tolerance": 0.18,
+    "sensor_range": 1.25,
+    "landmark_count": 9,
+    "gamma": 0.99,
+    "coverage_threshold": 0.85,
+    "map_accuracy_threshold": 0.7,
+    "landmark_error_threshold": 0.35,
+    "pose_error_threshold": 0.25,
+    "coverage_weight": 10.0,
+    "information_weight": 0.001,
+    "travel_weight": 0.01,
+    "collision_weight": 0.1,
+    "byte_weight": 1e-06,
+    "prior_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "motion_std": [
+      0.015,
+      0.015,
+      0.01
+    ],
+    "odometry_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "observation_sigmas": [
+      0.02,
+      0.1
+    ],
+    "sensor_min_range": 0.25,
+    "revisit_standoff": 0.5
+  },
+  "replay_scenario": {
+    "scenario_id": "validation-belief-v1-000",
+    "map_seed": 43000,
+    "noise_seed": 44000
+  },
+  "action_modes": {
+    "replay": "greedy"
+  }
+}

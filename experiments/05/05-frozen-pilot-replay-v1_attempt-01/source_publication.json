@@ -1,0 +1,8 @@
+{
+  "source_commit": "6d3b7724e1eb89c81d9541706e72aaed578eebba",
+  "branch": "stage/05-critic-ablation",
+  "verified": true,
+  "allow_detached": false,
+  "verified_utc": "2026-10-21T04:17:30.997768+00:00",
+  "mechanism": "Successful non-force Git push followed by exact ls-remote SHA verification"
+}
