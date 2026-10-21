@@ -1,0 +1,16 @@
+{
+  "stage": "07",
+  "dependency_completion_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+  "runs": [
+    {
+      "run_id": "07-frozen-shot-noise-v1_attempt-01",
+      "status": "completed",
+      "config": "configs/stage07/diagnostic.yaml",
+      "config_sha256": "63775c8015099b7c4e298690ab1de3ac45910a9900e1638ba600dd2fb1e79647",
+      "source_commit": "feef26a272dfa658176e8f4c9ef3b8df8f67faf8",
+      "results_commit": "fd25b5213a3cd6b3d52ee17271bd5bab52246d99",
+      "gates_passed": true,
+      "publication": "verified"
+    }
+  ]
+}

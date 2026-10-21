@@ -1,0 +1,16 @@
+{
+  "stage": "07",
+  "verified_utc": "2026-10-21T04:36:19.304170+00:00",
+  "verified_remote_head": "fd25b5213a3cd6b3d52ee17271bd5bab52246d99",
+  "mechanism": "Fresh independent Git retrieval; every run manifest, resolved config, raw metric, diagnostic and inventoried checkpoint hash/size validated",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "07-frozen-shot-noise-v1_attempt-01",
+      "status": "completed",
+      "verified_files": 7,
+      "metrics_rows": 134,
+      "metrics_sha256": "c8938f4163c4bc763a2acc6bcee80a8974e3e7a584f6b3f17eb267048c89a7f6"
+    }
+  ]
+}
