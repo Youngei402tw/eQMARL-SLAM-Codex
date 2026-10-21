@@ -28,7 +28,7 @@
     "stage/04-classical-controller": "1b1afbecff6379a891cbb5652f356769a2ba8e40"
   },
   "blockers": [],
-  "next_action": "Publish matched critic fitting gates and common-control matrix before numerical execution or equal-budget tuning.",
+  "next_action": "Finish preregistered equal-budget tuning; select learning rates from validation, then publish three-seed pilot configurations.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -117,5 +117,13 @@
     "setup_charge_convention": "Conservative active setup envelope from branch creation to preregistration."
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
-  "active_runs": []
+  "active_runs": [
+    {
+      "batch_session": 94788,
+      "source_commit": "00566b9422ee5e580d4690bbe75ec612e05c422a",
+      "source_worktree": "/workspace/source05-tuning-fixed",
+      "outputs": "/workspace/experiment-artifacts/05",
+      "execution_logs": "/workspace/runlogs05-tuning-fixed"
+    }
+  ]
 }
