@@ -1,0 +1,74 @@
+{
+  "artifacts": [
+    {
+      "path": "diagnostics.json",
+      "size_bytes": 4564,
+      "sha256": "3ad6a495f716043d6924e9454f3efc7adaf8dc20a8017237e2bd979228dd27a6",
+      "purpose": "diagnostics.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "failure.txt",
+      "size_bytes": 326,
+      "sha256": "0fed31216f73b7bb872e88bf2c4146a50784c786f553a9b31d8793d0265e3c3b",
+      "purpose": "failure.txt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "manifest.json",
+      "size_bytes": 4741,
+      "sha256": "d16247e52b3492989302818fa66d8aab05cf5b62455f00a526e43545ca28a94d",
+      "purpose": "manifest.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "metrics.jsonl",
+      "size_bytes": 26282,
+      "sha256": "c8e5d19e2dc12ea621ec6bfae86df1e6c2ffa77e394704c00c24c3366d8d392e",
+      "purpose": "metrics.jsonl",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "regenerated-analysis/confirmatory-analysis.json",
+      "size_bytes": 60933,
+      "sha256": "800c7d1e03bc828f4d8430f79515402ebbd4161a614f6e82aa566bcaa5648d56",
+      "purpose": "confirmatory-analysis.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "regenerated-analysis/confirmatory-results.md",
+      "size_bytes": 1681,
+      "sha256": "395b6898ef6bbc7de8a9326c9a5e03397d33607109a09015a286a1242a5a4089",
+      "purpose": "confirmatory-results.md",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "report.md",
+      "size_bytes": 915,
+      "sha256": "b347e2a8df86ffbba0082a18d62fc173e3d522b32f9f4fec6ba829da9313a56b",
+      "purpose": "report.md",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "resolved_config.yaml",
+      "size_bytes": 5147,
+      "sha256": "2a158615c5da39df9ae363253b8c0de59eb16706d669397af44b503079514e53",
+      "purpose": "resolved_config.yaml",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "source_publication.json",
+      "size_bytes": 292,
+      "sha256": "37fdbe543c3109aad559614cfed40c60bb1a635317b74573264eb3cca4d3732f",
+      "purpose": "source_publication.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "summary.json",
+      "size_bytes": 5335,
+      "sha256": "8219af6fbc911f8edf2401144ae457c0aa40148b905c1d36a669cccce2fa2a54",
+      "purpose": "summary.json",
+      "retention": "permanent_git_history"
+    }
+  ]
+}

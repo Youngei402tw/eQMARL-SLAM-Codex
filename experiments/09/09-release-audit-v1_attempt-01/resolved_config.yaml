@@ -1,0 +1,80 @@
+{
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": 43000,
+    "sensor": 44000,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": null,
+    "validation": {
+      "path": "configs/data/validation-belief-v1.json",
+      "sha256": "d42a038f42a1ded7cc6053bb8b58e2462b4a10ae91115398551b8c84598d9f23"
+    },
+    "test": {
+      "path": "configs/data/test-belief-v1.json",
+      "sha256": "2cac5636d5866d9399d74da5c62f93c26d89a3f7cdf5968ec5bc801378df0bdb"
+    }
+  },
+  "stage": "09",
+  "protocol_id": "release-audit-v1",
+  "analysis_version": "release-audit-v1",
+  "profile": "diagnostic",
+  "dependency_completion_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 108,
+  "max_cpu_threads": 1,
+  "run_id": "09-release-audit-v1_attempt-01",
+  "experiment": "release-audit",
+  "method": "frozen_archive_replay",
+  "hypothesis": "A clean locked runtime can load every frozen confirmatory checkpoint, exactly replay one validation scenario per method, and regenerate the locked analysis byte-for-byte without training.",
+  "replay_seed": 8801,
+  "replay_atol": 1e-8,
+  "analysis_sha256": "800c7d1e03bc828f4d8430f79515402ebbd4161a614f6e82aa566bcaa5648d56",
+  "analysis_plan_sha256": "76f4d8a0d7cbfd6656c1bff03c80535b5f7166235c8fce85475ad17a15be7094",
+  "checkpoint_sha256": {
+    "08-confirmatory-central_classical_seed-8801_attempt-01": "ef3e5bc2cad3457bf63a1a8bba255fe32976603256542e4ab95e885f88efb0a4",
+    "08-confirmatory-central_classical_seed-8802_attempt-01": "dabccc81d31b345fdfa746fce924caa02c27be1409dee93b2677fc278ff12433",
+    "08-confirmatory-central_classical_seed-8803_attempt-01": "274424e13365d36506742942342b8ea9577978348c255308600eb562450704ef",
+    "08-confirmatory-central_classical_seed-8804_attempt-01": "09fe5b0d8f14fcf218c5286992732a6fdd47a63ada0fbea9a8f14e118b8a6b90",
+    "08-confirmatory-central_classical_seed-8805_attempt-01": "e6fa9293aa3c9c3e4d8fe7116ea1eabfe09f8c9270e408adc5aae90aaafea40b",
+    "08-confirmatory-central_classical_seed-8806_attempt-01": "0af6ae391ac2d5768cba155fd76337ec14b970f65627310b2ed2e8a7d8033ea6",
+    "08-confirmatory-central_classical_seed-8807_attempt-01": "719b15abef1f9b5d878855ab2d0fc9fa1d612984067551afc307de8f362cdd97",
+    "08-confirmatory-central_classical_seed-8808_attempt-01": "35901dca7ac6ef76b3ec5cb811da12986d495a6306b43ce1543301b478b5325d",
+    "08-confirmatory-eqmarl_seed-8801_attempt-01": "586f99edd6310441227a49257882cc52842eb8d11ddd20c4e3947a9eaca0d073",
+    "08-confirmatory-eqmarl_seed-8802_attempt-01": "aad9fed1306899a3038d118749770e81a8d730bc384438c5c1fef4db28603eca",
+    "08-confirmatory-eqmarl_seed-8803_attempt-01": "66dedaf12b6e578eef3db347b86d44cf50133b3c876caaaf68b262ada3fad2e5",
+    "08-confirmatory-eqmarl_seed-8804_attempt-01": "e690e1b1856950f5fa1bd63a42016227866723ccd8e750dc05ef27067c909ad2",
+    "08-confirmatory-eqmarl_seed-8805_attempt-01": "68134f12547699487f1533ebc2fc109cd99b8436d1904bbbe780df956b444237",
+    "08-confirmatory-eqmarl_seed-8806_attempt-01": "13463b6f356eb7c3fe19ca66f8df099307b4f542f7d7e53e2ab64a9f2bbc295c",
+    "08-confirmatory-eqmarl_seed-8807_attempt-01": "c5037cbe7aa4a1233e2df3c7378bf109885a84649c21988e64b4bd49575f7304",
+    "08-confirmatory-eqmarl_seed-8808_attempt-01": "bbacd95a9127664efc932b8ad2f77a01731a10484e372a2335634c614d7dd2b9",
+    "08-confirmatory-quantum_noent_seed-8801_attempt-01": "ab53f7990fd2f0eff55f0f4af61801217e81b33150150ccde3feb2fc615da910",
+    "08-confirmatory-quantum_noent_seed-8802_attempt-01": "4a4224881ee03eaf122d51e7ad817c9b7b8ba1c5356232b40ee83918e587b651",
+    "08-confirmatory-quantum_noent_seed-8803_attempt-01": "f243de19a0693a997992b8111133f5f6bcf8444239ef0ad2417aa83883f2dbf6",
+    "08-confirmatory-quantum_noent_seed-8804_attempt-01": "f4f6d0f1d5306a6b821f475412081afd50728071e6284a284c0ee9a0636a61c1",
+    "08-confirmatory-quantum_noent_seed-8805_attempt-01": "051f2ba70847bdab7c00eb865f63fa63610f43899f8cc9c1af40a1e18e93a516",
+    "08-confirmatory-quantum_noent_seed-8806_attempt-01": "d893850610ec35f72c9a07fa8e9b71f40295655c48320fde64dcfa8a7cd893fa",
+    "08-confirmatory-quantum_noent_seed-8807_attempt-01": "eef1f4d87857deb503f96c6bea6080cc6e5f69daff43da3d585bacd71c393952",
+    "08-confirmatory-quantum_noent_seed-8808_attempt-01": "332094e3b1e8b1045316dc1e92a775cbe9672b6dd7521cbe769f9b5fe16f044e"
+  },
+  "runtime_evidence": "configs/stage09/runtime-clean-environment.json",
+  "model": {
+    "actor": "Frozen shared GRU 27-to-16-to-5 loaded from each Stage08 final checkpoint",
+    "critic": "Constructed only to verify full checkpoint compatibility; never called during replay",
+    "optimizer": null,
+    "training": false
+  },
+  "quantum": {
+    "backend": "default.qubit objects may be constructed while loading quantum critics",
+    "executions": 0,
+    "shots": 0,
+    "physical_hardware": false
+  },
+  "interpretation": "Release reproducibility and archive-integrity diagnostic only. It performs no training, no test-set policy selection, and no new scientific comparison."
+}

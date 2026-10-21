@@ -33,7 +33,12 @@ def run_diagnostics(config, output, emit, progress=None):
     gates = {}
     checks = []
     index = json.loads((root / "experiments/08/index.json").read_text())
-    expected_checkpoints = config["checkpoint_sha256"]
+    if "checkpoint_registry_path" in config:
+        registry_path = root / config["checkpoint_registry_path"]
+        gates["checkpoint_registry_file_hash"] = _sha256(registry_path) == config["checkpoint_registry_sha256"]
+        expected_checkpoints = json.loads(registry_path.read_text())["checkpoint_sha256"]
+    else:
+        expected_checkpoints = config["checkpoint_sha256"]
     indexed_ids = {run["run_id"] for run in index["runs"]}
     gates["checkpoint_registry_is_complete"] = set(expected_checkpoints) == indexed_ids
 

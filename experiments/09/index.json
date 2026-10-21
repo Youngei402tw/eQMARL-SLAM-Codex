@@ -4,9 +4,19 @@
   "runs": [
     {
       "run_id": "09-release-audit-v1_attempt-01",
-      "status": "planned",
+      "status": "failed",
       "config": "configs/stage09/09-release-audit-v1_attempt-01.yaml",
       "config_sha256": "2a158615c5da39df9ae363253b8c0de59eb16706d669397af44b503079514e53",
+      "source_commit": "e21c6bbd16ff7d307418f8e0588b440438a0237f",
+      "results_commit": null,
+      "gates_passed": false,
+      "publication": "pending"
+    },
+    {
+      "run_id": "09-release-audit-v1_attempt-02",
+      "status": "planned",
+      "config": "configs/stage09/09-release-audit-v1_attempt-02.yaml",
+      "config_sha256": "6ba2f449b2f78ed0b8f692405b3faf01089808578a265c69663eee0236e22eae",
       "source_commit": null,
       "results_commit": null,
       "gates_passed": null,

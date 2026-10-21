@@ -1,0 +1,58 @@
+{
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": 43000,
+    "sensor": 44000,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": null,
+    "validation": {
+      "path": "configs/data/validation-belief-v1.json",
+      "sha256": "d42a038f42a1ded7cc6053bb8b58e2462b4a10ae91115398551b8c84598d9f23"
+    },
+    "test": {
+      "path": "configs/data/test-belief-v1.json",
+      "sha256": "2cac5636d5866d9399d74da5c62f93c26d89a3f7cdf5968ec5bc801378df0bdb"
+    }
+  },
+  "stage": "09",
+  "protocol_id": "release-audit-v1",
+  "analysis_version": "release-audit-v1",
+  "profile": "diagnostic",
+  "dependency_completion_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 108,
+  "max_cpu_threads": 1,
+  "run_id": "09-release-audit-v1_attempt-02",
+  "experiment": "release-audit",
+  "method": "frozen_archive_replay",
+  "hypothesis": "A clean locked runtime can load every frozen confirmatory checkpoint, exactly replay one validation scenario per method, and regenerate the locked analysis byte-for-byte without training.",
+  "replay_seed": 8801,
+  "replay_atol": 1e-8,
+  "analysis_sha256": "800c7d1e03bc828f4d8430f79515402ebbd4161a614f6e82aa566bcaa5648d56",
+  "analysis_plan_sha256": "76f4d8a0d7cbfd6656c1bff03c80535b5f7166235c8fce85475ad17a15be7094",
+  "checkpoint_registry_path": "configs/stage09/09-release-audit-v1_attempt-01.yaml",
+  "checkpoint_registry_sha256": "2a158615c5da39df9ae363253b8c0de59eb16706d669397af44b503079514e53",
+  "runtime_evidence": "configs/stage09/runtime-clean-environment.json",
+  "model": {
+    "actor": "Frozen shared GRU 27-to-16-to-5 loaded from each Stage08 final checkpoint",
+    "encoder": null,
+    "critic": "Constructed only to verify full checkpoint compatibility; never called during replay",
+    "parameter_counts": "Loaded checkpoint-specific counts; no trainable release-audit model",
+    "optimizer": null,
+    "training": false
+  },
+  "quantum": {
+    "backend": "default.qubit objects may be constructed while loading quantum critics",
+    "executions": 0,
+    "shots": 0,
+    "physical_hardware": false
+  },
+  "interpretation": "Release reproducibility and archive-integrity diagnostic only. It performs no training, no test-set policy selection, and no new scientific comparison. Attempt 01 is retained as a post-execution archive-schema failure."
+}

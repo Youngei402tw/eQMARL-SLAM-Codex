@@ -1,0 +1,8 @@
+{
+  "source_commit": "e21c6bbd16ff7d307418f8e0588b440438a0237f",
+  "branch": "stage/09-release",
+  "verified": true,
+  "allow_detached": false,
+  "verified_utc": "2026-10-21T08:22:31.727081+00:00",
+  "mechanism": "Successful non-force Git push followed by exact ls-remote SHA verification"
+}

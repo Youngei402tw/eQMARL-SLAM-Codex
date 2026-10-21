@@ -1,0 +1,5 @@
+ArchiveValidationError: Manifest schema: 'encoder' is a required property
+
+The exception was raised by the final validate_bundle call after all registered
+read-only diagnostics and output generation completed. Attempt 02 adds the missing
+resolved model metadata and retains this attempt unchanged as a failed archive outcome.

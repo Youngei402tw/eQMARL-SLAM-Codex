@@ -1,0 +1,2243 @@
+{
+  "analysis_version": "confirmatory-v1-seed-bootstrap",
+  "analysis_plan_sha256": "76f4d8a0d7cbfd6656c1bff03c80535b5f7166235c8fce85475ad17a15be7094",
+  "seed_rows": [
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8801_attempt-01",
+      "method": "central_classical",
+      "seed": 8801,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7314,
+        "updates": 660,
+        "wall_seconds": 110.09302624801057,
+        "cpu_core_hours": 0.030573994166666667,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8801_attempt-01",
+      "method": "quantum_noent",
+      "seed": 8801,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7452,
+        "updates": 516,
+        "wall_seconds": 246.05955614599225,
+        "cpu_core_hours": 0.06834166277777778,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10370,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8801_attempt-01",
+      "method": "eqmarl",
+      "seed": 8801,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7456,
+        "updates": 512,
+        "wall_seconds": 255.35818667900458,
+        "cpu_core_hours": 0.07092604388888889,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10376,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8802_attempt-01",
+      "method": "central_classical",
+      "seed": 8802,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7296,
+        "updates": 658,
+        "wall_seconds": 110.66209532000357,
+        "cpu_core_hours": 0.030734607499999997,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8802_attempt-01",
+      "method": "quantum_noent",
+      "seed": 8802,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7454,
+        "updates": 510,
+        "wall_seconds": 244.81430483900476,
+        "cpu_core_hours": 0.06799833666666666,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10373,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8802_attempt-01",
+      "method": "eqmarl",
+      "seed": 8802,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7476,
+        "updates": 494,
+        "wall_seconds": 251.3976825869904,
+        "cpu_core_hours": 0.06982649833333333,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10406,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8803_attempt-01",
+      "method": "central_classical",
+      "seed": 8803,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7344,
+        "updates": 642,
+        "wall_seconds": 112.75445883099746,
+        "cpu_core_hours": 0.03131631222222222,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8803_attempt-01",
+      "method": "quantum_noent",
+      "seed": 8803,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7446,
+        "updates": 524,
+        "wall_seconds": 242.1373720660049,
+        "cpu_core_hours": 0.06725467638888889,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10361,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8803_attempt-01",
+      "method": "eqmarl",
+      "seed": 8803,
+      "test_episodes": 100,
+      "physical_coverage": 0.9227777777777777,
+      "estimated_coverage": 0.9244444444444444,
+      "fixed_landmark_accuracy": 0.9433333333333335,
+      "pose_error_m": 0.09672942049248048,
+      "trajectory_ate_m": 0.08912441334239599,
+      "trajectory_rpe_m": 0.04315588090782155,
+      "travel_distance_m": 5.849653224699867,
+      "collisions": 0.0,
+      "communication_bytes": 9728.06,
+      "messages": 6.84,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 5.887471958947531,
+      "primitive_steps": 6.87,
+      "action_counts_by_agent": [
+        [
+          19,
+          23,
+          200,
+          0,
+          0
+        ],
+        [
+          19,
+          123,
+          100,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 5.9444444444444455,
+        "information": 0.010573466750084342,
+        "travel": -0.05849653224699866,
+        "collision": 0.0,
+        "communication": -0.009049419999999999
+      },
+      "resources": {
+        "primitive_steps": 10885,
+        "decisions": 7562,
+        "updates": 484,
+        "wall_seconds": 254.30085683299694,
+        "cpu_core_hours": 0.07063320694444444,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10486,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8804_attempt-01",
+      "method": "central_classical",
+      "seed": 8804,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7350,
+        "updates": 638,
+        "wall_seconds": 113.33931443300389,
+        "cpu_core_hours": 0.03147892,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8804_attempt-01",
+      "method": "quantum_noent",
+      "seed": 8804,
+      "test_episodes": 100,
+      "physical_coverage": 0.8994444444444444,
+      "estimated_coverage": 0.9005555555555556,
+      "fixed_landmark_accuracy": 0.9433333333333332,
+      "pose_error_m": 0.08306177298800595,
+      "trajectory_ate_m": 0.08186316060232186,
+      "trajectory_rpe_m": 0.04260136130374308,
+      "travel_distance_m": 6.755773731515572,
+      "collisions": 0.04,
+      "communication_bytes": 12241.27,
+      "messages": 7.8,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 5.6430598665174125,
+      "primitive_steps": 8.7,
+      "action_counts_by_agent": [
+        [
+          0,
+          290,
+          0,
+          0,
+          0
+        ],
+        [
+          87,
+          203,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 5.711111111111111,
+        "information": 0.015069122721458422,
+        "travel": -0.06755773731515573,
+        "collision": -0.004,
+        "communication": -0.011562629999999997
+      },
+      "resources": {
+        "primitive_steps": 11134,
+        "decisions": 7640,
+        "updates": 486,
+        "wall_seconds": 252.89683170599164,
+        "cpu_core_hours": 0.0702428261111111,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10415,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8804_attempt-01",
+      "method": "eqmarl",
+      "seed": 8804,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7548,
+        "updates": 476,
+        "wall_seconds": 260.77740709099453,
+        "cpu_core_hours": 0.07243200861111111,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10514,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8805_attempt-01",
+      "method": "central_classical",
+      "seed": 8805,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7308,
+        "updates": 664,
+        "wall_seconds": 111.3316827499948,
+        "cpu_core_hours": 0.030921317777777776,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8805_attempt-01",
+      "method": "quantum_noent",
+      "seed": 8805,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7464,
+        "updates": 502,
+        "wall_seconds": 247.31873998200172,
+        "cpu_core_hours": 0.06869401500000001,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10388,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8805_attempt-01",
+      "method": "eqmarl",
+      "seed": 8805,
+      "test_episodes": 100,
+      "physical_coverage": 0.933611111111111,
+      "estimated_coverage": 0.9372222222222223,
+      "fixed_landmark_accuracy": 0.9466666666666669,
+      "pose_error_m": 0.09657883642156034,
+      "trajectory_ate_m": 0.08877651720681928,
+      "trajectory_rpe_m": 0.04490242782417113,
+      "travel_distance_m": 5.4487247012947035,
+      "collisions": 0.0,
+      "communication_bytes": 8702.13,
+      "messages": 6.16,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 5.998931638591307,
+      "primitive_steps": 6.24,
+      "action_counts_by_agent": [
+        [
+          0,
+          125,
+          83,
+          0,
+          0
+        ],
+        [
+          0,
+          108,
+          100,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.052777777777777,
+        "information": 0.008664597826476494,
+        "travel": -0.054487247012947035,
+        "collision": 0.0,
+        "communication": -0.00802349
+      },
+      "resources": {
+        "primitive_steps": 10813,
+        "decisions": 7378,
+        "updates": 546,
+        "wall_seconds": 244.9692224229948,
+        "cpu_core_hours": 0.06804123583333334,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10318,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8806_attempt-01",
+      "method": "central_classical",
+      "seed": 8806,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7350,
+        "updates": 652,
+        "wall_seconds": 110.28108813299332,
+        "cpu_core_hours": 0.030629714722222222,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8806_attempt-01",
+      "method": "quantum_noent",
+      "seed": 8806,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7482,
+        "updates": 458,
+        "wall_seconds": 255.19979441098985,
+        "cpu_core_hours": 0.07088335722222222,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10415,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8806_attempt-01",
+      "method": "eqmarl",
+      "seed": 8806,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7490,
+        "updates": 500,
+        "wall_seconds": 253.0287054490036,
+        "cpu_core_hours": 0.07027975194444444,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10427,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8807_attempt-01",
+      "method": "central_classical",
+      "seed": 8807,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7338,
+        "updates": 658,
+        "wall_seconds": 109.07562503000372,
+        "cpu_core_hours": 0.0302948325,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8807_attempt-01",
+      "method": "quantum_noent",
+      "seed": 8807,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7412,
+        "updates": 574,
+        "wall_seconds": 238.18053880699154,
+        "cpu_core_hours": 0.06615565111111112,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10310,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8807_attempt-01",
+      "method": "eqmarl",
+      "seed": 8807,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7498,
+        "updates": 508,
+        "wall_seconds": 251.67711003599106,
+        "cpu_core_hours": 0.06990487805555555,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10439,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8808_attempt-01",
+      "method": "central_classical",
+      "seed": 8808,
+      "test_episodes": 100,
+      "physical_coverage": 0.8850000000000001,
+      "estimated_coverage": 0.8780555555555553,
+      "fixed_landmark_accuracy": 0.9177777777777777,
+      "pose_error_m": 0.08306356059067374,
+      "trajectory_ate_m": 0.08031072445242135,
+      "trajectory_rpe_m": 0.04241916725171902,
+      "travel_distance_m": 6.313646038776381,
+      "collisions": 0.0,
+      "communication_bytes": 10543.79,
+      "messages": 6.76,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 5.506719758755469,
+      "primitive_steps": 7.14,
+      "action_counts_by_agent": [
+        [
+          0,
+          0,
+          238,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          238,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 5.566666666666666,
+        "information": 0.013054702476565596,
+        "travel": -0.06313646038776381,
+        "collision": 0.0,
+        "communication": -0.00986515
+      },
+      "resources": {
+        "primitive_steps": 10948,
+        "decisions": 7474,
+        "updates": 570,
+        "wall_seconds": 118.6536317269929,
+        "cpu_core_hours": 0.03295531305555555,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8808_attempt-01",
+      "method": "quantum_noent",
+      "seed": 8808,
+      "test_episodes": 100,
+      "physical_coverage": 0.9225000000000001,
+      "estimated_coverage": 0.9233333333333333,
+      "fixed_landmark_accuracy": 0.9644444444444445,
+      "pose_error_m": 0.09741489632622674,
+      "trajectory_ate_m": 0.09348903952950344,
+      "trajectory_rpe_m": 0.045647388328515885,
+      "travel_distance_m": 6.269575740035521,
+      "collisions": 0.02,
+      "communication_bytes": 13769.96,
+      "messages": 9.52,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 5.881317216873051,
+      "primitive_steps": 11.22,
+      "action_counts_by_agent": [
+        [
+          0,
+          376,
+          0,
+          0,
+          0
+        ],
+        [
+          304,
+          72,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 5.9416666666666655,
+        "information": 0.017437627606739354,
+        "travel": -0.06269575740035521,
+        "collision": -0.002,
+        "communication": -0.01309132
+      },
+      "resources": {
+        "primitive_steps": 11455,
+        "decisions": 7984,
+        "updates": 470,
+        "wall_seconds": 262.3686108300026,
+        "cpu_core_hours": 0.07287432472222222,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10627,
+        "shots": 0
+      }
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8808_attempt-01",
+      "method": "eqmarl",
+      "seed": 8808,
+      "test_episodes": 100,
+      "physical_coverage": 0.9577777777777777,
+      "estimated_coverage": 0.9580555555555554,
+      "fixed_landmark_accuracy": 0.9633333333333334,
+      "pose_error_m": 0.09448398035585677,
+      "trajectory_ate_m": 0.08224397467917079,
+      "trajectory_rpe_m": 0.04187629385914161,
+      "travel_distance_m": 6.051910751363704,
+      "collisions": 0.0,
+      "communication_bytes": 9979.9,
+      "messages": 6.5,
+      "success": 1.0,
+      "localization_failure": 0.0,
+      "return": 6.236075337665711,
+      "primitive_steps": 6.75,
+      "action_counts_by_agent": [
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          225,
+          0,
+          0,
+          0
+        ]
+      ],
+      "mean_reward_component_totals": {
+        "coverage": 6.294444444444444,
+        "information": 0.01145126073490365,
+        "travel": -0.06051910751363703,
+        "collision": 0.0,
+        "communication": -0.00930126
+      },
+      "resources": {
+        "primitive_steps": 10876,
+        "decisions": 7474,
+        "updates": 524,
+        "wall_seconds": 252.47079574900272,
+        "cpu_core_hours": 0.0701248825,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 10403,
+        "shots": 0
+      }
+    }
+  ],
+  "method_summaries": {
+    "central_classical": {
+      "trained_seeds": 8,
+      "metrics": {
+        "physical_coverage": {
+          "mean": 0.9486805555555555,
+          "seed_sd": 0.025730830093177087,
+          "seed_values": [
+            0.9577777777777777,
+            0.9577777777777777,
+            0.9577777777777777,
+            0.9577777777777777,
+            0.9577777777777777,
+            0.9577777777777777,
+            0.9577777777777777,
+            0.8850000000000001
+          ]
+        },
+        "estimated_coverage": {
+          "mean": 0.9480555555555554,
+          "seed_sd": 0.028284271247461967,
+          "seed_values": [
+            0.9580555555555554,
+            0.9580555555555554,
+            0.9580555555555554,
+            0.9580555555555554,
+            0.9580555555555554,
+            0.9580555555555554,
+            0.9580555555555554,
+            0.8780555555555553
+          ]
+        },
+        "fixed_landmark_accuracy": {
+          "mean": 0.9576388888888889,
+          "seed_sd": 0.01610632112702696,
+          "seed_values": [
+            0.9633333333333334,
+            0.9633333333333334,
+            0.9633333333333334,
+            0.9633333333333334,
+            0.9633333333333334,
+            0.9633333333333334,
+            0.9633333333333334,
+            0.9177777777777777
+          ]
+        },
+        "pose_error_m": {
+          "mean": 0.0930564278852089,
+          "seed_sd": 0.004037728129978899,
+          "seed_values": [
+            0.09448398035585677,
+            0.09448398035585677,
+            0.09448398035585677,
+            0.09448398035585677,
+            0.09448398035585677,
+            0.09448398035585677,
+            0.09448398035585677,
+            0.08306356059067374
+          ]
+        },
+        "trajectory_ate_m": {
+          "mean": 0.08200231840082711,
+          "seed_sd": 0.0006835071725324784,
+          "seed_values": [
+            0.08224397467917079,
+            0.08224397467917079,
+            0.08224397467917079,
+            0.08224397467917079,
+            0.08224397467917079,
+            0.08224397467917079,
+            0.08224397467917079,
+            0.08031072445242135
+          ]
+        },
+        "trajectory_rpe_m": {
+          "mean": 0.041944153033213784,
+          "seed_sd": 0.0001919347286086182,
+          "seed_values": [
+            0.04187629385914161,
+            0.04187629385914161,
+            0.04187629385914161,
+            0.04187629385914161,
+            0.04187629385914161,
+            0.04187629385914161,
+            0.04187629385914161,
+            0.04241916725171902
+          ]
+        },
+        "travel_distance_m": {
+          "mean": 6.084627662290289,
+          "seed_sd": 0.09253739830265682,
+          "seed_values": [
+            6.051910751363704,
+            6.051910751363704,
+            6.051910751363704,
+            6.051910751363704,
+            6.051910751363704,
+            6.051910751363704,
+            6.051910751363704,
+            6.313646038776381
+          ]
+        },
+        "collisions": {
+          "mean": 0.0,
+          "seed_sd": 0.0,
+          "seed_values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "communication_bytes": {
+          "mean": 10050.38625,
+          "seed_sd": 199.36522142164156,
+          "seed_values": [
+            9979.9,
+            9979.9,
+            9979.9,
+            9979.9,
+            9979.9,
+            9979.9,
+            9979.9,
+            10543.79
+          ]
+        },
+        "messages": {
+          "mean": 6.5325,
+          "seed_sd": 0.0919238815542511,
+          "seed_values": [
+            6.5,
+            6.5,
+            6.5,
+            6.5,
+            6.5,
+            6.5,
+            6.5,
+            6.76
+          ]
+        },
+        "success": {
+          "mean": 1.0,
+          "seed_sd": 0.0,
+          "seed_values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "localization_failure": {
+          "mean": 0.0,
+          "seed_sd": 0.0,
+          "seed_values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "return": {
+          "mean": 6.144905890301931,
+          "seed_sd": 0.2578661378718362,
+          "seed_values": [
+            6.236075337665711,
+            6.236075337665711,
+            6.236075337665711,
+            6.236075337665711,
+            6.236075337665711,
+            6.236075337665711,
+            6.236075337665711,
+            5.506719758755469
+          ]
+        },
+        "primitive_steps": {
+          "mean": 6.79875,
+          "seed_sd": 0.13788582233137664,
+          "seed_values": [
+            6.75,
+            6.75,
+            6.75,
+            6.75,
+            6.75,
+            6.75,
+            6.75,
+            7.14
+          ]
+        }
+      }
+    },
+    "quantum_noent": {
+      "trained_seeds": 8,
+      "metrics": {
+        "physical_coverage": {
+          "mean": 0.9460763888888889,
+          "seed_sd": 0.022525919569889596,
+          "seed_values": [
+            0.9577777777777777,
+            0.9577777777777777,
+            0.9577777777777777,
+            0.8994444444444444,
+            0.9577777777777777,
+            0.9577777777777777,
+            0.9577777777777777,
+            0.9225000000000001
+          ]
+        },
+        "estimated_coverage": {
+          "mean": 0.9465277777777776,
+          "seed_sd": 0.022196413584498444,
+          "seed_values": [
+            0.9580555555555554,
+            0.9580555555555554,
+            0.9580555555555554,
+            0.9005555555555556,
+            0.9580555555555554,
+            0.9580555555555554,
+            0.9580555555555554,
+            0.9233333333333333
+          ]
+        },
+        "fixed_landmark_accuracy": {
+          "mean": 0.9609722222222223,
+          "seed_sd": 0.007137784795110163,
+          "seed_values": [
+            0.9633333333333334,
+            0.9633333333333334,
+            0.9633333333333334,
+            0.9433333333333332,
+            0.9633333333333334,
+            0.9633333333333334,
+            0.9633333333333334,
+            0.9644444444444445
+          ]
+        },
+        "pose_error_m": {
+          "mean": 0.09342256893117165,
+          "seed_sd": 0.0043101928342665465,
+          "seed_values": [
+            0.09448398035585677,
+            0.09448398035585677,
+            0.09448398035585677,
+            0.08306177298800595,
+            0.09448398035585677,
+            0.09448398035585677,
+            0.09448398035585677,
+            0.09741489632622674
+          ]
+        },
+        "trajectory_ate_m": {
+          "mean": 0.08360200602585625,
+          "seed_sd": 0.0039971866845976,
+          "seed_values": [
+            0.08224397467917079,
+            0.08224397467917079,
+            0.08224397467917079,
+            0.08186316060232186,
+            0.08224397467917079,
+            0.08224397467917079,
+            0.08224397467917079,
+            0.09348903952950344
+          ]
+        },
+        "trajectory_rpe_m": {
+          "mean": 0.04243831409838857,
+          "seed_sd": 0.0013212516955837432,
+          "seed_values": [
+            0.04187629385914161,
+            0.04187629385914161,
+            0.04187629385914161,
+            0.04260136130374308,
+            0.04187629385914161,
+            0.04187629385914161,
+            0.04187629385914161,
+            0.045647388328515885
+          ]
+        },
+        "travel_distance_m": {
+          "mean": 6.167101747466665,
+          "seed_sd": 0.24975685818017748,
+          "seed_values": [
+            6.051910751363704,
+            6.051910751363704,
+            6.051910751363704,
+            6.755773731515572,
+            6.051910751363704,
+            6.051910751363704,
+            6.051910751363704,
+            6.269575740035521
+          ]
+        },
+        "collisions": {
+          "mean": 0.0075,
+          "seed_sd": 0.0148804761828569,
+          "seed_values": [
+            0.0,
+            0.0,
+            0.0,
+            0.04,
+            0.0,
+            0.0,
+            0.0,
+            0.02
+          ]
+        },
+        "communication_bytes": {
+          "mean": 10736.32875,
+          "seed_sd": 1459.005211480338,
+          "seed_values": [
+            9979.9,
+            9979.9,
+            9979.9,
+            12241.27,
+            9979.9,
+            9979.9,
+            9979.9,
+            13769.96
+          ]
+        },
+        "messages": {
+          "mean": 7.04,
+          "seed_sd": 1.100493395839209,
+          "seed_values": [
+            6.5,
+            6.5,
+            6.5,
+            7.8,
+            6.5,
+            6.5,
+            6.5,
+            9.52
+          ]
+        },
+        "success": {
+          "mean": 1.0,
+          "seed_sd": 0.0,
+          "seed_values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "localization_failure": {
+          "mean": 0.0,
+          "seed_sd": 0.0,
+          "seed_values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "return": {
+          "mean": 6.117603638673091,
+          "seed_sd": 0.22842201719999214,
+          "seed_values": [
+            6.236075337665711,
+            6.236075337665711,
+            6.236075337665711,
+            5.6430598665174125,
+            6.236075337665711,
+            6.236075337665711,
+            6.236075337665711,
+            5.881317216873051
+          ]
+        },
+        "primitive_steps": {
+          "mean": 7.5525,
+          "seed_sd": 1.6314476481246432,
+          "seed_values": [
+            6.75,
+            6.75,
+            6.75,
+            8.7,
+            6.75,
+            6.75,
+            6.75,
+            11.22
+          ]
+        }
+      }
+    },
+    "eqmarl": {
+      "trained_seeds": 8,
+      "metrics": {
+        "physical_coverage": {
+          "mean": 0.9503819444444445,
+          "seed_sd": 0.013997147526867381,
+          "seed_values": [
+            0.9577777777777777,
+            0.9577777777777777,
+            0.9227777777777777,
+            0.9577777777777777,
+            0.933611111111111,
+            0.9577777777777777,
+            0.9577777777777777,
+            0.9577777777777777
+          ]
+        },
+        "estimated_coverage": {
+          "mean": 0.9512499999999999,
+          "seed_sd": 0.01305597770340796,
+          "seed_values": [
+            0.9580555555555554,
+            0.9580555555555554,
+            0.9244444444444444,
+            0.9580555555555554,
+            0.9372222222222223,
+            0.9580555555555554,
+            0.9580555555555554,
+            0.9580555555555554
+          ]
+        },
+        "fixed_landmark_accuracy": {
+          "mean": 0.95875,
+          "seed_sd": 0.008533314732122526,
+          "seed_values": [
+            0.9633333333333334,
+            0.9633333333333334,
+            0.9433333333333335,
+            0.9633333333333334,
+            0.9466666666666669,
+            0.9633333333333334,
+            0.9633333333333334,
+            0.9633333333333334
+          ]
+        },
+        "pose_error_m": {
+          "mean": 0.09502651738114767,
+          "seed_sd": 0.0010053891892257227,
+          "seed_values": [
+            0.09448398035585677,
+            0.09448398035585677,
+            0.09672942049248048,
+            0.09448398035585677,
+            0.09657883642156034,
+            0.09448398035585677,
+            0.09448398035585677,
+            0.09448398035585677
+          ]
+        },
+        "trajectory_ate_m": {
+          "mean": 0.08392059732803,
+          "seed_sd": 0.0031058939366629774,
+          "seed_values": [
+            0.08224397467917079,
+            0.08224397467917079,
+            0.08912441334239599,
+            0.08224397467917079,
+            0.08877651720681928,
+            0.08224397467917079,
+            0.08224397467917079,
+            0.08224397467917079
+          ]
+        },
+        "trajectory_rpe_m": {
+          "mean": 0.04241450898585529,
+          "seed_sd": 0.0011004820767325648,
+          "seed_values": [
+            0.04187629385914161,
+            0.04187629385914161,
+            0.04315588090782155,
+            0.04187629385914161,
+            0.04490242782417113,
+            0.04187629385914161,
+            0.04187629385914161,
+            0.04187629385914161
+          ]
+        },
+        "travel_distance_m": {
+          "mean": 5.951230304272099,
+          "seed_sd": 0.2150246160916374,
+          "seed_values": [
+            6.051910751363704,
+            6.051910751363704,
+            5.849653224699867,
+            6.051910751363704,
+            5.4487247012947035,
+            6.051910751363704,
+            6.051910751363704,
+            6.051910751363704
+          ]
+        },
+        "collisions": {
+          "mean": 0.0,
+          "seed_sd": 0.0,
+          "seed_values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "communication_bytes": {
+          "mean": 9788.69875,
+          "seed_sd": 447.79718216549475,
+          "seed_values": [
+            9979.9,
+            9979.9,
+            9728.06,
+            9979.9,
+            8702.13,
+            9979.9,
+            9979.9,
+            9979.9
+          ]
+        },
+        "messages": {
+          "mean": 6.5,
+          "seed_sd": 0.1817376445004485,
+          "seed_values": [
+            6.5,
+            6.5,
+            6.84,
+            6.5,
+            6.16,
+            6.5,
+            6.5,
+            6.5
+          ]
+        },
+        "success": {
+          "mean": 1.0,
+          "seed_sd": 0.0,
+          "seed_values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "localization_failure": {
+          "mean": 0.0,
+          "seed_sd": 0.0,
+          "seed_values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "return": {
+          "mean": 6.162856952941638,
+          "seed_sd": 0.13880818973965658,
+          "seed_values": [
+            6.236075337665711,
+            6.236075337665711,
+            5.887471958947531,
+            6.236075337665711,
+            5.998931638591307,
+            6.236075337665711,
+            6.236075337665711,
+            6.236075337665711
+          ]
+        },
+        "primitive_steps": {
+          "mean": 6.70125,
+          "seed_sd": 0.19104505826038595,
+          "seed_values": [
+            6.75,
+            6.75,
+            6.87,
+            6.75,
+            6.24,
+            6.75,
+            6.75,
+            6.75
+          ]
+        }
+      }
+    }
+  },
+  "contrasts": [
+    {
+      "first": "eqmarl",
+      "second": "quantum_noent",
+      "metric": "physical_coverage",
+      "paired_seeds": [
+        8801,
+        8802,
+        8803,
+        8804,
+        8805,
+        8806,
+        8807,
+        8808
+      ],
+      "differences": [
+        0.0,
+        0.0,
+        -0.03500000000000003,
+        0.05833333333333335,
+        -0.02416666666666678,
+        0.0,
+        0.0,
+        0.03527777777777763
+      ],
+      "mean_difference": 0.004305555555555521,
+      "percentile_95_interval": [
+        -0.014583333333333351,
+        0.026145833333333326
+      ],
+      "complete_locked_sample": true
+    },
+    {
+      "first": "eqmarl",
+      "second": "quantum_noent",
+      "metric": "success",
+      "paired_seeds": [
+        8801,
+        8802,
+        8803,
+        8804,
+        8805,
+        8806,
+        8807,
+        8808
+      ],
+      "differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_difference": 0.0,
+      "percentile_95_interval": [
+        0.0,
+        0.0
+      ],
+      "complete_locked_sample": true
+    },
+    {
+      "first": "eqmarl",
+      "second": "central_classical",
+      "metric": "physical_coverage",
+      "paired_seeds": [
+        8801,
+        8802,
+        8803,
+        8804,
+        8805,
+        8806,
+        8807,
+        8808
+      ],
+      "differences": [
+        0.0,
+        0.0,
+        -0.03500000000000003,
+        0.0,
+        -0.02416666666666678,
+        0.0,
+        0.0,
+        0.07277777777777761
+      ],
+      "mean_difference": 0.0017013888888888495,
+      "percentile_95_interval": [
+        -0.01614583333333336,
+        0.024270833333333255
+      ],
+      "complete_locked_sample": true
+    },
+    {
+      "first": "eqmarl",
+      "second": "central_classical",
+      "metric": "success",
+      "paired_seeds": [
+        8801,
+        8802,
+        8803,
+        8804,
+        8805,
+        8806,
+        8807,
+        8808
+      ],
+      "differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_difference": 0.0,
+      "percentile_95_interval": [
+        0.0,
+        0.0
+      ],
+      "complete_locked_sample": true
+    },
+    {
+      "first": "quantum_noent",
+      "second": "central_classical",
+      "metric": "physical_coverage",
+      "paired_seeds": [
+        8801,
+        8802,
+        8803,
+        8804,
+        8805,
+        8806,
+        8807,
+        8808
+      ],
+      "differences": [
+        0.0,
+        0.0,
+        0.0,
+        -0.05833333333333335,
+        0.0,
+        0.0,
+        0.0,
+        0.03749999999999998
+      ],
+      "mean_difference": -0.0026041666666666713,
+      "percentile_95_interval": [
+        -0.021875000000000006,
+        0.014062499999999992
+      ],
+      "complete_locked_sample": true
+    },
+    {
+      "first": "quantum_noent",
+      "second": "central_classical",
+      "metric": "success",
+      "paired_seeds": [
+        8801,
+        8802,
+        8803,
+        8804,
+        8805,
+        8806,
+        8807,
+        8808
+      ],
+      "differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_difference": 0.0,
+      "percentile_95_interval": [
+        0.0,
+        0.0
+      ],
+      "complete_locked_sample": true
+    }
+  ],
+  "failures": [],
+  "raw_provenance": [
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8801_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "47968f83daa6821b3aafad71aee90a0e3783c191a8c3a67934c71d9115c0efb3",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8801_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "a30e55564da590ce93807562c970dd0741076261913a0ba1f5f6f8dde38268fc",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8801_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "7adb1c691d3bc41d37b0512462a4e1f033cf2edd8b1565b1aafd130c1953faff",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8802_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "a21235b0c5504ee91400c2e4bb82e70f15aab1131b525a7cbbf4caff10da7b6f",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8802_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "98c8b67a57942865aba90880f551e27ce3a8d94242a4aa52005fdfa3aafd10fe",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8802_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "f377cab9fd483a49452f69dc4689f1cfd5ff71dffa1265af2a4143d83c466e53",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8803_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "b3e4d372e8863f9b006f2180e4dbe913f6cabb0586737e56d8e50fce506626ab",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8803_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "916827c969cd9915ee01f4c65d80810214bbdaf56d23ee8b6afcc30093bbb33d",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8803_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "dcaa8cf565aea5bf79cc7a5bc18590f043a5619adc4baef2c1c2edf571c02d07",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8804_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "8d5b602a57b8a3fdbc83a9474f152875b99675b3ae029a9baa297c26f2105a97",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8804_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "807a096d0f8f5ac33d1d7372d657efd7a68ebac93138fa5b0647185dc95745f3",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8804_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "9c5a2532c93c9f40f4ba25bad9586507494a16fb9e382c87a9335639d3847d56",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8805_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "d5b5360b216605a88e4645c1c26bdd051439bd74517aaef7973784caf2aafa87",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8805_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "1312740040850bcd3d2b8f3dc792ee84817e708fdb3f2fc18c95a60092409d07",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8805_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "d8cabc155371030fc24a14e35ce1ba6e5c65425ee4c08a2a686a433a1f995ab8",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8806_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "4e05f7462b8c59bf6fb92ab9a07d6e33bd33f5db10d76b2195a50cc01facf8cf",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8806_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "9f3403282ede9a36e8267a1e72e2b2b2db7fe47f92bbde9ef73163bb27f35202",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8806_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "58ef2f70b8d003f569367daa83524cba73c39e434f3060dde17fc59aefc503fa",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8807_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "aefcb444b958d650d847b7fd32c8435cf539db1b98fb8c2b8c6d4e2916ac60b3",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8807_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "23d52ea6bb06984f74572a90384e6294d9d621ff384241922ee6e62600526e3a",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8807_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "6f12f84521cd7c4c4a48fa049d5ad19792f8dfaede46841aee331158c1f5a3a3",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-central_classical_seed-8808_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "923443c2bda12eb037fc46ff9d9e8c030d309aa684aef304c430309a966ab559",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-quantum_noent_seed-8808_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "8c71c457ced1f60838c624a7f8b0c2522b516ef90055d8777ce1e09a229d9e2c",
+      "status": "completed",
+      "test_rows": 100
+    },
+    {
+      "run_id": "08-confirmatory-eqmarl_seed-8808_attempt-01",
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "metrics_sha256": "d21d05619cee809ff91b3cabe019b69cf065d4e9c3c11f995ef3f7a711317135",
+      "status": "completed",
+      "test_rows": 100
+    }
+  ],
+  "interpretation": "Training seeds are the replication unit;100 episodes per seed are averaged before inference. Percentile paired-seed bootstrap intervals are descriptive with eight seeds. Nondetection is not equivalence. No hyperparameter or checkpoint choice uses test results."
+}
