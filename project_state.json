@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-21T03:05:34.746255+00:00",
+  "updated_utc": "2026-10-21T03:16:57.647166+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -11,13 +11,13 @@
     "last_check": "All 20 files of the published planning commit matched their local Git blob hashes; the stage branch head and AGENTS.md content were read back through the GitHub plugin."
   },
   "authorized_current_scope": "Execute Stages 01\u201309 autonomously under the recorded plan, stage gates and resource caps; user instruction 2026-10-20.",
-  "active_stage": "03",
-  "stage_status": "passed",
+  "active_stage": "04",
+  "stage_status": "running",
   "training_runs_executed": 0,
-  "current_branch": "stage/03-slam-beliefs",
-  "dependency_commit": "84bd6c8c150becb84ca5cdd65dcb855731d1db9c",
+  "current_branch": "stage/04-classical-controller",
+  "dependency_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513",
   "completion_commit": null,
-  "publication_status": "verified",
+  "publication_status": "pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -27,7 +27,7 @@
     "stage/03-slam-beliefs": "dcac457be515958b259a9d32eacbcdb2e90a003e"
   },
   "blockers": [],
-  "next_action": "Index immutable Stage03 completion and start stage/04-classical-controller from it; freeze genuine belief task and common recurrent controller before pilots.",
+  "next_action": "Freeze and validate belief-based candidate actions, macro-duration and recurrent PPO contracts; publish a bounded throughput preflight before selecting pilots.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -37,7 +37,7 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "04",
+  "next_stage": "05",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Subsequent main receipt or Stage 01 PR; this commit cannot contain its own hash.",
   "next_stage_status": "planned",
@@ -74,22 +74,28 @@
         "circuit_evaluations": 0,
         "shots": 0
       }
+    },
+    "03": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 1244.5890032259954,
+      "setup_wall_seconds_charged": 1244.178765,
+      "setup_charge_convention": "Sum of conservative active setup envelopes recorded in configs/stage03/resume_accounting.json; idle across interruption excluded; bootstrap CPU not instrumented.",
+      "recorded_experiment_resources": {
+        "primitive_steps": 49,
+        "decisions": 0,
+        "updates": 0,
+        "wall_seconds": 0.41023822599527193,
+        "cpu_core_hours": 0.00011392944444444446,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
     }
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 1244.5890032259954,
-    "setup_wall_seconds_charged": 1244.178765,
-    "setup_charge_convention": "Sum of conservative active setup envelopes recorded in configs/stage03/resume_accounting.json; idle across interruption excluded; bootstrap CPU not instrumented.",
-    "recorded_experiment_resources": {
-      "primitive_steps": 49,
-      "decisions": 0,
-      "updates": 0,
-      "wall_seconds": 0.41023822599527193,
-      "cpu_core_hours": 0.00011392944444444446,
-      "gpu_device_hours": 0,
-      "circuit_evaluations": 0,
-      "shots": 0
-    }
+    "consumed_wall_seconds": 669.64714884758,
+    "setup_wall_seconds_charged": 669.64714884758,
+    "setup_charge_convention": "Conservative active setup/development envelope from Stage04 branch creation to first source publication."
   }
 }

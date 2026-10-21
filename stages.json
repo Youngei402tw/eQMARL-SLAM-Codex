@@ -63,7 +63,9 @@
       "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "84bd6c8c150becb84ca5cdd65dcb855731d1db9c",
-      "publication_receipt": "docs/stages/03-publication.json"
+      "publication_receipt": "docs/stages/03-publication.json",
+      "completion_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/4"
     },
     {
       "id": "04",
@@ -75,8 +77,9 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/04-classical-controller.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "running",
+      "branch_created": true,
+      "dependency_completion_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513"
     },
     {
       "id": "05",

@@ -128,6 +128,12 @@ def execute(config_path, source_receipt):
         elif config["experiment"] == "belief-slam":
             from .diagnostics03 import run_diagnostics
             diagnostics = run_diagnostics(config, output, emit, progress=progress)
+        elif config["experiment"] == "controller-preflight":
+            from .diagnostics04 import run_diagnostics
+            diagnostics = run_diagnostics(config, output, emit, progress=progress)
+        elif config["experiment"] == "controller-training":
+            from .mappo import train
+            diagnostics = train(config, output, emit, progress=progress)
         elif config["experiment"] == "legacy-reference":
             command = [config["interpreter"], str(ROOT / "eqmarl_slam/reference_probe.py"),
                        "--fixtures", str(ROOT / config["fixtures"]),

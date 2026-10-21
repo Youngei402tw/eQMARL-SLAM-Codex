@@ -1,0 +1,17 @@
+{
+  "split": "development",
+  "protocol": "belief-controller-v1",
+  "scenarios": [
+    {
+      "scenario_id": "development-belief-v1-000",
+      "map_seed": 42000,
+      "noise_seed": 43000
+    },
+    {
+      "scenario_id": "development-belief-v1-001",
+      "map_seed": 42001,
+      "noise_seed": 43001
+    }
+  ],
+  "purpose": "development"
+}
