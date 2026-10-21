@@ -177,7 +177,8 @@
       "source_worktree": "/workspace/source08-confirmatory",
       "execution_order": "configs/stage08/analysis-plan.json",
       "outputs": "/workspace/experiment-artifacts/08",
-      "execution_logs": "/workspace/runlogs08-confirmatory"
+      "execution_logs": "/workspace/runlogs08-confirmatory",
+      "batch_pid": 16432
     }
   ],
   "confirmatory_lock": {
