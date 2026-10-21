@@ -1,0 +1,1229 @@
+{
+  "analysis_version": "interaction-v1-raw-audit",
+  "metrics_sha256": "93cec7825cab5063c82f15b204462b59c7eaa9888bb2646443c007e4d6f60259",
+  "gradient_audits": [
+    {
+      "condition": "additive",
+      "method": "none",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "additive",
+      "method": "bilinear",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "additive",
+      "method": "quantum_noent",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "additive",
+      "method": "eqmarl",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "additive",
+      "method": "none",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "additive",
+      "method": "bilinear",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "additive",
+      "method": "quantum_noent",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "additive",
+      "method": "eqmarl",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "uncertainty",
+      "method": "none",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "uncertainty",
+      "method": "bilinear",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "uncertainty",
+      "method": "quantum_noent",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "uncertainty",
+      "method": "eqmarl",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "uncertainty",
+      "method": "none",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "uncertainty",
+      "method": "bilinear",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "uncertainty",
+      "method": "quantum_noent",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "uncertainty",
+      "method": "eqmarl",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "complementarity",
+      "method": "none",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "complementarity",
+      "method": "bilinear",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "complementarity",
+      "method": "quantum_noent",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "complementarity",
+      "method": "eqmarl",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "complementarity",
+      "method": "none",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "complementarity",
+      "method": "bilinear",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "complementarity",
+      "method": "quantum_noent",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "complementarity",
+      "method": "eqmarl",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "rendezvous",
+      "method": "none",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "rendezvous",
+      "method": "bilinear",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "rendezvous",
+      "method": "quantum_noent",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "rendezvous",
+      "method": "eqmarl",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "rendezvous",
+      "method": "none",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "rendezvous",
+      "method": "bilinear",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "rendezvous",
+      "method": "quantum_noent",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "rendezvous",
+      "method": "eqmarl",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "limited_communication",
+      "method": "none",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "limited_communication",
+      "method": "bilinear",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "limited_communication",
+      "method": "quantum_noent",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "limited_communication",
+      "method": "eqmarl",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "limited_communication",
+      "method": "none",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "limited_communication",
+      "method": "bilinear",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "limited_communication",
+      "method": "quantum_noent",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "limited_communication",
+      "method": "eqmarl",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "all",
+      "method": "none",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "all",
+      "method": "bilinear",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "all",
+      "method": "quantum_noent",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "all",
+      "method": "eqmarl",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "all",
+      "method": "none",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "all",
+      "method": "bilinear",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "all",
+      "method": "quantum_noent",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "all",
+      "method": "eqmarl",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "real_returns",
+      "method": "none",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "real_returns",
+      "method": "bilinear",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "real_returns",
+      "method": "quantum_noent",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "real_returns",
+      "method": "eqmarl",
+      "seed": 6501,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "real_returns",
+      "method": "none",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "real_returns",
+      "method": "bilinear",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "edge": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "real_returns",
+      "method": "quantum_noent",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    },
+    {
+      "condition": "real_returns",
+      "method": "eqmarl",
+      "seed": 6502,
+      "all_declared_groups_finite": true,
+      "group_connected": {
+        "encoder.weight": true,
+        "encoder.bias": true,
+        "local.0.weight": true,
+        "local.0.bias": true,
+        "local.2.weight": true,
+        "local.2.bias": true,
+        "theta": true,
+        "scales": true,
+        "head.weight": true,
+        "head.bias": true
+      },
+      "passed": true
+    }
+  ],
+  "all_gradient_groups_passed": true,
+  "mean_results": [
+    {
+      "condition": "additive",
+      "method": "none",
+      "mean_validation_mse": 0.014466622132237275,
+      "seed_validation_mse": {
+        "6501": 0.009298621255535747,
+        "6502": 0.019634623008938805
+      }
+    },
+    {
+      "condition": "additive",
+      "method": "bilinear",
+      "mean_validation_mse": 0.013197895594401165,
+      "seed_validation_mse": {
+        "6501": 0.008099319458141832,
+        "6502": 0.0182964717306605
+      }
+    },
+    {
+      "condition": "additive",
+      "method": "quantum_noent",
+      "mean_validation_mse": 0.0012796487289695254,
+      "seed_validation_mse": {
+        "6501": 0.00046712322431441617,
+        "6502": 0.0020921742336246344
+      }
+    },
+    {
+      "condition": "additive",
+      "method": "eqmarl",
+      "mean_validation_mse": 0.001704897166083119,
+      "seed_validation_mse": {
+        "6501": 0.0017923580477132576,
+        "6502": 0.0016174362844529806
+      }
+    },
+    {
+      "condition": "uncertainty",
+      "method": "none",
+      "mean_validation_mse": 0.01532749446773661,
+      "seed_validation_mse": {
+        "6501": 0.01196733774239247,
+        "6502": 0.018687651193080752
+      }
+    },
+    {
+      "condition": "uncertainty",
+      "method": "bilinear",
+      "mean_validation_mse": 0.014218585591587842,
+      "seed_validation_mse": {
+        "6501": 0.011204985684502157,
+        "6502": 0.017232185498673527
+      }
+    },
+    {
+      "condition": "uncertainty",
+      "method": "quantum_noent",
+      "mean_validation_mse": 0.008165744380319143,
+      "seed_validation_mse": {
+        "6501": 0.005169693596150268,
+        "6502": 0.011161795164488017
+      }
+    },
+    {
+      "condition": "uncertainty",
+      "method": "eqmarl",
+      "mean_validation_mse": 0.007350887053529936,
+      "seed_validation_mse": {
+        "6501": 0.004518794811333971,
+        "6502": 0.0101829792957259
+      }
+    },
+    {
+      "condition": "complementarity",
+      "method": "none",
+      "mean_validation_mse": 0.05606261659957402,
+      "seed_validation_mse": {
+        "6501": 0.053859064581258304,
+        "6502": 0.05826616861788973
+      }
+    },
+    {
+      "condition": "complementarity",
+      "method": "bilinear",
+      "mean_validation_mse": 0.053421379128746685,
+      "seed_validation_mse": {
+        "6501": 0.056709834953090524,
+        "6502": 0.050132923304402846
+      }
+    },
+    {
+      "condition": "complementarity",
+      "method": "quantum_noent",
+      "mean_validation_mse": 0.08007589297235888,
+      "seed_validation_mse": {
+        "6501": 0.06222189924564614,
+        "6502": 0.09792988669907163
+      }
+    },
+    {
+      "condition": "complementarity",
+      "method": "eqmarl",
+      "mean_validation_mse": 0.08053976185338463,
+      "seed_validation_mse": {
+        "6501": 0.06923595332174204,
+        "6502": 0.09184357038502722
+      }
+    },
+    {
+      "condition": "rendezvous",
+      "method": "none",
+      "mean_validation_mse": 0.029967531058628604,
+      "seed_validation_mse": {
+        "6501": 0.03383399572012005,
+        "6502": 0.026101066397137156
+      }
+    },
+    {
+      "condition": "rendezvous",
+      "method": "bilinear",
+      "mean_validation_mse": 0.026448364263170293,
+      "seed_validation_mse": {
+        "6501": 0.03275343629095008,
+        "6502": 0.020143292235390506
+      }
+    },
+    {
+      "condition": "rendezvous",
+      "method": "quantum_noent",
+      "mean_validation_mse": 0.030245763158389026,
+      "seed_validation_mse": {
+        "6501": 0.02351798446384914,
+        "6502": 0.036973541852928914
+      }
+    },
+    {
+      "condition": "rendezvous",
+      "method": "eqmarl",
+      "mean_validation_mse": 0.029645215036321962,
+      "seed_validation_mse": {
+        "6501": 0.029183878569882096,
+        "6502": 0.030106551502761827
+      }
+    },
+    {
+      "condition": "limited_communication",
+      "method": "none",
+      "mean_validation_mse": 0.032756576508459215,
+      "seed_validation_mse": {
+        "6501": 0.02565080481952947,
+        "6502": 0.03986234819738895
+      }
+    },
+    {
+      "condition": "limited_communication",
+      "method": "bilinear",
+      "mean_validation_mse": 0.032655766484636604,
+      "seed_validation_mse": {
+        "6501": 0.027078545898511858,
+        "6502": 0.03823298707076135
+      }
+    },
+    {
+      "condition": "limited_communication",
+      "method": "quantum_noent",
+      "mean_validation_mse": 0.06262312019224571,
+      "seed_validation_mse": {
+        "6501": 0.09433215515074758,
+        "6502": 0.030914085233743845
+      }
+    },
+    {
+      "condition": "limited_communication",
+      "method": "eqmarl",
+      "mean_validation_mse": 0.03873662176861468,
+      "seed_validation_mse": {
+        "6501": 0.05024422056563981,
+        "6502": 0.027229022971589547
+      }
+    },
+    {
+      "condition": "all",
+      "method": "none",
+      "mean_validation_mse": 0.06229133189940225,
+      "seed_validation_mse": {
+        "6501": 0.06497836799747765,
+        "6502": 0.05960429580132686
+      }
+    },
+    {
+      "condition": "all",
+      "method": "bilinear",
+      "mean_validation_mse": 0.06832240859053551,
+      "seed_validation_mse": {
+        "6501": 0.07976202780466222,
+        "6502": 0.056882789376408796
+      }
+    },
+    {
+      "condition": "all",
+      "method": "quantum_noent",
+      "mean_validation_mse": 0.13822753210514396,
+      "seed_validation_mse": {
+        "6501": 0.19378191513914442,
+        "6502": 0.08267314907114352
+      }
+    },
+    {
+      "condition": "all",
+      "method": "eqmarl",
+      "mean_validation_mse": 0.1150241147817617,
+      "seed_validation_mse": {
+        "6501": 0.14686618202422405,
+        "6502": 0.08318204753929932
+      }
+    },
+    {
+      "condition": "real_returns",
+      "method": "none",
+      "mean_validation_mse": 0.05231562753978007,
+      "seed_validation_mse": {
+        "6501": 0.06388219720638515,
+        "6502": 0.040749057873174996
+      }
+    },
+    {
+      "condition": "real_returns",
+      "method": "bilinear",
+      "mean_validation_mse": 0.015342938270385537,
+      "seed_validation_mse": {
+        "6501": 0.004205915827694183,
+        "6502": 0.026479960713076893
+      }
+    },
+    {
+      "condition": "real_returns",
+      "method": "quantum_noent",
+      "mean_validation_mse": 0.013947986393395694,
+      "seed_validation_mse": {
+        "6501": 0.012214239746379682,
+        "6502": 0.015681733040411705
+      }
+    },
+    {
+      "condition": "real_returns",
+      "method": "eqmarl",
+      "mean_validation_mse": 0.01145512416866211,
+      "seed_validation_mse": {
+        "6501": 0.01032979114275795,
+        "6502": 0.012580457194566269
+      }
+    }
+  ],
+  "selection": "Retain the Stage05 task architectures. This synthetic/frozen-corpus fitting study does not establish a repeatable policy-validation improvement that justifies a more expensive new interaction model. Strong classical remains centralized classical; matched noent/eQMARL retained for final comparison.",
+  "scope": "Two fitting seeds,16 generated training and8 validation inputs per synthetic utility, plus unchanged real frozen-return corpus. Different parameter counts and initialization can affect32-update outcomes. This is conditional component evidence, not environmental causal attribution or a task-policy improvement."
+}

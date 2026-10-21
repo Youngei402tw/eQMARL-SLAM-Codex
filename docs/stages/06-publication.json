@@ -1,0 +1,16 @@
+{
+  "stage": "06",
+  "verified_utc": "2026-10-21T04:29:38.435879+00:00",
+  "verified_remote_head": "83dac204a39a4bb32fc1a6b73afbc262d65ce6b6",
+  "mechanism": "Fresh independent Git retrieval; every run manifest, resolved config, raw metric, diagnostic and inventoried checkpoint hash/size validated",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "06-local-edge-fit-v1_attempt-01",
+      "status": "completed",
+      "verified_files": 64,
+      "metrics_rows": 1848,
+      "metrics_sha256": "93cec7825cab5063c82f15b204462b59c7eaa9888bb2646443c007e4d6f60259"
+    }
+  ]
+}

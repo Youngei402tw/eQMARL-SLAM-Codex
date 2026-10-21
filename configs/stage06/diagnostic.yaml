@@ -1,0 +1,123 @@
+{
+  "seed_streams": {
+    "model_init": {
+      "values": [
+        6501,
+        6502
+      ]
+    },
+    "critic_init": {
+      "values": [
+        6501,
+        6502
+      ]
+    },
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/interaction-development-v1.json",
+      "sha256": "1d5dcd8f904d55428209e2c43765416a3c4770cf501d5f67c142ecff89316fb7"
+    },
+    "validation": null,
+    "test": null
+  },
+  "stage": "06",
+  "protocol_id": "interaction-study-v1",
+  "profile": "diagnostic",
+  "dependency_completion_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 0,
+  "max_cpu_threads": 1,
+  "run_id": "06-local-edge-fit-v1_attempt-01",
+  "experiment": "interaction-study",
+  "method": "symmetric_local_plus_edge_matrix",
+  "hypothesis": "Explicit local value terms and classical pair interactions can explain cooperative utility fitting without attributing general benefits to input entanglement.",
+  "data_seed": 6601,
+  "train_rows": 16,
+  "validation_rows": 8,
+  "model_seeds": [
+    6501,
+    6502
+  ],
+  "methods": [
+    "none",
+    "bilinear",
+    "quantum_noent",
+    "eqmarl"
+  ],
+  "conditions": [
+    "additive",
+    "uncertainty",
+    "complementarity",
+    "rendezvous",
+    "limited_communication",
+    "all"
+  ],
+  "learning_rate": 0.01,
+  "updates": 32,
+  "return_dataset": "experiments/05/05-critic-fit-v1_attempt-01/return_dataset.json",
+  "interpretation": "Exploratory two-robot component attribution on declared synthetic utilities and a separate fixed real-return corpus. No environmental causal intervention, policy-learning gain, scalability or hardware advantage claim.",
+  "return_dataset_sha256": "59fa5856ca1a9aceb878d363840f7bf25388a615673dbee6e563b7934f4c2724",
+  "model": {
+    "actor": null,
+    "encoder": "shared trainable Linear27to2, identical seeded initialization for all local terms",
+    "critic": [
+      "none",
+      "bilinear",
+      "quantum_noent",
+      "eqmarl"
+    ],
+    "parameter_counts": {
+      "none": 121,
+      "bilinear": 125,
+      "quantum_noent": 151,
+      "eqmarl": 151
+    },
+    "optimizer": {
+      "type": "Adam",
+      "learning_rate": 0.01,
+      "updates_per_fit": 32,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0
+    }
+  },
+  "quantum": {
+    "device": "default.qubit",
+    "shots": null,
+    "diff_method": "backprop",
+    "dtype": "float64/complex128",
+    "parts": 2,
+    "qubits_per_partition": 2,
+    "layers": 1,
+    "bell": "phi+",
+    "noise": null,
+    "observable": "ZZZZ",
+    "encoding": "RX(atan(scale*shared_encoder(features)))",
+    "head": "local MLP2to16to1 summed plus affine quantum edge1to1; same local terms in every arm",
+    "symmetry": "average both endpoint orders, counted as two executions per edge input",
+    "intervention": "only initial input Bell preparation differs in quantum arms",
+    "theta_initialization": "Uniform[0,pi), seeded critic stream",
+    "scales_initialization": "ones"
+  },
+  "utility_definition": {
+    "coordinates": "synthetic first two coordinates per robot; remaining coordinates zero except shared delivery sign in slot2",
+    "additive": ".2 sum(a_r)",
+    "uncertainty": "+.1 sum(b_r squared)",
+    "complementarity": "+.4(a0*b1+a1*b0)",
+    "rendezvous": "+.3 exp(-squared distance between the two2D coordinates)",
+    "limited_communication": "complementarity edge masked by shared slot2>0",
+    "all": "uncertainty+masked complementarity+rendezvous",
+    "real_returns": "unchanged archived Stage05 physical return/10 targets; no synthetic intervention applied"
+  }
+}

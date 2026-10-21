@@ -1,0 +1,452 @@
+{
+  "artifacts": [
+    {
+      "path": "additive-bilinear-6501.pt",
+      "size_bytes": 4564,
+      "sha256": "4994414409528a4e617bc57ef2c72c32e17980665abf0c88b3239687c5a64be8",
+      "purpose": "additive-bilinear-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "additive-bilinear-6502.pt",
+      "size_bytes": 4564,
+      "sha256": "e760d3dc78f129ed02c9923e6e4e3770e41c0cd68a41df463147e762b34af972",
+      "purpose": "additive-bilinear-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "additive-eqmarl-6501.pt",
+      "size_bytes": 5525,
+      "sha256": "88fb5c8cbde812e1dd03bd0f439069c17a149c0950d32d6f3bb4689867302184",
+      "purpose": "additive-eqmarl-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "additive-eqmarl-6502.pt",
+      "size_bytes": 5525,
+      "sha256": "d80d3fe18185fccb044321c9396d82c2689fd7fd3978f6de8d51b095f4ebf855",
+      "purpose": "additive-eqmarl-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "additive-none-6501.pt",
+      "size_bytes": 4185,
+      "sha256": "08fc7b62568c07891e5ec6e67333ee652e6894a13875706a62eb6cb29defce85",
+      "purpose": "additive-none-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "additive-none-6502.pt",
+      "size_bytes": 4185,
+      "sha256": "557762137c74c7df35940d781952c9e9b18e7648c7ced463e455b2e9bf68f192",
+      "purpose": "additive-none-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "additive-quantum_noent-6501.pt",
+      "size_bytes": 5765,
+      "sha256": "99bf51ea89b7713919803744f2bbff397edcb09430ec7a7e57e99049a45c7c06",
+      "purpose": "additive-quantum_noent-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "additive-quantum_noent-6502.pt",
+      "size_bytes": 5765,
+      "sha256": "5911baeea0c3052528fc09e57efbcff4322cc46d2d91233769f674c188e900cd",
+      "purpose": "additive-quantum_noent-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "all-bilinear-6501.pt",
+      "size_bytes": 4435,
+      "sha256": "281048b4f92b3ee003e19918207fd87b30ec7c20288b1be68a89e4e98a8afc57",
+      "purpose": "all-bilinear-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "all-bilinear-6502.pt",
+      "size_bytes": 4435,
+      "sha256": "b0d07dec40ee983f789d27f6ab8e5010478d5962268bd5f800eb4ccfb54773d8",
+      "purpose": "all-bilinear-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "all-eqmarl-6501.pt",
+      "size_bytes": 5445,
+      "sha256": "c3f6e1cc4956c48c207ee74445a8339e95745459a4003bac0f2802deff6a6833",
+      "purpose": "all-eqmarl-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "all-eqmarl-6502.pt",
+      "size_bytes": 5445,
+      "sha256": "a628b7bb806e2b4637ee3409705c77c9567e800365de9880fd97c1e4b777f439",
+      "purpose": "all-eqmarl-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "all-none-6501.pt",
+      "size_bytes": 4125,
+      "sha256": "f6ea4f82616a4bb79df2a5c9f089a00471e2dfc144b741e79d72061425314f85",
+      "purpose": "all-none-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "all-none-6502.pt",
+      "size_bytes": 4125,
+      "sha256": "7a262212d80185ea4e42d1c6460d71c8737e42a44b1ddb3a6a827731a7d33eba",
+      "purpose": "all-none-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "all-quantum_noent-6501.pt",
+      "size_bytes": 5621,
+      "sha256": "08844282fce31d61ee382f69d3457a6a1ca44dacfe2563e5a9f759622eedbd2c",
+      "purpose": "all-quantum_noent-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "all-quantum_noent-6502.pt",
+      "size_bytes": 5621,
+      "sha256": "99488043101e731b0c3d3c78340b8db0bf1caf2ee397089739f905cdcd5bc438",
+      "purpose": "all-quantum_noent-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "complementarity-bilinear-6501.pt",
+      "size_bytes": 4719,
+      "sha256": "1478f338cca0ccb1ad93cb2b146ac7701114fedebd146b4b1d46bd516f7cc39d",
+      "purpose": "complementarity-bilinear-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "complementarity-bilinear-6502.pt",
+      "size_bytes": 4719,
+      "sha256": "258913abc7a43d1374c7d7db4ce61353fdf373133b2217dbd38957ec1a9a54a0",
+      "purpose": "complementarity-bilinear-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "complementarity-eqmarl-6501.pt",
+      "size_bytes": 5765,
+      "sha256": "a07988533cd1ab81caecabcf1250dd9a9fa17659ae4b5e3affd02d9f24f6788e",
+      "purpose": "complementarity-eqmarl-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "complementarity-eqmarl-6502.pt",
+      "size_bytes": 5765,
+      "sha256": "7ca6545761d83dd5120d50d7b5471782af1b0e06f55bbedb13c00a45a4cfc60a",
+      "purpose": "complementarity-eqmarl-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "complementarity-none-6501.pt",
+      "size_bytes": 4397,
+      "sha256": "43b89b2cfd57897aef7795fc86eac05e10c0c35c3615f0d1cf1d805b9fe4014a",
+      "purpose": "complementarity-none-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "complementarity-none-6502.pt",
+      "size_bytes": 4397,
+      "sha256": "56420cb5a4b278b0fb555ff5847ab2a9ab46f9ae9eafe4c25e807678204f6cf3",
+      "purpose": "complementarity-none-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "complementarity-quantum_noent-6501.pt",
+      "size_bytes": 5877,
+      "sha256": "cf5577a879fcde0db07367ba225ceae391843024eb2a66fcaf8ed7cac27eee01",
+      "purpose": "complementarity-quantum_noent-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "complementarity-quantum_noent-6502.pt",
+      "size_bytes": 5877,
+      "sha256": "5812674d3737f805da4e83fcfde3fd1d1dc08060acfbfcd93fa3d8d425497e09",
+      "purpose": "complementarity-quantum_noent-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "diagnostics.json",
+      "size_bytes": 110078,
+      "sha256": "fe7361878185aada8e6c056316a172b1539109c8c5a5ffaa4f60a889bdacf94e",
+      "purpose": "diagnostics.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "interaction_dataset.json",
+      "size_bytes": 193697,
+      "sha256": "9ee83b634c88c952d2e13adad61dd53b1c29c015718e2aa1c94edf1370fddbd7",
+      "purpose": "interaction_dataset.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "limited_communication-bilinear-6501.pt",
+      "size_bytes": 4861,
+      "sha256": "d2ff22dc2ebdb3e37bb275db988212bedf4f835553a22fa9d5f04837a5575b60",
+      "purpose": "limited_communication-bilinear-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "limited_communication-bilinear-6502.pt",
+      "size_bytes": 4861,
+      "sha256": "09e7fde7ecf2e8fca083dd7503e6e9d417156da7ee950ac16ceba5f5c627ce54",
+      "purpose": "limited_communication-bilinear-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "limited_communication-eqmarl-6501.pt",
+      "size_bytes": 5861,
+      "sha256": "c8a3af9739e9ba6314461e5f1aa1d43caa645aa978493c36ed2eb9c107dd7412",
+      "purpose": "limited_communication-eqmarl-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "limited_communication-eqmarl-6502.pt",
+      "size_bytes": 5861,
+      "sha256": "5c85f2144e749bdc335f52cbfd4313dd5fad934d892a3cb45f50508a014b8404",
+      "purpose": "limited_communication-eqmarl-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "limited_communication-none-6501.pt",
+      "size_bytes": 4469,
+      "sha256": "ec7b213473a01ebd09dddf75d157907fbf920fa9c8aa78d5c3df39f6491a66b9",
+      "purpose": "limited_communication-none-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "limited_communication-none-6502.pt",
+      "size_bytes": 4469,
+      "sha256": "9660f6013f1e812558e262bdc30d37ccef4fe387f946c8819bbb6b799a472417",
+      "purpose": "limited_communication-none-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "limited_communication-quantum_noent-6501.pt",
+      "size_bytes": 6101,
+      "sha256": "1fdd9b8ac90a500efa736548e603f6fb92d359ce1f4a809efe31b04b2b742477",
+      "purpose": "limited_communication-quantum_noent-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "limited_communication-quantum_noent-6502.pt",
+      "size_bytes": 6101,
+      "sha256": "7ddc05ca4c14253c2a747dae8e3933a822570bda2abe5aadd05ecc5eae651b76",
+      "purpose": "limited_communication-quantum_noent-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "manifest.json",
+      "size_bytes": 5175,
+      "sha256": "1e84a8833486073f8e11e87559b3912fb74a6178996ae192f281cf984ce05b27",
+      "purpose": "manifest.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "metrics.jsonl",
+      "size_bytes": 1006063,
+      "sha256": "93cec7825cab5063c82f15b204462b59c7eaa9888bb2646443c007e4d6f60259",
+      "purpose": "metrics.jsonl",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "real_returns-bilinear-6501.pt",
+      "size_bytes": 4680,
+      "sha256": "3364273dec27477a740e9c35d406a5723bdc7f6c4cec1ce771f2001f52742a6a",
+      "purpose": "real_returns-bilinear-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "real_returns-bilinear-6502.pt",
+      "size_bytes": 4680,
+      "sha256": "f57e3a38363764154a87930350e8320cdaf0ef4652059b5e3f6296b780b40064",
+      "purpose": "real_returns-bilinear-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "real_returns-eqmarl-6501.pt",
+      "size_bytes": 5717,
+      "sha256": "9a34c92b45a5fb55b31c1742ad58cba558b4c016701a7a05b041d43897627834",
+      "purpose": "real_returns-eqmarl-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "real_returns-eqmarl-6502.pt",
+      "size_bytes": 5717,
+      "sha256": "98a7330e93d8d2abe9a27323681451ed9f65655f131fbe655ca9b57f1d0fb3cc",
+      "purpose": "real_returns-eqmarl-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "real_returns-none-6501.pt",
+      "size_bytes": 4297,
+      "sha256": "1163ab3bf757d45cbb4601d35b5c0fc8226a863a97207fb2fbdcd15568f568dd",
+      "purpose": "real_returns-none-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "real_returns-none-6502.pt",
+      "size_bytes": 4297,
+      "sha256": "0082cfc40c46fd25db3a7a185accdf154bb5759b0b4e30a410081e3b60131785",
+      "purpose": "real_returns-none-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "real_returns-quantum_noent-6501.pt",
+      "size_bytes": 5829,
+      "sha256": "2dda7c1a33ece33e9d50a1943717f87ffc63ca19b0aea8ecd44c88f92afbef89",
+      "purpose": "real_returns-quantum_noent-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "real_returns-quantum_noent-6502.pt",
+      "size_bytes": 5829,
+      "sha256": "48b391f346621a686cebbbfdc5ad553c84430761bab1dbc0ea7753b939931982",
+      "purpose": "real_returns-quantum_noent-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "rendezvous-bilinear-6501.pt",
+      "size_bytes": 4654,
+      "sha256": "08a8e2cfc0303c69245dba6ffc34b225a82af1b2224f73eaa5e6be8440bd9d03",
+      "purpose": "rendezvous-bilinear-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "rendezvous-bilinear-6502.pt",
+      "size_bytes": 4654,
+      "sha256": "8fed1364f898e13b032d56f9420e5de35191e641e56ae284d71b79ab27cda127",
+      "purpose": "rendezvous-bilinear-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "rendezvous-eqmarl-6501.pt",
+      "size_bytes": 5621,
+      "sha256": "42a3dda3746798cd5a3886fdde5f1ff2f77ba84d7d44995b796eb5c3c72d3f36",
+      "purpose": "rendezvous-eqmarl-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "rendezvous-eqmarl-6502.pt",
+      "size_bytes": 5621,
+      "sha256": "dc26052d9e5ea64e93e36e711be14b043e7d703a2447963fe423bedcd2d59702",
+      "purpose": "rendezvous-eqmarl-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "rendezvous-none-6501.pt",
+      "size_bytes": 4209,
+      "sha256": "b2483b2513e1d87b8fdf8907408c01d274bbafd015bf0c9749ad7d7a70c703d3",
+      "purpose": "rendezvous-none-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "rendezvous-none-6502.pt",
+      "size_bytes": 4209,
+      "sha256": "b133b28362a2e701e0cc94f106fbe2ea0aa64fa0c9b573afee1deec5b0e7b548",
+      "purpose": "rendezvous-none-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "rendezvous-quantum_noent-6501.pt",
+      "size_bytes": 5797,
+      "sha256": "0b2f9ed9693b4b713d7d4441748a67836093421018c27a309bd76f0ec5dbd0ab",
+      "purpose": "rendezvous-quantum_noent-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "rendezvous-quantum_noent-6502.pt",
+      "size_bytes": 5797,
+      "sha256": "92389b3661322af3f840b93691165d744d1c310c64d7f766598fa8e5fe11335b",
+      "purpose": "rendezvous-quantum_noent-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "report.md",
+      "size_bytes": 862,
+      "sha256": "6234b5e01c7967fff109570769aa775b39565f9517d5b520d9758cb5fa47c7be",
+      "purpose": "report.md",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "resolved_config.yaml",
+      "size_bytes": 3789,
+      "sha256": "e18a1db43a20023321ac3bb0ffe4a289f306e43fc27fb8ad7cb2087602ebd86a",
+      "purpose": "resolved_config.yaml",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "source_publication.json",
+      "size_bytes": 302,
+      "sha256": "4372ac6c3d99b042f6d39bfdda6fc4e94429f85f8862141cc9a1ad08aed3b8e8",
+      "purpose": "source_publication.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "summary.json",
+      "size_bytes": 110783,
+      "sha256": "5304ad4b889ff09b6620ea92ae78cb99e1b7a759ea17eca399bab6232acc6e2a",
+      "purpose": "summary.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "uncertainty-bilinear-6501.pt",
+      "size_bytes": 4667,
+      "sha256": "54db86312efe2362ce4a247121e298dee06cb24642fec8e6ca224c7504ab1010",
+      "purpose": "uncertainty-bilinear-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "uncertainty-bilinear-6502.pt",
+      "size_bytes": 4667,
+      "sha256": "237b2b092c4315742d2bbab8c147f3f06ee8670a419a673ad6ceb2aa68dddf71",
+      "purpose": "uncertainty-bilinear-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "uncertainty-eqmarl-6501.pt",
+      "size_bytes": 5637,
+      "sha256": "c9b788cb52f18c5ecfb4521bc7ff481763da6b5e55b86eb3f7051eb67020da7f",
+      "purpose": "uncertainty-eqmarl-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "uncertainty-eqmarl-6502.pt",
+      "size_bytes": 5637,
+      "sha256": "005f7b6c79a6d8b33a4af2b67a916c25f01e76b1fa04098f699f9de84af0e1b4",
+      "purpose": "uncertainty-eqmarl-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "uncertainty-none-6501.pt",
+      "size_bytes": 4221,
+      "sha256": "1f3e3e048f7a1ea87a80b2dd7843fbfbb109587333acd3845b001ab87a17c8d6",
+      "purpose": "uncertainty-none-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "uncertainty-none-6502.pt",
+      "size_bytes": 4221,
+      "sha256": "08f0e9949f695955883b2e0e66cc160aed3cbf22c0539c4c5f3a4a4e83edd4cc",
+      "purpose": "uncertainty-none-6502.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "uncertainty-quantum_noent-6501.pt",
+      "size_bytes": 5813,
+      "sha256": "021a8bcd56db5a2931ae8081a483138bb43db49461966bc296905f0c9fbfbaaf",
+      "purpose": "uncertainty-quantum_noent-6501.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "uncertainty-quantum_noent-6502.pt",
+      "size_bytes": 5813,
+      "sha256": "d320b4fd1e2ba77077f0f513567406d54fa3e14376fd1de5a41db2cb6c6a8507",
+      "purpose": "uncertainty-quantum_noent-6502.pt",
+      "retention": "permanent_git_history"
+    }
+  ]
+}
