@@ -1,0 +1,67 @@
+{
+  "artifacts": [
+    {
+      "path": "diagnostics.json",
+      "size_bytes": 4607,
+      "sha256": "9c5dd549e9c751c27c6e9c82ec21d024b1d80fc47584ef0dc1daaf8dbfef91dc",
+      "purpose": "diagnostics.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "manifest.json",
+      "size_bytes": 4515,
+      "sha256": "0cf1d8c6951a3968ba7898f8c8ceb5d7ad6a84d58d4d4d8692cf654871f8c0e9",
+      "purpose": "manifest.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "metrics.jsonl",
+      "size_bytes": 26282,
+      "sha256": "e3b4aa09a2a6c640651aeee01df1db3c92749e8d00ab4df173473e20bf71a2fb",
+      "purpose": "metrics.jsonl",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "regenerated-analysis/confirmatory-analysis.json",
+      "size_bytes": 60933,
+      "sha256": "800c7d1e03bc828f4d8430f79515402ebbd4161a614f6e82aa566bcaa5648d56",
+      "purpose": "confirmatory-analysis.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "regenerated-analysis/confirmatory-results.md",
+      "size_bytes": 1681,
+      "sha256": "395b6898ef6bbc7de8a9326c9a5e03397d33607109a09015a286a1242a5a4089",
+      "purpose": "confirmatory-results.md",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "report.md",
+      "size_bytes": 890,
+      "sha256": "6bd9b37d93dffe1e06fff8628fd061978e5af53c12044702584ada94645e1971",
+      "purpose": "report.md",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "resolved_config.yaml",
+      "size_bytes": 2486,
+      "sha256": "6ba2f449b2f78ed0b8f692405b3faf01089808578a265c69663eee0236e22eae",
+      "purpose": "resolved_config.yaml",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "source_publication.json",
+      "size_bytes": 292,
+      "sha256": "ce28a7f9c12cb88cc3b78ddbb6000f29487ccede7ba42cfb277a1572d68a3de2",
+      "purpose": "source_publication.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "summary.json",
+      "size_bytes": 5318,
+      "sha256": "7ca345c902bc7eb50683a17b9318732d77bd6708a3f693d02e936a9f5a00703a",
+      "purpose": "summary.json",
+      "retention": "permanent_git_history"
+    }
+  ]
+}
