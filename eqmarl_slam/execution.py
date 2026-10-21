@@ -25,7 +25,16 @@ def load_config(path):
 
 
 def write_json(path, data):
-    Path(path).write_text(json.dumps(data, indent=2, allow_nan=False) + "\n")
+    Path(path).write_text(json.dumps(data, indent=2, allow_nan=False, default=numeric_json) + "\n")
+
+
+def numeric_json(value):
+    import numpy as np
+    if isinstance(value, np.ndarray):
+        return value.tolist()
+    if isinstance(value, np.generic):
+        return value.item()
+    raise TypeError(f"Unsupported JSON type: {type(value).__name__}")
 
 
 def git(*args):
@@ -109,7 +118,7 @@ def execute(config_path, source_receipt):
         if time.perf_counter() - started > wall_limit:
             raise TimeoutError("Registered wall cap reached")
         with metrics_path.open("a") as stream:
-            stream.write(json.dumps({"run_id": run_id, "record": rows, **row}, allow_nan=False) + "\n")
+            stream.write(json.dumps({"run_id": run_id, "record": rows, **row}, allow_nan=False, default=numeric_json) + "\n")
             stream.flush()
         rows += 1
 

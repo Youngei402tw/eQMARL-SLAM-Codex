@@ -13,7 +13,7 @@
   "authorized_current_scope": "Execute Stages 01\u201309 autonomously under the recorded plan, stage gates and resource caps; user instruction 2026-10-20.",
   "active_stage": "04",
   "stage_status": "running",
-  "training_runs_executed": 0,
+  "training_runs_executed": 1,
   "current_branch": "stage/04-classical-controller",
   "dependency_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513",
   "completion_commit": null,
@@ -97,5 +97,6 @@
     "consumed_wall_seconds": 669.64714884758,
     "setup_wall_seconds_charged": 669.64714884758,
     "setup_charge_convention": "Conservative active setup/development envelope from Stage04 branch creation to first source publication."
-  }
+  },
+  "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds."
 }
