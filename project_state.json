@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-21T04:38:21.387627+00:00",
+  "updated_utc": "2026-10-21T04:42:32.435570+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -31,7 +31,7 @@
     "stage/07-shot-noise": "0a1cfce80f2e6c35f9c0f69c5bf290af797bec09"
   },
   "blockers": [],
-  "next_action": "Publish and lock24 confirmatory runs, then execute all from one immutable source with no outcome-driven changes.",
+  "next_action": "Execute all24 locked confirmatory outcomes from immutable source; archive/verify each without test-driven changes.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -170,5 +170,23 @@
     "stage_started_utc": "2026-10-21T04:38:21.387654+00:00"
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
-  "active_runs": []
+  "active_runs": [
+    {
+      "batch_session": 95576,
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "source_worktree": "/workspace/source08-confirmatory",
+      "execution_order": "configs/stage08/analysis-plan.json",
+      "outputs": "/workspace/experiment-artifacts/08",
+      "execution_logs": "/workspace/runlogs08-confirmatory"
+    }
+  ],
+  "confirmatory_lock": {
+    "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+    "analysis_plan": "configs/stage08/analysis-plan.json",
+    "methods": 3,
+    "training_seeds_per_method": 8,
+    "training_steps_per_seed": 10000,
+    "test_episodes_per_policy": 100,
+    "frozen": true
+  }
 }
