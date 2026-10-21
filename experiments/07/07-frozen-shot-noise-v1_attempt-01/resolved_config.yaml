@@ -1,0 +1,112 @@
+{
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": 5201,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": 7701,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": null,
+    "validation": {
+      "path": "configs/data/validation-belief-v1.json",
+      "sha256": "d42a038f42a1ded7cc6053bb8b58e2462b4a10ae91115398551b8c84598d9f23"
+    },
+    "test": null
+  },
+  "stage": "07",
+  "protocol_id": "shot-noise-v1",
+  "profile": "diagnostic",
+  "dependency_completion_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 0,
+  "max_cpu_threads": 1,
+  "run_id": "07-frozen-shot-noise-v1_attempt-01",
+  "experiment": "shot-noise",
+  "method": "frozen_matched_split_critics",
+  "hypothesis": "Shot noise and a declared readout depolarizing channel have measurable value/gradient error and cost for frozen fitted analytic critics.",
+  "methods": [
+    "quantum_noent",
+    "eqmarl"
+  ],
+  "critic_seed": 5201,
+  "dataset": "experiments/05/05-critic-fit-v1_attempt-01/return_dataset.json",
+  "rows": 4,
+  "shot_settings": [
+    64,
+    256,
+    1024
+  ],
+  "noise_probabilities": [
+    0.0,
+    0.01,
+    0.05,
+    0.15
+  ],
+  "noise_shots": 256,
+  "repetitions": 8,
+  "shot_seed": 7701,
+  "max_shots": 2000000,
+  "max_circuit_evaluations": 10000,
+  "gradient_relative_error_threshold": 0.5,
+  "gradient_error_scope": "Joint encoder and circuit gradient blocks; exclude affine head from primary reliability norm, report all groups separately.",
+  "interpretation": "Frozen fitted analytic critic sensitivity only; no actor or critic optimizer updates, finite-shot/noisy task-policy training, physical device, or implemented quantum-network claim.",
+  "dataset_sha256": "59fa5856ca1a9aceb878d363840f7bf25388a615673dbee6e563b7934f4c2724",
+  "checkpoints": {
+    "quantum_noent": "experiments/05/05-critic-fit-v1_attempt-01/fitted-quantum_noent.pt",
+    "eqmarl": "experiments/05/05-critic-fit-v1_attempt-01/fitted-eqmarl.pt"
+  },
+  "checkpoint_sha256": {
+    "quantum_noent": "481df565d8208adb86130297934c9e40008b2d179369918b030674ac8663666d",
+    "eqmarl": "d60cc5f923e517cce22f2a2b5651cdfb0c3a3e88a4e6b82eb76466233dd7995c"
+  },
+  "model": {
+    "actor": null,
+    "encoder": "frozen fitted Linear27to2; differentiable for Jacobians, never updated",
+    "critic": [
+      "quantum_noent",
+      "eqmarl"
+    ],
+    "parameter_counts": {
+      "quantum_noent": 86,
+      "eqmarl": 86
+    },
+    "optimizer": null
+  },
+  "quantum": {
+    "devices": [
+      "default.qubit",
+      "default.mixed"
+    ],
+    "parts": 2,
+    "qubits_per_partition": 2,
+    "layers": 1,
+    "bell": "phi+",
+    "observable": "ZZZZ",
+    "dtype": "float64/complex128",
+    "shots": [
+      64,
+      256,
+      1024
+    ],
+    "diff_method": {
+      "analytic": "backprop",
+      "finite": "parameter-shift"
+    },
+    "noise": "Independent DepolarizingChannel(p) on each wire after all unitaries, before global parity readout",
+    "noise_probabilities": [
+      0.0,
+      0.01,
+      0.05,
+      0.15
+    ],
+    "theta_scales_head": "all loaded unchanged from hashed checkpoints",
+    "shot_stream": "base7701 +10000*shots+replicate; noise base7701+200000+int(p*10000)+replicate",
+    "accounting": "Actual qml.Tracker executions and shots across all forward/backward, seed checks and noisy repeats; no discarded outcomes",
+    "torch_default_dtype": "float64 for this frozen diagnostic process; mixed-backend constants require it; no actor initialization/training"
+  }
+}

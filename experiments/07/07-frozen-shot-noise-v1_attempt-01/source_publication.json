@@ -1,0 +1,8 @@
+{
+  "source_commit": "feef26a272dfa658176e8f4c9ef3b8df8f67faf8",
+  "branch": "stage/07-shot-noise",
+  "verified": true,
+  "allow_detached": false,
+  "verified_utc": "2026-10-21T04:34:48.680054+00:00",
+  "mechanism": "Successful non-force Git push followed by exact ls-remote SHA verification"
+}

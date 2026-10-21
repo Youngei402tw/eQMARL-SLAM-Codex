@@ -1,0 +1,434 @@
+{
+  "passed": true,
+  "gates": {
+    "quantum_noent-shot_seed_replay": true,
+    "quantum_noent-64-finite_parameter_shift": true,
+    "quantum_noent-256-finite_parameter_shift": true,
+    "quantum_noent-1024-finite_parameter_shift": true,
+    "quantum_noent-noise-0.0-channel_identity": true,
+    "quantum_noent-noise-0.01-channel_identity": true,
+    "quantum_noent-noise-0.05-channel_identity": true,
+    "quantum_noent-noise-0.15-channel_identity": true,
+    "eqmarl-shot_seed_replay": true,
+    "eqmarl-64-finite_parameter_shift": true,
+    "eqmarl-256-finite_parameter_shift": true,
+    "eqmarl-1024-finite_parameter_shift": true,
+    "eqmarl-noise-0.0-channel_identity": true,
+    "eqmarl-noise-0.01-channel_identity": true,
+    "eqmarl-noise-0.05-channel_identity": true,
+    "eqmarl-noise-0.15-channel_identity": true
+  },
+  "resources": {
+    "primitive_steps": 0,
+    "decisions": 0,
+    "updates": 0,
+    "circuit_evaluations": 3246,
+    "shots": 1378304
+  },
+  "summary": {
+    "results": [
+      {
+        "method": "quantum_noent",
+        "shots": 64,
+        "normalized_value_rmse": 0.0680265775124423,
+        "physical_value_rmse": 0.680265775124423,
+        "gradient_relative_rmse": 0.06686076515130965,
+        "all_parameter_gradient_relative_rmse": 0.06413131823434659,
+        "gradient_group_errors": {
+          "theta": {
+            "reference_norm": 0.4341659346999733,
+            "absolute_error": 0.06083202234554,
+            "relative_error": 0.14011237981528296
+          },
+          "scales": {
+            "reference_norm": 0.08352376446716576,
+            "absolute_error": 0.004809499244045871,
+            "relative_error": 0.05758240513616392
+          },
+          "encoder.weight": {
+            "reference_norm": 0.8337297176404449,
+            "absolute_error": 0.028596114403219786,
+            "relative_error": 0.03429902257070819
+          },
+          "encoder.bias": {
+            "reference_norm": 0.40427472788291113,
+            "absolute_error": 0.013055458103310264,
+            "relative_error": 0.03229353012412756
+          },
+          "head.weight": {
+            "reference_norm": 0.31037576490623553,
+            "absolute_error": 0.06428201490623553,
+            "relative_error": 0.20711029073308967
+          },
+          "head.bias": {
+            "reference_norm": 1.0,
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        },
+        "gradient_reference_norm": 1.0266545552259951,
+        "empirical_value_variance": [
+          0.0035790756835247972,
+          0.002196250987617489,
+          0.003408643508118854,
+          0.008455759975253926
+        ]
+      },
+      {
+        "method": "quantum_noent",
+        "shots": 256,
+        "normalized_value_rmse": 0.034620001803276554,
+        "physical_value_rmse": 0.34620001803276557,
+        "gradient_relative_rmse": 0.05041343605633672,
+        "all_parameter_gradient_relative_rmse": 0.044695140448886055,
+        "gradient_group_errors": {
+          "theta": {
+            "reference_norm": 0.4341659346999733,
+            "absolute_error": 0.030110410880501204,
+            "relative_error": 0.06935231088848265
+          },
+          "scales": {
+            "reference_norm": 0.08352376446716576,
+            "absolute_error": 0.002571271602204928,
+            "relative_error": 0.03078491036183752
+          },
+          "encoder.weight": {
+            "reference_norm": 0.8337297176404449,
+            "absolute_error": 0.037855006269253866,
+            "relative_error": 0.045404410408193284
+          },
+          "encoder.bias": {
+            "reference_norm": 0.40427472788291113,
+            "absolute_error": 0.018236125994878505,
+            "relative_error": 0.04510825123889559
+          },
+          "head.weight": {
+            "reference_norm": 0.31037576490623553,
+            "absolute_error": 0.04021017259376447,
+            "relative_error": 0.1295531969318286
+          },
+          "head.bias": {
+            "reference_norm": 1.0,
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        },
+        "gradient_reference_norm": 1.0266545552259951,
+        "empirical_value_variance": [
+          0.001767991728678408,
+          0.0012346649070600966,
+          0.0011869729488854226,
+          0.0006950437153273602
+        ]
+      },
+      {
+        "method": "quantum_noent",
+        "shots": 1024,
+        "normalized_value_rmse": 0.013988346911472825,
+        "physical_value_rmse": 0.13988346911472824,
+        "gradient_relative_rmse": 0.024852661411970334,
+        "all_parameter_gradient_relative_rmse": 0.01741063143673815,
+        "gradient_group_errors": {
+          "theta": {
+            "reference_norm": 0.4341659346999733,
+            "absolute_error": 0.022367001160196232,
+            "relative_error": 0.05151717205923298
+          },
+          "scales": {
+            "reference_norm": 0.08352376446716576,
+            "absolute_error": 0.0022481529135600416,
+            "relative_error": 0.026916326483869372
+          },
+          "encoder.weight": {
+            "reference_norm": 0.8337297176404449,
+            "absolute_error": 0.010865494485908145,
+            "relative_error": 0.013032394379150594
+          },
+          "encoder.bias": {
+            "reference_norm": 0.40427472788291113,
+            "absolute_error": 0.005255884850080814,
+            "relative_error": 0.013000775184747782
+          },
+          "head.weight": {
+            "reference_norm": 0.31037576490623553,
+            "absolute_error": 0.0009035319687644705,
+            "relative_error": 0.0029110905905859867
+          },
+          "head.bias": {
+            "reference_norm": 1.0,
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        },
+        "gradient_reference_norm": 1.0266545552259951,
+        "empirical_value_variance": [
+          0.00011305657090138527,
+          0.0001987568409208507,
+          0.00022750516596269145,
+          0.0002950939912057977
+        ]
+      },
+      {
+        "method": "quantum_noent",
+        "depolarizing_probability": 0.0,
+        "analytic_normalized_values": [
+          0.21223460456414248,
+          0.33041554584226207,
+          0.4844048118901708,
+          0.4961855439224525
+        ],
+        "channel_identity_error": 1.942890293094024e-16,
+        "normalized_bias_rmse": 1.4220500840710912e-16,
+        "sample_rmse_vs_noisy_expectation": 0.034576185990891545
+      },
+      {
+        "method": "quantum_noent",
+        "depolarizing_probability": 0.01,
+        "analytic_normalized_values": [
+          0.21988148971676127,
+          0.33188439033543965,
+          0.47782369556502463,
+          0.48898857667662265
+        ],
+        "channel_identity_error": 1.3877787807814457e-16,
+        "normalized_bias_rmse": 0.006239787382297974,
+        "sample_rmse_vs_noisy_expectation": 0.020961583718977064
+      },
+      {
+        "method": "quantum_noent",
+        "depolarizing_probability": 0.05,
+        "analytic_normalized_values": [
+          0.24751198329820792,
+          0.3371917668071509,
+          0.4540441449700441,
+          0.4629837716713209
+        ],
+        "channel_identity_error": 1.3877787807814457e-16,
+        "normalized_bias_rmse": 0.028786013953666,
+        "sample_rmse_vs_noisy_expectation": 0.02627131672495729
+      },
+      {
+        "method": "quantum_noent",
+        "depolarizing_probability": 0.15,
+        "analytic_normalized_values": [
+          0.2985975804821113,
+          0.3470044940296292,
+          0.4100784974028526,
+          0.4149038852432753
+        ],
+        "channel_identity_error": 5.551115123125783e-17,
+        "normalized_bias_rmse": 0.07047138758793685,
+        "sample_rmse_vs_noisy_expectation": 0.028492743743578484
+      },
+      {
+        "method": "eqmarl",
+        "shots": 64,
+        "normalized_value_rmse": 0.04705097489613673,
+        "physical_value_rmse": 0.4705097489613673,
+        "gradient_relative_rmse": 0.08669811997189565,
+        "all_parameter_gradient_relative_rmse": 0.06762622374279903,
+        "gradient_group_errors": {
+          "theta": {
+            "reference_norm": 0.40723305633534207,
+            "absolute_error": 0.07655052550572569,
+            "relative_error": 0.18797718975615044
+          },
+          "scales": {
+            "reference_norm": 0.07120073572649302,
+            "absolute_error": 0.0054905726477809755,
+            "relative_error": 0.07711398754181684
+          },
+          "encoder.weight": {
+            "reference_norm": 0.7850327500768225,
+            "absolute_error": 0.03004929595192595,
+            "relative_error": 0.038277760958361745
+          },
+          "encoder.bias": {
+            "reference_norm": 0.3781179260042086,
+            "absolute_error": 0.014089066615502974,
+            "relative_error": 0.037261038545276896
+          },
+          "head.weight": {
+            "reference_norm": 0.3759612337682679,
+            "absolute_error": 0.0498200162317321,
+            "relative_error": 0.13251370555518438
+          },
+          "head.bias": {
+            "reference_norm": 1.0,
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        },
+        "gradient_reference_norm": 0.964446935605646,
+        "empirical_value_variance": [
+          0.0028542973081418332,
+          0.0018766323765089473,
+          0.0015981643464463267,
+          0.0029269411420712126
+        ]
+      },
+      {
+        "method": "eqmarl",
+        "shots": 256,
+        "normalized_value_rmse": 0.023470984665843242,
+        "physical_value_rmse": 0.23470984665843242,
+        "gradient_relative_rmse": 0.040483010962181466,
+        "all_parameter_gradient_relative_rmse": 0.027261771709346336,
+        "gradient_group_errors": {
+          "theta": {
+            "reference_norm": 0.40723305633534207,
+            "absolute_error": 0.03527228416485935,
+            "relative_error": 0.08661449166792065
+          },
+          "scales": {
+            "reference_norm": 0.07120073572649302,
+            "absolute_error": 0.0025893611122206873,
+            "relative_error": 0.036367055562000525
+          },
+          "encoder.weight": {
+            "reference_norm": 0.7850327500768225,
+            "absolute_error": 0.014914723288811726,
+            "relative_error": 0.018998854872426897
+          },
+          "encoder.bias": {
+            "reference_norm": 0.3781179260042086,
+            "absolute_error": 0.007150101867191952,
+            "relative_error": 0.018909714074524908
+          },
+          "head.weight": {
+            "reference_norm": 0.3759612337682679,
+            "absolute_error": 0.0038909212682678995,
+            "relative_error": 0.010349261888703545
+          },
+          "head.bias": {
+            "reference_norm": 1.0,
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        },
+        "gradient_reference_norm": 0.964446935605646,
+        "empirical_value_variance": [
+          0.0008427819795713063,
+          0.00043813312338656437,
+          0.0005824749079910334,
+          0.00025860448172255367
+        ]
+      },
+      {
+        "method": "eqmarl",
+        "shots": 1024,
+        "normalized_value_rmse": 0.01205983390779591,
+        "physical_value_rmse": 0.12059833907795911,
+        "gradient_relative_rmse": 0.026533260494955226,
+        "all_parameter_gradient_relative_rmse": 0.022168908883639264,
+        "gradient_group_errors": {
+          "theta": {
+            "reference_norm": 0.40723305633534207,
+            "absolute_error": 0.012743226766168519,
+            "relative_error": 0.031292220923428475
+          },
+          "scales": {
+            "reference_norm": 0.07120073572649302,
+            "absolute_error": 0.0025272561444454424,
+            "relative_error": 0.03549480379182483
+          },
+          "encoder.weight": {
+            "reference_norm": 0.7850327500768225,
+            "absolute_error": 0.019805980819337626,
+            "relative_error": 0.025229496243818407
+          },
+          "encoder.bias": {
+            "reference_norm": 0.3781179260042086,
+            "absolute_error": 0.009684542748704094,
+            "relative_error": 0.025612493041645163
+          },
+          "head.weight": {
+            "reference_norm": 0.3759612337682679,
+            "absolute_error": 0.0190582974817321,
+            "relative_error": 0.0506921878373213
+          },
+          "head.bias": {
+            "reference_norm": 1.0,
+            "absolute_error": 0.0,
+            "relative_error": 0.0
+          }
+        },
+        "gradient_reference_norm": 0.964446935605646,
+        "empirical_value_variance": [
+          4.198539294974345e-05,
+          8.096760656711979e-05,
+          0.00028220426891705896,
+          0.00015020626078105835
+        ]
+      },
+      {
+        "method": "eqmarl",
+        "depolarizing_probability": 0.0,
+        "analytic_normalized_values": [
+          0.16954234204639043,
+          0.28447779579944726,
+          0.5433563127482055,
+          0.5577283460546748
+        ],
+        "channel_identity_error": 3.3306690738754696e-16,
+        "normalized_bias_rmse": 2.242025235105681e-16,
+        "sample_rmse_vs_noisy_expectation": 0.025710738682261938
+      },
+      {
+        "method": "eqmarl",
+        "depolarizing_probability": 0.01,
+        "analytic_normalized_values": [
+          0.177730460807002,
+          0.28665753538471733,
+          0.5320028888109293,
+          0.5456236080293067
+        ],
+        "channel_identity_error": 2.220446049250313e-16,
+        "normalized_bias_rmse": 0.009316939831025522,
+        "sample_rmse_vs_noisy_expectation": 0.0224566822621743
+      },
+      {
+        "method": "eqmarl",
+        "depolarizing_probability": 0.05,
+        "analytic_normalized_values": [
+          0.20731659402906588,
+          0.294533589414299,
+          0.4909795569620226,
+          0.5018855526459993
+        ],
+        "channel_identity_error": 2.220446049250313e-16,
+        "normalized_bias_rmse": 0.04298184273749987,
+        "sample_rmse_vs_noisy_expectation": 0.02591408520013108
+      },
+      {
+        "method": "eqmarl",
+        "depolarizing_probability": 0.15,
+        "analytic_normalized_values": [
+          0.2620179434478308,
+          0.309095505305083,
+          0.4151321458472945,
+          0.4210189306896243
+        ],
+        "channel_identity_error": 5.551115123125783e-17,
+        "normalized_bias_rmse": 0.10522436707192483,
+        "sample_rmse_vs_noisy_expectation": 0.02466883719523565
+      }
+    ],
+    "checkpoint_provenance": [
+      {
+        "method": "quantum_noent",
+        "checkpoint_sha256": "481df565d8208adb86130297934c9e40008b2d179369918b030674ac8663666d",
+        "optimizer_updates": 0
+      },
+      {
+        "method": "eqmarl",
+        "checkpoint_sha256": "d60cc5f923e517cce22f2a2b5651cdfb0c3a3e88a4e6b82eb76466233dd7995c",
+        "optimizer_updates": 0
+      }
+    ],
+    "scope": "Frozen analytic-trained critic sensitivity on validation inputs; no finite-shot/noisy policy trained, no task-performance or hardware/network claim.",
+    "noise_model": "One independent depolarizing channel per wire after all unitary gates, before global parity readout; exact default.mixed expectations and finite-shot default.mixed kept separate.",
+    "gradient_reliability_threshold": 0.5,
+    "unreliable_settings": []
+  }
+}
