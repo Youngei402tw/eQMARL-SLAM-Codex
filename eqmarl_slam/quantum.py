@@ -60,6 +60,8 @@ class QuantumCircuit:
             raise ValueError("shots must be None or a positive integer")
         if noise is not None and not 0 <= noise <= 1:
             raise ValueError("Depolarizing probability must lie in [0,1]")
+        if noise is not None and torch.get_default_dtype() != torch.float64:
+            raise ValueError('default.mixed requires torch default float64 for constant precision; configure the diagnostic process explicitly')
         self.noise, self.seed = noise, seed
         self.parts, self.d, self.layers = parts, d, layers
         self.entanglement, self.bell, self.squash = entanglement, bell, squash

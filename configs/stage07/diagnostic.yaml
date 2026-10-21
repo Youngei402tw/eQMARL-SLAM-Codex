@@ -106,6 +106,7 @@
     ],
     "theta_scales_head": "all loaded unchanged from hashed checkpoints",
     "shot_stream": "base7701 +10000*shots+replicate; noise base7701+200000+int(p*10000)+replicate",
-    "accounting": "Actual qml.Tracker executions and shots across all forward/backward, seed checks and noisy repeats; no discarded outcomes"
+    "accounting": "Actual qml.Tracker executions and shots across all forward/backward, seed checks and noisy repeats; no discarded outcomes",
+    "torch_default_dtype": "float64 for this frozen diagnostic process; mixed-backend constants require it; no actor initialization/training"
   }
 }

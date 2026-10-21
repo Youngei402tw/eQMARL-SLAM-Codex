@@ -9,3 +9,5 @@ This is frozen fitted-critic sensitivity, not finite-shot policy training or a h
 Exit: reproducible sampling, valid finite gradients, exact channel check, credible all-call accounting and remotely verified raw/checkpoint artifacts. Sampling or noise degradation is a valid negative result. Analytic training remains the scope of the locked task comparison.
 
 Dependency completion: `0647dc61b203825119e414189355c70d8c5410a5`.
+
+Preflight failure retained in `configs/stage07/preflight-channel-diagnosis.json`: mixed-backend zero-noise error1.47e-8 under Torch defaultfloat32, despite explicit double inputs. Setting the frozen diagnostic process defaultfloat64 restores agreement2.22e-16. No actor is initialized/trained in this process; the analytic training path retains its prior initialization semantics. The mixed API now rejects an incorrect process default instead of silently losing precision. Original discrepancy source is retained in Git.

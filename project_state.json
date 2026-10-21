@@ -30,7 +30,7 @@
     "stage/06-interaction-model": "8f38616118c52289a99bfcd6f79662593285c958"
   },
   "blockers": [],
-  "next_action": "Register the stage question, smallest falsifier, complete configurations and gates before scientific execution.",
+  "next_action": "Execute frozen shot/noise sensitivity after exact source publication; no policy training.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -147,8 +147,8 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 15.402322,
-    "setup_wall_seconds_charged": 15.402322,
+    "consumed_wall_seconds": 154.392414,
+    "setup_wall_seconds_charged": 154.392414,
     "stage_started_utc": "2026-10-21T04:32:09.863880+00:00"
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",

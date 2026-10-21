@@ -9,6 +9,10 @@ from .quantum import QuantumCircuit
 
 def run_diagnostics(config,output,emit,progress=None):
     torch.set_num_threads(1)
+    # PennyLane mixed-state constants otherwise inherit Torch float32 even
+    # when every parameter/input is explicitly double. This process is a
+    # frozen diagnostic; no actor initialization or training occurs here.
+    torch.set_default_dtype(torch.float64)
     root=Path(__file__).resolve().parents[1];output=Path(output)
     resources={'primitive_steps':0,'decisions':0,'updates':0,'circuit_evaluations':0,'shots':0}
     if progress is not None:progress['resources']=resources

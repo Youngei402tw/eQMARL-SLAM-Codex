@@ -1,7 +1,16 @@
 import numpy as np
 import pennylane as qml
+import pytest
 import torch
 from eqmarl_slam.quantum import QuantumCircuit
+
+
+@pytest.fixture(autouse=True)
+def mixed_backend_constant_precision():
+    previous=torch.get_default_dtype()
+    torch.set_default_dtype(torch.float64)
+    try: yield
+    finally: torch.set_default_dtype(previous)
 
 
 def fixture():
