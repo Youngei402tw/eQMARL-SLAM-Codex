@@ -30,12 +30,28 @@
     },
     {
       "run_id": "04-controller-preflight-v2_attempt-01",
-      "status": "planned",
+      "status": "failed",
       "config": "configs/stage04/preflight-v2.yaml",
       "config_sha256": "c2aaf1f2e6992cb0ed32ec7e63e4331af737886037165786ec3ba24a9b94934b",
-      "source_commit": null,
+      "source_commit": "2bb120b6ba51a70dad2f29b43587a6993be1aa57",
       "results_commit": null,
-      "reason": "Versioned near-field sensor limit and revisit standoff after ill-conditioned bearing at0.0003m; all earlier outcomes retained."
+      "reason": "Versioned near-field sensor limit and revisit standoff after ill-conditioned bearing at0.0003m; all earlier outcomes retained.",
+      "failure": {
+        "reason": "Post-run archive serialization failed: TypeError: Object of type bool is not JSON serializable (NumPy boolean diagnostic). Scientific raw rows and checkpoint retained; in-memory aggregate result was not serialized.",
+        "failure_mode": "archive_numeric_serialization",
+        "log": "packaging_failure.txt"
+      },
+      "resources_consumed": {
+        "primitive_steps": 85,
+        "decisions": 58,
+        "updates": 102,
+        "wall_seconds": 3.203684861997317,
+        "cpu_core_hours": 0.0008898116666666667,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "pending"
     }
   ]
 }

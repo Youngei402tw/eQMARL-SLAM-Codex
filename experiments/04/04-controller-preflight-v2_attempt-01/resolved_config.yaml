@@ -1,0 +1,154 @@
+{
+  "stage": "04",
+  "run_id": "04-controller-preflight-v2_attempt-01",
+  "protocol_id": "belief-controller-v2",
+  "profile": "diagnostic",
+  "experiment": "controller-preflight",
+  "method": "common_recurrent_controller_preflight",
+  "hypothesis": "A genuine belief-based macro task is tractable for a competent permitted-information heuristic and supports duration-correct recurrent learning without truth leakage.",
+  "dependency_completion_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 1000,
+  "max_cpu_threads": 1,
+  "seed_streams": {
+    "model_init": 4401,
+    "critic_init": 5401,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": 6401,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/development-belief-v1.json",
+      "sha256": "8236d6df419c59eaf3982635a59070811af4273feb59e42856e2b985be855dcd"
+    },
+    "validation": null,
+    "test": null
+  },
+  "model": {
+    "actor": "shared Linear27to16,Tanh,GRUCell16,Linear5; separate agent memory",
+    "encoder": "classical critic shared Linear27to2",
+    "critic": "centralized MLP4to32to1, affine output",
+    "parameter_counts": "measured per artifact/model",
+    "optimizer": {
+      "type": "Adam",
+      "learning_rate": 0.001,
+      "ppo_epochs": 2,
+      "clip": 0.2,
+      "entropy": 0.01
+    }
+  },
+  "quantum": null,
+  "task": {
+    "protocol": "belief-controller-v2",
+    "horizon": 36,
+    "macro_max_steps": 3,
+    "speed": 0.45,
+    "goal_tolerance": 0.18,
+    "sensor_range": 1.25,
+    "landmark_count": 9,
+    "gamma": 0.99,
+    "coverage_threshold": 0.85,
+    "map_accuracy_threshold": 0.7,
+    "landmark_error_threshold": 0.35,
+    "pose_error_threshold": 0.25,
+    "coverage_weight": 10.0,
+    "information_weight": 0.001,
+    "travel_weight": 0.01,
+    "collision_weight": 0.1,
+    "byte_weight": 1e-06,
+    "prior_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "motion_std": [
+      0.015,
+      0.015,
+      0.01
+    ],
+    "odometry_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "observation_sigmas": [
+      0.02,
+      0.1
+    ],
+    "sensor_min_range": 0.25,
+    "revisit_standoff": 0.5
+  },
+  "development_scenarios": [
+    {
+      "scenario_id": "development-belief-v1-000",
+      "map_seed": 42000,
+      "noise_seed": 43000
+    },
+    {
+      "scenario_id": "development-belief-v1-001",
+      "map_seed": 42001,
+      "noise_seed": 43001
+    }
+  ],
+  "actor_seed": 4401,
+  "action_seed": 6401,
+  "smoke_training": {
+    "actor_seed": 4401,
+    "critic_seed": 5401,
+    "action_seed": 6401,
+    "actor_hidden": 16,
+    "learning_rate": 0.001,
+    "training_steps": 16,
+    "training_wall_seconds": 900,
+    "episodes_per_update": 2,
+    "ppo_epochs": 2,
+    "ppo_clip": 0.2,
+    "entropy_coefficient": 0.01
+  },
+  "fixed_task_conventions": {
+    "workspace": "Known empty4m x4m square, holonomic body commands, fixed36 coverage cells",
+    "unknown_map": "9 unknown landmark locations with known IDs",
+    "robot_radius_m": 0.12,
+    "map_generation_bounds": [
+      0.3,
+      3.7,
+      0.3,
+      3.7
+    ],
+    "sensor_fov_rad": 6.283185307179586,
+    "candidate_slots": [
+      "continue",
+      "frontier1",
+      "frontier2 spatially diverse",
+      "revisit largest marginal landmark",
+      "rendezvous delivered teammate estimate"
+    ],
+    "information": "Local factor posterior plus full raw-factor broadcast each macro boundary, zero latency/loss, all UTF8 packet bytes including priors charged",
+    "actor_observation_order": "pose2, sincos2, covariance diagonal std3, remaining1, estimated coverage1, observed landmark fraction1, delivered teammate delta2, five candidate(dx,dy,novelty) triples",
+    "evaluator_only": "physical sensor coverage, true landmark error, true pose/trajectory error, physical collision resolution",
+    "privileged_reward": "same truth physical coverage gain for every method; never an actor feature",
+    "termination": "intrinsic horizon36 or joint physical coverage/map-accuracy/pose success, remaining budget observed",
+    "macro_duration": "1to3 joint primitive steps; goal interrupted at horizon; accumulated primitive discounted rewards; gamma and GAE lambda exponentiated by actualduration",
+    "rnn_reset": "episode boundary only; full-episode BPTT in PPO; external quota cutoff bootstraps",
+    "gae_lambda": 0.95,
+    "return_normalization": {
+      "mean": 0,
+      "scale": 10
+    },
+    "checkpoint_rule": "final weights; new-episode boundary resume only",
+    "sampled_vs_greedy": {
+      "training": "sampled",
+      "random_heuristic": "sampled",
+      "other_heuristics": "deterministic",
+      "validation": "greedy"
+    },
+    "minimum_range": "0.25m true and measured near-field censoring, counted discarded events; revisit standoff0.5m from estimated landmark",
+    "physical_coverage": "Fixed36 cell centers in the geometric sensor annulus0.25to1.25m, accumulated from truth; separate from estimated annuli and landmark detection accuracy."
+  },
+  "interpretation": "Installation-size learning/tractability checks, separate synthetic discrimination and16 task training steps; no policy comparison or quantum claim."
+}

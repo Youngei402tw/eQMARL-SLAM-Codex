@@ -1,0 +1,10 @@
+{
+  "run_id": "04-controller-preflight-v2_attempt-01",
+  "source_commit": "2bb120b6ba51a70dad2f29b43587a6993be1aa57",
+  "config_sha256": "c2aaf1f2e6992cb0ed32ec7e63e4331af737886037165786ec3ba24a9b94934b",
+  "metrics_sha256": "59115da56745afea0732fb7d4647d3d7b50fde521324df8174f311505b73d5cc",
+  "metrics_rows": 41,
+  "passed": false,
+  "analysis_version": "packaging-recovery-v1",
+  "interpretation": "Partial packaging failure; raw execution rows and checkpoint remain. No aggregate scientific gate result reconstructed."
+}
