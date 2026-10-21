@@ -2,7 +2,7 @@
 
 A staged research project to test whether an entangled quantum critic improves cooperative active SLAM under controlled information, model, and compute budgets.
 
-**Stages 00–03 passed with verified evidence; Stage 04 preflight is running. Task learning is currently limited to recorded smoke diagnostics.** See [project_state.json](project_state.json) for the verified commits and next action, and the [publication receipt](docs/stages/00-publication.json) for the file verification evidence.
+**Stages 00–04 passed with verified evidence; Stage 05 is next. Three bounded classical pilot seeds are archived.** See [project_state.json](project_state.json) for the verified commits and next action, and the [publication receipt](docs/stages/00-publication.json) for the file verification evidence.
 
 ## Start here
 

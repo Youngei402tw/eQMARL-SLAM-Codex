@@ -25,7 +25,7 @@
         "circuit_evaluations": 0,
         "shots": 0
       },
-      "publication_status": "pending",
+      "publication_status": "verified",
       "resource_reconciliation": "configs/stage04/resource-reconciliation-v1.json"
     },
     {
@@ -51,7 +51,7 @@
         "circuit_evaluations": 0,
         "shots": 0
       },
-      "publication_status": "pending"
+      "publication_status": "verified"
     },
     {
       "run_id": "04-controller-preflight-v2_attempt-02",
@@ -79,7 +79,7 @@
       "config": "configs/stage04/pilot-4401.yaml",
       "config_sha256": "7d9351bad71bfd45f03c40d370a170ac5a3197369f118ba509e1393702877276",
       "source_commit": "e4a49ac3eb99fe6587c11bce55497212bd3f9fbe",
-      "results_commit": null,
+      "results_commit": "1b1afbecff6379a891cbb5652f356769a2ba8e40",
       "resources_consumed": {
         "primitive_steps": 3080,
         "decisions": 3284,
@@ -90,7 +90,7 @@
         "circuit_evaluations": 0,
         "shots": 0
       },
-      "publication_status": "pending"
+      "publication_status": "verified"
     },
     {
       "run_id": "04-classical-pilot-v2_seed-4402_attempt-01",
@@ -98,7 +98,7 @@
       "config": "configs/stage04/pilot-4402.yaml",
       "config_sha256": "62acaa4d09c656c9bbac0c0ffb0b509b916d0c3932d6bac96736a36502a8101d",
       "source_commit": "e4a49ac3eb99fe6587c11bce55497212bd3f9fbe",
-      "results_commit": null,
+      "results_commit": "1b1afbecff6379a891cbb5652f356769a2ba8e40",
       "resources_consumed": {
         "primitive_steps": 3080,
         "decisions": 3268,
@@ -109,7 +109,7 @@
         "circuit_evaluations": 0,
         "shots": 0
       },
-      "publication_status": "pending"
+      "publication_status": "verified"
     },
     {
       "run_id": "04-classical-pilot-v2_seed-4403_attempt-01",
@@ -117,7 +117,7 @@
       "config": "configs/stage04/pilot-4403.yaml",
       "config_sha256": "55840b9cfd6263de01fc3075e56ad06825462348c082085ea2a0961aefbe1257",
       "source_commit": "e4a49ac3eb99fe6587c11bce55497212bd3f9fbe",
-      "results_commit": null,
+      "results_commit": "1b1afbecff6379a891cbb5652f356769a2ba8e40",
       "resources_consumed": {
         "primitive_steps": 2228,
         "decisions": 1548,
@@ -128,7 +128,7 @@
         "circuit_evaluations": 0,
         "shots": 0
       },
-      "publication_status": "pending"
+      "publication_status": "verified"
     }
   ]
 }

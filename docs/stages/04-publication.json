@@ -1,0 +1,58 @@
+{
+  "stage": "04",
+  "verified_utc": "2026-10-21T03:36:17.888672+00:00",
+  "verified_remote_head": "1b1afbecff6379a891cbb5652f356769a2ba8e40",
+  "mechanism": "Independent Git retrieval of all failed/completed bundles, raw records and selected/final checkpoints; every listed artifact hash and size verified",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "04-classical-pilot-v2_seed-4401_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 285,
+      "metrics_sha256": "f73089daa6597d9bed00d7ccf926d945eb2365e66614b9e3ec0f2460f696d943"
+    },
+    {
+      "valid": true,
+      "run_id": "04-classical-pilot-v2_seed-4402_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 288,
+      "metrics_sha256": "b03a35618f406e4fea8335545abc4d944a775ac4dabb517f02cb3c4e072e9e08"
+    },
+    {
+      "valid": true,
+      "run_id": "04-classical-pilot-v2_seed-4403_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 288,
+      "metrics_sha256": "f733560ef86d54c538020cf50990b1bfc79fca8e1b735ed512d0a209b627492b"
+    },
+    {
+      "valid": true,
+      "run_id": "04-controller-preflight-v1_attempt-01",
+      "status": "failed",
+      "verified_files": 8,
+      "metrics_rows": 6,
+      "metrics_sha256": "6e35e03b0e4be7a7c44709fe73b39cc74bc83d100815f4d7d028acc92b9df285"
+    },
+    {
+      "valid": true,
+      "run_id": "04-controller-preflight-v2_attempt-01",
+      "status": "failed",
+      "verified_files": 10,
+      "metrics_rows": 41,
+      "metrics_sha256": "59115da56745afea0732fb7d4647d3d7b50fde521324df8174f311505b73d5cc"
+    },
+    {
+      "valid": true,
+      "run_id": "04-controller-preflight-v2_attempt-02",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 41,
+      "metrics_sha256": "24673e372634e0b5eba53e3c2d0e5b89e65d42d5f0360ca8ce9922b15cd0cc62"
+    }
+  ],
+  "resource_reconciliation": "configs/stage04/resource-reconciliation-v1.json",
+  "large_external_artifacts": []
+}

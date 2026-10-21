@@ -77,9 +77,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/04-classical-controller.md",
-      "status": "running",
+      "status": "passed",
       "branch_created": true,
-      "dependency_completion_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513"
+      "dependency_completion_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513",
+      "publication_receipt": "docs/stages/04-publication.json"
     },
     {
       "id": "05",

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-21T03:33:10.731038+00:00",
+  "updated_utc": "2026-10-21T03:36:17.889805+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,22 +12,23 @@
   },
   "authorized_current_scope": "Execute Stages 01\u201309 autonomously under the recorded plan, stage gates and resource caps; user instruction 2026-10-20.",
   "active_stage": "04",
-  "stage_status": "running",
+  "stage_status": "passed",
   "training_runs_executed": 5,
   "current_branch": "stage/04-classical-controller",
   "dependency_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513",
   "completion_commit": null,
-  "publication_status": "pending",
+  "publication_status": "verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
     "main_before_stage01_integration": "822d073160092a681b9966cbee1a5dfdb23b8e30",
     "stage/01-reference-port": "6b49e7010d9c0667acb41854b1d008f303ea0355",
     "stage/02-exploration-controls": "84bd6c8c150becb84ca5cdd65dcb855731d1db9c",
-    "stage/03-slam-beliefs": "dcac457be515958b259a9d32eacbcdb2e90a003e"
+    "stage/03-slam-beliefs": "dcac457be515958b259a9d32eacbcdb2e90a003e",
+    "stage/04-classical-controller": "1b1afbecff6379a891cbb5652f356769a2ba8e40"
   },
   "blockers": [],
-  "next_action": "Verify all Stage04 pilot archives, document seed variance and freeze gate receipt before starting critic comparisons.",
+  "next_action": "Index Stage04 completion and start matched critic attribution from this verified state; preserve all three trained seeds and taskv2 settings.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -94,9 +95,20 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 669.64714884758,
+    "consumed_wall_seconds": 828.759918113552,
     "setup_wall_seconds_charged": 669.64714884758,
-    "setup_charge_convention": "Conservative active setup/development envelope from Stage04 branch creation to first source publication."
+    "setup_charge_convention": "Conservative active setup/development envelope from Stage04 branch creation to first source publication.",
+    "recorded_experiment_resources": {
+      "primitive_steps": 8573,
+      "decisions": 8226,
+      "updates": 462,
+      "wall_seconds": 159.11276926597202,
+      "cpu_core_hours": 0.04419262277777778,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 0,
+      "shots": 0
+    },
+    "resource_reconciliation": "configs/stage04/resource-reconciliation-v1.json"
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
   "active_runs": []
