@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-21T03:42:42.152807+00:00",
+  "updated_utc": "2026-10-21T04:02:38.957186+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -28,7 +28,7 @@
     "stage/04-classical-controller": "1b1afbecff6379a891cbb5652f356769a2ba8e40"
   },
   "blockers": [],
-  "next_action": "Publish selected-rate three-seed matched pilots, then execute from immutable source.",
+  "next_action": "Finish18 registered matched critic pilots, archive and remotely verify every result, then update gate report before Stage06.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -117,5 +117,13 @@
     "setup_charge_convention": "Conservative active setup envelope from branch creation to preregistration."
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
-  "active_runs": []
+  "active_runs": [
+    {
+      "batch_session": 35053,
+      "source_commit": "ebac5755184ce6558fcf35cdbd8d1024d5039882",
+      "source_worktree": "/workspace/source05-pilots",
+      "outputs": "/workspace/experiment-artifacts/05",
+      "execution_logs": "/workspace/runlogs05-pilots"
+    }
+  ]
 }
