@@ -4,11 +4,12 @@
   "runs": [
     {
       "run_id": "06-local-edge-fit-v1_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage06/diagnostic.yaml",
       "config_sha256": "e18a1db43a20023321ac3bb0ffe4a289f306e43fc27fb8ad7cb2087602ebd86a",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "327e97a94c4718d81f7c2bed9a08d5653f50f735",
+      "results_commit": null,
+      "gates_passed": true
     }
   ]
 }

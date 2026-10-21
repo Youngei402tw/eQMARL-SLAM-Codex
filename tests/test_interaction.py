@@ -3,6 +3,14 @@ import torch
 from eqmarl_slam.interaction import InteractionCritic
 
 
+def test_quantum_edge_control_changes_only_input_preparation():
+    for seed in [6501,6502]:
+        torch.manual_seed(seed); entangled=InteractionCritic('eqmarl')
+        torch.manual_seed(seed); control=InteractionCritic('quantum_noent')
+        assert all(torch.equal(v,control.state_dict()[k]) for k,v in entangled.state_dict().items())
+        assert entangled.circuit.entanglement and not control.circuit.entanglement
+
+
 def test_edge_is_symmetric_and_disabled_edge_preserves_local_terms():
     x=torch.tensor(np.random.default_rng(6001).normal(size=(3,2,27)),dtype=torch.float64)
     for kind in ['none','bilinear','quantum_noent','eqmarl']:
