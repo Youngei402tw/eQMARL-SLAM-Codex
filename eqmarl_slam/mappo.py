@@ -50,6 +50,7 @@ def collect_episode(model, task_config, scenario, action_generator, *, primitive
     if on_transition is not None: env.on_primitive = on_transition
     hidden = model.actor.initial_state(agents=2)
     rows, total_return = [], 0.
+    component_totals = {k:0. for k in ['coverage','information','travel','collision','communication']}
     primitive_steps = 0
     done = False
     while not done and primitive_steps < primitive_limit:
@@ -67,6 +68,8 @@ def collect_episode(model, task_config, scenario, action_generator, *, primitive
         rows.append({"obs":observation.copy(),"mask":mask.copy(),"actions":action.numpy(),"old_log":old_log.numpy(),
                      "value":value,"reward":reward,"duration":duration,"terminal":done})
         primitive_steps += duration; total_return += info["undiscounted_reward"]
+        for parts in info['reward_components']:
+            for key, amount in parts.items(): component_totals[key] += amount
         observation, mask = observation_next, mask_next
     with torch.no_grad():
         bootstrap = 0. if done else float(model.critic(torch.tensor(observation, dtype=torch.float64)))*10.
@@ -76,8 +79,11 @@ def collect_episode(model, task_config, scenario, action_generator, *, primitive
         row.update(advantage=advantage, target=target)
     metrics = env.metrics()
     env.close()
+    action_counts = [[sum(int(row['actions'][agent])==choice for row in rows) for choice in range(5)] for agent in range(2)]
     return rows, {**metrics,"return":total_return,"macro_decisions":len(rows),"external_collection_cutoff":not done,
-                  "scenario_id":scenario["scenario_id"]}
+                  "scenario_id":scenario["scenario_id"],"action_counts_by_agent":action_counts,
+                  "macro_duration_counts":{duration:sum(row['duration']==duration for row in rows) for duration in [1,2,3]},
+                  "reward_component_totals":component_totals}
 
 
 def update(model, optimizer, episodes, *, epochs=2, clip=.2, entropy_coefficient=.01, on_update=None):
@@ -116,7 +122,12 @@ def update(model, optimizer, episodes, *, epochs=2, clip=.2, entropy_coefficient
                         "actor_gradient_norm":actor_grad,"critic_gradient_norm":critic_grad,
                         "mean_probability_ratio":float(torch.cat(ratios).mean().detach()),
                         "advantage_mean":float(mean),"advantage_std":float(std),
-                        "target_min":min(targets),"target_max":max(targets)})
+                        "target_min":min(targets),"target_max":max(targets),
+                        "target_mean":float(np.mean(targets)),"target_variance":float(np.var(targets)),
+                        "normalized_value_mean":float(torch.stack(values).detach().mean()),
+                        "normalized_value_variance":float(torch.stack(values).detach().var(unbiased=False)),
+                        "critic_gradient_groups_after_clip":{name:float(parameter.grad.norm()) if parameter.grad is not None else None
+                                                             for name,parameter in model.critic.named_parameters()}})
         if on_update is not None: on_update(history[-1])
     return history
 
