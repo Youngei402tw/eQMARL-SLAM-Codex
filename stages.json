@@ -80,7 +80,9 @@
       "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513",
-      "publication_receipt": "docs/stages/04-publication.json"
+      "publication_receipt": "docs/stages/04-publication.json",
+      "completion_commit": "2f40002ca55f05ff620d25872971241d8d730223",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/5"
     },
     {
       "id": "05",
@@ -92,8 +94,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/05-critic-ablation.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "2f40002ca55f05ff620d25872971241d8d730223",
+      "publication_receipt": "docs/stages/05-publication.json"
     },
     {
       "id": "06",

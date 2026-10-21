@@ -1,0 +1,193 @@
+{
+  "stage": "05",
+  "run_id": "05-critic-fit-v1_attempt-01",
+  "protocol_id": "critic-ablation-v1",
+  "profile": "diagnostic",
+  "experiment": "critic-fitting",
+  "method": "matched_critic_fitting_matrix",
+  "hypothesis": "Matched split circuits differ only by input entanglement; every method has meaningful gradients and signed-value capacity on a frozen real-return corpus.",
+  "dependency_completion_commit": "2f40002ca55f05ff620d25872971241d8d730223",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 1000,
+  "max_cpu_threads": 1,
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": 5201,
+    "map": {
+      "split": "train",
+      "field": "map_seed"
+    },
+    "evaluation_map": {
+      "split": "validation",
+      "field": "map_seed"
+    },
+    "sensor": {
+      "base_field": "noise_seed",
+      "family_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "action": 5101,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": {
+      "path": "configs/data/train-belief-v1.json",
+      "sha256": "2a1abba3d2cab04838046257f58fc9bff25e23c23a2b9d8929a81f2a2f192aa5"
+    },
+    "development": null,
+    "validation": {
+      "path": "configs/data/validation-belief-v1.json",
+      "sha256": "d42a038f42a1ded7cc6053bb8b58e2462b4a10ae91115398551b8c84598d9f23"
+    },
+    "test": null
+  },
+  "model": {
+    "actor": "frozen archived Stage04 actors, equally represented only for dataset collection",
+    "encoder": "shared trainable Linear27to2 for each critic",
+    "critic": [
+      "split_classical",
+      "central_classical",
+      "bilinear",
+      "quantum_noent",
+      "eqmarl",
+      "qfctde"
+    ],
+    "parameter_counts": {
+      "split_classical": 121,
+      "central_classical": 249,
+      "bilinear": 125,
+      "quantum_noent": 86,
+      "eqmarl": 86,
+      "qfctde": 86
+    },
+    "optimizer": {
+      "type": "Adam",
+      "real_fit_lr": 0.01,
+      "real_fit_updates": 32,
+      "capacity_lr": 0.01,
+      "capacity_updates": 128
+    }
+  },
+  "quantum": {
+    "device": "default.qubit",
+    "shots": null,
+    "dtype": "float64/complex128",
+    "diff_method": "backprop",
+    "wires": 4,
+    "layers": 1,
+    "observables": [
+      "ZZZZ"
+    ],
+    "head": "unconstrained affine",
+    "encoder_trainable": true,
+    "scales_trainable": true,
+    "qfctde": "one global four-wire Hadamard/ring circuit, additional topology",
+    "noent_control": "only initial Bell preparation disabled; all parameters initialized identically"
+  },
+  "task": {
+    "protocol": "belief-controller-v2",
+    "horizon": 36,
+    "macro_max_steps": 3,
+    "speed": 0.45,
+    "goal_tolerance": 0.18,
+    "sensor_range": 1.25,
+    "landmark_count": 9,
+    "gamma": 0.99,
+    "coverage_threshold": 0.85,
+    "map_accuracy_threshold": 0.7,
+    "landmark_error_threshold": 0.35,
+    "pose_error_threshold": 0.25,
+    "coverage_weight": 10.0,
+    "information_weight": 0.001,
+    "travel_weight": 0.01,
+    "collision_weight": 0.1,
+    "byte_weight": 1e-06,
+    "prior_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "motion_std": [
+      0.015,
+      0.015,
+      0.01
+    ],
+    "odometry_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "observation_sigmas": [
+      0.02,
+      0.1
+    ],
+    "sensor_min_range": 0.25,
+    "revisit_standoff": 0.5
+  },
+  "frozen_actor_seeds": [
+    4401,
+    4402,
+    4403
+  ],
+  "actor_checkpoints": {
+    "4401": "experiments/04/04-classical-pilot-v2_seed-4401_attempt-01/final.pt",
+    "4402": "experiments/04/04-classical-pilot-v2_seed-4402_attempt-01/final.pt",
+    "4403": "experiments/04/04-classical-pilot-v2_seed-4403_attempt-01/final.pt"
+  },
+  "dataset_action_seed": 5101,
+  "dataset_scenarios": {
+    "train": [
+      {
+        "scenario_id": "train-belief-v1-000",
+        "map_seed": 41000,
+        "noise_seed": 42000
+      },
+      {
+        "scenario_id": "train-belief-v1-001",
+        "map_seed": 41001,
+        "noise_seed": 42001
+      }
+    ],
+    "validation": [
+      {
+        "scenario_id": "validation-belief-v1-000",
+        "map_seed": 43000,
+        "noise_seed": 44000
+      }
+    ]
+  },
+  "methods": [
+    "split_classical",
+    "central_classical",
+    "bilinear",
+    "quantum_noent",
+    "eqmarl",
+    "qfctde"
+  ],
+  "critic_seed": 5201,
+  "fit_learning_rate": 0.01,
+  "fit_updates": 32,
+  "capacity_learning_rate": 0.01,
+  "capacity_updates": 128,
+  "capacity_seed": 5203,
+  "capacity_mse_threshold": 0.0025,
+  "target_normalization": {
+    "mean": 0,
+    "scale": 10
+  },
+  "signed_fixture": {
+    "targets": [
+      -0.1,
+      0.1
+    ],
+    "input_rng": 5203,
+    "scope": "separate two-point function-capacity check, not empirical negative-return evidence"
+  },
+  "interpretation": "Corrected common-head component fitting; actor weights frozen only for the separately registered corpus. RL actors later train independently. Underfitting is reported, not silently repaired by enlarging one method."
+}

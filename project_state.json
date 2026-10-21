@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-21T03:36:17.889805+00:00",
+  "updated_utc": "2026-10-21T04:19:50.412690+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -11,11 +11,11 @@
     "last_check": "All 20 files of the published planning commit matched their local Git blob hashes; the stage branch head and AGENTS.md content were read back through the GitHub plugin."
   },
   "authorized_current_scope": "Execute Stages 01\u201309 autonomously under the recorded plan, stage gates and resource caps; user instruction 2026-10-20.",
-  "active_stage": "04",
+  "active_stage": "05",
   "stage_status": "passed",
-  "training_runs_executed": 5,
-  "current_branch": "stage/04-classical-controller",
-  "dependency_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513",
+  "training_runs_executed": 47,
+  "current_branch": "stage/05-critic-ablation",
+  "dependency_commit": "2f40002ca55f05ff620d25872971241d8d730223",
   "completion_commit": null,
   "publication_status": "verified",
   "verified_remote_commits": {
@@ -25,10 +25,11 @@
     "stage/01-reference-port": "6b49e7010d9c0667acb41854b1d008f303ea0355",
     "stage/02-exploration-controls": "84bd6c8c150becb84ca5cdd65dcb855731d1db9c",
     "stage/03-slam-beliefs": "dcac457be515958b259a9d32eacbcdb2e90a003e",
-    "stage/04-classical-controller": "1b1afbecff6379a891cbb5652f356769a2ba8e40"
+    "stage/04-classical-controller": "1b1afbecff6379a891cbb5652f356769a2ba8e40",
+    "stage/05-critic-ablation": "d6c16db627f511ab04a4caca7ea39e7ec32bd216"
   },
   "blockers": [],
-  "next_action": "Index Stage04 completion and start matched critic attribution from this verified state; preserve all three trained seeds and taskv2 settings.",
+  "next_action": "Create Stage06 from this immutable Stage05 completion after publishing and verifying its head.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -38,7 +39,7 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "05",
+  "next_stage": "06",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Subsequent main receipt or Stage 01 PR; this commit cannot contain its own hash.",
   "next_stage_status": "planned",
@@ -91,24 +92,40 @@
         "circuit_evaluations": 0,
         "shots": 0
       }
+    },
+    "04": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 828.759918113552,
+      "setup_wall_seconds_charged": 669.64714884758,
+      "setup_charge_convention": "Conservative active setup/development envelope from Stage04 branch creation to first source publication.",
+      "recorded_experiment_resources": {
+        "primitive_steps": 8573,
+        "decisions": 8226,
+        "updates": 462,
+        "wall_seconds": 159.11276926597202,
+        "cpu_core_hours": 0.04419262277777778,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "resource_reconciliation": "configs/stage04/resource-reconciliation-v1.json"
     }
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 828.759918113552,
-    "setup_wall_seconds_charged": 669.64714884758,
-    "setup_charge_convention": "Conservative active setup/development envelope from Stage04 branch creation to first source publication.",
+    "consumed_wall_seconds": 2590.412679,
+    "setup_wall_seconds_charged": 971.0324917009411,
+    "setup_charge_convention": "Conservative active stage envelope less instrumented sequential experiment segments; idle across sessions must be explicitly excluded.",
     "recorded_experiment_resources": {
-      "primitive_steps": 8573,
-      "decisions": 8226,
-      "updates": 462,
-      "wall_seconds": 159.11276926597202,
-      "cpu_core_hours": 0.04419262277777778,
+      "primitive_steps": 76016,
+      "decisions": 56814,
+      "updates": 3758,
+      "wall_seconds": 1619.380187299059,
+      "cpu_core_hours": 0.4497717286111111,
       "gpu_device_hours": 0,
-      "circuit_evaluations": 0,
+      "circuit_evaluations": 39373,
       "shots": 0
-    },
-    "resource_reconciliation": "configs/stage04/resource-reconciliation-v1.json"
+    }
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
   "active_runs": []

@@ -1,0 +1,655 @@
+{
+  "stage": "05",
+  "protocol_id": "critic-ablation-v1",
+  "dependency_completion_commit": "2f40002ca55f05ff620d25872971241d8d730223",
+  "model": {
+    "actor": "shared Linear27to16,Tanh,GRUCell16,Linear5; separate agent memory",
+    "encoder": "classical critic shared Linear27to2",
+    "critic": "quantum_noent",
+    "parameter_counts": {
+      "actor": 2165,
+      "critic": 86
+    },
+    "optimizer": {
+      "type": "Adam",
+      "learning_rate": 0.003,
+      "ppo_epochs": 2,
+      "clip": 0.2,
+      "entropy": 0.01
+    }
+  },
+  "quantum": {
+    "device": "default.qubit",
+    "shots": null,
+    "dtype": "float64/complex128",
+    "diff_method": "backprop",
+    "wires": 4,
+    "layers": 1,
+    "observables": [
+      "ZZZZ"
+    ],
+    "head": "unconstrained affine",
+    "encoder_trainable": true,
+    "scales_trainable": true,
+    "qfctde": "one global four-wire Hadamard/ring circuit, additional topology",
+    "noent_control": "only initial Bell preparation disabled; all parameters initialized identically",
+    "input_entanglement": false
+  },
+  "task": {
+    "protocol": "belief-controller-v2",
+    "horizon": 36,
+    "macro_max_steps": 3,
+    "speed": 0.45,
+    "goal_tolerance": 0.18,
+    "sensor_range": 1.25,
+    "landmark_count": 9,
+    "gamma": 0.99,
+    "coverage_threshold": 0.85,
+    "map_accuracy_threshold": 0.7,
+    "landmark_error_threshold": 0.35,
+    "pose_error_threshold": 0.25,
+    "coverage_weight": 10.0,
+    "information_weight": 0.001,
+    "travel_weight": 0.01,
+    "collision_weight": 0.1,
+    "byte_weight": 1e-06,
+    "prior_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "motion_std": [
+      0.015,
+      0.015,
+      0.01
+    ],
+    "odometry_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "observation_sigmas": [
+      0.02,
+      0.1
+    ],
+    "sensor_min_range": 0.25,
+    "revisit_standoff": 0.5
+  },
+  "fixed_task_conventions": {
+    "workspace": "Known empty4m x4m square, holonomic body commands, fixed36 coverage cells",
+    "unknown_map": "9 unknown landmark locations with known IDs",
+    "robot_radius_m": 0.12,
+    "map_generation_bounds": [
+      0.3,
+      3.7,
+      0.3,
+      3.7
+    ],
+    "sensor_fov_rad": 6.283185307179586,
+    "candidate_slots": [
+      "continue",
+      "frontier1",
+      "frontier2 spatially diverse",
+      "revisit largest marginal landmark",
+      "rendezvous delivered teammate estimate"
+    ],
+    "information": "Local factor posterior plus full raw-factor broadcast each macro boundary, zero latency/loss, all UTF8 packet bytes including priors charged",
+    "actor_observation_order": "pose2, sincos2, covariance diagonal std3, remaining1, estimated coverage1, observed landmark fraction1, delivered teammate delta2, five candidate(dx,dy,novelty) triples",
+    "evaluator_only": "physical sensor coverage, true landmark error, true pose/trajectory error, physical collision resolution",
+    "privileged_reward": "same truth physical coverage gain for every method; never an actor feature",
+    "termination": "intrinsic horizon36 or joint physical coverage/map-accuracy/pose success, remaining budget observed",
+    "macro_duration": "1to3 joint primitive steps; goal interrupted at horizon; accumulated primitive discounted rewards; gamma and GAE lambda exponentiated by actualduration",
+    "rnn_reset": "episode boundary only; full-episode BPTT in PPO; external quota cutoff bootstraps",
+    "gae_lambda": 0.95,
+    "return_normalization": {
+      "mean": 0,
+      "scale": 10
+    },
+    "checkpoint_rule": "final weights; new-episode boundary resume only",
+    "sampled_vs_greedy": {
+      "training": "sampled",
+      "random_heuristic": "sampled",
+      "other_heuristics": "deterministic",
+      "validation": "greedy"
+    },
+    "minimum_range": "0.25m true and measured near-field censoring, counted discarded events; revisit standoff0.5m from estimated landmark",
+    "physical_coverage": "Fixed36 cell centers in the geometric sensor annulus0.25to1.25m, accumulated from truth; separate from estimated annuli and landmark detection accuracy."
+  },
+  "run_id": "05-tuning-quantum_noent_lr-0.003_seed-5301_attempt-01",
+  "experiment": "critic-training",
+  "method": "quantum_noent",
+  "hypothesis": "A common sample budget and equal two-rate two-seed tuning opportunity permit valid critic attribution.",
+  "profile": "tuning",
+  "wall_seconds": 1800,
+  "max_primitive_steps": 2080,
+  "max_cpu_threads": 1,
+  "artifact_output_root": "/workspace/experiment-artifacts",
+  "actor_seed": 5301,
+  "critic_seed": 6301,
+  "action_seed": 7301,
+  "actor_hidden": 16,
+  "learning_rate": 0.003,
+  "training_steps": 1000,
+  "training_wall_seconds": 1600,
+  "episodes_per_update": 4,
+  "ppo_epochs": 2,
+  "ppo_clip": 0.2,
+  "entropy_coefficient": 0.01,
+  "training_scenarios": [
+    {
+      "scenario_id": "train-belief-v1-000",
+      "map_seed": 41000,
+      "noise_seed": 42000
+    },
+    {
+      "scenario_id": "train-belief-v1-001",
+      "map_seed": 41001,
+      "noise_seed": 42001
+    },
+    {
+      "scenario_id": "train-belief-v1-002",
+      "map_seed": 41002,
+      "noise_seed": 42002
+    },
+    {
+      "scenario_id": "train-belief-v1-003",
+      "map_seed": 41003,
+      "noise_seed": 42003
+    },
+    {
+      "scenario_id": "train-belief-v1-004",
+      "map_seed": 41004,
+      "noise_seed": 42004
+    },
+    {
+      "scenario_id": "train-belief-v1-005",
+      "map_seed": 41005,
+      "noise_seed": 42005
+    },
+    {
+      "scenario_id": "train-belief-v1-006",
+      "map_seed": 41006,
+      "noise_seed": 42006
+    },
+    {
+      "scenario_id": "train-belief-v1-007",
+      "map_seed": 41007,
+      "noise_seed": 42007
+    },
+    {
+      "scenario_id": "train-belief-v1-008",
+      "map_seed": 41008,
+      "noise_seed": 42008
+    },
+    {
+      "scenario_id": "train-belief-v1-009",
+      "map_seed": 41009,
+      "noise_seed": 42009
+    },
+    {
+      "scenario_id": "train-belief-v1-010",
+      "map_seed": 41010,
+      "noise_seed": 42010
+    },
+    {
+      "scenario_id": "train-belief-v1-011",
+      "map_seed": 41011,
+      "noise_seed": 42011
+    },
+    {
+      "scenario_id": "train-belief-v1-012",
+      "map_seed": 41012,
+      "noise_seed": 42012
+    },
+    {
+      "scenario_id": "train-belief-v1-013",
+      "map_seed": 41013,
+      "noise_seed": 42013
+    },
+    {
+      "scenario_id": "train-belief-v1-014",
+      "map_seed": 41014,
+      "noise_seed": 42014
+    },
+    {
+      "scenario_id": "train-belief-v1-015",
+      "map_seed": 41015,
+      "noise_seed": 42015
+    },
+    {
+      "scenario_id": "train-belief-v1-016",
+      "map_seed": 41016,
+      "noise_seed": 42016
+    },
+    {
+      "scenario_id": "train-belief-v1-017",
+      "map_seed": 41017,
+      "noise_seed": 42017
+    },
+    {
+      "scenario_id": "train-belief-v1-018",
+      "map_seed": 41018,
+      "noise_seed": 42018
+    },
+    {
+      "scenario_id": "train-belief-v1-019",
+      "map_seed": 41019,
+      "noise_seed": 42019
+    },
+    {
+      "scenario_id": "train-belief-v1-020",
+      "map_seed": 41020,
+      "noise_seed": 42020
+    },
+    {
+      "scenario_id": "train-belief-v1-021",
+      "map_seed": 41021,
+      "noise_seed": 42021
+    },
+    {
+      "scenario_id": "train-belief-v1-022",
+      "map_seed": 41022,
+      "noise_seed": 42022
+    },
+    {
+      "scenario_id": "train-belief-v1-023",
+      "map_seed": 41023,
+      "noise_seed": 42023
+    },
+    {
+      "scenario_id": "train-belief-v1-024",
+      "map_seed": 41024,
+      "noise_seed": 42024
+    },
+    {
+      "scenario_id": "train-belief-v1-025",
+      "map_seed": 41025,
+      "noise_seed": 42025
+    },
+    {
+      "scenario_id": "train-belief-v1-026",
+      "map_seed": 41026,
+      "noise_seed": 42026
+    },
+    {
+      "scenario_id": "train-belief-v1-027",
+      "map_seed": 41027,
+      "noise_seed": 42027
+    },
+    {
+      "scenario_id": "train-belief-v1-028",
+      "map_seed": 41028,
+      "noise_seed": 42028
+    },
+    {
+      "scenario_id": "train-belief-v1-029",
+      "map_seed": 41029,
+      "noise_seed": 42029
+    },
+    {
+      "scenario_id": "train-belief-v1-030",
+      "map_seed": 41030,
+      "noise_seed": 42030
+    },
+    {
+      "scenario_id": "train-belief-v1-031",
+      "map_seed": 41031,
+      "noise_seed": 42031
+    },
+    {
+      "scenario_id": "train-belief-v1-032",
+      "map_seed": 41032,
+      "noise_seed": 42032
+    },
+    {
+      "scenario_id": "train-belief-v1-033",
+      "map_seed": 41033,
+      "noise_seed": 42033
+    },
+    {
+      "scenario_id": "train-belief-v1-034",
+      "map_seed": 41034,
+      "noise_seed": 42034
+    },
+    {
+      "scenario_id": "train-belief-v1-035",
+      "map_seed": 41035,
+      "noise_seed": 42035
+    },
+    {
+      "scenario_id": "train-belief-v1-036",
+      "map_seed": 41036,
+      "noise_seed": 42036
+    },
+    {
+      "scenario_id": "train-belief-v1-037",
+      "map_seed": 41037,
+      "noise_seed": 42037
+    },
+    {
+      "scenario_id": "train-belief-v1-038",
+      "map_seed": 41038,
+      "noise_seed": 42038
+    },
+    {
+      "scenario_id": "train-belief-v1-039",
+      "map_seed": 41039,
+      "noise_seed": 42039
+    },
+    {
+      "scenario_id": "train-belief-v1-040",
+      "map_seed": 41040,
+      "noise_seed": 42040
+    },
+    {
+      "scenario_id": "train-belief-v1-041",
+      "map_seed": 41041,
+      "noise_seed": 42041
+    },
+    {
+      "scenario_id": "train-belief-v1-042",
+      "map_seed": 41042,
+      "noise_seed": 42042
+    },
+    {
+      "scenario_id": "train-belief-v1-043",
+      "map_seed": 41043,
+      "noise_seed": 42043
+    },
+    {
+      "scenario_id": "train-belief-v1-044",
+      "map_seed": 41044,
+      "noise_seed": 42044
+    },
+    {
+      "scenario_id": "train-belief-v1-045",
+      "map_seed": 41045,
+      "noise_seed": 42045
+    },
+    {
+      "scenario_id": "train-belief-v1-046",
+      "map_seed": 41046,
+      "noise_seed": 42046
+    },
+    {
+      "scenario_id": "train-belief-v1-047",
+      "map_seed": 41047,
+      "noise_seed": 42047
+    },
+    {
+      "scenario_id": "train-belief-v1-048",
+      "map_seed": 41048,
+      "noise_seed": 42048
+    },
+    {
+      "scenario_id": "train-belief-v1-049",
+      "map_seed": 41049,
+      "noise_seed": 42049
+    },
+    {
+      "scenario_id": "train-belief-v1-050",
+      "map_seed": 41050,
+      "noise_seed": 42050
+    },
+    {
+      "scenario_id": "train-belief-v1-051",
+      "map_seed": 41051,
+      "noise_seed": 42051
+    },
+    {
+      "scenario_id": "train-belief-v1-052",
+      "map_seed": 41052,
+      "noise_seed": 42052
+    },
+    {
+      "scenario_id": "train-belief-v1-053",
+      "map_seed": 41053,
+      "noise_seed": 42053
+    },
+    {
+      "scenario_id": "train-belief-v1-054",
+      "map_seed": 41054,
+      "noise_seed": 42054
+    },
+    {
+      "scenario_id": "train-belief-v1-055",
+      "map_seed": 41055,
+      "noise_seed": 42055
+    },
+    {
+      "scenario_id": "train-belief-v1-056",
+      "map_seed": 41056,
+      "noise_seed": 42056
+    },
+    {
+      "scenario_id": "train-belief-v1-057",
+      "map_seed": 41057,
+      "noise_seed": 42057
+    },
+    {
+      "scenario_id": "train-belief-v1-058",
+      "map_seed": 41058,
+      "noise_seed": 42058
+    },
+    {
+      "scenario_id": "train-belief-v1-059",
+      "map_seed": 41059,
+      "noise_seed": 42059
+    },
+    {
+      "scenario_id": "train-belief-v1-060",
+      "map_seed": 41060,
+      "noise_seed": 42060
+    },
+    {
+      "scenario_id": "train-belief-v1-061",
+      "map_seed": 41061,
+      "noise_seed": 42061
+    },
+    {
+      "scenario_id": "train-belief-v1-062",
+      "map_seed": 41062,
+      "noise_seed": 42062
+    },
+    {
+      "scenario_id": "train-belief-v1-063",
+      "map_seed": 41063,
+      "noise_seed": 42063
+    }
+  ],
+  "validation_scenarios": [
+    {
+      "scenario_id": "validation-belief-v1-000",
+      "map_seed": 43000,
+      "noise_seed": 44000
+    },
+    {
+      "scenario_id": "validation-belief-v1-001",
+      "map_seed": 43001,
+      "noise_seed": 44001
+    },
+    {
+      "scenario_id": "validation-belief-v1-002",
+      "map_seed": 43002,
+      "noise_seed": 44002
+    },
+    {
+      "scenario_id": "validation-belief-v1-003",
+      "map_seed": 43003,
+      "noise_seed": 44003
+    },
+    {
+      "scenario_id": "validation-belief-v1-004",
+      "map_seed": 43004,
+      "noise_seed": 44004
+    },
+    {
+      "scenario_id": "validation-belief-v1-005",
+      "map_seed": 43005,
+      "noise_seed": 44005
+    },
+    {
+      "scenario_id": "validation-belief-v1-006",
+      "map_seed": 43006,
+      "noise_seed": 44006
+    },
+    {
+      "scenario_id": "validation-belief-v1-007",
+      "map_seed": 43007,
+      "noise_seed": 44007
+    },
+    {
+      "scenario_id": "validation-belief-v1-008",
+      "map_seed": 43008,
+      "noise_seed": 44008
+    },
+    {
+      "scenario_id": "validation-belief-v1-009",
+      "map_seed": 43009,
+      "noise_seed": 44009
+    },
+    {
+      "scenario_id": "validation-belief-v1-010",
+      "map_seed": 43010,
+      "noise_seed": 44010
+    },
+    {
+      "scenario_id": "validation-belief-v1-011",
+      "map_seed": 43011,
+      "noise_seed": 44011
+    },
+    {
+      "scenario_id": "validation-belief-v1-012",
+      "map_seed": 43012,
+      "noise_seed": 44012
+    },
+    {
+      "scenario_id": "validation-belief-v1-013",
+      "map_seed": 43013,
+      "noise_seed": 44013
+    },
+    {
+      "scenario_id": "validation-belief-v1-014",
+      "map_seed": 43014,
+      "noise_seed": 44014
+    },
+    {
+      "scenario_id": "validation-belief-v1-015",
+      "map_seed": 43015,
+      "noise_seed": 44015
+    },
+    {
+      "scenario_id": "validation-belief-v1-016",
+      "map_seed": 43016,
+      "noise_seed": 44016
+    },
+    {
+      "scenario_id": "validation-belief-v1-017",
+      "map_seed": 43017,
+      "noise_seed": 44017
+    },
+    {
+      "scenario_id": "validation-belief-v1-018",
+      "map_seed": 43018,
+      "noise_seed": 44018
+    },
+    {
+      "scenario_id": "validation-belief-v1-019",
+      "map_seed": 43019,
+      "noise_seed": 44019
+    },
+    {
+      "scenario_id": "validation-belief-v1-020",
+      "map_seed": 43020,
+      "noise_seed": 44020
+    },
+    {
+      "scenario_id": "validation-belief-v1-021",
+      "map_seed": 43021,
+      "noise_seed": 44021
+    },
+    {
+      "scenario_id": "validation-belief-v1-022",
+      "map_seed": 43022,
+      "noise_seed": 44022
+    },
+    {
+      "scenario_id": "validation-belief-v1-023",
+      "map_seed": 43023,
+      "noise_seed": 44023
+    },
+    {
+      "scenario_id": "validation-belief-v1-024",
+      "map_seed": 43024,
+      "noise_seed": 44024
+    },
+    {
+      "scenario_id": "validation-belief-v1-025",
+      "map_seed": 43025,
+      "noise_seed": 44025
+    },
+    {
+      "scenario_id": "validation-belief-v1-026",
+      "map_seed": 43026,
+      "noise_seed": 44026
+    },
+    {
+      "scenario_id": "validation-belief-v1-027",
+      "map_seed": 43027,
+      "noise_seed": 44027
+    },
+    {
+      "scenario_id": "validation-belief-v1-028",
+      "map_seed": 43028,
+      "noise_seed": 44028
+    },
+    {
+      "scenario_id": "validation-belief-v1-029",
+      "map_seed": 43029,
+      "noise_seed": 44029
+    }
+  ],
+  "interpretation": "Exploratory tuning, common Taskv2 and independently trained actors. Final fixed-budget checkpoint; greedy validation only. No held-out final test access.",
+  "seed_streams": {
+    "model_init": 5301,
+    "critic_init": 6301,
+    "map": {
+      "split": "train",
+      "field": "map_seed"
+    },
+    "evaluation_map": {
+      "split": "validation",
+      "field": "map_seed"
+    },
+    "sensor": {
+      "splits": [
+        "train",
+        "validation"
+      ],
+      "base_field": "noise_seed",
+      "offsets": {
+        "motion": 0,
+        "odometry": 1,
+        "sensor": 2,
+        "relative": 3,
+        "prior": 4
+      }
+    },
+    "action": 7301,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": {
+      "path": "configs/data/train-belief-v1.json",
+      "sha256": "2a1abba3d2cab04838046257f58fc9bff25e23c23a2b9d8929a81f2a2f192aa5"
+    },
+    "development": null,
+    "validation": {
+      "path": "configs/data/validation-belief-v1.json",
+      "sha256": "d42a038f42a1ded7cc6053bb8b58e2462b4a10ae91115398551b8c84598d9f23"
+    },
+    "test": null
+  },
+  "critic_method": "quantum_noent"
+}
