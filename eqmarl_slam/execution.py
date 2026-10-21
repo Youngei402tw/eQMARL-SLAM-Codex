@@ -151,6 +151,12 @@ def execute(config_path, source_receipt):
         elif config["experiment"] == "controller-training":
             from .mappo import train
             diagnostics = train(config, output, emit, progress=progress)
+        elif config["experiment"] == "critic-fitting":
+            from .diagnostics05 import run_diagnostics
+            diagnostics = run_diagnostics(config, output, emit, progress=progress)
+        elif config["experiment"] == "critic-training":
+            from .critics import train_critic
+            diagnostics = train_critic(config, output, emit, progress=progress)
         elif config["experiment"] == "legacy-reference":
             command = [config["interpreter"], str(ROOT / "eqmarl_slam/reference_probe.py"),
                        "--fixtures", str(ROOT / config["fixtures"]),
