@@ -1,0 +1,27 @@
+{
+  "applies_to": "All critic-ablation-v1 runs; supplementary constructor resolution for immutable earlier tuning/fitting configurations. Later pilots include these values explicitly.",
+  "parts": {
+    "split_classical": 2,
+    "central_classical": 2,
+    "bilinear": 2,
+    "quantum_noent": 2,
+    "eqmarl": 2,
+    "qfctde": 1
+  },
+  "quantum_qubits_per_partition": {
+    "quantum_noent": 2,
+    "eqmarl": 2,
+    "qfctde": 4
+  },
+  "quantum_layers": 1,
+  "bell": "phi+",
+  "encoding": "RX(atan(scale*feature))",
+  "initialization": "theta Uniform[0,pi) in seeded torch stream; scales ones; affine heads PyTorch Linear defaults in same recorded seed stream",
+  "noise": null,
+  "quantum_diff_method": "backprop",
+  "shots": null,
+  "local_compression": "trainable shared Linear27to2",
+  "actor": "trainable shared recurrent actor16 with independent hidden state for two agents",
+  "constructor_source": "eqmarl_slam/critics.py and mappo.py at each recorded source commit",
+  "resolution_evidence": "Every quantum training diagnostic contains circuit.resource_report; state tensors in archived fitted/final checkpoints resolve every learned parameter. Equal corpus allocation means equal episodes per archived actor, not equal numbers of transitions."
+}

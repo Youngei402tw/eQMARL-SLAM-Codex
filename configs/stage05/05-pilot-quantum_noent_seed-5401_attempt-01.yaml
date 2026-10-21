@@ -4,7 +4,7 @@
   "dependency_completion_commit": "2f40002ca55f05ff620d25872971241d8d730223",
   "model": {
     "actor": "shared Linear27to16,Tanh,GRUCell16,Linear5; separate agent memory",
-    "encoder": "classical critic shared Linear27to2",
+    "encoder": "shared trainable Linear27to2 for the critic",
     "critic": "quantum_noent",
     "parameter_counts": {
       "actor": 2165,
@@ -15,7 +15,14 @@
       "learning_rate": 0.001,
       "ppo_epochs": 2,
       "clip": 0.2,
-      "entropy": 0.01
+      "entropy": 0.01,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.0,
+      "gradient_clip_norm_per_module": 0.5
     }
   },
   "quantum": {
@@ -33,7 +40,17 @@
     "scales_trainable": true,
     "qfctde": "one global four-wire Hadamard/ring circuit, additional topology",
     "noent_control": "only initial Bell preparation disabled; all parameters initialized identically",
-    "input_entanglement": false
+    "input_entanglement": false,
+    "parts": 2,
+    "qubits_per_partition": 2,
+    "encoding": "atan(scale*feature) then RX",
+    "bell": "phi+",
+    "noise": null,
+    "theta_initialization": "torch Uniform[0,pi), seeded critic stream",
+    "scales_initialization": "ones",
+    "readout": "global ZZZZ then trainable affine1to1",
+    "initial_preparation": "identity",
+    "later_inter_partition_gates": 0
   },
   "task": {
     "protocol": "belief-controller-v2",
