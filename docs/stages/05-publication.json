@@ -1,0 +1,15 @@
+{
+  "stage": "05",
+  "verified_remote_head": "d0a220d",
+  "mechanism": "Fresh independent Git clone; inventory hashes, raw rows and every fitted checkpoint verified",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "05-critic-fit-v1_attempt-01",
+      "status": "completed",
+      "verified_files": 14,
+      "metrics_rows": 213,
+      "metrics_sha256": "31135450280ad21385e459beeabc552c68326a7edb632a6dc79aa98056176e34"
+    }
+  ]
+}

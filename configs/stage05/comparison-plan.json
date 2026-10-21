@@ -1,0 +1,31 @@
+{
+  "stage": "05",
+  "protocol": "critic-ablation-v1",
+  "methods": [
+    "split_classical",
+    "central_classical",
+    "bilinear",
+    "quantum_noent",
+    "eqmarl",
+    "qfctde"
+  ],
+  "learning_rates": [
+    0.001,
+    0.003
+  ],
+  "tuning_seeds": [
+    5301,
+    5302
+  ],
+  "tuning_steps_per_seed": 1000,
+  "pilot_seeds": [
+    5401,
+    5402,
+    5403
+  ],
+  "pilot_steps_per_seed": 2000,
+  "validation_episodes": 30,
+  "selection": "For each method maximize mean validation return across two tuning seeds; exact ties choose lower learning rate. Both rates and every failure retained. A failed algorithmic run ranks below finite completed runs. No test access.",
+  "matching": "sample matched, common actor16 and trainable local27to2 encoders; wall time and parameters reported separately",
+  "budget_rationale": "43.57sec fitting with3045 device evaluations; bounded CPU experiment, smaller common steps than provisional20k pilots. Development question is short-budget behavior, not convergence. Whole stage fits24active hours; no expansion after results."
+}
