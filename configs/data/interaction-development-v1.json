@@ -1,0 +1,16 @@
+{
+  "split": "development",
+  "fixture_ids": [
+    "additive",
+    "uncertainty",
+    "complementarity",
+    "rendezvous",
+    "limited_communication",
+    "all",
+    "real_returns"
+  ],
+  "scope": "Synthetic component utilities plus separately labeled real frozen-return corpus; no task interventions or policy retraining.",
+  "data_seed": 6601,
+  "synthetic_train_rows": 16,
+  "synthetic_validation_rows": 8
+}
