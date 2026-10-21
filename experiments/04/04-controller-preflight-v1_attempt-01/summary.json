@@ -1,0 +1,22 @@
+{
+  "run_id": "04-controller-preflight-v1_attempt-01",
+  "source_commit": "a877367ce861080b275bdc8db3baa9a7a5c990da",
+  "config_sha256": "8e2f6e1dab1f6af504972f3a21c5ab04c3786cf4f99b1e3cc37986d4bfa88a2b",
+  "metrics_sha256": "6e35e03b0e4be7a7c44709fe73b39cc74bc83d100815f4d7d028acc92b9df285",
+  "metrics_rows": 6,
+  "analysis_version": "stage01-v1",
+  "passed": false,
+  "gates": {},
+  "resources_consumed": {
+    "primitive_steps": 12,
+    "decisions": 8,
+    "updates": 0,
+    "wall_seconds": 1.2264567249949323,
+    "cpu_core_hours": 0.00034056916666666667,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "interpretation": "Installation-size learning/tractability checks, separate synthetic discrimination and16 task training steps; no policy comparison or quantum claim.",
+  "analysis": {}
+}

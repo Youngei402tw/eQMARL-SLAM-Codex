@@ -4,11 +4,28 @@
   "runs": [
     {
       "run_id": "04-controller-preflight-v1_attempt-01",
-      "status": "planned",
+      "status": "failed",
       "config": "configs/stage04/preflight.yaml",
       "config_sha256": "8e2f6e1dab1f6af504972f3a21c5ab04c3786cf4f99b1e3cc37986d4bfa88a2b",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "a877367ce861080b275bdc8db3baa9a7a5c990da",
+      "results_commit": null,
+      "failure": {
+        "reason": "\nIndeterminate linear system detected while working near variable\n8646911284551352326 (Symbol: x6).\n\nThrown when a linear system is ill-posed.  The most common cause for this\nerror is having underconstrained variables, but the exception is also raised\nfor nearly indeterminate systems that are too poorly conditioned to solve\nreliably.  See the GTSAM Doxygen documentation for\ngtsam::IndeterminateSystemException and the user\nguide at\nhttps://github.com/borglab/gtsam/blob/develop/gtsam/linear/doc/IndeterminateSystemException.ipynb\nfor more information.",
+        "type": "RuntimeError",
+        "traceback": "failure.txt",
+        "attempt": 1
+      },
+      "resources_consumed": {
+        "primitive_steps": 12,
+        "decisions": 8,
+        "updates": 0,
+        "wall_seconds": 1.2264567249949323,
+        "cpu_core_hours": 0.00034056916666666667,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "pending"
     }
   ]
 }
