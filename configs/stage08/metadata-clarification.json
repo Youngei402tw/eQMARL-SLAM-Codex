@@ -1,0 +1,6 @@
+{
+  "scope": "Historical Stage04/05 training manifests remain immutable.",
+  "issue": "Their generic serializer retained the Stage01 checkpoint_selection label fixture_only_no_policy_selection and summary analysis_version stage01-v1.",
+  "actual_selection": "Final fixed-budget weights, as specified in each committed training config, checkpoint progress and diagnostic summary; no validation or test checkpoint selection occurred.",
+  "correction": "New serializer uses explicit config checkpoint_selection and analysis_version. Confirmatory configs explicitly declare final-fixed-budget selection and confirmatory-v1. This changes metadata only, not training or evaluation."
+}

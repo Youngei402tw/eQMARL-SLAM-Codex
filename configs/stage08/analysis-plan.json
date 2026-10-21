@@ -1,0 +1,110 @@
+{
+  "protocol_id": "confirmatory-v1",
+  "methods": [
+    "central_classical",
+    "quantum_noent",
+    "eqmarl"
+  ],
+  "seeds": [
+    8801,
+    8802,
+    8803,
+    8804,
+    8805,
+    8806,
+    8807,
+    8808
+  ],
+  "training_steps_per_seed": 10000,
+  "test_maps_per_seed": 100,
+  "validation_maps_per_seed": 30,
+  "task_protocol": "belief-controller-v2",
+  "actor": "unchanged shared recurrent16 architecture and initialization semantics; trained independently per method",
+  "critic_rates": {
+    "central_classical": 0.003,
+    "quantum_noent": 0.001,
+    "eqmarl": 0.001
+  },
+  "checkpoint_selection": "final fixed-budget weights, no selection from validation or test",
+  "policy_modes": {
+    "training": "sampled",
+    "validation": "greedy",
+    "test": "greedy"
+  },
+  "test_manifest": "configs/data/test-belief-v1.json",
+  "test_manifest_sha256": "2cac5636d5866d9399d74da5c62f93c26d89a3f7cdf5968ec5bc801378df0bdb",
+  "primary_contrast": {
+    "first": "eqmarl",
+    "second": "quantum_noent",
+    "metric": "physical_coverage",
+    "estimand": "mean paired difference of per-trained-seed mean physical sensor coverage over the100 fixed held-out scenarios"
+  },
+  "contrasts": [
+    [
+      "eqmarl",
+      "quantum_noent"
+    ],
+    [
+      "eqmarl",
+      "central_classical"
+    ],
+    [
+      "quantum_noent",
+      "central_classical"
+    ]
+  ],
+  "contrast_metrics": [
+    "physical_coverage",
+    "success"
+  ],
+  "bootstrap_seed": 889900,
+  "bootstrap_repetitions": 10000,
+  "interval": "pointwise95% percentile bootstrap resampling paired trained seeds after averaging100 episodes; conditional on this fixed test manifest; secondary contrasts descriptive and unadjusted",
+  "replication_unit": "independent trained seed, paired across methods; never treat100 episodes as100 training replications",
+  "failure_policy": "Keep every planned outcome; no seed replacement, test-driven retuning, budget extension or outcome-driven checkpoint choice. Failed/incomplete tests remain ledger entries and make the full-sample comparison incomplete; no silent dropping or invented outcomes. A separately logged mechanical checkpoint recovery must preserve the locked budget and charge prior work.",
+  "entropy_policy": "Entropy is a diagnostic, never a criterion for removing a poor or deterministic trained policy from final evaluation; finite updates and gradient connections remain correctness gates.",
+  "budget_rationale": {
+    "reference_target_steps": 100000,
+    "conservative_quantum_seconds_per_training_step_including_validation": 0.0507,
+    "conservative_classical_seconds_per_training_step_including_validation": 0.0196,
+    "reference_projection_seconds_before_final_testing": 96800.0,
+    "locked_training_projection_seconds_before_final_testing": 9680.0,
+    "stage_cap_seconds": 86400,
+    "choice": "Preserve all8 independent trained seeds and100 paired test scenarios, reduce the common sample budget to10000 before any test outcomes. This tests bounded learning, not convergence. One CPU thread/job, one training job, no new paid compute."
+  },
+  "selection_provenance": {
+    "classical": "Stage05 three-seed mean validation return",
+    "rates": "Stage05 registered equal two-rate two-seed search",
+    "interaction_candidate": "not selected; Stage06 component fitting gives no policy-validation benefit",
+    "finite_shot_candidate": "not selected; Stage07 is frozen sensitivity only"
+  },
+  "final_test_accessed_before_lock": false,
+  "no_equivalence_claim": true,
+  "execution_order": [
+    "08-confirmatory-central_classical_seed-8801_attempt-01",
+    "08-confirmatory-quantum_noent_seed-8801_attempt-01",
+    "08-confirmatory-eqmarl_seed-8801_attempt-01",
+    "08-confirmatory-central_classical_seed-8802_attempt-01",
+    "08-confirmatory-quantum_noent_seed-8802_attempt-01",
+    "08-confirmatory-eqmarl_seed-8802_attempt-01",
+    "08-confirmatory-central_classical_seed-8803_attempt-01",
+    "08-confirmatory-quantum_noent_seed-8803_attempt-01",
+    "08-confirmatory-eqmarl_seed-8803_attempt-01",
+    "08-confirmatory-central_classical_seed-8804_attempt-01",
+    "08-confirmatory-quantum_noent_seed-8804_attempt-01",
+    "08-confirmatory-eqmarl_seed-8804_attempt-01",
+    "08-confirmatory-central_classical_seed-8805_attempt-01",
+    "08-confirmatory-quantum_noent_seed-8805_attempt-01",
+    "08-confirmatory-eqmarl_seed-8805_attempt-01",
+    "08-confirmatory-central_classical_seed-8806_attempt-01",
+    "08-confirmatory-quantum_noent_seed-8806_attempt-01",
+    "08-confirmatory-eqmarl_seed-8806_attempt-01",
+    "08-confirmatory-central_classical_seed-8807_attempt-01",
+    "08-confirmatory-quantum_noent_seed-8807_attempt-01",
+    "08-confirmatory-eqmarl_seed-8807_attempt-01",
+    "08-confirmatory-central_classical_seed-8808_attempt-01",
+    "08-confirmatory-quantum_noent_seed-8808_attempt-01",
+    "08-confirmatory-eqmarl_seed-8808_attempt-01"
+  ],
+  "execution_order_reason": "Interleave methods within each paired seed; one training job at a time."
+}
