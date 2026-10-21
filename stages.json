@@ -111,9 +111,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/06-interaction-model.md",
-      "status": "running",
+      "status": "passed",
       "branch_created": true,
-      "dependency_completion_commit": "0647dc61b203825119e414189355c70d8c5410a5"
+      "dependency_completion_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+      "publication_receipt": "docs/stages/06-publication.json"
     },
     {
       "id": "07",
