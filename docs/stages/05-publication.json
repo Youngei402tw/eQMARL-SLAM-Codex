@@ -1,7 +1,8 @@
 {
   "stage": "05",
-  "verified_remote_head": "d0a220d",
-  "mechanism": "Fresh independent Git clone; inventory hashes, raw rows and every fitted checkpoint verified",
+  "verified_utc": "2026-10-21T03:53:42.806288+00:00",
+  "verified_remote_head": "9bb24cd0a37ec268532d2aa45ec77bc599b197ef",
+  "mechanism": "Fresh independent Git retrieval; every run manifest, resolved config, raw metric, diagnostic and inventoried checkpoint hash/size validated",
   "checks": [
     {
       "valid": true,
@@ -10,6 +11,86 @@
       "verified_files": 14,
       "metrics_rows": 213,
       "metrics_sha256": "31135450280ad21385e459beeabc552c68326a7edb632a6dc79aa98056176e34"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-bilinear_lr-0.001_seed-5301_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 189,
+      "metrics_sha256": "af868f1864e24b8317ca5ce11097f5c87cb6f3f4adb7cab14baaa9266098f6fa"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-bilinear_lr-0.001_seed-5302_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 154,
+      "metrics_sha256": "4e7dc00123676a8bdd4d47896c337318b6e1105628f010b21c91e6547d22f311"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-bilinear_lr-0.003_seed-5301_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 202,
+      "metrics_sha256": "98e42a3d89340467707d76259aa65780e149edeba2a60dab82c1c79107295ce0"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-bilinear_lr-0.003_seed-5302_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 166,
+      "metrics_sha256": "30f5a9c124d7514cced3e7a02e9fafaf51ccf4fce47ca10db1a4847a961910e4"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-central_classical_lr-0.001_seed-5301_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 180,
+      "metrics_sha256": "977313ec07835c9bbc04d4e1b98414e80c37f28a97e42961377612280a93cb9e"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-central_classical_lr-0.001_seed-5302_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 173,
+      "metrics_sha256": "c17ca5721346f10e2eb8c09b0dd4796eaed08f749914f23517e59ef3f32ce5ac"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-central_classical_lr-0.003_seed-5301_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 186,
+      "metrics_sha256": "6c17a69f739597b873424bb37008e8bcd2e9d2f3c064f23b392ff24abf2bc6f5"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-central_classical_lr-0.003_seed-5302_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 177,
+      "metrics_sha256": "9de87fdd6dd5aa71833e34989c16469b684aef4b2bde754f01b43d36151c3a86"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-eqmarl_lr-0.001_seed-5301_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 165,
+      "metrics_sha256": "e9bc91ce9d7e4939b246e319d6dfd98faf9a081b6a81a4e255daa5d54a9823de"
+    },
+    {
+      "valid": true,
+      "run_id": "05-tuning-eqmarl_lr-0.001_seed-5302_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 172,
+      "metrics_sha256": "e620e8762ad327bf7c6d3d4cfa12d1cba5741b634cb50880411d7299bc745dcd"
     }
   ]
 }
