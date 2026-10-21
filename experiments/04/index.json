@@ -113,11 +113,22 @@
     },
     {
       "run_id": "04-classical-pilot-v2_seed-4403_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage04/pilot-4403.yaml",
       "config_sha256": "55840b9cfd6263de01fc3075e56ad06825462348c082085ea2a0961aefbe1257",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "e4a49ac3eb99fe6587c11bce55497212bd3f9fbe",
+      "results_commit": null,
+      "resources_consumed": {
+        "primitive_steps": 2228,
+        "decisions": 1548,
+        "updates": 86,
+        "wall_seconds": 29.196296352005447,
+        "cpu_core_hours": 0.008109320000000001,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "publication_status": "pending"
     }
   ]
 }

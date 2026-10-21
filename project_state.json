@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-21T03:32:42.067519+00:00",
+  "updated_utc": "2026-10-21T03:33:10.731038+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -13,7 +13,7 @@
   "authorized_current_scope": "Execute Stages 01\u201309 autonomously under the recorded plan, stage gates and resource caps; user instruction 2026-10-20.",
   "active_stage": "04",
   "stage_status": "running",
-  "training_runs_executed": 2,
+  "training_runs_executed": 5,
   "current_branch": "stage/04-classical-controller",
   "dependency_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513",
   "completion_commit": null,
@@ -27,7 +27,7 @@
     "stage/03-slam-beliefs": "dcac457be515958b259a9d32eacbcdb2e90a003e"
   },
   "blockers": [],
-  "next_action": "Publish the fixed3seed classical pilot protocol and execute from a clean immutable source checkout, then archive and verify all outcomes.",
+  "next_action": "Verify all Stage04 pilot archives, document seed variance and freeze gate receipt before starting critic comparisons.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -99,13 +99,5 @@
     "setup_charge_convention": "Conservative active setup/development envelope from Stage04 branch creation to first source publication."
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
-  "active_runs": [
-    {
-      "run_id": "04-classical-pilot-v2_seed-4402_attempt-01",
-      "session_id": 61987,
-      "source_commit": "e4a49ac3eb99fe6587c11bce55497212bd3f9fbe",
-      "artifact_root": "/workspace/experiment-artifacts/04",
-      "note": "Inspect final manifest/process before resuming; never duplicate an existing directory."
-    }
-  ]
+  "active_runs": []
 }
