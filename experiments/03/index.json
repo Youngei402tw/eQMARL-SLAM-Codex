@@ -25,7 +25,7 @@
         "circuit_evaluations": 0,
         "shots": 0
       },
-      "publication_status": "pending"
+      "publication_status": "verified"
     },
     {
       "run_id": "03-belief-slam-v1_seedset-3101_attempt-02",
@@ -33,7 +33,7 @@
       "config": "configs/stage03/beliefs-attempt02.yaml",
       "config_sha256": "07dc3999f3e66ecbf9bef42d7a9073852485e5c248f2969b6dfdfcc84bf83a03",
       "source_commit": "afbde7ea75016f3410e47099b8a0f3b29cd01eef",
-      "results_commit": null,
+      "results_commit": "dcac457be515958b259a9d32eacbcdb2e90a003e",
       "reason": "Correct numeric JSON parsing; all scientific values and thresholds unchanged.",
       "resources_consumed": {
         "primitive_steps": 28,
@@ -45,7 +45,7 @@
         "circuit_evaluations": 0,
         "shots": 0
       },
-      "publication_status": "pending"
+      "publication_status": "verified"
     }
   ]
 }

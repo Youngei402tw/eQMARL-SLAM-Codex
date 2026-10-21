@@ -60,9 +60,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/03-slam-beliefs.md",
-      "status": "running",
+      "status": "passed",
       "branch_created": true,
-      "dependency_completion_commit": "84bd6c8c150becb84ca5cdd65dcb855731d1db9c"
+      "dependency_completion_commit": "84bd6c8c150becb84ca5cdd65dcb855731d1db9c",
+      "publication_receipt": "docs/stages/03-publication.json"
     },
     {
       "id": "04",

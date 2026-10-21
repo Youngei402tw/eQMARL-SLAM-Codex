@@ -2,7 +2,7 @@
 
 A staged research project to test whether an entangled quantum critic improves cooperative active SLAM under controlled information, model, and compute budgets.
 
-**Stages 00–02 passed with verified evidence; Stage 03 is running. No policy training has run.** See [project_state.json](project_state.json) for the verified commits and next action, and the [publication receipt](docs/stages/00-publication.json) for the file verification evidence.
+**Stages 00–03 passed with verified evidence; Stage 04 is next. No policy training has run.** See [project_state.json](project_state.json) for the verified commits and next action, and the [publication receipt](docs/stages/00-publication.json) for the file verification evidence.
 
 ## Start here
 

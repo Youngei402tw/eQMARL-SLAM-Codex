@@ -1,0 +1,29 @@
+{
+  "stage": "03",
+  "verified_utc": "2026-10-21T03:05:34.745597+00:00",
+  "verified_remote_head": "dcac457be515958b259a9d32eacbcdb2e90a003e",
+  "mechanism": "Fresh independent shallow Git clone and verification of every required artifact, including raw measurements and graph replay packages",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "03-belief-slam-v1_seedset-3101_attempt-01",
+      "status": "failed",
+      "verified_files": 11,
+      "metrics_rows": 152,
+      "metrics_sha256": "d83d03c36823d4f5630f66b571e5ecd01943306d3cb026408dece9b84361ae41"
+    },
+    {
+      "valid": true,
+      "run_id": "03-belief-slam-v1_seedset-3101_attempt-02",
+      "status": "completed",
+      "verified_files": 15,
+      "metrics_rows": 195,
+      "metrics_sha256": "3899093e18e286aebc6fc05421a492f91047d43df8a015124fe7055a0bcb54b8"
+    }
+  ],
+  "results_commits": {
+    "03-belief-slam-v1_seedset-3101_attempt-01": "789ddd4662c34597bc072ad811a625e7d3f2bca8",
+    "03-belief-slam-v1_seedset-3101_attempt-02": "dcac457be515958b259a9d32eacbcdb2e90a003e"
+  },
+  "large_external_artifacts": []
+}
