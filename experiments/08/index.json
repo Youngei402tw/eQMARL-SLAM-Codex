@@ -8,16 +8,18 @@
       "config": "configs/stage08/08-confirmatory-central_classical_seed-8801_attempt-01.yaml",
       "config_sha256": "2cca5009560280ab893adc9cf1a2cf547cf55e69b8677dccba712a860eb2180a",
       "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
-      "results_commit": null,
-      "gates_passed": true
+      "results_commit": "cc88362675f779c673f7a348cedae451d5078b98",
+      "gates_passed": true,
+      "publication": "verified"
     },
     {
       "run_id": "08-confirmatory-quantum_noent_seed-8801_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage08/08-confirmatory-quantum_noent_seed-8801_attempt-01.yaml",
       "config_sha256": "10c3753ba3d5bc69ed997b1c143a3bc3602c1c05df511c46f01e5380eea1d6f1",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
+      "results_commit": null,
+      "gates_passed": true
     },
     {
       "run_id": "08-confirmatory-eqmarl_seed-8801_attempt-01",

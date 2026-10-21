@@ -1,0 +1,16 @@
+{
+  "stage": "08",
+  "verified_utc": "2026-10-21T04:45:24.326756+00:00",
+  "verified_remote_head": "cc88362675f779c673f7a348cedae451d5078b98",
+  "mechanism": "Fresh independent Git retrieval; every run manifest, resolved config, raw metric, diagnostic and inventoried checkpoint hash/size validated",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "08-confirmatory-central_classical_seed-8801_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 2107,
+      "metrics_sha256": "47968f83daa6821b3aafad71aee90a0e3783c191a8c3a67934c71d9115c0efb3"
+    }
+  ]
+}
