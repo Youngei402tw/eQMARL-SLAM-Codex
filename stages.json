@@ -97,7 +97,9 @@
       "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "2f40002ca55f05ff620d25872971241d8d730223",
-      "publication_receipt": "docs/stages/05-publication.json"
+      "publication_receipt": "docs/stages/05-publication.json",
+      "completion_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/6"
     },
     {
       "id": "06",
@@ -109,8 +111,9 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/06-interaction-model.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "running",
+      "branch_created": true,
+      "dependency_completion_commit": "0647dc61b203825119e414189355c70d8c5410a5"
     },
     {
       "id": "07",

@@ -1,0 +1,14 @@
+{
+  "stage": "06",
+  "dependency_completion_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+  "runs": [
+    {
+      "run_id": "06-local-edge-fit-v1_attempt-01",
+      "status": "planned",
+      "config": "configs/stage06/diagnostic.yaml",
+      "config_sha256": "e18a1db43a20023321ac3bb0ffe4a289f306e43fc27fb8ad7cb2087602ebd86a",
+      "source_commit": null,
+      "results_commit": null
+    }
+  ]
+}
