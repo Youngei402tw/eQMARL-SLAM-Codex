@@ -1,0 +1,67 @@
+{
+  "preflight_unit_failure": "Initial mixed-channel identity at1e-10 tolerance failed before any registered numerical execution.",
+  "measurements": [
+    {
+      "noise": 0.0,
+      "clean": [
+        -0.26138469296582034
+      ],
+      "mixed": [
+        -0.2613847076434792
+      ],
+      "expected": [
+        -0.26138469296582034
+      ],
+      "max_error": 1.4677658866091292e-08
+    },
+    {
+      "noise": 0.01,
+      "clean": [
+        -0.26138469296582034
+      ],
+      "mixed": [
+        -0.24772053020409598
+      ],
+      "expected": [
+        -0.24772051629372802
+      ],
+      "max_error": 1.3910367968605897e-08
+    },
+    {
+      "noise": 0.05,
+      "clean": [
+        -0.26138469296582034
+      ],
+      "mixed": [
+        -0.19834775168063007
+      ],
+      "expected": [
+        -0.19834774054271515
+      ],
+      "max_error": 1.1137914923686765e-08
+    },
+    {
+      "noise": 0.15,
+      "clean": [
+        -0.26138469296582034
+      ],
+      "mixed": [
+        -0.10706317625076922
+      ],
+      "expected": [
+        -0.10706317023880003
+      ],
+      "max_error": 6.0119691863702585e-09
+    }
+  ],
+  "constant_dtype_probe": [
+    {
+      "torch_default": "torch.float32",
+      "difference": 1.4677658866091292e-08
+    },
+    {
+      "torch_default": "torch.float64",
+      "difference": 2.220446049250313e-16
+    }
+  ]
+}

@@ -97,7 +97,9 @@
       "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "2f40002ca55f05ff620d25872971241d8d730223",
-      "publication_receipt": "docs/stages/05-publication.json"
+      "publication_receipt": "docs/stages/05-publication.json",
+      "completion_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/6"
     },
     {
       "id": "06",
@@ -109,8 +111,12 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/06-interaction-model.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+      "publication_receipt": "docs/stages/06-publication.json",
+      "completion_commit": "8f38616118c52289a99bfcd6f79662593285c958",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/7"
     },
     {
       "id": "07",
@@ -128,8 +134,17 @@
           "when": "Using the interaction-study candidate"
         }
       ],
-      "status": "planned",
-      "branch_created": false
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+      "branch_created_from_commit": "0647dc61b203825119e414189355c70d8c5410a5",
+      "integrated_completed_archive": {
+        "stage": "06",
+        "completion_commit": "8f38616118c52289a99bfcd6f79662593285c958",
+        "scope": "Prior completed evidence integrated after branch creation; conditional scientific dependency only when its candidate/claim is used."
+      },
+      "publication_receipt": "docs/stages/07-publication.json",
+      "conditional_dependency_decision": "Interaction-model dependency not activated; retained Stage05 critic architectures. Stage06 evidence integrated after branch creation."
     },
     {
       "id": "08",
