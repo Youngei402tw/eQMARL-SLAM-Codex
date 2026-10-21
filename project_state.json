@@ -13,7 +13,7 @@
   "authorized_current_scope": "Execute Stages 01\u201309 autonomously under the recorded plan, stage gates and resource caps; user instruction 2026-10-20.",
   "active_stage": "04",
   "stage_status": "running",
-  "training_runs_executed": 1,
+  "training_runs_executed": 2,
   "current_branch": "stage/04-classical-controller",
   "dependency_commit": "b0476fe8bb632389d62319003ef1e1c3c9312513",
   "completion_commit": null,
@@ -27,7 +27,7 @@
     "stage/03-slam-beliefs": "dcac457be515958b259a9d32eacbcdb2e90a003e"
   },
   "blockers": [],
-  "next_action": "Freeze and validate belief-based candidate actions, macro-duration and recurrent PPO contracts; publish a bounded throughput preflight before selecting pilots.",
+  "next_action": "Publish the fixed3seed classical pilot protocol and execute from a clean immutable source checkout, then archive and verify all outcomes.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",

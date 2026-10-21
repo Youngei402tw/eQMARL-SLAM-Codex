@@ -49,11 +49,12 @@ def runtime_manifest(lock="requirements.lock"):
             "dependencies": {dist.metadata["Name"]: dist.version for dist in importlib.metadata.distributions()}}
 
 
-def preflight_stage(stage, profile):
+def preflight_stage(stage, profile, *, allow_detached=False):
     state = json.loads((ROOT / "project_state.json").read_text())
     stages = json.loads((ROOT / "stages.json").read_text())["stages"]
     entry = next(s for s in stages if s["id"] == stage)
-    if git("branch", "--show-current") != entry["branch"]:
+    branch = git("branch", "--show-current")
+    if branch != entry["branch"] and not (allow_detached and not branch and state["current_branch"] == entry["branch"]):
         raise ValueError("Current branch differs from registered stage branch")
     if state["active_stage"] != stage:
         raise ValueError("Project active stage mismatch")
@@ -79,26 +80,33 @@ def execute(config_path, source_receipt):
     config_path = Path(config_path).resolve()
     config = load_config(config_path)
     stage, run_id = config["stage"], config["run_id"]
-    preflight_stage(stage, config["profile"])
+    receipt = json.loads(Path(source_receipt).read_text())
+    preflight_stage(stage, config["profile"], allow_detached=bool(receipt.get("allow_detached")))
     if git("status", "--porcelain"):
         raise ValueError("Reportable execution requires a clean committed tree")
     source = git("rev-parse", "HEAD")
-    receipt = json.loads(Path(source_receipt).read_text())
-    if receipt.get("source_commit") != source or receipt.get("branch") != git("branch", "--show-current") or not receipt.get("verified"):
+    actual_branch = git("branch", "--show-current") or json.loads((ROOT/"project_state.json").read_text())["current_branch"]
+    if receipt.get("source_commit") != source or receipt.get("branch") != actual_branch or not receipt.get("verified"):
         raise ValueError("Published source receipt does not identify the clean current source")
     index = json.loads((ROOT / "experiments" / stage / "index.json").read_text())
     planned = next((r for r in index["runs"] if r["run_id"] == run_id), None)
     if not planned or planned["status"] != "planned" or planned["config_sha256"] != sha256_file(config_path):
         raise ValueError("Run was not preregistered with this exact config")
-    previous_wall = sum(json.loads(p.read_text())["resources_consumed"]["wall_seconds"]
-                        for p in (ROOT / "experiments" / stage).glob("*/manifest.json"))
+    output_root = Path(config.get("artifact_output_root", str(ROOT/"experiments"))).resolve()
+    if not output_root.is_relative_to(Path("/workspace")):
+        raise ValueError("Artifact output root must remain in the authorized workspace")
+    prior = {}
+    for folder in {ROOT/"experiments"/stage, output_root/stage}:
+        for p in folder.glob("*/manifest.json"):
+            item = json.loads(p.read_text()); prior[item["run_id"]] = item
+    previous_wall = sum(item["resources_consumed"]["wall_seconds"] for item in prior.values())
     state = json.loads((ROOT / "project_state.json").read_text())
     previous_wall += state.get("stage_budget", {}).get("setup_wall_seconds_charged", 0)
     wall_limit = min(config["wall_seconds"], 86400 - previous_wall)
     if wall_limit <= 0:
         raise ValueError("Cumulative stage budget exhausted before execution")
-    output = ROOT / "experiments" / stage / run_id
-    output.mkdir(exist_ok=False)
+    output = output_root / stage / run_id
+    output.mkdir(parents=True, exist_ok=False)
     shutil.copyfile(config_path, output / "resolved_config.yaml")
     shutil.copyfile(source_receipt, output / "source_publication.json")
     for key in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
@@ -221,6 +229,6 @@ def execute(config_path, source_receipt):
                   "sha256": sha256_file(p), "purpose": p.name,
                   "retention": "permanent_git_history"} for p in sorted(output.rglob("*")) if p.is_file()]
     write_json(output / "artifact_manifest.json", {"artifacts": inventory})
-    validation = validate_bundle(output, expected_source_commit=source)
-    return {"passed": status == "completed", "run": str(output.relative_to(ROOT)),
+    validation = validate_bundle(output, expected_source_commit=source, repository_root=ROOT)
+    return {"passed": status == "completed", "run": str(output),
             "status": status, "validation": validation, "resources_consumed": consumed}
