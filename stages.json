@@ -94,9 +94,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/05-critic-ablation.md",
-      "status": "running",
+      "status": "passed",
       "branch_created": true,
-      "dependency_completion_commit": "2f40002ca55f05ff620d25872971241d8d730223"
+      "dependency_completion_commit": "2f40002ca55f05ff620d25872971241d8d730223",
+      "publication_receipt": "docs/stages/05-publication.json"
     },
     {
       "id": "06",

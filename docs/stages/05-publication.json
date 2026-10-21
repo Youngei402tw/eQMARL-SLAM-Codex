@@ -1,7 +1,7 @@
 {
   "stage": "05",
-  "verified_utc": "2026-10-21T04:07:28.333319+00:00",
-  "verified_remote_head": "c84526bd5de43e243035cd5208cc810725849ad8",
+  "verified_utc": "2026-10-21T04:18:46.893786+00:00",
+  "verified_remote_head": "d6c16db627f511ab04a4caca7ea39e7ec32bd216",
   "mechanism": "Fresh independent Git retrieval; every run manifest, resolved config, raw metric, diagnostic and inventoried checkpoint hash/size validated",
   "checks": [
     {
@@ -11,6 +11,14 @@
       "verified_files": 14,
       "metrics_rows": 213,
       "metrics_sha256": "31135450280ad21385e459beeabc552c68326a7edb632a6dc79aa98056176e34"
+    },
+    {
+      "valid": true,
+      "run_id": "05-frozen-pilot-replay-v1_attempt-01",
+      "status": "completed",
+      "verified_files": 7,
+      "metrics_rows": 143,
+      "metrics_sha256": "6546ca547f599e5cf9aa3c4e07ec7664c91390507a722edf1bb77351c65c5b3e"
     },
     {
       "valid": true,
@@ -67,6 +75,94 @@
       "verified_files": 8,
       "metrics_rows": 276,
       "metrics_sha256": "5b3eeb40efbfdb71e7f46cc8781d89d32d8bf85d09076cf2a04258e346cec4e3"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-eqmarl_seed-5402_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 321,
+      "metrics_sha256": "09d290e306d4348130e46bd92169bedeb36f6c17ccd779987e12d33f7f2c1604"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-eqmarl_seed-5403_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 294,
+      "metrics_sha256": "bbc29e3234af067b8929334c665fe542d170a589d330d1fd074592992e557a3a"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-qfctde_seed-5401_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 276,
+      "metrics_sha256": "67cf587d160b2e341718e784a0202269ff0cc040c0d1ac4908dc23cd249dd9eb"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-qfctde_seed-5402_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 336,
+      "metrics_sha256": "5c9069b08773921a540f823bfe7d52fe5a2c840869eb61863a625596923ad5af"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-qfctde_seed-5403_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 292,
+      "metrics_sha256": "5f03123f9d14074384b534bb68197e8e4d641098893e8a687953e3863d949342"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-quantum_noent_seed-5401_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 276,
+      "metrics_sha256": "5da7f796b9b5284ea90a113e842aff7b45562b9bfadd5195f833aae5e57385d3"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-quantum_noent_seed-5402_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 321,
+      "metrics_sha256": "6ff4be41e687a6ab5cc28c2c089b250ba25e893c0ce4a8616b02f826b0fc245b"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-quantum_noent_seed-5403_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 292,
+      "metrics_sha256": "6da4cd844487e1b11ba32e3e2418835b3a70aaa5ff8a071399397cb188c224c6"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-split_classical_seed-5401_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 285,
+      "metrics_sha256": "15b5e72f55e7f81be7481d11786bfaec69ca7228d86b2c715a9969974a05f31a"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-split_classical_seed-5402_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 309,
+      "metrics_sha256": "ce8d0914ec908862171ee9ed7b5736109652b090b880cce7648030f16afa37e4"
+    },
+    {
+      "valid": true,
+      "run_id": "05-pilot-split_classical_seed-5403_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 300,
+      "metrics_sha256": "9b9382ce605847c77b84fe7aab1a0ce44bb7971d52c65f3b16d23a5a75fd9ecd"
     },
     {
       "valid": true,
