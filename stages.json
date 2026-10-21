@@ -179,7 +179,8 @@
       },
       "conditional_dependency_decision": "No new interaction-model, finite-shot-policy or noise-robust policy claim is being confirmed; analytical Stage05 architectures. Prior06/07 completed evidence integrated after branch creation.",
       "publication_receipt": "docs/stages/08-publication.json",
-      "results_commit": "e834c9f4d7c78e74bc82f5bea2d7e9625e0eb3c8"
+      "results_commit": "e834c9f4d7c78e74bc82f5bea2d7e9625e0eb3c8",
+      "completion_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080"
     },
     {
       "id": "09",
@@ -191,8 +192,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/09-release.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "running",
+      "branch_created": true,
+      "dependency_completion_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080",
+      "branch_created_from_commit": "78eaab5310c880cf421ccb67415d4fbb2790d080"
     }
   ],
   "recommended_execution_order": [
