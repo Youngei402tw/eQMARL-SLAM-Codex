@@ -49,7 +49,7 @@ class QuantumCircuit:
 
     def __init__(self, parts: int, d: int, layers: int, *, entanglement=True,
                  bell="phi+", observables="global", squash="atan",
-                 shots=None, diff_method=None):
+                 shots=None, diff_method=None, seed=None, noise=None):
         if parts < 1 or d < 1 or layers < 0 or parts * d > 8:
             raise ValueError("Require positive parts/d, nonnegative layers and at most 8 wires")
         if bell not in ("phi+", "phi-", "psi+", "psi-"):
@@ -58,6 +58,9 @@ class QuantumCircuit:
             raise ValueError(f"Unsupported squash transformation: {squash}")
         if shots is not None and (isinstance(shots, bool) or not isinstance(shots, int) or shots <= 0):
             raise ValueError("shots must be None or a positive integer")
+        if noise is not None and not 0 <= noise <= 1:
+            raise ValueError("Depolarizing probability must lie in [0,1]")
+        self.noise, self.seed = noise, seed
         self.parts, self.d, self.layers = parts, d, layers
         self.entanglement, self.bell, self.squash = entanglement, bell, squash
         self.words = _observable_words(parts, d, observables)
@@ -65,7 +68,8 @@ class QuantumCircuit:
         self.diff_method = diff_method or ("backprop" if shots is None else "parameter-shift")
         if shots is not None and self.diff_method == "backprop":
             raise ValueError("Finite shots require a compatible differentiation method")
-        self.device = qml.device("default.qubit", wires=parts * d, shots=shots)
+        self.backend = "default.mixed" if noise is not None else "default.qubit"
+        self.device = qml.device(self.backend, wires=parts * d, shots=shots, seed=seed)
 
         @qml.qnode(self.device, interface="torch", diff_method=self.diff_method)
         def qnode(features, theta, scales):
@@ -99,6 +103,9 @@ class QuantumCircuit:
                         elif squash == "tanh":
                             angle = torch.tanh(angle)
                         qml.RX(angle, wires=p * d + q)
+            if noise is not None:
+                for wire in range(parts*d):
+                    qml.DepolarizingChannel(noise, wires=wire)
             measurements = []
             paulis = {"X": qml.PauliX, "Y": qml.PauliY, "Z": qml.PauliZ}
             for word in self.words:
@@ -160,6 +167,8 @@ class QuantumCircuit:
                     schedule(p * d, (p + 1) * d - 1)
                 for q in range(d):
                     schedule(p * d + q)
+        if self.noise is not None:
+            for wire in range(parts*d): schedule(wire)
         prep = (d + d * (parts - 1)) if self.entanglement else 0
         if self.entanglement and self.bell.endswith("-"):
             prep += d
@@ -167,7 +176,7 @@ class QuantumCircuit:
             prep += d * (parts - 1)
         ring_edges = 0 if d == 1 else (1 if d == 2 else d)
         return {
-            "device": "default.qubit", "total_qubits": parts * d,
+            "device": self.backend, "total_qubits": parts * d,
             "qubits_per_partition": d, "parts": parts, "layers": layers,
             "real_dtype": "float64", "complex_dtype": "complex128",
             "wire_order": "partition_major_wire0_most_significant",
@@ -184,7 +193,8 @@ class QuantumCircuit:
             "logical_depth": max(depths),
             "logical_depth_convention": "earliest scheduling preserving per-wire gate order; measurement excluded",
             "observables": list(self.words), "shots_per_execution": self.shots,
-            "diff_method": self.diff_method, "noise": None,
+            "diff_method": self.diff_method, "noise": None if self.noise is None else {"family":"final_per_wire_depolarizing","probability":self.noise},
+            "shot_seed": self.seed, "depolarizing_channels": 0 if self.noise is None else parts*d,
             "execution_accounting": "qml.Tracker device executions; sample-loop batches",
             "analytic_backward_additional_circuits": 0 if self.diff_method == "backprop" else None,
             "physical_shots_sampled": self.shots is not None,

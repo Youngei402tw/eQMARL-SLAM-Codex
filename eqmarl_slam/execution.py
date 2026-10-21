@@ -167,6 +167,9 @@ def execute(config_path, source_receipt):
         elif config["experiment"] == "interaction-study":
             from .diagnostics06 import run_diagnostics
             diagnostics = run_diagnostics(config, output, emit, progress=progress)
+        elif config["experiment"] == "shot-noise":
+            from .diagnostics07 import run_diagnostics
+            diagnostics = run_diagnostics(config, output, emit, progress=progress)
         elif config["experiment"] == "legacy-reference":
             command = [config["interpreter"], str(ROOT / "eqmarl_slam/reference_probe.py"),
                        "--fixtures", str(ROOT / config["fixtures"]),
@@ -200,7 +203,7 @@ def execute(config_path, source_receipt):
                 "wall_seconds": time.perf_counter() - started,
                 "cpu_core_hours": (_cpu_seconds() - cpu_start) / 3600,
                 "gpu_device_hours": 0, "circuit_evaluations": diagnostics.get("resources", {}).get("circuit_evaluations", 0),
-                "shots": 0}
+                "shots": resources.get("shots", 0)}
     runtime = runtime_manifest()
     if config["experiment"] == "legacy-reference":
         runtime = {"python": diagnostics.get("python", "legacy child unavailable; see execution log"),
