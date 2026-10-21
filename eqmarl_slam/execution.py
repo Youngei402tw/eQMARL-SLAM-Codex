@@ -88,6 +88,10 @@ def execute(config_path, source_receipt):
     shutil.copyfile(source_receipt, output / "source_publication.json")
     for key in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"):
         os.environ[key] = "1"
+    # Constrain native backends as well as Python-level worker counts.
+    if hasattr(os, "sched_setaffinity"):
+        available = sorted(os.sched_getaffinity(0))
+        os.sched_setaffinity(0, set(available[:min(8, int(config.get("max_cpu_threads", 1)))]))
     started_utc = datetime.now(timezone.utc).isoformat()
     started, cpu_start = time.perf_counter(), _cpu_seconds()
     rows = 0
@@ -114,6 +118,9 @@ def execute(config_path, source_receipt):
             diagnostics = run_contract_diagnostics(config, output, emit)
         elif config["experiment"] == "exploration-controls":
             from .diagnostics02 import run_diagnostics
+            diagnostics = run_diagnostics(config, output, emit, progress=progress)
+        elif config["experiment"] == "belief-slam":
+            from .diagnostics03 import run_diagnostics
             diagnostics = run_diagnostics(config, output, emit, progress=progress)
         elif config["experiment"] == "legacy-reference":
             command = [config["interpreter"], str(ROOT / "eqmarl_slam/reference_probe.py"),
@@ -156,6 +163,9 @@ def execute(config_path, source_receipt):
                    "platform": diagnostics.get("platform", platform.platform()),
                    "hardware": runtime["hardware"], "dependencies": diagnostics.get("packages", {}),
                    "driver_runtime": runtime}
+    if config["experiment"] == "belief-slam":
+        runtime["estimator_backend_runtime"] = json.loads(
+            (ROOT / "configs/stage03/runtime/environment-primary.json").read_text())
     manifest = {
         "schema_version": "0.1.0", "run_id": run_id, "stage": stage, "protocol_id": config["protocol_id"],
         "hypothesis": config["hypothesis"], "method": config["method"], "status": status,

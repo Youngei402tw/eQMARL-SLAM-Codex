@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1.0",
+  "status": "validated_primary_inprocess",
+  "python": "3.11.17 (main, Oct  3 2026, 01:05:36) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "implementation": "CPython",
+  "machine": "x86_64",
+  "package_index": "https://pypi.org/simple",
+  "torch_index": "https://download.pytorch.org/whl/cpu",
+  "dependencies": {
+    "gtsam": "4.3.0",
+    "numpy": "2.4.6",
+    "torch": "2.14.1+cpu",
+    "pennylane": "0.45.1",
+    "gymnasium": "1.4.0",
+    "pytest": "9.1.1"
+  },
+  "lockfile": "requirements.lock",
+  "lockfile_sha256": "f70f05d7d474dde681e86c2cacbe8a43fee1e83c7adf4f7b09f73b3a57117d7e",
+  "selected_wheel": {
+    "version": "4.3.0",
+    "filename": "gtsam-4.3.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "url": "https://files.pythonhosted.org/packages/c4/ef/2aeaa75b39769e5a1af0cdb5c2e8d279f78e90329535fb711dfcada07a53/gtsam-4.3.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "sha256": "63cae1c925f0094832b7f8d629951d4631cac57c6d7faba140c8ecc9f3c57752",
+    "size_bytes": 34243345,
+    "requires_python": null,
+    "yanked": false
+  },
+  "wheel_retrieval_sha256_verified": true,
+  "compatibility_probe": "configs/stage03/runtime/primary-native-probe.json",
+  "compatibility_probe_sha256": "5544938690402f2bf2a672e067cdefc89de076fbba45e595405772033be1c973",
+  "native_graph_measurement_and_marginals_passed": true,
+  "primary_stack_imports_passed": true,
+  "backend_selection": "Direct in-process GTSAM4.3.0 with NumPy2.4.6; official wheel works and isolation is unnecessary.",
+  "runtime_python": "/workspace/eqmarl-venv/bin/python",
+  "clean_probe_python": "/workspace/slam-env/current/bin/python",
+  "frontend": "eqmarl_slam.slam direct backend (implementation owned by smoother agent)",
+  "scientific_experiments_executed_by_probe": false,
+  "compatibility_adjustments": [],
+  "preserved_failure_logs": [],
+  "scope": "Installation/native-wheel compatibility only; no revisit, calibration, trajectory, or comparative performance result."
+}

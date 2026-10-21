@@ -1,0 +1,7 @@
+{
+  "returncode": 0,
+  "command": [
+    "/workspace/slam-env/current/bin/python",
+    "configs/stage03/runtime/compatibility_probe.py"
+  ]
+}

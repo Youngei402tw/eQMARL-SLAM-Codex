@@ -1,0 +1,128 @@
+{
+  "name": "gtsam",
+  "latest_version": "4.3.0",
+  "requires_python": null,
+  "requires_dist": [
+    "numpy>=1.11.0",
+    "pytest>=9.0.1"
+  ],
+  "cp311_linux_candidates": [
+    {
+      "version": "4.2",
+      "filename": "gtsam-4.2-cp311-cp311-manylinux2014_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/51/8e/a1cf54ea59c81b300d31f407270d8fe8b7e6fdcfd4c7353b0a0857602808/gtsam-4.2-cp311-cp311-manylinux2014_x86_64.whl",
+      "sha256": "3793d5524a0417924fddb9d9662afc8129357fd52f07c422776024ddab3780c1",
+      "size_bytes": 22352720,
+      "requires_python": null,
+      "yanked": false
+    },
+    {
+      "version": "4.2.1",
+      "filename": "gtsam-4.2.1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "url": "https://files.pythonhosted.org/packages/94/90/f40ce79d2005d39995b34a93538b058506434502ca735d74ee279ca64b52/gtsam-4.2.1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "9425d0d27e7dc6bb9639136ecd8b129f8a2591617c9074498f1b4dd984af514f",
+      "size_bytes": 21483080,
+      "requires_python": null,
+      "yanked": false
+    },
+    {
+      "version": "4.2.1",
+      "filename": "gtsam-4.2.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/04/95/37e6c9bc64795af7c7becd45e4cff55ee5d7bedd2fcd6a87f94082f3228a/gtsam-4.2.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "4e469d955a03a6e55b7136a3a99d59444370e74135ea917da9a756d99fb3461f",
+      "size_bytes": 22377997,
+      "requires_python": null,
+      "yanked": false
+    },
+    {
+      "version": "4.2.2",
+      "filename": "gtsam-4.2.2-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "url": "https://files.pythonhosted.org/packages/c6/55/372377417a808d493d0b5dd1796d410499c7864d5e3848f2a1b5b2219e79/gtsam-4.2.2-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "4ac3a906b7d4def8b042b8e2133119bc57244a49b7c4fa91227cffae7cc4002d",
+      "size_bytes": 21483602,
+      "requires_python": null,
+      "yanked": false
+    },
+    {
+      "version": "4.2.2",
+      "filename": "gtsam-4.2.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/d7/fc/a53a8c0e93e962e026f75f55cc119f55263057d823d231c771a906d8dd08/gtsam-4.2.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "9b87157ad4df0788e4b48c41ecaa3e8b9857027add7e5ffdfcfc17983ae62c55",
+      "size_bytes": 22378328,
+      "requires_python": null,
+      "yanked": false
+    },
+    {
+      "version": "4.3.0",
+      "filename": "gtsam-4.3.0-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "url": "https://files.pythonhosted.org/packages/39/3f/38e2622b6513cd8fde30dcbac3d62222f0108351c8418d87d126ee124db0/gtsam-4.3.0-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "07deb2aa005f7bbe0b42906623a6c5314804d50b32ebc0e2a53de468546c97d8",
+      "size_bytes": 32689380,
+      "requires_python": null,
+      "yanked": false
+    },
+    {
+      "version": "4.3.0",
+      "filename": "gtsam-4.3.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/c4/ef/2aeaa75b39769e5a1af0cdb5c2e8d279f78e90329535fb711dfcada07a53/gtsam-4.3.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "63cae1c925f0094832b7f8d629951d4631cac57c6d7faba140c8ecc9f3c57752",
+      "size_bytes": 34243345,
+      "requires_python": null,
+      "yanked": false
+    },
+    {
+      "version": "4.3a0",
+      "filename": "gtsam-4.3a0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "url": "https://files.pythonhosted.org/packages/d7/bd/37950bd8e00baf1cfc3b3a9f647c9d72147cb95037ed530789a6473e8803/gtsam-4.3a0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "sha256": "61f7c73082efc1f57a67b21a99a24baff5724d90f21cdc741557f8b36e02e6c9",
+      "size_bytes": 25935316,
+      "requires_python": null,
+      "yanked": false
+    },
+    {
+      "version": "4.3a0",
+      "filename": "gtsam-4.3a0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/fa/4c/159c31dce2f8cf0aa8e8c13194be55ba68679a825f9282fe1a5f99fa4a7b/gtsam-4.3a0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "5d5ff3a7075dd8aae39853c7e8fdae81a56c202108217f2b0253d7dfff2aef14",
+      "size_bytes": 27149386,
+      "requires_python": null,
+      "yanked": false
+    },
+    {
+      "version": "4.3a1",
+      "filename": "gtsam-4.3a1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "url": "https://files.pythonhosted.org/packages/53/16/584756f356cd1754593ca310b5574dd60d434f9a42565e42e139003b36e6/gtsam-4.3a1-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "bf45cd3dce9dcc1ef7c056e2865cc21c8bf5bb83513bca8e009ca2698501b62e",
+      "size_bytes": 27293303,
+      "requires_python": null,
+      "yanked": false
+    },
+    {
+      "version": "4.3a1",
+      "filename": "gtsam-4.3a1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/dd/b0/7abf8783c5cca38b66999fd8852c532d3cdb26d6e6e9f9bfac5fd481f8fe/gtsam-4.3a1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "4272c32bafdfb8932acc2e5a2da236c4a39ceeae2b54e44c65d3f6a09b3f31e3",
+      "size_bytes": 28706516,
+      "requires_python": null,
+      "yanked": false
+    },
+    {
+      "version": "4.3a2",
+      "filename": "gtsam-4.3a2-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "url": "https://files.pythonhosted.org/packages/63/66/be5a68efe00402852e5274c9741ef438d7d3df47031d64e47e158adb57b5/gtsam-4.3a2-cp311-cp311-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "b8792630ef62b820a0b8b8c3ba8578d0f0fce63d8f4ee6c67b65c04ffe3ec886",
+      "size_bytes": 30813797,
+      "requires_python": null,
+      "yanked": false
+    },
+    {
+      "version": "4.3a2",
+      "filename": "gtsam-4.3a2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "url": "https://files.pythonhosted.org/packages/9c/cc/f6c7df3d2346951a035b41f5febc0b2134a22648cab5080285021297554a/gtsam-4.3a2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "8bce5e4172dc873e4d1fd24bb7a2873afff0d66db1df7dea044e943e95b21ff9",
+      "size_bytes": 32251505,
+      "requires_python": null,
+      "yanked": false
+    }
+  ]
+}

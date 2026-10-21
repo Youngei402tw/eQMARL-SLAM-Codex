@@ -7,3 +7,4 @@ gymnasium==1.4.0
 jsonschema==4.26.0
 PyYAML==6.0.3
 pytest==9.1.1
+gtsam==4.3.0
