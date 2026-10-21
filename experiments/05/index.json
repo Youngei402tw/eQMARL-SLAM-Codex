@@ -4,11 +4,12 @@
   "runs": [
     {
       "run_id": "05-critic-fit-v1_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config": "configs/stage05/fitting.yaml",
       "config_sha256": "2ef4186228d47715600135c327452a6fb6e15ca2512d10fe3385ef24a3a90143",
-      "source_commit": null,
-      "results_commit": null
+      "source_commit": "614879ad91f971e2ab55177cbd83d32f13f75512",
+      "results_commit": null,
+      "gates_passed": true
     }
   ]
 }

@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "gates": {
+    "split_classical_gradients": true,
+    "split_classical_signed_capacity": true,
+    "central_classical_gradients": true,
+    "central_classical_signed_capacity": true,
+    "bilinear_gradients": true,
+    "bilinear_signed_capacity": true,
+    "quantum_noent_gradients": true,
+    "quantum_noent_signed_capacity": true,
+    "eqmarl_gradients": true,
+    "eqmarl_signed_capacity": true,
+    "qfctde_gradients": true,
+    "qfctde_signed_capacity": true,
+    "matched_entanglement_only": true
+  },
+  "resources": {
+    "primitive_steps": 87,
+    "decisions": 62,
+    "updates": 960,
+    "circuit_evaluations": 3045,
+    "shots": 0
+  },
+  "summary": {
+    "fits": [
+      {
+        "method": "split_classical",
+        "initial_training_mse": 1.079355052069548,
+        "training_mse": 0.021347485903787114,
+        "validation_mse": 0.03776476138035852,
+        "capacity_mse": 4.53773212181716e-08,
+        "capacity_predictions": [
+          -0.09970759052313186,
+          0.10007246613191029
+        ],
+        "parameters": 121,
+        "gradients_connected": true
+      },
+      {
+        "method": "central_classical",
+        "initial_training_mse": 0.11336079838935992,
+        "training_mse": 0.0030880083780197164,
+        "validation_mse": 0.012697728429040978,
+        "capacity_mse": 1.5963818608454208e-08,
+        "capacity_predictions": [
+          -0.09995217481338732,
+          0.10017216384272655
+        ],
+        "parameters": 249,
+        "gradients_connected": true
+      },
+      {
+        "method": "bilinear",
+        "initial_training_mse": 1.0757987284140043,
+        "training_mse": 0.012985675033984422,
+        "validation_mse": 0.01135987505742564,
+        "capacity_mse": 9.952073317676648e-08,
+        "capacity_predictions": [
+          -0.10011075343637099,
+          0.09956782510174057
+        ],
+        "parameters": 125,
+        "gradients_connected": true
+      },
+      {
+        "method": "quantum_noent",
+        "initial_training_mse": 0.0552389027294568,
+        "training_mse": 0.0036461203111737635,
+        "validation_mse": 0.01644073576274564,
+        "capacity_mse": 4.1824128111757294e-08,
+        "capacity_predictions": [
+          -0.10017591012973187,
+          0.10022957326168619
+        ],
+        "parameters": 86,
+        "gradients_connected": true
+      },
+      {
+        "method": "eqmarl",
+        "initial_training_mse": 0.057624930453969325,
+        "training_mse": 0.003615330530770767,
+        "validation_mse": 0.010091515997137718,
+        "capacity_mse": 3.350823500830949e-08,
+        "capacity_predictions": [
+          -0.0999661087265245,
+          0.10025664732922598
+        ],
+        "parameters": 86,
+        "gradients_connected": true
+      },
+      {
+        "method": "qfctde",
+        "initial_training_mse": 0.04159473941430483,
+        "training_mse": 0.002135117943561927,
+        "validation_mse": 0.015138534383952549,
+        "capacity_mse": 4.087673655016608e-09,
+        "capacity_predictions": [
+          -0.10000620269683125,
+          0.10009020462217677
+        ],
+        "parameters": 86,
+        "gradients_connected": true
+      }
+    ],
+    "dataset_rows": 31,
+    "target_sign_range": {
+      "train": [
+        0.02093817223179263,
+        0.5361800775630019
+      ],
+      "validation": [
+        0.06192026698121102,
+        0.7295042465750832
+      ]
+    },
+    "actor_condition": "all three archived pilot actors equally represented; frozen corpus collection only",
+    "fit_interpretation": "Real return underfitting is descriptive; signed-capacity/gradient correctness gate required before RL.",
+    "qfctde": "Additional global four-wire topology, not matched no-entanglement ablation"
+  }
+}
