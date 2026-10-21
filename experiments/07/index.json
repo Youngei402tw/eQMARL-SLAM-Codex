@@ -8,8 +8,9 @@
       "config": "configs/stage07/diagnostic.yaml",
       "config_sha256": "63775c8015099b7c4e298690ab1de3ac45910a9900e1638ba600dd2fb1e79647",
       "source_commit": "feef26a272dfa658176e8f4c9ef3b8df8f67faf8",
-      "results_commit": null,
-      "gates_passed": true
+      "results_commit": "fd25b5213a3cd6b3d52ee17271bd5bab52246d99",
+      "gates_passed": true,
+      "publication": "verified"
     }
   ]
 }

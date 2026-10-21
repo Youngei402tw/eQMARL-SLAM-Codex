@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-21T04:32:09.863855+00:00",
+  "updated_utc": "2026-10-21T04:37:26.420757+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Execute Stages 01\u201309 autonomously under the recorded plan, stage gates and resource caps; user instruction 2026-10-20.",
   "active_stage": "07",
-  "stage_status": "running",
+  "stage_status": "passed",
   "training_runs_executed": 47,
   "current_branch": "stage/07-shot-noise",
   "dependency_commit": "0647dc61b203825119e414189355c70d8c5410a5",
   "completion_commit": null,
-  "publication_status": "pending",
+  "publication_status": "verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -27,10 +27,11 @@
     "stage/03-slam-beliefs": "dcac457be515958b259a9d32eacbcdb2e90a003e",
     "stage/04-classical-controller": "1b1afbecff6379a891cbb5652f356769a2ba8e40",
     "stage/05-critic-ablation": "0647dc61b203825119e414189355c70d8c5410a5",
-    "stage/06-interaction-model": "8f38616118c52289a99bfcd6f79662593285c958"
+    "stage/06-interaction-model": "8f38616118c52289a99bfcd6f79662593285c958",
+    "stage/07-shot-noise": "fd25b5213a3cd6b3d52ee17271bd5bab52246d99"
   },
   "blockers": [],
-  "next_action": "Execute frozen shot/noise sensitivity after exact source publication; no policy training.",
+  "next_action": "Publish Stage07 completion, then lock the analytic confirmatory study before test access.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -147,9 +148,20 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 154.392414,
-    "setup_wall_seconds_charged": 154.392414,
-    "stage_started_utc": "2026-10-21T04:32:09.863880+00:00"
+    "consumed_wall_seconds": 316.556863,
+    "setup_wall_seconds_charged": 296.773744114,
+    "stage_started_utc": "2026-10-21T04:32:09.863880+00:00",
+    "setup_charge_convention": "Conservative active stage envelope less instrumented sequential experiment segments; idle across sessions must be explicitly excluded.",
+    "recorded_experiment_resources": {
+      "primitive_steps": 0,
+      "decisions": 0,
+      "updates": 0,
+      "wall_seconds": 19.78311888600001,
+      "cpu_core_hours": 0.005495063333333334,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 3246,
+      "shots": 1378304
+    }
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
   "active_runs": []

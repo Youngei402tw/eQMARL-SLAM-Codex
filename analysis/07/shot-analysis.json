@@ -1,0 +1,103 @@
+{
+  "analysis_version": "shot-v1-error-clarification",
+  "metrics_sha256": "c8938f4163c4bc763a2acc6bcee80a8974e3e7a584f6b3f17eb267048c89a7f6",
+  "gradient_results": [
+    {
+      "method": "quantum_noent",
+      "shots": 64,
+      "relative_error_of_eight_replicate_mean": 0.06686076515130965,
+      "single_replicate_relative_errors": [
+        0.29186105419093117,
+        0.21986576019359932,
+        0.2463442111709956,
+        0.23446047794767985,
+        0.23062450804230036,
+        0.21556171258955584,
+        0.21358249295337942,
+        0.18949663216306967
+      ],
+      "single_replicate_relative_rms_error": 0.2319380262315472
+    },
+    {
+      "method": "quantum_noent",
+      "shots": 256,
+      "relative_error_of_eight_replicate_mean": 0.05041343605633672,
+      "single_replicate_relative_errors": [
+        0.08496352666648363,
+        0.17989993241894756,
+        0.10424026047503128,
+        0.1324775507358151,
+        0.13834268755730195,
+        0.1087914465752831,
+        0.1468442494582732,
+        0.10096111389782517
+      ],
+      "single_replicate_relative_rms_error": 0.12783279023190028
+    },
+    {
+      "method": "quantum_noent",
+      "shots": 1024,
+      "relative_error_of_eight_replicate_mean": 0.024852661411970334,
+      "single_replicate_relative_errors": [
+        0.04047483292280818,
+        0.056513973796366634,
+        0.060470901487911996,
+        0.06154552530706918,
+        0.05792539582640365,
+        0.0720286539933563,
+        0.04122169168197747,
+        0.059370703354376955
+      ],
+      "single_replicate_relative_rms_error": 0.0570572187656031
+    },
+    {
+      "method": "eqmarl",
+      "shots": 64,
+      "relative_error_of_eight_replicate_mean": 0.08669811997189565,
+      "single_replicate_relative_errors": [
+        0.20088272101210486,
+        0.3121189447147584,
+        0.22522987328219643,
+        0.1763670171233206,
+        0.2596582414905377,
+        0.22710956728386597,
+        0.22153127898091335,
+        0.23178496690620148
+      ],
+      "single_replicate_relative_rms_error": 0.23489557791049007
+    },
+    {
+      "method": "eqmarl",
+      "shots": 256,
+      "relative_error_of_eight_replicate_mean": 0.040483010962181466,
+      "single_replicate_relative_errors": [
+        0.10212776842493095,
+        0.11823238872874405,
+        0.099689837867551,
+        0.10454991815877467,
+        0.13462769643299013,
+        0.10920212450179503,
+        0.14770980182765223,
+        0.09954294279462741
+      ],
+      "single_replicate_relative_rms_error": 0.11567974738894655
+    },
+    {
+      "method": "eqmarl",
+      "shots": 1024,
+      "relative_error_of_eight_replicate_mean": 0.026533260494955226,
+      "single_replicate_relative_errors": [
+        0.05325691176664887,
+        0.056721165343178837,
+        0.05121959713247781,
+        0.04498921602724087,
+        0.0415978441191442,
+        0.06037101905438945,
+        0.06418464790707003,
+        0.05100740034070282
+      ],
+      "single_replicate_relative_rms_error": 0.053382499978299636
+    }
+  ],
+  "interpretation": "The immutable original field gradient_relative_rmse computes relative error of the eight-replicate mean gradient, not RMS across single replicates. The registered0.5 flag applies to that mean. This supplemental raw-only analysis records both quantities without changing gates, data, configurations or model selection."
+}
