@@ -53,6 +53,18 @@ def run_diagnostics(config, output, emit, progress=None):
         and interactions[0] < interactions[1] < interactions[2]
     )
 
+    isolation_task = {
+        **config["task_base"],
+        "complementarity_alpha": config["conditions"][0]["complementarity_alpha"],
+    }
+    isolation_env = BeliefTask(isolation_task, config["development_scenarios"][0])
+    before, _ = isolation_env.reset()
+    isolation_env.sim._poses[1, :2] += 1.0
+    isolation_env.sim._landmarks[0] += 1.0
+    private_change, _ = isolation_env.observe()
+    gates["actor_truth_isolation"] = bool(np.array_equal(before, private_change))
+    isolation_env.close()
+
     trajectories = {}
     for condition in config["conditions"]:
         task = {
@@ -63,12 +75,6 @@ def run_diagnostics(config, output, emit, progress=None):
         for scenario in config["development_scenarios"]:
             env = BeliefTask(task, scenario)
             observation, _ = env.reset()
-            if condition["name"] == "additive" and scenario == config["development_scenarios"][0]:
-                before = observation.copy()
-                env.sim._poses[1, :2] += 1.0
-                env.sim._landmarks[0] += 1.0
-                private_change, _ = env.observe()
-                gates["actor_truth_isolation"] = bool(np.array_equal(before, private_change))
             actions_trace = []
             reward = 0.0
             done = False
@@ -126,7 +132,7 @@ def run_diagnostics(config, output, emit, progress=None):
         for name, parameter in critic.named_parameters()
         if parameter.grad is not None
     }
-    symmetric_error = float((critic(observations)-critic(observations.flip(-2))).abs().max())
+    symmetric_error = float((critic(observations)-critic(observations.flip(-2))).abs().max().detach())
     gates["flexible_interaction_gradients"] = bool(
         gradient_groups and all(np.isfinite(value) and value > 0 for value in gradient_groups.values())
     )

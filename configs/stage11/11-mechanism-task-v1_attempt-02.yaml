@@ -1,0 +1,119 @@
+{
+  "stage": "11",
+  "protocol_id": "mechanism-task-diagnostic-v1",
+  "run_id": "11-mechanism-task-v1_attempt-02",
+  "experiment": "mechanism-task-diagnostic",
+  "method": "scripted_counterfactual_and_eqmarl_smoke",
+  "hypothesis": "The registered reward intervention increases mixed cross-agent interaction monotonically while preserving dynamics, information isolation, trainability, and confirmatory feasibility.",
+  "profile": "diagnostic",
+  "dependency_completion_commit": "d3978be222df4636d792bb54f2222d9ad093be4f",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 1000,
+  "max_cpu_threads": 1,
+  "seed_streams": {
+    "model_init": 11001,
+    "critic_init": 11002,
+    "map": 210000,
+    "evaluation_map": null,
+    "sensor": 211000,
+    "action": 11003,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": {
+      "path": "configs/data/train-mechanism-v1.json",
+      "sha256": "6d49d1281a14eda4b684a04213c1d8313b4a4cd1ee6470f9640e337b5ef1f4bb"
+    },
+    "development": {
+      "path": "configs/data/development-mechanism-v1.json",
+      "sha256": "efd9d4b6ba2df9d759895ef37f96a06c692d64fb1ad3b70028a7f77c1b666bbb"
+    },
+    "validation": {
+      "path": "configs/data/validation-mechanism-v1.json",
+      "sha256": "fcd4ce49bc4fb473f155a58abcb4b4f54e20be2c23e019d0ae7cff83684f06bb"
+    },
+    "test": {
+      "path": "configs/data/test-mechanism-v1.json",
+      "sha256": "2085bcfadf915a196588ae4db12a4e0ca5e45462f21456a1c878107127879a0e"
+    }
+  },
+  "conditions": [
+    {"name": "additive", "complementarity_alpha": 0.0},
+    {"name": "low", "complementarity_alpha": 0.5},
+    {"name": "high", "complementarity_alpha": 1.0}
+  ],
+  "task_base": {
+    "protocol": "belief-controller-mechanism-v1",
+    "horizon": 36,
+    "macro_max_steps": 3,
+    "speed": 0.45,
+    "goal_tolerance": 0.18,
+    "sensor_range": 1.25,
+    "landmark_count": 9,
+    "gamma": 0.99,
+    "coverage_threshold": 0.85,
+    "map_accuracy_threshold": 0.7,
+    "landmark_error_threshold": 0.35,
+    "pose_error_threshold": 0.25,
+    "coverage_weight": 10.0,
+    "information_weight": 0.001,
+    "travel_weight": 0.01,
+    "collision_weight": 0.1,
+    "byte_weight": 1e-6,
+    "prior_sigmas": [0.05, 0.05, 0.02],
+    "motion_std": [0.015, 0.015, 0.01],
+    "odometry_sigmas": [0.05, 0.05, 0.02],
+    "observation_sigmas": [0.02, 0.1],
+    "sensor_min_range": 0.25,
+    "revisit_standoff": 0.5,
+    "coordination_weight": 0.05,
+    "group_cue_weight": 0.25
+  },
+  "development_scenarios": [
+    {"scenario_id": "mechanism-development-v1-000", "map_seed": 210000, "noise_seed": 211000},
+    {"scenario_id": "mechanism-development-v1-001", "map_seed": 210001, "noise_seed": 211001}
+  ],
+  "action_seed": 11003,
+  "critic_seed": 11002,
+  "smoke_training": {
+    "actor_seed": 11001,
+    "critic_seed": 11002,
+    "action_seed": 11003,
+    "actor_hidden": 16,
+    "learning_rate": 0.001,
+    "training_steps": 500,
+    "training_wall_seconds": 900,
+    "episodes_per_update": 4,
+    "ppo_epochs": 2,
+    "ppo_clip": 0.2,
+    "entropy_coefficient": 0.01
+  },
+  "historical_stage08_seconds_per_primitive": 0.018745858347198354,
+  "confirmatory_projection": {
+    "quantum_models": 48,
+    "classical_models": 72,
+    "training_primitives_per_model": 10000,
+    "safety_factor": 2.0,
+    "evaluation_overhead_fraction": 0.15
+  },
+  "stage_wall_cap_seconds": 86400,
+  "model": {
+    "actor": "Shared Stage08 Linear27to16,Tanh,GRUCell16,Linear5 recurrent actor",
+    "encoder": "Shared trainable Linear27to2 critic encoder",
+    "critic": "Scripted flexible_interaction contract plus eQMARL training smoke",
+    "parameter_counts": "Measured by diagnostic",
+    "optimizer": "Adam for bounded 500-primitive eQMARL smoke only"
+  },
+  "quantum": {
+    "device": "default.qubit",
+    "shots": null,
+    "dtype": "float64/complex128",
+    "diff_method": "backprop",
+    "wires": 4,
+    "layers": 1,
+    "observable": "ZZZZ",
+    "physical_hardware": false
+  },
+  "interpretation": "Task, critic, information-boundary and throughput correctness only. No method ranking or policy-performance contribution is inferred from scripted episodes or the single smoke model."
+}
