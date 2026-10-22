@@ -1,5 +1,5 @@
 import numpy as np
-from eqmarl_slam.belief_task import BeliefTask, DEFAULT_TASK
+from eqmarl_slam.belief_task import BeliefTask, DEFAULT_TASK, coordination_score
 
 
 def test_belief_actor_does_not_receive_hidden_truth():
@@ -30,4 +30,26 @@ def test_near_field_measurements_are_censored_and_recorded():
     packets = env.sim.observe()
     assert not any(m["owner"] == 0 and m["landmark_id"] == 0 for m in packets)
     assert any(m["status"] == "discarded_near_field" for m in env.sim.sensor_events)
+    env.close()
+
+
+def test_mechanism_reward_is_scale_matched_and_interaction_monotone():
+    interactions = []
+    for alpha in [0., .5, 1.]:
+        table = {(a,b):coordination_score([a,b],alpha) for a in [0,1] for b in [0,1]}
+        assert np.isclose(np.mean(list(table.values())), 1.)
+        interactions.append(table[1,1]-table[1,0]-table[0,1]+table[0,0])
+    assert interactions[0] == 0
+    assert interactions[0] < interactions[1] < interactions[2]
+
+
+def test_mechanism_observation_contract_and_reward_accounting():
+    task = {**DEFAULT_TASK, "protocol":"belief-controller-mechanism-v1",
+            "complementarity_alpha":1., "coordination_weight":.05, "group_cue_weight":.25}
+    env = BeliefTask(task,{"scenario_id":"unit-mechanism","map_seed":17,"noise_seed":18})
+    obs, _ = env.reset()
+    assert obs.shape == (2,27)
+    _,_,reward,_,info = env.step(np.array([0,0]),primitive_limit=1)
+    assert "coordination" in info["reward_components"][0]
+    assert np.isclose(reward,sum(info["reward_components"][0].values()))
     env.close()

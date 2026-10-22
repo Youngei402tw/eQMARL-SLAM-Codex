@@ -1,0 +1,508 @@
+{
+  "split": "test",
+  "protocol": "belief-controller-mechanism-v1",
+  "scenarios": [
+    {
+      "scenario_id": "mechanism-test-v1-000",
+      "map_seed": 330000,
+      "noise_seed": 331000
+    },
+    {
+      "scenario_id": "mechanism-test-v1-001",
+      "map_seed": 330001,
+      "noise_seed": 331001
+    },
+    {
+      "scenario_id": "mechanism-test-v1-002",
+      "map_seed": 330002,
+      "noise_seed": 331002
+    },
+    {
+      "scenario_id": "mechanism-test-v1-003",
+      "map_seed": 330003,
+      "noise_seed": 331003
+    },
+    {
+      "scenario_id": "mechanism-test-v1-004",
+      "map_seed": 330004,
+      "noise_seed": 331004
+    },
+    {
+      "scenario_id": "mechanism-test-v1-005",
+      "map_seed": 330005,
+      "noise_seed": 331005
+    },
+    {
+      "scenario_id": "mechanism-test-v1-006",
+      "map_seed": 330006,
+      "noise_seed": 331006
+    },
+    {
+      "scenario_id": "mechanism-test-v1-007",
+      "map_seed": 330007,
+      "noise_seed": 331007
+    },
+    {
+      "scenario_id": "mechanism-test-v1-008",
+      "map_seed": 330008,
+      "noise_seed": 331008
+    },
+    {
+      "scenario_id": "mechanism-test-v1-009",
+      "map_seed": 330009,
+      "noise_seed": 331009
+    },
+    {
+      "scenario_id": "mechanism-test-v1-010",
+      "map_seed": 330010,
+      "noise_seed": 331010
+    },
+    {
+      "scenario_id": "mechanism-test-v1-011",
+      "map_seed": 330011,
+      "noise_seed": 331011
+    },
+    {
+      "scenario_id": "mechanism-test-v1-012",
+      "map_seed": 330012,
+      "noise_seed": 331012
+    },
+    {
+      "scenario_id": "mechanism-test-v1-013",
+      "map_seed": 330013,
+      "noise_seed": 331013
+    },
+    {
+      "scenario_id": "mechanism-test-v1-014",
+      "map_seed": 330014,
+      "noise_seed": 331014
+    },
+    {
+      "scenario_id": "mechanism-test-v1-015",
+      "map_seed": 330015,
+      "noise_seed": 331015
+    },
+    {
+      "scenario_id": "mechanism-test-v1-016",
+      "map_seed": 330016,
+      "noise_seed": 331016
+    },
+    {
+      "scenario_id": "mechanism-test-v1-017",
+      "map_seed": 330017,
+      "noise_seed": 331017
+    },
+    {
+      "scenario_id": "mechanism-test-v1-018",
+      "map_seed": 330018,
+      "noise_seed": 331018
+    },
+    {
+      "scenario_id": "mechanism-test-v1-019",
+      "map_seed": 330019,
+      "noise_seed": 331019
+    },
+    {
+      "scenario_id": "mechanism-test-v1-020",
+      "map_seed": 330020,
+      "noise_seed": 331020
+    },
+    {
+      "scenario_id": "mechanism-test-v1-021",
+      "map_seed": 330021,
+      "noise_seed": 331021
+    },
+    {
+      "scenario_id": "mechanism-test-v1-022",
+      "map_seed": 330022,
+      "noise_seed": 331022
+    },
+    {
+      "scenario_id": "mechanism-test-v1-023",
+      "map_seed": 330023,
+      "noise_seed": 331023
+    },
+    {
+      "scenario_id": "mechanism-test-v1-024",
+      "map_seed": 330024,
+      "noise_seed": 331024
+    },
+    {
+      "scenario_id": "mechanism-test-v1-025",
+      "map_seed": 330025,
+      "noise_seed": 331025
+    },
+    {
+      "scenario_id": "mechanism-test-v1-026",
+      "map_seed": 330026,
+      "noise_seed": 331026
+    },
+    {
+      "scenario_id": "mechanism-test-v1-027",
+      "map_seed": 330027,
+      "noise_seed": 331027
+    },
+    {
+      "scenario_id": "mechanism-test-v1-028",
+      "map_seed": 330028,
+      "noise_seed": 331028
+    },
+    {
+      "scenario_id": "mechanism-test-v1-029",
+      "map_seed": 330029,
+      "noise_seed": 331029
+    },
+    {
+      "scenario_id": "mechanism-test-v1-030",
+      "map_seed": 330030,
+      "noise_seed": 331030
+    },
+    {
+      "scenario_id": "mechanism-test-v1-031",
+      "map_seed": 330031,
+      "noise_seed": 331031
+    },
+    {
+      "scenario_id": "mechanism-test-v1-032",
+      "map_seed": 330032,
+      "noise_seed": 331032
+    },
+    {
+      "scenario_id": "mechanism-test-v1-033",
+      "map_seed": 330033,
+      "noise_seed": 331033
+    },
+    {
+      "scenario_id": "mechanism-test-v1-034",
+      "map_seed": 330034,
+      "noise_seed": 331034
+    },
+    {
+      "scenario_id": "mechanism-test-v1-035",
+      "map_seed": 330035,
+      "noise_seed": 331035
+    },
+    {
+      "scenario_id": "mechanism-test-v1-036",
+      "map_seed": 330036,
+      "noise_seed": 331036
+    },
+    {
+      "scenario_id": "mechanism-test-v1-037",
+      "map_seed": 330037,
+      "noise_seed": 331037
+    },
+    {
+      "scenario_id": "mechanism-test-v1-038",
+      "map_seed": 330038,
+      "noise_seed": 331038
+    },
+    {
+      "scenario_id": "mechanism-test-v1-039",
+      "map_seed": 330039,
+      "noise_seed": 331039
+    },
+    {
+      "scenario_id": "mechanism-test-v1-040",
+      "map_seed": 330040,
+      "noise_seed": 331040
+    },
+    {
+      "scenario_id": "mechanism-test-v1-041",
+      "map_seed": 330041,
+      "noise_seed": 331041
+    },
+    {
+      "scenario_id": "mechanism-test-v1-042",
+      "map_seed": 330042,
+      "noise_seed": 331042
+    },
+    {
+      "scenario_id": "mechanism-test-v1-043",
+      "map_seed": 330043,
+      "noise_seed": 331043
+    },
+    {
+      "scenario_id": "mechanism-test-v1-044",
+      "map_seed": 330044,
+      "noise_seed": 331044
+    },
+    {
+      "scenario_id": "mechanism-test-v1-045",
+      "map_seed": 330045,
+      "noise_seed": 331045
+    },
+    {
+      "scenario_id": "mechanism-test-v1-046",
+      "map_seed": 330046,
+      "noise_seed": 331046
+    },
+    {
+      "scenario_id": "mechanism-test-v1-047",
+      "map_seed": 330047,
+      "noise_seed": 331047
+    },
+    {
+      "scenario_id": "mechanism-test-v1-048",
+      "map_seed": 330048,
+      "noise_seed": 331048
+    },
+    {
+      "scenario_id": "mechanism-test-v1-049",
+      "map_seed": 330049,
+      "noise_seed": 331049
+    },
+    {
+      "scenario_id": "mechanism-test-v1-050",
+      "map_seed": 330050,
+      "noise_seed": 331050
+    },
+    {
+      "scenario_id": "mechanism-test-v1-051",
+      "map_seed": 330051,
+      "noise_seed": 331051
+    },
+    {
+      "scenario_id": "mechanism-test-v1-052",
+      "map_seed": 330052,
+      "noise_seed": 331052
+    },
+    {
+      "scenario_id": "mechanism-test-v1-053",
+      "map_seed": 330053,
+      "noise_seed": 331053
+    },
+    {
+      "scenario_id": "mechanism-test-v1-054",
+      "map_seed": 330054,
+      "noise_seed": 331054
+    },
+    {
+      "scenario_id": "mechanism-test-v1-055",
+      "map_seed": 330055,
+      "noise_seed": 331055
+    },
+    {
+      "scenario_id": "mechanism-test-v1-056",
+      "map_seed": 330056,
+      "noise_seed": 331056
+    },
+    {
+      "scenario_id": "mechanism-test-v1-057",
+      "map_seed": 330057,
+      "noise_seed": 331057
+    },
+    {
+      "scenario_id": "mechanism-test-v1-058",
+      "map_seed": 330058,
+      "noise_seed": 331058
+    },
+    {
+      "scenario_id": "mechanism-test-v1-059",
+      "map_seed": 330059,
+      "noise_seed": 331059
+    },
+    {
+      "scenario_id": "mechanism-test-v1-060",
+      "map_seed": 330060,
+      "noise_seed": 331060
+    },
+    {
+      "scenario_id": "mechanism-test-v1-061",
+      "map_seed": 330061,
+      "noise_seed": 331061
+    },
+    {
+      "scenario_id": "mechanism-test-v1-062",
+      "map_seed": 330062,
+      "noise_seed": 331062
+    },
+    {
+      "scenario_id": "mechanism-test-v1-063",
+      "map_seed": 330063,
+      "noise_seed": 331063
+    },
+    {
+      "scenario_id": "mechanism-test-v1-064",
+      "map_seed": 330064,
+      "noise_seed": 331064
+    },
+    {
+      "scenario_id": "mechanism-test-v1-065",
+      "map_seed": 330065,
+      "noise_seed": 331065
+    },
+    {
+      "scenario_id": "mechanism-test-v1-066",
+      "map_seed": 330066,
+      "noise_seed": 331066
+    },
+    {
+      "scenario_id": "mechanism-test-v1-067",
+      "map_seed": 330067,
+      "noise_seed": 331067
+    },
+    {
+      "scenario_id": "mechanism-test-v1-068",
+      "map_seed": 330068,
+      "noise_seed": 331068
+    },
+    {
+      "scenario_id": "mechanism-test-v1-069",
+      "map_seed": 330069,
+      "noise_seed": 331069
+    },
+    {
+      "scenario_id": "mechanism-test-v1-070",
+      "map_seed": 330070,
+      "noise_seed": 331070
+    },
+    {
+      "scenario_id": "mechanism-test-v1-071",
+      "map_seed": 330071,
+      "noise_seed": 331071
+    },
+    {
+      "scenario_id": "mechanism-test-v1-072",
+      "map_seed": 330072,
+      "noise_seed": 331072
+    },
+    {
+      "scenario_id": "mechanism-test-v1-073",
+      "map_seed": 330073,
+      "noise_seed": 331073
+    },
+    {
+      "scenario_id": "mechanism-test-v1-074",
+      "map_seed": 330074,
+      "noise_seed": 331074
+    },
+    {
+      "scenario_id": "mechanism-test-v1-075",
+      "map_seed": 330075,
+      "noise_seed": 331075
+    },
+    {
+      "scenario_id": "mechanism-test-v1-076",
+      "map_seed": 330076,
+      "noise_seed": 331076
+    },
+    {
+      "scenario_id": "mechanism-test-v1-077",
+      "map_seed": 330077,
+      "noise_seed": 331077
+    },
+    {
+      "scenario_id": "mechanism-test-v1-078",
+      "map_seed": 330078,
+      "noise_seed": 331078
+    },
+    {
+      "scenario_id": "mechanism-test-v1-079",
+      "map_seed": 330079,
+      "noise_seed": 331079
+    },
+    {
+      "scenario_id": "mechanism-test-v1-080",
+      "map_seed": 330080,
+      "noise_seed": 331080
+    },
+    {
+      "scenario_id": "mechanism-test-v1-081",
+      "map_seed": 330081,
+      "noise_seed": 331081
+    },
+    {
+      "scenario_id": "mechanism-test-v1-082",
+      "map_seed": 330082,
+      "noise_seed": 331082
+    },
+    {
+      "scenario_id": "mechanism-test-v1-083",
+      "map_seed": 330083,
+      "noise_seed": 331083
+    },
+    {
+      "scenario_id": "mechanism-test-v1-084",
+      "map_seed": 330084,
+      "noise_seed": 331084
+    },
+    {
+      "scenario_id": "mechanism-test-v1-085",
+      "map_seed": 330085,
+      "noise_seed": 331085
+    },
+    {
+      "scenario_id": "mechanism-test-v1-086",
+      "map_seed": 330086,
+      "noise_seed": 331086
+    },
+    {
+      "scenario_id": "mechanism-test-v1-087",
+      "map_seed": 330087,
+      "noise_seed": 331087
+    },
+    {
+      "scenario_id": "mechanism-test-v1-088",
+      "map_seed": 330088,
+      "noise_seed": 331088
+    },
+    {
+      "scenario_id": "mechanism-test-v1-089",
+      "map_seed": 330089,
+      "noise_seed": 331089
+    },
+    {
+      "scenario_id": "mechanism-test-v1-090",
+      "map_seed": 330090,
+      "noise_seed": 331090
+    },
+    {
+      "scenario_id": "mechanism-test-v1-091",
+      "map_seed": 330091,
+      "noise_seed": 331091
+    },
+    {
+      "scenario_id": "mechanism-test-v1-092",
+      "map_seed": 330092,
+      "noise_seed": 331092
+    },
+    {
+      "scenario_id": "mechanism-test-v1-093",
+      "map_seed": 330093,
+      "noise_seed": 331093
+    },
+    {
+      "scenario_id": "mechanism-test-v1-094",
+      "map_seed": 330094,
+      "noise_seed": 331094
+    },
+    {
+      "scenario_id": "mechanism-test-v1-095",
+      "map_seed": 330095,
+      "noise_seed": 331095
+    },
+    {
+      "scenario_id": "mechanism-test-v1-096",
+      "map_seed": 330096,
+      "noise_seed": 331096
+    },
+    {
+      "scenario_id": "mechanism-test-v1-097",
+      "map_seed": 330097,
+      "noise_seed": 331097
+    },
+    {
+      "scenario_id": "mechanism-test-v1-098",
+      "map_seed": 330098,
+      "noise_seed": 331098
+    },
+    {
+      "scenario_id": "mechanism-test-v1-099",
+      "map_seed": 330099,
+      "noise_seed": 331099
+    }
+  ],
+  "purpose": "test",
+  "registration_note": "Fresh namespace registered after the Stage08 final result. The test catalog is reserved for locked Stage13 actor-only evaluation."
+}

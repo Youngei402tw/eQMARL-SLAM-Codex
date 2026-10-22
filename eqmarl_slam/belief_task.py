@@ -64,6 +64,24 @@ DEFAULT_TASK = {"protocol": "belief-controller-v2", "horizon": 36, "macro_max_st
                 "sensor_min_range": .25, "revisit_standoff": .5}
 
 
+def coordination_score(events, complementarity_alpha):
+    """Reward-normalized two-agent complementarity intervention.
+
+    The four binary event combinations have mean one under a balanced
+    counterfactual table for every alpha. Alpha zero is additive; alpha one
+    pays only the joint event. This keeps reward scale separate from the mixed
+    cross-agent interaction introduced by alpha.
+    """
+    events = np.asarray(events, dtype=np.float64)
+    if events.shape != (2,) or np.any((events < 0) | (events > 1)):
+        raise ValueError("coordination events must be two binary indicators")
+    alpha = float(complementarity_alpha)
+    if not 0 <= alpha <= 1:
+        raise ValueError("complementarity_alpha must be in [0,1]")
+    normalizer = .5 - .25 * alpha
+    return float(((1-alpha)*.5*events.sum() + alpha*events.prod()) / normalizer)
+
+
 class BeliefTask:
     """Actors: own pose/covariance, delivered factors, candidate descriptors.
 
@@ -76,8 +94,16 @@ class BeliefTask:
     def __init__(self, config, scenario):
         if set(DEFAULT_TASK) - set(config):
             raise ValueError("Task config must resolve every DEFAULT_TASK field")
-        if config["protocol"] != "belief-controller-v2":
+        if config["protocol"] not in {"belief-controller-v2", "belief-controller-mechanism-v1"}:
             raise ValueError("Unknown task protocol")
+        if config["protocol"] == "belief-controller-mechanism-v1":
+            required = {"complementarity_alpha", "coordination_weight", "group_cue_weight"}
+            if required - set(config):
+                raise ValueError("Mechanism task must resolve complementarity controls")
+            if not 0 <= config["complementarity_alpha"] <= 1:
+                raise ValueError("complementarity_alpha must be in [0,1]")
+            if not 0 <= config["group_cue_weight"] <= 1:
+                raise ValueError("group_cue_weight must be in [0,1]")
         self.config, self.scenario = dict(config), dict(scenario)
         self.grid = np.array([(x, y) for x in np.linspace(1/3, 11/3, 6) for y in np.linspace(1/3, 11/3, 6)])
 
@@ -94,6 +120,8 @@ class BeliefTask:
         self.graphs = [GTSAMSmoother(prior_sigmas=c["prior_sigmas"], odometry_sigmas=c["odometry_sigmas"],
                                      observation_sigmas=c["observation_sigmas"], backend="direct") for _ in range(2)]
         self.bytes, self.messages, self.collisions, self.distance = 0, 0, 0, 0.
+        self.coordination_events = np.zeros(4, dtype=int)
+        self.coordination_reward = 0.
         self.sent = [set(), set()]
         self.physical_seen = np.zeros(36, bool)
         self.goals = [None, None]
@@ -158,6 +186,17 @@ class BeliefTask:
             candidates[3] = landmarks[identity]+self.config["revisit_standoff"]*direction
         candidates = np.clip(np.asarray(candidates), .25, 3.75)
         gains = np.array([np.mean(footprint(point) & ~seen) for point in candidates])
+        if self.config["protocol"] == "belief-controller-mechanism-v1":
+            group_signal = []
+            for point in candidates:
+                signals = []
+                for identity, estimate in landmarks.items():
+                    if identity % 2 == robot and np.linalg.norm(estimate-point) <= self.config["sensor_range"]:
+                        uncertainty = np.trace(self.graphs[robot].landmark_covariance(identity))
+                        signals.append(min(1., float(uncertainty)/.1))
+                group_signal.append(max(signals, default=0.))
+            weight = self.config["group_cue_weight"]
+            gains = (1-weight)*gains + weight*np.asarray(group_signal)
         return candidates, mask, gains
 
     def observe(self):
@@ -220,6 +259,8 @@ class BeliefTask:
             measurements = self.sim.step(commands)
             if self.on_primitive is not None: self.on_primitive(1)
             information = 0.
+            information_by_robot = np.zeros(2)
+            group_events = np.zeros(2, dtype=int)
             for r, graph in enumerate(self.graphs):
                 own = [m for m in measurements if m["owner"] == r]
                 for m in own:
@@ -228,7 +269,12 @@ class BeliefTask:
                 for m in own:
                     if m["kind"] == "landmark": graph.add_measurement(m)
                 posterior = graph.pose_covariance(r, self.sim.timestamp)
-                information += np.linalg.slogdet(predicted)[1]-np.linalg.slogdet(posterior)[1]
+                gain = np.linalg.slogdet(predicted)[1]-np.linalg.slogdet(posterior)[1]
+                information += gain
+                information_by_robot[r] = gain
+                group_events[r] = int(gain > 1e-12 and any(
+                    m["kind"] == "landmark" and m["landmark_id"] % 2 == r for m in own
+                ))
             self._physical_sense()
             self.collisions += self.sim.last_collisions
             self.distance += self.sim.last_distance
@@ -236,6 +282,13 @@ class BeliefTask:
                      "information": c["information_weight"]*information,
                      "travel": -c["travel_weight"]*self.sim.last_distance,
                      "collision": -c["collision_weight"]*self.sim.last_collisions, "communication":0.}
+            if c["protocol"] == "belief-controller-mechanism-v1":
+                coordination = c["coordination_weight"]*coordination_score(
+                    group_events, c["complementarity_alpha"]
+                )
+                parts["coordination"] = coordination
+                self.coordination_events[int(group_events[0])*2+int(group_events[1])] += 1
+                self.coordination_reward += coordination
             rewards.append(sum(parts.values())); trace.append(parts)
             if all(np.linalg.norm(self.goals[r]-self.graphs[r].pose(r,self.sim.timestamp)[:2])<c["goal_tolerance"] for r in range(2)):
                 break
@@ -269,6 +322,8 @@ class BeliefTask:
                 "trajectory_rpe_m":float(np.mean(rpes)) if rpes else None,
                 "primitive_steps":self.sim.timestamp,"travel_distance_m":self.distance,"collisions":self.collisions,
                 "communication_bytes":self.bytes,"messages":self.messages,
+                "coordination_event_counts":self.coordination_events.tolist(),
+                "coordination_reward":self.coordination_reward,
                 "discarded_sensor_events":len(self.sim.sensor_events),
                 "success":bool(coverage>=self.config["coverage_threshold"] and accuracy>=self.config["map_accuracy_threshold"]
                                and np.mean(current)<=self.config["pose_error_threshold"]),
