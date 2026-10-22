@@ -2,7 +2,7 @@
 
 A staged research project to test whether an entangled quantum critic improves cooperative active SLAM under controlled information, model, and compute budgets.
 
-**Stages 00–09 are complete with verified evidence.** The locked eight-seed confirmatory study found an eQMARL-minus-matched-no-entanglement physical-coverage difference of 0.00431 with a 95% paired-seed interval of [-0.01458, 0.02615]. This does not establish superiority or equivalence. See [the final report](docs/FINAL_REPORT.md), [project state](project_state.json), and [the continuation guide](docs/CONTINUATION.md).
+**Stages 00–09 are complete with verified evidence.** The locked eight-seed confirmatory study found an eQMARL-minus-matched-no-entanglement physical-coverage difference of 0.00431 with a 95% paired-seed interval of [-0.01458, 0.02615]. This does not establish superiority or equivalence. A separately authorized prospective [mechanism-focused extension](docs/MECHANISM_STUDY_PLAN.md) begins at Stage 10 with fresh data and a complementarity-by-entanglement interaction hypothesis. See [the final core report](docs/FINAL_REPORT.md) and [project state](project_state.json).
 
 ## Start here
 
@@ -39,8 +39,13 @@ A positive, null, or negative quantum comparison can all complete the project. C
 | 07 | `stage/07-shot-noise` | Finite-shot, noise, and resource analysis |
 | 08 | `stage/08-confirmatory` | Frozen protocol and held-out multi-seed evaluation |
 | 09 | `stage/09-release` | Reproduction bundle, final report, and claim audit |
+| 10 | `stage/10-mechanism-plan` | Prospective mechanism-study design and gates |
+| 11 | `stage/11-mechanism-task` | Controlled complementarity task and diagnostics |
+| 12 | `stage/12-mechanism-development` | Equal-budget tuning, pilots, and freeze |
+| 13 | `stage/13-mechanism-confirmatory` | Locked interaction phase diagram |
+| 14 | `stage/14-mechanism-release` | Reproduction and paper-ready contribution audit |
 
-All ten stage branches were created from their recorded dependencies and are retained. `main` is the stable integrated release; each stage branch preserves its source, raw outcomes, analysis, and completion record.
+The completed Stage 00–09 branches were created from their recorded dependencies and are retained. Stage 10 is the active prospective planning branch; later extension branches remain planned until their stages begin. `main` is the stable integrated core release.
 
 ## What is runnable today
 

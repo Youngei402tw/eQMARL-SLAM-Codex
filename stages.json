@@ -201,6 +201,68 @@
       "results_commit": "d9e130c99338200ae144c558735226ac3a6dc24d",
       "completion_commit": "2fe0e3ab73711288b705643f7ea3f12cee857fa9",
       "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/10"
+    },
+    {
+      "id": "10",
+      "name": "mechanism-plan",
+      "title": "Prospective interaction-mechanism study",
+      "branch": "stage/10-mechanism-plan",
+      "depends_on": ["09"],
+      "initial_status": "planned",
+      "report": "docs/stages/10-mechanism-plan.md",
+      "status": "running",
+      "branch_created": true,
+      "dependency_completion_commit": "2fe0e3ab73711288b705643f7ea3f12cee857fa9",
+      "branch_created_from_commit": "2fe0e3ab73711288b705643f7ea3f12cee857fa9",
+      "integrated_completed_archive": {
+        "branch": "main",
+        "commit": "59964e74a1ede9ad807e04a755dd7ac395375278",
+        "scope": "Final Stage09 completion receipt integrated after exact dependency-based branch creation."
+      }
+    },
+    {
+      "id": "11",
+      "name": "mechanism-task",
+      "title": "Controlled complementarity task and diagnostics",
+      "branch": "stage/11-mechanism-task",
+      "depends_on": ["10"],
+      "initial_status": "planned",
+      "report": "docs/stages/11-mechanism-task.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "12",
+      "name": "mechanism-development",
+      "title": "Equal-budget mechanism development and freeze",
+      "branch": "stage/12-mechanism-development",
+      "depends_on": ["11"],
+      "initial_status": "planned",
+      "report": "docs/stages/12-mechanism-development.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "13",
+      "name": "mechanism-confirmatory",
+      "title": "Locked complementarity interaction phase diagram",
+      "branch": "stage/13-mechanism-confirmatory",
+      "depends_on": ["12"],
+      "initial_status": "planned",
+      "report": "docs/stages/13-mechanism-confirmatory.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "14",
+      "name": "mechanism-release",
+      "title": "Mechanism-study reproduction and paper release",
+      "branch": "stage/14-mechanism-release",
+      "depends_on": ["13"],
+      "initial_status": "planned",
+      "report": "docs/stages/14-mechanism-release.md",
+      "status": "planned",
+      "branch_created": false
     }
   ],
   "recommended_execution_order": [
@@ -213,6 +275,11 @@
     "06",
     "07",
     "08",
-    "09"
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14"
   ]
 }
