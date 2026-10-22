@@ -1,0 +1,16 @@
+{
+  "stage": "11",
+  "dependency_completion_commit": "d3978be222df4636d792bb54f2222d9ad093be4f",
+  "runs": [
+    {
+      "run_id": "11-mechanism-task-v1_attempt-01",
+      "status": "planned",
+      "config": "configs/stage11/11-mechanism-task-v1_attempt-01.yaml",
+      "config_sha256": "c7461150cc4566fcb57cd267d85c8b7cf715b68a2f6e544c6452cdaa2d1923f4",
+      "source_commit": null,
+      "results_commit": null,
+      "gates_passed": null,
+      "publication": "pending"
+    }
+  ]
+}

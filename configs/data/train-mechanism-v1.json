@@ -1,0 +1,328 @@
+{
+  "split": "train",
+  "protocol": "belief-controller-mechanism-v1",
+  "scenarios": [
+    {
+      "scenario_id": "mechanism-train-v1-000",
+      "map_seed": 200000,
+      "noise_seed": 201000
+    },
+    {
+      "scenario_id": "mechanism-train-v1-001",
+      "map_seed": 200001,
+      "noise_seed": 201001
+    },
+    {
+      "scenario_id": "mechanism-train-v1-002",
+      "map_seed": 200002,
+      "noise_seed": 201002
+    },
+    {
+      "scenario_id": "mechanism-train-v1-003",
+      "map_seed": 200003,
+      "noise_seed": 201003
+    },
+    {
+      "scenario_id": "mechanism-train-v1-004",
+      "map_seed": 200004,
+      "noise_seed": 201004
+    },
+    {
+      "scenario_id": "mechanism-train-v1-005",
+      "map_seed": 200005,
+      "noise_seed": 201005
+    },
+    {
+      "scenario_id": "mechanism-train-v1-006",
+      "map_seed": 200006,
+      "noise_seed": 201006
+    },
+    {
+      "scenario_id": "mechanism-train-v1-007",
+      "map_seed": 200007,
+      "noise_seed": 201007
+    },
+    {
+      "scenario_id": "mechanism-train-v1-008",
+      "map_seed": 200008,
+      "noise_seed": 201008
+    },
+    {
+      "scenario_id": "mechanism-train-v1-009",
+      "map_seed": 200009,
+      "noise_seed": 201009
+    },
+    {
+      "scenario_id": "mechanism-train-v1-010",
+      "map_seed": 200010,
+      "noise_seed": 201010
+    },
+    {
+      "scenario_id": "mechanism-train-v1-011",
+      "map_seed": 200011,
+      "noise_seed": 201011
+    },
+    {
+      "scenario_id": "mechanism-train-v1-012",
+      "map_seed": 200012,
+      "noise_seed": 201012
+    },
+    {
+      "scenario_id": "mechanism-train-v1-013",
+      "map_seed": 200013,
+      "noise_seed": 201013
+    },
+    {
+      "scenario_id": "mechanism-train-v1-014",
+      "map_seed": 200014,
+      "noise_seed": 201014
+    },
+    {
+      "scenario_id": "mechanism-train-v1-015",
+      "map_seed": 200015,
+      "noise_seed": 201015
+    },
+    {
+      "scenario_id": "mechanism-train-v1-016",
+      "map_seed": 200016,
+      "noise_seed": 201016
+    },
+    {
+      "scenario_id": "mechanism-train-v1-017",
+      "map_seed": 200017,
+      "noise_seed": 201017
+    },
+    {
+      "scenario_id": "mechanism-train-v1-018",
+      "map_seed": 200018,
+      "noise_seed": 201018
+    },
+    {
+      "scenario_id": "mechanism-train-v1-019",
+      "map_seed": 200019,
+      "noise_seed": 201019
+    },
+    {
+      "scenario_id": "mechanism-train-v1-020",
+      "map_seed": 200020,
+      "noise_seed": 201020
+    },
+    {
+      "scenario_id": "mechanism-train-v1-021",
+      "map_seed": 200021,
+      "noise_seed": 201021
+    },
+    {
+      "scenario_id": "mechanism-train-v1-022",
+      "map_seed": 200022,
+      "noise_seed": 201022
+    },
+    {
+      "scenario_id": "mechanism-train-v1-023",
+      "map_seed": 200023,
+      "noise_seed": 201023
+    },
+    {
+      "scenario_id": "mechanism-train-v1-024",
+      "map_seed": 200024,
+      "noise_seed": 201024
+    },
+    {
+      "scenario_id": "mechanism-train-v1-025",
+      "map_seed": 200025,
+      "noise_seed": 201025
+    },
+    {
+      "scenario_id": "mechanism-train-v1-026",
+      "map_seed": 200026,
+      "noise_seed": 201026
+    },
+    {
+      "scenario_id": "mechanism-train-v1-027",
+      "map_seed": 200027,
+      "noise_seed": 201027
+    },
+    {
+      "scenario_id": "mechanism-train-v1-028",
+      "map_seed": 200028,
+      "noise_seed": 201028
+    },
+    {
+      "scenario_id": "mechanism-train-v1-029",
+      "map_seed": 200029,
+      "noise_seed": 201029
+    },
+    {
+      "scenario_id": "mechanism-train-v1-030",
+      "map_seed": 200030,
+      "noise_seed": 201030
+    },
+    {
+      "scenario_id": "mechanism-train-v1-031",
+      "map_seed": 200031,
+      "noise_seed": 201031
+    },
+    {
+      "scenario_id": "mechanism-train-v1-032",
+      "map_seed": 200032,
+      "noise_seed": 201032
+    },
+    {
+      "scenario_id": "mechanism-train-v1-033",
+      "map_seed": 200033,
+      "noise_seed": 201033
+    },
+    {
+      "scenario_id": "mechanism-train-v1-034",
+      "map_seed": 200034,
+      "noise_seed": 201034
+    },
+    {
+      "scenario_id": "mechanism-train-v1-035",
+      "map_seed": 200035,
+      "noise_seed": 201035
+    },
+    {
+      "scenario_id": "mechanism-train-v1-036",
+      "map_seed": 200036,
+      "noise_seed": 201036
+    },
+    {
+      "scenario_id": "mechanism-train-v1-037",
+      "map_seed": 200037,
+      "noise_seed": 201037
+    },
+    {
+      "scenario_id": "mechanism-train-v1-038",
+      "map_seed": 200038,
+      "noise_seed": 201038
+    },
+    {
+      "scenario_id": "mechanism-train-v1-039",
+      "map_seed": 200039,
+      "noise_seed": 201039
+    },
+    {
+      "scenario_id": "mechanism-train-v1-040",
+      "map_seed": 200040,
+      "noise_seed": 201040
+    },
+    {
+      "scenario_id": "mechanism-train-v1-041",
+      "map_seed": 200041,
+      "noise_seed": 201041
+    },
+    {
+      "scenario_id": "mechanism-train-v1-042",
+      "map_seed": 200042,
+      "noise_seed": 201042
+    },
+    {
+      "scenario_id": "mechanism-train-v1-043",
+      "map_seed": 200043,
+      "noise_seed": 201043
+    },
+    {
+      "scenario_id": "mechanism-train-v1-044",
+      "map_seed": 200044,
+      "noise_seed": 201044
+    },
+    {
+      "scenario_id": "mechanism-train-v1-045",
+      "map_seed": 200045,
+      "noise_seed": 201045
+    },
+    {
+      "scenario_id": "mechanism-train-v1-046",
+      "map_seed": 200046,
+      "noise_seed": 201046
+    },
+    {
+      "scenario_id": "mechanism-train-v1-047",
+      "map_seed": 200047,
+      "noise_seed": 201047
+    },
+    {
+      "scenario_id": "mechanism-train-v1-048",
+      "map_seed": 200048,
+      "noise_seed": 201048
+    },
+    {
+      "scenario_id": "mechanism-train-v1-049",
+      "map_seed": 200049,
+      "noise_seed": 201049
+    },
+    {
+      "scenario_id": "mechanism-train-v1-050",
+      "map_seed": 200050,
+      "noise_seed": 201050
+    },
+    {
+      "scenario_id": "mechanism-train-v1-051",
+      "map_seed": 200051,
+      "noise_seed": 201051
+    },
+    {
+      "scenario_id": "mechanism-train-v1-052",
+      "map_seed": 200052,
+      "noise_seed": 201052
+    },
+    {
+      "scenario_id": "mechanism-train-v1-053",
+      "map_seed": 200053,
+      "noise_seed": 201053
+    },
+    {
+      "scenario_id": "mechanism-train-v1-054",
+      "map_seed": 200054,
+      "noise_seed": 201054
+    },
+    {
+      "scenario_id": "mechanism-train-v1-055",
+      "map_seed": 200055,
+      "noise_seed": 201055
+    },
+    {
+      "scenario_id": "mechanism-train-v1-056",
+      "map_seed": 200056,
+      "noise_seed": 201056
+    },
+    {
+      "scenario_id": "mechanism-train-v1-057",
+      "map_seed": 200057,
+      "noise_seed": 201057
+    },
+    {
+      "scenario_id": "mechanism-train-v1-058",
+      "map_seed": 200058,
+      "noise_seed": 201058
+    },
+    {
+      "scenario_id": "mechanism-train-v1-059",
+      "map_seed": 200059,
+      "noise_seed": 201059
+    },
+    {
+      "scenario_id": "mechanism-train-v1-060",
+      "map_seed": 200060,
+      "noise_seed": 201060
+    },
+    {
+      "scenario_id": "mechanism-train-v1-061",
+      "map_seed": 200061,
+      "noise_seed": 201061
+    },
+    {
+      "scenario_id": "mechanism-train-v1-062",
+      "map_seed": 200062,
+      "noise_seed": 201062
+    },
+    {
+      "scenario_id": "mechanism-train-v1-063",
+      "map_seed": 200063,
+      "noise_seed": 201063
+    }
+  ],
+  "purpose": "train",
+  "registration_note": "Fresh namespace registered after the Stage08 final result. The test catalog is reserved for locked Stage13 actor-only evaluation."
+}

@@ -50,7 +50,7 @@ def collect_episode(model, task_config, scenario, action_generator, *, primitive
     if on_transition is not None: env.on_primitive = on_transition
     hidden = model.actor.initial_state(agents=2)
     rows, total_return = [], 0.
-    component_totals = {k:0. for k in ['coverage','information','travel','collision','communication']}
+    component_totals = {k:0. for k in ['coverage','information','travel','collision','communication','coordination']}
     primitive_steps = 0
     done = False
     while not done and primitive_steps < primitive_limit:

@@ -13,7 +13,7 @@ def evaluate_actor(actor, task_config, scenario, resources, emit_macro=None):
     total, macros, done = 0., 0, False
     actions_by_agent = np.zeros((2,5), dtype=int)
     durations = {1:0, 2:0, 3:0}
-    parts = {k:0. for k in ['coverage','information','travel','collision','communication']}
+    parts = {k:0. for k in ['coverage','information','travel','collision','communication','coordination']}
     try:
         while not done:
             with torch.no_grad():

@@ -11,13 +11,13 @@
     "last_check": "All 20 files of the published planning commit matched their local Git blob hashes; the stage branch head and AGENTS.md content were read back through the GitHub plugin."
   },
   "authorized_current_scope": "Execute the mechanism-focused extension Stages 10\u201314 autonomously under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
-  "active_stage": "10",
-  "stage_status": "passed",
+  "active_stage": "11",
+  "stage_status": "running",
   "training_runs_executed": 95,
-  "current_branch": "stage/10-mechanism-plan",
-  "dependency_commit": "2fe0e3ab73711288b705643f7ea3f12cee857fa9",
+  "current_branch": "stage/11-mechanism-task",
+  "dependency_commit": "d3978be222df4636d792bb54f2222d9ad093be4f",
   "completion_commit": null,
-  "publication_status": "verified_complete",
+  "publication_status": "pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -36,7 +36,7 @@
     "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73"
   },
   "blockers": [],
-  "next_action": "Create Stage11 from the immutable Stage10 completion commit and implement the controlled mechanism task and falsification diagnostics.",
+  "next_action": "Implement and validate the controlled complementarity task, flexible classical critic, fresh split manifests, falsification diagnostics and throughput bound before learning.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -46,7 +46,7 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "11",
+  "next_stage": "12",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
   "next_stage_status": "planned",
@@ -204,10 +204,10 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 300,
-    "setup_wall_seconds_charged": 300,
-    "stage_started_utc": "2026-10-22T07:12:00+00:00",
-    "setup_charge_convention": "Active planning-stage work; no scientific experiment in Stage10.",
+    "consumed_wall_seconds": 0,
+    "setup_wall_seconds_charged": 0,
+    "stage_started_utc": "2026-10-22T07:17:00+00:00",
+    "setup_charge_convention": "Conservative active stage envelope less instrumented sequential experiment segments.",
     "recorded_experiment_resources": {
       "primitive_steps": 0,
       "decisions": 0,

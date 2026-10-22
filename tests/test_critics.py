@@ -19,3 +19,9 @@ def test_common_compression_and_scalar_values_have_gradients():
         assert model.encoder.weight.shape==(2,27)
         assert torch.isfinite(model.encoder.weight.grad).all()
         assert model.encoder.weight.grad.norm()>1e-10
+
+
+def test_flexible_interaction_is_agent_order_symmetric():
+    model=make_critic('flexible_interaction',11)
+    x=torch.tensor(np.random.default_rng(22).normal(size=(5,2,27)),dtype=torch.float64)
+    assert torch.allclose(model(x),model(x.flip(-2)),atol=1e-12,rtol=0)
