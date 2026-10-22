@@ -210,7 +210,7 @@
       "depends_on": ["09"],
       "initial_status": "planned",
       "report": "docs/stages/10-mechanism-plan.md",
-      "status": "running",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "2fe0e3ab73711288b705643f7ea3f12cee857fa9",
       "branch_created_from_commit": "2fe0e3ab73711288b705643f7ea3f12cee857fa9",
@@ -218,7 +218,9 @@
         "branch": "main",
         "commit": "59964e74a1ede9ad807e04a755dd7ac395375278",
         "scope": "Final Stage09 completion receipt integrated after exact dependency-based branch creation."
-      }
+      },
+      "publication_receipt": "docs/stages/10-publication.json",
+      "results_commit": "4761ed3307214f5f157d48700a96d1121159593f"
     },
     {
       "id": "11",

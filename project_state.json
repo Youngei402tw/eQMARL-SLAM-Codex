@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Execute the mechanism-focused extension Stages 10\u201314 autonomously under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
   "active_stage": "10",
-  "stage_status": "running",
+  "stage_status": "passed",
   "training_runs_executed": 95,
   "current_branch": "stage/10-mechanism-plan",
   "dependency_commit": "2fe0e3ab73711288b705643f7ea3f12cee857fa9",
   "completion_commit": null,
-  "publication_status": "planning_pending_publication",
+  "publication_status": "verified_complete",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -36,7 +36,7 @@
     "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73"
   },
   "blockers": [],
-  "next_action": "Validate and publish the prospective mechanism-study plan before any Stage11 implementation or experiment.",
+  "next_action": "Create Stage11 from the immutable Stage10 completion commit and implement the controlled mechanism task and falsification diagnostics.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -204,8 +204,8 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 0,
-    "setup_wall_seconds_charged": 0,
+    "consumed_wall_seconds": 300,
+    "setup_wall_seconds_charged": 300,
     "stage_started_utc": "2026-10-22T07:12:00+00:00",
     "setup_charge_convention": "Active planning-stage work; no scientific experiment in Stage10.",
     "recorded_experiment_resources": {
