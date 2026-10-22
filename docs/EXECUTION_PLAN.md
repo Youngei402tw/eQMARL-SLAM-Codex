@@ -367,6 +367,18 @@ Repair missing metadata or links before calling the archive complete. If large-a
 
 The core project ends when the 2D task, fair critic comparison, and confirmatory evaluation are complete and archived, even if eQMARL does not win.
 
+## Authorized mechanism-focused extension
+
+After the completed Stage 08 null result, the user authorized a new prospective study of when critic entanglement could matter. Stages 10–14 are governed by [MECHANISM_STUDY_PLAN.md](MECHANISM_STUDY_PLAN.md). They use fresh data, new protocol identities, and a primary complementarity-by-entanglement interaction contrast. They do not alter the completed Stage 08 analysis.
+
+| Stage | Branch | Dependency | Purpose |
+| --- | --- | --- | --- |
+| 10 | `stage/10-mechanism-plan` | 09 | Prospective hypothesis, design, budgets, and gates |
+| 11 | `stage/11-mechanism-task` | 10 | Controlled complementarity task and falsification diagnostics |
+| 12 | `stage/12-mechanism-development` | 11 | Equal-budget tuning, pilots, and confirmatory freeze |
+| 13 | `stage/13-mechanism-confirmatory` | 12 | Locked five-method, three-condition phase diagram |
+| 14 | `stage/14-mechanism-release` | 13 | Clean-runtime reproduction, contribution, and paper artifacts |
+
 Defer ROS/Gazebo integration, ambiguous association, extensive scaling, 3D perception, and execution-time entangled actors to separately planned branches. They need their own hypotheses and resource budgets. A useful first paper can concern when entanglement helps or fails; photorealistic rendering is not a substitute for causal evidence.
 
 At the end of every active Codex session, record the last verified commit, next unambiguous action, active run IDs/processes when applicable, blockers, and remaining budgets. Never imply that work continues unattended after the session unless an actual running job or authorized schedule exists.

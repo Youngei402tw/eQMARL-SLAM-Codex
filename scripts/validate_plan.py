@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Stage 00 structure without installing the future research stack.
+"""Validate the staged research-plan structure without running experiments.
 
 This checks planning artifacts and links. It does not validate scientific
 correctness, authenticate GitHub, or imply that future CLIs exist.
@@ -26,6 +26,9 @@ EXPECTED_BRANCHES = [
     "stage/03-slam-beliefs", "stage/04-classical-controller",
     "stage/05-critic-ablation", "stage/06-interaction-model",
     "stage/07-shot-noise", "stage/08-confirmatory", "stage/09-release",
+    "stage/10-mechanism-plan", "stage/11-mechanism-task",
+    "stage/12-mechanism-development", "stage/13-mechanism-confirmatory",
+    "stage/14-mechanism-release",
 ]
 
 
@@ -53,7 +56,7 @@ def main():
     registry = parsed["stages.json"]
     stages = registry["stages"]
     if [s["branch"] for s in stages] != EXPECTED_BRANCHES:
-        errors.append("Stage branch registry differs from the agreed ten-stage plan.")
+        errors.append("Stage branch registry differs from the agreed staged plan and authorized extension.")
     seen = set()
     for stage in stages:
         if stage["id"] in seen:
