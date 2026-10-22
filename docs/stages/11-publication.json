@@ -1,0 +1,24 @@
+{
+  "stage": "11",
+  "verified_utc": "2026-10-22T07:23:31.581696+00:00",
+  "verified_remote_head": "12572494bbc693720bdd3f750fa253ac6445f63c",
+  "mechanism": "Fresh independent Git retrieval; every run manifest, resolved config, raw metric, diagnostic and inventoried checkpoint hash/size validated",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "11-mechanism-task-v1_attempt-01",
+      "status": "failed",
+      "verified_files": 8,
+      "metrics_rows": 77,
+      "metrics_sha256": "6b57eb98e40a52425dd486da80c9602e6a3ba15e1d98a6c807ccb4d4d8925cc1"
+    },
+    {
+      "valid": true,
+      "run_id": "11-mechanism-task-v1_attempt-02",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 77,
+      "metrics_sha256": "ebd8ec6a3557465b0d3586134ea88a6fded7580eb755fc5f9e2d5f8c727bf19a"
+    }
+  ]
+}

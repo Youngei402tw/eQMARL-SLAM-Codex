@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-21T08:33:00+00:00",
+  "updated_utc": "2026-10-22T07:23:35.556940+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Execute the mechanism-focused extension Stages 10\u201314 autonomously under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
   "active_stage": "11",
-  "stage_status": "running",
-  "training_runs_executed": 95,
+  "stage_status": "passed",
+  "training_runs_executed": 71,
   "current_branch": "stage/11-mechanism-task",
   "dependency_commit": "d3978be222df4636d792bb54f2222d9ad093be4f",
   "completion_commit": null,
-  "publication_status": "pending",
+  "publication_status": "verified_complete",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -36,7 +36,7 @@
     "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73"
   },
   "blockers": [],
-  "next_action": "Implement and validate the controlled complementarity task, flexible classical critic, fresh split manifests, falsification diagnostics and throughput bound before learning.",
+  "next_action": "Create Stage12 from the immutable Stage11 completion commit, execute equal-budget development tuning and pilots, then freeze Stage13 before test access.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -204,18 +204,18 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 0,
-    "setup_wall_seconds_charged": 0,
+    "consumed_wall_seconds": 395.556894,
+    "setup_wall_seconds_charged": 362.23334837399995,
     "stage_started_utc": "2026-10-22T07:17:00+00:00",
-    "setup_charge_convention": "Conservative active stage envelope less instrumented sequential experiment segments.",
+    "setup_charge_convention": "Conservative active stage envelope less instrumented sequential experiment segments; idle across sessions must be explicitly excluded.",
     "recorded_experiment_resources": {
-      "primitive_steps": 0,
-      "decisions": 0,
-      "updates": 0,
-      "wall_seconds": 0,
-      "cpu_core_hours": 0,
+      "primitive_steps": 1102,
+      "decisions": 772,
+      "updates": 44,
+      "wall_seconds": 33.323545626000055,
+      "cpu_core_hours": 0.009250987777777778,
       "gpu_device_hours": 0,
-      "circuit_evaluations": 0,
+      "circuit_evaluations": 1058,
       "shots": 0
     }
   },
