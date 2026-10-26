@@ -1,0 +1,147 @@
+{
+  "stage": "12",
+  "dependency_completion_commit": "7442b2354fc5f630c3c0753697f60078682f7b10",
+  "test_accessed": false,
+  "runs": [
+    {
+      "run_id": "12-tuning-central_classical_lr-001_seed-12001_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-central_classical_lr-001_seed-12001_attempt-01.yaml",
+      "config_sha256": "d8cfe9672108c94c03effb28cbca7c2cc34d9cb6216b349741dbcc8ede87b180"
+    },
+    {
+      "run_id": "12-tuning-bilinear_lr-001_seed-12001_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-bilinear_lr-001_seed-12001_attempt-01.yaml",
+      "config_sha256": "3b5f75caf65e0f6c698abbede51d719dd28b40b4054249036c7414dba3ed0f87"
+    },
+    {
+      "run_id": "12-tuning-flexible_interaction_lr-001_seed-12001_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-flexible_interaction_lr-001_seed-12001_attempt-01.yaml",
+      "config_sha256": "fcae4996b11e8f364c38f03a2c6e5ee4cfa818edbb152ebf6fe564fb68e53942"
+    },
+    {
+      "run_id": "12-tuning-quantum_noent_lr-001_seed-12001_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-quantum_noent_lr-001_seed-12001_attempt-01.yaml",
+      "config_sha256": "3349fdc951bd7c5591157b889dd453d314e2859fcbc17bb179fd3a7b12869c54"
+    },
+    {
+      "run_id": "12-tuning-eqmarl_lr-001_seed-12001_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-eqmarl_lr-001_seed-12001_attempt-01.yaml",
+      "config_sha256": "2716679035032ba1310842aea87f19f3ca168d6c0ce7acbbf7ea1ee28ebd282f"
+    },
+    {
+      "run_id": "12-tuning-central_classical_lr-003_seed-12001_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-central_classical_lr-003_seed-12001_attempt-01.yaml",
+      "config_sha256": "10ea7b2ca01d98e5454a9848126fe226fb71d86d998c665dda14db23fdee995f"
+    },
+    {
+      "run_id": "12-tuning-bilinear_lr-003_seed-12001_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-bilinear_lr-003_seed-12001_attempt-01.yaml",
+      "config_sha256": "e52a0a8b889920b66c187d1fec47f6b2ba0bff3061a9cd5988600ef0ce31c4ad"
+    },
+    {
+      "run_id": "12-tuning-flexible_interaction_lr-003_seed-12001_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-flexible_interaction_lr-003_seed-12001_attempt-01.yaml",
+      "config_sha256": "0cc4e342b2a7fb7e911559b9ddc840b2b89e46c12b0803b0932120894a02c4be"
+    },
+    {
+      "run_id": "12-tuning-quantum_noent_lr-003_seed-12001_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-quantum_noent_lr-003_seed-12001_attempt-01.yaml",
+      "config_sha256": "3b5d1fa0b76cdbb7d53dcc65f9890f9d5e590c73f3ca8eb9cfaa025b728e175c"
+    },
+    {
+      "run_id": "12-tuning-eqmarl_lr-003_seed-12001_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-eqmarl_lr-003_seed-12001_attempt-01.yaml",
+      "config_sha256": "f70e63d376592a72a333ef0f1981433a3c8adaa712cb3af3d5ce05c60ef14230"
+    },
+    {
+      "run_id": "12-tuning-central_classical_lr-001_seed-12002_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-central_classical_lr-001_seed-12002_attempt-01.yaml",
+      "config_sha256": "5bf39a790c1d9ce5249f011256419d8e3e978456234e8cb34ac71e6b33746a10"
+    },
+    {
+      "run_id": "12-tuning-bilinear_lr-001_seed-12002_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-bilinear_lr-001_seed-12002_attempt-01.yaml",
+      "config_sha256": "54ae5c4e795f311c60e46570955b7913ad89dfdba1dd357c02b237b6fefe6c85"
+    },
+    {
+      "run_id": "12-tuning-flexible_interaction_lr-001_seed-12002_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-flexible_interaction_lr-001_seed-12002_attempt-01.yaml",
+      "config_sha256": "f14c8dd364e0a4c7479072feeeb1c5a206ed5024516c11f617969a2cd46a66fa"
+    },
+    {
+      "run_id": "12-tuning-quantum_noent_lr-001_seed-12002_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-quantum_noent_lr-001_seed-12002_attempt-01.yaml",
+      "config_sha256": "91205a8f36d76c7ba5bd1cb45dc048006c235e1669abb25a42bfbb400062c62b"
+    },
+    {
+      "run_id": "12-tuning-eqmarl_lr-001_seed-12002_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-eqmarl_lr-001_seed-12002_attempt-01.yaml",
+      "config_sha256": "6180b09962da2fcbd73221760e4a16a85e2a26d0eac90c07778d9da103f6fd05"
+    },
+    {
+      "run_id": "12-tuning-central_classical_lr-003_seed-12002_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-central_classical_lr-003_seed-12002_attempt-01.yaml",
+      "config_sha256": "e968ac68424a16ef256623913e9cc4306527f1781aa27206d75e5bbc816bbdcb"
+    },
+    {
+      "run_id": "12-tuning-bilinear_lr-003_seed-12002_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-bilinear_lr-003_seed-12002_attempt-01.yaml",
+      "config_sha256": "43058191c0b851dcf1298cdd720a8f75d5758a647f323cfedd5a4b406c7194bc"
+    },
+    {
+      "run_id": "12-tuning-flexible_interaction_lr-003_seed-12002_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-flexible_interaction_lr-003_seed-12002_attempt-01.yaml",
+      "config_sha256": "76658113b5c4baafdaedef4da1da28faa6c9d674e98bf72510bd4d27b736c509"
+    },
+    {
+      "run_id": "12-tuning-quantum_noent_lr-003_seed-12002_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-quantum_noent_lr-003_seed-12002_attempt-01.yaml",
+      "config_sha256": "7b026fdd9f819c1c17919194272a5ffcd10d6d2fb9892e49a7313c9db4e1e247"
+    },
+    {
+      "run_id": "12-tuning-eqmarl_lr-003_seed-12002_attempt-01",
+      "status": "planned",
+      "phase": "tuning",
+      "config": "configs/stage12/12-tuning-eqmarl_lr-003_seed-12002_attempt-01.yaml",
+      "config_sha256": "c5339a6606c122a9181eb68640f23133e802676deec38b7ebc308a12203149c8"
+    }
+  ]
+}

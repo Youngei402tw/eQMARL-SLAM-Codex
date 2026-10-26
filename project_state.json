@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-22T07:23:35.556940+00:00",
+  "updated_utc": "2026-10-26T00:00:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -11,13 +11,13 @@
     "last_check": "All 20 files of the published planning commit matched their local Git blob hashes; the stage branch head and AGENTS.md content were read back through the GitHub plugin."
   },
   "authorized_current_scope": "Execute the mechanism-focused extension Stages 10\u201314 autonomously under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
-  "active_stage": "11",
-  "stage_status": "passed",
+  "active_stage": "12",
+  "stage_status": "running",
   "training_runs_executed": 71,
-  "current_branch": "stage/11-mechanism-task",
-  "dependency_commit": "d3978be222df4636d792bb54f2222d9ad093be4f",
+  "current_branch": "stage/12-mechanism-development",
+  "dependency_commit": "7442b2354fc5f630c3c0753697f60078682f7b10",
   "completion_commit": null,
-  "publication_status": "verified_complete",
+  "publication_status": "source_registration_pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -36,7 +36,7 @@
     "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73"
   },
   "blockers": [],
-  "next_action": "Create Stage12 from the immutable Stage11 completion commit, execute equal-budget development tuning and pilots, then freeze Stage13 before test access.",
+  "next_action": "Publish and execute the preregistered two-rate Stage12 tuning screen without mechanism-test access.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -46,7 +46,7 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "12",
+  "next_stage": "13",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
   "next_stage_status": "planned",
@@ -204,18 +204,18 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 395.556894,
-    "setup_wall_seconds_charged": 362.23334837399995,
-    "stage_started_utc": "2026-10-22T07:17:00+00:00",
-    "setup_charge_convention": "Conservative active stage envelope less instrumented sequential experiment segments; idle across sessions must be explicitly excluded.",
+    "consumed_wall_seconds": 0,
+    "setup_wall_seconds_charged": 0,
+    "stage_started_utc": "2026-10-26T00:00:00+00:00",
+    "setup_charge_convention": "Active implementation, validation, execution and finalization segments; inactive session gaps are excluded and recorded.",
     "recorded_experiment_resources": {
-      "primitive_steps": 1102,
-      "decisions": 772,
-      "updates": 44,
-      "wall_seconds": 33.323545626000055,
-      "cpu_core_hours": 0.009250987777777778,
+      "primitive_steps": 0,
+      "decisions": 0,
+      "updates": 0,
+      "wall_seconds": 0,
+      "cpu_core_hours": 0,
       "gpu_device_hours": 0,
-      "circuit_evaluations": 1058,
+      "circuit_evaluations": 0,
       "shots": 0
     }
   },
@@ -232,5 +232,7 @@
   },
   "final_test_accessed_under_locked_protocol": true,
   "final_test_lock_source": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
-  "last_progress_utc": "2026-10-22T07:15:00+00:00"
+  "mechanism_final_test_accessed": false,
+  "mechanism_final_test_lock_source": null,
+  "last_progress_utc": "2026-10-26T00:00:00+00:00"
 }

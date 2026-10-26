@@ -237,7 +237,9 @@
       "dependency_completion_commit": "d3978be222df4636d792bb54f2222d9ad093be4f",
       "branch_created_from_commit": "d3978be222df4636d792bb54f2222d9ad093be4f",
       "publication_receipt": "docs/stages/11-publication.json",
-      "results_commit": "12572494bbc693720bdd3f750fa253ac6445f63c"
+      "results_commit": "12572494bbc693720bdd3f750fa253ac6445f63c",
+      "completion_commit": "7442b2354fc5f630c3c0753697f60078682f7b10",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/12"
     },
     {
       "id": "12",
@@ -247,8 +249,10 @@
       "depends_on": ["11"],
       "initial_status": "planned",
       "report": "docs/stages/12-mechanism-development.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "running",
+      "branch_created": true,
+      "dependency_completion_commit": "7442b2354fc5f630c3c0753697f60078682f7b10",
+      "branch_created_from_commit": "7442b2354fc5f630c3c0753697f60078682f7b10"
     },
     {
       "id": "13",
