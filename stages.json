@@ -220,7 +220,9 @@
         "scope": "Final Stage09 completion receipt integrated after exact dependency-based branch creation."
       },
       "publication_receipt": "docs/stages/10-publication.json",
-      "results_commit": "4761ed3307214f5f157d48700a96d1121159593f"
+      "results_commit": "4761ed3307214f5f157d48700a96d1121159593f",
+      "completion_commit": "d3978be222df4636d792bb54f2222d9ad093be4f",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/11"
     },
     {
       "id": "11",
@@ -230,8 +232,12 @@
       "depends_on": ["10"],
       "initial_status": "planned",
       "report": "docs/stages/11-mechanism-task.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "d3978be222df4636d792bb54f2222d9ad093be4f",
+      "branch_created_from_commit": "d3978be222df4636d792bb54f2222d9ad093be4f",
+      "publication_receipt": "docs/stages/11-publication.json",
+      "results_commit": "12572494bbc693720bdd3f750fa253ac6445f63c"
     },
     {
       "id": "12",

@@ -1,0 +1,34 @@
+{
+  "passed": false,
+  "gates": {
+    "counterfactual_reward_scale_matched": true,
+    "mixed_interaction_monotone": true,
+    "actor_truth_isolation": true,
+    "reward_components_sum": true,
+    "reward_only_intervention_preserves_dynamics": false,
+    "mechanism_activated_in_scripted_task": true,
+    "flexible_interaction_gradients": true,
+    "flexible_interaction_symmetric": true,
+    "quantum_training_smoke": true,
+    "confirmatory_projection_within_stage_cap": true
+  },
+  "resources": {
+    "primitive_steps": 566,
+    "decisions": 396,
+    "updates": 22,
+    "circuit_evaluations": 529,
+    "shots": 0
+  },
+  "summary": {
+    "counterfactual_interactions": [
+      0.0,
+      1.3333333333333335,
+      4.0
+    ],
+    "scripted_episodes": 6,
+    "flexible_interaction_parameters": 250,
+    "projected_confirmatory_wall_seconds": 61525.88348056031,
+    "test_manifest_accessed": false,
+    "scope": "Task/critic correctness and throughput only; no comparative policy claim."
+  }
+}

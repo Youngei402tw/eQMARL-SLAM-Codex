@@ -1,0 +1,158 @@
+{
+  "split": "validation",
+  "protocol": "belief-controller-mechanism-v1",
+  "scenarios": [
+    {
+      "scenario_id": "mechanism-validation-v1-000",
+      "map_seed": 220000,
+      "noise_seed": 221000
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-001",
+      "map_seed": 220001,
+      "noise_seed": 221001
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-002",
+      "map_seed": 220002,
+      "noise_seed": 221002
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-003",
+      "map_seed": 220003,
+      "noise_seed": 221003
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-004",
+      "map_seed": 220004,
+      "noise_seed": 221004
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-005",
+      "map_seed": 220005,
+      "noise_seed": 221005
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-006",
+      "map_seed": 220006,
+      "noise_seed": 221006
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-007",
+      "map_seed": 220007,
+      "noise_seed": 221007
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-008",
+      "map_seed": 220008,
+      "noise_seed": 221008
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-009",
+      "map_seed": 220009,
+      "noise_seed": 221009
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-010",
+      "map_seed": 220010,
+      "noise_seed": 221010
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-011",
+      "map_seed": 220011,
+      "noise_seed": 221011
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-012",
+      "map_seed": 220012,
+      "noise_seed": 221012
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-013",
+      "map_seed": 220013,
+      "noise_seed": 221013
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-014",
+      "map_seed": 220014,
+      "noise_seed": 221014
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-015",
+      "map_seed": 220015,
+      "noise_seed": 221015
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-016",
+      "map_seed": 220016,
+      "noise_seed": 221016
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-017",
+      "map_seed": 220017,
+      "noise_seed": 221017
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-018",
+      "map_seed": 220018,
+      "noise_seed": 221018
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-019",
+      "map_seed": 220019,
+      "noise_seed": 221019
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-020",
+      "map_seed": 220020,
+      "noise_seed": 221020
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-021",
+      "map_seed": 220021,
+      "noise_seed": 221021
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-022",
+      "map_seed": 220022,
+      "noise_seed": 221022
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-023",
+      "map_seed": 220023,
+      "noise_seed": 221023
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-024",
+      "map_seed": 220024,
+      "noise_seed": 221024
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-025",
+      "map_seed": 220025,
+      "noise_seed": 221025
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-026",
+      "map_seed": 220026,
+      "noise_seed": 221026
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-027",
+      "map_seed": 220027,
+      "noise_seed": 221027
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-028",
+      "map_seed": 220028,
+      "noise_seed": 221028
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-029",
+      "map_seed": 220029,
+      "noise_seed": 221029
+    }
+  ],
+  "purpose": "validation",
+  "registration_note": "Fresh namespace registered after the Stage08 final result. The test catalog is reserved for locked Stage13 actor-only evaluation."
+}

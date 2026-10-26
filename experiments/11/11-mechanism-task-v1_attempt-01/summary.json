@@ -1,0 +1,44 @@
+{
+  "run_id": "11-mechanism-task-v1_attempt-01",
+  "source_commit": "bcf7bae0a39560330aff53bfafd8b85dec34921e",
+  "config_sha256": "c7461150cc4566fcb57cd267d85c8b7cf715b68a2f6e544c6452cdaa2d1923f4",
+  "metrics_sha256": "6b57eb98e40a52425dd486da80c9602e6a3ba15e1d98a6c807ccb4d4d8925cc1",
+  "metrics_rows": 77,
+  "analysis_version": "bundle-summary-v1",
+  "passed": false,
+  "gates": {
+    "counterfactual_reward_scale_matched": true,
+    "mixed_interaction_monotone": true,
+    "actor_truth_isolation": true,
+    "reward_components_sum": true,
+    "reward_only_intervention_preserves_dynamics": false,
+    "mechanism_activated_in_scripted_task": true,
+    "flexible_interaction_gradients": true,
+    "flexible_interaction_symmetric": true,
+    "quantum_training_smoke": true,
+    "confirmatory_projection_within_stage_cap": true
+  },
+  "resources_consumed": {
+    "primitive_steps": 566,
+    "decisions": 396,
+    "updates": 22,
+    "wall_seconds": 16.886195162000035,
+    "cpu_core_hours": 0.004686231666666666,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 529,
+    "shots": 0
+  },
+  "interpretation": "Task, critic, information-boundary and throughput correctness only. No method ranking or policy-performance contribution is inferred from scripted episodes or the single smoke model.",
+  "analysis": {
+    "counterfactual_interactions": [
+      0.0,
+      1.3333333333333335,
+      4.0
+    ],
+    "scripted_episodes": 6,
+    "flexible_interaction_parameters": 250,
+    "projected_confirmatory_wall_seconds": 61525.88348056031,
+    "test_manifest_accessed": false,
+    "scope": "Task/critic correctness and throughput only; no comparative policy claim."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "stage": "11",
+  "dependency_completion_commit": "d3978be222df4636d792bb54f2222d9ad093be4f",
+  "runs": [
+    {
+      "run_id": "11-mechanism-task-v1_attempt-01",
+      "status": "failed",
+      "config": "configs/stage11/11-mechanism-task-v1_attempt-01.yaml",
+      "config_sha256": "c7461150cc4566fcb57cd267d85c8b7cf715b68a2f6e544c6452cdaa2d1923f4",
+      "source_commit": "bcf7bae0a39560330aff53bfafd8b85dec34921e",
+      "results_commit": "12572494bbc693720bdd3f750fa253ac6445f63c",
+      "gates_passed": false,
+      "publication": "verified"
+    },
+    {
+      "run_id": "11-mechanism-task-v1_attempt-02",
+      "status": "completed",
+      "config": "configs/stage11/11-mechanism-task-v1_attempt-02.yaml",
+      "config_sha256": "cc3d03de00672fb11508565d0c57ebd9d75723ae584660d7541fdb3ab88d828e",
+      "source_commit": "769f3082dfee891f77503d562b6328c996dd3ed8",
+      "results_commit": "12572494bbc693720bdd3f750fa253ac6445f63c",
+      "gates_passed": true,
+      "publication": "verified"
+    }
+  ]
+}

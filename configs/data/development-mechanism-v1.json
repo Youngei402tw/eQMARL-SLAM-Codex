@@ -1,0 +1,18 @@
+{
+  "split": "development",
+  "protocol": "belief-controller-mechanism-v1",
+  "scenarios": [
+    {
+      "scenario_id": "mechanism-development-v1-000",
+      "map_seed": 210000,
+      "noise_seed": 211000
+    },
+    {
+      "scenario_id": "mechanism-development-v1-001",
+      "map_seed": 210001,
+      "noise_seed": 211001
+    }
+  ],
+  "purpose": "development",
+  "registration_note": "Fresh namespace registered after the Stage08 final result. The test catalog is reserved for locked Stage13 actor-only evaluation."
+}

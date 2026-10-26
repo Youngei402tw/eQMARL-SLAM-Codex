@@ -6,7 +6,7 @@ from torch import nn
 
 from .mappo import ClassicalCritic
 
-METHODS = ["split_classical","central_classical","bilinear","quantum_noent","eqmarl","qfctde"]
+METHODS = ["split_classical","central_classical","bilinear","flexible_interaction","quantum_noent","eqmarl","qfctde"]
 
 
 class SplitClassical(nn.Module):
@@ -27,6 +27,22 @@ class Bilinear(SplitClassical):
     def forward(self, x):
         z = self.encoder(x)
         return self.local(z).sum(-2).squeeze(-1)+torch.einsum('...i,ij,...j->...',z[...,0,:],self.interaction,z[...,1,:])
+
+
+class FlexibleInteraction(SplitClassical):
+    """Symmetric classical interaction over the same two latent vectors."""
+    def __init__(self):
+        super().__init__()
+        self.interaction = nn.Sequential(
+            nn.Linear(6,16,dtype=torch.float64), nn.Tanh(),
+            nn.Linear(16,1,dtype=torch.float64),
+        )
+
+    def forward(self, x):
+        z = self.encoder(x)
+        first, second = z[...,0,:], z[...,1,:]
+        symmetric = torch.cat([first+second, first*second, torch.abs(first-second)], dim=-1)
+        return self.local(z).sum(-2).squeeze(-1)+self.interaction(symmetric).squeeze(-1)
 
 
 class QuantumValue(nn.Module):
@@ -52,6 +68,7 @@ def make_critic(method, seed):
     if method=='split_classical': return SplitClassical()
     if method=='central_classical': return ClassicalCritic()
     if method=='bilinear': return Bilinear()
+    if method=='flexible_interaction': return FlexibleInteraction()
     if method=='quantum_noent': return QuantumValue(False)
     if method=='eqmarl': return QuantumValue(True)
     if method=='qfctde': return QuantumValue(True,True)
