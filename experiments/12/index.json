@@ -185,363 +185,453 @@
     },
     {
       "run_id": "12-pilot-additive-central_classical_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-central_classical_seed-12101_attempt-01.yaml",
-      "config_sha256": "eca3ee6a4b90dabc99cab169b85d134465d53b473864a0e2b9a6fe89ae8660f2"
+      "config_sha256": "eca3ee6a4b90dabc99cab169b85d134465d53b473864a0e2b9a6fe89ae8660f2",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-bilinear_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-bilinear_seed-12101_attempt-01.yaml",
-      "config_sha256": "4df631178c7eb13a057129fc20220ebda85f9523d69c57683243b05e7e2d6b3e"
+      "config_sha256": "4df631178c7eb13a057129fc20220ebda85f9523d69c57683243b05e7e2d6b3e",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-flexible_interaction_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-flexible_interaction_seed-12101_attempt-01.yaml",
-      "config_sha256": "b1330c57183886a27aae72351a3800012b70526129f1f5db03fcbb0f098c008c"
+      "config_sha256": "b1330c57183886a27aae72351a3800012b70526129f1f5db03fcbb0f098c008c",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-quantum_noent_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-quantum_noent_seed-12101_attempt-01.yaml",
-      "config_sha256": "2e20899a7c897ac417d052b3be46fe216ebf85331927795d43315ffde4e18cac"
+      "config_sha256": "2e20899a7c897ac417d052b3be46fe216ebf85331927795d43315ffde4e18cac",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-eqmarl_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-eqmarl_seed-12101_attempt-01.yaml",
-      "config_sha256": "e72d7bf056a84d041f07135bcf0a0cfd9152137c98602944ac12a1112c163126"
+      "config_sha256": "e72d7bf056a84d041f07135bcf0a0cfd9152137c98602944ac12a1112c163126",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-central_classical_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-central_classical_seed-12102_attempt-01.yaml",
-      "config_sha256": "cb1e32767cd40cd53b7b5feb4e748c9becaaccd75bf3a53cb332b2486483889d"
+      "config_sha256": "cb1e32767cd40cd53b7b5feb4e748c9becaaccd75bf3a53cb332b2486483889d",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-bilinear_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-bilinear_seed-12102_attempt-01.yaml",
-      "config_sha256": "594b5c7b4bf77a12182b9e5d1dfbfe9a160e9972670b6584df9d339ddb507d53"
+      "config_sha256": "594b5c7b4bf77a12182b9e5d1dfbfe9a160e9972670b6584df9d339ddb507d53",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-flexible_interaction_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-flexible_interaction_seed-12102_attempt-01.yaml",
-      "config_sha256": "77d338b92a1a7358ea21a5c187ef0c06049eb518e8635db3829b2164ba3424db"
+      "config_sha256": "77d338b92a1a7358ea21a5c187ef0c06049eb518e8635db3829b2164ba3424db",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-quantum_noent_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-quantum_noent_seed-12102_attempt-01.yaml",
-      "config_sha256": "7879a6aec357ae9dcb994c770901e3330ee4b3a30341344c9a673386f591934c"
+      "config_sha256": "7879a6aec357ae9dcb994c770901e3330ee4b3a30341344c9a673386f591934c",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-eqmarl_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-eqmarl_seed-12102_attempt-01.yaml",
-      "config_sha256": "ade482fc6eca542f0d487efddb9efc417d20a001088167c59bca3b8eea6dcef8"
+      "config_sha256": "ade482fc6eca542f0d487efddb9efc417d20a001088167c59bca3b8eea6dcef8",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-central_classical_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-central_classical_seed-12103_attempt-01.yaml",
-      "config_sha256": "8e4188bfb6816231497320c00eb532fe6aef9bc79305db1e0e3932e3f0c042dd"
+      "config_sha256": "8e4188bfb6816231497320c00eb532fe6aef9bc79305db1e0e3932e3f0c042dd",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-bilinear_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-bilinear_seed-12103_attempt-01.yaml",
-      "config_sha256": "ed560c3b2dadb8fc09294cfa98f19d982a77140066537663a46d9131e5533e59"
+      "config_sha256": "ed560c3b2dadb8fc09294cfa98f19d982a77140066537663a46d9131e5533e59",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-flexible_interaction_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-flexible_interaction_seed-12103_attempt-01.yaml",
-      "config_sha256": "d0d6ed776e802832995f55e4bc908155e0bd37d3ae77b095dd96794182e561ed"
+      "config_sha256": "d0d6ed776e802832995f55e4bc908155e0bd37d3ae77b095dd96794182e561ed",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-quantum_noent_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-quantum_noent_seed-12103_attempt-01.yaml",
-      "config_sha256": "f3e505565e0d4d758e399387279b9f198f2e58eee529490b0d515ca8d47d71f3"
+      "config_sha256": "f3e505565e0d4d758e399387279b9f198f2e58eee529490b0d515ca8d47d71f3",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-additive-eqmarl_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "additive",
       "config": "configs/stage12/12-pilot-additive-eqmarl_seed-12103_attempt-01.yaml",
-      "config_sha256": "17f4d1493a05774c43c667c234fa44f72e20fdf8123c21d1f3715281a989f296"
+      "config_sha256": "17f4d1493a05774c43c667c234fa44f72e20fdf8123c21d1f3715281a989f296",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-central_classical_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-central_classical_seed-12101_attempt-01.yaml",
-      "config_sha256": "cd90648e97961522e9eb6e42436777d3982dd05b777f1e9d4b834a6e713a512f"
+      "config_sha256": "cd90648e97961522e9eb6e42436777d3982dd05b777f1e9d4b834a6e713a512f",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-bilinear_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-bilinear_seed-12101_attempt-01.yaml",
-      "config_sha256": "616fb81c93c1741187e6a715429fa6e176a17b013817c2c39b68bf1ec5d7de08"
+      "config_sha256": "616fb81c93c1741187e6a715429fa6e176a17b013817c2c39b68bf1ec5d7de08",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-flexible_interaction_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-flexible_interaction_seed-12101_attempt-01.yaml",
-      "config_sha256": "26731931f42cab1139c9676156b36e71ae267018a1b8a191bf0281a420ebb0f7"
+      "config_sha256": "26731931f42cab1139c9676156b36e71ae267018a1b8a191bf0281a420ebb0f7",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-quantum_noent_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-quantum_noent_seed-12101_attempt-01.yaml",
-      "config_sha256": "77b0b447b12ec89c74c9a3ea9258249542f9d89e801c6799c670b025e96623d0"
+      "config_sha256": "77b0b447b12ec89c74c9a3ea9258249542f9d89e801c6799c670b025e96623d0",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-eqmarl_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-eqmarl_seed-12101_attempt-01.yaml",
-      "config_sha256": "8a4b7073b881ead20013f7bfa0d4ec6feeb4efb435594785aed1f50ba2fee5db"
+      "config_sha256": "8a4b7073b881ead20013f7bfa0d4ec6feeb4efb435594785aed1f50ba2fee5db",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-central_classical_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-central_classical_seed-12102_attempt-01.yaml",
-      "config_sha256": "62bb8b2ff10a8fa86939cb452a29dc570576f4c0fd5f2a710b06847a45b5f80b"
+      "config_sha256": "62bb8b2ff10a8fa86939cb452a29dc570576f4c0fd5f2a710b06847a45b5f80b",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-bilinear_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-bilinear_seed-12102_attempt-01.yaml",
-      "config_sha256": "711d46dc4da9716374ff2bc6d03f59d3e432a4b7f8262becf8d0856110dde441"
+      "config_sha256": "711d46dc4da9716374ff2bc6d03f59d3e432a4b7f8262becf8d0856110dde441",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-flexible_interaction_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-flexible_interaction_seed-12102_attempt-01.yaml",
-      "config_sha256": "11beb8b5c2dda58c0ebbe8b6a07d297315a8effb998d356a1082230839732359"
+      "config_sha256": "11beb8b5c2dda58c0ebbe8b6a07d297315a8effb998d356a1082230839732359",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-quantum_noent_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-quantum_noent_seed-12102_attempt-01.yaml",
-      "config_sha256": "73e9529d0f25ef1a9484376e679970a2eba22445f7058c1968cebc0a5cd0bf91"
+      "config_sha256": "73e9529d0f25ef1a9484376e679970a2eba22445f7058c1968cebc0a5cd0bf91",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-eqmarl_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-eqmarl_seed-12102_attempt-01.yaml",
-      "config_sha256": "e0f86927eacf790584c4d66f5ab0fd0c43b68e0915ea9c43e8613c4e885e02a7"
+      "config_sha256": "e0f86927eacf790584c4d66f5ab0fd0c43b68e0915ea9c43e8613c4e885e02a7",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-central_classical_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-central_classical_seed-12103_attempt-01.yaml",
-      "config_sha256": "f256890280550cfc217ad0922e851f8ddf6f2c9ed8cfba2b3195263aecf9192a"
+      "config_sha256": "f256890280550cfc217ad0922e851f8ddf6f2c9ed8cfba2b3195263aecf9192a",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-bilinear_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-bilinear_seed-12103_attempt-01.yaml",
-      "config_sha256": "31e175b3185c3f0af0ce5cbbbd88c53faed5e3dd38f1d20dc75007ae58f2d3bb"
+      "config_sha256": "31e175b3185c3f0af0ce5cbbbd88c53faed5e3dd38f1d20dc75007ae58f2d3bb",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-flexible_interaction_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-flexible_interaction_seed-12103_attempt-01.yaml",
-      "config_sha256": "4644c85b44670cddc6e2857ce66b2e8fdc2a09e83ff8baa8262d9dc26e51f403"
+      "config_sha256": "4644c85b44670cddc6e2857ce66b2e8fdc2a09e83ff8baa8262d9dc26e51f403",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-quantum_noent_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-quantum_noent_seed-12103_attempt-01.yaml",
-      "config_sha256": "603135f00406ee8a6ba3f7b69528e395631d627ca3d7c5351d0fd83b559c9816"
+      "config_sha256": "603135f00406ee8a6ba3f7b69528e395631d627ca3d7c5351d0fd83b559c9816",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-low-eqmarl_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "low",
       "config": "configs/stage12/12-pilot-low-eqmarl_seed-12103_attempt-01.yaml",
-      "config_sha256": "03110e718f7015d2a221971fd80121a3839157aaefd5b5cada14bf360ad9e958"
+      "config_sha256": "03110e718f7015d2a221971fd80121a3839157aaefd5b5cada14bf360ad9e958",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-central_classical_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-central_classical_seed-12101_attempt-01.yaml",
-      "config_sha256": "09a1b94958db886f6bc2fc4a25d6d49dcb88951f4a442b2951c5ccd958b5b5f0"
+      "config_sha256": "09a1b94958db886f6bc2fc4a25d6d49dcb88951f4a442b2951c5ccd958b5b5f0",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-bilinear_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-bilinear_seed-12101_attempt-01.yaml",
-      "config_sha256": "d3c80de931e91b41adce4ccdb6bcc761ecd6581d6809583bc66c112973019305"
+      "config_sha256": "d3c80de931e91b41adce4ccdb6bcc761ecd6581d6809583bc66c112973019305",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-flexible_interaction_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-flexible_interaction_seed-12101_attempt-01.yaml",
-      "config_sha256": "85cd69e97bbe2c69a49d68fc1b34f6bb9b55c494c37af26dda6174a4f0a9acaf"
+      "config_sha256": "85cd69e97bbe2c69a49d68fc1b34f6bb9b55c494c37af26dda6174a4f0a9acaf",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-quantum_noent_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-quantum_noent_seed-12101_attempt-01.yaml",
-      "config_sha256": "a422c6cb14be274bc912a3201f179c05b48c56d29fd84db81bcc3eefcccf090c"
+      "config_sha256": "a422c6cb14be274bc912a3201f179c05b48c56d29fd84db81bcc3eefcccf090c",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-eqmarl_seed-12101_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-eqmarl_seed-12101_attempt-01.yaml",
-      "config_sha256": "1d35c89cd60bdb1c449a8d39ca0fe31b56a706db46ba1d6c3f458caa1e4e4063"
+      "config_sha256": "1d35c89cd60bdb1c449a8d39ca0fe31b56a706db46ba1d6c3f458caa1e4e4063",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-central_classical_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-central_classical_seed-12102_attempt-01.yaml",
-      "config_sha256": "719a5c74c89bf8ed39d31cf1875197dd21ef9644d2378447ef45f2846df1bfa5"
+      "config_sha256": "719a5c74c89bf8ed39d31cf1875197dd21ef9644d2378447ef45f2846df1bfa5",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-bilinear_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-bilinear_seed-12102_attempt-01.yaml",
-      "config_sha256": "248cd2002930061f364c56a35635472d6424567763aedd6ad57bf4fefa8c79a4"
+      "config_sha256": "248cd2002930061f364c56a35635472d6424567763aedd6ad57bf4fefa8c79a4",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-flexible_interaction_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-flexible_interaction_seed-12102_attempt-01.yaml",
-      "config_sha256": "d3f6c1a48156b0f1df8076f077c945ef30a43c850682025452efca9e827d9c2c"
+      "config_sha256": "d3f6c1a48156b0f1df8076f077c945ef30a43c850682025452efca9e827d9c2c",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-quantum_noent_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-quantum_noent_seed-12102_attempt-01.yaml",
-      "config_sha256": "48673f0a0d3539807c6ee99a5436b724733c0984d4adec5f084432f521805f68"
+      "config_sha256": "48673f0a0d3539807c6ee99a5436b724733c0984d4adec5f084432f521805f68",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-eqmarl_seed-12102_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-eqmarl_seed-12102_attempt-01.yaml",
-      "config_sha256": "24bddf51c907b264e5de0e7d8ceaa32783ca572a3bc471d27907788a39eb67d1"
+      "config_sha256": "24bddf51c907b264e5de0e7d8ceaa32783ca572a3bc471d27907788a39eb67d1",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-central_classical_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-central_classical_seed-12103_attempt-01.yaml",
-      "config_sha256": "b8c6ba1b7a44b74af46a17ea5d4b9199df48190942499ec7a3493be2edd93c8d"
+      "config_sha256": "b8c6ba1b7a44b74af46a17ea5d4b9199df48190942499ec7a3493be2edd93c8d",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-bilinear_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-bilinear_seed-12103_attempt-01.yaml",
-      "config_sha256": "82374a94752d6e85e94797f26e15ef635841a52bf64604a7c034ce0897f49f62"
+      "config_sha256": "82374a94752d6e85e94797f26e15ef635841a52bf64604a7c034ce0897f49f62",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-flexible_interaction_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-flexible_interaction_seed-12103_attempt-01.yaml",
-      "config_sha256": "fee39c7569239c6eb6d6f30e53ee685734beed2adab5b18c1ddeb8efee28298c"
+      "config_sha256": "fee39c7569239c6eb6d6f30e53ee685734beed2adab5b18c1ddeb8efee28298c",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-quantum_noent_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-quantum_noent_seed-12103_attempt-01.yaml",
-      "config_sha256": "2dc5006cb768e41ee95022a526e50c526e70caddb9e9c4e2522de6070bb4d0c1"
+      "config_sha256": "2dc5006cb768e41ee95022a526e50c526e70caddb9e9c4e2522de6070bb4d0c1",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     },
     {
       "run_id": "12-pilot-high-eqmarl_seed-12103_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "phase": "pilot",
       "condition": "high",
       "config": "configs/stage12/12-pilot-high-eqmarl_seed-12103_attempt-01.yaml",
-      "config_sha256": "cd43087a7c9a7c08d89aadfa62b146eabfda8f45ec972aef649b74b042e16a78"
+      "config_sha256": "cd43087a7c9a7c08d89aadfa62b146eabfda8f45ec972aef649b74b042e16a78",
+      "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+      "gates_passed": true
     }
   ]
 }

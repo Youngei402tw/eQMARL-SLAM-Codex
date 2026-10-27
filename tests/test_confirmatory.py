@@ -1,9 +1,11 @@
 import numpy as np
 import torch
+import hashlib,json
 from eqmarl_slam.belief_task import DEFAULT_TASK
 from eqmarl_slam.critics import make_critic
 from eqmarl_slam.mappo import ActorCritic,collect_episode
 from eqmarl_slam.policy_evaluation import evaluate_actor
+import eqmarl_slam.confirmatory as confirmatory
 
 
 def test_paired_actor_initialization_is_independent_of_critic_choice():
@@ -25,3 +27,14 @@ def test_actor_only_evaluation_matches_existing_greedy_rollout():
         assert np.isclose(actual[key],expected[key],atol=1e-10,rtol=0)
     assert sum(map(sum,actual['action_counts_by_agent']))==resources['decisions']
     assert np.isclose(sum(actual['reward_component_totals'].values()),actual['return'],atol=1e-10)
+
+
+def test_test_manifest_is_deferred_and_hash_locked(tmp_path,monkeypatch):
+    payload={"split":"test","scenarios":[{"scenario_id":"fixture","map_seed":1,"noise_seed":2}]}
+    path=tmp_path/"test.json"; path.write_text(json.dumps(payload))
+    monkeypatch.setattr(confirmatory,"ROOT",tmp_path)
+    config={"test_scenarios_manifest":{"path":"test.json",
+        "sha256":hashlib.sha256(path.read_bytes()).hexdigest(),"expected_count":1}}
+    scenarios,source=confirmatory.resolve_test_scenarios(config)
+    assert len(scenarios)==1
+    assert source["mode"]=="deferred_locked_manifest"

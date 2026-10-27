@@ -8,4 +8,10 @@ The 20 tuning runs all completed and passed their numerical gates. The selected 
 
 After rate selection, a fixed pilot matrix will run every method in additive, low, and high complementarity with three paired seeds and 10,000 primitives. Pilot outcomes may describe variance and feasibility but cannot change the primary contrast, methods, conditions, confirmatory seeds, or checkpoint rule. The mechanism test catalog is not available to either phase.
 
-Stage gate: tuning passed; pilots, complete retention, budget reconciliation, and publication of the locked Stage 13 source/config commit remain pending before any mechanism-test access.
+All 45 pilots completed and passed. Mean validation physical coverage for eQMARL minus matched no-entanglement was -0.13827 in additive, -0.15432 in low, and -0.12562 in high complementarity. The descriptive pilot high-minus-additive interaction was +0.01265. This is below the registered 0.02 minimum effect of scientific interest and is not confirmatory evidence; the three-seed pilot was retained only for feasibility and variance description. It did not change any method, condition, seed, budget, contrast, or checkpoint rule.
+
+Across tuning and pilots, all 65 planned outcomes completed. They consumed 591,222 primitive steps, 447,388 agent decisions, 23,692 optimizer updates, 250,430 analytic circuit evaluations, zero shots, 10,820.610 experiment wall-seconds, and 3.005 CPU-core-hours. The complete pilot table and seed rows are in `analysis/12/pilot-phase-diagram.json`.
+
+The Stage 13 lock fixes five methods, three conditions, eight seeds, 10,000 training primitives, 30 validation episodes, 100 held-out test episodes, final checkpoints, the paired difference-in-differences estimand, a 10,000-resample paired-seed bootstrap, bootstrap seed 14001, and the 0.02 minimum effect of scientific interest. Test scenarios are deferred to runtime behind their registered SHA-256 and cannot enter tuning or pilot code.
+
+Stage gate: numerical, information, retention, equal-budget, and feasibility requirements passed. Remote result verification and the Stage 13 source/config publication remain before any mechanism-test access.

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-26T08:01:00+00:00",
+  "updated_utc": "2026-10-27T00:10:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Execute the mechanism-focused extension Stages 10\u201314 autonomously under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
   "active_stage": "12",
-  "stage_status": "running",
-  "training_runs_executed": 91,
+  "stage_status": "results_archived_pending_remote_verification",
+  "training_runs_executed": 136,
   "current_branch": "stage/12-mechanism-development",
   "dependency_commit": "7442b2354fc5f630c3c0753697f60078682f7b10",
   "completion_commit": null,
-  "publication_status": "pilot_source_registration_pending",
+  "publication_status": "results_commit_pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -36,7 +36,7 @@
     "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73"
   },
   "blockers": [],
-  "next_action": "Publish and execute the fixed 45-run three-condition Stage12 pilot matrix without mechanism-test access.",
+  "next_action": "Publish and freshly verify all 65 Stage12 bundles, close the stage gate, then publish the locked Stage13 source/config commit before test access.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -204,18 +204,18 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 0,
-    "setup_wall_seconds_charged": 0,
+    "consumed_wall_seconds": 11920.610230267997,
+    "setup_wall_seconds_charged": 1100.0,
     "stage_started_utc": "2026-10-26T07:15:00+00:00",
-    "setup_charge_convention": "Active implementation, validation, execution and finalization segments; inactive session gaps are excluded and recorded.",
+    "setup_charge_convention": "Conservative active setup/finalization charge around the uninterrupted 2026-10-26 execution envelope plus 2026-10-27 archive analysis; inactive overnight session gap excluded.",
     "recorded_experiment_resources": {
-      "primitive_steps": 0,
-      "decisions": 0,
-      "updates": 0,
-      "wall_seconds": 0,
-      "cpu_core_hours": 0,
+      "primitive_steps": 591222,
+      "decisions": 447388,
+      "updates": 23692,
+      "wall_seconds": 10820.610230267997,
+      "cpu_core_hours": 3.005014608333333,
       "gpu_device_hours": 0,
-      "circuit_evaluations": 0,
+      "circuit_evaluations": 250430,
       "shots": 0
     }
   },
@@ -234,5 +234,5 @@
   "final_test_lock_source": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
   "mechanism_final_test_accessed": false,
   "mechanism_final_test_lock_source": null,
-  "last_progress_utc": "2026-10-26T08:01:00+00:00"
+  "last_progress_utc": "2026-10-27T00:10:00+00:00"
 }

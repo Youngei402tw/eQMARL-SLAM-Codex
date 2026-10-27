@@ -1,0 +1,21 @@
+{
+  "protocol_id": "mechanism-confirmatory-v1",
+  "frozen_before_test_access": true,
+  "methods": ["central_classical", "bilinear", "flexible_interaction", "quantum_noent", "eqmarl"],
+  "conditions": {"additive": 0.0, "low": 0.5, "high": 1.0},
+  "training_seeds": [13001, 13002, 13003, 13004, 13005, 13006, 13007, 13008],
+  "learning_rates": {"central_classical": 0.001, "bilinear": 0.003, "flexible_interaction": 0.003, "quantum_noent": 0.001, "eqmarl": 0.003},
+  "training_primitives_per_model": 10000,
+  "validation_episodes_per_model": 30,
+  "test_episodes_per_model": 100,
+  "checkpoint_rule": "final fixed-budget weights only",
+  "primary_metric": "mean held-out physical coverage per trained seed",
+  "primary_contrast": "[eqmarl-quantum_noent]_high - [eqmarl-quantum_noent]_additive",
+  "interval": "two-sided 95% paired-seed percentile bootstrap, 10000 resamples",
+  "bootstrap_seed": 14001,
+  "minimum_effect_of_scientific_interest": 0.02,
+  "equivalence_test": false,
+  "test_manifest": {"path": "configs/data/test-mechanism-v1.json", "sha256": "2085bcfadf915a196588ae4db12a4e0ca5e45462f21456a1c878107127879a0e", "expected_count": 100},
+  "outcome_exclusions": "none; failures and null results retained",
+  "test_access_rule": "Runtime loads the hash-locked manifest only after the Stage13 source/config commit has been remotely verified."
+}
