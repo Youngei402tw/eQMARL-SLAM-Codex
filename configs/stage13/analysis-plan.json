@@ -1,0 +1,17 @@
+{
+  "analysis_version": "mechanism-confirmatory-v1",
+  "replication_unit": "independently trained actor seed",
+  "methods": ["central_classical", "bilinear", "flexible_interaction", "quantum_noent", "eqmarl"],
+  "conditions": ["additive", "low", "high"],
+  "training_seeds": [13001, 13002, 13003, 13004, 13005, 13006, 13007, 13008],
+  "episodes_per_seed_cell": 100,
+  "primary_metric": "physical_coverage",
+  "primary_estimand": "mean over seeds of ([eqmarl-quantum_noent]_high - [eqmarl-quantum_noent]_additive)",
+  "bootstrap": {"resamples": 10000, "seed": 14001, "pairing": "resample the eight seed identities with replacement and preserve all method-condition values", "interval": "two-sided percentile 2.5% and 97.5%"},
+  "minimum_effect_of_scientific_interest": 0.02,
+  "equivalence_test": false,
+  "secondary": "Descriptive unadjusted paired-seed intervals for eQMARL versus each classical critic in high complementarity; full metrics and resources without multiplicity claims.",
+  "exclusions": "none; failed, budget-stopped, poor, and null outcomes remain explicit",
+  "checkpoint": "final fixed-budget actor weights, actor-only greedy testing",
+  "test_access": "deferred hash-locked runtime load after remote source publication"
+}
