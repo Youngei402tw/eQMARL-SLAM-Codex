@@ -1,0 +1,528 @@
+{
+  "stage": "12",
+  "verified_utc": "2026-10-27T04:40:43.164028+00:00",
+  "verified_remote_head": "700a024aa6c5ac599878ed5f9246f13b90567cb1",
+  "mechanism": "Fresh independent Git retrieval; every run manifest, resolved config, raw metric, diagnostic and inventoried checkpoint hash/size validated",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-bilinear_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 2015,
+      "metrics_sha256": "28b3543290f09aed8f93a82c2549afe89c1037d980c905c9b60daec85fc39433"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-bilinear_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1127,
+      "metrics_sha256": "c4b13717e56fb36d2daf7478c8736c1a57702fadf552cc20fbcde366803f771f"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-bilinear_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1907,
+      "metrics_sha256": "43f3a909ce746eb2d58ca61eefbc45d04d83e8706feafe874f9066d8bd728b76"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-central_classical_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1704,
+      "metrics_sha256": "2bf202796dba0082aea24add5bffdd52a7c5b870b0a3c26f6e7c9a48ee3840ee"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-central_classical_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1402,
+      "metrics_sha256": "44a8935ba0551e049937e646839ac5045246206ac725073b43d26604069b60ea"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-central_classical_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1552,
+      "metrics_sha256": "9917cd5c6f3c21c40e92107149c96c567b0b2adf95a073ee107bdab679577678"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-eqmarl_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1259,
+      "metrics_sha256": "76fc4ed35cacae3e46aca0df89ba45249d4f0e9fd9cefd1eb335b9ca6da98093"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-eqmarl_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1349,
+      "metrics_sha256": "8241f16abebff0ccc1eb5f95b18ae9c17089a5eebca6f3f14546a58322a509ed"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-eqmarl_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1176,
+      "metrics_sha256": "cbea02d1f3ef075a90acfdbf10704fa203a8db17609578a50c2ddf6adb6be15c"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-flexible_interaction_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1637,
+      "metrics_sha256": "3bf612a9bfed853e6d9642a65f8085e36264e20bb7c9aa3dc67b6b4f9833b235"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-flexible_interaction_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1077,
+      "metrics_sha256": "57681fb4254075db8e294a3debb0e6447d35bcd33a06a832ec01d943507784b5"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-flexible_interaction_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1481,
+      "metrics_sha256": "5715a8c4bdb2c845d1fc25fda0d33bcb6d23770bd9baf5db7d3c6529add45b9f"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-quantum_noent_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1336,
+      "metrics_sha256": "81e73aaa8d9e0c8cd5a211eea2580eb0a8b022133af44df11795b67a74efdd3f"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-quantum_noent_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1347,
+      "metrics_sha256": "f05d7ca7f036cd84cd3d5b5ab4751f35944479af302e38e9863ef51b2ac5c11e"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-additive-quantum_noent_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1281,
+      "metrics_sha256": "e26c2a549be661099798734f58bb6f833d509cb0ec1207e4f29cf16ab1d23217"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-bilinear_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1240,
+      "metrics_sha256": "ba141f1a724966f31985dc72427d7ef1e5014b0b97c5618d67595b78197dc8c2"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-bilinear_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1144,
+      "metrics_sha256": "b2ba3b8642647b30764a0e0c72e8fcf7c0117fb68251e54c245074b90af47b2b"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-bilinear_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1294,
+      "metrics_sha256": "12fef5ca3fcb43dbb6740f41c05e1faaa0066658833c89e6af58a8670c109eba"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-central_classical_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1337,
+      "metrics_sha256": "c01ae932178891dc111dc42639afbdac8213bfb1bf1824b5c7edba3c3aa6d0e6"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-central_classical_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1300,
+      "metrics_sha256": "b13e152ce9e91c9bfd827077847a2531c372e86f20a8b1899c079fe73c49826d"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-central_classical_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1301,
+      "metrics_sha256": "3c3d5897ea44d8563d71387014e30590a6545be355fe155242481bf64a547df9"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-eqmarl_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 767,
+      "metrics_sha256": "d0dd97edffbab3b98afde954176be6a576f09169d1f8356661a3d84dd1fa9f80"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-eqmarl_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1300,
+      "metrics_sha256": "1871b18c307224937f9f805333f047b4b1b4dafcd3b07ad2d65e6b1fce8d6ab8"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-eqmarl_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1006,
+      "metrics_sha256": "81e8a8828a3b0756bce04cc9e998c8ee85ce0e5ca1d51d0a62bc94ea83f8a1af"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-flexible_interaction_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1037,
+      "metrics_sha256": "205541069f7b13d4b23e2cbac101e8d1bddb5721c6fb03a32f596a711835d074"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-flexible_interaction_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 911,
+      "metrics_sha256": "ceb399b436f719ff0c758cac3afd1eaefb4f3811b0f1d835b969623df5547a6d"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-flexible_interaction_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1158,
+      "metrics_sha256": "1b8213fa2ec95e442ac30b4b0f6a0c65cd61de121b19a57a447a0f4205290f6a"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-quantum_noent_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 996,
+      "metrics_sha256": "a1931b0c4daa6ab31a8a58d25425cf3d5d77e3d1087bdd44488cdb8196662c06"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-quantum_noent_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1288,
+      "metrics_sha256": "42b6ae35c4cbada841c4033f098871711985c0c6a6cecc9bd3dc1bb168f62b97"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-high-quantum_noent_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1119,
+      "metrics_sha256": "c3e23e118a095bd660271149d9b8073a26ed12e451847e3b29801914fd515535"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-bilinear_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1516,
+      "metrics_sha256": "ee913668f292dec0fda8999f8edfb75cdbe561ccd0680380a259a48b15b82232"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-bilinear_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1271,
+      "metrics_sha256": "18bb21246ace07638c356eb75fce6b291c974f86f5db05c6e093341ae2f897f4"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-bilinear_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1311,
+      "metrics_sha256": "fa924ecffd9021469e5b35695630217467a2dda9b203b39fbfc572fbca32126f"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-central_classical_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1654,
+      "metrics_sha256": "2c9e4fbfd50b4a8518ad4bacdeca157e0886a8fb9e93c532c0214ac567b185cf"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-central_classical_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1314,
+      "metrics_sha256": "224251aa3dea2507de02e5a7fda88338ef9e76be40fc55fb156669fafbe80fad"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-central_classical_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1509,
+      "metrics_sha256": "8d2b411cafa66e60904ef8d727b4638682f73d512f0760adfd2f72fa04ba30f1"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-eqmarl_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1091,
+      "metrics_sha256": "fdbdba3f800697443fc79b0014f326aa02d89c96ca681a8dc7ef949756714609"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-eqmarl_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1347,
+      "metrics_sha256": "525d97bbeb3161c3977fcc1d761e80a34c3566a931286f5a34a539667432fa0a"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-eqmarl_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1431,
+      "metrics_sha256": "a8f22fb44c85c0ec641d81091865fd1f2af786b29a0b6c7709c596e99f9af5ce"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-flexible_interaction_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1530,
+      "metrics_sha256": "d6e74d1ca29b8bd88c96e514679e3b2b274de648022a9fc481ef456145f04560"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-flexible_interaction_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1067,
+      "metrics_sha256": "28ee35c289cc9500ae517f975f93f57d466d5f31f81b7a5debef3458962ecbd6"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-flexible_interaction_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1806,
+      "metrics_sha256": "ed923214e0bebe5c1558f8174fac9d26304e7bb31a6209548a98d53bc6217d39"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-quantum_noent_seed-12101_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1132,
+      "metrics_sha256": "9ec9bf55d6f5968233763d15372dd672798f2cc49a59e6e8e8f6d6fe53699b49"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-quantum_noent_seed-12102_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1296,
+      "metrics_sha256": "48174700f80a238a586f67c1a5e23d54839527133fd34c1dd5336b6e66711ed3"
+    },
+    {
+      "valid": true,
+      "run_id": "12-pilot-low-quantum_noent_seed-12103_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1353,
+      "metrics_sha256": "73501906a3a303fe9aed0d409ab9bdae2a590fecf4f3953ba70d5540732b6a99"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-bilinear_lr-001_seed-12001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 640,
+      "metrics_sha256": "2a1ff56a945a719aa559007f8550e75c7fa28fe4c0353690c8879bb9335ec797"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-bilinear_lr-001_seed-12002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 603,
+      "metrics_sha256": "df41fd9ddd0d67368185562820cb9495efd147aa7006e9972b5171aebd57e577"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-bilinear_lr-003_seed-12001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 658,
+      "metrics_sha256": "ed772241acbd29a9f31c3792f43e197e69f2a971cfdb3a80170d5373f3c642f1"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-bilinear_lr-003_seed-12002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 684,
+      "metrics_sha256": "45ec4413ec3e7626ba94ad348752f70144010fa82c59128098c4864814e5e3e6"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-central_classical_lr-001_seed-12001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 741,
+      "metrics_sha256": "69952af0439bc520a25b85e79f5800c45df74ad84a4851af3dd48b7aa54a5f7a"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-central_classical_lr-001_seed-12002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 641,
+      "metrics_sha256": "00a580d3d40f2ff92093bc4c5d72db172d35928b1766de1a12e6d131c73d0ea8"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-central_classical_lr-003_seed-12001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 730,
+      "metrics_sha256": "e474d4ad09a7cf585073f7492e1a22a7b830c4b86e48bf85fb87bc7671382da0"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-central_classical_lr-003_seed-12002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 624,
+      "metrics_sha256": "ccefbd42e97dae613a32c68281a17cdb27b57ab364f61220e581a94bdc73b06c"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-eqmarl_lr-001_seed-12001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 558,
+      "metrics_sha256": "9a533449f47a6f617882d7d0e2f28a343ac2701b07fe38a8145e82a4150df557"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-eqmarl_lr-001_seed-12002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 803,
+      "metrics_sha256": "dd36f6ee0146b617481726ec7db13d092b8ca49c30936bacd841e209c164a795"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-eqmarl_lr-003_seed-12001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 609,
+      "metrics_sha256": "b2dfa3acfcbdaf58edfcdb83dba72a8fa11dcb68b9a8f966f6a6df1409eb910b"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-eqmarl_lr-003_seed-12002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 754,
+      "metrics_sha256": "bbeabd3da4b6946c33db4f168ada65565a1ef34e1892a49aeeb6200798c9f802"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-flexible_interaction_lr-001_seed-12001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 617,
+      "metrics_sha256": "39313daad2ff7ef28c64cfdbb8b20ddf84a46292a4afefc74a59ee11be453e24"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-flexible_interaction_lr-001_seed-12002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 621,
+      "metrics_sha256": "77a9e7cc9490dbd091b7aa13838cb46960511efb8ef8290fbccbbdcaef00f9b3"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-flexible_interaction_lr-003_seed-12001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 888,
+      "metrics_sha256": "02c856b9ab142ad7169ed2ef54c507ccc3c5a6139aa5d962620a3d645fab2786"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-flexible_interaction_lr-003_seed-12002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 549,
+      "metrics_sha256": "7a74d2294aa236472ad1215bdab50f590c1c841cf34229b3f0ccdf48b78ca15b"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-quantum_noent_lr-001_seed-12001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 561,
+      "metrics_sha256": "e722ad8b32d57744d87603b1b682b5fcab1f18b4a4f98aa6e04357b963a78ef1"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-quantum_noent_lr-001_seed-12002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 834,
+      "metrics_sha256": "6f5d690cf63c34c6e509a2988c0d6d63baf1ba9620651df84f74f6f666639858"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-quantum_noent_lr-003_seed-12001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 610,
+      "metrics_sha256": "a44ee88e4dc05f39f361aa7d8da033179ab6ae111403f8a86fcfb5fa05b761b2"
+    },
+    {
+      "valid": true,
+      "run_id": "12-tuning-quantum_noent_lr-003_seed-12002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 723,
+      "metrics_sha256": "4d4161e8677fab032bb2aa9afaa5e1af1c0ffef00003013a92583b0cc8b45f13"
+    }
+  ]
+}

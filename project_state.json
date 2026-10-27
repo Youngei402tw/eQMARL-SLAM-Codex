@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Execute the mechanism-focused extension Stages 10\u201314 autonomously under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
   "active_stage": "12",
-  "stage_status": "results_archived_pending_remote_verification",
+  "stage_status": "passed",
   "training_runs_executed": 136,
   "current_branch": "stage/12-mechanism-development",
   "dependency_commit": "7442b2354fc5f630c3c0753697f60078682f7b10",
   "completion_commit": null,
-  "publication_status": "results_commit_pending",
+  "publication_status": "verified_complete",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -36,7 +36,7 @@
     "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73"
   },
   "blockers": [],
-  "next_action": "Publish and freshly verify all 65 Stage12 bundles, close the stage gate, then publish the locked Stage13 source/config commit before test access.",
+  "next_action": "Create Stage13 from the immutable Stage12 completion commit and remotely verify its locked source/config commit before mechanism-test access.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",

@@ -249,10 +249,12 @@
       "depends_on": ["11"],
       "initial_status": "planned",
       "report": "docs/stages/12-mechanism-development.md",
-      "status": "running",
       "branch_created": true,
       "dependency_completion_commit": "7442b2354fc5f630c3c0753697f60078682f7b10",
-      "branch_created_from_commit": "7442b2354fc5f630c3c0753697f60078682f7b10"
+      "branch_created_from_commit": "7442b2354fc5f630c3c0753697f60078682f7b10",
+      "status": "passed",
+      "publication_receipt": "docs/stages/12-publication.json",
+      "results_commit": "700a024aa6c5ac599878ed5f9246f13b90567cb1"
     },
     {
       "id": "13",

@@ -14,4 +14,6 @@ Across tuning and pilots, all 65 planned outcomes completed. They consumed 591,2
 
 The Stage 13 lock fixes five methods, three conditions, eight seeds, 10,000 training primitives, 30 validation episodes, 100 held-out test episodes, final checkpoints, the paired difference-in-differences estimand, a 10,000-resample paired-seed bootstrap, bootstrap seed 14001, and the 0.02 minimum effect of scientific interest. Test scenarios are deferred to runtime behind their registered SHA-256 and cannot enter tuning or pilot code.
 
-Stage gate: numerical, information, retention, equal-budget, and feasibility requirements passed. Remote result verification and the Stage 13 source/config publication remain before any mechanism-test access.
+Fresh independent retrieval of results commit `700a024aa6c5ac599878ed5f9246f13b90567cb1` validated all 65 bundles, including every resolved config, raw metric table, diagnostic, checkpoint, manifest, and inventory hash. The receipt is `docs/stages/12-publication.json`.
+
+Stage gate: passed. The Stage 13 source/config commit must still be remotely verified before any mechanism-test access.
