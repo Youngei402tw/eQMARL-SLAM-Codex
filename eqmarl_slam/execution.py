@@ -179,6 +179,9 @@ def execute(config_path, source_receipt):
         elif config["experiment"] == "mechanism-task-diagnostic":
             from .diagnostics11 import run_diagnostics
             diagnostics = run_diagnostics(config, output, emit, progress=progress)
+        elif config["experiment"] == "mechanism-release-audit":
+            from .diagnostics14 import run_diagnostics
+            diagnostics = run_diagnostics(config, output, emit, progress=progress)
         elif config["experiment"] == "legacy-reference":
             command = [config["interpreter"], str(ROOT / "eqmarl_slam/reference_probe.py"),
                        "--fixtures", str(ROOT / config["fixtures"]),

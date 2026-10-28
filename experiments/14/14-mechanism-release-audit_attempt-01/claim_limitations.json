@@ -1,0 +1,41 @@
+[
+  {
+    "claim": "Controlled complementarity increased scripted reward/value interaction from 0 to 4.",
+    "support": "Stage11 fixed-state diagnostic",
+    "scope": "registered two-robot analytic simulator"
+  },
+  {
+    "claim": "The eQMARL-minus-no-entanglement coverage effect did not reliably increase from additive to high complementarity.",
+    "support": {
+      "estimate": 0.007083333333333386,
+      "interval_95": [
+        -0.15597395833333325,
+        0.1802934027777777
+      ],
+      "seed_interactions": [
+        -0.13583333333333336,
+        -0.038333333333333,
+        0.11499999999999988,
+        -0.25166666666666676,
+        0.05638888888888893,
+        0.18638888888888894,
+        0.4619444444444445,
+        -0.33722222222222203
+      ]
+    },
+    "scope": "eight trained seeds; interval spans zero; not equivalence"
+  },
+  {
+    "claim": "Flexible classical interaction critics remained competitive under the same sample budget.",
+    "support": "Stage13 descriptive high-condition contrasts",
+    "scope": "descriptive, unadjusted"
+  },
+  {
+    "claim": "The tested analytic quantum critics required circuit evaluations without a demonstrated coverage benefit.",
+    "support": {
+      "circuit_evaluations": 534606,
+      "shots": 0
+    },
+    "scope": "simulator/backprop only; no hardware speed claim"
+  }
+]

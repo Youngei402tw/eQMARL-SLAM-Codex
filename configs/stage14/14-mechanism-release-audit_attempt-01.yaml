@@ -1,0 +1,26 @@
+{
+  "stage": "14",
+  "protocol_id": "mechanism-release-v1",
+  "dependency_completion_commit": "d177c35cbd6b44cac12fa5f71eae82ce5e3b9d79",
+  "run_id": "14-mechanism-release-audit_attempt-01",
+  "experiment": "mechanism-release-audit",
+  "method": "clean_checkpoint_replay_and_evidence_audit",
+  "hypothesis": "A clean locked-runtime audit reproduces all bundles, checkpoints, representative validation paths, primary inference, resources, and allowed claims without training.",
+  "profile": "release",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 1000,
+  "max_cpu_threads": 1,
+  "artifact_output_root": "/workspace/experiment-artifacts",
+  "confirmatory_source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
+  "seed_streams": {"model_init": 13001, "critic_init": 14001, "map": 220000, "evaluation_map": 220000, "sensor": 221000, "action": null, "quantum_shots": null, "communication": null},
+  "split_manifests": {
+    "train": {"path": "configs/data/train-mechanism-v1.json", "sha256": "6d49d1281a14eda4b684a04213c1d8313b4a4cd1ee6470f9640e337b5ef1f4bb"},
+    "development": {"path": "configs/data/development-mechanism-v1.json", "sha256": "efd9d4b6ba2df9d759895ef37f96a06c692d64fb1ad3b70028a7f77c1b666bbb"},
+    "validation": {"path": "configs/data/validation-mechanism-v1.json", "sha256": "fcd4ce49bc4fb473f155a58abcb4b4f54e20be2c23e019d0ae7cff83684f06bb"},
+    "test": {"path": "configs/data/test-mechanism-v1.json", "sha256": "2085bcfadf915a196588ae4db12a4e0ca5e45462f21456a1c878107127879a0e"}
+  },
+  "model": {"actor": "Load all 120 final recurrent actor checkpoints", "encoder": "No critic execution in replay", "critic": "All five archived definitions", "parameter_counts": "Audited from archived resolved configs", "optimizer": "No optimization"},
+  "quantum": {"device": "default.qubit", "shots": null, "physical_hardware": false, "audit_only": true},
+  "interpretation": "Reproduction and release integrity only. No new training, held-out test replay, inference choice, or scientific extension.",
+  "analysis_version": "mechanism-release-v1"
+}

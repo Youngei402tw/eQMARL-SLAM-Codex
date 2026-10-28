@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-28T08:45:00+00:00",
+  "updated_utc": "2026-10-28T09:00:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -11,11 +11,11 @@
     "last_check": "All 20 files of the published planning commit matched their local Git blob hashes; the stage branch head and AGENTS.md content were read back through the GitHub plugin."
   },
   "authorized_current_scope": "Execute the mechanism-focused extension Stages 10\u201314 autonomously under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
-  "active_stage": "13",
-  "stage_status": "completed_null_result",
+  "active_stage": "14",
+  "stage_status": "passed",
   "training_runs_executed": 256,
-  "current_branch": "stage/13-mechanism-confirmatory",
-  "dependency_commit": "d733d2b99296e27c7678c6cbbbfd8f03848b1d34",
+  "current_branch": "stage/14-mechanism-release",
+  "dependency_commit": "d177c35cbd6b44cac12fa5f71eae82ce5e3b9d79",
   "completion_commit": null,
   "publication_status": "verified_complete",
   "verified_remote_commits": {
@@ -36,7 +36,7 @@
     "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73"
   },
   "blockers": [],
-  "next_action": "Create Stage14 from the immutable Stage13 completion commit and execute the clean reproduction, resource/failure audit, and paper contribution release.",
+  "next_action": "Merge the verified Stage13 and Stage14 pull requests and record the final main-branch receipt.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -46,7 +46,7 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "14",
+  "next_stage": null,
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
   "next_stage_status": "planned",
@@ -204,18 +204,18 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 29129.728721060997,
-    "setup_wall_seconds_charged": 1200.0,
-    "stage_started_utc": "2026-10-27T04:45:00+00:00",
-    "setup_charge_convention": "Conservative active source-lock, monitoring, resume and analysis charge. The inactive 2026-10-27/28 session gap after a clean between-run stop is excluded; all instrumented experiment segments are included.",
+    "consumed_wall_seconds": 711.4317884799998,
+    "setup_wall_seconds_charged": 700.0,
+    "stage_started_utc": "2026-10-28T08:50:00+00:00",
+    "setup_charge_convention": "Active release implementation, clean audit execution and publication finalization.",
     "recorded_experiment_resources": {
-      "primitive_steps": 1501711,
-      "decisions": 1242090,
-      "updates": 54740,
-      "wall_seconds": 27929.728721060997,
-      "cpu_core_hours": 7.756504814166667,
+      "primitive_steps": 183,
+      "decisions": 224,
+      "updates": 0,
+      "wall_seconds": 11.431788479999796,
+      "cpu_core_hours": 0.0031712708333333332,
       "gpu_device_hours": 0,
-      "circuit_evaluations": 534606,
+      "circuit_evaluations": 0,
       "shots": 0
     }
   },
@@ -246,5 +246,5 @@
     "frozen": true,
     "source_commit_location": "External remotely verified execution receipt is copied into every immutable run bundle; exact SHA is populated after source publication without modifying the clean source tree."
   },
-  "last_progress_utc": "2026-10-28T08:45:00+00:00"
+  "last_progress_utc": "2026-10-28T09:00:00+00:00"
 }

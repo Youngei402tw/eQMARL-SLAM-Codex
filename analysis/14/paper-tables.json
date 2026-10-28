@@ -1,0 +1,35 @@
+{
+  "primary": {
+    "estimate": 0.007083333333333386,
+    "interval_95": [
+      -0.15597395833333325,
+      0.1802934027777777
+    ],
+    "minimum_effect": 0.02,
+    "completed_null": true
+  },
+  "resources": {
+    "primitive_steps": 1501711,
+    "decisions": 1242090,
+    "updates": 54740,
+    "wall_seconds": 27929.728721061,
+    "cpu_core_hours": 7.756504814166665,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 534606,
+    "shots": 0
+  },
+  "methods": [
+    "central_classical",
+    "bilinear",
+    "flexible_interaction",
+    "quantum_noent",
+    "eqmarl"
+  ],
+  "conditions": [
+    "additive",
+    "low",
+    "high"
+  ],
+  "trained_seeds_per_cell": 8,
+  "test_episodes_per_seed": 100
+}
