@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-28T08:50:00+00:00",
+  "updated_utc": "2026-10-28T09:00:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Execute the mechanism-focused extension Stages 10\u201314 autonomously under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
   "active_stage": "14",
-  "stage_status": "running",
+  "stage_status": "passed_pending_remote_verification",
   "training_runs_executed": 256,
   "current_branch": "stage/14-mechanism-release",
   "dependency_commit": "d177c35cbd6b44cac12fa5f71eae82ce5e3b9d79",
   "completion_commit": null,
-  "publication_status": "source_registration_pending",
+  "publication_status": "results_commit_pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -36,7 +36,7 @@
     "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73"
   },
   "blockers": [],
-  "next_action": "Publish and execute the Stage14 clean reproduction, checkpoint replay, resource/failure audit and paper contribution release.",
+  "next_action": "Publish and freshly verify the Stage14 audit bundle and paper artifacts, then merge the completed stage chain.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -204,16 +204,16 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 0,
-    "setup_wall_seconds_charged": 0,
+    "consumed_wall_seconds": 711.4317884799998,
+    "setup_wall_seconds_charged": 700.0,
     "stage_started_utc": "2026-10-28T08:50:00+00:00",
     "setup_charge_convention": "Active release implementation, clean audit execution and publication finalization.",
     "recorded_experiment_resources": {
-      "primitive_steps": 0,
-      "decisions": 0,
+      "primitive_steps": 183,
+      "decisions": 224,
       "updates": 0,
-      "wall_seconds": 0,
-      "cpu_core_hours": 0,
+      "wall_seconds": 11.431788479999796,
+      "cpu_core_hours": 0.0031712708333333332,
       "gpu_device_hours": 0,
       "circuit_evaluations": 0,
       "shots": 0
@@ -246,5 +246,5 @@
     "frozen": true,
     "source_commit_location": "External remotely verified execution receipt is copied into every immutable run bundle; exact SHA is populated after source publication without modifying the clean source tree."
   },
-  "last_progress_utc": "2026-10-28T08:50:00+00:00"
+  "last_progress_utc": "2026-10-28T09:00:00+00:00"
 }

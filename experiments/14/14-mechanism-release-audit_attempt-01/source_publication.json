@@ -1,0 +1,8 @@
+{
+  "source_commit": "bfefca24b43b619435b963931eb8b27af99f676c",
+  "branch": "stage/14-mechanism-release",
+  "verified": true,
+  "allow_detached": false,
+  "verified_utc": "2026-10-28T08:45:42.455398+00:00",
+  "mechanism": "Successful non-force Git push followed by exact ls-remote SHA verification"
+}

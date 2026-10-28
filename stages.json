@@ -284,10 +284,11 @@
       "depends_on": ["13"],
       "initial_status": "planned",
       "report": "docs/stages/14-mechanism-release.md",
-      "status": "running",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "d177c35cbd6b44cac12fa5f71eae82ce5e3b9d79",
-      "branch_created_from_commit": "d177c35cbd6b44cac12fa5f71eae82ce5e3b9d79"
+      "branch_created_from_commit": "d177c35cbd6b44cac12fa5f71eae82ce5e3b9d79",
+      "source_commit": "bfefca24b43b619435b963931eb8b27af99f676c"
     }
   ],
   "recommended_execution_order": [

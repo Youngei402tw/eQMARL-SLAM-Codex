@@ -1,0 +1,387 @@
+{
+  "run_id": "14-mechanism-release-audit_attempt-01",
+  "source_commit": "bfefca24b43b619435b963931eb8b27af99f676c",
+  "config_sha256": "8dba8e70385c4c75d6d8eb77ee7d1dd667948d7b65e8e96a8c1a392fa0cf90ae",
+  "metrics_sha256": "ca7224214f999b8072e0c467f34c4d5ac752714740747ee9b7ca9e82a7dbd54b",
+  "metrics_rows": 15,
+  "analysis_version": "mechanism-release-v1",
+  "passed": true,
+  "gates": {
+    "all_120_bundles_valid": true,
+    "all_checkpoints_finite": true,
+    "all_15_replays_exact": true,
+    "primary_analysis_exact": true,
+    "no_failed_confirmatory_runs": true,
+    "zero_physical_shots": true
+  },
+  "resources_consumed": {
+    "primitive_steps": 183,
+    "decisions": 224,
+    "updates": 0,
+    "wall_seconds": 11.431788479999796,
+    "cpu_core_hours": 0.0031712708333333332,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "interpretation": "Reproduction and release integrity only. No new training, held-out test replay, inference choice, or scientific extension.",
+  "analysis": {
+    "bundles_validated": 120,
+    "checkpoints_loaded": 120,
+    "validation_replays": [
+      {
+        "condition": "additive",
+        "method": "central_classical",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 6,
+          "decisions": 4
+        }
+      },
+      {
+        "condition": "additive",
+        "method": "bilinear",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 11,
+          "decisions": 8
+        }
+      },
+      {
+        "condition": "additive",
+        "method": "flexible_interaction",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 6,
+          "decisions": 4
+        }
+      },
+      {
+        "condition": "additive",
+        "method": "quantum_noent",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 6,
+          "decisions": 4
+        }
+      },
+      {
+        "condition": "additive",
+        "method": "eqmarl",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 6,
+          "decisions": 4
+        }
+      },
+      {
+        "condition": "low",
+        "method": "central_classical",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 6,
+          "decisions": 4
+        }
+      },
+      {
+        "condition": "low",
+        "method": "bilinear",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 36,
+          "decisions": 68
+        }
+      },
+      {
+        "condition": "low",
+        "method": "flexible_interaction",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 6,
+          "decisions": 4
+        }
+      },
+      {
+        "condition": "low",
+        "method": "quantum_noent",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 6,
+          "decisions": 4
+        }
+      },
+      {
+        "condition": "low",
+        "method": "eqmarl",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 9,
+          "decisions": 6
+        }
+      },
+      {
+        "condition": "high",
+        "method": "central_classical",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 6,
+          "decisions": 4
+        }
+      },
+      {
+        "condition": "high",
+        "method": "bilinear",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 6,
+          "decisions": 4
+        }
+      },
+      {
+        "condition": "high",
+        "method": "flexible_interaction",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 31,
+          "decisions": 46
+        }
+      },
+      {
+        "condition": "high",
+        "method": "quantum_noent",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 6,
+          "decisions": 4
+        }
+      },
+      {
+        "condition": "high",
+        "method": "eqmarl",
+        "seed": 13001,
+        "scenario_id": "mechanism-validation-v1-000",
+        "max_abs_error": 0.0,
+        "metric_errors": {
+          "physical_coverage": 0.0,
+          "return": 0.0,
+          "fixed_landmark_accuracy": 0.0,
+          "pose_error_m": 0.0,
+          "trajectory_ate_m": 0.0,
+          "trajectory_rpe_m": 0.0
+        },
+        "resources": {
+          "primitive_steps": 36,
+          "decisions": 56
+        }
+      }
+    ],
+    "reproduced_primary": {
+      "estimate": 0.007083333333333386,
+      "interval_95": [
+        -0.15597395833333325,
+        0.1802934027777777
+      ],
+      "seed_interactions": [
+        -0.13583333333333336,
+        -0.038333333333333,
+        0.11499999999999988,
+        -0.25166666666666676,
+        0.05638888888888893,
+        0.18638888888888894,
+        0.4619444444444445,
+        -0.33722222222222203
+      ]
+    },
+    "confirmatory_resources": {
+      "primitive_steps": 1501711,
+      "decisions": 1242090,
+      "updates": 54740,
+      "wall_seconds": 27929.728721061,
+      "cpu_core_hours": 7.756504814166665,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 534606,
+      "shots": 0
+    },
+    "claims": [
+      {
+        "claim": "Controlled complementarity increased scripted reward/value interaction from 0 to 4.",
+        "support": "Stage11 fixed-state diagnostic",
+        "scope": "registered two-robot analytic simulator"
+      },
+      {
+        "claim": "The eQMARL-minus-no-entanglement coverage effect did not reliably increase from additive to high complementarity.",
+        "support": {
+          "estimate": 0.007083333333333386,
+          "interval_95": [
+            -0.15597395833333325,
+            0.1802934027777777
+          ],
+          "seed_interactions": [
+            -0.13583333333333336,
+            -0.038333333333333,
+            0.11499999999999988,
+            -0.25166666666666676,
+            0.05638888888888893,
+            0.18638888888888894,
+            0.4619444444444445,
+            -0.33722222222222203
+          ]
+        },
+        "scope": "eight trained seeds; interval spans zero; not equivalence"
+      },
+      {
+        "claim": "Flexible classical interaction critics remained competitive under the same sample budget.",
+        "support": "Stage13 descriptive high-condition contrasts",
+        "scope": "descriptive, unadjusted"
+      },
+      {
+        "claim": "The tested analytic quantum critics required circuit evaluations without a demonstrated coverage benefit.",
+        "support": {
+          "circuit_evaluations": 534606,
+          "shots": 0
+        },
+        "scope": "simulator/backprop only; no hardware speed claim"
+      }
+    ]
+  }
+}
