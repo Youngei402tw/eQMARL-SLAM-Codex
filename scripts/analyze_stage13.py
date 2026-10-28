@@ -28,7 +28,7 @@ def main():
         ledger.append(row)
         if m["status"]!="completed" or len(test)!=100 or not d.get("gates",{}).get("frozen_test_policy") or not d.get("gates",{}).get("complete_locked_test"):
             failures.append(row);continue
-        metric_names=("physical_coverage","success","fixed_landmark_accuracy","pose_error_m","trajectory_ate_m","trajectory_rpe_m","communication_bytes","travel_distance","collisions","return","macro_decisions")
+        metric_names=("physical_coverage","success","fixed_landmark_accuracy","pose_error_m","trajectory_ate_m","trajectory_rpe_m","communication_bytes","travel_distance_m","collisions","return","macro_decisions")
         cells[key]={name:statistics.fmean(float(x[name]) for x in test) for name in metric_names}
     expected={(c,m,s) for c in CONDITIONS for m in METHODS for s in SEEDS}
     missing=sorted(expected-set(cells))

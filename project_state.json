@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-27T04:45:00+00:00",
+  "updated_utc": "2026-10-28T08:45:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Execute the mechanism-focused extension Stages 10\u201314 autonomously under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
   "active_stage": "13",
-  "stage_status": "source_lock_preparation",
-  "training_runs_executed": 136,
+  "stage_status": "completed_null_result_pending_remote_verification",
+  "training_runs_executed": 256,
   "current_branch": "stage/13-mechanism-confirmatory",
   "dependency_commit": "d733d2b99296e27c7678c6cbbbfd8f03848b1d34",
   "completion_commit": null,
-  "publication_status": "source_registration_pending",
+  "publication_status": "results_commit_pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -36,7 +36,7 @@
     "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73"
   },
   "blockers": [],
-  "next_action": "Generate, publish and remotely verify the locked 120-run Stage13 source/config matrix before mechanism-test access.",
+  "next_action": "Publish and freshly verify all 120 Stage13 bundles and locked analysis, then execute the Stage14 reproduction and contribution audit.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -204,18 +204,18 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 0,
-    "setup_wall_seconds_charged": 0,
+    "consumed_wall_seconds": 29129.728721060997,
+    "setup_wall_seconds_charged": 1200.0,
     "stage_started_utc": "2026-10-27T04:45:00+00:00",
-    "setup_charge_convention": "Active source lock, execution and finalization segments; inactive gaps excluded and recorded.",
+    "setup_charge_convention": "Conservative active source-lock, monitoring, resume and analysis charge. The inactive 2026-10-27/28 session gap after a clean between-run stop is excluded; all instrumented experiment segments are included.",
     "recorded_experiment_resources": {
-      "primitive_steps": 0,
-      "decisions": 0,
-      "updates": 0,
-      "wall_seconds": 0,
-      "cpu_core_hours": 0,
+      "primitive_steps": 1501711,
+      "decisions": 1242090,
+      "updates": 54740,
+      "wall_seconds": 27929.728721060997,
+      "cpu_core_hours": 7.756504814166667,
       "gpu_device_hours": 0,
-      "circuit_evaluations": 0,
+      "circuit_evaluations": 534606,
       "shots": 0
     }
   },
@@ -232,11 +232,11 @@
   },
   "final_test_accessed_under_locked_protocol": true,
   "final_test_lock_source": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
-  "mechanism_final_test_accessed": false,
-  "mechanism_final_test_lock_source": null,
+  "mechanism_final_test_accessed": true,
+  "mechanism_final_test_lock_source": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
   "mechanism_confirmatory_lock": {
     "freeze": "configs/stage12/stage13-freeze.json",
-    "source_commit": null,
+    "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
     "analysis_plan": "configs/stage13/analysis-plan.json",
     "methods": 5,
     "conditions": 3,
@@ -246,5 +246,5 @@
     "frozen": true,
     "source_commit_location": "External remotely verified execution receipt is copied into every immutable run bundle; exact SHA is populated after source publication without modifying the clean source tree."
   },
-  "last_progress_utc": "2026-10-27T04:45:00+00:00"
+  "last_progress_utc": "2026-10-28T08:45:00+00:00"
 }

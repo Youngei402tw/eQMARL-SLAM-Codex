@@ -1,0 +1,60 @@
+{
+  "artifacts": [
+    {
+      "path": "diagnostics.json",
+      "size_bytes": 213056,
+      "sha256": "90fd67e4135d67d0faafeb15e78fc4298061c5e1cffbdd7dc30342ff56620c32",
+      "purpose": "diagnostics.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "final.pt",
+      "size_bytes": 90671,
+      "sha256": "a39de045ce43b3154d14c420f63a56b2afa13b8028d250c48bcd7c670f1bb332",
+      "purpose": "final.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "manifest.json",
+      "size_bytes": 5408,
+      "sha256": "62ec498a9530c745aa574a4dcc864c9d695bdd98511c87143b395f3e8f2536a5",
+      "purpose": "manifest.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "metrics.jsonl",
+      "size_bytes": 1433126,
+      "sha256": "f37c7ae0a317ca7b37abeafe43dc2d3cb9ccbd55f54865fb59aaf6d124fae712",
+      "purpose": "metrics.jsonl",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "report.md",
+      "size_bytes": 833,
+      "sha256": "cfac7ecda0d4962597340917c2cdbefb462a205ec29e2dec8020fcdb251c223e",
+      "purpose": "report.md",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "resolved_config.yaml",
+      "size_bytes": 15509,
+      "sha256": "50e51fc55e7d4044743c65c51a6a78fa3f2ee0553b6a6b9d575ab619da30c9a4",
+      "purpose": "resolved_config.yaml",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "source_publication.json",
+      "size_bytes": 307,
+      "sha256": "c0ac46fe8d12450c40bdbf0713d13ad58e803b0934ed402492d0fda78be21006",
+      "purpose": "source_publication.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "summary.json",
+      "size_bytes": 213760,
+      "sha256": "746b4f9e0b2704afccedd001561fb273e0dcc0180996bb7e7a39612eca2c651e",
+      "purpose": "summary.json",
+      "retention": "permanent_git_history"
+    }
+  ]
+}
