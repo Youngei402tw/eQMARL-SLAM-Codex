@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-28T09:00:00+00:00",
+  "updated_utc": "2026-10-28T09:10:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -8,15 +8,15 @@
     "created": true,
     "remote_verified": true,
     "url": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
-    "last_check": "All 20 files of the published planning commit matched their local Git blob hashes; the stage branch head and AGENTS.md content were read back through the GitHub plugin."
+    "last_check": "Stages 10-14 merged through PRs 11-15; all 120 confirmatory bundles and the Stage14 release audit were freshly retrieved and hash-validated."
   },
-  "authorized_current_scope": "Execute the mechanism-focused extension Stages 10\u201314 autonomously under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
+  "authorized_current_scope": "Mechanism-focused extension Stages 10-14 completed under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
   "active_stage": "14",
   "stage_status": "passed",
   "training_runs_executed": 256,
-  "current_branch": "stage/14-mechanism-release",
+  "current_branch": "main",
   "dependency_commit": "d177c35cbd6b44cac12fa5f71eae82ce5e3b9d79",
-  "completion_commit": null,
+  "completion_commit": "d798a1a264cd5ac321748778c0f9db07b73a6d43",
   "publication_status": "verified_complete",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
@@ -33,10 +33,19 @@
     "stage/08-confirmatory": "78eaab5310c880cf421ccb67415d4fbb2790d080",
     "stage/09-release-results": "d9e130c99338200ae144c558735226ac3a6dc24d",
     "stage/09-release": "2fe0e3ab73711288b705643f7ea3f12cee857fa9",
-    "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73"
+    "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73",
+    "stage/10-mechanism-plan": "d3978be222df4636d792bb54f2222d9ad093be4f",
+    "stage/11-mechanism-task": "7442b2354fc5f630c3c0753697f60078682f7b10",
+    "stage/12-mechanism-development-results": "700a024aa6c5ac599878ed5f9246f13b90567cb1",
+    "stage/12-mechanism-development": "d733d2b99296e27c7678c6cbbbfd8f03848b1d34",
+    "stage/13-mechanism-confirmatory-results": "33d108b578e6a87c5d890280039932a30f19f7e6",
+    "stage/13-mechanism-confirmatory": "d177c35cbd6b44cac12fa5f71eae82ce5e3b9d79",
+    "stage/14-mechanism-release-results": "21ea205eac28db7f5200ddcc58784150aef17587",
+    "stage/14-mechanism-release": "d798a1a264cd5ac321748778c0f9db07b73a6d43",
+    "main_mechanism_integration": "35cddc1d5681a345bdd0034db61b49fe9d39c385"
   },
   "blockers": [],
-  "next_action": "Merge the verified Stage13 and Stage14 pull requests and record the final main-branch receipt.",
+  "next_action": null,
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -49,7 +58,7 @@
   "next_stage": null,
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
-  "next_stage_status": "planned",
+  "next_stage_status": "none",
   "completed_stage_budgets": {
     "01": {
       "cap_wall_seconds": 86400,
@@ -200,6 +209,38 @@
         "circuit_evaluations": 0,
         "shots": 0
       }
+    },
+    "10": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 300,
+      "setup_wall_seconds_charged": 300,
+      "stage_started_utc": "2026-10-22T07:12:00+00:00",
+      "setup_charge_convention": "Active planning-stage work; no scientific experiment in Stage10.",
+      "recorded_experiment_resources": {"primitive_steps": 0, "decisions": 0, "updates": 0, "wall_seconds": 0, "cpu_core_hours": 0, "gpu_device_hours": 0, "circuit_evaluations": 0, "shots": 0}
+    },
+    "11": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 395.556894,
+      "setup_wall_seconds_charged": 362.23334837399995,
+      "stage_started_utc": "2026-10-22T07:17:00+00:00",
+      "setup_charge_convention": "Conservative active stage envelope less instrumented sequential experiment segments.",
+      "recorded_experiment_resources": {"primitive_steps": 1102, "decisions": 772, "updates": 44, "wall_seconds": 33.323545626000055, "cpu_core_hours": 0.009250987777777778, "gpu_device_hours": 0, "circuit_evaluations": 1058, "shots": 0}
+    },
+    "12": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 11920.610230267997,
+      "setup_wall_seconds_charged": 1100.0,
+      "stage_started_utc": "2026-10-26T07:15:00+00:00",
+      "setup_charge_convention": "Active setup/finalization plus instrumented execution; inactive overnight gap excluded.",
+      "recorded_experiment_resources": {"primitive_steps": 591222, "decisions": 447388, "updates": 23692, "wall_seconds": 10820.610230267997, "cpu_core_hours": 3.005014608333333, "gpu_device_hours": 0, "circuit_evaluations": 250430, "shots": 0}
+    },
+    "13": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 29129.728721060997,
+      "setup_wall_seconds_charged": 1200.0,
+      "stage_started_utc": "2026-10-27T04:45:00+00:00",
+      "setup_charge_convention": "Active source-lock, monitoring, resume and analysis; inactive between-session gap excluded.",
+      "recorded_experiment_resources": {"primitive_steps": 1501711, "decisions": 1242090, "updates": 54740, "wall_seconds": 27929.728721060997, "cpu_core_hours": 7.756504814166667, "gpu_device_hours": 0, "circuit_evaluations": 534606, "shots": 0}
     }
   },
   "stage_budget": {
@@ -246,5 +287,5 @@
     "frozen": true,
     "source_commit_location": "External remotely verified execution receipt is copied into every immutable run bundle; exact SHA is populated after source publication without modifying the clean source tree."
   },
-  "last_progress_utc": "2026-10-28T09:00:00+00:00"
+  "last_progress_utc": "2026-10-28T09:10:00+00:00"
 }

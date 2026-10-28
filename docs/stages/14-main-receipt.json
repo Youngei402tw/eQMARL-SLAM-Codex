@@ -1,0 +1,10 @@
+{
+  "stage": "14",
+  "status": "passed",
+  "stage_completion_commit": "d798a1a264cd5ac321748778c0f9db07b73a6d43",
+  "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/15",
+  "merged_main_commit": "35cddc1d5681a345bdd0034db61b49fe9d39c385",
+  "results_commit": "21ea205eac28db7f5200ddcc58784150aef17587",
+  "publication_receipt": "docs/stages/14-publication.json",
+  "verification": "PR 15 CPU correctness passed; PR merged; stage branches retained; Stage14 bundle freshly retrieved and validated before merge."
+}

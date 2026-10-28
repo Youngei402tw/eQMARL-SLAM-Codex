@@ -290,7 +290,9 @@
       "branch_created_from_commit": "d177c35cbd6b44cac12fa5f71eae82ce5e3b9d79",
       "source_commit": "bfefca24b43b619435b963931eb8b27af99f676c",
       "publication_receipt": "docs/stages/14-publication.json",
-      "results_commit": "21ea205eac28db7f5200ddcc58784150aef17587"
+      "results_commit": "21ea205eac28db7f5200ddcc58784150aef17587",
+      "completion_commit": "d798a1a264cd5ac321748778c0f9db07b73a6d43",
+      "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/15"
     }
   ],
   "recommended_execution_order": [
