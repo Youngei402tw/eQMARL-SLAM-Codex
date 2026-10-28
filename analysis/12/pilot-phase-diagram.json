@@ -1,0 +1,600 @@
+{
+  "analysis_version": "mechanism-pilot-v1",
+  "scope": "descriptive development/validation only",
+  "test_accessed": false,
+  "all_45_planned_pilots_retained": true,
+  "table": [
+    {
+      "condition": "additive",
+      "method": "bilinear",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.7910493827160493,
+      "mean_validation_return": 5.2109110136088885,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-additive-bilinear_seed-12101_attempt-01",
+          "condition": "additive",
+          "method": "bilinear",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.9592592592592593,
+          "mean_return": 6.6093655938002795,
+          "wall_seconds": 99.55077892200006,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-additive-bilinear_seed-12102_attempt-01",
+          "condition": "additive",
+          "method": "bilinear",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.42407407407407405,
+          "mean_return": 2.1630742410067776,
+          "wall_seconds": 152.72330397099995,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-additive-bilinear_seed-12103_attempt-01",
+          "condition": "additive",
+          "method": "bilinear",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.9898148148148148,
+          "mean_return": 6.860293206019608,
+          "wall_seconds": 97.28433577199985,
+          "circuit_evaluations": 0
+        }
+      ]
+    },
+    {
+      "condition": "additive",
+      "method": "central_classical",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.8891975308641976,
+      "mean_validation_return": 6.026613251298123,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-additive-central_classical_seed-12101_attempt-01",
+          "condition": "additive",
+          "method": "central_classical",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.8962962962962963,
+          "mean_return": 5.926847594008495,
+          "wall_seconds": 100.60865669600025,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-additive-central_classical_seed-12102_attempt-01",
+          "condition": "additive",
+          "method": "central_classical",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.812037037037037,
+          "mean_return": 5.543626566085596,
+          "wall_seconds": 136.32129762899967,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-additive-central_classical_seed-12103_attempt-01",
+          "condition": "additive",
+          "method": "central_classical",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.9592592592592593,
+          "mean_return": 6.6093655938002795,
+          "wall_seconds": 106.6933516679992,
+          "circuit_evaluations": 0
+        }
+      ]
+    },
+    {
+      "condition": "additive",
+      "method": "eqmarl",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.6904320987654321,
+      "mean_validation_return": 4.831214730160564,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-additive-eqmarl_seed-12101_attempt-01",
+          "condition": "additive",
+          "method": "eqmarl",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.7166666666666667,
+          "mean_return": 5.751529768071468,
+          "wall_seconds": 316.87629154499973,
+          "circuit_evaluations": 12293
+        },
+        {
+          "run_id": "12-pilot-additive-eqmarl_seed-12102_attempt-01",
+          "condition": "additive",
+          "method": "eqmarl",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.9222222222222223,
+          "mean_return": 6.393020420815243,
+          "wall_seconds": 264.492612905,
+          "circuit_evaluations": 10982
+        },
+        {
+          "run_id": "12-pilot-additive-eqmarl_seed-12103_attempt-01",
+          "condition": "additive",
+          "method": "eqmarl",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.4324074074074074,
+          "mean_return": 2.349094001594982,
+          "wall_seconds": 294.2202667719994,
+          "circuit_evaluations": 13514
+        }
+      ]
+    },
+    {
+      "condition": "additive",
+      "method": "flexible_interaction",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.9364197530864198,
+      "mean_validation_return": 6.481366091559372,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-additive-flexible_interaction_seed-12101_attempt-01",
+          "condition": "additive",
+          "method": "flexible_interaction",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.950925925925926,
+          "mean_return": 6.460045179602217,
+          "wall_seconds": 115.33229532199948,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-additive-flexible_interaction_seed-12102_attempt-01",
+          "condition": "additive",
+          "method": "flexible_interaction",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.9453703703703703,
+          "mean_return": 6.6647391857263765,
+          "wall_seconds": 150.46579100600047,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-additive-flexible_interaction_seed-12103_attempt-01",
+          "condition": "additive",
+          "method": "flexible_interaction",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.912962962962963,
+          "mean_return": 6.319313909349523,
+          "wall_seconds": 112.26973635700051,
+          "circuit_evaluations": 0
+        }
+      ]
+    },
+    {
+      "condition": "additive",
+      "method": "quantum_noent",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.8287037037037037,
+      "mean_validation_return": 5.833193805227988,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-additive-quantum_noent_seed-12101_attempt-01",
+          "condition": "additive",
+          "method": "quantum_noent",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.8916666666666667,
+          "mean_return": 5.961672531886069,
+          "wall_seconds": 211.58738777800045,
+          "circuit_evaluations": 10432
+        },
+        {
+          "run_id": "12-pilot-additive-quantum_noent_seed-12102_attempt-01",
+          "condition": "additive",
+          "method": "quantum_noent",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.7194444444444444,
+          "mean_return": 5.850395232016475,
+          "wall_seconds": 272.63768662500024,
+          "circuit_evaluations": 11512
+        },
+        {
+          "run_id": "12-pilot-additive-quantum_noent_seed-12103_attempt-01",
+          "condition": "additive",
+          "method": "quantum_noent",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.875,
+          "mean_return": 5.687513651781421,
+          "wall_seconds": 231.3874540050001,
+          "circuit_evaluations": 10664
+        }
+      ]
+    },
+    {
+      "condition": "high",
+      "method": "bilinear",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.8268518518518518,
+      "mean_validation_return": 6.525978069553862,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-high-bilinear_seed-12101_attempt-01",
+          "condition": "high",
+          "method": "bilinear",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.799074074074074,
+          "mean_return": 6.479898720651746,
+          "wall_seconds": 158.86435245700068,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-high-bilinear_seed-12102_attempt-01",
+          "condition": "high",
+          "method": "bilinear",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.8972222222222223,
+          "mean_return": 6.6915032161546355,
+          "wall_seconds": 147.05751169999985,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-high-bilinear_seed-12103_attempt-01",
+          "condition": "high",
+          "method": "bilinear",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.7842592592592593,
+          "mean_return": 6.406532271855204,
+          "wall_seconds": 162.9956267560001,
+          "circuit_evaluations": 0
+        }
+      ]
+    },
+    {
+      "condition": "high",
+      "method": "central_classical",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.8737654320987654,
+      "mean_validation_return": 6.534629615003365,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-high-central_classical_seed-12101_attempt-01",
+          "condition": "high",
+          "method": "central_classical",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.950925925925926,
+          "mean_return": 6.6383785129355495,
+          "wall_seconds": 122.75523312099995,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-high-central_classical_seed-12102_attempt-01",
+          "condition": "high",
+          "method": "central_classical",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.7935185185185186,
+          "mean_return": 6.688477533657468,
+          "wall_seconds": 147.83951761000026,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-high-central_classical_seed-12103_attempt-01",
+          "condition": "high",
+          "method": "central_classical",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.8768518518518519,
+          "mean_return": 6.277032798417079,
+          "wall_seconds": 127.24129197799994,
+          "circuit_evaluations": 0
+        }
+      ]
+    },
+    {
+      "condition": "high",
+      "method": "eqmarl",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.6669753086419753,
+      "mean_validation_return": 4.487071502134498,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-high-eqmarl_seed-12101_attempt-01",
+          "condition": "high",
+          "method": "eqmarl",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.42407407407407405,
+          "mean_return": 1.576407574340111,
+          "wall_seconds": 371.84764764900046,
+          "circuit_evaluations": 13545
+        },
+        {
+          "run_id": "12-pilot-high-eqmarl_seed-12102_attempt-01",
+          "condition": "high",
+          "method": "eqmarl",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.8814814814814814,
+          "mean_return": 6.349399535981586,
+          "wall_seconds": 230.20678074399984,
+          "circuit_evaluations": 10808
+        },
+        {
+          "run_id": "12-pilot-high-eqmarl_seed-12103_attempt-01",
+          "condition": "high",
+          "method": "eqmarl",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.6953703703703703,
+          "mean_return": 5.535407396081797,
+          "wall_seconds": 335.5960907630006,
+          "circuit_evaluations": 12364
+        }
+      ]
+    },
+    {
+      "condition": "high",
+      "method": "flexible_interaction",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.6700617283950617,
+      "mean_validation_return": 5.050764056239188,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-high-flexible_interaction_seed-12101_attempt-01",
+          "condition": "high",
+          "method": "flexible_interaction",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.42407407407407405,
+          "mean_return": 1.576407574340111,
+          "wall_seconds": 188.4225923440008,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-high-flexible_interaction_seed-12102_attempt-01",
+          "condition": "high",
+          "method": "flexible_interaction",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.7916666666666666,
+          "mean_return": 6.843626023992337,
+          "wall_seconds": 228.92190300499897,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-high-flexible_interaction_seed-12103_attempt-01",
+          "condition": "high",
+          "method": "flexible_interaction",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.7944444444444444,
+          "mean_return": 6.732258570385116,
+          "wall_seconds": 224.852864339,
+          "circuit_evaluations": 0
+        }
+      ]
+    },
+    {
+      "condition": "high",
+      "method": "quantum_noent",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.7925925925925926,
+      "mean_validation_return": 6.6803926555747895,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-high-quantum_noent_seed-12101_attempt-01",
+          "condition": "high",
+          "method": "quantum_noent",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.7907407407407407,
+          "mean_return": 6.6619576022863365,
+          "wall_seconds": 318.174322285,
+          "circuit_evaluations": 11174
+        },
+        {
+          "run_id": "12-pilot-high-quantum_noent_seed-12102_attempt-01",
+          "condition": "high",
+          "method": "quantum_noent",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.7962962962962963,
+          "mean_return": 6.717262762151697,
+          "wall_seconds": 262.45564733799984,
+          "circuit_evaluations": 11148
+        },
+        {
+          "run_id": "12-pilot-high-quantum_noent_seed-12103_attempt-01",
+          "condition": "high",
+          "method": "quantum_noent",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.7907407407407407,
+          "mean_return": 6.6619576022863365,
+          "wall_seconds": 319.02595910900163,
+          "circuit_evaluations": 11222
+        }
+      ]
+    },
+    {
+      "condition": "low",
+      "method": "bilinear",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.6882716049382717,
+      "mean_validation_return": 5.186412030847982,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-low-bilinear_seed-12101_attempt-01",
+          "condition": "low",
+          "method": "bilinear",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.9351851851851851,
+          "mean_return": 6.7039457888084035,
+          "wall_seconds": 143.55984105900097,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-low-bilinear_seed-12102_attempt-01",
+          "condition": "low",
+          "method": "bilinear",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.7055555555555556,
+          "mean_return": 6.8877716182843205,
+          "wall_seconds": 179.62776890900022,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-low-bilinear_seed-12103_attempt-01",
+          "condition": "low",
+          "method": "bilinear",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.42407407407407405,
+          "mean_return": 1.9675186854512219,
+          "wall_seconds": 151.11235389799913,
+          "circuit_evaluations": 0
+        }
+      ]
+    },
+    {
+      "condition": "low",
+      "method": "central_classical",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.936111111111111,
+      "mean_validation_return": 6.420464363809683,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-low-central_classical_seed-12101_attempt-01",
+          "condition": "low",
+          "method": "central_classical",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.9592592592592593,
+          "mean_return": 6.695476704911391,
+          "wall_seconds": 102.9285134189995,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-low-central_classical_seed-12102_attempt-01",
+          "condition": "low",
+          "method": "central_classical",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.8898148148148147,
+          "mean_return": 5.870439681606268,
+          "wall_seconds": 112.27110881599947,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-low-central_classical_seed-12103_attempt-01",
+          "condition": "low",
+          "method": "central_classical",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.9592592592592593,
+          "mean_return": 6.695476704911391,
+          "wall_seconds": 103.8964628270005,
+          "circuit_evaluations": 0
+        }
+      ]
+    },
+    {
+      "condition": "low",
+      "method": "eqmarl",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.7240740740740742,
+      "mean_validation_return": 4.661978113439502,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-low-eqmarl_seed-12101_attempt-01",
+          "condition": "low",
+          "method": "eqmarl",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.42407407407407405,
+          "mean_return": 1.9675186854512219,
+          "wall_seconds": 280.0925000089992,
+          "circuit_evaluations": 12126
+        },
+        {
+          "run_id": "12-pilot-low-eqmarl_seed-12102_attempt-01",
+          "condition": "low",
+          "method": "eqmarl",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.8435185185185186,
+          "mean_return": 5.803688563825534,
+          "wall_seconds": 233.31446750100076,
+          "circuit_evaluations": 11001
+        },
+        {
+          "run_id": "12-pilot-low-eqmarl_seed-12103_attempt-01",
+          "condition": "low",
+          "method": "eqmarl",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.9046296296296297,
+          "mean_return": 6.214727091041751,
+          "wall_seconds": 229.482273566,
+          "circuit_evaluations": 10508
+        }
+      ]
+    },
+    {
+      "condition": "low",
+      "method": "flexible_interaction",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.9345679012345679,
+      "mean_validation_return": 6.705869059040064,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-low-flexible_interaction_seed-12101_attempt-01",
+          "condition": "low",
+          "method": "flexible_interaction",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.9351851851851851,
+          "mean_return": 6.659661213057782,
+          "wall_seconds": 124.14367429999947,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-low-flexible_interaction_seed-12102_attempt-01",
+          "condition": "low",
+          "method": "flexible_interaction",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.9092592592592593,
+          "mean_return": 6.762469259151018,
+          "wall_seconds": 158.79870789199958,
+          "circuit_evaluations": 0
+        },
+        {
+          "run_id": "12-pilot-low-flexible_interaction_seed-12103_attempt-01",
+          "condition": "low",
+          "method": "flexible_interaction",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.9592592592592593,
+          "mean_return": 6.695476704911391,
+          "wall_seconds": 96.51258530699852,
+          "circuit_evaluations": 0
+        }
+      ]
+    },
+    {
+      "condition": "low",
+      "method": "quantum_noent",
+      "trained_seeds": 3,
+      "mean_validation_physical_coverage": 0.8783950617283951,
+      "mean_validation_return": 6.40640176762741,
+      "seed_rows": [
+        {
+          "run_id": "12-pilot-low-quantum_noent_seed-12101_attempt-01",
+          "condition": "low",
+          "method": "quantum_noent",
+          "actor_seed": 12101,
+          "mean_physical_coverage": 0.812037037037037,
+          "mean_return": 6.279182121641152,
+          "wall_seconds": 264.15047087699895,
+          "circuit_evaluations": 11088
+        },
+        {
+          "run_id": "12-pilot-low-quantum_noent_seed-12102_attempt-01",
+          "condition": "low",
+          "method": "quantum_noent",
+          "actor_seed": 12102,
+          "mean_physical_coverage": 0.8953703703703704,
+          "mean_return": 6.339731941823858,
+          "wall_seconds": 220.2416613309997,
+          "circuit_evaluations": 10770
+        },
+        {
+          "run_id": "12-pilot-low-quantum_noent_seed-12103_attempt-01",
+          "condition": "low",
+          "method": "quantum_noent",
+          "actor_seed": 12103,
+          "mean_physical_coverage": 0.9277777777777777,
+          "mean_return": 6.6002912394172215,
+          "wall_seconds": 224.07640780200018,
+          "circuit_evaluations": 10567
+        }
+      ]
+    }
+  ],
+  "eqmarl_minus_quantum_noent_validation_coverage": {
+    "additive": -0.13827160493827162,
+    "low": -0.1543209876543209,
+    "high": -0.12561728395061733
+  },
+  "pilot_high_minus_additive_interaction": 0.012654320987654288,
+  "interpretation": "Variance/feasibility diagnostic only; no confirmatory contrast, method, condition, seed, or budget was selected from these outcomes."
+}

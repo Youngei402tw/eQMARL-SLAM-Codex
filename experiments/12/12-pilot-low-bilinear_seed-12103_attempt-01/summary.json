@@ -1,0 +1,1782 @@
+{
+  "run_id": "12-pilot-low-bilinear_seed-12103_attempt-01",
+  "source_commit": "927e36fe0fc668b8008f3c18dd20e556b8448d04",
+  "config_sha256": "31e175b3185c3f0af0ce5cbbbd88c53faed5e3dd38f1d20dc75007ae58f2d3bb",
+  "metrics_sha256": "fa924ecffd9021469e5b35695630217467a2dda9b203b39fbfc572fbca32126f",
+  "metrics_rows": 1311,
+  "analysis_version": "mechanism-development-v1",
+  "passed": true,
+  "gates": {
+    "finite_updates": true,
+    "actor_connected": true,
+    "critic_connected": true,
+    "finite_policy_entropy": true
+  },
+  "resources_consumed": {
+    "primitive_steps": 11080,
+    "decisions": 9858,
+    "updates": 428,
+    "wall_seconds": 151.11235389799913,
+    "cpu_core_hours": 0.04196971277777777,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "interpretation": "Development pilot only. Fixed final weights and greedy validation; no mechanism-test access, method removal, or confirmatory claim.",
+  "analysis": {
+    "training_steps": 10000,
+    "training_episodes": 853,
+    "validation": [
+      {
+        "physical_coverage": 0.3888888888888889,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.2222222222222222,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 2,
+        "pose_error_m": 0.21901108731169466,
+        "trajectory_ate_m": 0.19533706530447142,
+        "trajectory_rpe_m": 0.05257229218417675,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.268217936498232,
+        "collisions": 4,
+        "communication_bytes": 28489,
+        "messages": 70,
+        "coordination_event_counts": [
+          36,
+          0,
+          0,
+          0
+        ],
+        "coordination_reward": 0.0,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": -0.14001772291401537,
+        "macro_decisions": 34,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-000",
+        "action_counts_by_agent": [
+          [
+            34,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            34,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 33,
+          "2": 0,
+          "3": 1
+        },
+        "reward_component_totals": {
+          "coverage": 0.2777777777777779,
+          "information": 0.04272567867318905,
+          "travel": -0.032682179364982314,
+          "collision": -0.4,
+          "communication": -0.027839,
+          "coordination": 0.0
+        }
+      },
+      {
+        "physical_coverage": 0.4166666666666667,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.5555555555555556,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 5,
+        "pose_error_m": 0.17028092126800373,
+        "trajectory_ate_m": 0.1243727909460525,
+        "trajectory_rpe_m": 0.041042753247985606,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.1515471358522102,
+        "collisions": 0,
+        "communication_bytes": 35546,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          32,
+          0,
+          4
+        ],
+        "coordination_reward": 1.5999999999999999,
+        "discarded_sensor_events": 9,
+        "success": false,
+        "localization_failure": false,
+        "return": 2.424463418998393,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-001",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.8333333333333337,
+          "information": 0.057539557023582134,
+          "travel": -0.0315154713585221,
+          "collision": 0.0,
+          "communication": -0.034893999999999994,
+          "coordination": 1.5999999999999999
+        }
+      },
+      {
+        "physical_coverage": 0.4166666666666667,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.2222222222222222,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 2,
+        "pose_error_m": 0.3022648264094432,
+        "trajectory_ate_m": 0.231893317392943,
+        "trajectory_rpe_m": 0.058714484508738625,
+        "primitive_steps": 36,
+        "travel_distance_m": 4.796700310549598,
+        "collisions": 0,
+        "communication_bytes": 24333,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          36,
+          0,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 1.992059832189082,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-002",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.8333333333333337,
+          "information": 0.030563501961243578,
+          "travel": -0.04796700310549598,
+          "collision": 0.0,
+          "communication": -0.023870000000000002,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.4444444444444444,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 4,
+        "pose_error_m": 0.09983784985521117,
+        "trajectory_ate_m": 0.10217236653412956,
+        "trajectory_rpe_m": 0.046706369567833333,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.943029146830105,
+        "collisions": 0,
+        "communication_bytes": 41052,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          0,
+          36,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 39,
+        "success": false,
+        "localization_failure": false,
+        "return": 2.868288179999663,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-003",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 1.666666666666666,
+          "information": 0.08107780480129712,
+          "travel": -0.03943029146830107,
+          "collision": 0.0,
+          "communication": -0.040026,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.2222222222222222,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 2,
+        "pose_error_m": 0.1163361744865484,
+        "trajectory_ate_m": 0.12058257598082298,
+        "trajectory_rpe_m": 0.05312600275719112,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.847394503643982,
+        "collisions": 0,
+        "communication_bytes": 22612,
+        "messages": 74,
+        "coordination_event_counts": [
+          36,
+          0,
+          0,
+          0
+        ],
+        "coordination_reward": 0.0,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": -0.02544880849649059,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-004",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.0,
+          "information": 0.03498613653994924,
+          "travel": -0.03847394503643982,
+          "collision": 0.0,
+          "communication": -0.021961,
+          "coordination": 0.0
+        }
+      },
+      {
+        "physical_coverage": 0.4722222222222222,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.2222222222222222,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 2,
+        "pose_error_m": 0.2827205542183667,
+        "trajectory_ate_m": 0.1709625491536221,
+        "trajectory_rpe_m": 0.05732247547168875,
+        "primitive_steps": 36,
+        "travel_distance_m": 4.315522647061023,
+        "collisions": 0,
+        "communication_bytes": 26216,
+        "messages": 72,
+        "coordination_event_counts": [
+          0,
+          36,
+          0,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 2.2829563413684406,
+        "macro_decisions": 35,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-005",
+        "action_counts_by_agent": [
+          [
+            35,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            35,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 34,
+          "2": 1,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 1.1111111111111112,
+          "information": 0.040564456727939596,
+          "travel": -0.04315522647061023,
+          "collision": 0.0,
+          "communication": -0.025564000000000003,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.4166666666666667,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.4444444444444444,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 4,
+        "pose_error_m": 0.08018305352557745,
+        "trajectory_ate_m": 0.11040400788511534,
+        "trajectory_rpe_m": 0.04744737868052539,
+        "primitive_steps": 36,
+        "travel_distance_m": 4.048876549439094,
+        "collisions": 0,
+        "communication_bytes": 33340,
+        "messages": 72,
+        "coordination_event_counts": [
+          0,
+          36,
+          0,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 24,
+        "success": false,
+        "localization_failure": false,
+        "return": 2.020794853247415,
+        "macro_decisions": 35,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-006",
+        "action_counts_by_agent": [
+          [
+            35,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            35,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 34,
+          "2": 1,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.8333333333333337,
+          "information": 0.06045228540847175,
+          "travel": -0.040488765494390955,
+          "collision": 0.0,
+          "communication": -0.032501999999999996,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.4444444444444444,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 4,
+        "pose_error_m": 0.11411875288722087,
+        "trajectory_ate_m": 0.083099873848731,
+        "trajectory_rpe_m": 0.04083114743851676,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.5766397710636046,
+        "collisions": 0,
+        "communication_bytes": 41641,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          36,
+          0,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 4,
+        "success": false,
+        "localization_failure": false,
+        "return": 2.0427682830048837,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-007",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.8333333333333331,
+          "information": 0.08581834738218698,
+          "travel": -0.03576639771063605,
+          "collision": 0.0,
+          "communication": -0.04061699999999999,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.2222222222222222,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 2,
+        "pose_error_m": 0.1421742269284817,
+        "trajectory_ate_m": 0.13354898314919916,
+        "trajectory_rpe_m": 0.05794804801837761,
+        "primitive_steps": 36,
+        "travel_distance_m": 4.681896555158851,
+        "collisions": 0,
+        "communication_bytes": 26534,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          0,
+          36,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 37,
+        "success": false,
+        "localization_failure": false,
+        "return": 2.0018982843345343,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-008",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.8333333333333331,
+          "information": 0.04126691655278982,
+          "travel": -0.04681896555158851,
+          "collision": 0.0,
+          "communication": -0.025882999999999996,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.3611111111111111,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.1111111111111111,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 1,
+        "pose_error_m": 0.24033482400730555,
+        "trajectory_ate_m": 0.18285447425322,
+        "trajectory_rpe_m": 0.05777869395432178,
+        "primitive_steps": 36,
+        "travel_distance_m": 4.494589821531458,
+        "collisions": 0,
+        "communication_bytes": 19396,
+        "messages": 72,
+        "coordination_event_counts": [
+          36,
+          0,
+          0,
+          0
+        ],
+        "coordination_reward": 0.0,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 1.070054082497598,
+        "macro_decisions": 35,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-009",
+        "action_counts_by_agent": [
+          [
+            35,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            35,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 34,
+          "2": 1,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 1.1111111111111112,
+          "information": 0.022820869601801387,
+          "travel": -0.04494589821531457,
+          "collision": 0.0,
+          "communication": -0.018931999999999997,
+          "coordination": 0.0
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.4444444444444444,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 4,
+        "pose_error_m": 0.1669535446486478,
+        "trajectory_ate_m": 0.12828872728367186,
+        "trajectory_rpe_m": 0.04720969665945446,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.7790185082909886,
+        "collisions": 0,
+        "communication_bytes": 34771,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          34,
+          0,
+          2
+        ],
+        "coordination_reward": 1.400000000000001,
+        "discarded_sensor_events": 6,
+        "success": false,
+        "localization_failure": false,
+        "return": 1.6785878973477932,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-010",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.27777777777777735,
+          "information": 0.07253030465292631,
+          "travel": -0.0377901850829099,
+          "collision": 0.0,
+          "communication": -0.03393,
+          "coordination": 1.400000000000001
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.3333333333333333,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 3,
+        "pose_error_m": 0.11056857790960183,
+        "trajectory_ate_m": 0.09072184486498759,
+        "trajectory_rpe_m": 0.05008905165978665,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.8130710693863743,
+        "collisions": 0,
+        "communication_bytes": 35398,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          0,
+          36,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 2.302046403048032,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-011",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 1.1111111111111112,
+          "information": 0.0636270026307847,
+          "travel": -0.038130710693863736,
+          "collision": 0.0,
+          "communication": -0.034560999999999995,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.3888888888888889,
+        "estimated_coverage": 0.4722222222222222,
+        "fixed_landmark_accuracy": 0.3333333333333333,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 3,
+        "pose_error_m": 0.4464790521855429,
+        "trajectory_ate_m": 0.24560099871678373,
+        "trajectory_rpe_m": 0.051216420753262146,
+        "primitive_steps": 36,
+        "travel_distance_m": 2.9505522560308255,
+        "collisions": 10,
+        "communication_bytes": 35420,
+        "messages": 64,
+        "coordination_event_counts": [
+          0,
+          36,
+          0,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 1.299296808987101,
+        "macro_decisions": 31,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-012",
+        "action_counts_by_agent": [
+          [
+            31,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            31,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 28,
+          "2": 1,
+          "3": 2
+        },
+        "reward_component_totals": {
+          "coverage": 1.1111111111111112,
+          "information": 0.05227322043629849,
+          "travel": -0.029505522560308257,
+          "collision": -0.9999999999999999,
+          "communication": -0.034582,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.6666666666666666,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 6,
+        "pose_error_m": 0.0779774242487967,
+        "trajectory_ate_m": 0.1113551636903003,
+        "trajectory_rpe_m": 0.03587646745501897,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.3346837190266427,
+        "collisions": 0,
+        "communication_bytes": 56485,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          0,
+          0,
+          36
+        ],
+        "coordination_reward": 4.800000000000002,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 5.635619661349496,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-013",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.8333333333333331,
+          "information": 0.09071116520642934,
+          "travel": -0.03334683719026643,
+          "collision": 0.0,
+          "communication": -0.05507799999999999,
+          "coordination": 4.800000000000002
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.4444444444444444,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 4,
+        "pose_error_m": 0.05738414825633236,
+        "trajectory_ate_m": 0.100729448308471,
+        "trajectory_rpe_m": 0.046671325858678975,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.5470824962058805,
+        "collisions": 0,
+        "communication_bytes": 36600,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          0,
+          0,
+          36
+        ],
+        "coordination_reward": 4.800000000000002,
+        "discarded_sensor_events": 31,
+        "success": false,
+        "localization_failure": false,
+        "return": 4.799890961587044,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-014",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.0,
+          "information": 0.07112178654910288,
+          "travel": -0.0354708249620588,
+          "collision": 0.0,
+          "communication": -0.03576,
+          "coordination": 4.800000000000002
+        }
+      },
+      {
+        "physical_coverage": 0.4166666666666667,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.4444444444444444,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 4,
+        "pose_error_m": 0.2379719158238965,
+        "trajectory_ate_m": 0.1571624045024589,
+        "trajectory_rpe_m": 0.04596815007952322,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.4079802620569026,
+        "collisions": 0,
+        "communication_bytes": 36088,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          0,
+          36,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 20,
+        "success": false,
+        "localization_failure": false,
+        "return": 1.753388730468562,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-015",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.5555555555555558,
+          "information": 0.06734897753357606,
+          "travel": -0.03407980262056902,
+          "collision": 0.0,
+          "communication": -0.035436,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.3611111111111111,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.2222222222222222,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 2,
+        "pose_error_m": 0.28497517085672364,
+        "trajectory_ate_m": 0.20508594594664792,
+        "trajectory_rpe_m": 0.06267462412132777,
+        "primitive_steps": 36,
+        "travel_distance_m": 4.271209795975066,
+        "collisions": 2,
+        "communication_bytes": 27511,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          36,
+          0,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 37,
+        "success": false,
+        "localization_failure": false,
+        "return": 1.799250357999512,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-016",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.8333333333333331,
+          "information": 0.03549012262592973,
+          "travel": -0.04271209795975067,
+          "collision": -0.2,
+          "communication": -0.026861,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.3611111111111111,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.3333333333333333,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 3,
+        "pose_error_m": 0.1384314937869204,
+        "trajectory_ate_m": 0.12788385974574237,
+        "trajectory_rpe_m": 0.04433792003023835,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.8161503691657668,
+        "collisions": 0,
+        "communication_bytes": 34317,
+        "messages": 74,
+        "coordination_event_counts": [
+          36,
+          0,
+          0,
+          0
+        ],
+        "coordination_reward": 0.0,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 0.5487677449533684,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-017",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.5555555555555552,
+          "information": 0.06485369308947098,
+          "travel": -0.038161503691657675,
+          "collision": 0.0,
+          "communication": -0.03348000000000001,
+          "coordination": 0.0
+        }
+      },
+      {
+        "physical_coverage": 0.5,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.1111111111111111,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 1,
+        "pose_error_m": 0.3892068171998183,
+        "trajectory_ate_m": 0.2599263909857855,
+        "trajectory_rpe_m": 0.06040397735034759,
+        "primitive_steps": 36,
+        "travel_distance_m": 4.409072885766078,
+        "collisions": 0,
+        "communication_bytes": 21855,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          0,
+          35,
+          1
+        ],
+        "coordination_reward": 1.3000000000000003,
+        "discarded_sensor_events": 37,
+        "success": false,
+        "localization_failure": false,
+        "return": 3.485699144927984,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-018",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 2.2222222222222223,
+          "information": 0.028958651563422682,
+          "travel": -0.04409072885766077,
+          "collision": 0.0,
+          "communication": -0.021390999999999997,
+          "coordination": 1.3000000000000003
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.2222222222222222,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 2,
+        "pose_error_m": 0.2928388688914565,
+        "trajectory_ate_m": 0.14259042506468414,
+        "trajectory_rpe_m": 0.06224318619228669,
+        "primitive_steps": 36,
+        "travel_distance_m": 4.13720992823282,
+        "collisions": 3,
+        "communication_bytes": 20871,
+        "messages": 74,
+        "coordination_event_counts": [
+          31,
+          0,
+          5,
+          0
+        ],
+        "coordination_reward": 0.16666666666666666,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 0.6627871807105231,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-019",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.8333333333333331,
+          "information": 0.024568279992851317,
+          "travel": -0.04137209928232821,
+          "collision": -0.30000000000000004,
+          "communication": -0.020409,
+          "coordination": 0.16666666666666666
+        }
+      },
+      {
+        "physical_coverage": 0.4166666666666667,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.1111111111111111,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 1,
+        "pose_error_m": 0.6592205464022525,
+        "trajectory_ate_m": 0.37424983886941754,
+        "trajectory_rpe_m": 0.06765616209075527,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.653220305541702,
+        "collisions": 19,
+        "communication_bytes": 18991,
+        "messages": 58,
+        "coordination_event_counts": [
+          36,
+          0,
+          0,
+          0
+        ],
+        "coordination_reward": 0.0,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": -0.8262544061146275,
+        "macro_decisions": 28,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-020",
+        "action_counts_by_agent": [
+          [
+            28,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            28,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 24,
+          "2": 0,
+          "3": 4
+        },
+        "reward_component_totals": {
+          "coverage": 1.1111111111111112,
+          "information": 0.01769468582967874,
+          "travel": -0.03653220305541701,
+          "collision": -1.8999999999999997,
+          "communication": -0.018528000000000003,
+          "coordination": 0.0
+        }
+      },
+      {
+        "physical_coverage": 0.4166666666666667,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.2222222222222222,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 2,
+        "pose_error_m": 0.3537768322947301,
+        "trajectory_ate_m": 0.30879396685743404,
+        "trajectory_rpe_m": 0.05905218844744765,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.5258719143913115,
+        "collisions": 13,
+        "communication_bytes": 25248,
+        "messages": 68,
+        "coordination_event_counts": [
+          4,
+          0,
+          32,
+          0
+        ],
+        "coordination_reward": 1.0666666666666667,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 0.2736198257305158,
+        "macro_decisions": 33,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-021",
+        "action_counts_by_agent": [
+          [
+            33,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            33,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 31,
+          "2": 1,
+          "3": 1
+        },
+        "reward_component_totals": {
+          "coverage": 0.5555555555555558,
+          "information": 0.011628322652206282,
+          "travel": -0.035258719143913105,
+          "collision": -1.3,
+          "communication": -0.024971999999999994,
+          "coordination": 1.0666666666666667
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.3333333333333333,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 3,
+        "pose_error_m": 0.05745005745787821,
+        "trajectory_ate_m": 0.07717725906892625,
+        "trajectory_rpe_m": 0.04767738031872912,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.912167544482745,
+        "collisions": 0,
+        "communication_bytes": 35436,
+        "messages": 74,
+        "coordination_event_counts": [
+          36,
+          0,
+          0,
+          0
+        ],
+        "coordination_reward": 0.0,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": -0.008402678946051005,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-022",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.0,
+          "information": 0.06532099649877644,
+          "travel": -0.03912167544482743,
+          "collision": 0.0,
+          "communication": -0.034601999999999994,
+          "coordination": 0.0
+        }
+      },
+      {
+        "physical_coverage": 0.3055555555555556,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.4444444444444444,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 4,
+        "pose_error_m": 0.3045130557118228,
+        "trajectory_ate_m": 0.2393038782395509,
+        "trajectory_rpe_m": 0.050410949551530804,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.3890527918038935,
+        "collisions": 2,
+        "communication_bytes": 42433,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          36,
+          0,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 1.5275186792992441,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-023",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.5555555555555558,
+          "information": 0.04726265166172762,
+          "travel": -0.03389052791803893,
+          "collision": -0.2,
+          "communication": -0.041409,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.3333333333333333,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 3,
+        "pose_error_m": 0.23428642704332597,
+        "trajectory_ate_m": 0.17889307151715375,
+        "trajectory_rpe_m": 0.0427214583952773,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.3964413296074576,
+        "collisions": 0,
+        "communication_bytes": 37727,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          0,
+          36,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 1.4555371466395362,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-024",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.27777777777777735,
+          "information": 0.04861278215783329,
+          "travel": -0.03396441329607458,
+          "collision": 0.0,
+          "communication": -0.03688900000000001,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.3333333333333333,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 3,
+        "pose_error_m": 0.1987594395146998,
+        "trajectory_ate_m": 0.14285414251410444,
+        "trajectory_rpe_m": 0.047480174060079705,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.681100292815298,
+        "collisions": 0,
+        "communication_bytes": 33729,
+        "messages": 74,
+        "coordination_event_counts": [
+          36,
+          0,
+          0,
+          0
+        ],
+        "coordination_reward": 0.0,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 1.656776090816832,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-025",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 1.6666666666666665,
+          "information": 0.059998427078318345,
+          "travel": -0.036811002928152994,
+          "collision": 0.0,
+          "communication": -0.033077999999999996,
+          "coordination": 0.0
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.6666666666666666,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 6,
+        "pose_error_m": 0.061721276273238965,
+        "trajectory_ate_m": 0.06732541511474599,
+        "trajectory_rpe_m": 0.03816079615708738,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.379811275816966,
+        "collisions": 0,
+        "communication_bytes": 49766,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          0,
+          0,
+          36
+        ],
+        "coordination_reward": 4.800000000000002,
+        "discarded_sensor_events": 22,
+        "success": false,
+        "localization_failure": false,
+        "return": 5.6327005069465175,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-026",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.8333333333333331,
+          "information": 0.08190828637135326,
+          "travel": -0.03379811275816965,
+          "collision": 0.0,
+          "communication": -0.04874300000000001,
+          "coordination": 4.800000000000002
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.2222222222222222,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 2,
+        "pose_error_m": 0.3794094079993373,
+        "trajectory_ate_m": 0.22052622228378957,
+        "trajectory_rpe_m": 0.05731289317570348,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.6315973136807926,
+        "collisions": 7,
+        "communication_bytes": 22582,
+        "messages": 66,
+        "coordination_event_counts": [
+          0,
+          0,
+          36,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 2.139607809419995,
+        "macro_decisions": 32,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-027",
+        "action_counts_by_agent": [
+          [
+            32,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            32,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 29,
+          "2": 2,
+          "3": 1
+        },
+        "reward_component_totals": {
+          "coverage": 1.666666666666666,
+          "information": 0.031376115890137155,
+          "travel": -0.03631597313680792,
+          "collision": -0.7,
+          "communication": -0.022119000000000003,
+          "coordination": 1.2000000000000004
+        }
+      },
+      {
+        "physical_coverage": 0.4444444444444444,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.4444444444444444,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 4,
+        "pose_error_m": 0.11748611349798879,
+        "trajectory_ate_m": 0.08621461896259541,
+        "trajectory_rpe_m": 0.045487624695523685,
+        "primitive_steps": 36,
+        "travel_distance_m": 3.7433609351896195,
+        "collisions": 0,
+        "communication_bytes": 41614,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          4,
+          0,
+          32
+        ],
+        "coordination_reward": 4.400000000000001,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 5.2303777181466815,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-028",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.8333333333333331,
+          "information": 0.07506699416524322,
+          "travel": -0.03743360935189618,
+          "collision": 0.0,
+          "communication": -0.040589,
+          "coordination": 4.400000000000001
+        }
+      },
+      {
+        "physical_coverage": 0.4166666666666667,
+        "estimated_coverage": 0.4444444444444444,
+        "fixed_landmark_accuracy": 0.3333333333333333,
+        "fixed_landmark_count": 9,
+        "correct_landmark_count": 3,
+        "pose_error_m": 0.19042207480791215,
+        "trajectory_ate_m": 0.1891654333624375,
+        "trajectory_rpe_m": 0.05772294199542327,
+        "primitive_steps": 36,
+        "travel_distance_m": 4.403934095987295,
+        "collisions": 0,
+        "communication_bytes": 28711,
+        "messages": 74,
+        "coordination_event_counts": [
+          0,
+          0,
+          36,
+          0
+        ],
+        "coordination_reward": 1.2000000000000004,
+        "discarded_sensor_events": 0,
+        "success": false,
+        "localization_failure": false,
+        "return": 1.4409282359890978,
+        "macro_decisions": 36,
+        "external_collection_cutoff": false,
+        "scenario_id": "mechanism-validation-v1-029",
+        "action_counts_by_agent": [
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            36,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "macro_duration_counts": {
+          "1": 36,
+          "2": 0,
+          "3": 0
+        },
+        "reward_component_totals": {
+          "coverage": 0.2777777777777779,
+          "information": 0.03506279917119308,
+          "travel": -0.04403934095987296,
+          "collision": 0.0,
+          "communication": -0.027873,
+          "coordination": 1.2000000000000004
+        }
+      }
+    ],
+    "update_count": 428,
+    "mean_training_return": 6.469248305525671,
+    "fixed_return_normalization": {
+      "mean": 0,
+      "scale": 10
+    },
+    "checkpoint_selection": "final fixed-budget weights; no outcome selection",
+    "resume_boundary": "new episodes only, no exact mid-episode continuation claim",
+    "critic_method": "bilinear",
+    "critic_parameters": 125
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "analysis_version": "mechanism-tuning-selection-v1",
+  "rule": "Highest mean greedy validation return across two trained seeds; exact ties choose lower learning rate.",
+  "test_accessed": false,
+  "all_planned_runs_retained": true,
+  "run_records": [
+    {
+      "run_id": "12-tuning-bilinear_lr-001_seed-12001_attempt-01",
+      "method": "bilinear",
+      "learning_rate": 0.001,
+      "actor_seed": 12001,
+      "validation_episodes": 30,
+      "mean_validation_return": 5.431699925668997,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-bilinear_lr-001_seed-12002_attempt-01",
+      "method": "bilinear",
+      "learning_rate": 0.001,
+      "actor_seed": 12002,
+      "validation_episodes": 30,
+      "mean_validation_return": 5.660770922221897,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-bilinear_lr-003_seed-12001_attempt-01",
+      "method": "bilinear",
+      "learning_rate": 0.003,
+      "actor_seed": 12001,
+      "validation_episodes": 30,
+      "mean_validation_return": 6.695476704911391,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-bilinear_lr-003_seed-12002_attempt-01",
+      "method": "bilinear",
+      "learning_rate": 0.003,
+      "actor_seed": 12002,
+      "validation_episodes": 30,
+      "mean_validation_return": 6.132747738246162,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-central_classical_lr-001_seed-12001_attempt-01",
+      "method": "central_classical",
+      "learning_rate": 0.001,
+      "actor_seed": 12001,
+      "validation_episodes": 30,
+      "mean_validation_return": 6.695476704911391,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-central_classical_lr-001_seed-12002_attempt-01",
+      "method": "central_classical",
+      "learning_rate": 0.001,
+      "actor_seed": 12002,
+      "validation_episodes": 30,
+      "mean_validation_return": 6.52699269706047,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-central_classical_lr-003_seed-12001_attempt-01",
+      "method": "central_classical",
+      "learning_rate": 0.003,
+      "actor_seed": 12001,
+      "validation_episodes": 30,
+      "mean_validation_return": 1.9675186854512219,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-central_classical_lr-003_seed-12002_attempt-01",
+      "method": "central_classical",
+      "learning_rate": 0.003,
+      "actor_seed": 12002,
+      "validation_episodes": 30,
+      "mean_validation_return": 5.21631078110789,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-eqmarl_lr-001_seed-12001_attempt-01",
+      "method": "eqmarl",
+      "learning_rate": 0.001,
+      "actor_seed": 12001,
+      "validation_episodes": 30,
+      "mean_validation_return": 5.073068713397447,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-eqmarl_lr-001_seed-12002_attempt-01",
+      "method": "eqmarl",
+      "learning_rate": 0.001,
+      "actor_seed": 12002,
+      "validation_episodes": 30,
+      "mean_validation_return": 6.091558448912751,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-eqmarl_lr-003_seed-12001_attempt-01",
+      "method": "eqmarl",
+      "learning_rate": 0.003,
+      "actor_seed": 12001,
+      "validation_episodes": 30,
+      "mean_validation_return": 5.870439681606268,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-eqmarl_lr-003_seed-12002_attempt-01",
+      "method": "eqmarl",
+      "learning_rate": 0.003,
+      "actor_seed": 12002,
+      "validation_episodes": 30,
+      "mean_validation_return": 5.495629442933734,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-flexible_interaction_lr-001_seed-12001_attempt-01",
+      "method": "flexible_interaction",
+      "learning_rate": 0.001,
+      "actor_seed": 12001,
+      "validation_episodes": 30,
+      "mean_validation_return": 5.143369681496227,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-flexible_interaction_lr-001_seed-12002_attempt-01",
+      "method": "flexible_interaction",
+      "learning_rate": 0.001,
+      "actor_seed": 12002,
+      "validation_episodes": 30,
+      "mean_validation_return": 6.05307588977817,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-flexible_interaction_lr-003_seed-12001_attempt-01",
+      "method": "flexible_interaction",
+      "learning_rate": 0.003,
+      "actor_seed": 12001,
+      "validation_episodes": 30,
+      "mean_validation_return": 6.695476704911391,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-flexible_interaction_lr-003_seed-12002_attempt-01",
+      "method": "flexible_interaction",
+      "learning_rate": 0.003,
+      "actor_seed": 12002,
+      "validation_episodes": 30,
+      "mean_validation_return": 5.397402728915194,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-quantum_noent_lr-001_seed-12001_attempt-01",
+      "method": "quantum_noent",
+      "learning_rate": 0.001,
+      "actor_seed": 12001,
+      "validation_episodes": 30,
+      "mean_validation_return": 5.073068713397447,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-quantum_noent_lr-001_seed-12002_attempt-01",
+      "method": "quantum_noent",
+      "learning_rate": 0.001,
+      "actor_seed": 12002,
+      "validation_episodes": 30,
+      "mean_validation_return": 6.695476704911391,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-quantum_noent_lr-003_seed-12001_attempt-01",
+      "method": "quantum_noent",
+      "learning_rate": 0.003,
+      "actor_seed": 12001,
+      "validation_episodes": 30,
+      "mean_validation_return": 5.109588644768579,
+      "status": "completed"
+    },
+    {
+      "run_id": "12-tuning-quantum_noent_lr-003_seed-12002_attempt-01",
+      "method": "quantum_noent",
+      "learning_rate": 0.003,
+      "actor_seed": 12002,
+      "validation_episodes": 30,
+      "mean_validation_return": 5.188373873262808,
+      "status": "completed"
+    }
+  ],
+  "rate_table": [
+    {
+      "method": "bilinear",
+      "learning_rate": 0.001,
+      "seed_mean_validation_returns": [
+        {
+          "seed": 12001,
+          "mean_validation_return": 5.431699925668997
+        },
+        {
+          "seed": 12002,
+          "mean_validation_return": 5.660770922221897
+        }
+      ],
+      "selection_score": 5.546235423945447
+    },
+    {
+      "method": "bilinear",
+      "learning_rate": 0.003,
+      "seed_mean_validation_returns": [
+        {
+          "seed": 12001,
+          "mean_validation_return": 6.695476704911391
+        },
+        {
+          "seed": 12002,
+          "mean_validation_return": 6.132747738246162
+        }
+      ],
+      "selection_score": 6.414112221578776
+    },
+    {
+      "method": "central_classical",
+      "learning_rate": 0.001,
+      "seed_mean_validation_returns": [
+        {
+          "seed": 12001,
+          "mean_validation_return": 6.695476704911391
+        },
+        {
+          "seed": 12002,
+          "mean_validation_return": 6.52699269706047
+        }
+      ],
+      "selection_score": 6.61123470098593
+    },
+    {
+      "method": "central_classical",
+      "learning_rate": 0.003,
+      "seed_mean_validation_returns": [
+        {
+          "seed": 12001,
+          "mean_validation_return": 1.9675186854512219
+        },
+        {
+          "seed": 12002,
+          "mean_validation_return": 5.21631078110789
+        }
+      ],
+      "selection_score": 3.5919147332795562
+    },
+    {
+      "method": "eqmarl",
+      "learning_rate": 0.001,
+      "seed_mean_validation_returns": [
+        {
+          "seed": 12001,
+          "mean_validation_return": 5.073068713397447
+        },
+        {
+          "seed": 12002,
+          "mean_validation_return": 6.091558448912751
+        }
+      ],
+      "selection_score": 5.582313581155098
+    },
+    {
+      "method": "eqmarl",
+      "learning_rate": 0.003,
+      "seed_mean_validation_returns": [
+        {
+          "seed": 12001,
+          "mean_validation_return": 5.870439681606268
+        },
+        {
+          "seed": 12002,
+          "mean_validation_return": 5.495629442933734
+        }
+      ],
+      "selection_score": 5.6830345622700005
+    },
+    {
+      "method": "flexible_interaction",
+      "learning_rate": 0.001,
+      "seed_mean_validation_returns": [
+        {
+          "seed": 12001,
+          "mean_validation_return": 5.143369681496227
+        },
+        {
+          "seed": 12002,
+          "mean_validation_return": 6.05307588977817
+        }
+      ],
+      "selection_score": 5.598222785637199
+    },
+    {
+      "method": "flexible_interaction",
+      "learning_rate": 0.003,
+      "seed_mean_validation_returns": [
+        {
+          "seed": 12001,
+          "mean_validation_return": 6.695476704911391
+        },
+        {
+          "seed": 12002,
+          "mean_validation_return": 5.397402728915194
+        }
+      ],
+      "selection_score": 6.046439716913293
+    },
+    {
+      "method": "quantum_noent",
+      "learning_rate": 0.001,
+      "seed_mean_validation_returns": [
+        {
+          "seed": 12001,
+          "mean_validation_return": 5.073068713397447
+        },
+        {
+          "seed": 12002,
+          "mean_validation_return": 6.695476704911391
+        }
+      ],
+      "selection_score": 5.884272709154419
+    },
+    {
+      "method": "quantum_noent",
+      "learning_rate": 0.003,
+      "seed_mean_validation_returns": [
+        {
+          "seed": 12001,
+          "mean_validation_return": 5.109588644768579
+        },
+        {
+          "seed": 12002,
+          "mean_validation_return": 5.188373873262808
+        }
+      ],
+      "selection_score": 5.148981259015693
+    }
+  ],
+  "selected_learning_rates": {
+    "bilinear": 0.003,
+    "central_classical": 0.001,
+    "eqmarl": 0.003,
+    "flexible_interaction": 0.003,
+    "quantum_noent": 0.001
+  },
+  "flexible_width_selection": {
+    "rule": "Closest parameter count to central_classical before pilot outcomes",
+    "central_parameter_count": 249,
+    "grid": [
+      {
+        "hidden_width": 8,
+        "parameter_count": 154
+      },
+      {
+        "hidden_width": 16,
+        "parameter_count": 250
+      },
+      {
+        "hidden_width": 32,
+        "parameter_count": 442
+      }
+    ],
+    "selected_hidden_width": 16,
+    "selected_parameter_count": 250
+  }
+}
