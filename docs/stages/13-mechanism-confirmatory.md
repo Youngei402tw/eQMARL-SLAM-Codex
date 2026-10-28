@@ -38,4 +38,6 @@ The fixed analysis initially stopped before inference because it requested the s
 
 The matrix consumed 1,501,711 primitives, 1,242,090 agent decisions, 54,740 optimizer updates, 534,606 analytic circuit evaluations, zero shots, 27,929.729 experiment wall-seconds, and 7.757 CPU-core-hours. A reclaimed session stopped between runs after 114 bundles; the remaining six previously unstarted configs resumed from the same locked source. There was no partial run or retry.
 
-Stage gate: the numerical and actor-only evaluation gates passed, and all planned outcomes are explicit. Fresh remote publication verification remains pending.
+Fresh independent retrieval of results commit `33d108b578e6a87c5d890280039932a30f19f7e6` validated all 120 bundles and every resolved config, raw metric table, diagnostic, checkpoint, manifest, and inventory hash. The receipt is `docs/stages/13-publication.json`.
+
+Stage gate: completed null result. The numerical, actor-only evaluation, explicit-outcome, raw-traceability, budget, and fresh-publication requirements passed.

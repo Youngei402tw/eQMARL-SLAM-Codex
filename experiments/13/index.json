@@ -11,7 +11,9 @@
       "config": "configs/stage13/13-confirmatory-additive-central_classical_seed-13001_attempt-01.yaml",
       "config_sha256": "eaf138e55d920084da2042ba208ab9b2711cc3b60bd3e6eacf9b846b6e57b244",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-bilinear_seed-13001_attempt-01",
@@ -20,7 +22,9 @@
       "config": "configs/stage13/13-confirmatory-additive-bilinear_seed-13001_attempt-01.yaml",
       "config_sha256": "6f61b97198cd43bc466777ecfe05442dd592168c03e129721d0e862ef6f5b2ac",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-flexible_interaction_seed-13001_attempt-01",
@@ -29,7 +33,9 @@
       "config": "configs/stage13/13-confirmatory-additive-flexible_interaction_seed-13001_attempt-01.yaml",
       "config_sha256": "f113ad0cadc2a27acc5e82015945702f594d40bcf96963fe29d7cdae7cf16648",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-quantum_noent_seed-13001_attempt-01",
@@ -38,7 +44,9 @@
       "config": "configs/stage13/13-confirmatory-additive-quantum_noent_seed-13001_attempt-01.yaml",
       "config_sha256": "347543be0884518fc85e05583acccd503840141bbe383ee141c10aeee419e884",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-eqmarl_seed-13001_attempt-01",
@@ -47,7 +55,9 @@
       "config": "configs/stage13/13-confirmatory-additive-eqmarl_seed-13001_attempt-01.yaml",
       "config_sha256": "686f27b71400d9f2401a6a2823c088ab0fefd466a5d00fc1b36eb93897fc8bb9",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-central_classical_seed-13002_attempt-01",
@@ -56,7 +66,9 @@
       "config": "configs/stage13/13-confirmatory-additive-central_classical_seed-13002_attempt-01.yaml",
       "config_sha256": "6a9206008fdcde446a9888915186909b49592076f33a3d2349cbd42697889015",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-bilinear_seed-13002_attempt-01",
@@ -65,7 +77,9 @@
       "config": "configs/stage13/13-confirmatory-additive-bilinear_seed-13002_attempt-01.yaml",
       "config_sha256": "8181defebef3c7e080b595766b8348a8e242083c484518a83a531977d3eb2fa4",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-flexible_interaction_seed-13002_attempt-01",
@@ -74,7 +88,9 @@
       "config": "configs/stage13/13-confirmatory-additive-flexible_interaction_seed-13002_attempt-01.yaml",
       "config_sha256": "6933df6b8a3af97b11f5c057f5666a7c12ef0c9b3418e332b3a7331e7fcab8ec",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-quantum_noent_seed-13002_attempt-01",
@@ -83,7 +99,9 @@
       "config": "configs/stage13/13-confirmatory-additive-quantum_noent_seed-13002_attempt-01.yaml",
       "config_sha256": "3dc3f515218b0bbb06eb0cc766dbbb12faeaa9d7b4bb60944753dff77170d6e2",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-eqmarl_seed-13002_attempt-01",
@@ -92,7 +110,9 @@
       "config": "configs/stage13/13-confirmatory-additive-eqmarl_seed-13002_attempt-01.yaml",
       "config_sha256": "e2d04e40c72fc52ebe9c3fdb5e514cd65dfd39d7d8e9529de6c0a4e9cd120906",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-central_classical_seed-13003_attempt-01",
@@ -101,7 +121,9 @@
       "config": "configs/stage13/13-confirmatory-additive-central_classical_seed-13003_attempt-01.yaml",
       "config_sha256": "e325db2512f6f4b58f0d146e682bf2e8135f7a913332830e71b730690f5ce017",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-bilinear_seed-13003_attempt-01",
@@ -110,7 +132,9 @@
       "config": "configs/stage13/13-confirmatory-additive-bilinear_seed-13003_attempt-01.yaml",
       "config_sha256": "87a23929bdec302f3916c44b6f411943b03bee5e9986c1c7507de9de4d80cd32",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-flexible_interaction_seed-13003_attempt-01",
@@ -119,7 +143,9 @@
       "config": "configs/stage13/13-confirmatory-additive-flexible_interaction_seed-13003_attempt-01.yaml",
       "config_sha256": "b7b1993b1d0208b005d9f66114b7e8704426c0a9237d7c610531724229a178bd",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-quantum_noent_seed-13003_attempt-01",
@@ -128,7 +154,9 @@
       "config": "configs/stage13/13-confirmatory-additive-quantum_noent_seed-13003_attempt-01.yaml",
       "config_sha256": "95d9af244a82cc6d760dd9106627c5d85ca9d2a9526752d819397a3f0bc81027",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-eqmarl_seed-13003_attempt-01",
@@ -137,7 +165,9 @@
       "config": "configs/stage13/13-confirmatory-additive-eqmarl_seed-13003_attempt-01.yaml",
       "config_sha256": "008107e07bac8489098fe9e334ead2958ffaf228ad84a59e9f605fa58bf46437",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-central_classical_seed-13004_attempt-01",
@@ -146,7 +176,9 @@
       "config": "configs/stage13/13-confirmatory-additive-central_classical_seed-13004_attempt-01.yaml",
       "config_sha256": "a32fcfa85ddf9b012653c833349aea3d048f668e3898403ffaab4cfbd57da3d8",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-bilinear_seed-13004_attempt-01",
@@ -155,7 +187,9 @@
       "config": "configs/stage13/13-confirmatory-additive-bilinear_seed-13004_attempt-01.yaml",
       "config_sha256": "df7c7fc64631d16835a44482401ed3833e82d7caf683a9b6e42b0fb95fc90ec9",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-flexible_interaction_seed-13004_attempt-01",
@@ -164,7 +198,9 @@
       "config": "configs/stage13/13-confirmatory-additive-flexible_interaction_seed-13004_attempt-01.yaml",
       "config_sha256": "d715cd5e24780bc03adb163467635f916726a968dacaf3f61a0d5cd29f299490",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-quantum_noent_seed-13004_attempt-01",
@@ -173,7 +209,9 @@
       "config": "configs/stage13/13-confirmatory-additive-quantum_noent_seed-13004_attempt-01.yaml",
       "config_sha256": "460954bccba08d56d770740536e3d7f534eb3851876c4db33c29735ae6d8276c",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-eqmarl_seed-13004_attempt-01",
@@ -182,7 +220,9 @@
       "config": "configs/stage13/13-confirmatory-additive-eqmarl_seed-13004_attempt-01.yaml",
       "config_sha256": "eaa851e22db8d7e6bf4ae4f53d3d623544cd8bca327c171c118cfe54e9d2bfe9",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-central_classical_seed-13005_attempt-01",
@@ -191,7 +231,9 @@
       "config": "configs/stage13/13-confirmatory-additive-central_classical_seed-13005_attempt-01.yaml",
       "config_sha256": "71ca1248471a709ee833ea64e52d237c38b06029a1091dc8794f286d8178e104",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-bilinear_seed-13005_attempt-01",
@@ -200,7 +242,9 @@
       "config": "configs/stage13/13-confirmatory-additive-bilinear_seed-13005_attempt-01.yaml",
       "config_sha256": "3ba5685204cb203e443608c936983f259ccea8503cf52088640a6e8d96318034",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-flexible_interaction_seed-13005_attempt-01",
@@ -209,7 +253,9 @@
       "config": "configs/stage13/13-confirmatory-additive-flexible_interaction_seed-13005_attempt-01.yaml",
       "config_sha256": "33750cb21c9918285687bf945c8ea6304fc137c17a36a42e3b2e994b3abc801d",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-quantum_noent_seed-13005_attempt-01",
@@ -218,7 +264,9 @@
       "config": "configs/stage13/13-confirmatory-additive-quantum_noent_seed-13005_attempt-01.yaml",
       "config_sha256": "6317a30aec9136fc538602f47edfadf6fef1d740aa1f9a6ce77c76086d384642",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-eqmarl_seed-13005_attempt-01",
@@ -227,7 +275,9 @@
       "config": "configs/stage13/13-confirmatory-additive-eqmarl_seed-13005_attempt-01.yaml",
       "config_sha256": "3040f60547fbad03c6d384c626d1402f003e53565aa7e41154bbfbd9d89e322c",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-central_classical_seed-13006_attempt-01",
@@ -236,7 +286,9 @@
       "config": "configs/stage13/13-confirmatory-additive-central_classical_seed-13006_attempt-01.yaml",
       "config_sha256": "6ebf88d2fb66189b9f7591f3b9f8bbf33fec16a459b1447dad87d26cab8b7dcc",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-bilinear_seed-13006_attempt-01",
@@ -245,7 +297,9 @@
       "config": "configs/stage13/13-confirmatory-additive-bilinear_seed-13006_attempt-01.yaml",
       "config_sha256": "1830bfe1c8e4ffabb1706a6510d9b286a046e67e491535da434bb606499ab4a6",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-flexible_interaction_seed-13006_attempt-01",
@@ -254,7 +308,9 @@
       "config": "configs/stage13/13-confirmatory-additive-flexible_interaction_seed-13006_attempt-01.yaml",
       "config_sha256": "2a239e69f1972a2f021f72ebc73588cd7ade7dc054caeed8d9f4eeb0bcef0a39",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-quantum_noent_seed-13006_attempt-01",
@@ -263,7 +319,9 @@
       "config": "configs/stage13/13-confirmatory-additive-quantum_noent_seed-13006_attempt-01.yaml",
       "config_sha256": "607c68810c4db9c0f02b0334f3576ba6936e752de1196ab20c55f6c8b20da2ec",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-eqmarl_seed-13006_attempt-01",
@@ -272,7 +330,9 @@
       "config": "configs/stage13/13-confirmatory-additive-eqmarl_seed-13006_attempt-01.yaml",
       "config_sha256": "85689f351b5ccae41d5d887e220729ab9238c1d043703fc1d751c44b996f0a28",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-central_classical_seed-13007_attempt-01",
@@ -281,7 +341,9 @@
       "config": "configs/stage13/13-confirmatory-additive-central_classical_seed-13007_attempt-01.yaml",
       "config_sha256": "88ce447799be2280ecfb455afb100bdd1e1a8814bde8d636527e83339e2d8b1e",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-bilinear_seed-13007_attempt-01",
@@ -290,7 +352,9 @@
       "config": "configs/stage13/13-confirmatory-additive-bilinear_seed-13007_attempt-01.yaml",
       "config_sha256": "58eb09231b91dda54d196ab858cba8f6f04f3599547a586596637104766a09a1",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-flexible_interaction_seed-13007_attempt-01",
@@ -299,7 +363,9 @@
       "config": "configs/stage13/13-confirmatory-additive-flexible_interaction_seed-13007_attempt-01.yaml",
       "config_sha256": "d445c94cb0871800560fd6ce9c2f3218d36cff2439fd633a9c993c69616737bd",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-quantum_noent_seed-13007_attempt-01",
@@ -308,7 +374,9 @@
       "config": "configs/stage13/13-confirmatory-additive-quantum_noent_seed-13007_attempt-01.yaml",
       "config_sha256": "9dbf383c9bf67c89933d7ec9d3165906de3be579c1bed30b090e7805548c13f3",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-eqmarl_seed-13007_attempt-01",
@@ -317,7 +385,9 @@
       "config": "configs/stage13/13-confirmatory-additive-eqmarl_seed-13007_attempt-01.yaml",
       "config_sha256": "1c8d7ca0cb00353802aa5e1849241bfd9ebe50a48d41d8257bc3dbe155833866",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-central_classical_seed-13008_attempt-01",
@@ -326,7 +396,9 @@
       "config": "configs/stage13/13-confirmatory-additive-central_classical_seed-13008_attempt-01.yaml",
       "config_sha256": "fc429f61b380f71641178084c5502de6630c1a98cfb92904e7c082ab01b293bf",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-bilinear_seed-13008_attempt-01",
@@ -335,7 +407,9 @@
       "config": "configs/stage13/13-confirmatory-additive-bilinear_seed-13008_attempt-01.yaml",
       "config_sha256": "bc46a6bf75c9c869e07f747f6b31e0ce0b9202224c3aa9cc65156948b7f93425",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-flexible_interaction_seed-13008_attempt-01",
@@ -344,7 +418,9 @@
       "config": "configs/stage13/13-confirmatory-additive-flexible_interaction_seed-13008_attempt-01.yaml",
       "config_sha256": "5d43373b9f605469958e8d552bf775aa25204114c0b1309ba7faaec6f7d8a24f",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-quantum_noent_seed-13008_attempt-01",
@@ -353,7 +429,9 @@
       "config": "configs/stage13/13-confirmatory-additive-quantum_noent_seed-13008_attempt-01.yaml",
       "config_sha256": "b069b2b7f762b165e7dab8055af2d55a82e19b72134bac1394762a1b7e579600",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-additive-eqmarl_seed-13008_attempt-01",
@@ -362,7 +440,9 @@
       "config": "configs/stage13/13-confirmatory-additive-eqmarl_seed-13008_attempt-01.yaml",
       "config_sha256": "3506471048a2415430b4173fced6a1dd068f757f63830ddf5b5dc7781915b6c0",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-central_classical_seed-13001_attempt-01",
@@ -371,7 +451,9 @@
       "config": "configs/stage13/13-confirmatory-low-central_classical_seed-13001_attempt-01.yaml",
       "config_sha256": "231ee61d6507de13ca2d0485a7ff2c3764f37ed888727e78f81bfb9855b7123b",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-bilinear_seed-13001_attempt-01",
@@ -380,7 +462,9 @@
       "config": "configs/stage13/13-confirmatory-low-bilinear_seed-13001_attempt-01.yaml",
       "config_sha256": "03843371fb52cec004c51a9f3f2a82c086741caa0bab57a33de4ec1b29cb76f4",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-flexible_interaction_seed-13001_attempt-01",
@@ -389,7 +473,9 @@
       "config": "configs/stage13/13-confirmatory-low-flexible_interaction_seed-13001_attempt-01.yaml",
       "config_sha256": "fda0d67ee74109ba4e0ed6887ce07985fa92906798ad71ffda1b791d48a5f653",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-quantum_noent_seed-13001_attempt-01",
@@ -398,7 +484,9 @@
       "config": "configs/stage13/13-confirmatory-low-quantum_noent_seed-13001_attempt-01.yaml",
       "config_sha256": "582a3233b0197357955d7d12654270bcb06ba74056f0db5a0e12ffb23d5e5990",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-eqmarl_seed-13001_attempt-01",
@@ -407,7 +495,9 @@
       "config": "configs/stage13/13-confirmatory-low-eqmarl_seed-13001_attempt-01.yaml",
       "config_sha256": "dd5ecdf7d67a2bd6c17d75e6401850042eb6bdcac4b95189a823b1a4047136b0",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-central_classical_seed-13002_attempt-01",
@@ -416,7 +506,9 @@
       "config": "configs/stage13/13-confirmatory-low-central_classical_seed-13002_attempt-01.yaml",
       "config_sha256": "0a1aaef26d1093ead4e96a55af8b81a4a5fbcded37f9ea357d9e7bad9ba30879",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-bilinear_seed-13002_attempt-01",
@@ -425,7 +517,9 @@
       "config": "configs/stage13/13-confirmatory-low-bilinear_seed-13002_attempt-01.yaml",
       "config_sha256": "bcafddd43482cf4e7c6ee02accb17dbe521b7cf5ac72c4f93770cf9f827d4f49",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-flexible_interaction_seed-13002_attempt-01",
@@ -434,7 +528,9 @@
       "config": "configs/stage13/13-confirmatory-low-flexible_interaction_seed-13002_attempt-01.yaml",
       "config_sha256": "32239f9f752f41375ba969f7d71f666357da3673bf70dc56d4ee3629e4ed91e4",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-quantum_noent_seed-13002_attempt-01",
@@ -443,7 +539,9 @@
       "config": "configs/stage13/13-confirmatory-low-quantum_noent_seed-13002_attempt-01.yaml",
       "config_sha256": "bfc3ff2551ba6fb614f237b8474b0449203d254dca4f447674d04356680344fe",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-eqmarl_seed-13002_attempt-01",
@@ -452,7 +550,9 @@
       "config": "configs/stage13/13-confirmatory-low-eqmarl_seed-13002_attempt-01.yaml",
       "config_sha256": "73d95d31dfa6b7724342b3e3c0efe5bd56baf50a9cf6843104019e854cbe4720",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-central_classical_seed-13003_attempt-01",
@@ -461,7 +561,9 @@
       "config": "configs/stage13/13-confirmatory-low-central_classical_seed-13003_attempt-01.yaml",
       "config_sha256": "6d331ad9749598924a200ac5733cacd0023e12b1f3c09d1f25eb9429ddc81ec9",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-bilinear_seed-13003_attempt-01",
@@ -470,7 +572,9 @@
       "config": "configs/stage13/13-confirmatory-low-bilinear_seed-13003_attempt-01.yaml",
       "config_sha256": "633459784665b403b8f1ffee4361639fad7c659fdad232c333b00a7dbbdd9bde",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-flexible_interaction_seed-13003_attempt-01",
@@ -479,7 +583,9 @@
       "config": "configs/stage13/13-confirmatory-low-flexible_interaction_seed-13003_attempt-01.yaml",
       "config_sha256": "ebbe6c6964b1edba958d12d8c44496e8a741ec5c88a91f22a9f628387566dd31",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-quantum_noent_seed-13003_attempt-01",
@@ -488,7 +594,9 @@
       "config": "configs/stage13/13-confirmatory-low-quantum_noent_seed-13003_attempt-01.yaml",
       "config_sha256": "39c49861de882a32a780b2c4205f7564691d48659d15a56561576c0b48a58b83",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-eqmarl_seed-13003_attempt-01",
@@ -497,7 +605,9 @@
       "config": "configs/stage13/13-confirmatory-low-eqmarl_seed-13003_attempt-01.yaml",
       "config_sha256": "faa18b19c7626aca4d182125e0b83b292e3754e90f98c3d2000f50a2f78ad454",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-central_classical_seed-13004_attempt-01",
@@ -506,7 +616,9 @@
       "config": "configs/stage13/13-confirmatory-low-central_classical_seed-13004_attempt-01.yaml",
       "config_sha256": "dc0817713d62e3fb38385025a3147bc489d925381b39b867b8284aae0c1fcbf8",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-bilinear_seed-13004_attempt-01",
@@ -515,7 +627,9 @@
       "config": "configs/stage13/13-confirmatory-low-bilinear_seed-13004_attempt-01.yaml",
       "config_sha256": "14ae9d865183db003e02587d6702bd22ab45ef561d72df8a5b28cba0b418619d",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-flexible_interaction_seed-13004_attempt-01",
@@ -524,7 +638,9 @@
       "config": "configs/stage13/13-confirmatory-low-flexible_interaction_seed-13004_attempt-01.yaml",
       "config_sha256": "0461ee2dc441de110c45c706d7a5a4caa8ea4717c170e0e44d2dbc32bedf0491",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-quantum_noent_seed-13004_attempt-01",
@@ -533,7 +649,9 @@
       "config": "configs/stage13/13-confirmatory-low-quantum_noent_seed-13004_attempt-01.yaml",
       "config_sha256": "b156c4b87b1f688236e00e3739c1961630237c2673f720f9b2ee189e2c462719",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-eqmarl_seed-13004_attempt-01",
@@ -542,7 +660,9 @@
       "config": "configs/stage13/13-confirmatory-low-eqmarl_seed-13004_attempt-01.yaml",
       "config_sha256": "c8ae9d862f51fae3c2ba7febdb014233fcf0c015613e642f0ec211a7e07fd83a",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-central_classical_seed-13005_attempt-01",
@@ -551,7 +671,9 @@
       "config": "configs/stage13/13-confirmatory-low-central_classical_seed-13005_attempt-01.yaml",
       "config_sha256": "625f766b1f07e0edf21ab5aa66e44fdf0edb239b3b809eaa044694c71c58afb4",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-bilinear_seed-13005_attempt-01",
@@ -560,7 +682,9 @@
       "config": "configs/stage13/13-confirmatory-low-bilinear_seed-13005_attempt-01.yaml",
       "config_sha256": "fd677eb51a577bbfad83794f2559750f6962bbec8bbb538f95cf81de85974c29",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-flexible_interaction_seed-13005_attempt-01",
@@ -569,7 +693,9 @@
       "config": "configs/stage13/13-confirmatory-low-flexible_interaction_seed-13005_attempt-01.yaml",
       "config_sha256": "6316ae01629aa91e7973ca9f715b71031805d49eec990f3d70c50b6d12672e1b",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-quantum_noent_seed-13005_attempt-01",
@@ -578,7 +704,9 @@
       "config": "configs/stage13/13-confirmatory-low-quantum_noent_seed-13005_attempt-01.yaml",
       "config_sha256": "3b82f70a907b988a3de450623b5a433a52aee983d2dbe572d7b775b4fef29be7",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-eqmarl_seed-13005_attempt-01",
@@ -587,7 +715,9 @@
       "config": "configs/stage13/13-confirmatory-low-eqmarl_seed-13005_attempt-01.yaml",
       "config_sha256": "0cdeed59192f5c637f402172be122e272e6ad5ea70b67b2ab85d92b85d7a66d8",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-central_classical_seed-13006_attempt-01",
@@ -596,7 +726,9 @@
       "config": "configs/stage13/13-confirmatory-low-central_classical_seed-13006_attempt-01.yaml",
       "config_sha256": "21334b4ff25c8066882346957ec95772faddf7ee6ebf28acbf36a9dfd8836a7b",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-bilinear_seed-13006_attempt-01",
@@ -605,7 +737,9 @@
       "config": "configs/stage13/13-confirmatory-low-bilinear_seed-13006_attempt-01.yaml",
       "config_sha256": "62114883e8b333688c397a63d08f61279f057e172513a46d718dc4869b71cffa",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-flexible_interaction_seed-13006_attempt-01",
@@ -614,7 +748,9 @@
       "config": "configs/stage13/13-confirmatory-low-flexible_interaction_seed-13006_attempt-01.yaml",
       "config_sha256": "f12467bc89b6ec4bcb15d8b856a98bed643c74e9cc864d8d5f11e8f2fe8776f2",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-quantum_noent_seed-13006_attempt-01",
@@ -623,7 +759,9 @@
       "config": "configs/stage13/13-confirmatory-low-quantum_noent_seed-13006_attempt-01.yaml",
       "config_sha256": "90b644c9a6ba5c8b1b5e984cb24bf395f5e9138f9a420338c524fbc06cd051b8",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-eqmarl_seed-13006_attempt-01",
@@ -632,7 +770,9 @@
       "config": "configs/stage13/13-confirmatory-low-eqmarl_seed-13006_attempt-01.yaml",
       "config_sha256": "5409800b3f1567a1fe06a122c314b7afb7741fa43edc2eb4ec748ea94cb5e77c",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-central_classical_seed-13007_attempt-01",
@@ -641,7 +781,9 @@
       "config": "configs/stage13/13-confirmatory-low-central_classical_seed-13007_attempt-01.yaml",
       "config_sha256": "cbdeb7cbcf68e2b4d82208606ecbc79f116fe5df0db21117359c33758769f9e5",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-bilinear_seed-13007_attempt-01",
@@ -650,7 +792,9 @@
       "config": "configs/stage13/13-confirmatory-low-bilinear_seed-13007_attempt-01.yaml",
       "config_sha256": "1ca55f05173c5f567cf829c7a2ad698faba6e0384c7ab199b487ce08b7f1857f",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-flexible_interaction_seed-13007_attempt-01",
@@ -659,7 +803,9 @@
       "config": "configs/stage13/13-confirmatory-low-flexible_interaction_seed-13007_attempt-01.yaml",
       "config_sha256": "251e49513fcb4affccc5afb13d2cf548d5f54278482d62ae4689e3c480486a82",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-quantum_noent_seed-13007_attempt-01",
@@ -668,7 +814,9 @@
       "config": "configs/stage13/13-confirmatory-low-quantum_noent_seed-13007_attempt-01.yaml",
       "config_sha256": "52e55bebd71893c44ace7750b5fd60e728f5d82080b04a59dbe1ae0ec34c373a",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-eqmarl_seed-13007_attempt-01",
@@ -677,7 +825,9 @@
       "config": "configs/stage13/13-confirmatory-low-eqmarl_seed-13007_attempt-01.yaml",
       "config_sha256": "50e51fc55e7d4044743c65c51a6a78fa3f2ee0553b6a6b9d575ab619da30c9a4",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-central_classical_seed-13008_attempt-01",
@@ -686,7 +836,9 @@
       "config": "configs/stage13/13-confirmatory-low-central_classical_seed-13008_attempt-01.yaml",
       "config_sha256": "2475ce98619e3d686ca868d9ea4b56d2b199afad06b7be519f8357fb7ae5dc97",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-bilinear_seed-13008_attempt-01",
@@ -695,7 +847,9 @@
       "config": "configs/stage13/13-confirmatory-low-bilinear_seed-13008_attempt-01.yaml",
       "config_sha256": "8b08d39265701f07a9e7854a14c73683634e469318a8a3b4e69cabd2e7d79337",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-flexible_interaction_seed-13008_attempt-01",
@@ -704,7 +858,9 @@
       "config": "configs/stage13/13-confirmatory-low-flexible_interaction_seed-13008_attempt-01.yaml",
       "config_sha256": "d0eee3a86c17277033f984890f38f7fd5555f3c64e9691f84eb0e0698b431952",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-quantum_noent_seed-13008_attempt-01",
@@ -713,7 +869,9 @@
       "config": "configs/stage13/13-confirmatory-low-quantum_noent_seed-13008_attempt-01.yaml",
       "config_sha256": "91f5ac35f178f61ae46c816556a3b3acc6466ee59f356714c6615229aa8a10b7",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-low-eqmarl_seed-13008_attempt-01",
@@ -722,7 +880,9 @@
       "config": "configs/stage13/13-confirmatory-low-eqmarl_seed-13008_attempt-01.yaml",
       "config_sha256": "52a9a441ad5f8c568735231defb1c424b723dc656431c5d7fe850a25dadf7d2d",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-central_classical_seed-13001_attempt-01",
@@ -731,7 +891,9 @@
       "config": "configs/stage13/13-confirmatory-high-central_classical_seed-13001_attempt-01.yaml",
       "config_sha256": "c28352ffc136e7e2aea482df21f4362da828950446b55826dee066569d46cfb6",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-bilinear_seed-13001_attempt-01",
@@ -740,7 +902,9 @@
       "config": "configs/stage13/13-confirmatory-high-bilinear_seed-13001_attempt-01.yaml",
       "config_sha256": "9c1d6ea43c7822d44768469093915d8d46a7ca45c63811976082f66016972798",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-flexible_interaction_seed-13001_attempt-01",
@@ -749,7 +913,9 @@
       "config": "configs/stage13/13-confirmatory-high-flexible_interaction_seed-13001_attempt-01.yaml",
       "config_sha256": "28dfffbc28e15126453367abc5850626623b70a163274b5589983a0621511958",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-quantum_noent_seed-13001_attempt-01",
@@ -758,7 +924,9 @@
       "config": "configs/stage13/13-confirmatory-high-quantum_noent_seed-13001_attempt-01.yaml",
       "config_sha256": "5a3ba784d58de847f83974ff1ced0d478dc63d71d6570683e58ed1acc73a6265",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-eqmarl_seed-13001_attempt-01",
@@ -767,7 +935,9 @@
       "config": "configs/stage13/13-confirmatory-high-eqmarl_seed-13001_attempt-01.yaml",
       "config_sha256": "823ce28f65f3915dda4586aa08c8c19a354e3d07863b91192b0d930bed23edcd",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-central_classical_seed-13002_attempt-01",
@@ -776,7 +946,9 @@
       "config": "configs/stage13/13-confirmatory-high-central_classical_seed-13002_attempt-01.yaml",
       "config_sha256": "1c4612ed46ab633fe5fb3e5b94b2cf748111c38e3ab9dea06ed9022799949e09",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-bilinear_seed-13002_attempt-01",
@@ -785,7 +957,9 @@
       "config": "configs/stage13/13-confirmatory-high-bilinear_seed-13002_attempt-01.yaml",
       "config_sha256": "1e88b62dc3087a62bc84e21baf24bfe1e43efc3a57727c798c3ba54d276eb3c9",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-flexible_interaction_seed-13002_attempt-01",
@@ -794,7 +968,9 @@
       "config": "configs/stage13/13-confirmatory-high-flexible_interaction_seed-13002_attempt-01.yaml",
       "config_sha256": "eb1e7cfe886a91163b845ec2a1a41768c6559f3d83433935f3b6f087caa0a0ac",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-quantum_noent_seed-13002_attempt-01",
@@ -803,7 +979,9 @@
       "config": "configs/stage13/13-confirmatory-high-quantum_noent_seed-13002_attempt-01.yaml",
       "config_sha256": "f9238898f647bb3d7144017276385289800d6fa6217133f60002b5acd517fe6b",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-eqmarl_seed-13002_attempt-01",
@@ -812,7 +990,9 @@
       "config": "configs/stage13/13-confirmatory-high-eqmarl_seed-13002_attempt-01.yaml",
       "config_sha256": "5acc519026fdc87bdddee4f06a9e3631dbfa0a7526363eac7efd644d23d3e9f4",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-central_classical_seed-13003_attempt-01",
@@ -821,7 +1001,9 @@
       "config": "configs/stage13/13-confirmatory-high-central_classical_seed-13003_attempt-01.yaml",
       "config_sha256": "dcb64b5d0023897aa5a44fd4ac439d9dc096ce811b05c20bb15a8cc8a5f2ad0e",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-bilinear_seed-13003_attempt-01",
@@ -830,7 +1012,9 @@
       "config": "configs/stage13/13-confirmatory-high-bilinear_seed-13003_attempt-01.yaml",
       "config_sha256": "7921ca9ac78daa700ddb5d594e30c80066f43d772db0c9bce0520648436883f3",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-flexible_interaction_seed-13003_attempt-01",
@@ -839,7 +1023,9 @@
       "config": "configs/stage13/13-confirmatory-high-flexible_interaction_seed-13003_attempt-01.yaml",
       "config_sha256": "9bfe23cde243abbafac85d81383c29e39800437ce6d523c59a860df935525ccc",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-quantum_noent_seed-13003_attempt-01",
@@ -848,7 +1034,9 @@
       "config": "configs/stage13/13-confirmatory-high-quantum_noent_seed-13003_attempt-01.yaml",
       "config_sha256": "a33a2a55d782819330824526351dde645efcf67a027cec0f21f1e1ba5788e17c",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-eqmarl_seed-13003_attempt-01",
@@ -857,7 +1045,9 @@
       "config": "configs/stage13/13-confirmatory-high-eqmarl_seed-13003_attempt-01.yaml",
       "config_sha256": "6cc29b5084956ec0356c6b181c25f622dd072ad99b3a6325d4e79539b4972c76",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-central_classical_seed-13004_attempt-01",
@@ -866,7 +1056,9 @@
       "config": "configs/stage13/13-confirmatory-high-central_classical_seed-13004_attempt-01.yaml",
       "config_sha256": "f840deff992b10e60584578a88d8b3659a889d7bd866f0879e8c11538136b5cb",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-bilinear_seed-13004_attempt-01",
@@ -875,7 +1067,9 @@
       "config": "configs/stage13/13-confirmatory-high-bilinear_seed-13004_attempt-01.yaml",
       "config_sha256": "7c7bc464c5bc7ae0d155a8312e7169ffde22ba94ce627e66f60d017095e9556f",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-flexible_interaction_seed-13004_attempt-01",
@@ -884,7 +1078,9 @@
       "config": "configs/stage13/13-confirmatory-high-flexible_interaction_seed-13004_attempt-01.yaml",
       "config_sha256": "33d02292c0ae94d9b30ff8315d5543a50fea2a647a3efa6c86b11bebb48ffe18",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-quantum_noent_seed-13004_attempt-01",
@@ -893,7 +1089,9 @@
       "config": "configs/stage13/13-confirmatory-high-quantum_noent_seed-13004_attempt-01.yaml",
       "config_sha256": "04c5841343de16fc505986a92818b55bcb262ca02286756da08f166f98d741d7",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-eqmarl_seed-13004_attempt-01",
@@ -902,7 +1100,9 @@
       "config": "configs/stage13/13-confirmatory-high-eqmarl_seed-13004_attempt-01.yaml",
       "config_sha256": "4d11c2eeb8aa66a2eb0095f83164042c776f65086d61d2c217bfa7c8a7764edb",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-central_classical_seed-13005_attempt-01",
@@ -911,7 +1111,9 @@
       "config": "configs/stage13/13-confirmatory-high-central_classical_seed-13005_attempt-01.yaml",
       "config_sha256": "a1487128657b852d753c3f76c0d5a821fac29cb64814e54c1b82013bef766604",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-bilinear_seed-13005_attempt-01",
@@ -920,7 +1122,9 @@
       "config": "configs/stage13/13-confirmatory-high-bilinear_seed-13005_attempt-01.yaml",
       "config_sha256": "3623e25202f43cbc1ad8304f0f43684e155abe5b4199b7b3749e8e4643d19ca6",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-flexible_interaction_seed-13005_attempt-01",
@@ -929,7 +1133,9 @@
       "config": "configs/stage13/13-confirmatory-high-flexible_interaction_seed-13005_attempt-01.yaml",
       "config_sha256": "d6c71b5bb947e8c03c82bfdfe1f9fff66e97eed6f00d9ed334153243f7b9be38",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-quantum_noent_seed-13005_attempt-01",
@@ -938,7 +1144,9 @@
       "config": "configs/stage13/13-confirmatory-high-quantum_noent_seed-13005_attempt-01.yaml",
       "config_sha256": "36609bcac95623002d6caee529c8bacd901ebef679d813a035e3a249fc2011e9",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-eqmarl_seed-13005_attempt-01",
@@ -947,7 +1155,9 @@
       "config": "configs/stage13/13-confirmatory-high-eqmarl_seed-13005_attempt-01.yaml",
       "config_sha256": "ccb4654151745b226af3b82f79d9f0cb3720ce5ea272a4a6f0c864f4f3096949",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-central_classical_seed-13006_attempt-01",
@@ -956,7 +1166,9 @@
       "config": "configs/stage13/13-confirmatory-high-central_classical_seed-13006_attempt-01.yaml",
       "config_sha256": "30305cee031f3105a4d1e0095dd3a2109f2af21263baee8daaba2bafc0c61fc8",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-bilinear_seed-13006_attempt-01",
@@ -965,7 +1177,9 @@
       "config": "configs/stage13/13-confirmatory-high-bilinear_seed-13006_attempt-01.yaml",
       "config_sha256": "8a299e1d964a909ecf46fe172f17689f78d19c4348d80cbb857ea907a73ce7cf",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-flexible_interaction_seed-13006_attempt-01",
@@ -974,7 +1188,9 @@
       "config": "configs/stage13/13-confirmatory-high-flexible_interaction_seed-13006_attempt-01.yaml",
       "config_sha256": "2b1d67cea5133a986679e3fc37525ab1d2b4b11613b06615ae2c55e2daa0d7ab",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-quantum_noent_seed-13006_attempt-01",
@@ -983,7 +1199,9 @@
       "config": "configs/stage13/13-confirmatory-high-quantum_noent_seed-13006_attempt-01.yaml",
       "config_sha256": "099975ecbedfe66d5f18ff614645e3dde639107903521380a837f0c6001db6d9",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-eqmarl_seed-13006_attempt-01",
@@ -992,7 +1210,9 @@
       "config": "configs/stage13/13-confirmatory-high-eqmarl_seed-13006_attempt-01.yaml",
       "config_sha256": "3e0b6c118a28197a48a3780d7a5ba5e9965f7e777754b75160ba6ca60bc18154",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-central_classical_seed-13007_attempt-01",
@@ -1001,7 +1221,9 @@
       "config": "configs/stage13/13-confirmatory-high-central_classical_seed-13007_attempt-01.yaml",
       "config_sha256": "69dc806fc3a271fe804d23117cb72295e785009595089108205efc6b08b1c9b6",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-bilinear_seed-13007_attempt-01",
@@ -1010,7 +1232,9 @@
       "config": "configs/stage13/13-confirmatory-high-bilinear_seed-13007_attempt-01.yaml",
       "config_sha256": "d6db7e9de2359d7125af7931cb9813a22dc6006706d62aa9e8ad8a18b2f8fa23",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-flexible_interaction_seed-13007_attempt-01",
@@ -1019,7 +1243,9 @@
       "config": "configs/stage13/13-confirmatory-high-flexible_interaction_seed-13007_attempt-01.yaml",
       "config_sha256": "d69464bdbd3434ec02214679894cb76d4596d52b43481f699b2b96b4dda475f4",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-quantum_noent_seed-13007_attempt-01",
@@ -1028,7 +1254,9 @@
       "config": "configs/stage13/13-confirmatory-high-quantum_noent_seed-13007_attempt-01.yaml",
       "config_sha256": "c18b4489aaabf824dbb8008aa536e39e7bffe22b154bf30c0e765777fb8f7381",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-eqmarl_seed-13007_attempt-01",
@@ -1037,7 +1265,9 @@
       "config": "configs/stage13/13-confirmatory-high-eqmarl_seed-13007_attempt-01.yaml",
       "config_sha256": "6d68376c5343f3b0937f5766b46ffdbab9272f107257e1ad407d7b38dc7c54bf",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-central_classical_seed-13008_attempt-01",
@@ -1046,7 +1276,9 @@
       "config": "configs/stage13/13-confirmatory-high-central_classical_seed-13008_attempt-01.yaml",
       "config_sha256": "9e91b6f7fc37b69a54871ed0c7c1925f84b30f811e9ee4033fca5265d7f69968",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-bilinear_seed-13008_attempt-01",
@@ -1055,7 +1287,9 @@
       "config": "configs/stage13/13-confirmatory-high-bilinear_seed-13008_attempt-01.yaml",
       "config_sha256": "8752ce412c2964b3c5399cba8f7f34c459af97857272aacceeb672e5144bad45",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-flexible_interaction_seed-13008_attempt-01",
@@ -1064,7 +1298,9 @@
       "config": "configs/stage13/13-confirmatory-high-flexible_interaction_seed-13008_attempt-01.yaml",
       "config_sha256": "b40f28a36324e5fd8f70e6bba67ba6c46ef2a1364859987e4c9066faeafaf17e",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-quantum_noent_seed-13008_attempt-01",
@@ -1073,7 +1309,9 @@
       "config": "configs/stage13/13-confirmatory-high-quantum_noent_seed-13008_attempt-01.yaml",
       "config_sha256": "26931b5e8940de1ae690772312e2989a155cdec8cbe961301c46ee92d0a7e2b1",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     },
     {
       "run_id": "13-confirmatory-high-eqmarl_seed-13008_attempt-01",
@@ -1082,7 +1320,9 @@
       "config": "configs/stage13/13-confirmatory-high-eqmarl_seed-13008_attempt-01.yaml",
       "config_sha256": "b9fc3a56a7a36a5f2c4b4ba3454e808505e61d7394616fd9d9d4548f233cc18c",
       "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "33d108b578e6a87c5d890280039932a30f19f7e6",
+      "publication": "verified"
     }
   ]
 }

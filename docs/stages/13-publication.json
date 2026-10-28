@@ -1,0 +1,968 @@
+{
+  "stage": "13",
+  "verified_utc": "2026-10-28T08:42:01.605567+00:00",
+  "verified_remote_head": "33d108b578e6a87c5d890280039932a30f19f7e6",
+  "mechanism": "Fresh independent Git retrieval; every run manifest, resolved config, raw metric, diagnostic and inventoried checkpoint hash/size validated",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-bilinear_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1534,
+      "metrics_sha256": "3301d06b37ce9d0d873c556b2e4720b33dfd6433aa99716949f5645c88a094c6"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-bilinear_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1874,
+      "metrics_sha256": "a43d31769d036f3bb6b1cb0124a3acf42abe2614833feeb19d188ff4f9eb6604"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-bilinear_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1522,
+      "metrics_sha256": "e2efa19d82eed88a407a95a81b348feaf30f6f4e2e04e886e46ffa7fdcb56978"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-bilinear_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1611,
+      "metrics_sha256": "e57997ca6ea5ebe1b1716c50d37415dac047398a74855b9998e59bab2be63b61"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-bilinear_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1690,
+      "metrics_sha256": "f02f8c64bc63f3ac811f264592be2518e4cca68b586305272ec03e1e5b5887d1"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-bilinear_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1400,
+      "metrics_sha256": "caa79d9457bb85ecc13f835fc23b363349b801bc83f8e796239d9ff0db372e34"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-bilinear_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1611,
+      "metrics_sha256": "ab87a91c646378ad1f92faf9b2eb597121db419bfefd3308ab70c335622e0add"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-bilinear_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1513,
+      "metrics_sha256": "80b53430a0ca3804f797564c92ef414ae4cb6f3bb2b13b93dc0ff9ca3117f2a5"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-central_classical_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1617,
+      "metrics_sha256": "0aab472bb261bcd69e4f7bc61c6040ba13cce859f51437710a9adb44d5f2e2a3"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-central_classical_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1515,
+      "metrics_sha256": "69ae5016fba6209352c2f1666d1d490c03d60e3223b351e9fc23e441eb3b3da2"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-central_classical_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1424,
+      "metrics_sha256": "4068b312bf6c9df72caa5ec9e4e722cf1bd789b7b65e219b676fff425b05eddc"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-central_classical_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1664,
+      "metrics_sha256": "b7863418470829631e961e0ba9fbfcad1c4c374ad9f9c293c4646f3b4fb01266"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-central_classical_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1471,
+      "metrics_sha256": "02b1b2e3e4f0f2b92232aa050243eb50a0c0d249e6beb586b55f63e7fbd3b450"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-central_classical_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1658,
+      "metrics_sha256": "d77379632678d0195da257a3c837bafdb07669f0064e3f3c2ed7cc0881ba4857"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-central_classical_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1568,
+      "metrics_sha256": "7b518b2953aebfdb3c281c6ee521693aacb19c8ddff1385fb670d24fbd4760a5"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-central_classical_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1696,
+      "metrics_sha256": "02e52053ef8ec3f30664ea213120f62d6dcbe3879019705745f75f53a7ea25c0"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-eqmarl_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1719,
+      "metrics_sha256": "104330cb4f7804eac3c334e0f1a3536598ff4270e8ea73ee3e880f8c81a4c433"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-eqmarl_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1885,
+      "metrics_sha256": "1dc443f3fe5ee33f3c95339f6416c32f5f97235f100b01ec19d74a927a40184f"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-eqmarl_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1387,
+      "metrics_sha256": "2e117e01a4cf06d88e84554859c1e12aa9943973c92dad9b4b04c3e0acb0975f"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-eqmarl_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1303,
+      "metrics_sha256": "b218aeed924bdb945e940918701efbee62798cfd2a60a2e303b1dc4e9cd89f91"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-eqmarl_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1909,
+      "metrics_sha256": "0a6fbab555410a61fb18f22f2dcbf8bc396f5f2887f9d1334d5cfc022ac7e6f5"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-eqmarl_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1424,
+      "metrics_sha256": "a6da630774262c49cb83511839c827d68fc4e5a851120f3c6001e1724705f82b"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-eqmarl_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1262,
+      "metrics_sha256": "6bc47b8d0f34183470f76d4dd3320ebb70d84e3240509855b1fd1d3595859dc5"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-eqmarl_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1647,
+      "metrics_sha256": "ba21fedfc3e9ac3cc071adf9735c906e35617a22e9f56bf6b5599151366dd92b"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-flexible_interaction_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1797,
+      "metrics_sha256": "4bf80768632f592df1d0a5e9fe1703283481691fa6295010ec802a88b0dd0ece"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-flexible_interaction_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1754,
+      "metrics_sha256": "ba9f37150b2d9deb2cb1c5ea51d860803d56d787f686ab3b3a05167b999514e5"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-flexible_interaction_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1393,
+      "metrics_sha256": "2139e0aec449b9b60f332f51df4621e73e2ed476101e2ebcb2cf66736be3e0b3"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-flexible_interaction_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1575,
+      "metrics_sha256": "3b665afa48438ba47842c10043ba7b279191ac4709f5816899e0f44719b72a06"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-flexible_interaction_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1413,
+      "metrics_sha256": "e6902212a67c2f5e84287eb88363a599b45e3e0a997f4bd24c43dc686147c78c"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-flexible_interaction_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1683,
+      "metrics_sha256": "d5ef35ed44cd8a3a476d4831290864a172f5c790b073343b5c66550b098ecc18"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-flexible_interaction_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1838,
+      "metrics_sha256": "c0f39412af02e55326f9e67251c65ebff3d7abb35550489edaecbe19a2c4b915"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-flexible_interaction_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1942,
+      "metrics_sha256": "b106a7bb3a02477aac1c822dd32b0e2e59bf08047282f6d87d75dfaf5bc6f594"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-quantum_noent_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 2145,
+      "metrics_sha256": "b0d830e2115223250a6d113770853ee725e843a5cdf6d81d84906126587e16de"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-quantum_noent_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1423,
+      "metrics_sha256": "2ccda1c556344da6f8ff781e6d9e2db8dbbe74f68318d8b0eda5490fcec0c814"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-quantum_noent_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 910,
+      "metrics_sha256": "2c3243439df26b27fdac8d73a15d1075dd841e521916b5e26164da0e9ec27a0f"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-quantum_noent_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1405,
+      "metrics_sha256": "cf7bcf52b092d1b82cfbbddcbcdd3990c33df4754c2775c2bc8845dc9cae4e6f"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-quantum_noent_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1696,
+      "metrics_sha256": "bda914e9acb3b953ffe342c6fb09e4bfb01d3dff20435cdccad66a5907044e95"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-quantum_noent_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1714,
+      "metrics_sha256": "0b9fb7d27890c43991f33d4045fbefb8bed6f7032a67f470162c1836503e6f0d"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-quantum_noent_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1405,
+      "metrics_sha256": "be75497266f38d9ce716816a10fa67356db6d65aabb1b061eb25ef90309cb791"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-additive-quantum_noent_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1525,
+      "metrics_sha256": "61e8bc3a69e1aa872ad1fce6079cec25c4c7f04df0e4b564bffc81909cb6c428"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-bilinear_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1868,
+      "metrics_sha256": "0ed6ce8613e6794c0f56764b03dc4b51369ce1ae482e650a97d443e58750c3dd"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-bilinear_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1172,
+      "metrics_sha256": "dfdcfa7a75069c49a358e1b3ed434d97bbdfd43a4a5f42aad756c49564545fd8"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-bilinear_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1155,
+      "metrics_sha256": "06d3e85a4b1e5bf317d1b165595d26750a312ee30b910063ba85b3664b76a9a4"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-bilinear_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1328,
+      "metrics_sha256": "8d37b5abf612b762c737e40c34fd5a5518443da92e50a73acddb9e1bf250312e"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-bilinear_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1315,
+      "metrics_sha256": "adaf795a23191fab56519b7c405df10bf1071a8f983f2411229dbb2da11a5205"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-bilinear_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1473,
+      "metrics_sha256": "ec9f11b0750ddc2ed25429f774c0f0252078fb9ae1feafd108f8f5090e99575d"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-bilinear_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1837,
+      "metrics_sha256": "d383de9e68b8b50827240cf56db97e1572687e197f8ba360f566ba06cc68831c"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-bilinear_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1435,
+      "metrics_sha256": "465b11895eaecda4646cd9a889059f5afcf4da18e6c42cca4f11dde0d259abf4"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-central_classical_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1564,
+      "metrics_sha256": "c9f33c78173ef82f969a4501bdae40cf9d0963fd2d846c717ffb38fdf55d0fb3"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-central_classical_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1315,
+      "metrics_sha256": "b8b071cf9a7f7d8c3bc7ef06fc3aca72a871625a9fc864fbfe6bb1669e8a0d8d"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-central_classical_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1275,
+      "metrics_sha256": "757f7221df4ae322797ae3f7054d472f88866c9241e4349971b78ffb928e937a"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-central_classical_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1492,
+      "metrics_sha256": "0d7d83e38e92a00cde528ce299cd200e56ca16dbbdad6e811624c7fca1f10d4e"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-central_classical_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1459,
+      "metrics_sha256": "939668edf3208a3a9670ee5134106a4baee9a100cb7ffaf676ba215f77ae1c36"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-central_classical_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1483,
+      "metrics_sha256": "801df5f77ae2c6a6e1cd2e6ea5475b83927657808a548fc14abaf0eecbb7024c"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-central_classical_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1466,
+      "metrics_sha256": "3b66bf20b0f2da29931d8590b00ad68076410433ce205ece70ae29a192678a1c"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-central_classical_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1491,
+      "metrics_sha256": "f521857922315fcc67a5c2ab64b7ac746c3679d8abdc2ea97bae5455c0a6c86c"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-eqmarl_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1424,
+      "metrics_sha256": "fc1963c7ae7da1936cccee631409fe923b2ac110d1a551467dd55d024155c80e"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-eqmarl_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1024,
+      "metrics_sha256": "176c6221d850b977441f22834e57c87c53ccd6802eb38ad37ed7eacc97c8e1e6"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-eqmarl_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1054,
+      "metrics_sha256": "ff12d2cdcf5810b620e42ec3c95292f8d54fccb88ba0aaa2dbaf953270bd6baa"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-eqmarl_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 985,
+      "metrics_sha256": "6201fc265f3038bc6d0909be6613ca122a3675f651759988f02e436e64ad5793"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-eqmarl_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 2204,
+      "metrics_sha256": "07ab01c0c60c2a82c9238cbfa1530765c11d6a9b68e79b488883d81c9fe5d788"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-eqmarl_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1143,
+      "metrics_sha256": "d36e827a66752775ea722234f3e0dd83224fee4d3e6e9a7117ecd023f257d028"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-eqmarl_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1401,
+      "metrics_sha256": "04423bcf7fef44f959a73067993a52c2091bfdf9fe343d895b36d15e844ddcc2"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-eqmarl_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1219,
+      "metrics_sha256": "d6e99294968f1202bca980f83d9be523aeb4582b84ed2fad44b174d40738b045"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-flexible_interaction_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1449,
+      "metrics_sha256": "d42cf7a8dfd3ad8ddedacc24d8339f5522868e492304180c1e3e9d39a4636663"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-flexible_interaction_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1629,
+      "metrics_sha256": "6d87f46da0d7b5f3d043b0631a6b600e1d002bcf22fad0133949fb07e43a2352"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-flexible_interaction_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1186,
+      "metrics_sha256": "ff82f03e3dacc340411f4dfb4fbebd5093b066ef8f634cd99db55c337a31cd96"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-flexible_interaction_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1258,
+      "metrics_sha256": "a804cc405008f0cd56a746bf61892000a5468bfa289bba12bb48e29f72d2da76"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-flexible_interaction_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1419,
+      "metrics_sha256": "4af97e217673fa0a4d1c4c6fd27cd5d1065c98b915ec5dc053fce99eb7dae179"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-flexible_interaction_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 976,
+      "metrics_sha256": "7a3fd3e1cf93c8340ef6b298699bea1b3e9a93506f2189864262a7d44b61601d"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-flexible_interaction_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1246,
+      "metrics_sha256": "01cec7ba6d55a0b7f477edb7c79fd4f84e7ad29840c3c41da00d21afd456118c"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-flexible_interaction_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1107,
+      "metrics_sha256": "544578e81958e3ada1ac048c006528c6b47a77239be384707d0ff923948b7caa"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-quantum_noent_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 2173,
+      "metrics_sha256": "fbb5cdd964a657185b0ac13580b7311ba2b5f0e44b42093c0a08657ae515c717"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-quantum_noent_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1262,
+      "metrics_sha256": "9027f78a5d45b424d3c55f26b284d691045d711d3f1df0b860f27789db7db820"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-quantum_noent_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 817,
+      "metrics_sha256": "ffb8154ace819d9b218a04e17e357c2feac514a853366d61d95c849790f46265"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-quantum_noent_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1099,
+      "metrics_sha256": "dff5140969c7f9c0a4d2441009caba084a51857606c7e51f5393ce80dfa776db"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-quantum_noent_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1597,
+      "metrics_sha256": "344824443bb6a27ed1886d9023173985f82d11eda9810a86ed308d9515c656b5"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-quantum_noent_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1658,
+      "metrics_sha256": "36b9bc1e3d2689d05dd545f6700dcfc573cf55aa3addf05fac8509c5459a934d"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-quantum_noent_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1429,
+      "metrics_sha256": "b0c888b3a1eaeed753e432488f677db07ae8c0e9c1ad9ecf96d7738f0fc9ee94"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-high-quantum_noent_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1389,
+      "metrics_sha256": "fcf3f24b76a1fdb62ad1550ca6a1869d4e4b38f02bec157ed224cc6c9c17c22d"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-bilinear_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1294,
+      "metrics_sha256": "2f20f47558a721af6be3aa75ad966716fcdf87ebf25bfb1dda93aef1149e01da"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-bilinear_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1831,
+      "metrics_sha256": "7fc01a622eb910b154f0eb548aaec2312879d20beea5dadf9c0cf4eaf56a5ea9"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-bilinear_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1255,
+      "metrics_sha256": "125b940c210701077971939ecbeec3b988d4d79c3bfc761de22a76ee985fbe67"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-bilinear_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1599,
+      "metrics_sha256": "c2401fbba4f08ac228975807c3f911b6c2eaeb4b70ee06f5f50130823044daed"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-bilinear_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1777,
+      "metrics_sha256": "a7ac38a01bb1e0b963f70c3eaedd54aeeba5dde09d2a0b4abe7ee8404d6bc76b"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-bilinear_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1461,
+      "metrics_sha256": "51467212b405098e4f77671f5cc652c5b0dda1e705b15e7d8b5f9dec8981a1ca"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-bilinear_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1682,
+      "metrics_sha256": "c629b57316b2aaa48f71307f180b598bb7df2625b405fcbc042efe85dfe449a0"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-bilinear_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1538,
+      "metrics_sha256": "f37ee31452127d107a9f9bc76e0381b92ed087800e314640b084ea7cc8818f3a"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-central_classical_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1600,
+      "metrics_sha256": "17eb382d7948d06bc47d5d71efcc1ced0fd1fffbebce570468f3fa5f2a37bde6"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-central_classical_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1448,
+      "metrics_sha256": "4794fed9f1d922267f0952c01740bedbc065df07366da070951704b17d9c3d5f"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-central_classical_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1377,
+      "metrics_sha256": "a7cc0eebe92b390a83ba7d377322a839d4a1cc358a63d728ba71f52578c65d38"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-central_classical_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1545,
+      "metrics_sha256": "0f58821b8eadc29c466d41a6050fb0a77310e74e582e3c6d15f474ca0b5ea32b"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-central_classical_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1431,
+      "metrics_sha256": "1a58a6ff7b2e4eaa0e569310c2de5d51780561a1e6dd2bf9689ed72a3e505491"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-central_classical_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1675,
+      "metrics_sha256": "4e7c4987d5bb0b2f09a4e1a18c64274504952a06d7ac6ceeb98cb021197b807a"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-central_classical_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1567,
+      "metrics_sha256": "018bb0a23148deb8a351191652ddb2839111272c1a15149c5529eb40cca2110c"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-central_classical_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1537,
+      "metrics_sha256": "57f0fad62fb34288bc5f2a6a4e328753a53e5b8ffa517d928627b2265c43e020"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-eqmarl_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1630,
+      "metrics_sha256": "9d5f98f0100de87eee889f9e6f5b11f7397ed5c4a31fde820c6d21a12b7216df"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-eqmarl_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1773,
+      "metrics_sha256": "0f64d08f04d1894bcd009f51d60059f801dfeabe0b60dc2eb86f6984080a417f"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-eqmarl_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1196,
+      "metrics_sha256": "6eb5dbff42178ee93fb79b15862176526e883daa7315bfe058660f583eed102f"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-eqmarl_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1198,
+      "metrics_sha256": "d66a6a7c05f978107f93c95fcf672f8e650ef63fa7e511fcaf837d91b697c4b5"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-eqmarl_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1791,
+      "metrics_sha256": "83c2c74d2a354ec7b1d9ac178dc13f586a15b869d4dd6c0a1a3083b766a79591"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-eqmarl_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1543,
+      "metrics_sha256": "b9aebbea31b25d1caf27808c6cd40f0f5c167044422accf965b95aa5f56278e3"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-eqmarl_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1294,
+      "metrics_sha256": "f37c7ae0a317ca7b37abeafe43dc2d3cb9ccbd55f54865fb59aaf6d124fae712"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-eqmarl_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1360,
+      "metrics_sha256": "12acf0a77bdfda6cd5848f37fc863b95ca56b4dacb518cbb5e28083fd50edf98"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-flexible_interaction_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1688,
+      "metrics_sha256": "9a1992c28198672469df470be51db35044edb955d38e36c3a0f53d62d5a24d67"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-flexible_interaction_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1708,
+      "metrics_sha256": "791d0c77a62e8aa3ee010d7294dd06e6d4bc725c6eacb52322cc078cec6de1a7"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-flexible_interaction_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1346,
+      "metrics_sha256": "d0bd451d0187d94632e594d6c66b0f46d1e7a3c0e5537e128bbcd8e2c156ff56"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-flexible_interaction_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1450,
+      "metrics_sha256": "ebf137a362008b494d5fda1c23cd81564579605ddfb46f7d1d0c36583b174db7"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-flexible_interaction_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1377,
+      "metrics_sha256": "94334e84d3828685150bdc50aba08f9e36cf219c9e611defeae800f545e12779"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-flexible_interaction_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1460,
+      "metrics_sha256": "d189a30b9b60295609b581053fb38e545d10cd37a4788f18d5a8f5a46291c82c"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-flexible_interaction_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1784,
+      "metrics_sha256": "204b9b3fbba417aaa7fb0e87194097bf7402c05e8ab64b15b5d99bf657ba021b"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-flexible_interaction_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1323,
+      "metrics_sha256": "fb81af4efb4b409d6389173940f86ce1259c529119e035a224b7d1258f388fd6"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-quantum_noent_seed-13001_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 2169,
+      "metrics_sha256": "3ff8dbf13de560209881b2670af365877069ac423a3cacf5a1fb031d3e1313fd"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-quantum_noent_seed-13002_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1390,
+      "metrics_sha256": "3f79e94ef775aad05e69f62dcd17570e104f698b3d9b00094d04fb815ff73566"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-quantum_noent_seed-13003_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 909,
+      "metrics_sha256": "7974b1171f2464d15105eb25257166d576538f4999987e5afd8e09ace48e4561"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-quantum_noent_seed-13004_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1365,
+      "metrics_sha256": "1759d1272056edc2ce55062d316da5c66625f3ddff119811eab87cfbda896a90"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-quantum_noent_seed-13005_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1723,
+      "metrics_sha256": "064cfbb5cb586232318ffa822a9a97a66a0a1c2452cae8d1e4e08282a441f894"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-quantum_noent_seed-13006_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1801,
+      "metrics_sha256": "62875032a35e27157cb51a85ba2c03a84d72ac45e9365c1df29388c670188e6b"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-quantum_noent_seed-13007_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1459,
+      "metrics_sha256": "1ed97a6eb9c1c99ceda453e674967cb41be4695a40efac78b2e9873b621eac16"
+    },
+    {
+      "valid": true,
+      "run_id": "13-confirmatory-low-quantum_noent_seed-13008_attempt-01",
+      "status": "completed",
+      "verified_files": 8,
+      "metrics_rows": 1477,
+      "metrics_sha256": "5bff70d9bb039269b6e04c2fea3305e3134bacc1e339241e9ab488c3b0214b6f"
+    }
+  ]
+}
