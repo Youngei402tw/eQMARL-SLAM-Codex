@@ -1,0 +1,638 @@
+{
+  "stage": "13",
+  "protocol_id": "mechanism-confirmatory-v1",
+  "dependency_completion_commit": "d733d2b99296e27c7678c6cbbbfd8f03848b1d34",
+  "model": {
+    "actor": "shared Linear27to16,Tanh,GRUCell16,Linear5; separate agent memory",
+    "encoder": "shared trainable Linear27to2 critic encoder",
+    "critic": "eqmarl",
+    "parameter_counts": {
+      "actor": 2165,
+      "critic": 86
+    },
+    "optimizer": {
+      "type": "Adam",
+      "learning_rate": 0.003,
+      "ppo_epochs": 2,
+      "clip": 0.2,
+      "entropy": 0.01
+    }
+  },
+  "quantum": {
+    "device": "default.qubit",
+    "shots": null,
+    "dtype": "float64/complex128",
+    "diff_method": "backprop",
+    "wires": 4,
+    "layers": 1,
+    "observable": "ZZZZ",
+    "physical_hardware": false,
+    "intervention": "Bell input preparation only for eqmarl"
+  },
+  "task": {
+    "protocol": "belief-controller-mechanism-v1",
+    "horizon": 36,
+    "macro_max_steps": 3,
+    "speed": 0.45,
+    "goal_tolerance": 0.18,
+    "sensor_range": 1.25,
+    "landmark_count": 9,
+    "gamma": 0.99,
+    "coverage_threshold": 0.85,
+    "map_accuracy_threshold": 0.7,
+    "landmark_error_threshold": 0.35,
+    "pose_error_threshold": 0.25,
+    "coverage_weight": 10.0,
+    "information_weight": 0.001,
+    "travel_weight": 0.01,
+    "collision_weight": 0.1,
+    "byte_weight": 1e-06,
+    "prior_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "motion_std": [
+      0.015,
+      0.015,
+      0.01
+    ],
+    "odometry_sigmas": [
+      0.05,
+      0.05,
+      0.02
+    ],
+    "observation_sigmas": [
+      0.02,
+      0.1
+    ],
+    "sensor_min_range": 0.25,
+    "revisit_standoff": 0.5,
+    "coordination_weight": 0.05,
+    "group_cue_weight": 0.25,
+    "complementarity_alpha": 0.5
+  },
+  "run_id": "13-confirmatory-low-eqmarl_seed-13005_attempt-01",
+  "experiment": "confirmatory-training",
+  "method": "eqmarl",
+  "hypothesis": "The eQMARL-minus-no-entanglement coverage effect increases from additive to high complementarity under the locked paired design.",
+  "profile": "confirmatory",
+  "wall_seconds": 7200,
+  "max_primitive_steps": 15000,
+  "max_cpu_threads": 1,
+  "artifact_output_root": "/workspace/experiment-artifacts",
+  "actor_seed": 13005,
+  "critic_seed": 14005,
+  "action_seed": 15005,
+  "actor_hidden": 16,
+  "learning_rate": 0.003,
+  "training_steps": 10000,
+  "training_wall_seconds": 6600,
+  "episodes_per_update": 4,
+  "ppo_epochs": 2,
+  "ppo_clip": 0.2,
+  "entropy_coefficient": 0.01,
+  "training_scenarios": [
+    {
+      "scenario_id": "mechanism-train-v1-000",
+      "map_seed": 200000,
+      "noise_seed": 201000
+    },
+    {
+      "scenario_id": "mechanism-train-v1-001",
+      "map_seed": 200001,
+      "noise_seed": 201001
+    },
+    {
+      "scenario_id": "mechanism-train-v1-002",
+      "map_seed": 200002,
+      "noise_seed": 201002
+    },
+    {
+      "scenario_id": "mechanism-train-v1-003",
+      "map_seed": 200003,
+      "noise_seed": 201003
+    },
+    {
+      "scenario_id": "mechanism-train-v1-004",
+      "map_seed": 200004,
+      "noise_seed": 201004
+    },
+    {
+      "scenario_id": "mechanism-train-v1-005",
+      "map_seed": 200005,
+      "noise_seed": 201005
+    },
+    {
+      "scenario_id": "mechanism-train-v1-006",
+      "map_seed": 200006,
+      "noise_seed": 201006
+    },
+    {
+      "scenario_id": "mechanism-train-v1-007",
+      "map_seed": 200007,
+      "noise_seed": 201007
+    },
+    {
+      "scenario_id": "mechanism-train-v1-008",
+      "map_seed": 200008,
+      "noise_seed": 201008
+    },
+    {
+      "scenario_id": "mechanism-train-v1-009",
+      "map_seed": 200009,
+      "noise_seed": 201009
+    },
+    {
+      "scenario_id": "mechanism-train-v1-010",
+      "map_seed": 200010,
+      "noise_seed": 201010
+    },
+    {
+      "scenario_id": "mechanism-train-v1-011",
+      "map_seed": 200011,
+      "noise_seed": 201011
+    },
+    {
+      "scenario_id": "mechanism-train-v1-012",
+      "map_seed": 200012,
+      "noise_seed": 201012
+    },
+    {
+      "scenario_id": "mechanism-train-v1-013",
+      "map_seed": 200013,
+      "noise_seed": 201013
+    },
+    {
+      "scenario_id": "mechanism-train-v1-014",
+      "map_seed": 200014,
+      "noise_seed": 201014
+    },
+    {
+      "scenario_id": "mechanism-train-v1-015",
+      "map_seed": 200015,
+      "noise_seed": 201015
+    },
+    {
+      "scenario_id": "mechanism-train-v1-016",
+      "map_seed": 200016,
+      "noise_seed": 201016
+    },
+    {
+      "scenario_id": "mechanism-train-v1-017",
+      "map_seed": 200017,
+      "noise_seed": 201017
+    },
+    {
+      "scenario_id": "mechanism-train-v1-018",
+      "map_seed": 200018,
+      "noise_seed": 201018
+    },
+    {
+      "scenario_id": "mechanism-train-v1-019",
+      "map_seed": 200019,
+      "noise_seed": 201019
+    },
+    {
+      "scenario_id": "mechanism-train-v1-020",
+      "map_seed": 200020,
+      "noise_seed": 201020
+    },
+    {
+      "scenario_id": "mechanism-train-v1-021",
+      "map_seed": 200021,
+      "noise_seed": 201021
+    },
+    {
+      "scenario_id": "mechanism-train-v1-022",
+      "map_seed": 200022,
+      "noise_seed": 201022
+    },
+    {
+      "scenario_id": "mechanism-train-v1-023",
+      "map_seed": 200023,
+      "noise_seed": 201023
+    },
+    {
+      "scenario_id": "mechanism-train-v1-024",
+      "map_seed": 200024,
+      "noise_seed": 201024
+    },
+    {
+      "scenario_id": "mechanism-train-v1-025",
+      "map_seed": 200025,
+      "noise_seed": 201025
+    },
+    {
+      "scenario_id": "mechanism-train-v1-026",
+      "map_seed": 200026,
+      "noise_seed": 201026
+    },
+    {
+      "scenario_id": "mechanism-train-v1-027",
+      "map_seed": 200027,
+      "noise_seed": 201027
+    },
+    {
+      "scenario_id": "mechanism-train-v1-028",
+      "map_seed": 200028,
+      "noise_seed": 201028
+    },
+    {
+      "scenario_id": "mechanism-train-v1-029",
+      "map_seed": 200029,
+      "noise_seed": 201029
+    },
+    {
+      "scenario_id": "mechanism-train-v1-030",
+      "map_seed": 200030,
+      "noise_seed": 201030
+    },
+    {
+      "scenario_id": "mechanism-train-v1-031",
+      "map_seed": 200031,
+      "noise_seed": 201031
+    },
+    {
+      "scenario_id": "mechanism-train-v1-032",
+      "map_seed": 200032,
+      "noise_seed": 201032
+    },
+    {
+      "scenario_id": "mechanism-train-v1-033",
+      "map_seed": 200033,
+      "noise_seed": 201033
+    },
+    {
+      "scenario_id": "mechanism-train-v1-034",
+      "map_seed": 200034,
+      "noise_seed": 201034
+    },
+    {
+      "scenario_id": "mechanism-train-v1-035",
+      "map_seed": 200035,
+      "noise_seed": 201035
+    },
+    {
+      "scenario_id": "mechanism-train-v1-036",
+      "map_seed": 200036,
+      "noise_seed": 201036
+    },
+    {
+      "scenario_id": "mechanism-train-v1-037",
+      "map_seed": 200037,
+      "noise_seed": 201037
+    },
+    {
+      "scenario_id": "mechanism-train-v1-038",
+      "map_seed": 200038,
+      "noise_seed": 201038
+    },
+    {
+      "scenario_id": "mechanism-train-v1-039",
+      "map_seed": 200039,
+      "noise_seed": 201039
+    },
+    {
+      "scenario_id": "mechanism-train-v1-040",
+      "map_seed": 200040,
+      "noise_seed": 201040
+    },
+    {
+      "scenario_id": "mechanism-train-v1-041",
+      "map_seed": 200041,
+      "noise_seed": 201041
+    },
+    {
+      "scenario_id": "mechanism-train-v1-042",
+      "map_seed": 200042,
+      "noise_seed": 201042
+    },
+    {
+      "scenario_id": "mechanism-train-v1-043",
+      "map_seed": 200043,
+      "noise_seed": 201043
+    },
+    {
+      "scenario_id": "mechanism-train-v1-044",
+      "map_seed": 200044,
+      "noise_seed": 201044
+    },
+    {
+      "scenario_id": "mechanism-train-v1-045",
+      "map_seed": 200045,
+      "noise_seed": 201045
+    },
+    {
+      "scenario_id": "mechanism-train-v1-046",
+      "map_seed": 200046,
+      "noise_seed": 201046
+    },
+    {
+      "scenario_id": "mechanism-train-v1-047",
+      "map_seed": 200047,
+      "noise_seed": 201047
+    },
+    {
+      "scenario_id": "mechanism-train-v1-048",
+      "map_seed": 200048,
+      "noise_seed": 201048
+    },
+    {
+      "scenario_id": "mechanism-train-v1-049",
+      "map_seed": 200049,
+      "noise_seed": 201049
+    },
+    {
+      "scenario_id": "mechanism-train-v1-050",
+      "map_seed": 200050,
+      "noise_seed": 201050
+    },
+    {
+      "scenario_id": "mechanism-train-v1-051",
+      "map_seed": 200051,
+      "noise_seed": 201051
+    },
+    {
+      "scenario_id": "mechanism-train-v1-052",
+      "map_seed": 200052,
+      "noise_seed": 201052
+    },
+    {
+      "scenario_id": "mechanism-train-v1-053",
+      "map_seed": 200053,
+      "noise_seed": 201053
+    },
+    {
+      "scenario_id": "mechanism-train-v1-054",
+      "map_seed": 200054,
+      "noise_seed": 201054
+    },
+    {
+      "scenario_id": "mechanism-train-v1-055",
+      "map_seed": 200055,
+      "noise_seed": 201055
+    },
+    {
+      "scenario_id": "mechanism-train-v1-056",
+      "map_seed": 200056,
+      "noise_seed": 201056
+    },
+    {
+      "scenario_id": "mechanism-train-v1-057",
+      "map_seed": 200057,
+      "noise_seed": 201057
+    },
+    {
+      "scenario_id": "mechanism-train-v1-058",
+      "map_seed": 200058,
+      "noise_seed": 201058
+    },
+    {
+      "scenario_id": "mechanism-train-v1-059",
+      "map_seed": 200059,
+      "noise_seed": 201059
+    },
+    {
+      "scenario_id": "mechanism-train-v1-060",
+      "map_seed": 200060,
+      "noise_seed": 201060
+    },
+    {
+      "scenario_id": "mechanism-train-v1-061",
+      "map_seed": 200061,
+      "noise_seed": 201061
+    },
+    {
+      "scenario_id": "mechanism-train-v1-062",
+      "map_seed": 200062,
+      "noise_seed": 201062
+    },
+    {
+      "scenario_id": "mechanism-train-v1-063",
+      "map_seed": 200063,
+      "noise_seed": 201063
+    }
+  ],
+  "validation_scenarios": [
+    {
+      "scenario_id": "mechanism-validation-v1-000",
+      "map_seed": 220000,
+      "noise_seed": 221000
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-001",
+      "map_seed": 220001,
+      "noise_seed": 221001
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-002",
+      "map_seed": 220002,
+      "noise_seed": 221002
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-003",
+      "map_seed": 220003,
+      "noise_seed": 221003
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-004",
+      "map_seed": 220004,
+      "noise_seed": 221004
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-005",
+      "map_seed": 220005,
+      "noise_seed": 221005
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-006",
+      "map_seed": 220006,
+      "noise_seed": 221006
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-007",
+      "map_seed": 220007,
+      "noise_seed": 221007
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-008",
+      "map_seed": 220008,
+      "noise_seed": 221008
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-009",
+      "map_seed": 220009,
+      "noise_seed": 221009
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-010",
+      "map_seed": 220010,
+      "noise_seed": 221010
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-011",
+      "map_seed": 220011,
+      "noise_seed": 221011
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-012",
+      "map_seed": 220012,
+      "noise_seed": 221012
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-013",
+      "map_seed": 220013,
+      "noise_seed": 221013
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-014",
+      "map_seed": 220014,
+      "noise_seed": 221014
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-015",
+      "map_seed": 220015,
+      "noise_seed": 221015
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-016",
+      "map_seed": 220016,
+      "noise_seed": 221016
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-017",
+      "map_seed": 220017,
+      "noise_seed": 221017
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-018",
+      "map_seed": 220018,
+      "noise_seed": 221018
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-019",
+      "map_seed": 220019,
+      "noise_seed": 221019
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-020",
+      "map_seed": 220020,
+      "noise_seed": 221020
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-021",
+      "map_seed": 220021,
+      "noise_seed": 221021
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-022",
+      "map_seed": 220022,
+      "noise_seed": 221022
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-023",
+      "map_seed": 220023,
+      "noise_seed": 221023
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-024",
+      "map_seed": 220024,
+      "noise_seed": 221024
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-025",
+      "map_seed": 220025,
+      "noise_seed": 221025
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-026",
+      "map_seed": 220026,
+      "noise_seed": 221026
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-027",
+      "map_seed": 220027,
+      "noise_seed": 221027
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-028",
+      "map_seed": 220028,
+      "noise_seed": 221028
+    },
+    {
+      "scenario_id": "mechanism-validation-v1-029",
+      "map_seed": 220029,
+      "noise_seed": 221029
+    }
+  ],
+  "interpretation": "Locked confirmatory analytic-simulation outcome; trained seed is the replication unit. Nulls and failures retained; no equivalence, hardware, speedup, or broad quantum-advantage claim.",
+  "seed_streams": {
+    "model_init": 13005,
+    "critic_init": 14005,
+    "map": {
+      "split": "train",
+      "field": "map_seed"
+    },
+    "evaluation_map": {
+      "split": "validation",
+      "field": "map_seed"
+    },
+    "sensor": {
+      "splits": [
+        "train",
+        "validation",
+        "test"
+      ],
+      "base_field": "noise_seed",
+      "offsets": {
+        "motion": 0,
+        "odometry": 1,
+        "sensor": 2,
+        "relative": 3,
+        "prior": 4
+      }
+    },
+    "action": 15005,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": {
+      "path": "configs/data/train-mechanism-v1.json",
+      "sha256": "6d49d1281a14eda4b684a04213c1d8313b4a4cd1ee6470f9640e337b5ef1f4bb"
+    },
+    "development": {
+      "path": "configs/data/development-mechanism-v1.json",
+      "sha256": "efd9d4b6ba2df9d759895ef37f96a06c692d64fb1ad3b70028a7f77c1b666bbb"
+    },
+    "validation": {
+      "path": "configs/data/validation-mechanism-v1.json",
+      "sha256": "fcd4ce49bc4fb473f155a58abcb4b4f54e20be2c23e019d0ae7cff83684f06bb"
+    },
+    "test": {
+      "path": "configs/data/test-mechanism-v1.json",
+      "sha256": "2085bcfadf915a196588ae4db12a4e0ca5e45462f21456a1c878107127879a0e"
+    }
+  },
+  "critic_method": "eqmarl",
+  "policy_entropy_is_diagnostic_only": true,
+  "condition": {
+    "name": "low",
+    "complementarity_alpha": 0.5
+  },
+  "action_modes": {
+    "training": "sampled",
+    "validation": "greedy",
+    "test": "greedy"
+  },
+  "checkpoint_selection": "final_fixed_budget_weights_no_validation_or_test_selection",
+  "analysis_version": "mechanism-confirmatory-v1",
+  "analysis_plan": "configs/stage13/analysis-plan.json",
+  "analysis_plan_sha256": "82554bc9061b37be6fe055beb1e24b41908ec9d3d10a2e114249e2b8892b18ac",
+  "test_scenarios_manifest": {
+    "path": "configs/data/test-mechanism-v1.json",
+    "sha256": "2085bcfadf915a196588ae4db12a4e0ca5e45462f21456a1c878107127879a0e",
+    "expected_count": 100
+  }
+}

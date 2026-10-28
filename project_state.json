@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-27T00:10:00+00:00",
+  "updated_utc": "2026-10-28T08:45:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -11,11 +11,11 @@
     "last_check": "All 20 files of the published planning commit matched their local Git blob hashes; the stage branch head and AGENTS.md content were read back through the GitHub plugin."
   },
   "authorized_current_scope": "Execute the mechanism-focused extension Stages 10\u201314 autonomously under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
-  "active_stage": "12",
-  "stage_status": "passed",
-  "training_runs_executed": 136,
-  "current_branch": "stage/12-mechanism-development",
-  "dependency_commit": "7442b2354fc5f630c3c0753697f60078682f7b10",
+  "active_stage": "13",
+  "stage_status": "completed_null_result",
+  "training_runs_executed": 256,
+  "current_branch": "stage/13-mechanism-confirmatory",
+  "dependency_commit": "d733d2b99296e27c7678c6cbbbfd8f03848b1d34",
   "completion_commit": null,
   "publication_status": "verified_complete",
   "verified_remote_commits": {
@@ -36,7 +36,7 @@
     "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73"
   },
   "blockers": [],
-  "next_action": "Create Stage13 from the immutable Stage12 completion commit and remotely verify its locked source/config commit before mechanism-test access.",
+  "next_action": "Create Stage14 from the immutable Stage13 completion commit and execute the clean reproduction, resource/failure audit, and paper contribution release.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -46,7 +46,7 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "13",
+  "next_stage": "14",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
   "next_stage_status": "planned",
@@ -204,18 +204,18 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 11920.610230267997,
-    "setup_wall_seconds_charged": 1100.0,
-    "stage_started_utc": "2026-10-26T07:15:00+00:00",
-    "setup_charge_convention": "Conservative active setup/finalization charge around the uninterrupted 2026-10-26 execution envelope plus 2026-10-27 archive analysis; inactive overnight session gap excluded.",
+    "consumed_wall_seconds": 29129.728721060997,
+    "setup_wall_seconds_charged": 1200.0,
+    "stage_started_utc": "2026-10-27T04:45:00+00:00",
+    "setup_charge_convention": "Conservative active source-lock, monitoring, resume and analysis charge. The inactive 2026-10-27/28 session gap after a clean between-run stop is excluded; all instrumented experiment segments are included.",
     "recorded_experiment_resources": {
-      "primitive_steps": 591222,
-      "decisions": 447388,
-      "updates": 23692,
-      "wall_seconds": 10820.610230267997,
-      "cpu_core_hours": 3.005014608333333,
+      "primitive_steps": 1501711,
+      "decisions": 1242090,
+      "updates": 54740,
+      "wall_seconds": 27929.728721060997,
+      "cpu_core_hours": 7.756504814166667,
       "gpu_device_hours": 0,
-      "circuit_evaluations": 250430,
+      "circuit_evaluations": 534606,
       "shots": 0
     }
   },
@@ -232,7 +232,19 @@
   },
   "final_test_accessed_under_locked_protocol": true,
   "final_test_lock_source": "2ceeb16cae3c4d3bf9d611ef755e7c890ce7440c",
-  "mechanism_final_test_accessed": false,
-  "mechanism_final_test_lock_source": null,
-  "last_progress_utc": "2026-10-27T00:10:00+00:00"
+  "mechanism_final_test_accessed": true,
+  "mechanism_final_test_lock_source": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
+  "mechanism_confirmatory_lock": {
+    "freeze": "configs/stage12/stage13-freeze.json",
+    "source_commit": "e64f53330f0f108dd26f94e0172d3f629c2639b6",
+    "analysis_plan": "configs/stage13/analysis-plan.json",
+    "methods": 5,
+    "conditions": 3,
+    "training_seeds_per_cell": 8,
+    "training_steps_per_model": 10000,
+    "test_episodes_per_policy": 100,
+    "frozen": true,
+    "source_commit_location": "External remotely verified execution receipt is copied into every immutable run bundle; exact SHA is populated after source publication without modifying the clean source tree."
+  },
+  "last_progress_utc": "2026-10-28T08:45:00+00:00"
 }
