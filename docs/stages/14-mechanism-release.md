@@ -19,4 +19,6 @@ The audit itself used 183 primitives, 224 agent decisions, zero optimizer update
 
 The paper report is `docs/MECHANISM_STUDY_REPORT.md`. Machine-readable paper tables, reproduced inference, and the claim/limitation matrix are under `analysis/14/`.
 
-Stage gate: all clean-reproduction, checkpoint, analysis, failure/resource-ledger, and paper-artifact requirements passed. Fresh remote publication verification remains pending.
+Fresh independent retrieval of results commit `21ea205eac28db7f5200ddcc58784150aef17587` validated the audit bundle, resolved config, 15 raw replay rows, diagnostics, reproduced inference, paper tables, claim matrix, and every inventory hash. The receipt is `docs/stages/14-publication.json`.
+
+Stage gate: passed. All clean-reproduction, checkpoint, analysis, failure/resource-ledger, paper-artifact, and fresh-publication requirements passed.

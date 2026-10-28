@@ -8,7 +8,9 @@
       "config": "configs/stage14/14-mechanism-release-audit_attempt-01.yaml",
       "config_sha256": "8dba8e70385c4c75d6d8eb77ee7d1dd667948d7b65e8e96a8c1a392fa0cf90ae",
       "source_commit": "bfefca24b43b619435b963931eb8b27af99f676c",
-      "gates_passed": true
+      "gates_passed": true,
+      "results_commit": "21ea205eac28db7f5200ddcc58784150aef17587",
+      "publication": "verified"
     }
   ]
 }

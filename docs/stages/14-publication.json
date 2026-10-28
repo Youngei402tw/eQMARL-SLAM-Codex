@@ -1,0 +1,16 @@
+{
+  "stage": "14",
+  "verified_utc": "2026-10-28T08:47:58.286729+00:00",
+  "verified_remote_head": "21ea205eac28db7f5200ddcc58784150aef17587",
+  "mechanism": "Fresh independent Git retrieval; every run manifest, resolved config, raw metric, diagnostic and inventoried checkpoint hash/size validated",
+  "checks": [
+    {
+      "valid": true,
+      "run_id": "14-mechanism-release-audit_attempt-01",
+      "status": "completed",
+      "verified_files": 10,
+      "metrics_rows": 15,
+      "metrics_sha256": "ca7224214f999b8072e0c467f34c4d5ac752714740747ee9b7ca9e82a7dbd54b"
+    }
+  ]
+}

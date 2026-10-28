@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Execute the mechanism-focused extension Stages 10\u201314 autonomously under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
   "active_stage": "14",
-  "stage_status": "passed_pending_remote_verification",
+  "stage_status": "passed",
   "training_runs_executed": 256,
   "current_branch": "stage/14-mechanism-release",
   "dependency_commit": "d177c35cbd6b44cac12fa5f71eae82ce5e3b9d79",
   "completion_commit": null,
-  "publication_status": "results_commit_pending",
+  "publication_status": "verified_complete",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -36,7 +36,7 @@
     "main_stage09_integration": "d55e4a0d67cc07ef603f2269b5b15226ddf40f73"
   },
   "blockers": [],
-  "next_action": "Publish and freshly verify the Stage14 audit bundle and paper artifacts, then merge the completed stage chain.",
+  "next_action": "Merge the verified Stage13 and Stage14 pull requests and record the final main-branch receipt.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
