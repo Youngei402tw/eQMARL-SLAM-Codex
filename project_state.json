@@ -17,7 +17,7 @@
   "current_branch": "stage/18-nonlocal-confirmatory",
   "dependency_commit": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
   "completion_commit": null,
-  "publication_status": "pending_results_commit",
+  "publication_status": "verified_complete",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -48,7 +48,7 @@
     "stage/17-nonlocal-development": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9"
   },
   "blockers": [],
-  "next_action": "Publish and verify the positive Stage18 result, then create Stage19 for independent reproduction and paper release.",
+  "next_action": "Create Stage19 from the published Stage18 completion commit and perform the clean release audit.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",

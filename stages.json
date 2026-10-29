@@ -375,7 +375,9 @@
       "branch_created": true,
       "dependency_completion_commit": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
       "branch_created_from_commit": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
-      "source_commit": "08a84f5f44ac8d6d9574152dad60eb5e1ae41156"
+      "source_commit": "08a84f5f44ac8d6d9574152dad60eb5e1ae41156",
+      "results_commit": "0e29543b487bb929497be1d5d2a48f0e11534a6b",
+      "publication_receipt": "docs/stages/18-publication.json"
     },
     {
       "id": "19",

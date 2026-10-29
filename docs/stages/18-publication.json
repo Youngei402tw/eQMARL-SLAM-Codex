@@ -1,0 +1,1 @@
+{"stage":"18","branch":"stage/18-nonlocal-confirmatory","source_commit":"08a84f5f44ac8d6d9574152dad60eb5e1ae41156","results_commit":"0e29543b487bb929497be1d5d2a48f0e11534a6b","remote_branch_sha":"0e29543b487bb929497be1d5d2a48f0e11534a6b","verified":true,"verified_utc":"2026-10-29T10:42:00+00:00","positive_gate_passed":true,"bundle_files_validated":72}
