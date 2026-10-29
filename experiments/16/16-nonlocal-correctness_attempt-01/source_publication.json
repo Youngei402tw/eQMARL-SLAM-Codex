@@ -1,0 +1,8 @@
+{
+  "source_commit": "955571b87a07562aa6d6a9ea344492a8c4f2c73b",
+  "branch": "stage/16-nonlocal-benchmark",
+  "verified": true,
+  "allow_detached": false,
+  "verified_utc": "2026-10-29T10:05:00+00:00",
+  "mechanism": "Non-force push followed by exact git ls-remote branch SHA verification"
+}

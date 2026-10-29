@@ -333,10 +333,11 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/16-nonlocal-benchmark.md",
-      "status": "running",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "519d75e8f82369edfa580e62fe52558c84595159",
-      "branch_created_from_commit": "519d75e8f82369edfa580e62fe52558c84595159"
+      "branch_created_from_commit": "519d75e8f82369edfa580e62fe52558c84595159",
+      "source_commit": "955571b87a07562aa6d6a9ea344492a8c4f2c73b"
     },
     {
       "id": "17",
