@@ -352,10 +352,11 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/17-nonlocal-development.md",
-      "status": "running",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "235afac5d0dba03c1c84184905459cbe3a59f92e",
-      "branch_created_from_commit": "235afac5d0dba03c1c84184905459cbe3a59f92e"
+      "branch_created_from_commit": "235afac5d0dba03c1c84184905459cbe3a59f92e",
+      "source_commit": "4ad54f488794bc05c9a191651c8cda88c5c69f2f"
     },
     {
       "id": "18",

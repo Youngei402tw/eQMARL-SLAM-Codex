@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-29T10:15:00+00:00",
+  "updated_utc": "2026-10-29T10:22:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Learned nonlocal-coordination QMARL extension Stages 15-19 under prospective plan; user instruction 2026-10-29.",
   "active_stage": "17",
-  "stage_status": "running",
+  "stage_status": "passed",
   "training_runs_executed": 256,
   "current_branch": "stage/17-nonlocal-development",
   "dependency_commit": "235afac5d0dba03c1c84184905459cbe3a59f92e",
   "completion_commit": null,
-  "publication_status": "pending_source_commit",
+  "publication_status": "pending_results_commit",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -47,7 +47,7 @@
     "stage/16-nonlocal-benchmark": "235afac5d0dba03c1c84184905459cbe3a59f92e"
   },
   "blockers": [],
-  "next_action": "Publish Stage17 source/config, run bounded development, and freeze Stage18 before confirmatory access.",
+  "next_action": "Publish Stage17 development and immutable confirmatory freeze, then create Stage18.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -313,10 +313,20 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 400.0,
+    "consumed_wall_seconds": 409.5867764330001,
     "setup_wall_seconds_charged": 400.0,
     "stage_started_utc": "2026-10-29T10:14:00+00:00",
-    "setup_charge_convention": "Conservative active development implementation and tests before registered execution."
+    "setup_charge_convention": "Conservative active development implementation/tests plus instrumented execution.",
+    "recorded_experiment_resources": {
+      "primitive_steps": 0,
+      "decisions": 0,
+      "updates": 20800,
+      "wall_seconds": 9.586776433000068,
+      "cpu_core_hours": 0.0026627136111111115,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 41600,
+      "shots": 0
+    }
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
   "active_runs": [],

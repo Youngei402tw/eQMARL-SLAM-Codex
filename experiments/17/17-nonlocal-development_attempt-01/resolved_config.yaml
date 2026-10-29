@@ -1,0 +1,51 @@
+{
+  "run_id": "17-nonlocal-development_attempt-01",
+  "stage": "17",
+  "protocol_id": "nonlocal-development-v1",
+  "profile": "tuning",
+  "experiment": "nonlocal-development",
+  "hypothesis": "Equal-budget expected-return optimization identifies functioning settings for every admissible policy family and shows that a fresh confirmatory learned-advantage test is feasible.",
+  "method": "four-method-equal-budget-development",
+  "dependency_completion_commit": "235afac5d0dba03c1c84184905459cbe3a59f92e",
+  "wall_seconds": 7200,
+  "max_primitive_steps": 0,
+  "max_cpu_threads": 1,
+  "learning_rates": [0.03, 0.08, 0.15, 0.3],
+  "tuning_seeds": [17001, 17002],
+  "pilot_seeds": [17101, 17102, 17103, 17104],
+  "tuning_updates": 400,
+  "pilot_updates": 500,
+  "seed_streams": {
+    "model_init": {"tuning": [17001, 17002], "pilot": [17101, 17102, 17103, 17104]},
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {"train": null, "development": null, "validation": null, "test": null},
+  "model": {
+    "actor": "four registered decentralized policy families",
+    "encoder": "identity private bit",
+    "critic": "none; exact common contextual-bandit return",
+    "parameter_counts": {"classical_local": 4, "classical_shared": 16, "quantum_separable": 4, "quantum_entangled": 4},
+    "optimizer": "Adam with equal four-rate/two-seed tuning opportunity and final-checkpoint selection"
+  },
+  "quantum": {
+    "device": "analytic two-qubit policy formula validated against default.qubit in Stage16",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "backpropagation through exact expected reward",
+    "dtype": "float64",
+    "entanglement": "Bell phi+ intervention only",
+    "observables": ["ZZ"],
+    "noise": null,
+    "resource_accounting": "four context circuit-equivalent evaluations per quantum optimizer update; zero sampled shots"
+  },
+  "action_modes": "exact expected common return",
+  "checkpoint_selection": "final update only; development selects learning rate",
+  "analysis_version": "nonlocal-development-v1",
+  "interpretation": "Development-only optimizer selection and feasibility; no confirmatory inference."
+}

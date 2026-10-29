@@ -1,0 +1,79 @@
+{
+  "protocol_id": "nonlocal-confirmatory-v1",
+  "methods": [
+    "classical_local",
+    "classical_shared",
+    "quantum_separable",
+    "quantum_entangled"
+  ],
+  "training_seeds": [
+    18001,
+    18002,
+    18003,
+    18004,
+    18005,
+    18006,
+    18007,
+    18008,
+    18009,
+    18010,
+    18011,
+    18012,
+    18013,
+    18014,
+    18015,
+    18016
+  ],
+  "learning_rates": {
+    "classical_local": 0.3,
+    "classical_shared": 0.3,
+    "quantum_separable": 0.03,
+    "quantum_entangled": 0.03
+  },
+  "updates": 500,
+  "checkpoint_rule": "final update only",
+  "primary_metric": "exact expected CHSH win probability under uniform contexts",
+  "primary_comparator": "paired seed maximum of classical_shared and quantum_separable",
+  "classical_ceiling": 0.75,
+  "minimum_effect_over_ceiling": 0.05,
+  "bootstrap": {
+    "paired_resamples": 10000,
+    "rng_seed": 19001,
+    "difference_interval": "two-sided percentile 95%",
+    "entangled_mean_lower_bound": "one-sided percentile 95%"
+  },
+  "positive_gate": [
+    "paired difference interval lower bound > 0",
+    "entangled mean one-sided lower bound > 0.75",
+    "entangled mean - 0.75 >= 0.05"
+  ],
+  "finite_shot": {
+    "decisions_per_trained_seed": 8192,
+    "rng_seeds": [
+      28001,
+      28002,
+      28003,
+      28004,
+      28005,
+      28006,
+      28007,
+      28008,
+      28009,
+      28010,
+      28011,
+      28012,
+      28013,
+      28014,
+      28015,
+      28016
+    ],
+    "scope": "secondary operational simulation"
+  },
+  "noise_probabilities": [
+    0.0,
+    0.02,
+    0.05
+  ],
+  "noise_scope": "secondary descriptive exact local-depolarizing sensitivity",
+  "failure_handling": "retain every run; no seed replacement; primary incomplete if any planned cell lacks a final outcome"
+}
