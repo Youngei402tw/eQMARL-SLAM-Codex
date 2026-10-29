@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-29T10:30:00+00:00",
+  "updated_utc": "2026-10-29T10:38:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Learned nonlocal-coordination QMARL extension Stages 15-19 under prospective plan; user instruction 2026-10-29.",
   "active_stage": "18",
-  "stage_status": "running",
+  "stage_status": "passed",
   "training_runs_executed": 256,
   "current_branch": "stage/18-nonlocal-confirmatory",
   "dependency_commit": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
   "completion_commit": null,
-  "publication_status": "pending_source_commit",
+  "publication_status": "pending_results_commit",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -48,7 +48,7 @@
     "stage/17-nonlocal-development": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9"
   },
   "blockers": [],
-  "next_action": "Publish Stage18 source/config, then execute the locked confirmatory matrix without changes.",
+  "next_action": "Publish and verify the positive Stage18 result, then create Stage19 for independent reproduction and paper release.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -329,10 +329,20 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 500.0,
+    "consumed_wall_seconds": 514.6563684410002,
     "setup_wall_seconds_charged": 500.0,
     "stage_started_utc": "2026-10-29T10:28:00+00:00",
-    "setup_charge_convention": "Conservative confirmatory implementation, review, and tests before opening outcomes."
+    "setup_charge_convention": "Conservative confirmatory implementation/review plus instrumented locked execution.",
+    "recorded_experiment_resources": {
+      "primitive_steps": 524288,
+      "decisions": 524288,
+      "updates": 32000,
+      "wall_seconds": 14.65636844100004,
+      "cpu_core_hours": 0.004070526666666667,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 64128,
+      "shots": 262144
+    }
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
   "active_runs": [],

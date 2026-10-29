@@ -1,0 +1,104 @@
+{
+  "method": "classical_local",
+  "seed": 18009,
+  "learning_rate": 0.3,
+  "updates": 500,
+  "final_expected_win": 0.749925478114136,
+  "parameters": {
+    "alice_logits": [
+      9.569229306655886,
+      -5.499256134658152
+    ],
+    "bob_logits": [
+      5.666106502029597,
+      9.630854799237591
+    ]
+  },
+  "curve": [
+    {
+      "update": 1,
+      "expected_win": 0.4995716595568597
+    },
+    {
+      "update": 25,
+      "expected_win": 0.7473735208994045
+    },
+    {
+      "update": 50,
+      "expected_win": 0.7493554221034785
+    },
+    {
+      "update": 75,
+      "expected_win": 0.749522801550686
+    },
+    {
+      "update": 100,
+      "expected_win": 0.7495990614829438
+    },
+    {
+      "update": 125,
+      "expected_win": 0.7496570070856221
+    },
+    {
+      "update": 150,
+      "expected_win": 0.7497039614220297
+    },
+    {
+      "update": 175,
+      "expected_win": 0.7497422964252635
+    },
+    {
+      "update": 200,
+      "expected_win": 0.749773787187026
+    },
+    {
+      "update": 225,
+      "expected_win": 0.7497998628950188
+    },
+    {
+      "update": 250,
+      "expected_win": 0.7498216456060117
+    },
+    {
+      "update": 275,
+      "expected_win": 0.7498400042923155
+    },
+    {
+      "update": 300,
+      "expected_win": 0.7498556102308243
+    },
+    {
+      "update": 325,
+      "expected_win": 0.7498689837909753
+    },
+    {
+      "update": 350,
+      "expected_win": 0.7498805309873231
+    },
+    {
+      "update": 375,
+      "expected_win": 0.7498905711229924
+    },
+    {
+      "update": 400,
+      "expected_win": 0.7498993574401182
+    },
+    {
+      "update": 425,
+      "expected_win": 0.7499070925093283
+    },
+    {
+      "update": 450,
+      "expected_win": 0.7499139397301174
+    },
+    {
+      "update": 475,
+      "expected_win": 0.7499200319722565
+    },
+    {
+      "update": 500,
+      "expected_win": 0.749925478114136
+    }
+  ],
+  "gradients_finite": true
+}

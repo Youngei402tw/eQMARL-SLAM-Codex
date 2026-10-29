@@ -4,9 +4,10 @@
   "runs": [
     {
       "run_id": "18-nonlocal-confirmatory_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config_path": "configs/stage18/18-nonlocal-confirmatory_attempt-01.yaml",
-      "config_sha256": "d2404caf9b64fb2b1657e8d694434e5d716459b6df7edee08a40f787fd714d0d"
+      "config_sha256": "d2404caf9b64fb2b1657e8d694434e5d716459b6df7edee08a40f787fd714d0d",
+      "bundle": "experiments/18/18-nonlocal-confirmatory_attempt-01"
     }
   ]
 }

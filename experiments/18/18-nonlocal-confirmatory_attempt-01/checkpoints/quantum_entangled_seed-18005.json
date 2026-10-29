@@ -1,0 +1,104 @@
+{
+  "method": "quantum_entangled",
+  "seed": 18005,
+  "learning_rate": 0.03,
+  "updates": 500,
+  "final_expected_win": 0.8535533905932737,
+  "parameters": {
+    "alpha": [
+      3.5775923426833023,
+      -1.1347966375856249
+    ],
+    "beta": [
+      4.362990506088534,
+      -3.490991127823598
+    ]
+  },
+  "curve": [
+    {
+      "update": 1,
+      "expected_win": 0.44957753622988494
+    },
+    {
+      "update": 25,
+      "expected_win": 0.7276008931480353
+    },
+    {
+      "update": 50,
+      "expected_win": 0.7605363110693382
+    },
+    {
+      "update": 75,
+      "expected_win": 0.8408057281919553
+    },
+    {
+      "update": 100,
+      "expected_win": 0.8524523444497689
+    },
+    {
+      "update": 125,
+      "expected_win": 0.8535190354598381
+    },
+    {
+      "update": 150,
+      "expected_win": 0.8535518361599077
+    },
+    {
+      "update": 175,
+      "expected_win": 0.8535533404155823
+    },
+    {
+      "update": 200,
+      "expected_win": 0.8535533751652157
+    },
+    {
+      "update": 225,
+      "expected_win": 0.853553389497173
+    },
+    {
+      "update": 250,
+      "expected_win": 0.8535533904845445
+    },
+    {
+      "update": 275,
+      "expected_win": 0.8535533905896886
+    },
+    {
+      "update": 300,
+      "expected_win": 0.8535533905929742
+    },
+    {
+      "update": 325,
+      "expected_win": 0.8535533905932609
+    },
+    {
+      "update": 350,
+      "expected_win": 0.853553390593273
+    },
+    {
+      "update": 375,
+      "expected_win": 0.8535533905932735
+    },
+    {
+      "update": 400,
+      "expected_win": 0.8535533905932737
+    },
+    {
+      "update": 425,
+      "expected_win": 0.8535533905932738
+    },
+    {
+      "update": 450,
+      "expected_win": 0.8535533905932737
+    },
+    {
+      "update": 475,
+      "expected_win": 0.8535533905932738
+    },
+    {
+      "update": 500,
+      "expected_win": 0.8535533905932737
+    }
+  ],
+  "gradients_finite": true
+}
