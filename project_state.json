@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-29T10:10:00+00:00",
+  "updated_utc": "2026-10-29T10:15:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -11,13 +11,13 @@
     "last_check": "Stages 10-14 merged through PRs 11-15; all 120 confirmatory bundles and the Stage14 release audit were freshly retrieved and hash-validated."
   },
   "authorized_current_scope": "Learned nonlocal-coordination QMARL extension Stages 15-19 under prospective plan; user instruction 2026-10-29.",
-  "active_stage": "16",
-  "stage_status": "passed",
+  "active_stage": "17",
+  "stage_status": "running",
   "training_runs_executed": 256,
-  "current_branch": "stage/16-nonlocal-benchmark",
-  "dependency_commit": "519d75e8f82369edfa580e62fe52558c84595159",
+  "current_branch": "stage/17-nonlocal-development",
+  "dependency_commit": "235afac5d0dba03c1c84184905459cbe3a59f92e",
   "completion_commit": null,
-  "publication_status": "verified_complete",
+  "publication_status": "pending_source_commit",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -43,10 +43,11 @@
     "stage/14-mechanism-release-results": "21ea205eac28db7f5200ddcc58784150aef17587",
     "stage/14-mechanism-release": "d798a1a264cd5ac321748778c0f9db07b73a6d43",
     "main_mechanism_integration": "35cddc1d5681a345bdd0034db61b49fe9d39c385",
-    "stage/15-nonlocal-plan": "519d75e8f82369edfa580e62fe52558c84595159"
+    "stage/15-nonlocal-plan": "519d75e8f82369edfa580e62fe52558c84595159",
+    "stage/16-nonlocal-benchmark": "235afac5d0dba03c1c84184905459cbe3a59f92e"
   },
   "blockers": [],
-  "next_action": "Create Stage17 from the published Stage16 completion commit and run bounded development.",
+  "next_action": "Publish Stage17 source/config, run bounded development, and freeze Stage18 before confirmatory access.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -56,7 +57,7 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "17",
+  "next_stage": "18",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
   "next_stage_status": "planned",
@@ -293,24 +294,29 @@
         "circuit_evaluations": 0,
         "shots": 0
       }
+    },
+    "16": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 307.8776838240001,
+      "setup_wall_seconds_charged": 300.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 65536,
+        "decisions": 65536,
+        "updates": 12800,
+        "wall_seconds": 7.877683824000087,
+        "cpu_core_hours": 0.0021873713888888886,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 4,
+        "shots": 0
+      }
     }
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 307.8776838240001,
-    "setup_wall_seconds_charged": 300.0,
-    "stage_started_utc": "2026-10-29T09:58:00+00:00",
-    "setup_charge_convention": "Conservative active implementation and test setup plus instrumented diagnostic.",
-    "recorded_experiment_resources": {
-      "primitive_steps": 65536,
-      "decisions": 65536,
-      "updates": 12800,
-      "wall_seconds": 7.877683824000087,
-      "cpu_core_hours": 0.0021873713888888886,
-      "gpu_device_hours": 0,
-      "circuit_evaluations": 4,
-      "shots": 0
-    }
+    "consumed_wall_seconds": 400.0,
+    "setup_wall_seconds_charged": 400.0,
+    "stage_started_utc": "2026-10-29T10:14:00+00:00",
+    "setup_charge_convention": "Conservative active development implementation and tests before registered execution."
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
   "active_runs": [],
