@@ -17,7 +17,7 @@
   "current_branch": "stage/16-nonlocal-benchmark",
   "dependency_commit": "519d75e8f82369edfa580e62fe52558c84595159",
   "completion_commit": null,
-  "publication_status": "pending_results_commit",
+  "publication_status": "verified_complete",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -46,7 +46,7 @@
     "stage/15-nonlocal-plan": "519d75e8f82369edfa580e62fe52558c84595159"
   },
   "blockers": [],
-  "next_action": "Publish and verify Stage16 results, then create Stage17 from its completion commit.",
+  "next_action": "Create Stage17 from the published Stage16 completion commit and run bounded development.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",

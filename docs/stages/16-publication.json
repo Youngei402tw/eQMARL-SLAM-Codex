@@ -1,0 +1,10 @@
+{
+  "stage": "16",
+  "branch": "stage/16-nonlocal-benchmark",
+  "source_commit": "955571b87a07562aa6d6a9ea344492a8c4f2c73b",
+  "results_commit": "c4981580a565cf80b9c4c3db9df311c31ab6c217",
+  "remote_branch_sha": "c4981580a565cf80b9c4c3db9df311c31ab6c217",
+  "verified": true,
+  "verified_utc": "2026-10-29T10:12:00+00:00",
+  "fresh_bundle_validation": true
+}
