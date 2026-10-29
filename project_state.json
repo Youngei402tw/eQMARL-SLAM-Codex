@@ -17,7 +17,7 @@
   "current_branch": "stage/19-nonlocal-release",
   "dependency_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
   "completion_commit": null,
-  "publication_status": "pending_results_commit",
+  "publication_status": "verified_complete",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -49,7 +49,7 @@
     "stage/18-nonlocal-confirmatory": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8"
   },
   "blockers": [],
-  "next_action": "Publish Stage19 results and verify a fresh remote retrieval.",
+  "next_action": null,
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",

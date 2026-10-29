@@ -1,0 +1,16 @@
+{
+  "stage": "19",
+  "branch": "stage/19-nonlocal-release",
+  "source_commit": "a1dd2a2974c03f170acf63520f9df93e82f73c3e",
+  "results_commit": "84b084acd13cb63ce504e0661726fbb6b5a93501",
+  "remote_branch_sha": "84b084acd13cb63ce504e0661726fbb6b5a93501",
+  "verified": true,
+  "verified_utc": "2026-10-29T10:57:00+00:00",
+  "fresh_clone": {
+    "stage18_bundle_valid": true,
+    "stage19_bundle_valid": true,
+    "stage18_verified_files": 72,
+    "stage19_verified_files": 10,
+    "confirmatory_checkpoints": 64
+  }
+}
