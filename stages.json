@@ -377,7 +377,8 @@
       "branch_created_from_commit": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
       "source_commit": "08a84f5f44ac8d6d9574152dad60eb5e1ae41156",
       "results_commit": "0e29543b487bb929497be1d5d2a48f0e11534a6b",
-      "publication_receipt": "docs/stages/18-publication.json"
+      "publication_receipt": "docs/stages/18-publication.json",
+      "completion_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8"
     },
     {
       "id": "19",
@@ -389,8 +390,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/19-nonlocal-release.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "running",
+      "branch_created": true,
+      "dependency_completion_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
+      "branch_created_from_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8"
     }
   ],
   "recommended_execution_order": [

@@ -1,0 +1,12 @@
+{
+  "stage": "19",
+  "protocol_id": "nonlocal-release-v1",
+  "runs": [
+    {
+      "run_id": "19-nonlocal-release-audit_attempt-01",
+      "status": "planned",
+      "config_path": "configs/stage19/19-nonlocal-release-audit_attempt-01.yaml",
+      "config_sha256": "b001305bbb13339a04a9459b32fab19afc286793597180a62b95fde525fd9797"
+    }
+  ]
+}

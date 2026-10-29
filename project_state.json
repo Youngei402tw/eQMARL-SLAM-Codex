@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-29T10:38:00+00:00",
+  "updated_utc": "2026-10-29T10:45:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -11,13 +11,13 @@
     "last_check": "Stages 10-14 merged through PRs 11-15; all 120 confirmatory bundles and the Stage14 release audit were freshly retrieved and hash-validated."
   },
   "authorized_current_scope": "Learned nonlocal-coordination QMARL extension Stages 15-19 under prospective plan; user instruction 2026-10-29.",
-  "active_stage": "18",
-  "stage_status": "passed",
+  "active_stage": "19",
+  "stage_status": "running",
   "training_runs_executed": 256,
-  "current_branch": "stage/18-nonlocal-confirmatory",
-  "dependency_commit": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
+  "current_branch": "stage/19-nonlocal-release",
+  "dependency_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
   "completion_commit": null,
-  "publication_status": "verified_complete",
+  "publication_status": "pending_source_commit",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -45,10 +45,11 @@
     "main_mechanism_integration": "35cddc1d5681a345bdd0034db61b49fe9d39c385",
     "stage/15-nonlocal-plan": "519d75e8f82369edfa580e62fe52558c84595159",
     "stage/16-nonlocal-benchmark": "235afac5d0dba03c1c84184905459cbe3a59f92e",
-    "stage/17-nonlocal-development": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9"
+    "stage/17-nonlocal-development": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
+    "stage/18-nonlocal-confirmatory": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8"
   },
   "blockers": [],
-  "next_action": "Create Stage19 from the published Stage18 completion commit and perform the clean release audit.",
+  "next_action": "Publish Stage19 audit source/config, run independent reconstruction, and publish paper artifacts.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -58,10 +59,10 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "19",
+  "next_stage": null,
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
-  "next_stage_status": "planned",
+  "next_stage_status": "none",
   "completed_stage_budgets": {
     "01": {
       "cap_wall_seconds": 86400,
@@ -325,24 +326,29 @@
         "circuit_evaluations": 41600,
         "shots": 0
       }
+    },
+    "18": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 514.6563684410002,
+      "setup_wall_seconds_charged": 500.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 524288,
+        "decisions": 524288,
+        "updates": 32000,
+        "wall_seconds": 14.65636844100004,
+        "cpu_core_hours": 0.004070526666666667,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 64128,
+        "shots": 262144
+      }
     }
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 514.6563684410002,
-    "setup_wall_seconds_charged": 500.0,
-    "stage_started_utc": "2026-10-29T10:28:00+00:00",
-    "setup_charge_convention": "Conservative confirmatory implementation/review plus instrumented locked execution.",
-    "recorded_experiment_resources": {
-      "primitive_steps": 524288,
-      "decisions": 524288,
-      "updates": 32000,
-      "wall_seconds": 14.65636844100004,
-      "cpu_core_hours": 0.004070526666666667,
-      "gpu_device_hours": 0,
-      "circuit_evaluations": 64128,
-      "shots": 262144
-    }
+    "consumed_wall_seconds": 400.0,
+    "setup_wall_seconds_charged": 400.0,
+    "stage_started_utc": "2026-10-29T10:44:00+00:00",
+    "setup_charge_convention": "Conservative release-audit implementation and tests before registered execution."
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
   "active_runs": [],
