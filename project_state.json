@@ -17,7 +17,7 @@
   "current_branch": "stage/17-nonlocal-development",
   "dependency_commit": "235afac5d0dba03c1c84184905459cbe3a59f92e",
   "completion_commit": null,
-  "publication_status": "pending_results_commit",
+  "publication_status": "verified_complete",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -47,7 +47,7 @@
     "stage/16-nonlocal-benchmark": "235afac5d0dba03c1c84184905459cbe3a59f92e"
   },
   "blockers": [],
-  "next_action": "Publish Stage17 development and immutable confirmatory freeze, then create Stage18.",
+  "next_action": "Create Stage18 from the published Stage17 completion commit and execute the locked confirmatory matrix.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
