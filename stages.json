@@ -320,7 +320,8 @@
       "branch_created_from_commit": "dbe2903c61ade83e17db7d0d94f9fecbe0abbc13",
       "source_commit": "e2a79a0030e0405fd9893ca08dfaa4c1b00b9dfd",
       "results_commit": "e2a79a0030e0405fd9893ca08dfaa4c1b00b9dfd",
-      "publication_receipt": "docs/stages/15-publication.json"
+      "publication_receipt": "docs/stages/15-publication.json",
+      "completion_commit": "519d75e8f82369edfa580e62fe52558c84595159"
     },
     {
       "id": "16",
@@ -332,8 +333,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/16-nonlocal-benchmark.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "running",
+      "branch_created": true,
+      "dependency_completion_commit": "519d75e8f82369edfa580e62fe52558c84595159",
+      "branch_created_from_commit": "519d75e8f82369edfa580e62fe52558c84595159"
     },
     {
       "id": "17",

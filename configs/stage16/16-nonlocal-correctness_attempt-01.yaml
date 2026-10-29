@@ -1,0 +1,47 @@
+{
+  "run_id": "16-nonlocal-correctness_attempt-01",
+  "stage": "16",
+  "protocol_id": "nonlocal-correctness-v1",
+  "profile": "diagnostic",
+  "experiment": "nonlocal-correctness",
+  "hypothesis": "The implemented decentralized CHSH benchmark reproduces the exact classical ceiling and Bell-policy advantage while preserving the private-information contract.",
+  "method": "bound-and-circuit-audit",
+  "dependency_completion_commit": "519d75e8f82369edfa580e62fe52558c84595159",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 65536,
+  "max_cpu_threads": 1,
+  "sampling_decisions": 65536,
+  "seed_streams": {
+    "model_init": 16000,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": 16002,
+    "quantum_shots": 16001,
+    "communication": null
+  },
+  "split_manifests": {"train": null, "development": null, "validation": null, "test": null},
+  "model": {
+    "actor": "two local binary observation-conditioned measurement policies",
+    "encoder": "identity private input bit",
+    "critic": "none contextual-bandit exact return",
+    "parameter_counts": {"quantum_entangled": 4, "quantum_separable": 4, "classical_local": 4, "classical_shared": 16},
+    "optimizer": "diagnostic multistart Adam only for separable-bound falsification"
+  },
+  "quantum": {
+    "device": "default.qubit analytic fixture",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "torch analytic formula checked against PennyLane and finite differences",
+    "dtype": "float64",
+    "entanglement": "Bell phi+ for intervention; product |00> control",
+    "observables": ["ZZ"],
+    "noise": null,
+    "resource_accounting": "one context circuit fixture is one circuit evaluation; binomial sampling is a simulator diagnostic, not physical shots"
+  },
+  "action_modes": "sampled diagnostic and exact expected reward",
+  "checkpoint_selection": "none correctness-only",
+  "analysis_version": "nonlocal-correctness-v1",
+  "interpretation": "Correctness and throughput gates only; no learned-policy or confirmatory quantum-advantage claim."
+}
