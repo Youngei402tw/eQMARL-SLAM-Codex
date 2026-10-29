@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-29T10:52:00+00:00",
+  "updated_utc": "2026-10-29T11:02:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -10,13 +10,13 @@
     "url": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
     "last_check": "Stages 10-14 merged through PRs 11-15; all 120 confirmatory bundles and the Stage14 release audit were freshly retrieved and hash-validated."
   },
-  "authorized_current_scope": "Learned nonlocal-coordination QMARL extension Stages 15-19 under prospective plan; user instruction 2026-10-29.",
+  "authorized_current_scope": "Learned nonlocal-coordination QMARL extension Stages 15-19 completed under the prospective plan; user instruction 2026-10-29.",
   "active_stage": "19",
   "stage_status": "passed",
-  "training_runs_executed": 256,
-  "current_branch": "stage/19-nonlocal-release",
+  "training_runs_executed": 368,
+  "current_branch": "main",
   "dependency_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
-  "completion_commit": null,
+  "completion_commit": "e6dc5c7a69f3de6942d3183b2c640e926eab467b",
   "publication_status": "verified_complete",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
@@ -46,7 +46,9 @@
     "stage/15-nonlocal-plan": "519d75e8f82369edfa580e62fe52558c84595159",
     "stage/16-nonlocal-benchmark": "235afac5d0dba03c1c84184905459cbe3a59f92e",
     "stage/17-nonlocal-development": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
-    "stage/18-nonlocal-confirmatory": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8"
+    "stage/18-nonlocal-confirmatory": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
+    "stage/19-nonlocal-release": "e6dc5c7a69f3de6942d3183b2c640e926eab467b",
+    "main_nonlocal_integration": "7fc6349a1f08856b9c6e1bb678d2800b7aed8e0e"
   },
   "blockers": [],
   "next_action": null,
@@ -340,6 +342,21 @@
         "gpu_device_hours": 0,
         "circuit_evaluations": 64128,
         "shots": 262144
+      }
+    },
+    "19": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 401.06959885800006,
+      "setup_wall_seconds_charged": 400.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 0,
+        "decisions": 0,
+        "updates": 0,
+        "wall_seconds": 1.069598858000063,
+        "cpu_core_hours": 0.00029704166666666675,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
       }
     }
   },
