@@ -207,7 +207,9 @@
       "name": "mechanism-plan",
       "title": "Prospective interaction-mechanism study",
       "branch": "stage/10-mechanism-plan",
-      "depends_on": ["09"],
+      "depends_on": [
+        "09"
+      ],
       "initial_status": "planned",
       "report": "docs/stages/10-mechanism-plan.md",
       "status": "passed",
@@ -229,7 +231,9 @@
       "name": "mechanism-task",
       "title": "Controlled complementarity task and diagnostics",
       "branch": "stage/11-mechanism-task",
-      "depends_on": ["10"],
+      "depends_on": [
+        "10"
+      ],
       "initial_status": "planned",
       "report": "docs/stages/11-mechanism-task.md",
       "status": "passed",
@@ -246,7 +250,9 @@
       "name": "mechanism-development",
       "title": "Equal-budget mechanism development and freeze",
       "branch": "stage/12-mechanism-development",
-      "depends_on": ["11"],
+      "depends_on": [
+        "11"
+      ],
       "initial_status": "planned",
       "report": "docs/stages/12-mechanism-development.md",
       "branch_created": true,
@@ -263,7 +269,9 @@
       "name": "mechanism-confirmatory",
       "title": "Locked complementarity interaction phase diagram",
       "branch": "stage/13-mechanism-confirmatory",
-      "depends_on": ["12"],
+      "depends_on": [
+        "12"
+      ],
       "initial_status": "planned",
       "report": "docs/stages/13-mechanism-confirmatory.md",
       "status": "completed_null_result",
@@ -281,7 +289,9 @@
       "name": "mechanism-release",
       "title": "Mechanism-study reproduction and paper release",
       "branch": "stage/14-mechanism-release",
-      "depends_on": ["13"],
+      "depends_on": [
+        "13"
+      ],
       "initial_status": "planned",
       "report": "docs/stages/14-mechanism-release.md",
       "status": "passed",
@@ -293,6 +303,73 @@
       "results_commit": "21ea205eac28db7f5200ddcc58784150aef17587",
       "completion_commit": "d798a1a264cd5ac321748778c0f9db07b73a6d43",
       "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/15"
+    },
+    {
+      "id": "15",
+      "name": "nonlocal-plan",
+      "title": "Prospective learned nonlocal-coordination study",
+      "branch": "stage/15-nonlocal-plan",
+      "depends_on": [
+        "14"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/15-nonlocal-plan.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "d798a1a264cd5ac321748778c0f9db07b73a6d43",
+      "branch_created_from_commit": "dbe2903c61ade83e17db7d0d94f9fecbe0abbc13"
+    },
+    {
+      "id": "16",
+      "name": "nonlocal-benchmark",
+      "title": "Nonlocal game policy and correctness benchmark",
+      "branch": "stage/16-nonlocal-benchmark",
+      "depends_on": [
+        "15"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/16-nonlocal-benchmark.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "17",
+      "name": "nonlocal-development",
+      "title": "Bounded nonlocal-policy development and freeze",
+      "branch": "stage/17-nonlocal-development",
+      "depends_on": [
+        "16"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/17-nonlocal-development.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "18",
+      "name": "nonlocal-confirmatory",
+      "title": "Locked learned nonlocal quantum-advantage test",
+      "branch": "stage/18-nonlocal-confirmatory",
+      "depends_on": [
+        "17"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/18-nonlocal-confirmatory.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "19",
+      "name": "nonlocal-release",
+      "title": "Nonlocal QMARL reproduction and paper release",
+      "branch": "stage/19-nonlocal-release",
+      "depends_on": [
+        "18"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/19-nonlocal-release.md",
+      "status": "planned",
+      "branch_created": false
     }
   ],
   "recommended_execution_order": [
@@ -310,6 +387,11 @@
     "11",
     "12",
     "13",
-    "14"
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19"
   ]
 }
