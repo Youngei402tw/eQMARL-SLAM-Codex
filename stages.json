@@ -390,10 +390,11 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/19-nonlocal-release.md",
-      "status": "running",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
-      "branch_created_from_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8"
+      "branch_created_from_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
+      "source_commit": "a1dd2a2974c03f170acf63520f9df93e82f73c3e"
     }
   ],
   "recommended_execution_order": [

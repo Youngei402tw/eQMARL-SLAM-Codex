@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-29T10:45:00+00:00",
+  "updated_utc": "2026-10-29T10:52:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Learned nonlocal-coordination QMARL extension Stages 15-19 under prospective plan; user instruction 2026-10-29.",
   "active_stage": "19",
-  "stage_status": "running",
+  "stage_status": "passed",
   "training_runs_executed": 256,
   "current_branch": "stage/19-nonlocal-release",
   "dependency_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
   "completion_commit": null,
-  "publication_status": "pending_source_commit",
+  "publication_status": "pending_results_commit",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -49,7 +49,7 @@
     "stage/18-nonlocal-confirmatory": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8"
   },
   "blockers": [],
-  "next_action": "Publish Stage19 audit source/config, run independent reconstruction, and publish paper artifacts.",
+  "next_action": "Publish Stage19 results and verify a fresh remote retrieval.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -345,10 +345,20 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 400.0,
+    "consumed_wall_seconds": 401.06959885800006,
     "setup_wall_seconds_charged": 400.0,
     "stage_started_utc": "2026-10-29T10:44:00+00:00",
-    "setup_charge_convention": "Conservative release-audit implementation and tests before registered execution."
+    "setup_charge_convention": "Conservative release implementation/tests plus instrumented independent audit.",
+    "recorded_experiment_resources": {
+      "primitive_steps": 0,
+      "decisions": 0,
+      "updates": 0,
+      "wall_seconds": 1.069598858000063,
+      "cpu_core_hours": 0.00029704166666666675,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 0,
+      "shots": 0
+    }
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
   "active_runs": [],

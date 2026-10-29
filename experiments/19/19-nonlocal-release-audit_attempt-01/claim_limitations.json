@@ -1,0 +1,22 @@
+[
+  {
+    "claim": "A learned Bell-entangled decentralized policy exceeds the classical no-communication CHSH ceiling.",
+    "supported": true,
+    "scope": "two agents, uniform CHSH contexts, no post-input communication, analytic training and simulated finite shots"
+  },
+  {
+    "claim": "The advantage remains visible at 2% and 5% registered local depolarizing noise in exact simulation.",
+    "supported": true,
+    "scope": "specified final local-depolarizing model; no hardware claim"
+  },
+  {
+    "claim": "The result establishes speedup or active-SLAM advantage.",
+    "supported": false,
+    "scope": "not tested; the independent active-SLAM critic studies remain null"
+  },
+  {
+    "claim": "The result survives free classical communication.",
+    "supported": false,
+    "scope": "one communicated input bit permits a classical perfect policy and changes the information contract"
+  }
+]
