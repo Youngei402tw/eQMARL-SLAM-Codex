@@ -207,7 +207,9 @@
       "name": "mechanism-plan",
       "title": "Prospective interaction-mechanism study",
       "branch": "stage/10-mechanism-plan",
-      "depends_on": ["09"],
+      "depends_on": [
+        "09"
+      ],
       "initial_status": "planned",
       "report": "docs/stages/10-mechanism-plan.md",
       "status": "passed",
@@ -229,7 +231,9 @@
       "name": "mechanism-task",
       "title": "Controlled complementarity task and diagnostics",
       "branch": "stage/11-mechanism-task",
-      "depends_on": ["10"],
+      "depends_on": [
+        "10"
+      ],
       "initial_status": "planned",
       "report": "docs/stages/11-mechanism-task.md",
       "status": "passed",
@@ -246,7 +250,9 @@
       "name": "mechanism-development",
       "title": "Equal-budget mechanism development and freeze",
       "branch": "stage/12-mechanism-development",
-      "depends_on": ["11"],
+      "depends_on": [
+        "11"
+      ],
       "initial_status": "planned",
       "report": "docs/stages/12-mechanism-development.md",
       "branch_created": true,
@@ -263,7 +269,9 @@
       "name": "mechanism-confirmatory",
       "title": "Locked complementarity interaction phase diagram",
       "branch": "stage/13-mechanism-confirmatory",
-      "depends_on": ["12"],
+      "depends_on": [
+        "12"
+      ],
       "initial_status": "planned",
       "report": "docs/stages/13-mechanism-confirmatory.md",
       "status": "completed_null_result",
@@ -281,7 +289,9 @@
       "name": "mechanism-release",
       "title": "Mechanism-study reproduction and paper release",
       "branch": "stage/14-mechanism-release",
-      "depends_on": ["13"],
+      "depends_on": [
+        "13"
+      ],
       "initial_status": "planned",
       "report": "docs/stages/14-mechanism-release.md",
       "status": "passed",
@@ -293,6 +303,100 @@
       "results_commit": "21ea205eac28db7f5200ddcc58784150aef17587",
       "completion_commit": "d798a1a264cd5ac321748778c0f9db07b73a6d43",
       "pull_request": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/pull/15"
+    },
+    {
+      "id": "15",
+      "name": "nonlocal-plan",
+      "title": "Prospective learned nonlocal-coordination study",
+      "branch": "stage/15-nonlocal-plan",
+      "depends_on": [
+        "14"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/15-nonlocal-plan.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "d798a1a264cd5ac321748778c0f9db07b73a6d43",
+      "branch_created_from_commit": "dbe2903c61ade83e17db7d0d94f9fecbe0abbc13",
+      "source_commit": "e2a79a0030e0405fd9893ca08dfaa4c1b00b9dfd",
+      "results_commit": "e2a79a0030e0405fd9893ca08dfaa4c1b00b9dfd",
+      "publication_receipt": "docs/stages/15-publication.json",
+      "completion_commit": "519d75e8f82369edfa580e62fe52558c84595159"
+    },
+    {
+      "id": "16",
+      "name": "nonlocal-benchmark",
+      "title": "Nonlocal game policy and correctness benchmark",
+      "branch": "stage/16-nonlocal-benchmark",
+      "depends_on": [
+        "15"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/16-nonlocal-benchmark.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "519d75e8f82369edfa580e62fe52558c84595159",
+      "branch_created_from_commit": "519d75e8f82369edfa580e62fe52558c84595159",
+      "source_commit": "955571b87a07562aa6d6a9ea344492a8c4f2c73b",
+      "results_commit": "c4981580a565cf80b9c4c3db9df311c31ab6c217",
+      "publication_receipt": "docs/stages/16-publication.json",
+      "completion_commit": "235afac5d0dba03c1c84184905459cbe3a59f92e"
+    },
+    {
+      "id": "17",
+      "name": "nonlocal-development",
+      "title": "Bounded nonlocal-policy development and freeze",
+      "branch": "stage/17-nonlocal-development",
+      "depends_on": [
+        "16"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/17-nonlocal-development.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "235afac5d0dba03c1c84184905459cbe3a59f92e",
+      "branch_created_from_commit": "235afac5d0dba03c1c84184905459cbe3a59f92e",
+      "source_commit": "4ad54f488794bc05c9a191651c8cda88c5c69f2f",
+      "results_commit": "d8ea37397e43e40da622cd636d7663baa1fb7c86",
+      "publication_receipt": "docs/stages/17-publication.json",
+      "completion_commit": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9"
+    },
+    {
+      "id": "18",
+      "name": "nonlocal-confirmatory",
+      "title": "Locked learned nonlocal quantum-advantage test",
+      "branch": "stage/18-nonlocal-confirmatory",
+      "depends_on": [
+        "17"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/18-nonlocal-confirmatory.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
+      "branch_created_from_commit": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
+      "source_commit": "08a84f5f44ac8d6d9574152dad60eb5e1ae41156",
+      "results_commit": "0e29543b487bb929497be1d5d2a48f0e11534a6b",
+      "publication_receipt": "docs/stages/18-publication.json",
+      "completion_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8"
+    },
+    {
+      "id": "19",
+      "name": "nonlocal-release",
+      "title": "Nonlocal QMARL reproduction and paper release",
+      "branch": "stage/19-nonlocal-release",
+      "depends_on": [
+        "18"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/19-nonlocal-release.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
+      "branch_created_from_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
+      "source_commit": "a1dd2a2974c03f170acf63520f9df93e82f73c3e",
+      "results_commit": "84b084acd13cb63ce504e0661726fbb6b5a93501",
+      "publication_receipt": "docs/stages/19-publication.json"
     }
   ],
   "recommended_execution_order": [
@@ -310,6 +414,11 @@
     "11",
     "12",
     "13",
-    "14"
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19"
   ]
 }

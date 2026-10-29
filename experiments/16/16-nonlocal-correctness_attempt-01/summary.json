@@ -1,0 +1,64 @@
+{
+  "run_id": "16-nonlocal-correctness_attempt-01",
+  "source_commit": "955571b87a07562aa6d6a9ea344492a8c4f2c73b",
+  "config_sha256": "568a7208b3bf1f0968b54289f3392417bd5c96bdb4aee8ec559fa3983abb588d",
+  "metrics_sha256": "746e2a0de30352677ed499a7c1f17e4f8d0ae654050762e28d6376c81f532070",
+  "metrics_rows": 5,
+  "analysis_version": "nonlocal-correctness-v1",
+  "passed": true,
+  "gates": {
+    "classical_bound_exact": true,
+    "bell_optimum_exact": true,
+    "pennylane_matches_independent_formula": true,
+    "separable_reaches_classical_ceiling": true,
+    "gradient_finite_difference": true,
+    "sampled_matches_exact": true,
+    "private_information_isolated": true
+  },
+  "resources_consumed": {
+    "primitive_steps": 65536,
+    "decisions": 65536,
+    "updates": 12800,
+    "wall_seconds": 7.877683824000087,
+    "cpu_core_hours": 0.0021873713888888886,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 4,
+    "shots": 0
+  },
+  "interpretation": "Correctness and throughput gates only; no learned-policy or confirmatory quantum-advantage claim.",
+  "analysis": {
+    "classical_strategy_count": 16,
+    "classical_max": 0.75,
+    "strategies_at_max": 8,
+    "tsirelson_win": 0.8535533905932737,
+    "bell_policy_win": 0.8535533905932737,
+    "qml_correlations": [
+      0.7071067811865474,
+      0.7071067811865474,
+      0.7071067811865475,
+      -0.7071067811865472
+    ],
+    "separable_candidate": 0.75,
+    "separable_optimization_max": 0.75,
+    "gradient_max_abs_error": 7.69982272386116e-11,
+    "sampled_win": 0.855499267578125,
+    "sampling_z": 1.4089654388154011,
+    "information_contract": {
+      "alice_fields": [
+        "x"
+      ],
+      "bob_fields": [
+        "y"
+      ],
+      "communication_after_input_bits": 0,
+      "shared_randomness_independent_of_inputs": true,
+      "reward_privileged_inputs": [
+        "x",
+        "y",
+        "a",
+        "b"
+      ]
+    },
+    "diagnostic_wall_seconds": 5.838852455000051
+  }
+}

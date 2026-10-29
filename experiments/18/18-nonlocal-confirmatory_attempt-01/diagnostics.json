@@ -1,0 +1,609 @@
+{
+  "passed": true,
+  "gates": {
+    "complete_locked_matrix": true,
+    "frozen_protocol_hash": true,
+    "final_checkpoint_only": true,
+    "all_raw_cells_emitted": true,
+    "finite_shot_complete": true,
+    "primary_positive_gate": true
+  },
+  "resources": {
+    "primitive_steps": 524288,
+    "decisions": 524288,
+    "updates": 32000,
+    "circuit_evaluations": 64128,
+    "shots": 262144
+  },
+  "summary": {
+    "analysis_version": "nonlocal-confirmatory-v1",
+    "complete": true,
+    "primary": {
+      "estimate_entangled_minus_paired_strongest_control": 0.10355394338396878,
+      "paired_difference_interval_95": [
+        0.10355339352970186,
+        0.10355475800355224
+      ],
+      "entangled_mean": 0.8535533905932737,
+      "entangled_mean_one_sided_lower_95": 0.8535533905932737,
+      "classical_ceiling": 0.75,
+      "minimum_effect_over_ceiling": 0.05,
+      "seed_differences": [
+        0.10355775731752481,
+        0.10355339059327373,
+        0.10355339059327373,
+        0.10355773832610726,
+        0.10355339059327373,
+        0.10355339059327373,
+        0.10355339059327373,
+        0.10355349071336273,
+        0.10355339059327373,
+        0.10355339059882995,
+        0.10355339059327373,
+        0.10355340018053572,
+        0.10355339059327395,
+        0.10355340928828949,
+        0.10355339237938654,
+        0.10355339059327384
+      ],
+      "positive_conditions": {
+        "paired_interval_lower_above_zero": true,
+        "entangled_one_sided_lower_above_classical_ceiling": true,
+        "minimum_effect_over_ceiling_met": true
+      },
+      "positive_gate_passed": true
+    },
+    "method_summary": {
+      "classical_local": {
+        "mean": 0.7499250258401737,
+        "min": 0.7499162139310218,
+        "max": 0.7499322462366204
+      },
+      "classical_shared": {
+        "mean": 0.7499703576551973,
+        "min": 0.7499699504830671,
+        "max": 0.7499708979489735
+      },
+      "quantum_separable": {
+        "mean": 0.749999447209305,
+        "min": 0.7499956332757488,
+        "max": 0.75
+      },
+      "quantum_entangled": {
+        "mean": 0.8535533905932737,
+        "min": 0.8535533905932736,
+        "max": 0.853553390593274
+      }
+    },
+    "finite_shot_entangled": {
+      "wins": 111745,
+      "decisions": 131072,
+      "win_rate": 0.8525466918945312,
+      "wilson_interval_95": [
+        0.8506168982699961,
+        0.8544558212443351
+      ]
+    },
+    "noise_sensitivity": [
+      {
+        "kind": "noise_sensitivity",
+        "probability": 0.0,
+        "mean_exact_win": 0.8535533905932737,
+        "seed_values": [
+          0.8535533905932736,
+          0.8535533905932737,
+          0.8535533905932737,
+          0.8535533905932738,
+          0.8535533905932737,
+          0.8535533905932737,
+          0.8535533905932737,
+          0.8535533905932737,
+          0.8535533905932737,
+          0.8535533905932737,
+          0.8535533905932737,
+          0.8535533905932737,
+          0.853553390593274,
+          0.8535533905932737,
+          0.8535533905932737,
+          0.8535533905932738
+        ]
+      },
+      {
+        "kind": "noise_sensitivity",
+        "probability": 0.02,
+        "mean_exact_win": 0.8395526763257801,
+        "seed_values": [
+          0.8395526763257801,
+          0.8395526763257801,
+          0.8395526763257801,
+          0.8395526763257801,
+          0.8395526763257801,
+          0.8395526763257801,
+          0.8395526763257801,
+          0.8395526763257801,
+          0.8395526763257801,
+          0.8395526763257801,
+          0.8395526763257801,
+          0.8395526763257801,
+          0.8395526763257801,
+          0.8395526763257801,
+          0.83955267632578,
+          0.8395526763257801
+        ]
+      },
+      {
+        "kind": "noise_sensitivity",
+        "probability": 0.05,
+        "mean_exact_win": 0.8190819350104296,
+        "seed_values": [
+          0.8190819350104295,
+          0.8190819350104296,
+          0.8190819350104295,
+          0.8190819350104296,
+          0.8190819350104296,
+          0.8190819350104296,
+          0.8190819350104296,
+          0.8190819350104296,
+          0.8190819350104296,
+          0.8190819350104295,
+          0.8190819350104295,
+          0.8190819350104296,
+          0.8190819350104297,
+          0.8190819350104296,
+          0.8190819350104295,
+          0.8190819350104295
+        ]
+      }
+    ],
+    "cell_table": [
+      {
+        "method": "classical_local",
+        "seed": 18001,
+        "exact_expected_win": 0.7499211376462427,
+        "checkpoint": "checkpoints/classical_local_seed-18001.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18002,
+        "exact_expected_win": 0.749924865540201,
+        "checkpoint": "checkpoints/classical_local_seed-18002.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18003,
+        "exact_expected_win": 0.7499274108401375,
+        "checkpoint": "checkpoints/classical_local_seed-18003.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18004,
+        "exact_expected_win": 0.7499256737940317,
+        "checkpoint": "checkpoints/classical_local_seed-18004.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18005,
+        "exact_expected_win": 0.7499322462366204,
+        "checkpoint": "checkpoints/classical_local_seed-18005.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18006,
+        "exact_expected_win": 0.7499230495450964,
+        "checkpoint": "checkpoints/classical_local_seed-18006.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18007,
+        "exact_expected_win": 0.7499162139310218,
+        "checkpoint": "checkpoints/classical_local_seed-18007.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18008,
+        "exact_expected_win": 0.7499291029721209,
+        "checkpoint": "checkpoints/classical_local_seed-18008.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18009,
+        "exact_expected_win": 0.749925478114136,
+        "checkpoint": "checkpoints/classical_local_seed-18009.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18010,
+        "exact_expected_win": 0.7499256187561943,
+        "checkpoint": "checkpoints/classical_local_seed-18010.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18011,
+        "exact_expected_win": 0.7499228552121264,
+        "checkpoint": "checkpoints/classical_local_seed-18011.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18012,
+        "exact_expected_win": 0.7499165672985617,
+        "checkpoint": "checkpoints/classical_local_seed-18012.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18013,
+        "exact_expected_win": 0.7499265907682344,
+        "checkpoint": "checkpoints/classical_local_seed-18013.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18014,
+        "exact_expected_win": 0.7499306798831199,
+        "checkpoint": "checkpoints/classical_local_seed-18014.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18015,
+        "exact_expected_win": 0.7499287375846553,
+        "checkpoint": "checkpoints/classical_local_seed-18015.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_local",
+        "seed": 18016,
+        "exact_expected_win": 0.7499241853202799,
+        "checkpoint": "checkpoints/classical_local_seed-18016.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18001,
+        "exact_expected_win": 0.7499699742638872,
+        "checkpoint": "checkpoints/classical_shared_seed-18001.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18002,
+        "exact_expected_win": 0.7499703572708282,
+        "checkpoint": "checkpoints/classical_shared_seed-18002.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18003,
+        "exact_expected_win": 0.7499700002373014,
+        "checkpoint": "checkpoints/classical_shared_seed-18003.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18004,
+        "exact_expected_win": 0.7499699659898691,
+        "checkpoint": "checkpoints/classical_shared_seed-18004.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18005,
+        "exact_expected_win": 0.7499708979489735,
+        "checkpoint": "checkpoints/classical_shared_seed-18005.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18006,
+        "exact_expected_win": 0.7499706902370384,
+        "checkpoint": "checkpoints/classical_shared_seed-18006.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18007,
+        "exact_expected_win": 0.7499703084271861,
+        "checkpoint": "checkpoints/classical_shared_seed-18007.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18008,
+        "exact_expected_win": 0.749970521846417,
+        "checkpoint": "checkpoints/classical_shared_seed-18008.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18009,
+        "exact_expected_win": 0.7499704511743335,
+        "checkpoint": "checkpoints/classical_shared_seed-18009.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18010,
+        "exact_expected_win": 0.7499700788526129,
+        "checkpoint": "checkpoints/classical_shared_seed-18010.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18011,
+        "exact_expected_win": 0.7499707133676144,
+        "checkpoint": "checkpoints/classical_shared_seed-18011.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18012,
+        "exact_expected_win": 0.7499704535645468,
+        "checkpoint": "checkpoints/classical_shared_seed-18012.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18013,
+        "exact_expected_win": 0.7499706645507627,
+        "checkpoint": "checkpoints/classical_shared_seed-18013.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18014,
+        "exact_expected_win": 0.7499699504830671,
+        "checkpoint": "checkpoints/classical_shared_seed-18014.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18015,
+        "exact_expected_win": 0.7499704458785141,
+        "checkpoint": "checkpoints/classical_shared_seed-18015.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "classical_shared",
+        "seed": 18016,
+        "exact_expected_win": 0.7499702483902037,
+        "checkpoint": "checkpoints/classical_shared_seed-18016.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18001,
+        "exact_expected_win": 0.7499956332757488,
+        "checkpoint": "checkpoints/quantum_separable_seed-18001.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18002,
+        "exact_expected_win": 0.75,
+        "checkpoint": "checkpoints/quantum_separable_seed-18002.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18003,
+        "exact_expected_win": 0.75,
+        "checkpoint": "checkpoints/quantum_separable_seed-18003.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18004,
+        "exact_expected_win": 0.7499956522671666,
+        "checkpoint": "checkpoints/quantum_separable_seed-18004.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18005,
+        "exact_expected_win": 0.75,
+        "checkpoint": "checkpoints/quantum_separable_seed-18005.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18006,
+        "exact_expected_win": 0.75,
+        "checkpoint": "checkpoints/quantum_separable_seed-18006.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18007,
+        "exact_expected_win": 0.75,
+        "checkpoint": "checkpoints/quantum_separable_seed-18007.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18008,
+        "exact_expected_win": 0.749999899879911,
+        "checkpoint": "checkpoints/quantum_separable_seed-18008.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18009,
+        "exact_expected_win": 0.75,
+        "checkpoint": "checkpoints/quantum_separable_seed-18009.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18010,
+        "exact_expected_win": 0.7499999999944438,
+        "checkpoint": "checkpoints/quantum_separable_seed-18010.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18011,
+        "exact_expected_win": 0.75,
+        "checkpoint": "checkpoints/quantum_separable_seed-18011.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18012,
+        "exact_expected_win": 0.749999990412738,
+        "checkpoint": "checkpoints/quantum_separable_seed-18012.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18013,
+        "exact_expected_win": 0.75,
+        "checkpoint": "checkpoints/quantum_separable_seed-18013.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18014,
+        "exact_expected_win": 0.7499999813049842,
+        "checkpoint": "checkpoints/quantum_separable_seed-18014.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18015,
+        "exact_expected_win": 0.7499999982138872,
+        "checkpoint": "checkpoints/quantum_separable_seed-18015.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_separable",
+        "seed": 18016,
+        "exact_expected_win": 0.75,
+        "checkpoint": "checkpoints/quantum_separable_seed-18016.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18001,
+        "exact_expected_win": 0.8535533905932736,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18001.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18002,
+        "exact_expected_win": 0.8535533905932737,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18002.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18003,
+        "exact_expected_win": 0.8535533905932737,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18003.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18004,
+        "exact_expected_win": 0.8535533905932738,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18004.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18005,
+        "exact_expected_win": 0.8535533905932737,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18005.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18006,
+        "exact_expected_win": 0.8535533905932737,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18006.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18007,
+        "exact_expected_win": 0.8535533905932737,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18007.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18008,
+        "exact_expected_win": 0.8535533905932737,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18008.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18009,
+        "exact_expected_win": 0.8535533905932737,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18009.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18010,
+        "exact_expected_win": 0.8535533905932737,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18010.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18011,
+        "exact_expected_win": 0.8535533905932737,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18011.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18012,
+        "exact_expected_win": 0.8535533905932737,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18012.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18013,
+        "exact_expected_win": 0.853553390593274,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18013.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18014,
+        "exact_expected_win": 0.8535533905932737,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18014.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18015,
+        "exact_expected_win": 0.8535533905932737,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18015.json",
+        "gradients_finite": true
+      },
+      {
+        "method": "quantum_entangled",
+        "seed": 18016,
+        "exact_expected_win": 0.8535533905932738,
+        "checkpoint": "checkpoints/quantum_entangled_seed-18016.json",
+        "gradients_finite": true
+      }
+    ]
+  }
+}

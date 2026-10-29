@@ -1,0 +1,162 @@
+{
+  "schema_version": "0.1.0",
+  "run_id": "17-nonlocal-development_attempt-01",
+  "stage": "17",
+  "protocol_id": "nonlocal-development-v1",
+  "hypothesis": "Equal-budget expected-return optimization identifies functioning settings for every admissible policy family and shows that a fresh confirmatory learned-advantage test is feasible.",
+  "method": "four-method-equal-budget-development",
+  "status": "completed",
+  "source_commit": "4ad54f488794bc05c9a191651c8cda88c5c69f2f",
+  "dependency_completion_commit": "235afac5d0dba03c1c84184905459cbe3a59f92e",
+  "dirty_tree": false,
+  "config_sha256": "826e6fd0e4676613376ca58b0240ef855e51d053e562a631ad4e80be119e4146",
+  "seed_streams": {
+    "model_init": {
+      "tuning": [
+        17001,
+        17002
+      ],
+      "pilot": [
+        17101,
+        17102,
+        17103,
+        17104
+      ]
+    },
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": null,
+    "validation": null,
+    "test": null
+  },
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "lockfile_sha256": "f70f05d7d474dde681e86c2cacbe8a43fee1e83c7adf4f7b09f73b3a57117d7e",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "hardware": {
+      "device": "CPU",
+      "available_cpus": 1,
+      "max_job_threads": 1
+    },
+    "dependencies": {
+      "rustworkx": "0.18.1",
+      "attrs": "26.1.0",
+      "typing_extensions": "4.16.0",
+      "scipy-openblas32": "0.3.34.237.2",
+      "mpmath": "1.3.0",
+      "pennylane": "0.45.1",
+      "PyYAML": "6.0.3",
+      "pip": "26.2.2",
+      "gast": "0.7.0",
+      "requests": "2.34.2",
+      "cachetools": "7.2.7",
+      "torch": "2.15.0+cpu",
+      "sympy": "1.14.0",
+      "jsonschema-specifications": "2025.9.1",
+      "fsspec": "2026.9.0",
+      "termcolor": "3.3.0",
+      "MarkupSafe": "3.0.3",
+      "pytest": "9.2.0",
+      "gymnasium": "1.4.0",
+      "charset-normalizer": "3.5.2",
+      "iniconfig": "2.3.1",
+      "referencing": "0.37.0",
+      "tomlkit": "0.15.2",
+      "packaging": "26.3",
+      "pennylane_lightning": "0.45.0",
+      "jsonschema": "4.26.0",
+      "Farama-Notifications": "0.0.6",
+      "diastatic-malt": "2.15.3",
+      "gtsam": "4.3.0",
+      "Jinja2": "3.1.6",
+      "autoray": "0.8.4",
+      "setuptools": "78.1.0",
+      "rpds-py": "2026.9.1",
+      "scipy": "1.18.1",
+      "autograd": "1.8.0",
+      "filelock": "4.2.4",
+      "pluggy": "1.7.0",
+      "urllib3": "2.8.0",
+      "cloudpickle": "3.1.2",
+      "Pygments": "2.21.0",
+      "numpy": "2.5.4",
+      "appdirs": "1.4.4",
+      "idna": "3.20",
+      "certifi": "2026.10.23",
+      "networkx": "3.7"
+    }
+  },
+  "model": {
+    "actor": "four registered decentralized policy families",
+    "encoder": "identity private bit",
+    "critic": "none; exact common contextual-bandit return",
+    "parameter_counts": {
+      "classical_local": 4,
+      "classical_shared": 16,
+      "quantum_separable": 4,
+      "quantum_entangled": 4
+    },
+    "optimizer": "Adam with equal four-rate/two-seed tuning opportunity and final-checkpoint selection"
+  },
+  "quantum": {
+    "device": "analytic two-qubit policy formula validated against default.qubit in Stage16",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "backpropagation through exact expected reward",
+    "dtype": "float64",
+    "entanglement": "Bell phi+ intervention only",
+    "observables": [
+      "ZZ"
+    ],
+    "noise": null,
+    "resource_accounting": "four context circuit-equivalent evaluations per quantum optimizer update; zero sampled shots"
+  },
+  "budget": {
+    "profile": "tuning",
+    "primitive_steps": 0,
+    "wall_seconds": 7200
+  },
+  "resources_consumed": {
+    "primitive_steps": 0,
+    "decisions": 0,
+    "updates": 20800,
+    "wall_seconds": 9.586776433000068,
+    "cpu_core_hours": 0.0026627136111111115,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 41600,
+    "shots": 0
+  },
+  "execution_segments": [
+    {
+      "started_utc": "2026-10-29T09:54:29.122544+00:00",
+      "ended_utc": "2026-10-29T09:54:38.734797+00:00",
+      "primitive_steps": 0,
+      "decisions": 0,
+      "updates": 20800,
+      "wall_seconds": 9.586776433000068,
+      "cpu_core_hours": 0.0026627136111111115,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 41600,
+      "shots": 0
+    }
+  ],
+  "evaluation": {
+    "policy_mode": "exact expected common return",
+    "checkpoint_selection": "final update only; development selects learning rate",
+    "metrics_protocol": "nonlocal-development-v1"
+  },
+  "artifacts": "artifact_manifest.json",
+  "failure": null,
+  "publication": {
+    "status": "pending",
+    "source_remote_verified": true
+  }
+}

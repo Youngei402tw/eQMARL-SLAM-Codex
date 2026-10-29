@@ -1,0 +1,4622 @@
+{
+  "tuning": [
+    {
+      "method": "classical_local",
+      "seed": 17001,
+      "learning_rate": 0.03,
+      "updates": 400,
+      "final_expected_win": 0.7464073714913267,
+      "parameters": {
+        "alice_logits": [
+          -3.0931192441730677,
+          5.625840589728172
+        ],
+        "bob_logits": [
+          3.3548272721948558,
+          -6.045508199415667
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.47350847393176104
+        },
+        {
+          "update": 25,
+          "expected_win": 0.5213541804490605
+        },
+        {
+          "update": 50,
+          "expected_win": 0.6117037092894417
+        },
+        {
+          "update": 75,
+          "expected_win": 0.6798906970952406
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7104416462672837
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7242387912481241
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7315139978802082
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7358878529065145
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7387659623775384
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7407826554524549
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7422621998785315
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7433864759798718
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7442648635966018
+        },
+        {
+          "update": 325,
+          "expected_win": 0.744966800737157
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7455383220080858
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7460110518041687
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7464073714913267
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_local",
+      "seed": 17002,
+      "learning_rate": 0.03,
+      "updates": 400,
+      "final_expected_win": 0.7463552927700167,
+      "parameters": {
+        "alice_logits": [
+          -3.312354227250401,
+          -5.814940221739475
+        ],
+        "bob_logits": [
+          -5.769803124064108,
+          3.148898688679374
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.4918528245617117
+        },
+        {
+          "update": 25,
+          "expected_win": 0.563680357951037
+        },
+        {
+          "update": 50,
+          "expected_win": 0.6479513941659767
+        },
+        {
+          "update": 75,
+          "expected_win": 0.6950782903975883
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7162794834604511
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7267700100401867
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7327451621253119
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7365293617314193
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7391088429164689
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7409622168769517
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7423475832811772
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7434155641552811
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7442595359172656
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7449402175396429
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7454986531332511
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7459634943542462
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7463552927700167
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_local",
+      "seed": 17001,
+      "learning_rate": 0.08,
+      "updates": 400,
+      "final_expected_win": 0.749193910502584,
+      "parameters": {
+        "alice_logits": [
+          -4.173136226937608,
+          7.043831562138008
+        ],
+        "bob_logits": [
+          4.128557463179238,
+          -7.557514772762434
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.47719231790229577
+        },
+        {
+          "update": 25,
+          "expected_win": 0.6376736686923448
+        },
+        {
+          "update": 50,
+          "expected_win": 0.726626318582599
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7399386623912374
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7436837457397595
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7454658291914634
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7465270604046953
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7472285800454148
+        },
+        {
+          "update": 200,
+          "expected_win": 0.747722538934426
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7480862611620169
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7483633726869916
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7485802831765297
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7487538521415855
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7488953070585194
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7490123885847102
+        },
+        {
+          "update": 375,
+          "expected_win": 0.749110590718946
+        },
+        {
+          "update": 400,
+          "expected_win": 0.749193910502584
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_local",
+      "seed": 17002,
+      "learning_rate": 0.08,
+      "updates": 400,
+      "final_expected_win": 0.7492167289657921,
+      "parameters": {
+        "alice_logits": [
+          -4.221192010464505,
+          -7.337757447384247
+        ],
+        "bob_logits": [
+          -7.292550994857975,
+          4.007944385350407
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.4953239856132803
+        },
+        {
+          "update": 25,
+          "expected_win": 0.678657295933145
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7327425508279478
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7414378360485163
+        },
+        {
+          "update": 100,
+          "expected_win": 0.744334389196736
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7458332522819024
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7467618583729394
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7473901046561051
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7478395648095157
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7481744497728572
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7484319318950174
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7486349487293895
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7487983647202746
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7489321997280671
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7490434315462701
+        },
+        {
+          "update": 375,
+          "expected_win": 0.74913705468006
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7492167289657921
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_local",
+      "seed": 17001,
+      "learning_rate": 0.15,
+      "updates": 400,
+      "final_expected_win": 0.7496776983892626,
+      "parameters": {
+        "alice_logits": [
+          -5.356184116577567,
+          7.918206891793019
+        ],
+        "bob_logits": [
+          3.943240095504566,
+          -8.520527691602519
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.482009278628925
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7189570952397148
+        },
+        {
+          "update": 50,
+          "expected_win": 0.744680065503236
+        },
+        {
+          "update": 75,
+          "expected_win": 0.747063806709487
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7479102376849187
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7484022138515076
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7487301864859978
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7489620367428301
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7491326309906887
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7492621882291258
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7493631647207776
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7494435849007823
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7495088133718315
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7495625516102149
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7496074239711812
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7496453355936599
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7496776983892626
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_local",
+      "seed": 17002,
+      "learning_rate": 0.15,
+      "updates": 400,
+      "final_expected_win": 0.7497027579029819,
+      "parameters": {
+        "alice_logits": [
+          -4.744451629847738,
+          -8.298247369745061
+        ],
+        "bob_logits": [
+          -8.251585565422971,
+          4.555246881371355
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5006327527324919
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7321810916724614
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7460107907776777
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7475947637698686
+        },
+        {
+          "update": 100,
+          "expected_win": 0.748231153013976
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7486211229305506
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7488886804053982
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7490817220089071
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7492260390697199
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7493370551401419
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7494244981771079
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7494947561626106
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7495521685403683
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7495997703535565
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7496397386687904
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7496736699640719
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7497027579029819
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_local",
+      "seed": 17001,
+      "learning_rate": 0.3,
+      "updates": 400,
+      "final_expected_win": 0.7498658702718523,
+      "parameters": {
+        "alice_logits": [
+          -8.147107281840809,
+          8.63343796298782
+        ],
+        "bob_logits": [
+          1.1766356786882455,
+          -9.656543468345472
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.49082068383013105
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7462042397187821
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7490198233560452
+        },
+        {
+          "update": 75,
+          "expected_win": 0.749287032369817
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7494117958144564
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7495043086168534
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7495774837894835
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7496360867871521
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7496834851575545
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7497222335511196
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7497542562938435
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7497809992165625
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7498035532257613
+        },
+        {
+          "update": 325,
+          "expected_win": 0.749822747995858
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7498392206606384
+        },
+        {
+          "update": 375,
+          "expected_win": 0.749853465567791
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7498658702718523
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_local",
+      "seed": 17002,
+      "learning_rate": 0.3,
+      "updates": 400,
+      "final_expected_win": 0.749902640074118,
+      "parameters": {
+        "alice_logits": [
+          -5.346369798056613,
+          -9.391296365726607
+        ],
+        "bob_logits": [
+          -9.343414596503102,
+          5.256336006708514
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.513567307502938
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7478844003050096
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7493682142724666
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7495256173539192
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7496032731112485
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7496623282018544
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7497097167333959
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7497480795091089
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7497793866357823
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7498051790161548
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7498266397373691
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7498446702570155
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7498599585253247
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7498730328760085
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7498843025246602
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7498940874102571
+        },
+        {
+          "update": 400,
+          "expected_win": 0.749902640074118
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_shared",
+      "seed": 17001,
+      "learning_rate": 0.03,
+      "updates": 400,
+      "final_expected_win": 0.7482588223056039,
+      "parameters": {
+        "strategy_logits": [
+          2.8740168004976083,
+          2.8066490350127835,
+          -2.7170751898314167,
+          -2.94867976106415,
+          2.7327551003193578,
+          -2.8656822693222237,
+          2.758187222799318,
+          -2.848298307099042,
+          -2.8396706816361994,
+          2.9980917184683786,
+          -2.752060260295284,
+          2.698516656521498,
+          -2.837006779831188,
+          -2.829089919973256,
+          2.9109957298196165,
+          2.8180242351850655
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.508710914054902
+        },
+        {
+          "update": 25,
+          "expected_win": 0.6560789728376147
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7136987149183607
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7304281442365987
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7370898416669847
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7405858433436938
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7427259511388973
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7441585600773273
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7451759498795285
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7459301154808999
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7465078491743999
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7469621538391709
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7473271089869116
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7476255483335519
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7478732975630196
+        },
+        {
+          "update": 375,
+          "expected_win": 0.748081641101334
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7482588223056039
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_shared",
+      "seed": 17002,
+      "learning_rate": 0.03,
+      "updates": 400,
+      "final_expected_win": 0.7482451686234568,
+      "parameters": {
+        "strategy_logits": [
+          3.023241527580176,
+          2.75866416647606,
+          -2.699318431767263,
+          -2.752410694325283,
+          2.8511273665605192,
+          -2.8088286550094272,
+          2.8957519158418052,
+          -2.7962115312198055,
+          -2.865613791894641,
+          2.700649795948601,
+          -2.7917400454103958,
+          2.7302497549995373,
+          -2.8714025911339127,
+          -2.8591752039870677,
+          2.8212712383101035,
+          2.934333960889179
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5061143245454043
+        },
+        {
+          "update": 25,
+          "expected_win": 0.6546045219216615
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7132063067955198
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7302112089860276
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7369625880735808
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7404989891465006
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7426615887060966
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7441083489509104
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7451353569256776
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7458964214085362
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7464793063249777
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7469375794830768
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7473056696702117
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7476066372320886
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7478564607773993
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7480665313310012
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7482451686234568
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_shared",
+      "seed": 17001,
+      "learning_rate": 0.08,
+      "updates": 400,
+      "final_expected_win": 0.7496245818264896,
+      "parameters": {
+        "strategy_logits": [
+          3.6425239804550817,
+          3.5751557755161887,
+          -3.4855821890123244,
+          -3.7171865161582303,
+          3.5012613235017143,
+          -3.634189118450564,
+          3.52669362835854,
+          -3.6168051749537433,
+          -3.608177558664575,
+          3.7665996342467003,
+          -3.5205672261307344,
+          3.4670226267347988,
+          -3.6055136596761104,
+          -3.597596808144541,
+          3.679503138705975,
+          3.586531051983934
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5211636595688849
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7334441547925177
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7450859485973998
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7469318527482083
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7477478824871288
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7482508231488085
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7485935793171149
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7488394952683197
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7490226462308021
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7491631804009099
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7492736863641267
+        },
+        {
+          "update": 275,
+          "expected_win": 0.749362373459966
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7494347901012376
+        },
+        {
+          "update": 325,
+          "expected_win": 0.749494802201821
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7495451748705959
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7495879313519397
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7496245818264896
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_shared",
+      "seed": 17002,
+      "learning_rate": 0.08,
+      "updates": 400,
+      "final_expected_win": 0.7496218450874705,
+      "parameters": {
+        "strategy_logits": [
+          3.79203427764011,
+          3.5274552555404917,
+          -3.4681102132489894,
+          -3.521202424790535,
+          3.6199190866493525,
+          -3.5776203282105055,
+          3.6645439202231422,
+          -3.565003217509159,
+          -3.634405404102343,
+          3.4694404582434855,
+          -3.560531736298721,
+          3.499040638132379,
+          -3.6401941969270557,
+          -3.6279668232858637,
+          3.590062760985016,
+          3.703126201046914
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5185812069295244
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7332233787732281
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7450444254962799
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7469086030335268
+        },
+        {
+          "update": 100,
+          "expected_win": 0.747731135948751
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7482378874596702
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7485832110708732
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7488309598509347
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7490154710773302
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7491570460987891
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7492683686471342
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7493577098497017
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7494306597353835
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7494911131294375
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7495418557675135
+        },
+        {
+          "update": 375,
+          "expected_win": 0.749584925953602
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7496218450874705
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_shared",
+      "seed": 17001,
+      "learning_rate": 0.15,
+      "updates": 400,
+      "final_expected_win": 0.7498604092058864,
+      "parameters": {
+        "strategy_logits": [
+          4.137422668932403,
+          4.070054321222633,
+          -3.9804808761140933,
+          -4.2120849959600175,
+          3.9961597011398196,
+          -4.129087678114508,
+          4.021592065247625,
+          -4.111703750521751,
+          -4.103076142023675,
+          4.261498561779441,
+          -4.015465884912616,
+          3.961920922187854,
+          -4.10041224542727,
+          -4.092495400967177,
+          4.1744019015583,
+          4.08142962247744
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5384078937198575
+        },
+        {
+          "update": 25,
+          "expected_win": 0.747060020800031
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7489450086012883
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7492159830624768
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7493607188091644
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7494678554224797
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7495508137095098
+        },
+        {
+          "update": 175,
+          "expected_win": 0.749615951547369
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7496677817828068
+        },
+        {
+          "update": 225,
+          "expected_win": 0.749709593409669
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7497437746423087
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7497720669328889
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7497957526855058
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7498157879575624
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7498328948681721
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7498476259390634
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7498604092058864
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_shared",
+      "seed": 17002,
+      "learning_rate": 0.15,
+      "updates": 400,
+      "final_expected_win": 0.7498594806774137,
+      "parameters": {
+        "strategy_logits": [
+          4.287251846223047,
+          4.022672287321263,
+          -3.96332752325785,
+          -4.016419691406517,
+          4.115136322365042,
+          -4.072837546119531,
+          4.159761247816759,
+          -4.06022044655063,
+          -4.12962257013249,
+          3.9646573521007253,
+          -4.055748969251921,
+          3.9942576033601074,
+          -4.135411357501202,
+          -4.123183995347461,
+          4.085279932900308,
+          4.1983436048390015
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5358663693504717
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7470345609326964
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7489392256168058
+        },
+        {
+          "update": 75,
+          "expected_win": 0.749211707676604
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7493570753365154
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7494647092073649
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7495480841589881
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7496135692311012
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7496656881694288
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7497077405402373
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7497421236875474
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7497705865203783
+        },
+        {
+          "update": 300,
+          "expected_win": 0.749794417390294
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7498145770586673
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7498317913627331
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7498466157731541
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7498594806774137
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_shared",
+      "seed": 17001,
+      "learning_rate": 0.3,
+      "updates": 400,
+      "final_expected_win": 0.7499625480237678,
+      "parameters": {
+        "strategy_logits": [
+          4.79535256792699,
+          4.727984432845196,
+          -4.6384110430596275,
+          -4.870014878221497,
+          4.654090063065779,
+          -4.787017670050297,
+          4.67952233893139,
+          -4.769633764298527,
+          -4.761006166499912,
+          4.919428104749929,
+          -4.673396012966583,
+          4.619851406511631,
+          -4.758342273188511,
+          -4.750425438439631,
+          4.832331689786556,
+          4.739359697184761
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5739379150967574
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7497559912586174
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7498963089156192
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7499093868432802
+        },
+        {
+          "update": 100,
+          "expected_win": 0.749915442612096
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499209180564076
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499261958729925
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499312176319131
+        },
+        {
+          "update": 200,
+          "expected_win": 0.749935931258757
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499403136392793
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499443621403882
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499480868258378
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499515050512349
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499546378875437
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7499575078222969
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7499601373301019
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7499625480237678
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "classical_shared",
+      "seed": 17002,
+      "learning_rate": 0.3,
+      "updates": 400,
+      "final_expected_win": 0.749962408657135,
+      "parameters": {
+        "strategy_logits": [
+          4.946639884462061,
+          4.6820611328271795,
+          -4.622716203458064,
+          -4.675808311800636,
+          4.774524861184573,
+          -4.732226099383459,
+          4.819149648466185,
+          -4.719609015157803,
+          -4.789011051894504,
+          4.624046405022194,
+          -4.715137543250425,
+          4.653646548951459,
+          -4.794799831743494,
+          -4.782572485422295,
+          4.744668567665705,
+          4.857731890897782
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5715591124539442
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7497553906332788
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7498962931119801
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7499093630688635
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7499153916335937
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499208419269617
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499260988925522
+        },
+        {
+          "update": 175,
+          "expected_win": 0.749931104241437
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499358055401335
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499401791358505
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499442218148011
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499479430884073
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499513598210736
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499544926646219
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7499573637586282
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7499599952943556
+        },
+        {
+          "update": 400,
+          "expected_win": 0.749962408657135
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_separable",
+      "seed": 17001,
+      "learning_rate": 0.03,
+      "updates": 400,
+      "final_expected_win": 0.75,
+      "parameters": {
+        "alpha": [
+          -2.4419178028371915,
+          1.3424187884949428e-10
+        ],
+        "beta": [
+          -3.2931374204829185e-09,
+          3.1415926520151745
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.419073409888939
+        },
+        {
+          "update": 25,
+          "expected_win": 0.598123716498266
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7329232918882986
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7499263484551293
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7499137073725632
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499961037160054
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499998431506809
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499999571988454
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499999986358867
+        },
+        {
+          "update": 225,
+          "expected_win": 0.749999999940475
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499999999941479
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499999999987835
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499999999999238
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499999999999959
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7499999999999998
+        },
+        {
+          "update": 375,
+          "expected_win": 0.75
+        },
+        {
+          "update": 400,
+          "expected_win": 0.75
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_separable",
+      "seed": 17002,
+      "learning_rate": 0.03,
+      "updates": 400,
+      "final_expected_win": 0.75,
+      "parameters": {
+        "alpha": [
+          0.8873104876765923,
+          3.141592650742381
+        ],
+        "beta": [
+          3.14159265192595,
+          4.4986511937964365e-09
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.3628782272126931
+        },
+        {
+          "update": 25,
+          "expected_win": 0.5197056596173287
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7133668396656103
+        },
+        {
+          "update": 75,
+          "expected_win": 0.747562737461865
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7497810130626323
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499911193113438
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499989542285298
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499999247498728
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499999940228185
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499999994776132
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499999999824261
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499999999998287
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499999999998643
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499999999999851
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7499999999999996
+        },
+        {
+          "update": 375,
+          "expected_win": 0.75
+        },
+        {
+          "update": 400,
+          "expected_win": 0.75
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_separable",
+      "seed": 17001,
+      "learning_rate": 0.08,
+      "updates": 400,
+      "final_expected_win": 0.75,
+      "parameters": {
+        "alpha": [
+          -2.8868830767143008,
+          -3.4610711033813645e-11
+        ],
+        "beta": [
+          6.884811195161386e-08,
+          3.1415926528664744
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.43433959858969695
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7442577987531362
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7490800774016415
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7498403007912253
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7499853095761562
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499986283315396
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499996577387453
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499999380284939
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499999895037661
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499999985524521
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499999998527227
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499999999899634
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499999999996598
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499999999999993
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7499999999999989
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7499999999999998
+        },
+        {
+          "update": 400,
+          "expected_win": 0.75
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_separable",
+      "seed": 17002,
+      "learning_rate": 0.08,
+      "updates": 400,
+      "final_expected_win": 0.75,
+      "parameters": {
+        "alpha": [
+          0.3161891532073719,
+          3.1415926545402315
+        ],
+        "beta": [
+          3.1415926562229872,
+          -9.000120808055625e-11
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.37525725437054114
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7428976858183494
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7474038801404802
+        },
+        {
+          "update": 75,
+          "expected_win": 0.749799874409455
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7499918597054556
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499998715101517
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499999668488162
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499999941629475
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499999993886163
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499999999841631
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499999999985102
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499999999999052
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499999999999805
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499999999999993
+        },
+        {
+          "update": 350,
+          "expected_win": 0.75
+        },
+        {
+          "update": 375,
+          "expected_win": 0.75
+        },
+        {
+          "update": 400,
+          "expected_win": 0.75
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_separable",
+      "seed": 17001,
+      "learning_rate": 0.15,
+      "updates": 400,
+      "final_expected_win": 0.75,
+      "parameters": {
+        "alpha": [
+          -3.141592654956408,
+          -1.046646870207423e-09
+        ],
+        "beta": [
+          -0.6991414309259255,
+          3.1415926538524683
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.45561031754775966
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7403405879836302
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7489685426105639
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7499728093825568
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7499982877875526
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499998709519455
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499999769745517
+        },
+        {
+          "update": 175,
+          "expected_win": 0.749999996671671
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499999999489548
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499999999875975
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499999999996685
+        },
+        {
+          "update": 275,
+          "expected_win": 0.749999999999905
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499999999999949
+        },
+        {
+          "update": 325,
+          "expected_win": 0.75
+        },
+        {
+          "update": 350,
+          "expected_win": 0.75
+        },
+        {
+          "update": 375,
+          "expected_win": 0.75
+        },
+        {
+          "update": 400,
+          "expected_win": 0.75
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_separable",
+      "seed": 17002,
+      "learning_rate": 0.15,
+      "updates": 400,
+      "final_expected_win": 0.75,
+      "parameters": {
+        "alpha": [
+          2.0446448155938208e-10,
+          3.141592652609525
+        ],
+        "beta": [
+          4.801327630573759,
+          -4.731363641672679e-10
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.392959353987856
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7340771033916946
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7485826371050812
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7498533010688385
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7499909736167714
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499997941014215
+        },
+        {
+          "update": 150,
+          "expected_win": 0.749999939107902
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499999971483473
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499999999495136
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499999999925426
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499999999988288
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499999999999543
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499999999999967
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499999999999999
+        },
+        {
+          "update": 350,
+          "expected_win": 0.75
+        },
+        {
+          "update": 375,
+          "expected_win": 0.75
+        },
+        {
+          "update": 400,
+          "expected_win": 0.75
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_separable",
+      "seed": 17001,
+      "learning_rate": 0.3,
+      "updates": 400,
+      "final_expected_win": 0.75,
+      "parameters": {
+        "alpha": [
+          -3.141592654329288,
+          1.0288168480636827e-09
+        ],
+        "beta": [
+          -2.066494908079484,
+          3.14159265410046
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.49900188045733734
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7420576585520711
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7494806930845263
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7499819679656705
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7499962946106067
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499998669888496
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499999986138348
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499999990922279
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499999999242264
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499999999920883
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499999999995292
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499999999999887
+        },
+        {
+          "update": 300,
+          "expected_win": 0.749999999999996
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499999999999997
+        },
+        {
+          "update": 350,
+          "expected_win": 0.75
+        },
+        {
+          "update": 375,
+          "expected_win": 0.75
+        },
+        {
+          "update": 400,
+          "expected_win": 0.75
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_separable",
+      "seed": 17002,
+      "learning_rate": 0.3,
+      "updates": 400,
+      "final_expected_win": 0.75,
+      "parameters": {
+        "alpha": [
+          1.2206179078660885e-10,
+          3.141592655207787
+        ],
+        "beta": [
+          5.86434624829315,
+          -1.1120205181244224e-09
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.430847584308647
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7377123538119965
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7497717471029544
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7499544028718581
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7499959609965313
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499993525058182
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499999925731509
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499999984083612
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499999998747622
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499999999931135
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499999999995263
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499999999999106
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499999999999963
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499999999999996
+        },
+        {
+          "update": 350,
+          "expected_win": 0.75
+        },
+        {
+          "update": 375,
+          "expected_win": 0.75
+        },
+        {
+          "update": 400,
+          "expected_win": 0.75
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_entangled",
+      "seed": 17001,
+      "learning_rate": 0.03,
+      "updates": 400,
+      "final_expected_win": 0.8535533905932737,
+      "parameters": {
+        "alpha": [
+          -3.892052438356992,
+          0.8203365438126966
+        ],
+        "beta": [
+          1.6057347027781055,
+          3.1765310305776064
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.22516610390573105
+        },
+        {
+          "update": 25,
+          "expected_win": 0.6760855188915538
+        },
+        {
+          "update": 50,
+          "expected_win": 0.8483427074517861
+        },
+        {
+          "update": 75,
+          "expected_win": 0.853335001591955
+        },
+        {
+          "update": 100,
+          "expected_win": 0.8534971147059408
+        },
+        {
+          "update": 125,
+          "expected_win": 0.8535488154512236
+        },
+        {
+          "update": 150,
+          "expected_win": 0.8535529461679175
+        },
+        {
+          "update": 175,
+          "expected_win": 0.8535533636062993
+        },
+        {
+          "update": 200,
+          "expected_win": 0.8535533887749185
+        },
+        {
+          "update": 225,
+          "expected_win": 0.8535533904850628
+        },
+        {
+          "update": 250,
+          "expected_win": 0.8535533905915069
+        },
+        {
+          "update": 275,
+          "expected_win": 0.8535533905931144
+        },
+        {
+          "update": 300,
+          "expected_win": 0.8535533905932132
+        },
+        {
+          "update": 325,
+          "expected_win": 0.8535533905932681
+        },
+        {
+          "update": 350,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 375,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 400,
+          "expected_win": 0.8535533905932737
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_entangled",
+      "seed": 17002,
+      "learning_rate": 0.03,
+      "updates": 400,
+      "final_expected_win": 0.8535533905932737,
+      "parameters": {
+        "alpha": [
+          1.1019635453632064,
+          2.672759876117125
+        ],
+        "beta": [
+          1.8873617109086394,
+          0.3165653811487227
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.49228369135513206
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7580729647202675
+        },
+        {
+          "update": 50,
+          "expected_win": 0.8502083668509957
+        },
+        {
+          "update": 75,
+          "expected_win": 0.8532585933515817
+        },
+        {
+          "update": 100,
+          "expected_win": 0.8535101078531521
+        },
+        {
+          "update": 125,
+          "expected_win": 0.853549461630272
+        },
+        {
+          "update": 150,
+          "expected_win": 0.8535533070029018
+        },
+        {
+          "update": 175,
+          "expected_win": 0.8535533752106341
+        },
+        {
+          "update": 200,
+          "expected_win": 0.8535533892226952
+        },
+        {
+          "update": 225,
+          "expected_win": 0.8535533905176866
+        },
+        {
+          "update": 250,
+          "expected_win": 0.8535533905843866
+        },
+        {
+          "update": 275,
+          "expected_win": 0.8535533905929409
+        },
+        {
+          "update": 300,
+          "expected_win": 0.8535533905932705
+        },
+        {
+          "update": 325,
+          "expected_win": 0.853553390593273
+        },
+        {
+          "update": 350,
+          "expected_win": 0.8535533905932736
+        },
+        {
+          "update": 375,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 400,
+          "expected_win": 0.8535533905932737
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_entangled",
+      "seed": 17001,
+      "learning_rate": 0.08,
+      "updates": 400,
+      "final_expected_win": 0.8535533905932738,
+      "parameters": {
+        "alpha": [
+          -3.8926111039988465,
+          0.8197778750879221
+        ],
+        "beta": [
+          1.6051760398678305,
+          3.1759723666886086
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.2460111408857294
+        },
+        {
+          "update": 25,
+          "expected_win": 0.8104412625415041
+        },
+        {
+          "update": 50,
+          "expected_win": 0.8526755089794278
+        },
+        {
+          "update": 75,
+          "expected_win": 0.8532896448240105
+        },
+        {
+          "update": 100,
+          "expected_win": 0.8535451780940904
+        },
+        {
+          "update": 125,
+          "expected_win": 0.8535531402232079
+        },
+        {
+          "update": 150,
+          "expected_win": 0.853553373737675
+        },
+        {
+          "update": 175,
+          "expected_win": 0.853553388840452
+        },
+        {
+          "update": 200,
+          "expected_win": 0.8535533902745105
+        },
+        {
+          "update": 225,
+          "expected_win": 0.8535533905424788
+        },
+        {
+          "update": 250,
+          "expected_win": 0.8535533905912381
+        },
+        {
+          "update": 275,
+          "expected_win": 0.8535533905932022
+        },
+        {
+          "update": 300,
+          "expected_win": 0.8535533905932534
+        },
+        {
+          "update": 325,
+          "expected_win": 0.8535533905932736
+        },
+        {
+          "update": 350,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 375,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 400,
+          "expected_win": 0.8535533905932738
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_entangled",
+      "seed": 17002,
+      "learning_rate": 0.08,
+      "updates": 400,
+      "final_expected_win": 0.8535533905932737,
+      "parameters": {
+        "alpha": [
+          1.151540220819833,
+          2.722336545788445
+        ],
+        "beta": [
+          1.9369383833281062,
+          0.3661420571542212
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5168460951666255
+        },
+        {
+          "update": 25,
+          "expected_win": 0.8446998916383643
+        },
+        {
+          "update": 50,
+          "expected_win": 0.8527429961922375
+        },
+        {
+          "update": 75,
+          "expected_win": 0.8534607325187117
+        },
+        {
+          "update": 100,
+          "expected_win": 0.8535480581520865
+        },
+        {
+          "update": 125,
+          "expected_win": 0.8535527654465969
+        },
+        {
+          "update": 150,
+          "expected_win": 0.8535533558660466
+        },
+        {
+          "update": 175,
+          "expected_win": 0.8535533882609379
+        },
+        {
+          "update": 200,
+          "expected_win": 0.8535533904127066
+        },
+        {
+          "update": 225,
+          "expected_win": 0.8535533905777646
+        },
+        {
+          "update": 250,
+          "expected_win": 0.8535533905916994
+        },
+        {
+          "update": 275,
+          "expected_win": 0.8535533905931423
+        },
+        {
+          "update": 300,
+          "expected_win": 0.8535533905932646
+        },
+        {
+          "update": 325,
+          "expected_win": 0.8535533905932733
+        },
+        {
+          "update": 350,
+          "expected_win": 0.8535533905932736
+        },
+        {
+          "update": 375,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 400,
+          "expected_win": 0.8535533905932737
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_entangled",
+      "seed": 17001,
+      "learning_rate": 0.15,
+      "updates": 400,
+      "final_expected_win": 0.8535533905932737,
+      "parameters": {
+        "alpha": [
+          -3.8933819473524656,
+          0.8190070337187393
+        ],
+        "beta": [
+          1.6044051976211917,
+          3.1752015238133198
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.2794061159501547
+        },
+        {
+          "update": 25,
+          "expected_win": 0.836575725199578
+        },
+        {
+          "update": 50,
+          "expected_win": 0.8520186228458455
+        },
+        {
+          "update": 75,
+          "expected_win": 0.8533664628741392
+        },
+        {
+          "update": 100,
+          "expected_win": 0.853549608816053
+        },
+        {
+          "update": 125,
+          "expected_win": 0.8535529241491834
+        },
+        {
+          "update": 150,
+          "expected_win": 0.8535533211766595
+        },
+        {
+          "update": 175,
+          "expected_win": 0.8535533850682682
+        },
+        {
+          "update": 200,
+          "expected_win": 0.8535533903043472
+        },
+        {
+          "update": 225,
+          "expected_win": 0.853553390588311
+        },
+        {
+          "update": 250,
+          "expected_win": 0.8535533905915775
+        },
+        {
+          "update": 275,
+          "expected_win": 0.8535533905931365
+        },
+        {
+          "update": 300,
+          "expected_win": 0.8535533905932668
+        },
+        {
+          "update": 325,
+          "expected_win": 0.8535533905932733
+        },
+        {
+          "update": 350,
+          "expected_win": 0.8535533905932735
+        },
+        {
+          "update": 375,
+          "expected_win": 0.853553390593274
+        },
+        {
+          "update": 400,
+          "expected_win": 0.8535533905932737
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_entangled",
+      "seed": 17002,
+      "learning_rate": 0.15,
+      "updates": 400,
+      "final_expected_win": 0.8535533905932737,
+      "parameters": {
+        "alpha": [
+          1.1919981805637512,
+          2.762794508754742
+        ],
+        "beta": [
+          1.9773963446898517,
+          0.40660001910540383
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5512668586008469
+        },
+        {
+          "update": 25,
+          "expected_win": 0.8480573419500252
+        },
+        {
+          "update": 50,
+          "expected_win": 0.852451024317641
+        },
+        {
+          "update": 75,
+          "expected_win": 0.8534493310022582
+        },
+        {
+          "update": 100,
+          "expected_win": 0.8535476089144111
+        },
+        {
+          "update": 125,
+          "expected_win": 0.8535530944590783
+        },
+        {
+          "update": 150,
+          "expected_win": 0.8535533671261285
+        },
+        {
+          "update": 175,
+          "expected_win": 0.8535533882353761
+        },
+        {
+          "update": 200,
+          "expected_win": 0.8535533905011323
+        },
+        {
+          "update": 225,
+          "expected_win": 0.85355339057684
+        },
+        {
+          "update": 250,
+          "expected_win": 0.8535533905924138
+        },
+        {
+          "update": 275,
+          "expected_win": 0.8535533905932033
+        },
+        {
+          "update": 300,
+          "expected_win": 0.8535533905932677
+        },
+        {
+          "update": 325,
+          "expected_win": 0.8535533905932733
+        },
+        {
+          "update": 350,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 375,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 400,
+          "expected_win": 0.8535533905932737
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_entangled",
+      "seed": 17001,
+      "learning_rate": 0.3,
+      "updates": 400,
+      "final_expected_win": 0.8535533905932737,
+      "parameters": {
+        "alpha": [
+          -3.892787279943685,
+          0.8196016997816095
+        ],
+        "beta": [
+          1.6049998629614262,
+          3.175796188947412
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.36455224683344517
+        },
+        {
+          "update": 25,
+          "expected_win": 0.8330857394350693
+        },
+        {
+          "update": 50,
+          "expected_win": 0.8518457741204628
+        },
+        {
+          "update": 75,
+          "expected_win": 0.8534833211681907
+        },
+        {
+          "update": 100,
+          "expected_win": 0.8535412427688654
+        },
+        {
+          "update": 125,
+          "expected_win": 0.8535524984867872
+        },
+        {
+          "update": 150,
+          "expected_win": 0.8535533464029497
+        },
+        {
+          "update": 175,
+          "expected_win": 0.853553389407834
+        },
+        {
+          "update": 200,
+          "expected_win": 0.8535533903236042
+        },
+        {
+          "update": 225,
+          "expected_win": 0.8535533905650577
+        },
+        {
+          "update": 250,
+          "expected_win": 0.853553390591432
+        },
+        {
+          "update": 275,
+          "expected_win": 0.8535533905931179
+        },
+        {
+          "update": 300,
+          "expected_win": 0.8535533905932642
+        },
+        {
+          "update": 325,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 350,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 375,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 400,
+          "expected_win": 0.8535533905932737
+        }
+      ],
+      "gradients_finite": true
+    },
+    {
+      "method": "quantum_entangled",
+      "seed": 17002,
+      "learning_rate": 0.3,
+      "updates": 400,
+      "final_expected_win": 0.8535533905932737,
+      "parameters": {
+        "alpha": [
+          1.2380565693034238,
+          2.808852897074999
+        ],
+        "beta": [
+          2.0234547339871507,
+          0.4526584058168943
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.6222563867099792
+        },
+        {
+          "update": 25,
+          "expected_win": 0.8510268765277874
+        },
+        {
+          "update": 50,
+          "expected_win": 0.8524971023508965
+        },
+        {
+          "update": 75,
+          "expected_win": 0.8534961232563189
+        },
+        {
+          "update": 100,
+          "expected_win": 0.853549070442069
+        },
+        {
+          "update": 125,
+          "expected_win": 0.8535530719586174
+        },
+        {
+          "update": 150,
+          "expected_win": 0.8535533825833771
+        },
+        {
+          "update": 175,
+          "expected_win": 0.8535533881503967
+        },
+        {
+          "update": 200,
+          "expected_win": 0.853553390422001
+        },
+        {
+          "update": 225,
+          "expected_win": 0.8535533905865953
+        },
+        {
+          "update": 250,
+          "expected_win": 0.8535533905927778
+        },
+        {
+          "update": 275,
+          "expected_win": 0.8535533905931906
+        },
+        {
+          "update": 300,
+          "expected_win": 0.8535533905932706
+        },
+        {
+          "update": 325,
+          "expected_win": 0.8535533905932735
+        },
+        {
+          "update": 350,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 375,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 400,
+          "expected_win": 0.8535533905932737
+        }
+      ],
+      "gradients_finite": true
+    }
+  ],
+  "pilots": [
+    {
+      "method": "classical_local",
+      "seed": 17101,
+      "learning_rate": 0.3,
+      "updates": 500,
+      "final_expected_win": 0.7499199558765919,
+      "parameters": {
+        "alice_logits": [
+          -4.154688440157902,
+          9.595657674662755
+        ],
+        "bob_logits": [
+          6.938801468474276,
+          -9.4537350531043
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5120325327897677
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7472570094762172
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7492140113717642
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7494193443611232
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7495200814766197
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7495958513844481
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7496559371212262
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7497040133032207
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7497428119935374
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7497744451342463
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7498005146219442
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7498222264944123
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7498404905041974
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7498559975746176
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7498692772114568
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7498807392839457
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7498907043011294
+        },
+        {
+          "update": 425,
+          "expected_win": 0.7498994254121953
+        },
+        {
+          "update": 450,
+          "expected_win": 0.7499071044953391
+        },
+        {
+          "update": 475,
+          "expected_win": 0.7499139040206253
+        },
+        {
+          "update": 500,
+          "expected_win": 0.7499199558765919
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "classical_local",
+      "seed": 17102,
+      "learning_rate": 0.3,
+      "updates": 500,
+      "final_expected_win": 0.7499389111130524,
+      "parameters": {
+        "alice_logits": [
+          -7.5567483982578345,
+          9.549036779009562
+        ],
+        "bob_logits": [
+          5.603245605117026,
+          -9.917823719949315
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5156884531683263
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7479462898300641
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7494436827665332
+        },
+        {
+          "update": 75,
+          "expected_win": 0.749586858882071
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7496553681448948
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7497072898049445
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7497489376388359
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7497826147682302
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7498100472625391
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7498325967980393
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7498513141072974
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7498670016142641
+        },
+        {
+          "update": 300,
+          "expected_win": 0.749880271974966
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7498915953708253
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7499013354556783
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7499097760134366
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7499171405697931
+        },
+        {
+          "update": 425,
+          "expected_win": 0.7499236068246161
+        },
+        {
+          "update": 450,
+          "expected_win": 0.7499293173218705
+        },
+        {
+          "update": 475,
+          "expected_win": 0.7499343873922407
+        },
+        {
+          "update": 500,
+          "expected_win": 0.7499389111130524
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "classical_local",
+      "seed": 17103,
+      "learning_rate": 0.3,
+      "updates": 500,
+      "final_expected_win": 0.7499213661570396,
+      "parameters": {
+        "alice_logits": [
+          -6.730526088530999,
+          -10.214199482799733
+        ],
+        "bob_logits": [
+          -9.086869062725677,
+          5.013489001929394
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5395953737635206
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7477525722363771
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7492536834574468
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7494403256139708
+        },
+        {
+          "update": 100,
+          "expected_win": 0.749537071428253
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7496100316005958
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7496677058778136
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7497137649414626
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7497509151324572
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7497812142206106
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7498062058921215
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7498270445007418
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7498445973020413
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7498595214586915
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7498723200571039
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7498833823983407
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7498930129746839
+        },
+        {
+          "update": 425,
+          "expected_win": 0.7499014524218962
+        },
+        {
+          "update": 450,
+          "expected_win": 0.7499088927930063
+        },
+        {
+          "update": 475,
+          "expected_win": 0.7499154887979559
+        },
+        {
+          "update": 500,
+          "expected_win": 0.7499213661570396
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "classical_local",
+      "seed": 17104,
+      "learning_rate": 0.3,
+      "updates": 500,
+      "final_expected_win": 0.7499285803829362,
+      "parameters": {
+        "alice_logits": [
+          -6.381679967796782,
+          -9.610319499652736
+        ],
+        "bob_logits": [
+          -9.598760469651888,
+          5.292149017705635
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5400288331071141
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7479381349879303
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7493365664926401
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7495018488773644
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7495864243867734
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7496504909439593
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7497014233179808
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7497422899840038
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7497753763519507
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7498024428014243
+        },
+        {
+          "update": 250,
+          "expected_win": 0.749824823027373
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7498435218845833
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7498592987799446
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7498727318904848
+        },
+        {
+          "update": 350,
+          "expected_win": 0.749884265559691
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7498942447457164
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7499029399942393
+        },
+        {
+          "update": 425,
+          "expected_win": 0.7499105656103603
+        },
+        {
+          "update": 450,
+          "expected_win": 0.7499172929740873
+        },
+        {
+          "update": 475,
+          "expected_win": 0.7499232603810698
+        },
+        {
+          "update": 500,
+          "expected_win": 0.7499285803829362
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "classical_shared",
+      "seed": 17101,
+      "learning_rate": 0.3,
+      "updates": 500,
+      "final_expected_win": 0.7499707008602388,
+      "parameters": {
+        "strategy_logits": [
+          4.8286892615609585,
+          4.932444965507095,
+          -4.886743848832391,
+          -4.825109912346458,
+          4.973593461540022,
+          -5.015382166032312,
+          5.051178839083292,
+          -4.883223115848691,
+          -4.886440906540021,
+          4.776916925374542,
+          -4.999196495663276,
+          4.686597124430975,
+          -4.703614978777161,
+          -5.006063817939804,
+          4.757653743754232,
+          4.7252525167656
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5795991746473876
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7497575630730307
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7498964151169534
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7499095043192852
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7499156211619398
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499211529346634
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499264767973397
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499315340757593
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499362736336918
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499406736941376
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499447330374288
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499484630551543
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499518822726847
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499550127510664
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7499578777935918
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7499605005342704
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7499629031113493
+        },
+        {
+          "update": 425,
+          "expected_win": 0.7499651062219307
+        },
+        {
+          "update": 450,
+          "expected_win": 0.7499671289197818
+        },
+        {
+          "update": 475,
+          "expected_win": 0.7499689885643305
+        },
+        {
+          "update": 500,
+          "expected_win": 0.7499707008602388
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "classical_shared",
+      "seed": 17102,
+      "learning_rate": 0.3,
+      "updates": 500,
+      "final_expected_win": 0.7499704358224698,
+      "parameters": {
+        "strategy_logits": [
+          4.9005331768780165,
+          4.949107193075783,
+          -4.8863402627691785,
+          -4.877417707210511,
+          4.703681180458335,
+          -4.9699874358511,
+          4.965384417590424,
+          -4.807972292215503,
+          -4.934366523590702,
+          4.863560094074447,
+          -4.652242847562989,
+          4.8548094935312704,
+          -4.9058689957906605,
+          -4.7809985622834255,
+          4.894670968412873,
+          4.952123528145824
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5748846393506823
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7497562399652564
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7498963198569297
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7499094004376176
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7499154667875915
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499209520049912
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499262378794017
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499312659309862
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499359842339898
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499403698923663
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499444205063599
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499481463605335
+        },
+        {
+          "update": 300,
+          "expected_win": 0.749951565006105
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499546976804033
+        },
+        {
+          "update": 350,
+          "expected_win": 0.749957567008648
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7499601955772327
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7499626050884421
+        },
+        {
+          "update": 425,
+          "expected_win": 0.7499648158962501
+        },
+        {
+          "update": 450,
+          "expected_win": 0.7499668467869871
+        },
+        {
+          "update": 475,
+          "expected_win": 0.7499687149135275
+        },
+        {
+          "update": 500,
+          "expected_win": 0.7499704358224698
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "classical_shared",
+      "seed": 17103,
+      "learning_rate": 0.3,
+      "updates": 500,
+      "final_expected_win": 0.7499707878981504,
+      "parameters": {
+        "strategy_logits": [
+          4.945728145831283,
+          5.0853527283672175,
+          -4.717664403010068,
+          -4.8304249140988516,
+          5.008268746106484,
+          -4.966473526484926,
+          4.92104549897768,
+          -4.85302275366961,
+          -4.725234718655345,
+          4.953249455177476,
+          -4.816156651562801,
+          4.785275560620546,
+          -4.824516659792891,
+          -4.91351720798479,
+          4.8489102841424305,
+          4.770698201588469
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5810817296521298
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7497580090831701
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7498964595282002
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7499095498024607
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7499156817289416
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499212273803839
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499265624216667
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499316281365052
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499363736540214
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499407775601699
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499448390123614
+        },
+        {
+          "update": 275,
+          "expected_win": 0.749948569752555
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499519886121535
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499551179092976
+        },
+        {
+          "update": 350,
+          "expected_win": 0.749957981157626
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7499606016599984
+        },
+        {
+          "update": 400,
+          "expected_win": 0.749963001688242
+        },
+        {
+          "update": 425,
+          "expected_win": 0.7499652020438935
+        },
+        {
+          "update": 450,
+          "expected_win": 0.7499672218615158
+        },
+        {
+          "update": 475,
+          "expected_win": 0.7499690785624169
+        },
+        {
+          "update": 500,
+          "expected_win": 0.7499707878981504
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "classical_shared",
+      "seed": 17104,
+      "learning_rate": 0.3,
+      "updates": 500,
+      "final_expected_win": 0.7499702547233668,
+      "parameters": {
+        "strategy_logits": [
+          4.871969374342798,
+          4.812411865826629,
+          -4.833822317017593,
+          -4.906731775132971,
+          4.895133134844535,
+          -4.8707728174043,
+          4.764010837726692,
+          -4.705864529092272,
+          -4.688089329229678,
+          5.022924648855901,
+          -4.970075016313211,
+          4.7584445024636315,
+          -4.875121656452892,
+          -5.013869411934627,
+          5.001172382558826,
+          4.858759052812413
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.5714695332023245
+        },
+        {
+          "update": 25,
+          "expected_win": 0.7497553686852435
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7498962928389443
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7499093624598518
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7499153899833019
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7499208393133079
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499260954771548
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499311001916573
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499358010102135
+        },
+        {
+          "update": 225,
+          "expected_win": 0.749940174260025
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499442167055955
+        },
+        {
+          "update": 275,
+          "expected_win": 0.749947937837621
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499513545020209
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499544873348045
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7499573584623922
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7499599900653107
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7499624035202529
+        },
+        {
+          "update": 425,
+          "expected_win": 0.7499646189228586
+        },
+        {
+          "update": 450,
+          "expected_win": 0.7499666548563451
+        },
+        {
+          "update": 475,
+          "expected_win": 0.7499685283151754
+        },
+        {
+          "update": 500,
+          "expected_win": 0.7499702547233668
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "quantum_separable",
+      "seed": 17101,
+      "learning_rate": 0.03,
+      "updates": 500,
+      "final_expected_win": 0.7499998442602326,
+      "parameters": {
+        "alpha": [
+          -0.009172369236503473,
+          8.597622691800957e-13
+        ],
+        "beta": [
+          8.062910457654943e-12,
+          2.8976023697323012
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.4518654748580126
+        },
+        {
+          "update": 25,
+          "expected_win": 0.6466652647056301
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7399856986773785
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7482963306347983
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7493676055492027
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7496772422884775
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7498146313380645
+        },
+        {
+          "update": 175,
+          "expected_win": 0.749887375445377
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499295419845331
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499552845746069
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499714931137035
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499818745735184
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499885675257869
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499928755462819
+        },
+        {
+          "update": 350,
+          "expected_win": 0.749995626689923
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7499973615639952
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7499984380969145
+        },
+        {
+          "update": 425,
+          "expected_win": 0.7499990937968964
+        },
+        {
+          "update": 450,
+          "expected_win": 0.7499994851271163
+        },
+        {
+          "update": 475,
+          "expected_win": 0.749999713700677
+        },
+        {
+          "update": 500,
+          "expected_win": 0.7499998442602326
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "quantum_separable",
+      "seed": 17102,
+      "learning_rate": 0.03,
+      "updates": 500,
+      "final_expected_win": 0.7499971744384326,
+      "parameters": {
+        "alpha": [
+          -3.116567741099586,
+          -3.80130027648675e-12
+        ],
+        "beta": [
+          0.3823087370441526,
+          -3.1415926535897674
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.44320668125979423
+        },
+        {
+          "update": 25,
+          "expected_win": 0.6561967694351847
+        },
+        {
+          "update": 50,
+          "expected_win": 0.735143593932547
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7466222764574012
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7486356145161819
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7492805830212348
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7495721532224768
+        },
+        {
+          "update": 175,
+          "expected_win": 0.749727857748973
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7498191735916553
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7498761972126506
+        },
+        {
+          "update": 250,
+          "expected_win": 0.749913470713474
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499386812306226
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499561727031614
+        },
+        {
+          "update": 325,
+          "expected_win": 0.749968535556703
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7499773861065994
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7499837730471965
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7499884003158555
+        },
+        {
+          "update": 425,
+          "expected_win": 0.7499917544641261
+        },
+        {
+          "update": 450,
+          "expected_win": 0.7499941800990646
+        },
+        {
+          "update": 475,
+          "expected_win": 0.7499959260364852
+        },
+        {
+          "update": 500,
+          "expected_win": 0.7499971744384326
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "quantum_separable",
+      "seed": 17103,
+      "learning_rate": 0.03,
+      "updates": 500,
+      "final_expected_win": 0.7499999999976994,
+      "parameters": {
+        "alpha": [
+          -6.917037330716341e-12,
+          0.8013866743083325
+        ],
+        "beta": [
+          1.1362729914649508e-11,
+          -1.0998715007193195e-05
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.30936386754468786
+        },
+        {
+          "update": 25,
+          "expected_win": 0.5282285552357708
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7130245264868336
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7445395441497858
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7485320642502339
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7494463161069831
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7497637927243272
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7498990264601676
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499583990818487
+        },
+        {
+          "update": 225,
+          "expected_win": 0.7499838000234147
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499940977686783
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499980001692538
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499993723690712
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499998181391543
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7499999515051916
+        },
+        {
+          "update": 375,
+          "expected_win": 0.7499999881429315
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7499999973536092
+        },
+        {
+          "update": 425,
+          "expected_win": 0.7499999994638079
+        },
+        {
+          "update": 450,
+          "expected_win": 0.7499999999020674
+        },
+        {
+          "update": 475,
+          "expected_win": 0.7499999999840219
+        },
+        {
+          "update": 500,
+          "expected_win": 0.7499999999976994
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "quantum_separable",
+      "seed": 17104,
+      "learning_rate": 0.03,
+      "updates": 500,
+      "final_expected_win": 0.7499999999994837,
+      "parameters": {
+        "alpha": [
+          0.3628665722294517,
+          3.1415926535786634
+        ],
+        "beta": [
+          -3.1415813912364086,
+          1.4089860581186745e-12
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.4168067939976118
+        },
+        {
+          "update": 25,
+          "expected_win": 0.6118441575450606
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7359269578410303
+        },
+        {
+          "update": 75,
+          "expected_win": 0.7481149139025842
+        },
+        {
+          "update": 100,
+          "expected_win": 0.7494698422698785
+        },
+        {
+          "update": 125,
+          "expected_win": 0.7497879631801728
+        },
+        {
+          "update": 150,
+          "expected_win": 0.7499089261074666
+        },
+        {
+          "update": 175,
+          "expected_win": 0.7499613173647733
+        },
+        {
+          "update": 200,
+          "expected_win": 0.7499842818488405
+        },
+        {
+          "update": 225,
+          "expected_win": 0.74999399647747
+        },
+        {
+          "update": 250,
+          "expected_win": 0.7499978634905478
+        },
+        {
+          "update": 275,
+          "expected_win": 0.7499992954001229
+        },
+        {
+          "update": 300,
+          "expected_win": 0.7499997854857965
+        },
+        {
+          "update": 325,
+          "expected_win": 0.7499999399113317
+        },
+        {
+          "update": 350,
+          "expected_win": 0.7499999845680396
+        },
+        {
+          "update": 375,
+          "expected_win": 0.749999996381383
+        },
+        {
+          "update": 400,
+          "expected_win": 0.7499999992292046
+        },
+        {
+          "update": 425,
+          "expected_win": 0.749999999851813
+        },
+        {
+          "update": 450,
+          "expected_win": 0.7499999999744994
+        },
+        {
+          "update": 475,
+          "expected_win": 0.7499999999961149
+        },
+        {
+          "update": 500,
+          "expected_win": 0.7499999999994837
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "quantum_entangled",
+      "seed": 17101,
+      "learning_rate": 0.03,
+      "updates": 500,
+      "final_expected_win": 0.8535533905932737,
+      "parameters": {
+        "alpha": [
+          -4.2051568202499965,
+          0.5072321600994019
+        ],
+        "beta": [
+          1.2926303234966623,
+          2.8634266502940373
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.31054588704165126
+        },
+        {
+          "update": 25,
+          "expected_win": 0.6462917631152701
+        },
+        {
+          "update": 50,
+          "expected_win": 0.8328206355783822
+        },
+        {
+          "update": 75,
+          "expected_win": 0.8527627604482785
+        },
+        {
+          "update": 100,
+          "expected_win": 0.853414982777233
+        },
+        {
+          "update": 125,
+          "expected_win": 0.8535512493415416
+        },
+        {
+          "update": 150,
+          "expected_win": 0.8535529170484599
+        },
+        {
+          "update": 175,
+          "expected_win": 0.8535533785124131
+        },
+        {
+          "update": 200,
+          "expected_win": 0.8535533862247192
+        },
+        {
+          "update": 225,
+          "expected_win": 0.8535533905041632
+        },
+        {
+          "update": 250,
+          "expected_win": 0.8535533905834022
+        },
+        {
+          "update": 275,
+          "expected_win": 0.8535533905918404
+        },
+        {
+          "update": 300,
+          "expected_win": 0.8535533905932184
+        },
+        {
+          "update": 325,
+          "expected_win": 0.8535533905932713
+        },
+        {
+          "update": 350,
+          "expected_win": 0.8535533905932733
+        },
+        {
+          "update": 375,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 400,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 425,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 450,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 475,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 500,
+          "expected_win": 0.8535533905932737
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "quantum_entangled",
+      "seed": 17102,
+      "learning_rate": 0.03,
+      "updates": 500,
+      "final_expected_win": 0.8535533905932737,
+      "parameters": {
+        "alpha": [
+          -2.589532990213563,
+          -1.0187366634061363
+        ],
+        "beta": [
+          4.4790504803875635,
+          -3.374931153606043
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.29923033758095063
+        },
+        {
+          "update": 25,
+          "expected_win": 0.6207321639868939
+        },
+        {
+          "update": 50,
+          "expected_win": 0.7716209515414074
+        },
+        {
+          "update": 75,
+          "expected_win": 0.8399894764719673
+        },
+        {
+          "update": 100,
+          "expected_win": 0.8526223092556813
+        },
+        {
+          "update": 125,
+          "expected_win": 0.853539381411815
+        },
+        {
+          "update": 150,
+          "expected_win": 0.8535530686249494
+        },
+        {
+          "update": 175,
+          "expected_win": 0.853553196024623
+        },
+        {
+          "update": 200,
+          "expected_win": 0.8535533663738077
+        },
+        {
+          "update": 225,
+          "expected_win": 0.8535533883591399
+        },
+        {
+          "update": 250,
+          "expected_win": 0.8535533904143472
+        },
+        {
+          "update": 275,
+          "expected_win": 0.8535533905808363
+        },
+        {
+          "update": 300,
+          "expected_win": 0.8535533905924901
+        },
+        {
+          "update": 325,
+          "expected_win": 0.8535533905932319
+        },
+        {
+          "update": 350,
+          "expected_win": 0.8535533905932724
+        },
+        {
+          "update": 375,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 400,
+          "expected_win": 0.8535533905932738
+        },
+        {
+          "update": 425,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 450,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 475,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 500,
+          "expected_win": 0.8535533905932737
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "quantum_entangled",
+      "seed": 17103,
+      "learning_rate": 0.03,
+      "updates": 500,
+      "final_expected_win": 0.8535533905932738,
+      "parameters": {
+        "alpha": [
+          0.10813521978960794,
+          1.678931546562788
+        ],
+        "beta": [
+          0.8935333831598059,
+          -0.6772629436157872
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.26153683688841955
+        },
+        {
+          "update": 25,
+          "expected_win": 0.6910328265217425
+        },
+        {
+          "update": 50,
+          "expected_win": 0.8444015304816674
+        },
+        {
+          "update": 75,
+          "expected_win": 0.8533864224482108
+        },
+        {
+          "update": 100,
+          "expected_win": 0.8535109057234163
+        },
+        {
+          "update": 125,
+          "expected_win": 0.8535528822119348
+        },
+        {
+          "update": 150,
+          "expected_win": 0.8535531149670712
+        },
+        {
+          "update": 175,
+          "expected_win": 0.853553374954952
+        },
+        {
+          "update": 200,
+          "expected_win": 0.8535533890002214
+        },
+        {
+          "update": 225,
+          "expected_win": 0.8535533904085195
+        },
+        {
+          "update": 250,
+          "expected_win": 0.8535533905887045
+        },
+        {
+          "update": 275,
+          "expected_win": 0.8535533905929757
+        },
+        {
+          "update": 300,
+          "expected_win": 0.8535533905932211
+        },
+        {
+          "update": 325,
+          "expected_win": 0.8535533905932708
+        },
+        {
+          "update": 350,
+          "expected_win": 0.8535533905932733
+        },
+        {
+          "update": 375,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 400,
+          "expected_win": 0.8535533905932738
+        },
+        {
+          "update": 425,
+          "expected_win": 0.8535533905932738
+        },
+        {
+          "update": 450,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 475,
+          "expected_win": 0.8535533905932738
+        },
+        {
+          "update": 500,
+          "expected_win": 0.8535533905932738
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    },
+    {
+      "method": "quantum_entangled",
+      "seed": 17104,
+      "learning_rate": 0.03,
+      "updates": 500,
+      "final_expected_win": 0.8535533905932737,
+      "parameters": {
+        "alpha": [
+          0.3622269196905654,
+          1.933023246478672
+        ],
+        "beta": [
+          1.1476250830746284,
+          -0.4231712437124068
+        ]
+      },
+      "curve": [
+        {
+          "update": 1,
+          "expected_win": 0.319167156260918
+        },
+        {
+          "update": 25,
+          "expected_win": 0.6656563044355959
+        },
+        {
+          "update": 50,
+          "expected_win": 0.842306338617562
+        },
+        {
+          "update": 75,
+          "expected_win": 0.8534995536789683
+        },
+        {
+          "update": 100,
+          "expected_win": 0.8534600413335107
+        },
+        {
+          "update": 125,
+          "expected_win": 0.8535529377690212
+        },
+        {
+          "update": 150,
+          "expected_win": 0.8535529086160182
+        },
+        {
+          "update": 175,
+          "expected_win": 0.8535533896097831
+        },
+        {
+          "update": 200,
+          "expected_win": 0.8535533878827624
+        },
+        {
+          "update": 225,
+          "expected_win": 0.8535533905676506
+        },
+        {
+          "update": 250,
+          "expected_win": 0.8535533905853288
+        },
+        {
+          "update": 275,
+          "expected_win": 0.853553390592348
+        },
+        {
+          "update": 300,
+          "expected_win": 0.8535533905932712
+        },
+        {
+          "update": 325,
+          "expected_win": 0.8535533905932708
+        },
+        {
+          "update": 350,
+          "expected_win": 0.8535533905932733
+        },
+        {
+          "update": 375,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 400,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 425,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 450,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 475,
+          "expected_win": 0.8535533905932737
+        },
+        {
+          "update": 500,
+          "expected_win": 0.8535533905932737
+        }
+      ],
+      "gradients_finite": true,
+      "serialization_replay_error": 0.0
+    }
+  ]
+}

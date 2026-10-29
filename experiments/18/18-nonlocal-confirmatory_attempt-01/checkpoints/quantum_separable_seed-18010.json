@@ -1,0 +1,104 @@
+{
+  "method": "quantum_separable",
+  "seed": 18010,
+  "learning_rate": 0.03,
+  "updates": 500,
+  "final_expected_win": 0.7499999999944438,
+  "parameters": {
+    "alpha": [
+      -2.1603815548987726e-12,
+      2.2877116192512963
+    ],
+    "beta": [
+      1.6100761450385114e-05,
+      -4.694150711994832e-12
+    ]
+  },
+  "curve": [
+    {
+      "update": 1,
+      "expected_win": 0.38770757376135706
+    },
+    {
+      "update": 25,
+      "expected_win": 0.6036173858472409
+    },
+    {
+      "update": 50,
+      "expected_win": 0.7269339672743282
+    },
+    {
+      "update": 75,
+      "expected_win": 0.7462788772760574
+    },
+    {
+      "update": 100,
+      "expected_win": 0.7489041554722686
+    },
+    {
+      "update": 125,
+      "expected_win": 0.7495559958294629
+    },
+    {
+      "update": 150,
+      "expected_win": 0.7498035592148152
+    },
+    {
+      "update": 175,
+      "expected_win": 0.7499130060623616
+    },
+    {
+      "update": 200,
+      "expected_win": 0.7499627697266347
+    },
+    {
+      "update": 225,
+      "expected_win": 0.7499848674237437
+    },
+    {
+      "update": 250,
+      "expected_win": 0.7499942147755478
+    },
+    {
+      "update": 275,
+      "expected_win": 0.7499979316895298
+    },
+    {
+      "update": 300,
+      "expected_win": 0.749999311060486
+    },
+    {
+      "update": 325,
+      "expected_win": 0.7499997868008104
+    },
+    {
+      "update": 350,
+      "expected_win": 0.7499999388660181
+    },
+    {
+      "update": 375,
+      "expected_win": 0.7499999838033361
+    },
+    {
+      "update": 400,
+      "expected_win": 0.7499999960486474
+    },
+    {
+      "update": 425,
+      "expected_win": 0.7499999991159927
+    },
+    {
+      "update": 450,
+      "expected_win": 0.7499999998195552
+    },
+    {
+      "update": 475,
+      "expected_win": 0.7499999999666084
+    },
+    {
+      "update": 500,
+      "expected_win": 0.7499999999944438
+    }
+  ],
+  "gradients_finite": true
+}

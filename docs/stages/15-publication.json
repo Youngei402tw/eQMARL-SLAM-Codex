@@ -1,0 +1,13 @@
+{
+  "stage": "15",
+  "branch": "stage/15-nonlocal-plan",
+  "source_and_results_commit": "e2a79a0030e0405fd9893ca08dfaa4c1b00b9dfd",
+  "remote_branch_sha": "e2a79a0030e0405fd9893ca08dfaa4c1b00b9dfd",
+  "verified": true,
+  "verified_utc": "2026-10-29T09:55:00+00:00",
+  "representative_artifacts": [
+    "docs/NONLOCAL_QMARL_PLAN.md",
+    "analysis/15/stage13-independent-audit.json",
+    "docs/stages/15-nonlocal-plan.md"
+  ]
+}

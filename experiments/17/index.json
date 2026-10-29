@@ -1,0 +1,13 @@
+{
+  "stage": "17",
+  "protocol_id": "nonlocal-development-v1",
+  "runs": [
+    {
+      "run_id": "17-nonlocal-development_attempt-01",
+      "status": "completed",
+      "config_path": "configs/stage17/17-nonlocal-development_attempt-01.yaml",
+      "config_sha256": "826e6fd0e4676613376ca58b0240ef855e51d053e562a631ad4e80be119e4146",
+      "bundle": "experiments/17/17-nonlocal-development_attempt-01"
+    }
+  ]
+}

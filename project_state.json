@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-28T09:10:00+00:00",
+  "updated_utc": "2026-10-29T10:52:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -10,13 +10,13 @@
     "url": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
     "last_check": "Stages 10-14 merged through PRs 11-15; all 120 confirmatory bundles and the Stage14 release audit were freshly retrieved and hash-validated."
   },
-  "authorized_current_scope": "Mechanism-focused extension Stages 10-14 completed under the prospective plan, stage gates and resource caps; user instruction 2026-10-22.",
-  "active_stage": "14",
+  "authorized_current_scope": "Learned nonlocal-coordination QMARL extension Stages 15-19 under prospective plan; user instruction 2026-10-29.",
+  "active_stage": "19",
   "stage_status": "passed",
   "training_runs_executed": 256,
-  "current_branch": "main",
-  "dependency_commit": "d177c35cbd6b44cac12fa5f71eae82ce5e3b9d79",
-  "completion_commit": "d798a1a264cd5ac321748778c0f9db07b73a6d43",
+  "current_branch": "stage/19-nonlocal-release",
+  "dependency_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
+  "completion_commit": null,
   "publication_status": "verified_complete",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
@@ -42,7 +42,11 @@
     "stage/13-mechanism-confirmatory": "d177c35cbd6b44cac12fa5f71eae82ce5e3b9d79",
     "stage/14-mechanism-release-results": "21ea205eac28db7f5200ddcc58784150aef17587",
     "stage/14-mechanism-release": "d798a1a264cd5ac321748778c0f9db07b73a6d43",
-    "main_mechanism_integration": "35cddc1d5681a345bdd0034db61b49fe9d39c385"
+    "main_mechanism_integration": "35cddc1d5681a345bdd0034db61b49fe9d39c385",
+    "stage/15-nonlocal-plan": "519d75e8f82369edfa580e62fe52558c84595159",
+    "stage/16-nonlocal-benchmark": "235afac5d0dba03c1c84184905459cbe3a59f92e",
+    "stage/17-nonlocal-development": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
+    "stage/18-nonlocal-confirmatory": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8"
   },
   "blockers": [],
   "next_action": null,
@@ -216,7 +220,16 @@
       "setup_wall_seconds_charged": 300,
       "stage_started_utc": "2026-10-22T07:12:00+00:00",
       "setup_charge_convention": "Active planning-stage work; no scientific experiment in Stage10.",
-      "recorded_experiment_resources": {"primitive_steps": 0, "decisions": 0, "updates": 0, "wall_seconds": 0, "cpu_core_hours": 0, "gpu_device_hours": 0, "circuit_evaluations": 0, "shots": 0}
+      "recorded_experiment_resources": {
+        "primitive_steps": 0,
+        "decisions": 0,
+        "updates": 0,
+        "wall_seconds": 0,
+        "cpu_core_hours": 0,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
     },
     "11": {
       "cap_wall_seconds": 86400,
@@ -224,7 +237,16 @@
       "setup_wall_seconds_charged": 362.23334837399995,
       "stage_started_utc": "2026-10-22T07:17:00+00:00",
       "setup_charge_convention": "Conservative active stage envelope less instrumented sequential experiment segments.",
-      "recorded_experiment_resources": {"primitive_steps": 1102, "decisions": 772, "updates": 44, "wall_seconds": 33.323545626000055, "cpu_core_hours": 0.009250987777777778, "gpu_device_hours": 0, "circuit_evaluations": 1058, "shots": 0}
+      "recorded_experiment_resources": {
+        "primitive_steps": 1102,
+        "decisions": 772,
+        "updates": 44,
+        "wall_seconds": 33.323545626000055,
+        "cpu_core_hours": 0.009250987777777778,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 1058,
+        "shots": 0
+      }
     },
     "12": {
       "cap_wall_seconds": 86400,
@@ -232,7 +254,16 @@
       "setup_wall_seconds_charged": 1100.0,
       "stage_started_utc": "2026-10-26T07:15:00+00:00",
       "setup_charge_convention": "Active setup/finalization plus instrumented execution; inactive overnight gap excluded.",
-      "recorded_experiment_resources": {"primitive_steps": 591222, "decisions": 447388, "updates": 23692, "wall_seconds": 10820.610230267997, "cpu_core_hours": 3.005014608333333, "gpu_device_hours": 0, "circuit_evaluations": 250430, "shots": 0}
+      "recorded_experiment_resources": {
+        "primitive_steps": 591222,
+        "decisions": 447388,
+        "updates": 23692,
+        "wall_seconds": 10820.610230267997,
+        "cpu_core_hours": 3.005014608333333,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 250430,
+        "shots": 0
+      }
     },
     "13": {
       "cap_wall_seconds": 86400,
@@ -240,21 +271,90 @@
       "setup_wall_seconds_charged": 1200.0,
       "stage_started_utc": "2026-10-27T04:45:00+00:00",
       "setup_charge_convention": "Active source-lock, monitoring, resume and analysis; inactive between-session gap excluded.",
-      "recorded_experiment_resources": {"primitive_steps": 1501711, "decisions": 1242090, "updates": 54740, "wall_seconds": 27929.728721060997, "cpu_core_hours": 7.756504814166667, "gpu_device_hours": 0, "circuit_evaluations": 534606, "shots": 0}
+      "recorded_experiment_resources": {
+        "primitive_steps": 1501711,
+        "decisions": 1242090,
+        "updates": 54740,
+        "wall_seconds": 27929.728721060997,
+        "cpu_core_hours": 7.756504814166667,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 534606,
+        "shots": 0
+      }
+    },
+    "15": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 900.0,
+      "setup_wall_seconds_charged": 900.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 0,
+        "decisions": 0,
+        "updates": 0,
+        "wall_seconds": 0,
+        "cpu_core_hours": 0,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
+    },
+    "16": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 307.8776838240001,
+      "setup_wall_seconds_charged": 300.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 65536,
+        "decisions": 65536,
+        "updates": 12800,
+        "wall_seconds": 7.877683824000087,
+        "cpu_core_hours": 0.0021873713888888886,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 4,
+        "shots": 0
+      }
+    },
+    "17": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 409.5867764330001,
+      "setup_wall_seconds_charged": 400.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 0,
+        "decisions": 0,
+        "updates": 20800,
+        "wall_seconds": 9.586776433000068,
+        "cpu_core_hours": 0.0026627136111111115,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 41600,
+        "shots": 0
+      }
+    },
+    "18": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 514.6563684410002,
+      "setup_wall_seconds_charged": 500.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 524288,
+        "decisions": 524288,
+        "updates": 32000,
+        "wall_seconds": 14.65636844100004,
+        "cpu_core_hours": 0.004070526666666667,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 64128,
+        "shots": 262144
+      }
     }
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 711.4317884799998,
-    "setup_wall_seconds_charged": 700.0,
-    "stage_started_utc": "2026-10-28T08:50:00+00:00",
-    "setup_charge_convention": "Active release implementation, clean audit execution and publication finalization.",
+    "consumed_wall_seconds": 401.06959885800006,
+    "setup_wall_seconds_charged": 400.0,
+    "stage_started_utc": "2026-10-29T10:44:00+00:00",
+    "setup_charge_convention": "Conservative release implementation/tests plus instrumented independent audit.",
     "recorded_experiment_resources": {
-      "primitive_steps": 183,
-      "decisions": 224,
+      "primitive_steps": 0,
+      "decisions": 0,
       "updates": 0,
-      "wall_seconds": 11.431788479999796,
-      "cpu_core_hours": 0.0031712708333333332,
+      "wall_seconds": 1.069598858000063,
+      "cpu_core_hours": 0.00029704166666666675,
       "gpu_device_hours": 0,
       "circuit_evaluations": 0,
       "shots": 0

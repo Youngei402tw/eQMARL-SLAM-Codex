@@ -1,0 +1,13 @@
+{
+  "stage": "16",
+  "protocol_id": "nonlocal-correctness-v1",
+  "runs": [
+    {
+      "run_id": "16-nonlocal-correctness_attempt-01",
+      "status": "completed",
+      "config_path": "configs/stage16/16-nonlocal-correctness_attempt-01.yaml",
+      "config_sha256": "568a7208b3bf1f0968b54289f3392417bd5c96bdb4aee8ec559fa3983abb588d",
+      "bundle": "experiments/16/16-nonlocal-correctness_attempt-01"
+    }
+  ]
+}

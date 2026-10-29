@@ -1,0 +1,48 @@
+{
+  "run_id": "18-nonlocal-confirmatory_attempt-01",
+  "stage": "18",
+  "protocol_id": "nonlocal-confirmatory-v1",
+  "profile": "confirmatory",
+  "experiment": "nonlocal-confirmatory",
+  "hypothesis": "A learned Bell-entangled decentralized policy exceeds both the certified classical no-communication ceiling and the strongest paired admissible trained control.",
+  "method": "locked-four-method-paired-matrix",
+  "dependency_completion_commit": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
+  "wall_seconds": 7200,
+  "max_primitive_steps": 524288,
+  "max_cpu_threads": 1,
+  "freeze_path": "experiments/17/17-nonlocal-development_attempt-01/confirmatory_freeze.json",
+  "freeze_sha256": "2c45d785012fe57f2c09bb1198654e15a9cb3dcb3b76ce3504245196332847fe",
+  "seed_streams": {
+    "model_init": {"paired_training_seeds": [18001,18002,18003,18004,18005,18006,18007,18008,18009,18010,18011,18012,18013,18014,18015,18016]},
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": {"finite_shot_seeds": [28001,28002,28003,28004,28005,28006,28007,28008,28009,28010,28011,28012,28013,28014,28015,28016]},
+    "quantum_shots": {"finite_shot_seeds": [28001,28002,28003,28004,28005,28006,28007,28008,28009,28010,28011,28012,28013,28014,28015,28016]},
+    "communication": null
+  },
+  "split_manifests": {"train": null, "development": null, "validation": null, "test": null},
+  "model": {
+    "actor": "four frozen decentralized policy families",
+    "encoder": "identity private input bit",
+    "critic": "none; exact common contextual-bandit return",
+    "parameter_counts": {"classical_local": 4, "classical_shared": 16, "quantum_separable": 4, "quantum_entangled": 4},
+    "optimizer": "frozen method-specific Adam rate; 500 updates; final checkpoint only"
+  },
+  "quantum": {
+    "device": "analytic training and PennyLane default.qubit finite-shot evaluation",
+    "wires": 2,
+    "shots": 2048,
+    "diff_method": "backpropagation through exact expected training return; no finite-shot updates",
+    "dtype": "float64",
+    "entanglement": "Bell phi+ intervention only",
+    "observables": ["computational-basis local action bits"],
+    "noise": {"family":"local depolarizing analytic sensitivity","probabilities":[0.0,0.02,0.05]},
+    "resource_accounting": "four context circuit-equivalent evaluations per quantum training update; actual simulator shots and executions counted for finite-shot evaluation"
+  },
+  "action_modes": "exact expected primary plus locked sampled finite-shot secondary",
+  "checkpoint_selection": "final update only",
+  "analysis_version": "nonlocal-confirmatory-v1",
+  "interpretation": "Quantum advantage is permitted only if every frozen positive gate passes; scope is decentralized no-communication CHSH under simulation."
+}

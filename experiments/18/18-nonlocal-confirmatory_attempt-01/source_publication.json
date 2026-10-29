@@ -1,0 +1,1 @@
+{"source_commit":"08a84f5f44ac8d6d9574152dad60eb5e1ae41156","branch":"stage/18-nonlocal-confirmatory","verified":true,"allow_detached":false,"verified_utc":"2026-10-29T10:33:00+00:00","mechanism":"Non-force push followed by exact git ls-remote branch SHA verification"}

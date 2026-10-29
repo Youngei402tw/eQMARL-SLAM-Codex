@@ -382,3 +382,15 @@ After the completed Stage 08 null result, the user authorized a new prospective 
 Defer ROS/Gazebo integration, ambiguous association, extensive scaling, 3D perception, and execution-time entangled actors to separately planned branches. They need their own hypotheses and resource budgets. A useful first paper can concern when entanglement helps or fails; photorealistic rendering is not a substitute for causal evidence.
 
 At the end of every active Codex session, record the last verified commit, next unambiguous action, active run IDs/processes when applicable, blockers, and remaining budgets. Never imply that work continues unattended after the session unless an actual running job or authorized schedule exists.
+
+## Authorized learned nonlocal-coordination extension
+
+After the completed mechanism null, the user authorized exploration of other QMARL mechanisms with publication-quality results. Stages 15–19 are governed by [NONLOCAL_QMARL_PLAN.md](NONLOCAL_QMARL_PLAN.md). They test decentralized entangled actors in a task with a certified classical ceiling, using a fresh protocol and fresh seeds. They do not revise the active-SLAM results.
+
+| Stage | Branch | Dependency | Purpose |
+| --- | --- | --- | --- |
+| 15 | `stage/15-nonlocal-plan` | 14/main receipt | Prospective design and independent integrity audit |
+| 16 | `stage/16-nonlocal-benchmark` | 15 | Environment, policy, bound, gradient, and sampling correctness |
+| 17 | `stage/17-nonlocal-development` | 16 | Equal-budget development and confirmatory freeze |
+| 18 | `stage/18-nonlocal-confirmatory` | 17 | Locked learned-policy advantage test |
+| 19 | `stage/19-nonlocal-release` | 18 | Clean reproduction and paper artifacts |

@@ -1,0 +1,229 @@
+{
+  "run_id": "19-nonlocal-release-audit_attempt-01",
+  "source_commit": "a1dd2a2974c03f170acf63520f9df93e82f73c3e",
+  "config_sha256": "b001305bbb13339a04a9459b32fab19afc286793597180a62b95fde525fd9797",
+  "metrics_sha256": "7135634622036444328a0213f3961dc18f72512a027f6804408c6f366cc116d5",
+  "metrics_rows": 64,
+  "analysis_version": "nonlocal-release-v1",
+  "passed": true,
+  "gates": {
+    "confirmatory_bundle_valid": true,
+    "all_64_checkpoints_replayed": true,
+    "checkpoint_replay_exact": true,
+    "raw_cell_count_exact": true,
+    "primary_analysis_exact": true,
+    "finite_shot_totals_exact": true,
+    "positive_claim_scoped": true
+  },
+  "resources_consumed": {
+    "primitive_steps": 0,
+    "decisions": 0,
+    "updates": 0,
+    "wall_seconds": 1.069598858000063,
+    "cpu_core_hours": 0.00029704166666666675,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "interpretation": "Independent archive and analysis audit; no retraining or new inferential outcome.",
+  "analysis": {
+    "validation": {
+      "valid": true,
+      "run_id": "18-nonlocal-confirmatory_attempt-01",
+      "status": "completed",
+      "verified_files": 72,
+      "metrics_rows": 131,
+      "metrics_sha256": "d09976ba3021a53b4c9094696cf6f89d9dbb24b9fa4e04bca303d78b7ec0adce"
+    },
+    "reproduced": {
+      "estimate_entangled_minus_paired_strongest_control": 0.10355394338396878,
+      "paired_difference_interval_95": [
+        0.10355339352970186,
+        0.10355475800355224
+      ],
+      "entangled_mean": 0.8535533905932737,
+      "entangled_mean_one_sided_lower_95": 0.8535533905932737,
+      "seed_differences": [
+        0.10355775731752481,
+        0.10355339059327373,
+        0.10355339059327373,
+        0.10355773832610726,
+        0.10355339059327373,
+        0.10355339059327373,
+        0.10355339059327373,
+        0.10355349071336273,
+        0.10355339059327373,
+        0.10355339059882995,
+        0.10355339059327373,
+        0.10355340018053572,
+        0.10355339059327395,
+        0.10355340928828949,
+        0.10355339237938654,
+        0.10355339059327384
+      ]
+    },
+    "tables": {
+      "primary": {
+        "estimate_entangled_minus_paired_strongest_control": 0.10355394338396878,
+        "paired_difference_interval_95": [
+          0.10355339352970186,
+          0.10355475800355224
+        ],
+        "entangled_mean": 0.8535533905932737,
+        "entangled_mean_one_sided_lower_95": 0.8535533905932737,
+        "seed_differences": [
+          0.10355775731752481,
+          0.10355339059327373,
+          0.10355339059327373,
+          0.10355773832610726,
+          0.10355339059327373,
+          0.10355339059327373,
+          0.10355339059327373,
+          0.10355349071336273,
+          0.10355339059327373,
+          0.10355339059882995,
+          0.10355339059327373,
+          0.10355340018053572,
+          0.10355339059327395,
+          0.10355340928828949,
+          0.10355339237938654,
+          0.10355339059327384
+        ]
+      },
+      "method_summary": {
+        "classical_local": {
+          "mean": 0.7499250258401737,
+          "min": 0.7499162139310218,
+          "max": 0.7499322462366204
+        },
+        "classical_shared": {
+          "mean": 0.7499703576551973,
+          "min": 0.7499699504830671,
+          "max": 0.7499708979489735
+        },
+        "quantum_separable": {
+          "mean": 0.749999447209305,
+          "min": 0.7499956332757488,
+          "max": 0.75
+        },
+        "quantum_entangled": {
+          "mean": 0.8535533905932737,
+          "min": 0.8535533905932736,
+          "max": 0.853553390593274
+        }
+      },
+      "finite_shot_entangled": {
+        "wins": 111745,
+        "decisions": 131072,
+        "win_rate": 0.8525466918945312,
+        "wilson_interval_95": [
+          0.8506168982699961,
+          0.8544558212443351
+        ]
+      },
+      "noise_sensitivity": [
+        {
+          "kind": "noise_sensitivity",
+          "probability": 0.0,
+          "mean_exact_win": 0.8535533905932737,
+          "seed_values": [
+            0.8535533905932736,
+            0.8535533905932737,
+            0.8535533905932737,
+            0.8535533905932738,
+            0.8535533905932737,
+            0.8535533905932737,
+            0.8535533905932737,
+            0.8535533905932737,
+            0.8535533905932737,
+            0.8535533905932737,
+            0.8535533905932737,
+            0.8535533905932737,
+            0.853553390593274,
+            0.8535533905932737,
+            0.8535533905932737,
+            0.8535533905932738
+          ]
+        },
+        {
+          "kind": "noise_sensitivity",
+          "probability": 0.02,
+          "mean_exact_win": 0.8395526763257801,
+          "seed_values": [
+            0.8395526763257801,
+            0.8395526763257801,
+            0.8395526763257801,
+            0.8395526763257801,
+            0.8395526763257801,
+            0.8395526763257801,
+            0.8395526763257801,
+            0.8395526763257801,
+            0.8395526763257801,
+            0.8395526763257801,
+            0.8395526763257801,
+            0.8395526763257801,
+            0.8395526763257801,
+            0.8395526763257801,
+            0.83955267632578,
+            0.8395526763257801
+          ]
+        },
+        {
+          "kind": "noise_sensitivity",
+          "probability": 0.05,
+          "mean_exact_win": 0.8190819350104296,
+          "seed_values": [
+            0.8190819350104295,
+            0.8190819350104296,
+            0.8190819350104295,
+            0.8190819350104296,
+            0.8190819350104296,
+            0.8190819350104296,
+            0.8190819350104296,
+            0.8190819350104296,
+            0.8190819350104296,
+            0.8190819350104295,
+            0.8190819350104295,
+            0.8190819350104296,
+            0.8190819350104297,
+            0.8190819350104296,
+            0.8190819350104295,
+            0.8190819350104295
+          ]
+        }
+      ],
+      "resources": {
+        "primitive_steps": 524288,
+        "decisions": 524288,
+        "updates": 32000,
+        "wall_seconds": 14.65636844100004,
+        "cpu_core_hours": 0.004070526666666667,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 64128,
+        "shots": 262144
+      }
+    },
+    "claims": [
+      {
+        "claim": "A learned Bell-entangled decentralized policy exceeds the classical no-communication CHSH ceiling.",
+        "supported": true,
+        "scope": "two agents, uniform CHSH contexts, no post-input communication, analytic training and simulated finite shots"
+      },
+      {
+        "claim": "The advantage remains visible at 2% and 5% registered local depolarizing noise in exact simulation.",
+        "supported": true,
+        "scope": "specified final local-depolarizing model; no hardware claim"
+      },
+      {
+        "claim": "The result establishes speedup or active-SLAM advantage.",
+        "supported": false,
+        "scope": "not tested; the independent active-SLAM critic studies remain null"
+      },
+      {
+        "claim": "The result survives free classical communication.",
+        "supported": false,
+        "scope": "one communicated input bit permits a classical perfect policy and changes the information contract"
+      }
+    ]
+  }
+}

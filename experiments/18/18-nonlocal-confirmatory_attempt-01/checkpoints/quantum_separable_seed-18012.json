@@ -1,0 +1,104 @@
+{
+  "method": "quantum_separable",
+  "seed": 18012,
+  "learning_rate": 0.03,
+  "updates": 500,
+  "final_expected_win": 0.749999990412738,
+  "parameters": {
+    "alpha": [
+      3.1415926535793903,
+      -0.261721717203407
+    ],
+    "beta": [
+      3.139470275107981,
+      -3.1415926535925998
+    ]
+  },
+  "curve": [
+    {
+      "update": 1,
+      "expected_win": 0.4280249091355792
+    },
+    {
+      "update": 25,
+      "expected_win": 0.6160669808080408
+    },
+    {
+      "update": 50,
+      "expected_win": 0.7364365102112449
+    },
+    {
+      "update": 75,
+      "expected_win": 0.74810376031981
+    },
+    {
+      "update": 100,
+      "expected_win": 0.7493856347334049
+    },
+    {
+      "update": 125,
+      "expected_win": 0.7497159093425023
+    },
+    {
+      "update": 150,
+      "expected_win": 0.7498470688472996
+    },
+    {
+      "update": 175,
+      "expected_win": 0.7499138911610589
+    },
+    {
+      "update": 200,
+      "expected_win": 0.7499508904041478
+    },
+    {
+      "update": 225,
+      "expected_win": 0.7499720892435471
+    },
+    {
+      "update": 250,
+      "expected_win": 0.7499843552579766
+    },
+    {
+      "update": 275,
+      "expected_win": 0.7499914123529313
+    },
+    {
+      "update": 300,
+      "expected_win": 0.7499954062101926
+    },
+    {
+      "update": 325,
+      "expected_win": 0.7499976131646051
+    },
+    {
+      "update": 350,
+      "expected_win": 0.7499987980927088
+    },
+    {
+      "update": 375,
+      "expected_win": 0.7499994142867443
+    },
+    {
+      "update": 400,
+      "expected_win": 0.7499997240423594
+    },
+    {
+      "update": 425,
+      "expected_win": 0.7499998743839941
+    },
+    {
+      "update": 450,
+      "expected_win": 0.7499999447846902
+    },
+    {
+      "update": 475,
+      "expected_win": 0.7499999765750663
+    },
+    {
+      "update": 500,
+      "expected_win": 0.749999990412738
+    }
+  ],
+  "gradients_finite": true
+}
