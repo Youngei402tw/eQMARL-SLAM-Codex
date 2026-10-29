@@ -317,7 +317,10 @@
       "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "d798a1a264cd5ac321748778c0f9db07b73a6d43",
-      "branch_created_from_commit": "dbe2903c61ade83e17db7d0d94f9fecbe0abbc13"
+      "branch_created_from_commit": "dbe2903c61ade83e17db7d0d94f9fecbe0abbc13",
+      "source_commit": "e2a79a0030e0405fd9893ca08dfaa4c1b00b9dfd",
+      "results_commit": "e2a79a0030e0405fd9893ca08dfaa4c1b00b9dfd",
+      "publication_receipt": "docs/stages/15-publication.json"
     },
     {
       "id": "16",

@@ -17,7 +17,7 @@
   "current_branch": "stage/15-nonlocal-plan",
   "dependency_commit": "dbe2903c61ade83e17db7d0d94f9fecbe0abbc13",
   "completion_commit": null,
-  "publication_status": "pending_source_commit",
+  "publication_status": "verified_complete",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -45,7 +45,7 @@
     "main_mechanism_integration": "35cddc1d5681a345bdd0034db61b49fe9d39c385"
   },
   "blockers": [],
-  "next_action": "Commit and publish Stage15, then create Stage16 from its completion commit.",
+  "next_action": "Create Stage16 from the published Stage15 completion commit and execute correctness gates.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
