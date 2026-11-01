@@ -433,6 +433,8 @@
       "dependency_completion_commit": "4e529a2d362fe53566c219b17b477b64e8221e15",
       "branch_created_from_commit": "4e529a2d362fe53566c219b17b477b64e8221e15",
       "source_commit": "a2beae155dd40f3314fc2518bf8da32e07d6f734"
+      ,"results_commit": "530b2a92dce583e6f0e46154888ea88d2dc5079b",
+      "publication_receipt": "docs/stages/21-publication.json"
     },
     {
       "id": "22",
