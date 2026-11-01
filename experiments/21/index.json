@@ -4,9 +4,17 @@
   "runs": [
     {
       "run_id": "21-budgeted-entanglement-task_attempt-01",
-      "status": "planned",
+      "status": "failed_archive_validation",
       "config_path": "configs/stage21/21-budgeted-entanglement-task_attempt-01.yaml",
-      "config_sha256": "c50b534544309ae89ac3cbfd824f84febaa1643c0f1437d7b28d1498c6c230c0"
+      "config_sha256": "c50b534544309ae89ac3cbfd824f84febaa1643c0f1437d7b28d1498c6c230c0",
+      "result_path": "experiments/21/21-budgeted-entanglement-task_attempt-01",
+      "failure_reason": "Scientific gates passed; final archive validation rejected the missing required train split metadata."
+    },
+    {
+      "run_id": "21-budgeted-entanglement-task_attempt-02",
+      "status": "planned",
+      "config_path": "configs/stage21/21-budgeted-entanglement-task_attempt-02.yaml",
+      "config_sha256": "055ebf706be1c0a89a07d45720949e54544955619240af22c07f5d3f60dfb5bb"
     }
   ]
 }

@@ -1,0 +1,557 @@
+{
+  "passed": true,
+  "gates": {
+    "all_16_requests_certified": true,
+    "classical_values_bounded": true,
+    "bell_within_sdp_bound": true,
+    "bell_reaches_sdp_tolerance": true,
+    "heterogeneous_gaps": true,
+    "pennylane_fixture_exact": true,
+    "budget_and_monogamy_exact": true,
+    "sequential_oracle_nontrivial": true,
+    "test_manifest_hash_locked_unopened": true
+  },
+  "resources": {
+    "primitive_steps": 1000,
+    "decisions": 1000,
+    "updates": 204800,
+    "circuit_evaluations": 1843209,
+    "shots": 0
+  },
+  "summary": {
+    "certificates": [
+      {
+        "type_id": "development-type-000",
+        "classical_value": 0.8666666666666666,
+        "classical_strategy": {
+          "alice": [
+            0,
+            1,
+            1
+          ],
+          "bob": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bell_value": 0.8827485816607202,
+        "bell_angles": [
+          -3.8611348930915006,
+          -0.8765472359148976,
+          4.229886148696211,
+          5.182957158740589,
+          -0.37216377458814554,
+          4.856394481601028
+        ],
+        "sdp_upper": 0.8827485815807974,
+        "quantum_gap": 0.016081914994053648,
+        "sdp_gap": -7.992284611901823e-11,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "development"
+      },
+      {
+        "type_id": "development-type-001",
+        "classical_value": 0.8421052631578947,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            0,
+            0,
+            0
+          ]
+        },
+        "bell_value": 0.8862528385494123,
+        "bell_angles": [
+          -5.333299132402899,
+          1.092732674567856,
+          2.099133998457607,
+          -0.024343078305535126,
+          1.47574927631112,
+          1.1684962230149951
+        ],
+        "sdp_upper": 0.8862528383847008,
+        "quantum_gap": 0.04414757539151759,
+        "sdp_gap": -1.6471146668806114e-10,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "development"
+      },
+      {
+        "type_id": "development-type-002",
+        "classical_value": 0.85,
+        "classical_strategy": {
+          "alice": [
+            0,
+            1,
+            0
+          ],
+          "bob": [
+            1,
+            1,
+            0
+          ]
+        },
+        "bell_value": 0.8777399559750229,
+        "bell_angles": [
+          -0.025436395728090956,
+          4.368711634848927,
+          0.327094235576227,
+          2.482511749216887,
+          -2.481880930936267,
+          0.5585855393329495
+        ],
+        "sdp_upper": 0.8777399558831329,
+        "quantum_gap": 0.02773995597502288,
+        "sdp_gap": -9.18899401014528e-11,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "development"
+      },
+      {
+        "type_id": "development-type-003",
+        "classical_value": 0.8666666666666666,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            1,
+            0,
+            0
+          ]
+        },
+        "bell_value": 0.9054718719057098,
+        "bell_angles": [
+          2.035334361459916,
+          -4.213302021372703,
+          0.0849461489562547,
+          -0.9162718107425228,
+          -4.023315539985349,
+          1.068665326108106
+        ],
+        "sdp_upper": 0.9054718718866617,
+        "quantum_gap": 0.03880520523904318,
+        "sdp_gap": -1.904809643349381e-11,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "development"
+      },
+      {
+        "type_id": "development-type-004",
+        "classical_value": 1.0,
+        "classical_strategy": {
+          "alice": [
+            0,
+            1,
+            1
+          ],
+          "bob": [
+            0,
+            0,
+            1
+          ]
+        },
+        "bell_value": 1.0,
+        "bell_angles": [
+          -1.715220492979961,
+          1.4263721606098325,
+          1.4263721606098325,
+          -1.7152204929799608,
+          4.567964814199626,
+          1.4263721606098325
+        ],
+        "sdp_upper": 0.9999999997712463,
+        "quantum_gap": 0.0,
+        "sdp_gap": -2.2875368266284113e-10,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "development"
+      },
+      {
+        "type_id": "development-type-005",
+        "classical_value": 0.7894736842105263,
+        "classical_strategy": {
+          "alice": [
+            0,
+            1,
+            0
+          ],
+          "bob": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bell_value": 0.8409464884617822,
+        "bell_angles": [
+          -0.2855395157554296,
+          3.318513946655104,
+          -1.7383770221940635,
+          1.4387967893446685,
+          2.3894432270545405,
+          3.536730297163745
+        ],
+        "sdp_upper": 0.8409464883889715,
+        "quantum_gap": 0.05147280425125589,
+        "sdp_gap": -7.281075742326948e-11,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "development"
+      },
+      {
+        "type_id": "development-type-006",
+        "classical_value": 0.9130434782608697,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            1
+          ],
+          "bob": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bell_value": 0.9130434782608697,
+        "bell_angles": [
+          3.6082248501964687,
+          3.6082248501787073,
+          0.46663219659038846,
+          0.4666321965947831,
+          0.4666321965803233,
+          0.4666321965963663
+        ],
+        "sdp_upper": 0.9130434782452351,
+        "quantum_gap": 0.0,
+        "sdp_gap": -1.5634604721981304e-11,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "development"
+      },
+      {
+        "type_id": "development-type-007",
+        "classical_value": 0.9,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            1
+          ],
+          "bob": [
+            1,
+            0,
+            1
+          ]
+        },
+        "bell_value": 0.904192942618981,
+        "bell_angles": [
+          -0.4015097098749958,
+          -1.3284134819810955,
+          -3.66702106902012,
+          3.08331418290501,
+          -0.9066629134282184,
+          -3.7192293227853073
+        ],
+        "sdp_upper": 0.904192942325081,
+        "quantum_gap": 0.004192942618980955,
+        "sdp_gap": -2.9390001543561084e-10,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "development"
+      },
+      {
+        "type_id": "validation-type-000",
+        "classical_value": 0.8421052631578948,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            0,
+            1,
+            0
+          ]
+        },
+        "bell_value": 0.8560463717532123,
+        "bell_angles": [
+          -2.652638456648991,
+          2.0315723934028656,
+          2.5479525826644402,
+          -4.342794934793387,
+          -0.4572985647529057,
+          -3.0244565300647226
+        ],
+        "sdp_upper": 0.8560463715493201,
+        "quantum_gap": 0.013941108595317497,
+        "sdp_gap": -2.0389223642780507e-10,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "validation"
+      },
+      {
+        "type_id": "validation-type-001",
+        "classical_value": 0.8888888888888888,
+        "classical_strategy": {
+          "alice": [
+            0,
+            1,
+            1
+          ],
+          "bob": [
+            0,
+            1,
+            0
+          ]
+        },
+        "bell_value": 0.895177323226047,
+        "bell_angles": [
+          -0.43790401307657445,
+          2.639037753935103,
+          -2.6423036981972094,
+          -0.15913894467536485,
+          -3.3844580720143975,
+          -0.8805045886986115
+        ],
+        "sdp_upper": 0.8951773231559651,
+        "quantum_gap": 0.0062884343371582,
+        "sdp_gap": -7.008194025104331e-11,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "validation"
+      },
+      {
+        "type_id": "validation-type-002",
+        "classical_value": 0.85,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            1,
+            1,
+            0
+          ]
+        },
+        "bell_value": 0.8771971974162269,
+        "bell_angles": [
+          -1.9939184066828,
+          -0.7638479114920709,
+          -2.075453185556931,
+          1.3259168215278956,
+          1.6499854943084038,
+          3.6461997910646327
+        ],
+        "sdp_upper": 0.8771971973708041,
+        "quantum_gap": 0.027197197416226948,
+        "sdp_gap": -4.5422776651093955e-11,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "validation"
+      },
+      {
+        "type_id": "validation-type-003",
+        "classical_value": 0.9473684210526316,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            1,
+            1,
+            0
+          ]
+        },
+        "bell_value": 0.9473684210526316,
+        "bell_angles": [
+          -0.40055124730177005,
+          -0.40055124730177005,
+          -0.40055124730177005,
+          2.7410414062880233,
+          -3.5421439008915634,
+          -0.40055124730177
+        ],
+        "sdp_upper": 0.9473684209884972,
+        "quantum_gap": 0.0,
+        "sdp_gap": -6.413447550812634e-11,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "validation"
+      },
+      {
+        "type_id": "validation-type-004",
+        "classical_value": 0.9444444444444444,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            1
+          ],
+          "bob": [
+            0,
+            0,
+            0
+          ]
+        },
+        "bell_value": 0.9444444444444444,
+        "bell_angles": [
+          0.49183763874077446,
+          0.4918376387407746,
+          -2.6497550148490188,
+          0.4918376387407746,
+          0.4918376387407744,
+          0.4918376387407746
+        ],
+        "sdp_upper": 0.9444444443344484,
+        "quantum_gap": 0.0,
+        "sdp_gap": -1.0999601229855216e-10,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "validation"
+      },
+      {
+        "type_id": "validation-type-005",
+        "classical_value": 0.8125,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            0,
+            1,
+            0
+          ]
+        },
+        "bell_value": 0.8404450939513534,
+        "bell_angles": [
+          0.5215889799661643,
+          0.7156939134054503,
+          -0.9200170221306305,
+          0.25782153436370436,
+          -2.0910989062938135,
+          -7.208419049035809
+        ],
+        "sdp_upper": 0.8404450938602331,
+        "quantum_gap": 0.02794509395135336,
+        "sdp_gap": -9.112022247848017e-11,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "validation"
+      },
+      {
+        "type_id": "validation-type-006",
+        "classical_value": 0.9285714285714284,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            1,
+            1,
+            1
+          ]
+        },
+        "bell_value": 0.9292545409493939,
+        "bell_angles": [
+          -2.9324955338052354,
+          2.862773924131477,
+          2.8774825646397773,
+          -0.19185328808599011,
+          5.618124810359023,
+          -0.1771446475776897
+        ],
+        "sdp_upper": 0.9292545408809872,
+        "quantum_gap": 0.000683112377965478,
+        "sdp_gap": -6.840661370688395e-11,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "validation"
+      },
+      {
+        "type_id": "validation-type-007",
+        "classical_value": 0.894736842105263,
+        "classical_strategy": {
+          "alice": [
+            0,
+            1,
+            0
+          ],
+          "bob": [
+            1,
+            0,
+            0
+          ]
+        },
+        "bell_value": 0.9020581986058375,
+        "bell_angles": [
+          -2.0717540936153056,
+          -4.087885699365155,
+          -1.8756310979366249,
+          1.3398351603106153,
+          -2.404109032744387,
+          -1.610184855577376
+        ],
+        "sdp_upper": 0.9020581985388143,
+        "quantum_gap": 0.007321356500574416,
+        "sdp_gap": -6.702316479589854e-11,
+        "sdp_status": "optimal",
+        "sdp_solver": "CLARABEL",
+        "split": "validation"
+      }
+    ],
+    "gap_summary": {
+      "min": 0.0,
+      "mean": 0.016613543853029378,
+      "max": 0.05147280425125589,
+      "positive_over_0.005": 10
+    },
+    "max_sdp_gap_abs": 2.9390001543561084e-10,
+    "max_device_error": 3.3306690738754696e-16,
+    "catalogs": [
+      {
+        "split": "development",
+        "states": 12,
+        "mean_oracle_surplus": 0.5664596075485008,
+        "min_oracle_surplus": 0.27405509220641266,
+        "max_oracle_surplus": 1.0730757394785915
+      },
+      {
+        "split": "validation",
+        "states": 12,
+        "mean_oracle_surplus": 0.3575533364129563,
+        "min_oracle_surplus": 0.17125243753306252,
+        "max_oracle_surplus": 0.6691864617622278
+      }
+    ],
+    "invariant_failures": [],
+    "information_contract": {
+      "allocator_private_context_access": false,
+      "post_context_messages": 0,
+      "public_fields": [
+        "request_graph",
+        "type_id",
+        "urgency",
+        "remaining_horizon",
+        "remaining_bell_budget"
+      ]
+    }
+  }
+}
