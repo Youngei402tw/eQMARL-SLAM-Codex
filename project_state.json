@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Budgeted-entanglement sequential MARL extension Stages 20-24 under prospective plan; user instruction 2026-11-01.",
   "active_stage": "23",
-  "stage_status": "completed_null_result_pending_publication",
+  "stage_status": "completed_null_result",
   "training_runs_executed": 411,
   "current_branch": "stage/23-budgeted-entanglement-confirmatory",
   "dependency_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "completion_commit": null,
-  "publication_status": "pending_results_commit",
+  "publication_status": "complete_remote_verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -52,9 +52,12 @@
     "stage/20-budgeted-entanglement-plan": "4e529a2d362fe53566c219b17b477b64e8221e15"
     ,"stage/21-budgeted-entanglement-task": "530b2a92dce583e6f0e46154888ea88d2dc5079b"
     ,"stage/22-budgeted-entanglement-development": "4cdae6894767d01dd4c5071677226d23f678aa66"
+    ,"stage/23-budgeted-entanglement-confirmatory": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c"
   },
   "blockers": [],
-  "next_action": "Publish the complete four-of-five-gate Stage23 result, then perform the independent Stage24 release audit.",
+  "next_action": "Complete the Stage23 receipt, then create Stage24 from its completion commit and independently audit every claim and bundle.",
+  "budgeted_entanglement_final_test_accessed": true,
+  "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",

@@ -1,0 +1,12 @@
+{
+  "stage": "23",
+  "branch": "stage/23-budgeted-entanglement-confirmatory",
+  "source_commit": "9bb4207edb19509fe842f6e1028a912100402bdb",
+  "results_commit": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c",
+  "remote_branch_sha": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c",
+  "verified": true,
+  "verified_utc": "2026-11-01T10:32:00+00:00",
+  "fresh_bundle_validation": true,
+  "composite_gate": "completed_null_result_four_of_five",
+  "authoritative_bundle": "experiments/23/23-budgeted-entanglement-confirmatory_attempt-01"
+}

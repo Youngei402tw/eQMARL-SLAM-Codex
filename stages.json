@@ -472,6 +472,8 @@
       "dependency_completion_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
       "branch_created_from_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
       "source_commit": "9bb4207edb19509fe842f6e1028a912100402bdb"
+      ,"results_commit": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c",
+      "publication_receipt": "docs/stages/23-publication.json"
     },
     {
       "id": "24",
