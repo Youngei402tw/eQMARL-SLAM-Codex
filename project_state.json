@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Budgeted-entanglement sequential MARL extension Stages 20-24 under prospective plan; user instruction 2026-11-01.",
   "active_stage": "22",
-  "stage_status": "passed_pending_publication",
+  "stage_status": "passed",
   "training_runs_executed": 395,
   "current_branch": "stage/22-budgeted-entanglement-development",
   "dependency_commit": "4a4a5e027d44b0573287925106368c5a6a4883e7",
   "completion_commit": null,
-  "publication_status": "pending_results_commit",
+  "publication_status": "complete_remote_verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -51,9 +51,10 @@
     "main_nonlocal_integration": "7fc6349a1f08856b9c6e1bb678d2800b7aed8e0e",
     "stage/20-budgeted-entanglement-plan": "4e529a2d362fe53566c219b17b477b64e8221e15"
     ,"stage/21-budgeted-entanglement-task": "530b2a92dce583e6f0e46154888ea88d2dc5079b"
+    ,"stage/22-budgeted-entanglement-development": "4cdae6894767d01dd4c5071677226d23f678aa66"
   },
   "blockers": [],
-  "next_action": "Publish the positive Stage22 development result and frozen Stage23 protocol, then verify CI before advancing.",
+  "next_action": "Complete the Stage22 receipt, then create Stage23 exactly from its completion commit and execute the frozen held-out study.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
