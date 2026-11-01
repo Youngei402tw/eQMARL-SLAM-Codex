@@ -468,9 +468,10 @@
       "report": "docs/stages/23-budgeted-entanglement-confirmatory.md",
       "status": "planned",
       "branch_created": true,
-      "status": "running",
+      "status": "completed_null_result",
       "dependency_completion_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
-      "branch_created_from_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba"
+      "branch_created_from_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
+      "source_commit": "9bb4207edb19509fe842f6e1028a912100402bdb"
     },
     {
       "id": "24",

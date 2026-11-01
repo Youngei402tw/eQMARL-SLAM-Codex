@@ -1,0 +1,268 @@
+{
+  "passed": false,
+  "gates": {
+    "paired_95_lower_above_zero": true,
+    "improvement_at_least_5pct_dp": true,
+    "one_sided_dp_fraction_lower_above_0_90": false,
+    "one_sided_surplus_lower_above_zero": true,
+    "budget_and_matching_exact": true
+  },
+  "resources": {
+    "primitive_steps": 600000,
+    "decisions": 600000,
+    "updates": 552592,
+    "circuit_evaluations": 1382400,
+    "shots": 0
+  },
+  "summary": {
+    "method_means": {
+      "classical_exact": 0.0,
+      "quantum_random": 0.22684514444013137,
+      "quantum_static": 0.2247810942275097,
+      "quantum_greedy": 0.30838651009881746,
+      "dp_online_oracle": 0.5712162176582192,
+      "future_clairvoyant": 0.5832639032012966,
+      "message_oracle": 10.633979480564157
+    },
+    "ber_marl_mean_surplus": 0.5064155553028137,
+    "ber_marl_seed_rows": [
+      {
+        "training_seed": 23000,
+        "mean_surplus": 0.49475397216707767,
+        "mean_greedy_difference": 0.18636746206826021,
+        "dp_fraction": 0.8661413259507771,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.4320230062012422,
+          "final_100_loss": 0.09293160885572434
+        }
+      },
+      {
+        "training_seed": 23001,
+        "mean_surplus": 0.5160018938802168,
+        "mean_greedy_difference": 0.20761538378139938,
+        "dp_fraction": 0.9033390123194309,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.4088977167164724,
+          "final_100_loss": 0.08553053837269545
+        }
+      },
+      {
+        "training_seed": 23002,
+        "mean_surplus": 0.5202398205496777,
+        "mean_greedy_difference": 0.21185331045086025,
+        "dp_fraction": 0.9107581410809266,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.4063179980785619,
+          "final_100_loss": 0.10358492717146874
+        }
+      },
+      {
+        "training_seed": 23003,
+        "mean_surplus": 0.48165552920983556,
+        "mean_greedy_difference": 0.1732690191110181,
+        "dp_fraction": 0.8432105292536157,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.41185288798656783,
+          "final_100_loss": 0.08649809141643346
+        }
+      },
+      {
+        "training_seed": 23004,
+        "mean_surplus": 0.5267591324092976,
+        "mean_greedy_difference": 0.21837262231048016,
+        "dp_fraction": 0.9221711781377994,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.38811654704597204,
+          "final_100_loss": 0.08807926125824452
+        }
+      },
+      {
+        "training_seed": 23005,
+        "mean_surplus": 0.5190577077593976,
+        "mean_greedy_difference": 0.2106711976605802,
+        "dp_fraction": 0.908688674644686,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.4109299564589165,
+          "final_100_loss": 0.07831203747540712
+        }
+      },
+      {
+        "training_seed": 23006,
+        "mean_surplus": 0.5068120206326369,
+        "mean_greedy_difference": 0.19842551053381946,
+        "dp_fraction": 0.8872507554326515,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.41328721145895,
+          "final_100_loss": 0.07941039292141795
+        }
+      },
+      {
+        "training_seed": 23007,
+        "mean_surplus": 0.5032446758991523,
+        "mean_greedy_difference": 0.19485816580033488,
+        "dp_fraction": 0.8810055813230835,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.3928778832502373,
+          "final_100_loss": 0.08481177873909473
+        }
+      },
+      {
+        "training_seed": 23008,
+        "mean_surplus": 0.5124975672907927,
+        "mean_greedy_difference": 0.20411105719197517,
+        "dp_fraction": 0.8972041609600094,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.3928267317171651,
+          "final_100_loss": 0.09105493193492294
+        }
+      },
+      {
+        "training_seed": 23009,
+        "mean_surplus": 0.5141561577725495,
+        "mean_greedy_difference": 0.20576964767373201,
+        "dp_fraction": 0.9001077733408982,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.4352389477254663,
+          "final_100_loss": 0.09639216758310795
+        }
+      },
+      {
+        "training_seed": 23010,
+        "mean_surplus": 0.48443063821217747,
+        "mean_greedy_difference": 0.17604412811336,
+        "dp_fraction": 0.8480687754247747,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.4331988517871146,
+          "final_100_loss": 0.10501840906217694
+        }
+      },
+      {
+        "training_seed": 23011,
+        "mean_surplus": 0.5049044529879895,
+        "mean_greedy_difference": 0.196517942889172,
+        "dp_fraction": 0.8839112710383398,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.3954457585936547,
+          "final_100_loss": 0.10035986710339785
+        }
+      },
+      {
+        "training_seed": 23012,
+        "mean_surplus": 0.5106210436109908,
+        "mean_greedy_difference": 0.2022345335121733,
+        "dp_fraction": 0.8939190237006107,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.42842997961156143,
+          "final_100_loss": 0.10089162793010473
+        }
+      },
+      {
+        "training_seed": 23013,
+        "mean_surplus": 0.49034808512779615,
+        "mean_greedy_difference": 0.18196157502897864,
+        "dp_fraction": 0.8584281572712462,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.41119176185657513,
+          "final_100_loss": 0.10259710911661386
+        }
+      },
+      {
+        "training_seed": 23014,
+        "mean_surplus": 0.4976747147491401,
+        "mean_greedy_difference": 0.1892882046503226,
+        "dp_fraction": 0.8712545256320404,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.4022139153971915,
+          "final_100_loss": 0.08780416944995523
+        }
+      },
+      {
+        "training_seed": 23015,
+        "mean_surplus": 0.5194914725862912,
+        "mean_greedy_difference": 0.21110496248747376,
+        "dp_fraction": 0.9094480452883835,
+        "training": {
+          "episodes": 2500,
+          "decisions": 25000,
+          "updates": 24937,
+          "final_100_return": 0.4261492771416823,
+          "final_100_loss": 0.10413004420697689
+        }
+      }
+    ],
+    "greedy_mean_surplus": 0.30838651009881746,
+    "dp_mean_surplus": 0.5712162176582192,
+    "mean_greedy_difference": 0.19802904520399628,
+    "mean_dp_fraction": 0.8865566831749545,
+    "difference_bootstrap_95": [
+      0.19141234750541905,
+      0.20432305473382825
+    ],
+    "dp_fraction_one_sided_95": [
+      0.8768401935694357,
+      0.8956463651570766
+    ],
+    "surplus_one_sided_95": [
+      0.5009522324611231,
+      0.5116546625129864
+    ],
+    "test_request_gap_summary": {
+      "min": 0.0,
+      "mean": 0.017596349944612122,
+      "max": 0.03829586050048128
+    },
+    "violations": [],
+    "gates": {
+      "paired_95_lower_above_zero": true,
+      "improvement_at_least_5pct_dp": true,
+      "one_sided_dp_fraction_lower_above_0_90": false,
+      "one_sided_surplus_lower_above_zero": true,
+      "budget_and_matching_exact": true
+    }
+  }
+}
