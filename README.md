@@ -1,8 +1,8 @@
 # eQMARL-SLAM-Codex
 
-A staged research project to test whether an entangled quantum critic improves cooperative active SLAM under controlled information, model, and compute budgets.
+A staged research project for controlled quantum multi-agent reinforcement-learning studies, including active SLAM, complementarity mechanisms, nonlocal coordination, and routing scarce entanglement.
 
-**Stages 00–09 are complete with verified evidence.** The locked eight-seed confirmatory study found an eQMARL-minus-matched-no-entanglement physical-coverage difference of 0.00431 with a 95% paired-seed interval of [-0.01458, 0.02615]. This does not establish superiority or equivalence. A separately authorized prospective [mechanism-focused extension](docs/MECHANISM_STUDY_PLAN.md) begins at Stage 10 with fresh data and a complementarity-by-entanglement interaction hypothesis. See [the final core report](docs/FINAL_REPORT.md) and [project state](project_state.json).
+**Stages 00–24 are complete with verified evidence.** The newest study introduces [Budgeted Entanglement Routing for Sequential MARL](docs/paper/BUDGETED_ENTANGLEMENT_ROUTING.md). On locked held-out request types and sequences, BER-MARL increased entanglement surplus over myopic greedy by `0.1980` with paired 95% interval `[0.1914, 0.2043]`. It recovered `88.66%` of the exact online-DP surplus; the preregistered one-sided lower-bound target of more than 90% failed. The release preserves both the strong learned-versus-greedy result and the failed near-oracle gate. See [the Stage 24 audit](docs/stages/24-budgeted-entanglement-release.md) and [project state](project_state.json).
 
 ## Start here
 
@@ -13,6 +13,7 @@ A staged research project to test whether an entangled quantum critic improves c
 - [Reference audit](docs/REFERENCE_AUDIT.md): what is retained from eQMARL and what changes from the existing SLAM implementations.
 - [GitHub workflow](docs/GITHUB_WORKFLOW.md): permanent stage branches and verified experiment publication.
 - [Research roadmap](docs/RESEARCH_ROADMAP.md): feasibility and contribution ranking, including optional ROS and 3D extensions.
+- [Budgeted-entanglement study](docs/paper/BUDGETED_ENTANGLEMENT_ROUTING.md): paper-facing task, method, held-out results, and limitations.
 - [Stage registry](stages.json), [Stage 08 confirmatory report](docs/stages/08-confirmatory.md), and [Stage 09 release report](docs/stages/09-release.md).
 
 ## Technical direction
@@ -44,8 +45,18 @@ A positive, null, or negative quantum comparison can all complete the project. C
 | 12 | `stage/12-mechanism-development` | Equal-budget tuning, pilots, and freeze |
 | 13 | `stage/13-mechanism-confirmatory` | Locked interaction phase diagram |
 | 14 | `stage/14-mechanism-release` | Reproduction and paper-ready contribution audit |
+| 15 | `stage/15-nonlocal-plan` | Prospective nonlocal coordination study |
+| 16 | `stage/16-nonlocal-benchmark` | Nonlocal correctness benchmark |
+| 17 | `stage/17-nonlocal-development` | Nonlocal policy development |
+| 18 | `stage/18-nonlocal-confirmatory` | Locked nonlocal policy evaluation |
+| 19 | `stage/19-nonlocal-release` | Nonlocal study release audit |
+| 20 | `stage/20-budgeted-entanglement-plan` | Prospective scarce-entanglement routing plan |
+| 21 | `stage/21-budgeted-entanglement-task` | Certified request family and sequential environment |
+| 22 | `stage/22-budgeted-entanglement-development` | BER-MARL development and confirmatory freeze |
+| 23 | `stage/23-budgeted-entanglement-confirmatory` | Locked held-out allocation study |
+| 24 | `stage/24-budgeted-entanglement-release` | Independent reconstruction and paper release |
 
-The completed Stage 00–09 branches were created from their recorded dependencies and are retained. Stage 10 is the active prospective planning branch; later extension branches remain planned until their stages begin. `main` is the stable integrated core release.
+Every stage branch was created from its recorded dependency and is retained. `main` remains the stable integrated core release; the latest study is published on its permanent Stage 20–24 branches.
 
 ## What is runnable today
 

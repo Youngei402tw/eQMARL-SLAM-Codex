@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Budgeted-entanglement sequential MARL extension Stages 20-24 under prospective plan; user instruction 2026-11-01.",
   "active_stage": "24",
-  "stage_status": "passed_pending_publication",
+  "stage_status": "passed",
   "training_runs_executed": 411,
   "current_branch": "stage/24-budgeted-entanglement-release",
   "dependency_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
   "completion_commit": null,
-  "publication_status": "pending_results_commit",
+  "publication_status": "complete_remote_verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -53,9 +53,10 @@
     ,"stage/21-budgeted-entanglement-task": "530b2a92dce583e6f0e46154888ea88d2dc5079b"
     ,"stage/22-budgeted-entanglement-development": "4cdae6894767d01dd4c5071677226d23f678aa66"
     ,"stage/23-budgeted-entanglement-confirmatory": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c"
+    ,"stage/24-budgeted-entanglement-release": "ae49896ae8e345c41cf0f2b0c71f1eb5feb5a50f"
   },
   "blockers": [],
-  "next_action": "Publish and remotely verify the Stage24 audit and paper-facing result package.",
+  "next_action": "No experiment remains in the authorized Stage20-24 plan; preserve permanent branches and use the audited paper package for review.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
