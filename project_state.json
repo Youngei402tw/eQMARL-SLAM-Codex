@@ -53,7 +53,7 @@
     ,"stage/21-budgeted-entanglement-task": "530b2a92dce583e6f0e46154888ea88d2dc5079b"
   },
   "blockers": [],
-  "next_action": "Implement, publish, and run the registered bounded allocator-development matrix without accessing final test values.",
+  "next_action": "Publish the Stage22 gate correction, retain attempt 01, and rerun with an unseen pilot evaluation stream.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
