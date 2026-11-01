@@ -1,0 +1,13 @@
+{
+  "supported": [
+    "BER-MARL had greater held-out entanglement surplus than random, static, and myopic greedy allocation.",
+    "The paired-seed 95% bootstrap interval for BER-MARL minus greedy excluded zero.",
+    "The benchmark requires routing a consumable Bell-pair budget over a dynamic matching-constrained graph."
+  ],
+  "prohibited": [
+    "BER-MARL passed the full five-part superior-allocation gate.",
+    "BER-MARL achieved a one-sided lower bound above 90% of online-DP surplus.",
+    "The study proves quantum computational speedup, hardware advantage, or global priority.",
+    "The request-level nonlocal gaps are new Bell inequalities."
+  ]
+}

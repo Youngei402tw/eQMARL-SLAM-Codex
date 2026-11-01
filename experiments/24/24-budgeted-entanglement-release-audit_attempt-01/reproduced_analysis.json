@@ -1,0 +1,37 @@
+{
+  "analysis": {
+    "method_means": {
+      "classical_exact": 0.0,
+      "quantum_random": 0.22684514444013137,
+      "quantum_static": 0.2247810942275097,
+      "quantum_greedy": 0.30838651009881746,
+      "dp_online_oracle": 0.5712162176582192,
+      "future_clairvoyant": 0.5832639032012966,
+      "message_oracle": 10.633979480564157
+    },
+    "ber_marl_mean_surplus": 0.5064155553028137,
+    "mean_greedy_difference": 0.19802904520399628,
+    "mean_dp_fraction": 0.8865566831749545,
+    "difference_bootstrap_95": [
+      0.19141234750541908,
+      0.20432305473382828
+    ],
+    "dp_fraction_one_sided_95": [
+      0.8768401935694357,
+      0.8956463651570766
+    ],
+    "surplus_one_sided_95": [
+      0.5009522324611231,
+      0.5116546625129864
+    ]
+  },
+  "errors": {
+    "method_means": 0.0,
+    "ber_marl_mean_surplus": 0.0,
+    "mean_greedy_difference": 0.0,
+    "mean_dp_fraction": 0.0,
+    "difference_bootstrap_95": 2.7755575615628914e-17,
+    "dp_fraction_one_sided_95": 0.0,
+    "surplus_one_sided_95": 0.0
+  }
+}

@@ -488,9 +488,10 @@
       "report": "docs/stages/24-budgeted-entanglement-release.md",
       "status": "planned",
       "branch_created": true,
-      "status": "running",
+      "status": "passed",
       "dependency_completion_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
-      "branch_created_from_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1"
+      "branch_created_from_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
+      "source_commit": "a33578a66830e6289e510187a3a06f6ed28629e6"
     }
   ],
   "recommended_execution_order": [

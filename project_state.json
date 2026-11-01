@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Budgeted-entanglement sequential MARL extension Stages 20-24 under prospective plan; user instruction 2026-11-01.",
   "active_stage": "24",
-  "stage_status": "running",
+  "stage_status": "passed_pending_publication",
   "training_runs_executed": 411,
   "current_branch": "stage/24-budgeted-entanglement-release",
   "dependency_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
   "completion_commit": null,
-  "publication_status": "pending_source_commit",
+  "publication_status": "pending_results_commit",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -55,7 +55,7 @@
     ,"stage/23-budgeted-entanglement-confirmatory": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c"
   },
   "blockers": [],
-  "next_action": "Implement, publish, and run the independent Stage24 bundle, certificate, inference, and claim audit.",
+  "next_action": "Publish and remotely verify the Stage24 audit and paper-facing result package.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
@@ -432,6 +432,21 @@
         "shots": 0
       },
       "gate_outcome": "Four of five positive gates passed; oracle-fraction lower bound 0.87684 failed the >0.90 condition."
+    },
+    "24": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 402.1975075310002,
+      "setup_wall_seconds_charged": 400.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 23012,
+        "decisions": 23000,
+        "updates": 0,
+        "wall_seconds": 2.1975075310001557,
+        "cpu_core_hours": 0.0006102594444444444,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
     }
   },
   "stage_budget": {
