@@ -12,9 +12,17 @@
     },
     {
       "run_id": "21-budgeted-entanglement-task_attempt-02",
-      "status": "planned",
+      "status": "failed_archive_validation",
       "config_path": "configs/stage21/21-budgeted-entanglement-task_attempt-02.yaml",
-      "config_sha256": "055ebf706be1c0a89a07d45720949e54544955619240af22c07f5d3f60dfb5bb"
+      "config_sha256": "055ebf706be1c0a89a07d45720949e54544955619240af22c07f5d3f60dfb5bb",
+      "result_path": "experiments/21/21-budgeted-entanglement-task_attempt-02",
+      "failure_reason": "Scientific gates passed; archive validation rejected use of a development-identity manifest for the required train field."
+    },
+    {
+      "run_id": "21-budgeted-entanglement-task_attempt-03",
+      "status": "planned",
+      "config_path": "configs/stage21/21-budgeted-entanglement-task_attempt-03.yaml",
+      "config_sha256": "85a0fd3a4db466b3ecef7cfeedc49d04ccf374bcf206e97f74817095b8949569"
     }
   ]
 }

@@ -52,7 +52,7 @@
     "stage/20-budgeted-entanglement-plan": "4e529a2d362fe53566c219b17b477b64e8221e15"
   },
   "blockers": [],
-  "next_action": "Publish the Stage21 archive-metadata correction and run registered attempt 02; retain attempt 01 as an archive-validation failure.",
+  "next_action": "Publish the Stage21 null-train metadata correction and run registered attempt 03; retain attempts 01 and 02 as archive-validation failures.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",

@@ -1,0 +1,171 @@
+{
+  "schema_version": "0.1.0",
+  "run_id": "21-budgeted-entanglement-task_attempt-02",
+  "stage": "21",
+  "protocol_id": "budgeted-entanglement-task-v1",
+  "hypothesis": "The committed request family contains independently certified heterogeneous quantum gaps and supports a nontrivial sequential Bell-pair allocation problem with exact budget and monogamy constraints.",
+  "method": "request-certification-and-environment-audit",
+  "status": "completed",
+  "source_commit": "27b872f961705f696a5d46fb6a763e2726fea123",
+  "dependency_completion_commit": "4e529a2d362fe53566c219b17b477b64e8221e15",
+  "dirty_tree": false,
+  "config_sha256": "055ebf706be1c0a89a07d45720949e54544955619240af22c07f5d3f60dfb5bb",
+  "seed_streams": {
+    "model_init": 21000,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": 21500,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": {
+      "path": "configs/data/development-budgeted-request-types-v1.json",
+      "sha256": "b567cb9074f153957dd393bec3d3858dae75dc1567f716b9b21b1b81c6df540b"
+    },
+    "development": {
+      "path": "configs/data/development-budgeted-request-types-v1.json",
+      "sha256": "b567cb9074f153957dd393bec3d3858dae75dc1567f716b9b21b1b81c6df540b"
+    },
+    "validation": {
+      "path": "configs/data/validation-budgeted-request-types-v1.json",
+      "sha256": "67395c8a12fab801a1325daf27852b18d8856d28a67032cd81c06825daedaf01"
+    },
+    "test": {
+      "path": "configs/data/test-budgeted-request-types-v1.json",
+      "sha256": "dfd9b859a4270aa43cc2bcd50fa97a09f24d6f41836e370e94635db23f1f28b7"
+    }
+  },
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "lockfile_sha256": "21a2ba693acfa172b5b0a4a04b49f14e5cb8372e75eb3fe6e5753dbab0f3a146",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "hardware": {
+      "device": "CPU",
+      "available_cpus": 1,
+      "max_job_threads": 1
+    },
+    "dependencies": {
+      "rustworkx": "0.18.1",
+      "attrs": "26.1.0",
+      "pycparser": "3.12",
+      "qdldl": "0.1.9.post1",
+      "typing_extensions": "4.16.0",
+      "scipy-openblas32": "0.3.34.237.2",
+      "mpmath": "1.3.0",
+      "pennylane": "0.45.1",
+      "scs": "3.3.1",
+      "PyYAML": "6.0.3",
+      "pip": "26.2.2",
+      "highspy": "1.15.1",
+      "gast": "0.7.0",
+      "requests": "2.34.2",
+      "cachetools": "7.2.7",
+      "torch": "2.15.0+cpu",
+      "sympy": "1.14.0",
+      "jsonschema-specifications": "2025.9.1",
+      "fsspec": "2026.9.0",
+      "termcolor": "3.3.0",
+      "MarkupSafe": "3.0.3",
+      "pytest": "9.2.0",
+      "clarabel": "0.11.1",
+      "gymnasium": "1.4.0",
+      "charset-normalizer": "3.5.2",
+      "sparsediffpy": "0.6.1",
+      "iniconfig": "2.3.1",
+      "referencing": "0.37.0",
+      "tomlkit": "0.15.2",
+      "packaging": "26.3",
+      "pennylane_lightning": "0.45.0",
+      "jsonschema": "4.26.0",
+      "Farama-Notifications": "0.0.6",
+      "cvxpy": "1.9.3",
+      "diastatic-malt": "2.15.3",
+      "gtsam": "4.3.0",
+      "Jinja2": "3.1.6",
+      "autoray": "0.8.4",
+      "setuptools": "78.1.0",
+      "rpds-py": "2026.9.1",
+      "scipy": "1.18.1",
+      "cffi": "2.1.1",
+      "autograd": "1.8.0",
+      "filelock": "4.2.4",
+      "pluggy": "1.7.0",
+      "urllib3": "2.8.0",
+      "cloudpickle": "3.1.2",
+      "joblib": "1.6.0",
+      "Pygments": "2.21.0",
+      "numpy": "2.5.4",
+      "osqp": "1.1.3",
+      "appdirs": "1.4.4",
+      "idna": "3.20",
+      "certifi": "2026.10.23",
+      "networkx": "3.7"
+    }
+  },
+  "model": {
+    "actor": "two-endpoint local binary measurement policies",
+    "encoder": "private context index and public request type/role",
+    "critic": "none in task certification",
+    "parameter_counts": {
+      "bell_angles_per_type": 6
+    },
+    "optimizer": "16-start float64 Adam request-policy certification"
+  },
+  "quantum": {
+    "device": "analytic Bell correlator plus independent PennyLane fixture",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "float64 backpropagation",
+    "dtype": "float64",
+    "entanglement": "one Bell phi+ pair per selected request",
+    "observables": [
+      "local Z-basis action bits",
+      "ZZ correlation"
+    ],
+    "noise": null,
+    "resource_accounting": "nine context circuit-equivalent evaluations per optimizer update; SDP executions separately recorded in diagnostics"
+  },
+  "budget": {
+    "profile": "diagnostic",
+    "primitive_steps": 1000,
+    "wall_seconds": 3600
+  },
+  "resources_consumed": {
+    "primitive_steps": 1000,
+    "decisions": 1000,
+    "updates": 204800,
+    "wall_seconds": 153.52559185299992,
+    "cpu_core_hours": 0.0426422075,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 1843209,
+    "shots": 0
+  },
+  "execution_segments": [
+    {
+      "started_utc": "2026-11-01T09:06:46.194549+00:00",
+      "ended_utc": "2026-11-01T09:09:19.755450+00:00",
+      "primitive_steps": 1000,
+      "decisions": 1000,
+      "updates": 204800,
+      "wall_seconds": 153.52559185299992,
+      "cpu_core_hours": 0.0426422075,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 1843209,
+      "shots": 0
+    }
+  ],
+  "evaluation": {
+    "policy_mode": "exact expected request values and scripted allocation sequences",
+    "checkpoint_selection": "best development optimization start for certification only",
+    "metrics_protocol": "budgeted-entanglement-task-v1"
+  },
+  "artifacts": "artifact_manifest.json",
+  "failure": null,
+  "publication": {
+    "status": "pending",
+    "source_remote_verified": true
+  }
+}
