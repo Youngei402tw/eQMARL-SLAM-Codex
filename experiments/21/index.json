@@ -20,9 +20,10 @@
     },
     {
       "run_id": "21-budgeted-entanglement-task_attempt-03",
-      "status": "planned",
+      "status": "completed",
       "config_path": "configs/stage21/21-budgeted-entanglement-task_attempt-03.yaml",
-      "config_sha256": "85a0fd3a4db466b3ecef7cfeedc49d04ccf374bcf206e97f74817095b8949569"
+      "config_sha256": "85a0fd3a4db466b3ecef7cfeedc49d04ccf374bcf206e97f74817095b8949569",
+      "result_path": "experiments/21/21-budgeted-entanglement-task_attempt-03"
     }
   ]
 }

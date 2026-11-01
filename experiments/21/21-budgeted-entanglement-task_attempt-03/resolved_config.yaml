@@ -1,0 +1,94 @@
+{
+  "run_id": "21-budgeted-entanglement-task_attempt-03",
+  "stage": "21",
+  "protocol_id": "budgeted-entanglement-task-v1",
+  "profile": "diagnostic",
+  "experiment": "budgeted-entanglement-task",
+  "hypothesis": "The committed request family contains independently certified heterogeneous quantum gaps and supports a nontrivial sequential Bell-pair allocation problem with exact budget and monogamy constraints.",
+  "method": "request-certification-and-environment-audit",
+  "dependency_completion_commit": "4e529a2d362fe53566c219b17b477b64e8221e15",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 1000,
+  "max_cpu_threads": 1,
+  "request_type_manifests": {
+    "development": {
+      "path": "configs/data/development-budgeted-request-types-v1.json",
+      "sha256": "b567cb9074f153957dd393bec3d3858dae75dc1567f716b9b21b1b81c6df540b"
+    },
+    "validation": {
+      "path": "configs/data/validation-budgeted-request-types-v1.json",
+      "sha256": "67395c8a12fab801a1325daf27852b18d8856d28a67032cd81c06825daedaf01"
+    },
+    "test": {
+      "path": "configs/data/test-budgeted-request-types-v1.json",
+      "sha256": "dfd9b859a4270aa43cc2bcd50fa97a09f24d6f41836e370e94635db23f1f28b7"
+    }
+  },
+  "public_catalogs": {
+    "development": {
+      "path": "configs/data/development-budgeted-public-catalog-v1.json",
+      "sha256": "ef489a4397223380f97cc54001bd277ebd9e7fdc3b1cbe10ddd43134cbc35750"
+    },
+    "validation": {
+      "path": "configs/data/validation-budgeted-public-catalog-v1.json",
+      "sha256": "1389f5f869fc903b1debd4e682822f5e2e2220d777fd80c48505a7754a47a9cc"
+    },
+    "test": {
+      "path": "configs/data/test-budgeted-public-catalog-v1.json",
+      "sha256": "e2963e7529046156cc8a5cfda2d85c169836b7930886496b5ac84dc18fa11108"
+    }
+  },
+  "seed_streams": {
+    "model_init": 21000,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": 21500,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/development-budgeted-request-types-v1.json",
+      "sha256": "b567cb9074f153957dd393bec3d3858dae75dc1567f716b9b21b1b81c6df540b"
+    },
+    "validation": {
+      "path": "configs/data/validation-budgeted-request-types-v1.json",
+      "sha256": "67395c8a12fab801a1325daf27852b18d8856d28a67032cd81c06825daedaf01"
+    },
+    "test": {
+      "path": "configs/data/test-budgeted-request-types-v1.json",
+      "sha256": "dfd9b859a4270aa43cc2bcd50fa97a09f24d6f41836e370e94635db23f1f28b7"
+    }
+  },
+  "model": {
+    "actor": "two-endpoint local binary measurement policies",
+    "encoder": "private context index and public request type/role",
+    "critic": "none in task certification",
+    "parameter_counts": {
+      "bell_angles_per_type": 6
+    },
+    "optimizer": "16-start float64 Adam request-policy certification"
+  },
+  "quantum": {
+    "device": "analytic Bell correlator plus independent PennyLane fixture",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "float64 backpropagation",
+    "dtype": "float64",
+    "entanglement": "one Bell phi+ pair per selected request",
+    "observables": [
+      "local Z-basis action bits",
+      "ZZ correlation"
+    ],
+    "noise": null,
+    "resource_accounting": "nine context circuit-equivalent evaluations per optimizer update; SDP executions separately recorded in diagnostics"
+  },
+  "action_modes": "exact expected request values and scripted allocation sequences",
+  "checkpoint_selection": "best development optimization start for certification only",
+  "analysis_version": "budgeted-entanglement-task-v1",
+  "interpretation": "Correctness and task-family certification only; no allocator-performance claim."
+}
+

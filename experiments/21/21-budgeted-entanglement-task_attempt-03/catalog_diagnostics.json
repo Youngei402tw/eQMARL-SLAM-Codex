@@ -1,0 +1,16 @@
+[
+  {
+    "split": "development",
+    "states": 12,
+    "mean_oracle_surplus": 0.5664596075485008,
+    "min_oracle_surplus": 0.27405509220641266,
+    "max_oracle_surplus": 1.0730757394785915
+  },
+  {
+    "split": "validation",
+    "states": 12,
+    "mean_oracle_surplus": 0.3575533364129563,
+    "min_oracle_surplus": 0.17125243753306252,
+    "max_oracle_surplus": 0.6691864617622278
+  }
+]

@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Budgeted-entanglement sequential MARL extension Stages 20-24 under prospective plan; user instruction 2026-11-01.",
   "active_stage": "21",
-  "stage_status": "running",
-  "training_runs_executed": 368,
+  "stage_status": "passed_pending_publication",
+  "training_runs_executed": 371,
   "current_branch": "stage/21-budgeted-entanglement-task",
   "dependency_commit": "4e529a2d362fe53566c219b17b477b64e8221e15",
   "completion_commit": null,
-  "publication_status": "pending_source_commit",
+  "publication_status": "pending_results_commit",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -52,7 +52,7 @@
     "stage/20-budgeted-entanglement-plan": "4e529a2d362fe53566c219b17b477b64e8221e15"
   },
   "blockers": [],
-  "next_action": "Publish the Stage21 null-train metadata correction and run registered attempt 03; retain attempts 01 and 02 as archive-validation failures.",
+  "next_action": "Publish and verify the completed Stage21 bundle, then create Stage22 from the Stage21 completion commit.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -374,6 +374,25 @@
         "circuit_evaluations": 0,
         "shots": 0
       }
+    },
+    "21": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 952.746291867,
+      "setup_wall_seconds_charged": 500.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 3000,
+        "decisions": 3000,
+        "updates": 614400,
+        "wall_seconds": 452.746291867,
+        "cpu_core_hours": 0.12574136166666668,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 5529627,
+        "shots": 0
+      },
+      "retained_failures": [
+        "21-budgeted-entanglement-task_attempt-01: archive schema missing train field",
+        "21-budgeted-entanglement-task_attempt-02: train split identity mismatch"
+      ]
     }
   },
   "stage_budget": {
