@@ -12,9 +12,10 @@
     },
     {
       "run_id": "22-budgeted-entanglement-development_attempt-02",
-      "status": "planned",
+      "status": "completed",
       "config_path": "configs/stage22/22-budgeted-entanglement-development_attempt-02.yaml",
-      "config_sha256": "34d8498bd66363e4fc1c9d2c735a5ac0cc11b141aff85ae4c2bd1a39e40bf391"
+      "config_sha256": "34d8498bd66363e4fc1c9d2c735a5ac0cc11b141aff85ae4c2bd1a39e40bf391",
+      "result_path": "experiments/22/22-budgeted-entanglement-development_attempt-02"
     }
   ]
 }

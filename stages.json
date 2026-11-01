@@ -448,9 +448,10 @@
       "initial_status": "planned",
       "report": "docs/stages/22-budgeted-entanglement-development.md",
       "branch_created": true,
-      "status": "running",
+      "status": "passed",
       "dependency_completion_commit": "4a4a5e027d44b0573287925106368c5a6a4883e7",
-      "branch_created_from_commit": "4a4a5e027d44b0573287925106368c5a6a4883e7"
+      "branch_created_from_commit": "4a4a5e027d44b0573287925106368c5a6a4883e7",
+      "source_commit": "89c56587c962a47b8ec78db910a00a604e43efa5"
     },
     {
       "id": "23",
