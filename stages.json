@@ -491,9 +491,10 @@
       "status": "passed",
       "dependency_completion_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
       "branch_created_from_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
-      "source_commit": "a33578a66830e6289e510187a3a06f6ed28629e6"
-      ,"results_commit": "ae49896ae8e345c41cf0f2b0c71f1eb5feb5a50f",
-      "publication_receipt": "docs/stages/24-publication.json"
+      "source_commit": "a33578a66830e6289e510187a3a06f6ed28629e6",
+      "results_commit": "ae49896ae8e345c41cf0f2b0c71f1eb5feb5a50f",
+      "publication_receipt": "docs/stages/24-publication.json",
+      "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5"
     }
   ],
   "recommended_execution_order": [

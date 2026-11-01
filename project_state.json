@@ -16,7 +16,7 @@
   "training_runs_executed": 411,
   "current_branch": "stage/24-budgeted-entanglement-release",
   "dependency_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
-  "completion_commit": null,
+  "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
   "publication_status": "complete_remote_verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
