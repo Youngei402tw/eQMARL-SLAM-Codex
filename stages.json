@@ -398,6 +398,73 @@
       "results_commit": "84b084acd13cb63ce504e0661726fbb6b5a93501",
       "publication_receipt": "docs/stages/19-publication.json",
       "completion_commit": "e6dc5c7a69f3de6942d3183b2c640e926eab467b"
+    },
+    {
+      "id": "20",
+      "name": "budgeted-entanglement-plan",
+      "title": "Prospective budgeted-entanglement MARL study",
+      "branch": "stage/20-budgeted-entanglement-plan",
+      "depends_on": [
+        "19"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/20-budgeted-entanglement-plan.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "e6dc5c7a69f3de6942d3183b2c640e926eab467b",
+      "branch_created_from_commit": "4ed6b9d6271746926e042e017cef62537b799e51"
+    },
+    {
+      "id": "21",
+      "name": "budgeted-entanglement-task",
+      "title": "Certified request family and sequential resource environment",
+      "branch": "stage/21-budgeted-entanglement-task",
+      "depends_on": [
+        "20"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/21-budgeted-entanglement-task.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "22",
+      "name": "budgeted-entanglement-development",
+      "title": "BER-MARL development and confirmatory freeze",
+      "branch": "stage/22-budgeted-entanglement-development",
+      "depends_on": [
+        "21"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/22-budgeted-entanglement-development.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "23",
+      "name": "budgeted-entanglement-confirmatory",
+      "title": "Locked held-out entanglement-allocation study",
+      "branch": "stage/23-budgeted-entanglement-confirmatory",
+      "depends_on": [
+        "22"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/23-budgeted-entanglement-confirmatory.md",
+      "status": "planned",
+      "branch_created": false
+    },
+    {
+      "id": "24",
+      "name": "budgeted-entanglement-release",
+      "title": "Budgeted-entanglement MARL reproduction and paper release",
+      "branch": "stage/24-budgeted-entanglement-release",
+      "depends_on": [
+        "23"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/24-budgeted-entanglement-release.md",
+      "status": "planned",
+      "branch_created": false
     }
   ],
   "recommended_execution_order": [
@@ -420,6 +487,11 @@
     "16",
     "17",
     "18",
-    "19"
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24"
   ]
 }

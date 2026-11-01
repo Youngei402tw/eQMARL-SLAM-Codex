@@ -394,3 +394,15 @@ After the completed mechanism null, the user authorized exploration of other QMA
 | 17 | `stage/17-nonlocal-development` | 16 | Equal-budget development and confirmatory freeze |
 | 18 | `stage/18-nonlocal-confirmatory` | 17 | Locked learned-policy advantage test |
 | 19 | `stage/19-nonlocal-release` | 18 | Clean reproduction and paper artifacts |
+
+## Authorized budgeted-entanglement MARL extension
+
+After rejecting active SLAM and CHSH as publication targets, the user authorized a new, nontrivial QMARL study. Stages 20–24 are governed by [BUDGETED_ENTANGLEMENT_MARL_PLAN.md](BUDGETED_ENTANGLEMENT_MARL_PLAN.md). They study consumable entanglement allocation in a sequential dynamic interaction graph and do not reuse either prior task as evidence.
+
+| Stage | Branch | Dependency | Purpose |
+| --- | --- | --- | --- |
+| 20 | `stage/20-budgeted-entanglement-plan` | 19/main receipt | Prospectus, novelty screen, registered task and inference |
+| 21 | `stage/21-budgeted-entanglement-task` | 20 | Certified request family, dynamic graph environment, and falsification gates |
+| 22 | `stage/22-budgeted-entanglement-development` | 21 | Equal-budget algorithm development and confirmatory freeze |
+| 23 | `stage/23-budgeted-entanglement-confirmatory` | 22 | Locked held-out sequential allocation comparison |
+| 24 | `stage/24-budgeted-entanglement-release` | 23 | Independent reproduction and paper release |

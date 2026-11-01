@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-29T11:02:00+00:00",
+  "updated_utc": "2026-11-01T00:20:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -10,14 +10,14 @@
     "url": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
     "last_check": "Stages 10-14 merged through PRs 11-15; all 120 confirmatory bundles and the Stage14 release audit were freshly retrieved and hash-validated."
   },
-  "authorized_current_scope": "Learned nonlocal-coordination QMARL extension Stages 15-19 completed under the prospective plan; user instruction 2026-10-29.",
-  "active_stage": "19",
+  "authorized_current_scope": "Budgeted-entanglement sequential MARL extension Stages 20-24 under prospective plan; user instruction 2026-11-01.",
+  "active_stage": "20",
   "stage_status": "passed",
   "training_runs_executed": 368,
-  "current_branch": "main",
-  "dependency_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
-  "completion_commit": "e6dc5c7a69f3de6942d3183b2c640e926eab467b",
-  "publication_status": "verified_complete",
+  "current_branch": "stage/20-budgeted-entanglement-plan",
+  "dependency_commit": "4ed6b9d6271746926e042e017cef62537b799e51",
+  "completion_commit": null,
+  "publication_status": "pending_source_commit",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -51,7 +51,7 @@
     "main_nonlocal_integration": "7fc6349a1f08856b9c6e1bb678d2800b7aed8e0e"
   },
   "blockers": [],
-  "next_action": null,
+  "next_action": "Commit and publish Stage20, then create Stage21 from its completion commit.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -61,10 +61,10 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": null,
+  "next_stage": "21",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
-  "next_stage_status": "none",
+  "next_stage_status": "planned",
   "completed_stage_budgets": {
     "01": {
       "cap_wall_seconds": 86400,
@@ -362,16 +362,16 @@
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 401.06959885800006,
-    "setup_wall_seconds_charged": 400.0,
-    "stage_started_utc": "2026-10-29T10:44:00+00:00",
-    "setup_charge_convention": "Conservative release implementation/tests plus instrumented independent audit.",
+    "consumed_wall_seconds": 1200.0,
+    "setup_wall_seconds_charged": 1200.0,
+    "stage_started_utc": "2026-11-01T00:00:00+00:00",
+    "setup_charge_convention": "Conservative active novelty search, candidate falsification, and prospective design envelope.",
     "recorded_experiment_resources": {
       "primitive_steps": 0,
       "decisions": 0,
       "updates": 0,
-      "wall_seconds": 1.069598858000063,
-      "cpu_core_hours": 0.00029704166666666675,
+      "wall_seconds": 0,
+      "cpu_core_hours": 0,
       "gpu_device_hours": 0,
       "circuit_evaluations": 0,
       "shots": 0
