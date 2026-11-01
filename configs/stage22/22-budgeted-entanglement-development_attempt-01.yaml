@@ -1,0 +1,108 @@
+{
+  "run_id": "22-budgeted-entanglement-development_attempt-01",
+  "stage": "22",
+  "protocol_id": "budgeted-entanglement-development-v1",
+  "profile": "development",
+  "experiment": "budgeted-entanglement-development",
+  "hypothesis": "A masked shared-action DQN trained without final-test access can learn budget pacing that beats myopic allocation and recovers over 90% of the non-clairvoyant DP surplus on non-test pilots.",
+  "method": "bounded-four-configuration-dqn-selection-and-combined-non-test-pilot",
+  "dependency_completion_commit": "4a4a5e027d44b0573287925106368c5a6a4883e7",
+  "wall_seconds": 7200,
+  "max_primitive_steps": 300000,
+  "max_cpu_threads": 1,
+  "certificate_bundle": "experiments/21/21-budgeted-entanglement-task_attempt-03/request_certificates.json",
+  "public_catalogs": {
+    "development": {
+      "path": "configs/data/development-budgeted-public-catalog-v1.json",
+      "sha256": "ef489a4397223380f97cc54001bd277ebd9e7fdc3b1cbe10ddd43134cbc35750"
+    },
+    "validation": {
+      "path": "configs/data/validation-budgeted-public-catalog-v1.json",
+      "sha256": "1389f5f869fc903b1debd4e682822f5e2e2220d777fd80c48505a7754a47a9cc"
+    }
+  },
+  "candidates": [
+    {
+      "name": "h32-lr1e-3",
+      "hidden": 32,
+      "learning_rate": 0.001,
+      "episodes": 800
+    },
+    {
+      "name": "h64-lr1e-3",
+      "hidden": 64,
+      "learning_rate": 0.001,
+      "episodes": 800
+    },
+    {
+      "name": "h64-lr5e-4",
+      "hidden": 64,
+      "learning_rate": 0.0005,
+      "episodes": 800
+    },
+    {
+      "name": "h96-lr1e-3",
+      "hidden": 96,
+      "learning_rate": 0.001,
+      "episodes": 800
+    }
+  ],
+  "tuning_seed_start": 22000,
+  "validation_sequence_seed_start": 42000,
+  "validation_sequences": 300,
+  "pilot_seed_start": 22500,
+  "pilot_seeds": 4,
+  "pilot_episodes": 1500,
+  "seed_streams": {
+    "model_init": 22000,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": 42000,
+    "sensor": null,
+    "action": 22100,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/development-budgeted-request-types-v1.json",
+      "sha256": "b567cb9074f153957dd393bec3d3858dae75dc1567f716b9b21b1b81c6df540b"
+    },
+    "validation": {
+      "path": "configs/data/validation-budgeted-request-types-v1.json",
+      "sha256": "67395c8a12fab801a1325daf27852b18d8856d28a67032cd81c06825daedaf01"
+    },
+    "test": {
+      "path": "configs/data/test-budgeted-request-types-v1.json",
+      "sha256": "dfd9b859a4270aa43cc2bcd50fa97a09f24d6f41836e370e94635db23f1f28b7"
+    }
+  },
+  "model": {
+    "actor": "masked shared-action DQN over ten feasible global matchings",
+    "encoder": "six public edge gains, six activity bits, remaining budget and horizon",
+    "critic": "target Q network",
+    "parameter_counts": {
+      "selected_after_registered_validation": "reported in checkpoint"
+    },
+    "optimizer": "Adam with four preregistered hidden-width/learning-rate candidates"
+  },
+  "quantum": {
+    "device": "frozen certified analytic Bell request values",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "not used in allocator training",
+    "dtype": "float64 request values and float32 DQN",
+    "entanglement": "one consumable Bell pair per selected edge",
+    "observables": [
+      "certified expected parity success"
+    ],
+    "noise": null,
+    "resource_accounting": "allocator decisions counted; local request circuit equivalents frozen from Stage21"
+  },
+  "action_modes": "masked deterministic greedy checkpoint evaluation on paired public sequences",
+  "checkpoint_selection": "maximum mean validation surplus across four candidates, tie by listed order",
+  "analysis_version": "budgeted-entanglement-development-v1",
+  "interpretation": "Development-only algorithm selection and capability gate; no held-out performance claim."
+}
+

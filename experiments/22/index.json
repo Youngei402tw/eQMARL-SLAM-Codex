@@ -1,0 +1,12 @@
+{
+  "stage": "22",
+  "protocol_id": "budgeted-entanglement-development-v1",
+  "runs": [
+    {
+      "run_id": "22-budgeted-entanglement-development_attempt-01",
+      "status": "planned",
+      "config_path": "configs/stage22/22-budgeted-entanglement-development_attempt-01.yaml",
+      "config_sha256": "c526f18eb3df15bc83e1353b6839e1ef489e1a995f8a930850f64702c25bc6bd"
+    }
+  ]
+}
