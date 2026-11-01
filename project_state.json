@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-11-01T00:20:00+00:00",
+  "updated_utc": "2026-11-01T00:30:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -11,13 +11,13 @@
     "last_check": "Stages 10-14 merged through PRs 11-15; all 120 confirmatory bundles and the Stage14 release audit were freshly retrieved and hash-validated."
   },
   "authorized_current_scope": "Budgeted-entanglement sequential MARL extension Stages 20-24 under prospective plan; user instruction 2026-11-01.",
-  "active_stage": "20",
-  "stage_status": "passed",
+  "active_stage": "21",
+  "stage_status": "running",
   "training_runs_executed": 368,
-  "current_branch": "stage/20-budgeted-entanglement-plan",
-  "dependency_commit": "4ed6b9d6271746926e042e017cef62537b799e51",
+  "current_branch": "stage/21-budgeted-entanglement-task",
+  "dependency_commit": "4e529a2d362fe53566c219b17b477b64e8221e15",
   "completion_commit": null,
-  "publication_status": "verified_complete",
+  "publication_status": "pending_source_commit",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -48,10 +48,11 @@
     "stage/17-nonlocal-development": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
     "stage/18-nonlocal-confirmatory": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
     "stage/19-nonlocal-release": "e6dc5c7a69f3de6942d3183b2c640e926eab467b",
-    "main_nonlocal_integration": "7fc6349a1f08856b9c6e1bb678d2800b7aed8e0e"
+    "main_nonlocal_integration": "7fc6349a1f08856b9c6e1bb678d2800b7aed8e0e",
+    "stage/20-budgeted-entanglement-plan": "4e529a2d362fe53566c219b17b477b64e8221e15"
   },
   "blockers": [],
-  "next_action": "Create Stage21 from the published Stage20 completion commit and execute certification gates.",
+  "next_action": "Publish Stage21 source/manifests, then run the registered request and environment certification.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -61,7 +62,7 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "21",
+  "next_stage": "22",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
   "next_stage_status": "planned",
@@ -358,24 +359,29 @@
         "circuit_evaluations": 0,
         "shots": 0
       }
+    },
+    "20": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 1200.0,
+      "setup_wall_seconds_charged": 1200.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 0,
+        "decisions": 0,
+        "updates": 0,
+        "wall_seconds": 0,
+        "cpu_core_hours": 0,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
     }
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 1200.0,
-    "setup_wall_seconds_charged": 1200.0,
-    "stage_started_utc": "2026-11-01T00:00:00+00:00",
-    "setup_charge_convention": "Conservative active novelty search, candidate falsification, and prospective design envelope.",
-    "recorded_experiment_resources": {
-      "primitive_steps": 0,
-      "decisions": 0,
-      "updates": 0,
-      "wall_seconds": 0,
-      "cpu_core_hours": 0,
-      "gpu_device_hours": 0,
-      "circuit_evaluations": 0,
-      "shots": 0
-    }
+    "consumed_wall_seconds": 500.0,
+    "setup_wall_seconds_charged": 500.0,
+    "stage_started_utc": "2026-11-01T00:25:00+00:00",
+    "setup_charge_convention": "Conservative task implementation, dependency setup, manifest generation, and tests before registered execution."
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
   "active_runs": [],

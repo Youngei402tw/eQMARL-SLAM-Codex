@@ -13,6 +13,7 @@ dependencies = ["numpy", "torch", "gymnasium", "jsonschema", "PyYAML"]
 quantum = ["pennylane"]
 slam = ["gtsam"]
 dev = ["pytest"]
+optimization = ["cvxpy"]
 
 [tool.setuptools.packages.find]
 include = ["eqmarl_slam*"]

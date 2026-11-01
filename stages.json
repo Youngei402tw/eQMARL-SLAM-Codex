@@ -415,7 +415,8 @@
       "branch_created_from_commit": "4ed6b9d6271746926e042e017cef62537b799e51",
       "source_commit": "d84116ffa622caad0a6ac1ccef1b9408bcbfd777",
       "results_commit": "d84116ffa622caad0a6ac1ccef1b9408bcbfd777",
-      "publication_receipt": "docs/stages/20-publication.json"
+      "publication_receipt": "docs/stages/20-publication.json",
+      "completion_commit": "4e529a2d362fe53566c219b17b477b64e8221e15"
     },
     {
       "id": "21",
@@ -427,8 +428,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/21-budgeted-entanglement-task.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "running",
+      "branch_created": true,
+      "dependency_completion_commit": "4e529a2d362fe53566c219b17b477b64e8221e15",
+      "branch_created_from_commit": "4e529a2d362fe53566c219b17b477b64e8221e15"
     },
     {
       "id": "22",
