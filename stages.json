@@ -454,6 +454,7 @@
       "source_commit": "89c56587c962a47b8ec78db910a00a604e43efa5"
       ,"results_commit": "4cdae6894767d01dd4c5071677226d23f678aa66",
       "publication_receipt": "docs/stages/22-publication.json"
+      ,"completion_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba"
     },
     {
       "id": "23",
@@ -466,7 +467,10 @@
       "initial_status": "planned",
       "report": "docs/stages/23-budgeted-entanglement-confirmatory.md",
       "status": "planned",
-      "branch_created": false
+      "branch_created": true,
+      "status": "running",
+      "dependency_completion_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
+      "branch_created_from_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba"
     },
     {
       "id": "24",

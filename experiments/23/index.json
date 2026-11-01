@@ -1,0 +1,12 @@
+{
+  "stage": "23",
+  "protocol_id": "budgeted-entanglement-confirmatory-v1",
+  "runs": [
+    {
+      "run_id": "23-budgeted-entanglement-confirmatory_attempt-01",
+      "status": "planned",
+      "config_path": "configs/stage23/23-budgeted-entanglement-confirmatory_attempt-01.yaml",
+      "config_sha256": "3acd1da99790dc789c914eee4f24840d9f9c8f21aa235d2716050ab851df5e12"
+    }
+  ]
+}

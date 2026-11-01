@@ -1,0 +1,75 @@
+{
+  "run_id": "23-budgeted-entanglement-confirmatory_attempt-01",
+  "stage": "23",
+  "protocol_id": "budgeted-entanglement-confirmatory-v1",
+  "profile": "confirmatory",
+  "experiment": "budgeted-entanglement-confirmatory",
+  "hypothesis": "On held-out request types and public sequences, BER-MARL yields greater entanglement surplus than myopic greedy allocation and recovers more than 90% of the exact online DP surplus.",
+  "method": "locked-sixteen-seed-paired-held-out-comparison",
+  "dependency_completion_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
+  "wall_seconds": 7200,
+  "max_primitive_steps": 700000,
+  "max_cpu_threads": 1,
+  "freeze": {
+    "path": "configs/stage22/stage23-freeze.json",
+    "sha256": "39615f29bc991757e4936242c3fdf69b129084da8f59af42551be1309118b556"
+  },
+  "non_test_certificate_bundle": "experiments/21/21-budgeted-entanglement-task_attempt-03/request_certificates.json",
+  "training_catalogs": {
+    "development": "configs/data/development-budgeted-public-catalog-v1.json",
+    "validation": "configs/data/validation-budgeted-public-catalog-v1.json"
+  },
+  "seed_streams": {
+    "model_init": 23000,
+    "critic_init": 23000,
+    "map": null,
+    "evaluation_map": 53000,
+    "sensor": null,
+    "action": 23100,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/development-budgeted-request-types-v1.json",
+      "sha256": "b567cb9074f153957dd393bec3d3858dae75dc1567f716b9b21b1b81c6df540b"
+    },
+    "validation": {
+      "path": "configs/data/validation-budgeted-request-types-v1.json",
+      "sha256": "67395c8a12fab801a1325daf27852b18d8856d28a67032cd81c06825daedaf01"
+    },
+    "test": {
+      "path": "configs/data/test-budgeted-request-types-v1.json",
+      "sha256": "dfd9b859a4270aa43cc2bcd50fa97a09f24d6f41836e370e94635db23f1f28b7"
+    }
+  },
+  "model": {
+    "actor": "masked shared-action DQN over ten feasible matchings",
+    "encoder": "six current certified edge gains, activity mask, remaining budget and horizon",
+    "critic": "target Q network",
+    "parameter_counts": {
+      "hidden": 64,
+      "training_seeds": 16
+    },
+    "optimizer": "Adam lr=5e-4, batch=64, target interval=200, 2500 episodes"
+  },
+  "quantum": {
+    "device": "analytic Bell correlator independently bounded by XOR SDP",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "float64 request-policy optimization; float32 allocator DQN",
+    "dtype": "mixed as specified",
+    "entanglement": "one consumable Bell pair per selected edge",
+    "observables": [
+      "binary parity success"
+    ],
+    "noise": null,
+    "resource_accounting": "Bell uses, allocator decisions, circuit-equivalent request optimizations, and shots recorded separately"
+  },
+  "action_modes": "deterministic masked checkpoint policy and registered scripted controls on 1000 paired sequences",
+  "checkpoint_selection": "final update for every fresh seed; no test-based selection",
+  "analysis_version": "budgeted-entanglement-confirmatory-v1",
+  "interpretation": "Locked held-out allocator study. A superior-allocation claim requires all five prospectively frozen gates."
+}
+

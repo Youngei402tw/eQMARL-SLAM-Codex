@@ -11,13 +11,13 @@
     "last_check": "Stages 10-14 merged through PRs 11-15; all 120 confirmatory bundles and the Stage14 release audit were freshly retrieved and hash-validated."
   },
   "authorized_current_scope": "Budgeted-entanglement sequential MARL extension Stages 20-24 under prospective plan; user instruction 2026-11-01.",
-  "active_stage": "22",
-  "stage_status": "passed",
+  "active_stage": "23",
+  "stage_status": "running",
   "training_runs_executed": 395,
-  "current_branch": "stage/22-budgeted-entanglement-development",
-  "dependency_commit": "4a4a5e027d44b0573287925106368c5a6a4883e7",
+  "current_branch": "stage/23-budgeted-entanglement-confirmatory",
+  "dependency_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "completion_commit": null,
-  "publication_status": "complete_remote_verified",
+  "publication_status": "pending_source_commit",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -54,7 +54,7 @@
     ,"stage/22-budgeted-entanglement-development": "4cdae6894767d01dd4c5071677226d23f678aa66"
   },
   "blockers": [],
-  "next_action": "Complete the Stage22 receipt, then create Stage23 exactly from its completion commit and execute the frozen held-out study.",
+  "next_action": "Implement and publish the frozen Stage23 confirmatory runner before opening test request values.",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -419,8 +419,8 @@
     "cap_wall_seconds": 86400,
     "consumed_wall_seconds": 600.0,
     "setup_wall_seconds_charged": 600.0,
-    "stage_started_utc": "2026-11-01T09:24:00+00:00",
-    "setup_charge_convention": "Conservative algorithm implementation, tuning registration, and tests before registered execution."
+    "stage_started_utc": "2026-11-01T10:05:00+00:00",
+    "setup_charge_convention": "Conservative confirmatory implementation, preregistration, and tests before the locked test access."
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
   "active_runs": [],
