@@ -75,7 +75,9 @@ Allocation occurs **before** private contexts arrive. This prevents the shared c
 
 ## 3. One coordination request
 
-Each endpoint privately observes one symbol from `{0,1,2}`. Call them `x` and `y`. Each endpoint produces one binary action, `a` and `b`. A public `3 × 3` table specifies the desired parity:
+Each endpoint privately observes one symbol from `{0,1,2}`. Call them `x` and `y`. Each endpoint produces one binary action, `a` and `b`. These outputs are abstract coordination answers. In the implemented benchmark they do not move a robot, select a physical channel, or change the environment. Their purpose is to test whether two separated agents can satisfy a joint rule without revealing their private inputs.
+
+A public `3 × 3` table specifies the desired parity:
 
 \[
 a \oplus b = f(x,y).
@@ -89,9 +91,35 @@ An example table is:
 | 1 | 0 | 0 | 1 |
 | 2 | 1 | 1 | 0 |
 
-If `x=1` and `y=2`, the required parity is `1`, so the agents succeed when their actions differ. Context pairs have nonuniform weights, so some cells occur more often.
+If `x=1` and `y=2`, the table entry is `1`. The agents win with either of these outcomes:
 
-### 3.1 Exact classical value
+| Agent one output `a` | Agent two output `b` | `a XOR b` | Outcome |
+|---:|---:|---:|---|
+| 0 | 1 | 1 | Win |
+| 1 | 0 | 1 | Win |
+| 0 | 0 | 0 | Lose |
+| 1 | 1 | 0 | Lose |
+
+No rule says which agent must output `0`. Only the relationship between the outputs matters. When a table entry is `0`, both `(0,0)` and `(1,1)` win. Context pairs have nonuniform weights, so some cells occur more often.
+
+### 3.1 Why this is a game rather than a trivial lookup
+
+One table cell is easy. If the agents knew they would only receive `(x,y)=(1,2)`, they could pre-agree that one always outputs `0` and the other outputs `1`. The challenge is that each agent sees only half of the input and must use one local rule across all nine possible cells.
+
+Conflicting cells can make perfect classical play impossible. Consider four requirements:
+
+| Inputs | Required relation |
+|---|---|
+| `(0,0)` | Same |
+| `(0,1)` | Same |
+| `(1,0)` | Same |
+| `(1,1)` | Different |
+
+The first three requirements force the relevant local outputs to be equal, while the fourth requires them to differ. No fixed pair of local classical rules can satisfy all four. A Bell pair can generate stronger correlations across the complete table without transmitting either private input.
+
+The current study deliberately keeps the outputs abstract so that the classical and quantum optima can be certified exactly. A future application could interpret the bits as two channels, two sensing modes, or act/wait decisions, but those physical meanings were not implemented and are not claimed here.
+
+### 3.2 Exact classical value
 
 Without communication, the agents use local functions:
 
@@ -103,7 +131,7 @@ There are eight deterministic binary functions of a three-valued input. Therefor
 
 This gives the exact classical value `V_C`.
 
-### 3.2 Bell-assisted value
+### 3.3 Bell-assisted value
 
 For an entangled request, the endpoints share one Bell pair:
 
@@ -136,7 +164,7 @@ where `u_e` is urgency. Some committed request types have `G_e=0`, so a good rou
 | Physical agent edges | 6 |
 | Global matching actions | 10 |
 
-The public graph follows a committed Markov process. Common low-value requests and rarer high-urgency requests make saving useful.
+The public graph follows a committed Markov process. Common low-value requests and rarer high-urgency requests make saving useful. Each active edge carries its own request type and urgency. An agent may answer several requests classically in one round, but the matching constraint prevents it from receiving entanglement on multiple edges simultaneously.
 
 At round `t`, the allocator sees the active graph, certified gains, urgency, remaining budget `B_t`, and remaining horizon. It never sees private contexts or post-context messages.
 
@@ -159,6 +187,8 @@ S=\sum_{t=1}^{10}r_t.
 \]
 
 This equals total return minus the exact classical zero-message return on the same sequence.
+
+The allocation experiment uses the **exact expected success value** of each frozen local request policy. It does not sample individual private contexts during allocator training or final evaluation. The context distribution is integrated into `V_C` and `V_Q` first, and the resource controller then learns from the resulting certified gains. Thus the experiment isolates entanglement scheduling from statistical noise in the local games.
 
 ## 5. BER-MARL
 
@@ -183,6 +213,20 @@ flowchart LR
 ```
 
 Training uses experience replay, Adam with learning rate `5×10⁻⁴`, batches of 64, and a target network updated every 200 optimization steps. Each final seed trains for 2,500 episodes on development and validation catalogs. Final evaluation uses a new request family, transition catalog, and sequence stream without adaptation.
+
+The proposed decision procedure is:
+
+```text
+Input: public request graph, certified gains, remaining budget, remaining time
+1. Encode the six possible edges and the two budget/time variables.
+2. Predict a long-term Q value for each of the ten global matchings.
+3. Mask matchings containing inactive edges, repeated agents, or too many Bell pairs.
+4. Select the feasible matching with the greatest predicted long-term value.
+5. Consume one Bell pair for every selected edge.
+6. Store the public transition and received surplus for DQN training.
+```
+
+BER-MARL is therefore the **resource allocator**. The endpoint classical and Bell measurement policies are certified and frozen before allocator learning. This distinction prevents the paper from attributing request-level nonlocality to the DQN.
 
 ## 6. Bell pair, DQN, PPO, DP, and SDP
 
@@ -223,18 +267,22 @@ J_t(s,b)=\max_{M\in\mathcal{M}(s,b)}\left[G(s,M)+\sum_{s'}P(s'\mid s)J_{t+1}(s',
 
 DP knows the true public transition matrix. BER-MARL learns approximate long-term reasoning from experience.
 
-## 7. Comparison methods
+## 7. Benchmarking methods and why each is included
 
-1. **Classical exact:** exact local classical strategies and no Bell pairs.
-2. **Quantum random:** random feasible matching.
-3. **Quantum static:** fixed edge priorities from non-test frequencies.
-4. **Quantum greedy:** greatest immediate certified gain.
-5. **BER-MARL:** learned long-horizon allocation.
-6. **Online DP oracle:** knows public transition probabilities but not future draws.
-7. **Future-clairvoyant:** knows the realized future; descriptive ceiling.
-8. **Message oracle:** exchanges private contexts; privileged reference.
+| Method | Bell budget | Future knowledge | Purpose |
+|---|---:|---|---|
+| **Classical exact** | 0 | None | Establishes the exact zero-message classical reference |
+| **Quantum random** | 6 | None | Tests whether arbitrary entanglement use is sufficient |
+| **Quantum static** | 6 | None | Tests fixed priorities learned from non-test frequencies |
+| **Quantum greedy** | 6 | Current round only | Strong myopic baseline and primary comparator |
+| **BER-MARL** | 6 | Learned from past training episodes | Proposed long-horizon allocator |
+| **Online DP oracle** | 6 | True public transition probabilities | Exact model-aware online reference |
+| **Future-clairvoyant** | 6 | Entire realized sequence | Unattainable descriptive ceiling |
+| **Message oracle** | Not comparable | Private inputs are exchanged | Privileged information reference |
 
-The fair primary comparison is BER-MARL against greedy. Both receive identical sequences, Bell budgets, request policies, public information, and matching constraints.
+Random, static, greedy, and BER-MARL receive identical held-out sequences, certified local policies, Bell budgets, public observations, and matching constraints. Greedy is the primary comparator because it already makes intelligent use of current certified gains; BER-MARL must add value through long-horizon timing rather than through access to better request policies.
+
+DP is not a trainable competitor under the same information assumptions. It is an upper reference that knows the exact public Markov model. The future-clairvoyant and message oracles are deliberately privileged and cannot support fairness claims.
 
 ## 8. Prospective experimental design
 
@@ -302,6 +350,14 @@ Four of five conditions passed. The full composite gate failed, while the learne
 
 The 12 held-out games had Bell-minus-classical gaps from `0` to `0.03830`, mean `0.01760`. Zero-gap types remained in the test. The independent audit re-enumerated every classical optimum, resolved every SDP ceiling, and reproduced the analysis from raw rows.
 
+### 9.1 Discussion of the result
+
+Three observations follow from the method ordering. First, random and static allocation are nearly identical, showing that merely possessing Bell pairs is insufficient. Second, greedy improves substantially over those controls, so current request value is informative. Third, BER-MARL closes most of the remaining gap to DP, demonstrating that budget pacing and future opportunity value matter beyond immediate gain.
+
+The difference between BER-MARL (`0.50642`) and DP (`0.57122`) is also scientifically important. It shows that the learned policy transfers useful scheduling structure to a new catalog but does not fully reconstruct its transition dynamics. This is consistent with the failed 90%-lower-bound condition and identifies online public-model adaptation as a concrete next method rather than an explanation invented after a null result.
+
+The classical-exact row should not be compared numerically with the other rows as if all methods used equal physical resources: it intentionally uses no Bell pairs and defines zero surplus. The relevant allocator comparison is among random, static, greedy, BER-MARL, and DP, all of which share the six-pair constraint.
+
 ## 10. What is and is not established
 
 The evidence supports:
@@ -339,7 +395,17 @@ The defensible contributions are:
 6. an informative negative result for the stricter 90%-of-DP condition;
 7. complete raw results, checkpoints, configurations, failures, hashes, and audit artifacts.
 
-This supports a preprint and workshop submission. A stronger full-conference version should add broader related work, noisy finite-shot evaluation, larger graphs, PPO and model-based baselines, and online adaptation.
+The existing package supports an honest preprint and workshop submission. For a strong journal or selective conference submission, the study should be extended rather than merely rewritten. The highest-value additions are:
+
+1. a systematic literature review and formal positioning against quantum-network entanglement allocation;
+2. an application-grounded version in which output bits represent channels, sensing modes, or distributed actions;
+3. finite-shot, depolarizing-noise, and entanglement-fidelity experiments;
+4. PPO, recurrent, threshold, and learned-model baselines under identical budgets;
+5. scaling experiments over agent count, horizon, graph density, and Bell-pair budget;
+6. a prospectively frozen online-adaptation study addressing the observed DP gap;
+7. where feasible, a small hardware demonstration of the frozen request policies.
+
+These additions would convert the current controlled algorithmic result into a broader systems contribution suitable for a good quantum-information, quantum-networking, or multi-agent-learning venue.
 
 ## 14. Reproducibility
 
@@ -363,6 +429,16 @@ Suppose two Bell pairs remain with three rounds left:
 | 10 | 0.12 + 0.09 | No future remains | No pairs left | Spend both |
 
 Greedy earns `0.05`. A controller that understands the horizon can earn `0.21`. Learning this timing decision—not rediscovering the already-known existence of Bell correlations—is the central problem.
+
+## 16. Conclusion
+
+This paper studies a precise resource question: when decentralized agents face many possible entanglement-assisted coordination requests but possess too few Bell pairs to serve all of them, how should those pairs be allocated over time? The proposed BER-MARL controller observes only public pre-context information and learns a feasible matching policy under an exact consumable budget.
+
+The held-out experiment shows that long-horizon learning matters. BER-MARL achieved `0.50642` mean surplus, compared with `0.30839` for greedy, and every one of 16 independent seeds improved over greedy. Exact classical enumeration, independent SDP bounds, paired sequences, retained failures, and a separate release audit make this conclusion unusually well controlled.
+
+The result has a clear boundary. BER-MARL recovered `88.66%` of the model-aware DP value, while the preregistered one-sided lower bound failed to exceed 90%. We therefore conclude that BER-MARL provides robust learned allocation gains under zero-shot catalog shift, but we reject a near-oracle transfer claim.
+
+The contribution is not a new proof of Bell nonlocality. It is the formulation, certification, and empirical solution of a sequential scarce-entanglement allocation problem. The most important next step is to give the abstract output bits application semantics and combine public-model adaptation with realistic noisy quantum resources.
 
 ## References and positioning
 
