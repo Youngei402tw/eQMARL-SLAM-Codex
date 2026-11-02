@@ -13,7 +13,8 @@ A staged research project for controlled quantum multi-agent reinforcement-learn
 - [Reference audit](docs/REFERENCE_AUDIT.md): what is retained from eQMARL and what changes from the existing SLAM implementations.
 - [GitHub workflow](docs/GITHUB_WORKFLOW.md): permanent stage branches and verified experiment publication.
 - [Research roadmap](docs/RESEARCH_ROADMAP.md): feasibility and contribution ranking, including optional ROS and 3D extensions.
-- [Budgeted-entanglement study](docs/paper/BUDGETED_ENTANGLEMENT_ROUTING.md): paper-facing task, method, held-out results, and limitations.
+- [Budgeted-entanglement study](docs/paper/BUDGETED_ENTANGLEMENT_ROUTING.md): concise manuscript and results.
+- [Illustrated full paper](docs/paper/BUDGETED_ENTANGLEMENT_ROUTING_EXPLAINED.md): tutorial explanation, diagrams, equations, worked example, and publication framing.
 - [Stage registry](stages.json), [Stage 08 confirmatory report](docs/stages/08-confirmatory.md), and [Stage 09 release report](docs/stages/09-release.md).
 
 ## Technical direction
