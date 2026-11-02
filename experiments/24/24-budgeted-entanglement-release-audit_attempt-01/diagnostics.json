@@ -1,0 +1,374 @@
+{
+  "passed": true,
+  "gates": {
+    "all_authoritative_bundles_valid": true,
+    "all_test_classical_values_exact": true,
+    "all_test_sdp_values_reproduced": true,
+    "all_bell_values_within_sdp": true,
+    "raw_inference_exactly_reproduced": true,
+    "all_16_checkpoints_present": true,
+    "composite_gate_failure_preserved": true,
+    "claim_limits_explicit": true
+  },
+  "resources": {
+    "primitive_steps": 23012,
+    "decisions": 23000,
+    "updates": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "summary": {
+    "analysis": {
+      "method_means": {
+        "classical_exact": 0.0,
+        "quantum_random": 0.22684514444013137,
+        "quantum_static": 0.2247810942275097,
+        "quantum_greedy": 0.30838651009881746,
+        "dp_online_oracle": 0.5712162176582192,
+        "future_clairvoyant": 0.5832639032012966,
+        "message_oracle": 10.633979480564157
+      },
+      "ber_marl_mean_surplus": 0.5064155553028137,
+      "mean_greedy_difference": 0.19802904520399628,
+      "mean_dp_fraction": 0.8865566831749545,
+      "difference_bootstrap_95": [
+        0.19141234750541908,
+        0.20432305473382828
+      ],
+      "dp_fraction_one_sided_95": [
+        0.8768401935694357,
+        0.8956463651570766
+      ],
+      "surplus_one_sided_95": [
+        0.5009522324611231,
+        0.5116546625129864
+      ]
+    },
+    "paper_tables": {
+      "primary": {
+        "ber_marl": 0.5064155553028137,
+        "greedy": 0.30838651009881746,
+        "difference": 0.19802904520399628,
+        "difference_ci95": [
+          0.19141234750541908,
+          0.20432305473382828
+        ],
+        "dp": 0.5712162176582192,
+        "dp_fraction": 0.8865566831749545,
+        "dp_fraction_one_sided95": [
+          0.8768401935694357,
+          0.8956463651570766
+        ]
+      },
+      "methods": {
+        "classical_exact": 0.0,
+        "quantum_random": 0.22684514444013137,
+        "quantum_static": 0.2247810942275097,
+        "quantum_greedy": 0.30838651009881746,
+        "dp_online_oracle": 0.5712162176582192,
+        "future_clairvoyant": 0.5832639032012966,
+        "message_oracle": 10.633979480564157
+      },
+      "composite_gate_passed": false
+    },
+    "claims": {
+      "supported": [
+        "BER-MARL had greater held-out entanglement surplus than random, static, and myopic greedy allocation.",
+        "The paired-seed 95% bootstrap interval for BER-MARL minus greedy excluded zero.",
+        "The benchmark requires routing a consumable Bell-pair budget over a dynamic matching-constrained graph."
+      ],
+      "prohibited": [
+        "BER-MARL passed the full five-part superior-allocation gate.",
+        "BER-MARL achieved a one-sided lower bound above 90% of online-DP surplus.",
+        "The study proves quantum computational speedup, hardware advantage, or global priority.",
+        "The request-level nonlocal gaps are new Bell inequalities."
+      ]
+    },
+    "certificate_checks": [
+      {
+        "type_id": "test-type-000",
+        "exact_classical": 0.894736842105263,
+        "recorded_classical": 0.894736842105263,
+        "sdp_upper": 0.9005047043521859,
+        "recorded_sdp": 0.9005047043521859,
+        "recorded_bell": 0.9005047045390757,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            0,
+            1,
+            0
+          ]
+        }
+      },
+      {
+        "type_id": "test-type-001",
+        "exact_classical": 0.857142857142857,
+        "recorded_classical": 0.857142857142857,
+        "sdp_upper": 0.8837148687850052,
+        "recorded_sdp": 0.8837148687850052,
+        "recorded_bell": 0.8837148691110874,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            1
+          ],
+          "bob": [
+            0,
+            1,
+            0
+          ]
+        }
+      },
+      {
+        "type_id": "test-type-002",
+        "exact_classical": 0.823529411764706,
+        "recorded_classical": 0.823529411764706,
+        "sdp_upper": 0.8618252719264365,
+        "recorded_sdp": 0.8618252719264365,
+        "recorded_bell": 0.8618252722651872,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "type_id": "test-type-003",
+        "exact_classical": 0.823529411764706,
+        "recorded_classical": 0.823529411764706,
+        "sdp_upper": 0.8550752723548696,
+        "recorded_sdp": 0.8550752723548696,
+        "recorded_bell": 0.8550752724187043,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "type_id": "test-type-004",
+        "exact_classical": 0.9473684210526315,
+        "recorded_classical": 0.9473684210526315,
+        "sdp_upper": 0.9473684209185464,
+        "recorded_sdp": 0.9473684209185464,
+        "recorded_bell": 0.9473684210526315,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            1
+          ],
+          "bob": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "type_id": "test-type-005",
+        "exact_classical": 0.894736842105263,
+        "recorded_classical": 0.894736842105263,
+        "sdp_upper": 0.9007900690112118,
+        "recorded_sdp": 0.9007900690112118,
+        "recorded_bell": 0.9007900691893839,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            1
+          ],
+          "bob": [
+            1,
+            1,
+            0
+          ]
+        }
+      },
+      {
+        "type_id": "test-type-006",
+        "exact_classical": 1.0,
+        "recorded_classical": 1.0,
+        "sdp_upper": 0.9999999999684703,
+        "recorded_sdp": 0.9999999999684703,
+        "recorded_bell": 1.0,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "type_id": "test-type-007",
+        "exact_classical": 0.823529411764706,
+        "recorded_classical": 0.823529411764706,
+        "sdp_upper": 0.8499606678766665,
+        "recorded_sdp": 0.8499606678766665,
+        "recorded_bell": 0.8499606680391304,
+        "classical_strategy": {
+          "alice": [
+            0,
+            1,
+            1
+          ],
+          "bob": [
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "type_id": "test-type-008",
+        "exact_classical": 0.8666666666666666,
+        "recorded_classical": 0.8666666666666666,
+        "sdp_upper": 0.8968936460555881,
+        "recorded_sdp": 0.8968936460555881,
+        "recorded_bell": 0.896893646080016,
+        "classical_strategy": {
+          "alice": [
+            0,
+            1,
+            0
+          ],
+          "bob": [
+            0,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "type_id": "test-type-009",
+        "exact_classical": 0.8888888888888888,
+        "recorded_classical": 0.8888888888888888,
+        "sdp_upper": 0.9027679655230721,
+        "recorded_sdp": 0.9027679655230721,
+        "recorded_bell": 0.9027679657415771,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "type_id": "test-type-010",
+        "exact_classical": 0.8125,
+        "recorded_classical": 0.8125,
+        "sdp_upper": 0.8395964846181805,
+        "recorded_sdp": 0.8395964846181805,
+        "recorded_bell": 0.8395964849156383,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            0
+          ],
+          "bob": [
+            0,
+            1,
+            1
+          ]
+        }
+      },
+      {
+        "type_id": "test-type-011",
+        "exact_classical": 0.8823529411764707,
+        "recorded_classical": 0.8823529411764707,
+        "sdp_upper": 0.8876405202187481,
+        "recorded_sdp": 0.8876405202187481,
+        "recorded_bell": 0.8876405204150721,
+        "classical_strategy": {
+          "alice": [
+            0,
+            0,
+            1
+          ],
+          "bob": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "checkpoint_hashes": {
+      "ber-marl-seed-23000.pt": "d41001320d19122631f3f4452d94bb9670059359bfe1cf38bd100233be97f92a",
+      "ber-marl-seed-23001.pt": "f7d95f61dcf9b74266baeff88d0588728094f0be6d932f39973b80aca42b02cb",
+      "ber-marl-seed-23002.pt": "656c6efce9dcf3ff5260375e8f7f2bfd041223dc264651afe6d0e12bd2f99008",
+      "ber-marl-seed-23003.pt": "4308738fa7be1fe78ede3b9118ecf2346654b87118daf8459822713c3a2de930",
+      "ber-marl-seed-23004.pt": "048054dd83470b4dda4d54ef8935d07af65ec2241e3cea5b62203f52cca11647",
+      "ber-marl-seed-23005.pt": "64ae7b7fba91b0e434612c385c1db6f94b42ac373143d283264dd7bdeb801b14",
+      "ber-marl-seed-23006.pt": "fbb6dfd426acf32b3097ce46934fe646e6081ae52e3de61adfc4c5f82ea9bbeb",
+      "ber-marl-seed-23007.pt": "85adf54c579449a5c5f3c0b379ccf190d552d8e6be0ebbbb3a8a9a485ff03910",
+      "ber-marl-seed-23008.pt": "b1e97be61e1949b7731cd174ea823096d57cbc96f2c14b7ad1a76c75a9ad0730",
+      "ber-marl-seed-23009.pt": "bca41a2cbd9383d8f044f357a42291423d5427c4d40fafad132cc6f3138a100b",
+      "ber-marl-seed-23010.pt": "0e51623cd4c18c677092c4ca167bc810cd6084ae9fee17b7bc007067d9502785",
+      "ber-marl-seed-23011.pt": "c5c6f3a7a36df83f4cb537632b1158e13f952efb70407cb4cea1af086abf61cd",
+      "ber-marl-seed-23012.pt": "50f1df3c6c44331a5b69ef8b429c3f441eea48688c07885ca510ea408f51c4a7",
+      "ber-marl-seed-23013.pt": "5a1915f1a15bbfb2c383bc64de462b4c9ca820c77362c9a3cec1fe388b8bab34",
+      "ber-marl-seed-23014.pt": "792c885814ce3e8e2ee74c392f289ed2ce6a52ca2473a4a12c841ffbcc835048",
+      "ber-marl-seed-23015.pt": "c1f27a0cdf36da689595a89af9ee326936e5acfec721cf9e6a36d8917470ffda"
+    },
+    "bundle_validation": [
+      {
+        "valid": true,
+        "run_id": "21-budgeted-entanglement-task_attempt-03",
+        "status": "completed",
+        "verified_files": 9,
+        "metrics_rows": 16,
+        "metrics_sha256": "339ff4b6ada10e997f2efebd4b5c239185e6af71f251137cf6bd7c1cc8469e2b"
+      },
+      {
+        "valid": true,
+        "run_id": "22-budgeted-entanglement-development_attempt-02",
+        "status": "completed",
+        "verified_files": 12,
+        "metrics_rows": 12,
+        "metrics_sha256": "aee64c1316e8f8a8c66721e813b7701eb906e894645bc3c8ae9b21d31473af6d"
+      },
+      {
+        "valid": true,
+        "run_id": "23-budgeted-entanglement-confirmatory_attempt-01",
+        "status": "failed",
+        "verified_files": 26,
+        "metrics_rows": 28,
+        "metrics_sha256": "9edd6a545d5a9261d0348f1260ff7d101efbe8a5a989043786d994912641b24d"
+      }
+    ]
+  }
+}

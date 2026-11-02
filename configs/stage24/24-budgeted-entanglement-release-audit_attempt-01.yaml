@@ -1,0 +1,72 @@
+{
+  "run_id": "24-budgeted-entanglement-release-audit_attempt-01",
+  "stage": "24",
+  "protocol_id": "budgeted-entanglement-release-audit-v1",
+  "profile": "diagnostic",
+  "experiment": "budgeted-entanglement-release-audit",
+  "hypothesis": "Independent reconstruction preserves the positive learned-versus-greedy result, the failed 90%-of-DP gate, exact request certificates, and all claim limits.",
+  "method": "independent-raw-row-certificate-checkpoint-and-bundle-audit",
+  "dependency_completion_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 25000,
+  "max_cpu_threads": 1,
+  "bundles": [
+    "experiments/21/21-budgeted-entanglement-task_attempt-03",
+    "experiments/22/22-budgeted-entanglement-development_attempt-02",
+    "experiments/23/23-budgeted-entanglement-confirmatory_attempt-01"
+  ],
+  "confirmatory_bundle": "experiments/23/23-budgeted-entanglement-confirmatory_attempt-01",
+  "test_request_manifest": "configs/data/test-budgeted-request-types-v1.json",
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": 23999,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/development-budgeted-request-types-v1.json",
+      "sha256": "b567cb9074f153957dd393bec3d3858dae75dc1567f716b9b21b1b81c6df540b"
+    },
+    "validation": {
+      "path": "configs/data/validation-budgeted-request-types-v1.json",
+      "sha256": "67395c8a12fab801a1325daf27852b18d8856d28a67032cd81c06825daedaf01"
+    },
+    "test": {
+      "path": "configs/data/test-budgeted-request-types-v1.json",
+      "sha256": "dfd9b859a4270aa43cc2bcd50fa97a09f24d6f41836e370e94635db23f1f28b7"
+    }
+  },
+  "model": {
+    "actor": "none; independent audit",
+    "encoder": "none",
+    "critic": "none",
+    "parameter_counts": {
+      "audited_checkpoints": 16
+    },
+    "optimizer": "none"
+  },
+  "quantum": {
+    "device": "independent XOR SDP and exact classical enumeration",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "none",
+    "dtype": "float64",
+    "entanglement": "audited frozen Bell request policies",
+    "observables": [
+      "recorded expected parity success"
+    ],
+    "noise": null,
+    "resource_accounting": "audit computations and raw rows counted; no new circuit execution"
+  },
+  "action_modes": "raw-only reconstruction; no policy execution",
+  "checkpoint_selection": "all 16 final checkpoints hashed",
+  "analysis_version": "budgeted-entanglement-release-audit-v1",
+  "interpretation": "Independent audit of the bounded result and failed composite gate; no new performance claim."
+}
+

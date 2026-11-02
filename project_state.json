@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-10-29T11:02:00+00:00",
+  "updated_utc": "2026-11-01T00:30:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -10,14 +10,14 @@
     "url": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
     "last_check": "Stages 10-14 merged through PRs 11-15; all 120 confirmatory bundles and the Stage14 release audit were freshly retrieved and hash-validated."
   },
-  "authorized_current_scope": "Learned nonlocal-coordination QMARL extension Stages 15-19 completed under the prospective plan; user instruction 2026-10-29.",
-  "active_stage": "19",
+  "authorized_current_scope": "Budgeted-entanglement sequential MARL extension Stages 20-24 under prospective plan; user instruction 2026-11-01.",
+  "active_stage": "24",
   "stage_status": "passed",
-  "training_runs_executed": 368,
-  "current_branch": "main",
-  "dependency_commit": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
-  "completion_commit": "e6dc5c7a69f3de6942d3183b2c640e926eab467b",
-  "publication_status": "verified_complete",
+  "training_runs_executed": 411,
+  "current_branch": "stage/24-budgeted-entanglement-release",
+  "dependency_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
+  "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
+  "publication_status": "complete_remote_verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -48,10 +48,17 @@
     "stage/17-nonlocal-development": "a9cb465b8ae29eea0492e1d9d95ba5bfdae1fbc9",
     "stage/18-nonlocal-confirmatory": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
     "stage/19-nonlocal-release": "e6dc5c7a69f3de6942d3183b2c640e926eab467b",
-    "main_nonlocal_integration": "7fc6349a1f08856b9c6e1bb678d2800b7aed8e0e"
+    "main_nonlocal_integration": "7fc6349a1f08856b9c6e1bb678d2800b7aed8e0e",
+    "stage/20-budgeted-entanglement-plan": "4e529a2d362fe53566c219b17b477b64e8221e15"
+    ,"stage/21-budgeted-entanglement-task": "530b2a92dce583e6f0e46154888ea88d2dc5079b"
+    ,"stage/22-budgeted-entanglement-development": "4cdae6894767d01dd4c5071677226d23f678aa66"
+    ,"stage/23-budgeted-entanglement-confirmatory": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c"
+    ,"stage/24-budgeted-entanglement-release": "ae49896ae8e345c41cf0f2b0c71f1eb5feb5a50f"
   },
   "blockers": [],
-  "next_action": null,
+  "next_action": "No experiment remains in the authorized Stage20-24 plan; preserve permanent branches and use the audited paper package for review.",
+  "budgeted_entanglement_final_test_accessed": true,
+  "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
   "review_findings_resolved": [
     "EKF versus historical smoothing scope",
@@ -61,10 +68,10 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": null,
+  "next_stage": "22",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
-  "next_stage_status": "none",
+  "next_stage_status": "planned",
   "completed_stage_budgets": {
     "01": {
       "cap_wall_seconds": 86400,
@@ -358,24 +365,97 @@
         "circuit_evaluations": 0,
         "shots": 0
       }
+    },
+    "20": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 1200.0,
+      "setup_wall_seconds_charged": 1200.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 0,
+        "decisions": 0,
+        "updates": 0,
+        "wall_seconds": 0,
+        "cpu_core_hours": 0,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
+    },
+    "21": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 952.746291867,
+      "setup_wall_seconds_charged": 500.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 3000,
+        "decisions": 3000,
+        "updates": 614400,
+        "wall_seconds": 452.746291867,
+        "cpu_core_hours": 0.12574136166666668,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 5529627,
+        "shots": 0
+      },
+      "retained_failures": [
+        "21-budgeted-entanglement-task_attempt-01: archive schema missing train field",
+        "21-budgeted-entanglement-task_attempt-02: train split identity mismatch"
+      ]
+    },
+    "22": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 1122.810133412,
+      "setup_wall_seconds_charged": 600.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 344000,
+        "decisions": 344000,
+        "updates": 246488,
+        "wall_seconds": 522.810133412,
+        "cpu_core_hours": 0.1452015913888889,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      },
+      "retained_failures": [
+        "22-budgeted-entanglement-development_attempt-01: extraneous all-tuning-candidates gate failed; all planned pilot capability gates passed"
+      ]
+    },
+    "23": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 1556.907963867001,
+      "setup_wall_seconds_charged": 600.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 600000,
+        "decisions": 600000,
+        "updates": 552592,
+        "wall_seconds": 956.907963867001,
+        "cpu_core_hours": 0.2657868283333333,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 1382400,
+        "shots": 0
+      },
+      "gate_outcome": "Four of five positive gates passed; oracle-fraction lower bound 0.87684 failed the >0.90 condition."
+    },
+    "24": {
+      "cap_wall_seconds": 86400,
+      "consumed_wall_seconds": 402.1975075310002,
+      "setup_wall_seconds_charged": 400.0,
+      "recorded_experiment_resources": {
+        "primitive_steps": 23012,
+        "decisions": 23000,
+        "updates": 0,
+        "wall_seconds": 2.1975075310001557,
+        "cpu_core_hours": 0.0006102594444444444,
+        "gpu_device_hours": 0,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
     }
   },
   "stage_budget": {
     "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 401.06959885800006,
+    "consumed_wall_seconds": 400.0,
     "setup_wall_seconds_charged": 400.0,
-    "stage_started_utc": "2026-10-29T10:44:00+00:00",
-    "setup_charge_convention": "Conservative release implementation/tests plus instrumented independent audit.",
-    "recorded_experiment_resources": {
-      "primitive_steps": 0,
-      "decisions": 0,
-      "updates": 0,
-      "wall_seconds": 1.069598858000063,
-      "cpu_core_hours": 0.00029704166666666675,
-      "gpu_device_hours": 0,
-      "circuit_evaluations": 0,
-      "shots": 0
-    }
+    "stage_started_utc": "2026-11-01T10:35:00+00:00",
+    "setup_charge_convention": "Conservative independent audit implementation, registration, and tests."
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
   "active_runs": [],

@@ -1,0 +1,13 @@
+{
+  "stage": "24",
+  "protocol_id": "budgeted-entanglement-release-audit-v1",
+  "runs": [
+    {
+      "run_id": "24-budgeted-entanglement-release-audit_attempt-01",
+      "status": "completed",
+      "config_path": "configs/stage24/24-budgeted-entanglement-release-audit_attempt-01.yaml",
+      "config_sha256": "db8fa2000da4dc153fa3b3aec12d12a7ac2b0c80edaf73abd6425a09f9ca9f50",
+      "result_path": "experiments/24/24-budgeted-entanglement-release-audit_attempt-01"
+    }
+  ]
+}

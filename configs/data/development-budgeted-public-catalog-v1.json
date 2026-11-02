@@ -1,0 +1,690 @@
+{
+  "schema_version": "budgeted-public-catalog-v1",
+  "split": "development",
+  "generator_seed": 20261201,
+  "agents": 4,
+  "horizon": 10,
+  "bell_pair_budget": 6,
+  "states": [
+    {
+      "state_id": 0,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "development-type-003",
+          "urgency": 2
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "development-type-001",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "development-type-000",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "development-type-001",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 1,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "development-type-003",
+          "urgency": 5
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "development-type-004",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "development-type-005",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 2,
+      "requests": [
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "development-type-004",
+          "urgency": 1
+        },
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "development-type-002",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "development-type-003",
+          "urgency": 2
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "development-type-005",
+          "urgency": 2
+        }
+      ]
+    },
+    {
+      "state_id": 3,
+      "requests": [
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "development-type-006",
+          "urgency": 5
+        },
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "development-type-001",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "development-type-000",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "development-type-000",
+          "urgency": 1
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "development-type-000",
+          "urgency": 5
+        }
+      ]
+    },
+    {
+      "state_id": 4,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "development-type-004",
+          "urgency": 1
+        },
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "development-type-002",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "development-type-002",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "development-type-002",
+          "urgency": 1
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "development-type-004",
+          "urgency": 2
+        }
+      ]
+    },
+    {
+      "state_id": 5,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "development-type-000",
+          "urgency": 1
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "development-type-001",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "development-type-004",
+          "urgency": 5
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "development-type-006",
+          "urgency": 5
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "development-type-000",
+          "urgency": 2
+        }
+      ]
+    },
+    {
+      "state_id": 6,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "development-type-000",
+          "urgency": 5
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "development-type-002",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "development-type-007",
+          "urgency": 1
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "development-type-007",
+          "urgency": 2
+        }
+      ]
+    },
+    {
+      "state_id": 7,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "development-type-003",
+          "urgency": 1
+        },
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "development-type-007",
+          "urgency": 2
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "development-type-002",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "development-type-003",
+          "urgency": 1
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "development-type-004",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 8,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "development-type-004",
+          "urgency": 2
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "development-type-002",
+          "urgency": 2
+        },
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "development-type-007",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 9,
+      "requests": [
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "development-type-003",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "development-type-006",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "development-type-006",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 10,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "development-type-006",
+          "urgency": 2
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "development-type-007",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "development-type-003",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "development-type-007",
+          "urgency": 1
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "development-type-005",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 11,
+      "requests": [
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "development-type-001",
+          "urgency": 2
+        },
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "development-type-002",
+          "urgency": 2
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "development-type-003",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "development-type-006",
+          "urgency": 1
+        }
+      ]
+    }
+  ],
+  "transition": [
+    [
+      0.5035197178580146,
+      0.16727594473604693,
+      0.0553257761037713,
+      0.01845070759751274,
+      0.03793255567676726,
+      0.029922587154378587,
+      0.029713464520386944,
+      0.013542968268963798,
+      0.048368359218056926,
+      0.047058961396187746,
+      0.011296933415691606,
+      0.03759202405422153
+    ],
+    [
+      0.048990887841905945,
+      0.5364357298849728,
+      0.17676960367752617,
+      0.030804559503304293,
+      0.04210952095764163,
+      0.019210045446280053,
+      0.021286908173334108,
+      0.052242642313795495,
+      0.0047953343296897955,
+      0.014731449889032393,
+      0.033826592537448845,
+      0.018796725445068503
+    ],
+    [
+      0.05502878429760607,
+      0.02208882702759965,
+      0.508287753037699,
+      0.17944512611386604,
+      0.03433074124307669,
+      0.038538890485274174,
+      0.05168760819684046,
+      0.007692562574894629,
+      0.014263817286175278,
+      0.02543200353781971,
+      0.04867752298650865,
+      0.014526363212639802
+    ],
+    [
+      0.01488510103094938,
+      0.037416989400289424,
+      0.05886676756604913,
+      0.505612144021854,
+      0.18008278730826668,
+      0.009297327407712927,
+      0.03604597850838642,
+      0.0011333209320150538,
+      0.030387078756144804,
+      0.058358870819825326,
+      0.01441516227540377,
+      0.05349847197310311
+    ],
+    [
+      0.0006063556961541462,
+      0.00038316861112894696,
+      0.058567278610871264,
+      0.018667247260005418,
+      0.532516128096678,
+      0.16890931263292494,
+      0.05682066332906593,
+      0.04568596288325565,
+      0.005989119308203775,
+      0.027641123679228493,
+      0.043931925077773784,
+      0.0402817148147096
+    ],
+    [
+      0.03835102296325432,
+      0.0610713185851868,
+      0.037823957597042504,
+      0.056569987519522996,
+      0.01633009938337182,
+      0.530583464222804,
+      0.12954949725628107,
+      0.03180081644170175,
+      0.04613897178888112,
+      0.008672050604437327,
+      0.034010797205851144,
+      0.009098016431665048
+    ],
+    [
+      0.006512079653767176,
+      0.036196725666383045,
+      0.053792669869972984,
+      0.029513993049075666,
+      0.02013040568276144,
+      0.01068217821099853,
+      0.5768143390508353,
+      0.1568293927416401,
+      0.06356264462152098,
+      0.00046428607685971505,
+      0.0307992726614068,
+      0.01470201271477818
+    ],
+    [
+      0.016623570632624367,
+      0.018517488209566772,
+      0.053965711273812375,
+      0.06402653135660855,
+      0.023250115413074306,
+      0.025630968323782206,
+      0.04233063944026979,
+      0.535178694421583,
+      0.15332556508230016,
+      0.0032099114809123704,
+      0.044755431297901924,
+      0.019185373067564224
+    ],
+    [
+      0.022998601467439962,
+      0.05413309071758382,
+      0.010159563248921984,
+      0.035444135389418784,
+      0.013115204106403638,
+      0.010100215580786342,
+      0.03290985181090937,
+      0.05731808064310241,
+      0.5117816374798845,
+      0.16564203606251604,
+      0.058421877327782985,
+      0.027975706165250115
+    ],
+    [
+      0.056522898141573956,
+      0.033041507896627735,
+      0.047773653061003445,
+      0.010519229140415772,
+      0.015318970840747029,
+      0.007980244954616309,
+      0.03385766510241988,
+      0.0022745732535583317,
+      0.05624751767512007,
+      0.5429318440875333,
+      0.17323521371487235,
+      0.02029668213151178
+    ],
+    [
+      0.031812529680757984,
+      0.040166169749146385,
+      0.011023162593379087,
+      0.05275822699812426,
+      0.0024800275604996026,
+      0.015124436845214159,
+      0.05476266327060542,
+      0.036898238447634894,
+      0.058682782174986195,
+      0.022746420702281136,
+      0.5423646214285018,
+      0.13118072054886903
+    ],
+    [
+      0.15080263870944605,
+      0.033250000448097235,
+      0.00899805516691066,
+      0.013011680008637144,
+      0.03695309198277307,
+      0.01675367052652778,
+      0.023848978944629846,
+      0.048618370352198396,
+      0.032942834276686726,
+      0.044614774170213,
+      0.008005822939170484,
+      0.5822000824747096
+    ]
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "stage": "21",
+  "branch": "stage/21-budgeted-entanglement-task",
+  "source_commit": "a2beae155dd40f3314fc2518bf8da32e07d6f734",
+  "results_commit": "530b2a92dce583e6f0e46154888ea88d2dc5079b",
+  "remote_branch_sha": "530b2a92dce583e6f0e46154888ea88d2dc5079b",
+  "verified": true,
+  "verified_utc": "2026-11-01T09:22:00+00:00",
+  "fresh_bundle_validation": true,
+  "authoritative_bundle": "experiments/21/21-budgeted-entanglement-task_attempt-03",
+  "retained_failed_attempts": [
+    "experiments/21/21-budgeted-entanglement-task_attempt-01",
+    "experiments/21/21-budgeted-entanglement-task_attempt-02"
+  ]
+}

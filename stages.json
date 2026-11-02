@@ -398,6 +398,103 @@
       "results_commit": "84b084acd13cb63ce504e0661726fbb6b5a93501",
       "publication_receipt": "docs/stages/19-publication.json",
       "completion_commit": "e6dc5c7a69f3de6942d3183b2c640e926eab467b"
+    },
+    {
+      "id": "20",
+      "name": "budgeted-entanglement-plan",
+      "title": "Prospective budgeted-entanglement MARL study",
+      "branch": "stage/20-budgeted-entanglement-plan",
+      "depends_on": [
+        "19"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/20-budgeted-entanglement-plan.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "e6dc5c7a69f3de6942d3183b2c640e926eab467b",
+      "branch_created_from_commit": "4ed6b9d6271746926e042e017cef62537b799e51",
+      "source_commit": "d84116ffa622caad0a6ac1ccef1b9408bcbfd777",
+      "results_commit": "d84116ffa622caad0a6ac1ccef1b9408bcbfd777",
+      "publication_receipt": "docs/stages/20-publication.json",
+      "completion_commit": "4e529a2d362fe53566c219b17b477b64e8221e15"
+    },
+    {
+      "id": "21",
+      "name": "budgeted-entanglement-task",
+      "title": "Certified request family and sequential resource environment",
+      "branch": "stage/21-budgeted-entanglement-task",
+      "depends_on": [
+        "20"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/21-budgeted-entanglement-task.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "4e529a2d362fe53566c219b17b477b64e8221e15",
+      "branch_created_from_commit": "4e529a2d362fe53566c219b17b477b64e8221e15",
+      "source_commit": "a2beae155dd40f3314fc2518bf8da32e07d6f734",
+      "results_commit": "530b2a92dce583e6f0e46154888ea88d2dc5079b",
+      "publication_receipt": "docs/stages/21-publication.json",
+      "completion_commit": "4a4a5e027d44b0573287925106368c5a6a4883e7"
+    },
+    {
+      "id": "22",
+      "name": "budgeted-entanglement-development",
+      "title": "BER-MARL development and confirmatory freeze",
+      "branch": "stage/22-budgeted-entanglement-development",
+      "depends_on": [
+        "21"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/22-budgeted-entanglement-development.md",
+      "branch_created": true,
+      "status": "passed",
+      "dependency_completion_commit": "4a4a5e027d44b0573287925106368c5a6a4883e7",
+      "branch_created_from_commit": "4a4a5e027d44b0573287925106368c5a6a4883e7",
+      "source_commit": "89c56587c962a47b8ec78db910a00a604e43efa5"
+      ,"results_commit": "4cdae6894767d01dd4c5071677226d23f678aa66",
+      "publication_receipt": "docs/stages/22-publication.json"
+      ,"completion_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba"
+    },
+    {
+      "id": "23",
+      "name": "budgeted-entanglement-confirmatory",
+      "title": "Locked held-out entanglement-allocation study",
+      "branch": "stage/23-budgeted-entanglement-confirmatory",
+      "depends_on": [
+        "22"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/23-budgeted-entanglement-confirmatory.md",
+      "status": "planned",
+      "branch_created": true,
+      "status": "completed_null_result",
+      "dependency_completion_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
+      "branch_created_from_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
+      "source_commit": "9bb4207edb19509fe842f6e1028a912100402bdb"
+      ,"results_commit": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c",
+      "publication_receipt": "docs/stages/23-publication.json"
+      ,"completion_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1"
+    },
+    {
+      "id": "24",
+      "name": "budgeted-entanglement-release",
+      "title": "Budgeted-entanglement MARL reproduction and paper release",
+      "branch": "stage/24-budgeted-entanglement-release",
+      "depends_on": [
+        "23"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/24-budgeted-entanglement-release.md",
+      "status": "planned",
+      "branch_created": true,
+      "status": "passed",
+      "dependency_completion_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
+      "branch_created_from_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
+      "source_commit": "a33578a66830e6289e510187a3a06f6ed28629e6",
+      "results_commit": "ae49896ae8e345c41cf0f2b0c71f1eb5feb5a50f",
+      "publication_receipt": "docs/stages/24-publication.json",
+      "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5"
     }
   ],
   "recommended_execution_order": [
@@ -420,6 +517,11 @@
     "16",
     "17",
     "18",
-    "19"
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24"
   ]
 }

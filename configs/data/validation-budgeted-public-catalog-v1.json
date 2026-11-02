@@ -1,0 +1,699 @@
+{
+  "schema_version": "budgeted-public-catalog-v1",
+  "split": "validation",
+  "generator_seed": 20261202,
+  "agents": 4,
+  "horizon": 10,
+  "bell_pair_budget": 6,
+  "states": [
+    {
+      "state_id": 0,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "validation-type-001",
+          "urgency": 2
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "validation-type-002",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "validation-type-006",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 1,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "validation-type-007",
+          "urgency": 1
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "validation-type-000",
+          "urgency": 5
+        },
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "validation-type-004",
+          "urgency": 5
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "validation-type-004",
+          "urgency": 1
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "validation-type-006",
+          "urgency": 2
+        }
+      ]
+    },
+    {
+      "state_id": 2,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "validation-type-002",
+          "urgency": 1
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "validation-type-002",
+          "urgency": 2
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "validation-type-000",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "validation-type-001",
+          "urgency": 1
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "validation-type-004",
+          "urgency": 2
+        }
+      ]
+    },
+    {
+      "state_id": 3,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "validation-type-003",
+          "urgency": 1
+        },
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "validation-type-002",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "validation-type-001",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "validation-type-003",
+          "urgency": 5
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "validation-type-004",
+          "urgency": 5
+        }
+      ]
+    },
+    {
+      "state_id": 4,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "validation-type-002",
+          "urgency": 1
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "validation-type-005",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "validation-type-005",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "validation-type-000",
+          "urgency": 1
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "validation-type-004",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 5,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "validation-type-001",
+          "urgency": 5
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "validation-type-005",
+          "urgency": 2
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "validation-type-007",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 6,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "validation-type-003",
+          "urgency": 1
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "validation-type-004",
+          "urgency": 2
+        },
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "validation-type-005",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "validation-type-005",
+          "urgency": 5
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "validation-type-005",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 7,
+      "requests": [
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "validation-type-003",
+          "urgency": 2
+        },
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "validation-type-005",
+          "urgency": 1
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "validation-type-004",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "validation-type-005",
+          "urgency": 1
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "validation-type-004",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 8,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "validation-type-004",
+          "urgency": 5
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "validation-type-000",
+          "urgency": 1
+        },
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "validation-type-007",
+          "urgency": 2
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "validation-type-004",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 9,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "validation-type-002",
+          "urgency": 2
+        },
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "validation-type-001",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "validation-type-004",
+          "urgency": 1
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "validation-type-003",
+          "urgency": 1
+        }
+      ]
+    },
+    {
+      "state_id": 10,
+      "requests": [
+        {
+          "edge_index": 2,
+          "agents": [
+            0,
+            3
+          ],
+          "type_id": "validation-type-006",
+          "urgency": 5
+        },
+        {
+          "edge_index": 3,
+          "agents": [
+            1,
+            2
+          ],
+          "type_id": "validation-type-001",
+          "urgency": 1
+        },
+        {
+          "edge_index": 4,
+          "agents": [
+            1,
+            3
+          ],
+          "type_id": "validation-type-002",
+          "urgency": 2
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "validation-type-003",
+          "urgency": 5
+        }
+      ]
+    },
+    {
+      "state_id": 11,
+      "requests": [
+        {
+          "edge_index": 0,
+          "agents": [
+            0,
+            1
+          ],
+          "type_id": "validation-type-003",
+          "urgency": 2
+        },
+        {
+          "edge_index": 1,
+          "agents": [
+            0,
+            2
+          ],
+          "type_id": "validation-type-007",
+          "urgency": 1
+        },
+        {
+          "edge_index": 5,
+          "agents": [
+            2,
+            3
+          ],
+          "type_id": "validation-type-006",
+          "urgency": 2
+        }
+      ]
+    }
+  ],
+  "transition": [
+    [
+      0.5297492943242633,
+      0.18887586309688045,
+      0.014830675283545954,
+      0.005349241850486241,
+      0.05254792355410956,
+      0.05097704234783919,
+      0.022922336656007146,
+      0.012871891335495898,
+      0.042027893093376845,
+      0.023246412104610495,
+      0.0031679677500194153,
+      0.053433458603365486
+    ],
+    [
+      0.03238391462455134,
+      0.5743936137536994,
+      0.15684777755124743,
+      0.02885588375983133,
+      0.026564242529848035,
+      0.022990333071973307,
+      0.014439217148417378,
+      0.004656172166187436,
+      0.04016099099129491,
+      0.009856693247728282,
+      0.050257658820226286,
+      0.038593502334994846
+    ],
+    [
+      0.002335588742417892,
+      0.043541442987338454,
+      0.5322608769319038,
+      0.1570783502053665,
+      0.030117552139419558,
+      0.043320454486717584,
+      0.021729791877467482,
+      0.009329049091784452,
+      0.0599080000443843,
+      0.04916722777951591,
+      0.032266993861366444,
+      0.018944671852317487
+    ],
+    [
+      0.0012233421595284739,
+      0.02984773225839065,
+      0.050080799927623376,
+      0.5041761064357189,
+      0.1689488743032767,
+      0.04531081170937568,
+      0.03916658581336168,
+      0.00723279102521054,
+      0.042213957054391245,
+      0.04355813215600635,
+      0.019827157941116634,
+      0.04841370921599989
+    ],
+    [
+      0.049044520803664435,
+      0.047338708626049206,
+      0.05462612706745608,
+      0.00756872750457782,
+      0.5121513151478577,
+      0.13321746984917698,
+      0.04702900539806315,
+      0.045035793149824664,
+      0.0015792132574032746,
+      0.04185387215745908,
+      0.03875516331634596,
+      0.021800083722121742
+    ],
+    [
+      0.040202854915437895,
+      0.007394768428050991,
+      0.04274549482397125,
+      0.03258968126822566,
+      0.050438376048761044,
+      0.5597355864731045,
+      0.15183177292762826,
+      0.001011292484543288,
+      0.015713459635738683,
+      0.03568529504906919,
+      0.03625051421888194,
+      0.026400903726587283
+    ],
+    [
+      0.015217938232433573,
+      0.03604472831444713,
+      0.05588380745744889,
+      0.04816178746510923,
+      0.011664145974012389,
+      0.03504459036229758,
+      0.5296439366978168,
+      0.14854892890543286,
+      0.009182221210994898,
+      0.023716572076532022,
+      0.038835644341416654,
+      0.04805569896205792
+    ],
+    [
+      0.021566733265254035,
+      0.04904921719051303,
+      0.052333124722883886,
+      0.005042115243964913,
+      0.005282992727293567,
+      0.06097380535455306,
+      0.0531116984887716,
+      0.5190057070393541,
+      0.15659863954738487,
+      0.05287482004808901,
+      0.0061040316809046905,
+      0.018057114691033223
+    ],
+    [
+      0.0543718966669256,
+      0.020493200101940088,
+      0.016669611866096085,
+      0.049878207398385374,
+      0.0379947943753962,
+      0.055757799740461814,
+      0.008969185403423108,
+      0.049975852399194484,
+      0.4896041592473908,
+      0.1561589490277039,
+      0.057785851731299756,
+      0.0023404920417826234
+    ],
+    [
+      0.01876898564150389,
+      0.0163877352927344,
+      0.03150881465342817,
+      0.014115083258501693,
+      0.03231202096982421,
+      0.05013983006840045,
+      0.03131001749435628,
+      0.04905745721014424,
+      0.012526662049615613,
+      0.5421953723324394,
+      0.17638345168629133,
+      0.02529456934276036
+    ],
+    [
+      0.055754415507714254,
+      0.06149700205836051,
+      0.029376359874613154,
+      0.030132235333860308,
+      0.009434317500382343,
+      0.012278987123193535,
+      0.04708815060234713,
+      0.004407561410361583,
+      0.01852169714596952,
+      0.05364031016157474,
+      0.5047461293300403,
+      0.17312283395158282
+    ],
+    [
+      0.1503514983242611,
+      0.02157475931567609,
+      0.051116622857838974,
+      0.03127620601408156,
+      0.04340734079300347,
+      0.01241203210922783,
+      0.013630675692110716,
+      0.05314505325683096,
+      0.03437098662421028,
+      0.01318882423273096,
+      0.0024062291883042972,
+      0.5731197715917238
+    ]
+  ]
+}

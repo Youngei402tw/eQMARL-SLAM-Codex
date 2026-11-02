@@ -1,0 +1,87 @@
+{
+  "schema_version": "budgeted-entanglement-confirmatory-freeze-v1",
+  "frozen_utc": "2026-11-01T09:55:00+00:00",
+  "dependency_completion_commit_pending": "Stage22 completion commit recorded when branch closes",
+  "development_source_commit": "89c56587c962a47b8ec78db910a00a604e43efa5",
+  "development_selection": {
+    "path": "experiments/22/22-budgeted-entanglement-development_attempt-02/selection.json",
+    "sha256": "963b4a779f53a7c744f26b6760131f51f262d0ef96a92f3e0d717914d2b54959",
+    "selected": {
+      "name": "h64-lr5e-4",
+      "hidden": 64,
+      "learning_rate": 0.0005
+    }
+  },
+  "training": {
+    "catalogs": [
+      "development",
+      "validation"
+    ],
+    "seeds": [
+      23000,
+      23001,
+      23002,
+      23003,
+      23004,
+      23005,
+      23006,
+      23007,
+      23008,
+      23009,
+      23010,
+      23011,
+      23012,
+      23013,
+      23014,
+      23015
+    ],
+    "episodes_per_seed": 2500,
+    "batch_size": 64,
+    "target_interval": 200
+  },
+  "test_request_manifest": {
+    "path": "configs/data/test-budgeted-request-types-v1.json",
+    "sha256": "dfd9b859a4270aa43cc2bcd50fa97a09f24d6f41836e370e94635db23f1f28b7"
+  },
+  "test_public_catalog": {
+    "path": "configs/data/test-budgeted-public-catalog-v1.json",
+    "sha256": "e2963e7529046156cc8a5cfda2d85c169836b7930886496b5ac84dc18fa11108"
+  },
+  "evaluation": {
+    "sequence_seed_start": 53000,
+    "sequences_per_policy": 1000,
+    "paired_across_methods": true,
+    "checkpoint_rule": "final training update",
+    "action_rule": "deterministic feasible masked argmax"
+  },
+  "methods": [
+    "classical_exact",
+    "quantum_random",
+    "quantum_static",
+    "quantum_greedy",
+    "ber_marl",
+    "dp_online_oracle",
+    "future_clairvoyant",
+    "message_oracle"
+  ],
+  "inference": {
+    "bootstrap_seed": 23999,
+    "bootstrap_replicates": 20000,
+    "unit": "training seed",
+    "primary": "ber_marl entanglement surplus minus quantum_greedy surplus",
+    "positive_gates": [
+      "paired two-sided 95% bootstrap lower bound above zero",
+      "mean improvement over greedy at least 5% of DP mean surplus",
+      "one-sided 95% lower bound BER-MARL/DP fraction above 0.90",
+      "one-sided 95% lower bound BER-MARL surplus above zero",
+      "all budget and matching constraints exact"
+    ]
+  },
+  "claim_limits": [
+    "No computational speedup claim",
+    "No hardware advantage claim",
+    "Request-level nonlocal gaps separated from allocator-level gain",
+    "No global priority claim without broader human literature review"
+  ]
+}
+

@@ -28,7 +28,13 @@ EXPECTED_BRANCHES = [
     "stage/07-shot-noise", "stage/08-confirmatory", "stage/09-release",
     "stage/10-mechanism-plan", "stage/11-mechanism-task",
     "stage/12-mechanism-development", "stage/13-mechanism-confirmatory",
-    "stage/14-mechanism-release",
+    "stage/14-mechanism-release", "stage/15-nonlocal-plan",
+    "stage/16-nonlocal-benchmark", "stage/17-nonlocal-development",
+    "stage/18-nonlocal-confirmatory", "stage/19-nonlocal-release",
+    "stage/20-budgeted-entanglement-plan", "stage/21-budgeted-entanglement-task",
+    "stage/22-budgeted-entanglement-development",
+    "stage/23-budgeted-entanglement-confirmatory",
+    "stage/24-budgeted-entanglement-release",
 ]
 
 
@@ -43,7 +49,7 @@ def main():
 
     parsed = {}
     for path in ROOT.rglob("*.json"):
-        if ".git" in path.parts or ".venv" in path.parts:
+        if ".git" in path.parts or any(part.startswith(".venv") for part in path.parts):
             continue
         try:
             parsed[str(path.relative_to(ROOT))] = json.loads(path.read_text())
@@ -85,7 +91,7 @@ def main():
     # or code fences are contracts rather than links to existing deliverables.
     link_count = 0
     for path in ROOT.rglob("*.md"):
-        if ".git" in path.parts:
+        if ".git" in path.parts or any(part.startswith(".venv") for part in path.parts):
             continue
         prose = re.sub(r"```.*?```", "", path.read_text(), flags=re.S)
         for destination in re.findall(r"\]\(([^\s)]+)(?:\s+[^)]*)?\)", prose):

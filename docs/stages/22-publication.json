@@ -1,0 +1,14 @@
+{
+  "stage": "22",
+  "branch": "stage/22-budgeted-entanglement-development",
+  "source_commit": "89c56587c962a47b8ec78db910a00a604e43efa5",
+  "results_commit": "4cdae6894767d01dd4c5071677226d23f678aa66",
+  "remote_branch_sha": "4cdae6894767d01dd4c5071677226d23f678aa66",
+  "verified": true,
+  "verified_utc": "2026-11-01T10:02:00+00:00",
+  "fresh_bundle_validation": true,
+  "ci_fix_commit": "f5767341d972553b5052c538a9a091344eacc884",
+  "ci_success_run": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex/actions/runs/41293153193",
+  "authoritative_bundle": "experiments/22/22-budgeted-entanglement-development_attempt-02",
+  "retained_failed_attempt": "experiments/22/22-budgeted-entanglement-development_attempt-01"
+}
