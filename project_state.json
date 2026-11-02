@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "QIP-targeted robust entanglement-routing extension Stages 25-29; user instruction 2026-11-02.",
   "active_stage": "25",
-  "stage_status": "in_progress",
+  "stage_status": "passed",
   "training_runs_executed": 411,
   "current_branch": "stage/25-qip-extension-plan",
   "dependency_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "stage25_local_planning",
+  "publication_status": "complete_remote_verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -53,10 +53,11 @@
     "stage/21-budgeted-entanglement-task": "530b2a92dce583e6f0e46154888ea88d2dc5079b",
     "stage/22-budgeted-entanglement-development": "4cdae6894767d01dd4c5071677226d23f678aa66",
     "stage/23-budgeted-entanglement-confirmatory": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c",
-    "stage/24-budgeted-entanglement-release": "ae49896ae8e345c41cf0f2b0c71f1eb5feb5a50f"
+    "stage/24-budgeted-entanglement-release": "ae49896ae8e345c41cf0f2b0c71f1eb5feb5a50f",
+    "stage/25-qip-extension-plan": "dcf958dc69813b1bc4fa64c06510ba71ca077286"
   },
   "blockers": [],
-  "next_action": "Complete and publish Stage 25 prospective protocol and fresh split lock before Stage 26 development.",
+  "next_action": "Create Stage 26 from the Stage 25 completion commit and run the registered learned-baseline development study.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",

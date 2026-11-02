@@ -504,10 +504,13 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/25-qip-extension-plan.md",
-      "status": "in_progress",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-      "branch_created_from_commit": "894ca11c1a90b12397e201835e655b7962835c04"
+      "branch_created_from_commit": "894ca11c1a90b12397e201835e655b7962835c04",
+      "source_commit": "dcf958dc69813b1bc4fa64c06510ba71ca077286",
+      "results_commit": "dcf958dc69813b1bc4fa64c06510ba71ca077286",
+      "publication_receipt": "docs/stages/25-publication.json"
     },
     {
       "id": "26",

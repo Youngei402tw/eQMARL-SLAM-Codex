@@ -1,0 +1,16 @@
+{
+  "stage": "25",
+  "branch": "stage/25-qip-extension-plan",
+  "source_commit": "dcf958dc69813b1bc4fa64c06510ba71ca077286",
+  "remote_ref": "refs/heads/stage/25-qip-extension-plan",
+  "remote_sha_verified": "dcf958dc69813b1bc4fa64c06510ba71ca077286",
+  "repository": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+  "verified": true,
+  "verification": [
+    "git push completed",
+    "git ls-remote returned the exact source SHA",
+    "deterministic split regeneration matched",
+    "two split-lock tests passed",
+    "planning validation passed"
+  ]
+}
