@@ -1,6 +1,8 @@
 # Budgeted Entanglement Routing for Sequential Multi-Agent Reinforcement Learning
 
 > A longer tutorial-style manuscript with diagrams, terminology, a worked example, full task definition, and interpretation is available in [BUDGETED_ENTANGLEMENT_ROUTING_EXPLAINED.md](BUDGETED_ENTANGLEMENT_ROUTING_EXPLAINED.md).
+>
+> Publication artifacts: [LaTeX source](BUDGETED_ENTANGLEMENT_ROUTING.tex), [BibTeX references](BUDGETED_ENTANGLEMENT_ROUTING.bib), and [compiled PDF](BUDGETED_ENTANGLEMENT_ROUTING.pdf). Run `make` in this directory to rebuild the PDF.
 
 ## Abstract
 

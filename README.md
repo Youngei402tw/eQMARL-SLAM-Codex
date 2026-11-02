@@ -15,6 +15,7 @@ A staged research project for controlled quantum multi-agent reinforcement-learn
 - [Research roadmap](docs/RESEARCH_ROADMAP.md): feasibility and contribution ranking, including optional ROS and 3D extensions.
 - [Budgeted-entanglement study](docs/paper/BUDGETED_ENTANGLEMENT_ROUTING.md): concise manuscript and results.
 - [Illustrated full paper](docs/paper/BUDGETED_ENTANGLEMENT_ROUTING_EXPLAINED.md): tutorial explanation, diagrams, equations, worked example, and publication framing.
+- [LaTeX paper](docs/paper/BUDGETED_ENTANGLEMENT_ROUTING.tex) and [compiled PDF](docs/paper/BUDGETED_ENTANGLEMENT_ROUTING.pdf): anonymous two-column submission draft with vector figures and bibliography.
 - [Stage registry](stages.json), [Stage 08 confirmatory report](docs/stages/08-confirmatory.md), and [Stage 09 release report](docs/stages/09-release.md).
 
 ## Technical direction
