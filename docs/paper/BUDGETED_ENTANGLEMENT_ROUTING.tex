@@ -214,7 +214,32 @@ Message oracle & Not comparable & Private input exchange & Privileged informatio
 \end{tabular}
 \end{table*}
 
-The DP value recursion is
+\paragraph{Classical exact.}
+This method uses no Bell pairs. Every request is answered with the best zero-message deterministic local strategy from \cref{eq:classical}; its entanglement surplus is zero by definition. It establishes the return improved by quantum-assisted methods, but it is not an equal-resource allocator.
+
+\paragraph{Quantum random.}
+At each round, this control samples uniformly from the feasible matching set $\mathcal{M}(s_t,B_t)$. It has the same six-pair budget as \method{} but uses neither current request value nor future information. It tests whether arbitrary entanglement use is sufficient.
+
+\paragraph{Quantum static.}
+For each physical edge, a fixed priority is computed from non-test request frequencies and gains. Evaluation selects the feasible active matching with greatest total fixed priority. Priorities are not adapted to the final catalog. This tests whether a fixed deployment plan can replace sequential reasoning.
+
+\paragraph{Quantum greedy.}
+Greedy observes current certified gains and selects
+\begin{equation}
+M_t^{\mathrm{greedy}}=\arg\max_{M\in\mathcal{M}(s_t,B_t)}G(s_t,M).
+\label{eq:greedy}
+\end{equation}
+It values present opportunities correctly but assigns zero value to preserving budget. It is the primary comparator because its principal difference from \method{} is long-horizon reasoning.
+
+\paragraph{BER-MARL.}
+The proposed method receives the same state, matching set, budget, and frozen request policies as greedy, but selects
+\begin{equation}
+M_t^{\mathrm{BER}}=\arg\max_{M\in\mathcal{M}(s_t,B_t)}Q_\theta(s_t,B_t,M).
+\end{equation}
+An improvement over greedy therefore measures learned budget pacing and anticipation of future public states rather than additional information.
+
+\paragraph{Online dynamic programming.}
+DP knows the exact held-out public transition matrix but not future random draws. Its recursion is
 \begin{equation}
 \begin{aligned}
 J_t(s,b)=\max_{M\in\mathcal{M}(s,b)}\bigg[&G(s,M)\\
@@ -222,7 +247,15 @@ J_t(s,b)=\max_{M\in\mathcal{M}(s,b)}\bigg[&G(s,M)\\
 \end{aligned}
 \label{eq:dp}
 \end{equation}
-DP and SDP play different roles: SDP certifies one request's quantum value, while DP provides an exact model-aware allocation reference over time.
+It is a privileged model-aware reference, not a learned equal-information competitor.
+
+\paragraph{Future-clairvoyant reference.}
+This method sees the complete realized ten-round sequence before acting and solves the sequence-specific budgeted matching problem. It is unattainable online and reports the remaining sequence-level headroom.
+
+\paragraph{Message oracle.}
+This reference lets endpoints exchange private inputs before acting, allowing joint outputs that satisfy every parity request. It solves a stronger-information problem and has no comparable Bell budget. We report it only as an information ceiling; it is excluded from the allocator claim and main chart.
+
+The fair direct comparisons are \method{} versus random, static, and greedy. DP measures model-aware headroom. Future-clairvoyant and message oracles are descriptive ceilings, while classical exact defines zero surplus.
 
 \section{Experimental Protocol}
 The study was executed prospectively in five stages: plan and claims; request/task certification; bounded algorithm development and freeze; locked held-out evaluation; and independent release audit. Development considered four DQN configurations with two seeds each, followed by four fresh pilots. Before final access, the protocol fixed 16 training seeds, 2,500 training episodes per seed, 1,000 paired test sequences, final-checkpoint evaluation, 20,000 seed-level bootstrap resamples, and five positive-result gates.

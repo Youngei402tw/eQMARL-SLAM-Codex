@@ -284,6 +284,60 @@ Random, static, greedy, and BER-MARL receive identical held-out sequences, certi
 
 DP is not a trainable competitor under the same information assumptions. It is an upper reference that knows the exact public Markov model. The future-clairvoyant and message oracles are deliberately privileged and cannot support fairness claims.
 
+### 7.1 Classical exact
+
+This method never uses entanglement. Every request is answered with the best deterministic zero-message local strategy found by enumerating all 64 strategy pairs. Its entanglement surplus is exactly zero by definition. It establishes the return that the quantum-assisted allocation methods improve upon, but it is not an equal-resource allocator because it receives no Bell pairs.
+
+### 7.2 Quantum random
+
+At every round, random allocation samples uniformly from the currently feasible matchings. Feasibility includes active edges, no repeated endpoint, and the remaining Bell-pair budget. It receives the same six pairs as BER-MARL. This control answers whether simply distributing entanglement, without reasoning about request value or the future, is sufficient.
+
+### 7.3 Quantum static
+
+Static allocation computes a fixed priority for each physical edge from development and validation frequencies and gains. During evaluation it chooses the feasible active matching with the greatest sum of these fixed edge priorities. It does not use the current request's future value and does not update priorities on the test catalog. This tests whether a fixed deployment plan can replace sequential learning.
+
+### 7.4 Quantum greedy
+
+Greedy uses the full certified gains visible in the current round and selects
+
+\[
+M_t^{\mathrm{greedy}}=\arg\max_{M\in\mathcal{M}(s_t,B_t)}\sum_{e\in M}G_e.
+\]
+
+It knows which opportunities are valuable now but assigns zero value to preserving budget. Greedy is the primary baseline because BER-MARL and greedy differ mainly in long-horizon reasoning.
+
+### 7.5 BER-MARL
+
+BER-MARL receives the same state, matching set, six-pair budget, and frozen request policies as greedy. It selects the feasible action with the greatest learned Q value:
+
+\[
+M_t^{\mathrm{BER}}=\arg\max_{M\in\mathcal{M}(s_t,B_t)}Q_\theta(s_t,B_t,M).
+\]
+
+Any improvement over greedy therefore measures learned budget pacing and anticipation of future public states, rather than a better local quantum policy or extra information.
+
+### 7.6 Online dynamic-programming reference
+
+Online DP knows the exact public transition matrix but does not know which random future state will actually occur. It computes the optimal expected action through backward recursion:
+
+\[
+J_t(s,b)=\max_{M\in\mathcal{M}(s,b)}\left[G(s,M)+\sum_{s'}P(s'\mid s)J_{t+1}(s',b-|M|)\right].
+\]
+
+DP is an upper reference for a model-aware online allocator. It is privileged relative to BER-MARL because the held-out transition matrix is given to it exactly.
+
+### 7.7 Future-clairvoyant reference
+
+The clairvoyant reference receives the complete realized ten-round sequence before making its first decision. It solves a sequence-specific matching and budget optimization. It is at least as strong as online DP and is unattainable in normal operation. Its purpose is to show the maximum surplus left in each realized sequence.
+
+### 7.8 Message oracle
+
+The message oracle allows endpoints to exchange their private inputs before acting. They can then select joint outputs satisfying every parity request. It uses a stronger information channel and is not constrained to solve the same zero-message problem. Its much larger reward is reported only to quantify the value of unrestricted communication; it is excluded from allocator superiority comparisons and the main results chart.
+
+### 7.9 Which comparisons support the claim
+
+The direct fair comparisons are BER-MARL versus random, static, and greedy. Online DP measures remaining model-aware headroom. The future-clairvoyant and message oracles are descriptive ceilings. Classical exact defines the zero-surplus reference. None of the privileged references is used as evidence that BER-MARL is superior under equal information.
+
 ## 8. Prospective experimental design
 
 ```mermaid
