@@ -1,0 +1,12 @@
+{
+  "stage": "26",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "runs": [
+    {
+      "run_id": "26-qip-learned-baselines_attempt-01",
+      "status": "planned",
+      "config_path": "configs/stage26/26-qip-learned-baselines_attempt-01.yaml",
+      "config_sha256": "e76a4e68baf2574916f847737a393bdbbcfe78c756460a3732485ef4b8e64f73"
+    }
+  ]
+}

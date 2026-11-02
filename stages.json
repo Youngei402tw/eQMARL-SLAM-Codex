@@ -510,7 +510,8 @@
       "branch_created_from_commit": "894ca11c1a90b12397e201835e655b7962835c04",
       "source_commit": "dcf958dc69813b1bc4fa64c06510ba71ca077286",
       "results_commit": "dcf958dc69813b1bc4fa64c06510ba71ca077286",
-      "publication_receipt": "docs/stages/25-publication.json"
+      "publication_receipt": "docs/stages/25-publication.json",
+      "completion_commit": "f67f866828efd6e84ba00fa6998f910b7e7ed4a1"
     },
     {
       "id": "26",
@@ -522,8 +523,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/26-qip-learned-baselines.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "in_progress",
+      "branch_created": true,
+      "dependency_completion_commit": "f67f866828efd6e84ba00fa6998f910b7e7ed4a1",
+      "branch_created_from_commit": "f67f866828efd6e84ba00fa6998f910b7e7ed4a1"
     },
     {
       "id": "27",
