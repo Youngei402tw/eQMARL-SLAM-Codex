@@ -97,6 +97,30 @@ python -m eqmarl_slam.cli verify --run <run-id>
 
 A CLI must return a nonzero exit status on failed correctness checks, invalid configuration, missing artifacts, or inconsistent resumes. Resource exhaustion must be recorded distinctly from scientific failure.
 
+## Stages 25–29 — Quantum Information Processing extension
+
+These stages extend the completed budgeted-entanglement study under the prospective `robust-entanglement-routing-v1` protocol. The scientific dependency is the immutable Stage 24 completion commit; the Stage 25 branch also retains the later explanatory manuscript edits from commit `894ca11c1a90b12397e201835e655b7962835c04`.
+
+### Stage 25 — QIP protocol and fresh split lock
+
+Register the question, claim limits, method matrix, equal tuning budget, compute caps, deterministic development/validation/test manifests, and final-test access rule. Commit and publish all hashes before model development. Gate: the registry validates, split regeneration is deterministic, paths and hashes resolve, and no performance run is made.
+
+### Stage 26 — Learned baselines and mechanism ablations
+
+Implement a graph-size-compatible action-conditioned allocator interface. Compare DQN, Double DQN, feed-forward PPO, and recurrent PPO with identical public features, catalogs, episodes, and tuning opportunities. Run budget, horizon, binary-gain, and shuffled-gain ablations only on non-test data. Gate: correctness, information-isolation, valid-action, equal-budget, determinism, and archive checks pass; select a candidate and strongest learned comparator from validation results even if the proposed candidate does not win.
+
+### Stage 27 — Robustness, scaling, and confirmatory freeze
+
+Using development/validation catalogs only, measure agent-count, topology, horizon, budget, Werner visibility, and heralded-loss behavior. Record parameter counts, decisions, updates, wall time, and inference latency. Select a single frozen method without opening test values. Gate: all registered conditions are retained, failures are explained, and Stage 28 configuration plus analysis code is committed and hash-locked.
+
+### Stage 28 — Locked robust-routing confirmation
+
+Certify the sealed test request family, train fresh independent seeds using only the frozen training split, and evaluate all methods on paired held-out sequences and registered resource conditions. The primary unit is the training seed. Gate: report the primary learned-baseline contrast, interval, safety gate, secondary multiplicity-adjusted comparisons, robustness thresholds, and every null or failed condition. A null result passes the stage when execution and reporting are complete.
+
+### Stage 29 — QIP paper and independent release audit
+
+Reproduce tables and figures from raw Stage 28 records, verify hashes and archives, rewrite the manuscript for the scope and conventions of *Quantum Information Processing*, and compile a submission-ready LaTeX/PDF package. Gate: scientific claims match the registered outcomes; all code, resolved configurations, raw results, diagnostics, and required artifacts are remotely retrievable; the repository workflow passes.
+
 The [experiment protocol](EXPERIMENT_PROTOCOL.md) controls budget semantics; [compute_profiles.json](../configs/compute_profiles.json) is the machine-readable representation. Resolve any disagreement before execution. The initial stage cap is 24 cumulative active execution wall-hours across runs, attempts, and resumed sessions. A restart, new branch, or renamed run must not reset consumed budget. More restrictive per-run and host limits also apply. Record CPU core-hours and GPU device-hours separately; they are not interchangeable budget units.
 
 ## Stage 00 — Plan and repository foundation

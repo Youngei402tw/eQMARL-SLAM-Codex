@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-11-01T00:30:00+00:00",
+  "updated_utc": "2026-11-02T00:00:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -10,14 +10,14 @@
     "url": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
     "last_check": "Stages 10-14 merged through PRs 11-15; all 120 confirmatory bundles and the Stage14 release audit were freshly retrieved and hash-validated."
   },
-  "authorized_current_scope": "Budgeted-entanglement sequential MARL extension Stages 20-24 under prospective plan; user instruction 2026-11-01.",
-  "active_stage": "24",
-  "stage_status": "passed",
+  "authorized_current_scope": "QIP-targeted robust entanglement-routing extension Stages 25-29; user instruction 2026-11-02.",
+  "active_stage": "25",
+  "stage_status": "in_progress",
   "training_runs_executed": 411,
-  "current_branch": "stage/24-budgeted-entanglement-release",
-  "dependency_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
+  "current_branch": "stage/25-qip-extension-plan",
+  "dependency_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "complete_remote_verified",
+  "publication_status": "stage25_local_planning",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -49,14 +49,14 @@
     "stage/18-nonlocal-confirmatory": "2c3dafc339b544d8f33d1e4be02bd497099ec5d8",
     "stage/19-nonlocal-release": "e6dc5c7a69f3de6942d3183b2c640e926eab467b",
     "main_nonlocal_integration": "7fc6349a1f08856b9c6e1bb678d2800b7aed8e0e",
-    "stage/20-budgeted-entanglement-plan": "4e529a2d362fe53566c219b17b477b64e8221e15"
-    ,"stage/21-budgeted-entanglement-task": "530b2a92dce583e6f0e46154888ea88d2dc5079b"
-    ,"stage/22-budgeted-entanglement-development": "4cdae6894767d01dd4c5071677226d23f678aa66"
-    ,"stage/23-budgeted-entanglement-confirmatory": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c"
-    ,"stage/24-budgeted-entanglement-release": "ae49896ae8e345c41cf0f2b0c71f1eb5feb5a50f"
+    "stage/20-budgeted-entanglement-plan": "4e529a2d362fe53566c219b17b477b64e8221e15",
+    "stage/21-budgeted-entanglement-task": "530b2a92dce583e6f0e46154888ea88d2dc5079b",
+    "stage/22-budgeted-entanglement-development": "4cdae6894767d01dd4c5071677226d23f678aa66",
+    "stage/23-budgeted-entanglement-confirmatory": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c",
+    "stage/24-budgeted-entanglement-release": "ae49896ae8e345c41cf0f2b0c71f1eb5feb5a50f"
   },
   "blockers": [],
-  "next_action": "No experiment remains in the authorized Stage20-24 plan; preserve permanent branches and use the audited paper package for review.",
+  "next_action": "Complete and publish Stage 25 prospective protocol and fresh split lock before Stage 26 development.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
@@ -68,7 +68,7 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "22",
+  "next_stage": "26",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
   "next_stage_status": "planned",
@@ -390,7 +390,7 @@
         "decisions": 3000,
         "updates": 614400,
         "wall_seconds": 452.746291867,
-        "cpu_core_hours": 0.12574136166666668,
+        "cpu_core_hours": 0.1257413616666667,
         "gpu_device_hours": 0,
         "circuit_evaluations": 5529627,
         "shots": 0

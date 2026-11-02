@@ -1,0 +1,53 @@
+{
+  "schema_version": "qip-extension-protocol-v1",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "registered_utc": "2026-11-02T00:00:00Z",
+  "scientific_dependency_completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
+  "manuscript_parent_commit": "894ca11c1a90b12397e201835e655b7962835c04",
+  "primary_question": "Does a frozen learned allocator outperform the strongest equally informed learned baseline on fresh request types, public dynamics, and graph topologies under a fixed entanglement budget?",
+  "methods": ["dqn", "double_dqn", "ppo", "recurrent_ppo"],
+  "heuristic_controls": ["random", "static", "greedy"],
+  "privileged_references": ["model_aware_dynamic_programming", "future_clairvoyant"],
+  "development_only_ablations": ["no_budget", "no_horizon", "binary_gain", "shuffled_gain"],
+  "resource_conditions": {
+    "werner_visibility": [1.0, 0.9, 0.8, 0.7, 0.6],
+    "heralded_success_probability": [1.0, 0.9, 0.75, 0.5]
+  },
+  "scaling": {
+    "agents": [3, 4, 6, 8],
+    "topologies": ["path", "ring", "star", "sparse_random"],
+    "horizons": [8, 10, 16, 24],
+    "bell_pair_budgets": [2, 4, 6, 10]
+  },
+  "tuning": {
+    "configurations_per_method": 3,
+    "seeds_per_configuration": 2,
+    "episodes_per_seed": 1200,
+    "validation_sequences": 300,
+    "selection_metric": "mean_entanglement_surplus",
+    "checkpoint_rule": "final"
+  },
+  "confirmatory": {
+    "training_seeds": 12,
+    "episodes_per_seed": 2500,
+    "paired_test_sequences_per_condition": 500,
+    "bootstrap_replicates": 20000,
+    "familywise_secondary_method": "Holm",
+    "primary_gate": "seed-level paired 95% bootstrap lower bound versus strongest learned baseline is above zero",
+    "safety_gate": "no invalid matching or negative budget"
+  },
+  "compute_caps": {
+    "maximum_active_wall_hours_per_stage": 24,
+    "stage26_planned_hours": 3,
+    "stage27_planned_hours": 3,
+    "stage28_planned_hours": 4,
+    "maximum_threads_per_job": 4,
+    "paid_compute": false
+  },
+  "claim_limits": [
+    "No claim of a new Bell inequality or Bell violation.",
+    "No claim of quantum computational speedup.",
+    "Quantum benefit is conditional on the certified request family and tested resource model.",
+    "Simulation robustness does not establish physical-hardware performance."
+  ]
+}
