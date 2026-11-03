@@ -12,9 +12,10 @@
     },
     {
       "run_id": "26-qip-learned-baselines-recovery_attempt-02",
-      "status": "planned",
+      "status": "completed",
       "config_path": "configs/stage26/26-qip-learned-baselines-recovery_attempt-02.yaml",
-      "config_sha256": "a06e4a1d53c820fabeb59894ce46227ddac0ddb1963e1e6c9642f978e0beca0b"
+      "config_sha256": "a06e4a1d53c820fabeb59894ce46227ddac0ddb1963e1e6c9642f978e0beca0b",
+      "result_path": "experiments/26/26-qip-learned-baselines-recovery_attempt-02"
     }
   ]
 }

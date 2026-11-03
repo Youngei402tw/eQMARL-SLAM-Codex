@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-11-02T01:00:00+00:00",
+  "updated_utc": "2026-11-03T01:15:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "QIP-targeted robust entanglement-routing extension Stages 25-29; user instruction 2026-11-02.",
   "active_stage": "26",
-  "stage_status": "in_progress",
+  "stage_status": "passed",
   "training_runs_executed": 411,
   "current_branch": "stage/26-qip-learned-baselines",
   "dependency_commit": "f67f866828efd6e84ba00fa6998f910b7e7ed4a1",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "stage26_source_pending",
+  "publication_status": "stage26_results_pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -57,7 +57,7 @@
     "stage/25-qip-extension-plan": "dcf958dc69813b1bc4fa64c06510ba71ca077286"
   },
   "blockers": [],
-  "next_action": "Publish Stage 26 source/config, run the equal-budget development experiment, and archive all outcomes.",
+  "next_action": "Publish and verify Stage 26 complete results, then create Stage 27 from its completion commit.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
@@ -452,11 +452,13 @@
     }
   },
   "stage_budget": {
-    "cap_wall_seconds": 86400,
-    "consumed_wall_seconds": 400.0,
-    "setup_wall_seconds_charged": 400.0,
-    "stage_started_utc": "2026-11-01T10:35:00+00:00",
-    "setup_charge_convention": "Conservative independent audit implementation, registration, and tests."
+    "stage": "26",
+    "setup_wall_seconds_charged": 0,
+    "active_wall_seconds": 5955.611551735,
+    "cpu_core_hours": 1.6540892211111111,
+    "training_decisions": 441600,
+    "training_updates": 278340,
+    "certification_updates": 384000
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
   "active_runs": [],
