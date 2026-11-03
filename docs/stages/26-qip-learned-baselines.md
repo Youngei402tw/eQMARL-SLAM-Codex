@@ -13,3 +13,7 @@
 **Budget.** Five CPU cores and 17 GiB are available. One reportable job may use at most four threads, 1.5 million decisions, and three active wall-hours. The measured smoke rates must project below 80% of the registered wall cap before tuning begins.
 
 **Gate.** Tests for matching feasibility, noise monotonicity, action features, tiny DQN/PPO training, and oracle dominance must pass. Each method receives three configurations, two seeds per configuration, 1,200 episodes per seed, 300 paired validation sequences per catalog, and final-checkpoint selection. All four ablations receive the same selected proposed-method configuration and two fresh seeds. Scientific superiority is not required to pass this implementation/development stage.
+
+## Attempt 01 retained failure
+
+All 24 tuning trials, eight feature-ablation trials, 30 non-test request certificates, and 32 final checkpoints completed. Bundle closure then failed because the direct JSON writer received a NumPy boolean in the decision-cap gate. The failed bundle is retained verbatim. Its raw metrics hash is `793f34959848482c8300aeb58cf13a01edff177b408325224944accd05ec02d6`. Attempt 02 is restricted to hash-locked analysis recovery and cannot retrain or access test data.

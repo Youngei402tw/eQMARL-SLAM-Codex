@@ -1,0 +1,9 @@
+{
+  "passed": false,
+  "exception": {
+    "reason": "Object of type bool is not JSON serializable",
+    "type": "TypeError",
+    "traceback": "failure.txt",
+    "attempt": 1
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "run_id": "26-qip-learned-baselines_attempt-01",
+  "stage": "26",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "profile": "tuning",
+  "experiment": "qip-learned-baselines",
+  "hypothesis": "Graph-conditioned Double DQN uses public gain, budget, and horizon information to exceed equally tuned DQN, PPO, and recurrent-PPO allocators on non-test validation catalogs.",
+  "method": "equal-budget-four-method-development-and-feature-ablation",
+  "dependency_completion_commit": "f67f866828efd6e84ba00fa6998f910b7e7ed4a1",
+  "wall_seconds": 10800,
+  "max_primitive_steps": 1500000,
+  "max_cpu_threads": 4,
+  "split_lock": {
+    "path": "configs/data/qip_v1/split-lock.json",
+    "sha256": "1e61b2a1cfb884c8f21219d3e29f670d8ac50c918d4ad2f2c4c54982b9d44ea8"
+  },
+  "certificate_seed": 261000,
+  "methods": [
+    "dqn",
+    "double_dqn",
+    "ppo",
+    "recurrent_ppo"
+  ],
+  "proposed_method": "double_dqn",
+  "throughput_episodes": 30,
+  "seeds_per_candidate": 2,
+  "tuning_seed_start": 26100,
+  "validation_seed_start": 126000,
+  "validation_sequences": 300,
+  "ablation_seed_start": 26900,
+  "ablation_seeds": 2,
+  "ablations": [
+    "no_budget",
+    "no_horizon",
+    "binary_gain",
+    "shuffled_gain"
+  ],
+  "candidates": {
+    "dqn": [
+      {
+        "name": "h32-lr3e4",
+        "hidden": 32,
+        "learning_rate": 0.0003,
+        "episodes": 1200
+      },
+      {
+        "name": "h64-lr3e4",
+        "hidden": 64,
+        "learning_rate": 0.0003,
+        "episodes": 1200
+      },
+      {
+        "name": "h64-lr1e3",
+        "hidden": 64,
+        "learning_rate": 0.001,
+        "episodes": 1200
+      }
+    ],
+    "double_dqn": [
+      {
+        "name": "h32-lr3e4",
+        "hidden": 32,
+        "learning_rate": 0.0003,
+        "episodes": 1200
+      },
+      {
+        "name": "h64-lr3e4",
+        "hidden": 64,
+        "learning_rate": 0.0003,
+        "episodes": 1200
+      },
+      {
+        "name": "h64-lr1e3",
+        "hidden": 64,
+        "learning_rate": 0.001,
+        "episodes": 1200
+      }
+    ],
+    "ppo": [
+      {
+        "name": "h32-lr1e4",
+        "hidden": 32,
+        "learning_rate": 0.0001,
+        "episodes": 1200,
+        "rollout_episodes": 16,
+        "epochs": 4
+      },
+      {
+        "name": "h64-lr3e4",
+        "hidden": 64,
+        "learning_rate": 0.0003,
+        "episodes": 1200,
+        "rollout_episodes": 16,
+        "epochs": 4
+      },
+      {
+        "name": "h64-lr1e3",
+        "hidden": 64,
+        "learning_rate": 0.001,
+        "episodes": 1200,
+        "rollout_episodes": 16,
+        "epochs": 4
+      }
+    ],
+    "recurrent_ppo": [
+      {
+        "name": "h32-lr1e4",
+        "hidden": 32,
+        "learning_rate": 0.0001,
+        "episodes": 1200,
+        "rollout_episodes": 16,
+        "epochs": 4
+      },
+      {
+        "name": "h64-lr3e4",
+        "hidden": 64,
+        "learning_rate": 0.0003,
+        "episodes": 1200,
+        "rollout_episodes": 16,
+        "epochs": 4
+      },
+      {
+        "name": "h64-lr1e3",
+        "hidden": 64,
+        "learning_rate": 0.001,
+        "episodes": 1200,
+        "rollout_episodes": 16,
+        "epochs": 4
+      }
+    ]
+  },
+  "seed_streams": {
+    "model_init": 26100,
+    "critic_init": 26100,
+    "map": null,
+    "evaluation_map": 126000,
+    "sensor": null,
+    "action": 36100,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    },
+    "test": {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+    }
+  },
+  "model": {
+    "actor": "masked action-conditioned DQN or PPO",
+    "encoder": "permutation-invariant public-edge encoder",
+    "critic": "method-specific Q or value network",
+    "parameter_counts": {
+      "reported_per_run": true
+    },
+    "optimizer": "Adam with equal registered episode budgets"
+  },
+  "quantum": {
+    "device": "analytic certified Bell-request values",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "request certification only; allocator is classical",
+    "dtype": "float64 certification and float32 learning",
+    "entanglement": "one attempted Bell pair per selected edge",
+    "observables": [
+      "binary parity success"
+    ],
+    "noise": null,
+    "resource_accounting": "certification evaluations, allocator decisions, updates, and Bell attempts"
+  },
+  "action_modes": "deterministic masked final checkpoint on paired validation sequences",
+  "checkpoint_selection": "final checkpoint; hyperparameters selected by mean validation surplus",
+  "analysis_version": "qip-learned-baselines-v1",
+  "interpretation": "Development-only algorithm and feature study; final test remains sealed."
+}

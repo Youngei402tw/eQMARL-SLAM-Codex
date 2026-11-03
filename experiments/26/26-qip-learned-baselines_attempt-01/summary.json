@@ -1,0 +1,22 @@
+{
+  "run_id": "26-qip-learned-baselines_attempt-01",
+  "source_commit": "e1f5af6b124e098cc801649a425be896d2603d0a",
+  "config_sha256": "e76a4e68baf2574916f847737a393bdbbcfe78c756460a3732485ef4b8e64f73",
+  "metrics_sha256": "793f34959848482c8300aeb58cf13a01edff177b408325224944accd05ec02d6",
+  "metrics_rows": 66,
+  "analysis_version": "qip-learned-baselines-v1",
+  "passed": false,
+  "gates": {},
+  "resources_consumed": {
+    "primitive_steps": 0,
+    "decisions": 0,
+    "updates": 0,
+    "wall_seconds": 5953.967831076,
+    "cpu_core_hours": 1.6537027683333334,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "interpretation": "Development-only algorithm and feature study; final test remains sealed.",
+  "analysis": {}
+}

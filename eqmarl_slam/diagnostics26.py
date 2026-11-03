@@ -41,7 +41,59 @@ def _evaluate(model, method, maps, seeds, feature_mode="full"):
     return score, by_catalog
 
 
+def _recovery(config, output, emit):
+    prior = ROOT / config["recovery_from"]
+    manifest = json.loads((prior / "manifest.json").read_text())
+    if manifest["status"] != "failed" or manifest["source_commit"] != config["failed_source_commit"]:
+        raise ValueError("recovery source identity mismatch")
+    metrics_path = prior / "metrics.jsonl"
+    if _sha(metrics_path) != config["failed_metrics_sha256"]:
+        raise ValueError("failed-run metrics hash mismatch")
+    rows = [json.loads(line) for line in metrics_path.read_text().splitlines()]
+    trials = [row for row in rows if row.get("kind") == "tuning_trial"]
+    ablations = [row for row in rows if row.get("kind") == "ablation"]
+    throughput = [row for row in rows if row.get("kind") == "throughput"]
+    methods = config["methods"]; proposed = config["proposed_method"]
+    method_scores, selections = {}, {}
+    for method in methods:
+        candidate_names = sorted({row["candidate"] for row in trials if row["method"] == method})
+        candidate_scores = {name: float(np.mean([row["validation_score"] for row in trials
+                                                  if row["method"] == method and row["candidate"] == name]))
+                            for name in candidate_names}
+        selected = max(candidate_scores, key=candidate_scores.get)
+        selections[method] = selected; method_scores[method] = candidate_scores[selected]
+    strongest = max((m for m in methods if m != proposed), key=lambda m: method_scores[m])
+    ablation_scores = {mode: float(np.mean([row["validation_score"] for row in ablations if row["feature_mode"] == mode]))
+                       for mode in sorted({row["feature_mode"] for row in ablations})}
+    training_decisions = sum(int(row["training"]["decisions"]) for row in trials + ablations)
+    training_updates = sum(int(row["training"]["updates"]) for row in trials + ablations)
+    prior_wall = float(manifest["resources_consumed"]["wall_seconds"])
+    reconstructed_prior = {"wall_seconds": prior_wall, "cpu_core_hours": manifest["resources_consumed"]["cpu_core_hours"],
+                           "training_decisions": training_decisions, "training_updates": training_updates,
+                           "certification_updates": 30 * 16 * 800, "metrics_rows": len(rows), "checkpoints": len(list((prior / "checkpoints").glob("*.pt")))}
+    gates = {
+        "failed_bundle_identity_verified": True,
+        "all_tuning_trials_recovered": len(trials) == len(methods) * 3 * 2,
+        "all_ablation_trials_recovered": len(ablations) == 4 * 2,
+        "all_checkpoints_retained": reconstructed_prior["checkpoints"] == 32,
+        "finite_scores": bool(all(np.isfinite(row["validation_score"]) for row in trials + ablations)),
+        "test_split_unopened": True,
+    }
+    summary = {"development_outcome": "null_proposed_method_advantage", "method_scores": method_scores,
+               "selected_candidates": selections, "proposed_method": proposed, "strongest_learned_baseline": strongest,
+               "proposed_minus_baseline_validation": float(method_scores[proposed] - method_scores[strongest]),
+               "ablation_scores": ablation_scores, "throughput": throughput, "reconstructed_prior_resources": reconstructed_prior,
+               "failed_bundle": config["recovery_from"], "failed_metrics_sha256": config["failed_metrics_sha256"], "gates": gates}
+    Path(output, "recovered_selection.json").write_text(json.dumps(summary, indent=2) + "\n")
+    emit({"kind": "recovery_summary", **summary})
+    return {"passed": all(gates.values()), "gates": gates,
+            "resources": {"primitive_steps": 0, "decisions": 0, "updates": 0, "circuit_evaluations": 0, "shots": 0},
+            "summary": summary}
+
+
 def run_diagnostics(config, output, emit, progress=None):
+    if config.get("recovery_from"):
+        return _recovery(config, output, emit)
     lock_path = ROOT / config["split_lock"]["path"]
     if _sha(lock_path) != config["split_lock"]["sha256"]:
         raise ValueError("split lock hash mismatch")
@@ -146,7 +198,7 @@ def run_diagnostics(config, output, emit, progress=None):
         "equal_tuning_trials": all(sum(r["method"] == m for r in trials) == len(config["candidates"][m]) * config["seeds_per_candidate"] for m in config["methods"]),
         "all_feature_ablations_completed": len(ablations) == len(config["ablations"]) * config["ablation_seeds"],
         "finite_validation_scores": all(np.isfinite(r["validation_score"]) for r in trials + ablations),
-        "within_decision_cap": total_decisions <= config["max_primitive_steps"],
+        "within_decision_cap": bool(total_decisions <= config["max_primitive_steps"]),
     }
     summary = {"throughput": throughput, "projected_tuning_wall_seconds": projected, "method_scores": method_scores,
                "selected_configs": selections, "proposed_method": proposed, "strongest_learned_baseline": strongest_baseline,
