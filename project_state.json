@@ -17,7 +17,7 @@
   "current_branch": "stage/26-qip-learned-baselines",
   "dependency_commit": "f67f866828efd6e84ba00fa6998f910b7e7ed4a1",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "stage26_results_pending",
+  "publication_status": "complete_remote_verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -54,7 +54,8 @@
     "stage/22-budgeted-entanglement-development": "4cdae6894767d01dd4c5071677226d23f678aa66",
     "stage/23-budgeted-entanglement-confirmatory": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c",
     "stage/24-budgeted-entanglement-release": "ae49896ae8e345c41cf0f2b0c71f1eb5feb5a50f",
-    "stage/25-qip-extension-plan": "dcf958dc69813b1bc4fa64c06510ba71ca077286"
+    "stage/25-qip-extension-plan": "dcf958dc69813b1bc4fa64c06510ba71ca077286",
+    "stage/26-qip-learned-baselines": "0da2e6046671a03d2ff6de06c1fcbf7b1bbe8fe1"
   },
   "blockers": [],
   "next_action": "Publish and verify Stage 26 complete results, then create Stage 27 from its completion commit.",

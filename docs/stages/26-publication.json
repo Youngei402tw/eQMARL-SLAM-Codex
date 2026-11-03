@@ -1,0 +1,17 @@
+{
+  "stage": "26",
+  "branch": "stage/26-qip-learned-baselines",
+  "repository": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+  "source_commits": [
+    "e1f5af6b124e098cc801649a425be896d2603d0a",
+    "aef2e068cdedb811d08ad2831c2bb35da3ffb8ae"
+  ],
+  "results_commit": "0da2e6046671a03d2ff6de06c1fcbf7b1bbe8fe1",
+  "remote_ref": "refs/heads/stage/26-qip-learned-baselines",
+  "remote_sha_verified": "0da2e6046671a03d2ff6de06c1fcbf7b1bbe8fe1",
+  "verified": true,
+  "bundles": [
+    {"path": "experiments/26/26-qip-learned-baselines_attempt-01", "status": "failed", "archive_valid": true},
+    {"path": "experiments/26/26-qip-learned-baselines-recovery_attempt-02", "status": "completed", "archive_valid": true}
+  ]
+}
