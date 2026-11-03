@@ -529,7 +529,8 @@
       "branch_created_from_commit": "f67f866828efd6e84ba00fa6998f910b7e7ed4a1",
       "source_commit": "e1f5af6b124e098cc801649a425be896d2603d0a",
       "results_commit": "0da2e6046671a03d2ff6de06c1fcbf7b1bbe8fe1",
-      "publication_receipt": "docs/stages/26-publication.json"
+      "publication_receipt": "docs/stages/26-publication.json",
+      "completion_commit": "65b6d5d851c1af77292e0f4ef4be5679e719c7a7"
     },
     {
       "id": "27",
@@ -541,8 +542,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/27-qip-robustness-scaling.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "in_progress",
+      "branch_created": true,
+      "dependency_completion_commit": "65b6d5d851c1af77292e0f4ef4be5679e719c7a7",
+      "branch_created_from_commit": "65b6d5d851c1af77292e0f4ef4be5679e719c7a7"
     },
     {
       "id": "28",
