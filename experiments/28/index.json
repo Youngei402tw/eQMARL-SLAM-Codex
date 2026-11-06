@@ -1,0 +1,12 @@
+{
+  "stage": "28",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "runs": [
+    {
+      "run_id": "28-qip-confirmatory_attempt-01",
+      "status": "planned",
+      "config_path": "configs/stage28/28-qip-confirmatory_attempt-01.yaml",
+      "config_sha256": "03987b1d5b76bff1e92d8f0f8a6d81ca1b314d9c616b9a485725bf1805930e23"
+    }
+  ]
+}
