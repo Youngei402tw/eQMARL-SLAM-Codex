@@ -1,0 +1,97 @@
+{
+  "run_id": "28-qip-confirmatory_attempt-01",
+  "stage": "28",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "profile": "confirmatory",
+  "experiment": "qip-confirmatory",
+  "hypothesis": "On fresh request types and unseen public catalogs, resource-aware PPO improves over greedy and is either superior or practically equivalent to equally informed DQN.",
+  "method": "locked-twelve-seed-paired-multicatalog-confirmation",
+  "dependency_completion_commit": "93038f28f791f1d6099d89a6eedf17e8dbb036c1",
+  "wall_seconds": 14400,
+  "max_primitive_steps": 2500000,
+  "max_cpu_threads": 4,
+  "freeze": {
+    "path": "experiments/27/27-qip-robustness-scaling_attempt-01/stage28-freeze.json",
+    "sha256": "ff34ffbb5a30053555de83494c937980ad4f91c5e4e87f2401833cf173df60ef"
+  },
+  "certificate_seed": 281000,
+  "secondary_sequences_per_catalog": 100,
+  "secondary_conditions": [
+    {
+      "name": "ideal",
+      "visibility": 1.0,
+      "heralded_success": 1.0
+    },
+    {
+      "name": "visibility-0.8",
+      "visibility": 0.8,
+      "heralded_success": 1.0
+    },
+    {
+      "name": "visibility-0.6",
+      "visibility": 0.6,
+      "heralded_success": 1.0
+    },
+    {
+      "name": "heralded-0.75",
+      "visibility": 1.0,
+      "heralded_success": 0.75
+    },
+    {
+      "name": "heralded-0.5",
+      "visibility": 1.0,
+      "heralded_success": 0.5
+    }
+  ],
+  "seed_streams": {
+    "model_init": 28000,
+    "critic_init": 28000,
+    "map": null,
+    "evaluation_map": 228000,
+    "sensor": null,
+    "action": 38000,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    },
+    "test": {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+    }
+  },
+  "model": {
+    "actor": "masked graph-conditioned PPO and DQN allocators",
+    "encoder": "permutation-invariant public-edge encoder",
+    "critic": "PPO state value or DQN target Q network",
+    "parameter_counts": {
+      "reported_per_checkpoint": true
+    },
+    "optimizer": "Adam at frozen learning rate 1e-3"
+  },
+  "quantum": {
+    "device": "analytic Bell correlator with registered Werner and heralded-loss models",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "float64 request certification; float32 allocator learning",
+    "dtype": "mixed as specified",
+    "entanglement": "one attempted pair per selected edge",
+    "observables": [
+      "binary parity success"
+    ],
+    "noise": "ideal primary; frozen Werner and heralded-loss secondary conditions",
+    "resource_accounting": "Bell attempts, decisions, updates, certification evaluations, and shots"
+  },
+  "action_modes": "deterministic masked final checkpoints on paired sealed sequences",
+  "checkpoint_selection": "final checkpoint for every fresh seed",
+  "analysis_version": "qip-confirmatory-v1",
+  "interpretation": "Locked final study; all superiority, equivalence, robustness, and null outcomes are reported separately."
+}
