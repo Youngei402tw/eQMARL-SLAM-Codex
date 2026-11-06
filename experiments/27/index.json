@@ -4,9 +4,10 @@
   "runs": [
     {
       "run_id": "27-qip-robustness-scaling_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config_path": "configs/stage27/27-qip-robustness-scaling_attempt-01.yaml",
-      "config_sha256": "e68820590ba2bc4ac38af11fe93d2b380de806d51040f723c9073d1670f9d5d8"
+      "config_sha256": "e68820590ba2bc4ac38af11fe93d2b380de806d51040f723c9073d1670f9d5d8",
+      "result_path": "experiments/27/27-qip-robustness-scaling_attempt-01"
     }
   ]
 }

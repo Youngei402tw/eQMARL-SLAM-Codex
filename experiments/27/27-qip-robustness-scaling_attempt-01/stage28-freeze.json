@@ -1,0 +1,161 @@
+{
+  "schema_version": "qip-confirmatory-freeze-v1",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "selected_method": "ppo",
+  "learned_comparator": "dqn",
+  "selected_configs": {
+    "ppo": {
+      "name": "h64-lr1e3",
+      "hidden": 64,
+      "learning_rate": 0.001,
+      "episodes": 1800,
+      "rollout_episodes": 16,
+      "epochs": 4
+    },
+    "dqn": {
+      "name": "h64-lr1e3",
+      "hidden": 64,
+      "learning_rate": 0.001,
+      "episodes": 1800
+    }
+  },
+  "training_seeds": [
+    28000,
+    28001,
+    28002,
+    28003,
+    28004,
+    28005,
+    28006,
+    28007,
+    28008,
+    28009,
+    28010,
+    28011
+  ],
+  "episodes_per_seed": 2500,
+  "evaluation_seed_start": 228000,
+  "sequences_per_catalog": 500,
+  "secondary_resource_conditions": [
+    "ideal",
+    "visibility-0.8",
+    "visibility-0.6",
+    "heralded-0.75",
+    "heralded-0.5"
+  ],
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 928000,
+  "equivalence_margin_fraction_online_reference": 0.05,
+  "primary_tests": [
+    "ppo_minus_dqn",
+    "ppo_minus_greedy",
+    "ppo_dqn_equivalence"
+  ],
+  "test_request_manifest": {
+    "path": "configs/data/qip_v1/test-request-types.json",
+    "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+  },
+  "test_catalogs": [
+    {
+      "catalog_id": "qip-test-id-a4-complete",
+      "path": "configs/data/qip_v1/test-id-a4-complete-catalog.json",
+      "sha256": "a4cb1e18ef6f09d8968555fe2b794be1167baced4abf137e95e49de3a14768a7"
+    },
+    {
+      "catalog_id": "qip-test-topology-a6-ring",
+      "path": "configs/data/qip_v1/test-topology-a6-ring-catalog.json",
+      "sha256": "80362786e7953f70daad569a4d093c946c0545e067393cd657de5a15a705da93"
+    },
+    {
+      "catalog_id": "qip-test-scale-a8-sparse",
+      "path": "configs/data/qip_v1/test-scale-a8-sparse-catalog.json",
+      "sha256": "078582703a61f42cec74ac744d494e676b80305515c62858b1c7a701e1c91d3f"
+    },
+    {
+      "catalog_id": "qip-test-horizon-a4-path",
+      "path": "configs/data/qip_v1/test-horizon-a4-path-catalog.json",
+      "sha256": "dc8b8b9188e44484b7d608d467a204062ee78bc3fa6d89cad2210407b98589a1"
+    }
+  ],
+  "training_request_manifests": {
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    }
+  },
+  "training_catalogs": {
+    "development": [
+      {
+        "catalog_id": "qip-development-a3-path",
+        "path": "configs/data/qip_v1/development-a3-path-catalog.json",
+        "sha256": "891c2bf519f8194c24bb3eb25b98362611ac21c633f9fa0f64732470d9d05e4f"
+      },
+      {
+        "catalog_id": "qip-development-a3-ring",
+        "path": "configs/data/qip_v1/development-a3-ring-catalog.json",
+        "sha256": "1a09bdd6f824f52cbadd7238deaa81fd9855ee9c7ae3cc63ef1b1f5b0af36286"
+      },
+      {
+        "catalog_id": "qip-development-a4-complete",
+        "path": "configs/data/qip_v1/development-a4-complete-catalog.json",
+        "sha256": "db96dbbdb7e97d59eaf3f20bb9933e5cbb6af03b2bbb28cb98e12b22cf7008a5"
+      },
+      {
+        "catalog_id": "qip-development-a4-path",
+        "path": "configs/data/qip_v1/development-a4-path-catalog.json",
+        "sha256": "4805e2300abb8d59214b927436e16eb31fda1e9ef4548cc2b6f5c86263bf247e"
+      },
+      {
+        "catalog_id": "qip-development-a4-ring",
+        "path": "configs/data/qip_v1/development-a4-ring-catalog.json",
+        "sha256": "96427a4c106b4a4afb2c107cf4bec4a8c8f432d6b2952399305477502d7d3492"
+      },
+      {
+        "catalog_id": "qip-development-a4-star",
+        "path": "configs/data/qip_v1/development-a4-star-catalog.json",
+        "sha256": "612f1109555ec1c69b579d4d9d968f6045e09493ec138136c73112373d02be10"
+      },
+      {
+        "catalog_id": "qip-development-a6-path",
+        "path": "configs/data/qip_v1/development-a6-path-catalog.json",
+        "sha256": "f1f0abf59b078a12d12600715a8f44a962ff927f13582318377da930f39532cd"
+      },
+      {
+        "catalog_id": "qip-development-a6-star",
+        "path": "configs/data/qip_v1/development-a6-star-catalog.json",
+        "sha256": "235ce30dc1b52d6246d96831bedb5b964b3b48d3c8bd38a3dab5d037b85035d4"
+      }
+    ],
+    "validation": [
+      {
+        "catalog_id": "qip-validation-a3-ring",
+        "path": "configs/data/qip_v1/validation-a3-ring-catalog.json",
+        "sha256": "76e7082eaaf2a3342cab6edb54487483ac84b372549616bd8570b93b0b079e82"
+      },
+      {
+        "catalog_id": "qip-validation-a4-sparse",
+        "path": "configs/data/qip_v1/validation-a4-sparse-catalog.json",
+        "sha256": "86c803052c72ea57ad744ad052b3431c0d9d1229a601f29e70d9c177b68f5de3"
+      },
+      {
+        "catalog_id": "qip-validation-a6-path",
+        "path": "configs/data/qip_v1/validation-a6-path-catalog.json",
+        "sha256": "fae3d5ae2e265214c69c67b5a1d7a4120e13bdd1c654cf1ad24502e995e4ac24"
+      },
+      {
+        "catalog_id": "qip-validation-a6-star",
+        "path": "configs/data/qip_v1/validation-a6-star-catalog.json",
+        "sha256": "feda30143c1c071b922d01e2335bea47ca72f797560333462daf864e104c9a63"
+      }
+    ]
+  },
+  "non_test_certificate_bundle": {
+    "path": "experiments/26/26-qip-learned-baselines_attempt-01/non_test_certificates.json",
+    "sha256": "bab199d79db156dc2bbd8d27d0c7099afaadddf80af0e5c9cbd1a171e0420f82"
+  },
+  "claim_rule": "Report all primary and secondary outcomes. Algorithmic superiority requires a positive paired interval; equivalence requires the two-sided 90% interval to lie inside the registered practical margin."
+}

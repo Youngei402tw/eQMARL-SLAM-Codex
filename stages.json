@@ -542,10 +542,11 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/27-qip-robustness-scaling.md",
-      "status": "in_progress",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "65b6d5d851c1af77292e0f4ef4be5679e719c7a7",
-      "branch_created_from_commit": "65b6d5d851c1af77292e0f4ef4be5679e719c7a7"
+      "branch_created_from_commit": "65b6d5d851c1af77292e0f4ef4be5679e719c7a7",
+      "source_commit": "29f6baebee699b73ffb51b2156bfdbc693543ae0"
     },
     {
       "id": "28",
