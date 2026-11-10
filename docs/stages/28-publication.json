@@ -1,0 +1,16 @@
+{
+  "stage": "28",
+  "branch": "stage/28-qip-confirmatory",
+  "repository": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+  "source_commit": "3d3ea45ab610a4752a61ac41456aeb5ae009998e",
+  "snapshot_commit": "2757563d044a3468795faf129bc13cc6650dfacd",
+  "results_commit": "915ccba8fe9d3be524e4d2e8346302fd52aff7cf",
+  "remote_ref": "refs/heads/stage/28-qip-confirmatory",
+  "remote_sha_verified": "915ccba8fe9d3be524e4d2e8346302fd52aff7cf",
+  "bundle": "experiments/28/28-qip-confirmatory_attempt-01",
+  "bundle_valid": true,
+  "metrics_rows": 88,
+  "episode_rows": 81200,
+  "metrics_sha256": "320fa6803d0b89aca2b5ec6711959c91b685e54ec8adc5025fa9ea3c464ab100",
+  "verified": true
+}

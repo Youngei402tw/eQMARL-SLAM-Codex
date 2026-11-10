@@ -566,7 +566,8 @@
       "dependency_completion_commit": "93038f28f791f1d6099d89a6eedf17e8dbb036c1",
       "branch_created_from_commit": "93038f28f791f1d6099d89a6eedf17e8dbb036c1",
       "source_commit": "3d3ea45ab610a4752a61ac41456aeb5ae009998e",
-      "results_commit": "2757563d044a3468795faf129bc13cc6650dfacd"
+      "results_commit": "915ccba8fe9d3be524e4d2e8346302fd52aff7cf",
+      "publication_receipt": "docs/stages/28-publication.json"
     },
     {
       "id": "29",

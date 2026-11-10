@@ -17,7 +17,7 @@
   "current_branch": "stage/28-qip-confirmatory",
   "dependency_commit": "93038f28f791f1d6099d89a6eedf17e8dbb036c1",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "stage28_results_pending_permanent_branch",
+  "publication_status": "complete_remote_verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -56,7 +56,8 @@
     "stage/24-budgeted-entanglement-release": "ae49896ae8e345c41cf0f2b0c71f1eb5feb5a50f",
     "stage/25-qip-extension-plan": "dcf958dc69813b1bc4fa64c06510ba71ca077286",
     "stage/26-qip-learned-baselines": "0da2e6046671a03d2ff6de06c1fcbf7b1bbe8fe1",
-    "stage/27-qip-robustness-scaling": "60ad022b30be04926443a04b9998883c499ffe97"
+    "stage/27-qip-robustness-scaling": "60ad022b30be04926443a04b9998883c499ffe97",
+    "stage/28-qip-confirmatory": "915ccba8fe9d3be524e4d2e8346302fd52aff7cf"
   },
   "blockers": [],
   "next_action": "Publish and verify the permanent Stage 28 result, record its completion identity, then create Stage 29 release audit.",
