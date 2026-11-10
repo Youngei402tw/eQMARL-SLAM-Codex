@@ -561,10 +561,12 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/28-qip-confirmatory.md",
-      "status": "in_progress",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "93038f28f791f1d6099d89a6eedf17e8dbb036c1",
-      "branch_created_from_commit": "93038f28f791f1d6099d89a6eedf17e8dbb036c1"
+      "branch_created_from_commit": "93038f28f791f1d6099d89a6eedf17e8dbb036c1",
+      "source_commit": "3d3ea45ab610a4752a61ac41456aeb5ae009998e",
+      "results_commit": "2757563d044a3468795faf129bc13cc6650dfacd"
     },
     {
       "id": "29",
