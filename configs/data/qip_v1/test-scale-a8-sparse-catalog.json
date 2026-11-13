@@ -1,0 +1,1300 @@
+{
+  "agents": 8,
+  "bell_pair_budget": 10,
+  "catalog_id": "qip-test-scale-a8-sparse",
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "generator_seed": 25205,
+  "horizon": 24,
+  "maximum_simultaneous_pairs": 2,
+  "schema_version": "qip-public-catalog-v1",
+  "split": "test",
+  "states": [
+    {
+      "requests": [
+        {
+          "agents": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "type_id": "qip-test-type-002",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            0,
+            4
+          ],
+          "edge_index": 1,
+          "type_id": "qip-test-type-007",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            1,
+            2
+          ],
+          "edge_index": 3,
+          "type_id": "qip-test-type-005",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            1,
+            5
+          ],
+          "edge_index": 4,
+          "type_id": "qip-test-type-011",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            3,
+            4
+          ],
+          "edge_index": 7,
+          "type_id": "qip-test-type-007",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-015",
+          "urgency": 1
+        }
+      ],
+      "state_id": 0
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "type_id": "qip-test-type-010",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            0,
+            4
+          ],
+          "edge_index": 1,
+          "type_id": "qip-test-type-002",
+          "urgency": 5
+        },
+        {
+          "agents": [
+            0,
+            7
+          ],
+          "edge_index": 2,
+          "type_id": "qip-test-type-013",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            1,
+            2
+          ],
+          "edge_index": 3,
+          "type_id": "qip-test-type-000",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            1,
+            5
+          ],
+          "edge_index": 4,
+          "type_id": "qip-test-type-000",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            2,
+            3
+          ],
+          "edge_index": 5,
+          "type_id": "qip-test-type-012",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            2,
+            4
+          ],
+          "edge_index": 6,
+          "type_id": "qip-test-type-000",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            3,
+            4
+          ],
+          "edge_index": 7,
+          "type_id": "qip-test-type-002",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-011",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            5,
+            6
+          ],
+          "edge_index": 9,
+          "type_id": "qip-test-type-007",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            6,
+            7
+          ],
+          "edge_index": 10,
+          "type_id": "qip-test-type-007",
+          "urgency": 2
+        }
+      ],
+      "state_id": 1
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "type_id": "qip-test-type-005",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            0,
+            4
+          ],
+          "edge_index": 1,
+          "type_id": "qip-test-type-000",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            0,
+            7
+          ],
+          "edge_index": 2,
+          "type_id": "qip-test-type-003",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            2,
+            3
+          ],
+          "edge_index": 5,
+          "type_id": "qip-test-type-014",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            2,
+            4
+          ],
+          "edge_index": 6,
+          "type_id": "qip-test-type-014",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            3,
+            4
+          ],
+          "edge_index": 7,
+          "type_id": "qip-test-type-011",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-013",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            5,
+            6
+          ],
+          "edge_index": 9,
+          "type_id": "qip-test-type-005",
+          "urgency": 2
+        }
+      ],
+      "state_id": 2
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            2,
+            4
+          ],
+          "edge_index": 6,
+          "type_id": "qip-test-type-015",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-012",
+          "urgency": 3
+        }
+      ],
+      "state_id": 3
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            0,
+            4
+          ],
+          "edge_index": 1,
+          "type_id": "qip-test-type-004",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            2,
+            3
+          ],
+          "edge_index": 5,
+          "type_id": "qip-test-type-003",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-009",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            6,
+            7
+          ],
+          "edge_index": 10,
+          "type_id": "qip-test-type-010",
+          "urgency": 2
+        }
+      ],
+      "state_id": 4
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "type_id": "qip-test-type-002",
+          "urgency": 5
+        },
+        {
+          "agents": [
+            0,
+            4
+          ],
+          "edge_index": 1,
+          "type_id": "qip-test-type-007",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            0,
+            7
+          ],
+          "edge_index": 2,
+          "type_id": "qip-test-type-007",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            1,
+            5
+          ],
+          "edge_index": 4,
+          "type_id": "qip-test-type-004",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            2,
+            3
+          ],
+          "edge_index": 5,
+          "type_id": "qip-test-type-003",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            3,
+            4
+          ],
+          "edge_index": 7,
+          "type_id": "qip-test-type-001",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-009",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            5,
+            6
+          ],
+          "edge_index": 9,
+          "type_id": "qip-test-type-006",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            6,
+            7
+          ],
+          "edge_index": 10,
+          "type_id": "qip-test-type-013",
+          "urgency": 3
+        }
+      ],
+      "state_id": 5
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "type_id": "qip-test-type-001",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            0,
+            4
+          ],
+          "edge_index": 1,
+          "type_id": "qip-test-type-001",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            0,
+            7
+          ],
+          "edge_index": 2,
+          "type_id": "qip-test-type-012",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            1,
+            2
+          ],
+          "edge_index": 3,
+          "type_id": "qip-test-type-002",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            1,
+            5
+          ],
+          "edge_index": 4,
+          "type_id": "qip-test-type-012",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            2,
+            3
+          ],
+          "edge_index": 5,
+          "type_id": "qip-test-type-012",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            2,
+            4
+          ],
+          "edge_index": 6,
+          "type_id": "qip-test-type-004",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            3,
+            4
+          ],
+          "edge_index": 7,
+          "type_id": "qip-test-type-007",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-014",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            5,
+            6
+          ],
+          "edge_index": 9,
+          "type_id": "qip-test-type-001",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            6,
+            7
+          ],
+          "edge_index": 10,
+          "type_id": "qip-test-type-001",
+          "urgency": 1
+        }
+      ],
+      "state_id": 6
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "type_id": "qip-test-type-009",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            0,
+            4
+          ],
+          "edge_index": 1,
+          "type_id": "qip-test-type-014",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            0,
+            7
+          ],
+          "edge_index": 2,
+          "type_id": "qip-test-type-008",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            1,
+            2
+          ],
+          "edge_index": 3,
+          "type_id": "qip-test-type-013",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            1,
+            5
+          ],
+          "edge_index": 4,
+          "type_id": "qip-test-type-002",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            2,
+            3
+          ],
+          "edge_index": 5,
+          "type_id": "qip-test-type-011",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            2,
+            4
+          ],
+          "edge_index": 6,
+          "type_id": "qip-test-type-007",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            3,
+            4
+          ],
+          "edge_index": 7,
+          "type_id": "qip-test-type-000",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-008",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            6,
+            7
+          ],
+          "edge_index": 10,
+          "type_id": "qip-test-type-009",
+          "urgency": 2
+        }
+      ],
+      "state_id": 7
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            1,
+            2
+          ],
+          "edge_index": 3,
+          "type_id": "qip-test-type-000",
+          "urgency": 5
+        },
+        {
+          "agents": [
+            2,
+            3
+          ],
+          "edge_index": 5,
+          "type_id": "qip-test-type-000",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            6,
+            7
+          ],
+          "edge_index": 10,
+          "type_id": "qip-test-type-009",
+          "urgency": 5
+        }
+      ],
+      "state_id": 8
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            1,
+            5
+          ],
+          "edge_index": 4,
+          "type_id": "qip-test-type-004",
+          "urgency": 5
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-006",
+          "urgency": 5
+        }
+      ],
+      "state_id": 9
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "type_id": "qip-test-type-000",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            0,
+            4
+          ],
+          "edge_index": 1,
+          "type_id": "qip-test-type-012",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            0,
+            7
+          ],
+          "edge_index": 2,
+          "type_id": "qip-test-type-011",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            1,
+            2
+          ],
+          "edge_index": 3,
+          "type_id": "qip-test-type-013",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            2,
+            3
+          ],
+          "edge_index": 5,
+          "type_id": "qip-test-type-000",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            2,
+            4
+          ],
+          "edge_index": 6,
+          "type_id": "qip-test-type-000",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            3,
+            4
+          ],
+          "edge_index": 7,
+          "type_id": "qip-test-type-015",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-006",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            5,
+            6
+          ],
+          "edge_index": 9,
+          "type_id": "qip-test-type-006",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            6,
+            7
+          ],
+          "edge_index": 10,
+          "type_id": "qip-test-type-015",
+          "urgency": 5
+        }
+      ],
+      "state_id": 10
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            0,
+            4
+          ],
+          "edge_index": 1,
+          "type_id": "qip-test-type-013",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            0,
+            7
+          ],
+          "edge_index": 2,
+          "type_id": "qip-test-type-007",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            1,
+            2
+          ],
+          "edge_index": 3,
+          "type_id": "qip-test-type-007",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            1,
+            5
+          ],
+          "edge_index": 4,
+          "type_id": "qip-test-type-010",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            2,
+            3
+          ],
+          "edge_index": 5,
+          "type_id": "qip-test-type-001",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            2,
+            4
+          ],
+          "edge_index": 6,
+          "type_id": "qip-test-type-004",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            3,
+            4
+          ],
+          "edge_index": 7,
+          "type_id": "qip-test-type-007",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-012",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            5,
+            6
+          ],
+          "edge_index": 9,
+          "type_id": "qip-test-type-002",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            6,
+            7
+          ],
+          "edge_index": 10,
+          "type_id": "qip-test-type-003",
+          "urgency": 5
+        }
+      ],
+      "state_id": 11
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "type_id": "qip-test-type-014",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            0,
+            7
+          ],
+          "edge_index": 2,
+          "type_id": "qip-test-type-006",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            1,
+            2
+          ],
+          "edge_index": 3,
+          "type_id": "qip-test-type-000",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            1,
+            5
+          ],
+          "edge_index": 4,
+          "type_id": "qip-test-type-012",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            2,
+            3
+          ],
+          "edge_index": 5,
+          "type_id": "qip-test-type-001",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            2,
+            4
+          ],
+          "edge_index": 6,
+          "type_id": "qip-test-type-013",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            3,
+            4
+          ],
+          "edge_index": 7,
+          "type_id": "qip-test-type-007",
+          "urgency": 3
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-009",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            5,
+            6
+          ],
+          "edge_index": 9,
+          "type_id": "qip-test-type-008",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            6,
+            7
+          ],
+          "edge_index": 10,
+          "type_id": "qip-test-type-004",
+          "urgency": 2
+        }
+      ],
+      "state_id": 12
+    },
+    {
+      "requests": [
+        {
+          "agents": [
+            0,
+            1
+          ],
+          "edge_index": 0,
+          "type_id": "qip-test-type-002",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            0,
+            7
+          ],
+          "edge_index": 2,
+          "type_id": "qip-test-type-005",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            1,
+            2
+          ],
+          "edge_index": 3,
+          "type_id": "qip-test-type-000",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            1,
+            5
+          ],
+          "edge_index": 4,
+          "type_id": "qip-test-type-003",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            2,
+            3
+          ],
+          "edge_index": 5,
+          "type_id": "qip-test-type-006",
+          "urgency": 5
+        },
+        {
+          "agents": [
+            2,
+            4
+          ],
+          "edge_index": 6,
+          "type_id": "qip-test-type-007",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            3,
+            4
+          ],
+          "edge_index": 7,
+          "type_id": "qip-test-type-011",
+          "urgency": 2
+        },
+        {
+          "agents": [
+            4,
+            5
+          ],
+          "edge_index": 8,
+          "type_id": "qip-test-type-012",
+          "urgency": 1
+        },
+        {
+          "agents": [
+            5,
+            6
+          ],
+          "edge_index": 9,
+          "type_id": "qip-test-type-013",
+          "urgency": 1
+        }
+      ],
+      "state_id": 13
+    }
+  ],
+  "topology": "sparse_random",
+  "transition": [
+    [
+      0.4379981621720279,
+      0.16078351214696704,
+      0.07871005093623581,
+      0.05891951829293314,
+      0.00730803566802854,
+      0.008767076813300521,
+      0.02117840570251949,
+      0.05989118085894381,
+      0.01206535186101947,
+      0.01821628561966148,
+      0.014075559062351037,
+      0.04846964571822656,
+      0.01552146190896908,
+      0.05809575323881605
+    ],
+    [
+      0.004074139408010143,
+      0.3586772492102784,
+      0.1562432910466771,
+      0.05990201718570189,
+      0.0381637467285287,
+      0.13112016605239216,
+      0.04069577362757663,
+      0.00481552775498897,
+      0.0113713493321462,
+      0.05876494286562317,
+      0.022094748727701098,
+      0.03634635927647107,
+      0.036874162724468675,
+      0.04085652605943577
+    ],
+    [
+      0.03547395363552819,
+      0.0014791806181838505,
+      0.2938153410786806,
+      0.20187763545362103,
+      0.020154730680033046,
+      0.14428658956671955,
+      0.14390128886655373,
+      0.0016182616934325806,
+      0.01332505084874101,
+      0.016366258786045744,
+      0.025789105456326542,
+      0.053087678244067606,
+      0.010158574211828718,
+      0.03866635086023752
+    ],
+    [
+      0.015490592439405253,
+      0.11474601843359897,
+      0.01826708634031856,
+      0.39261976353721834,
+      0.12768120310478726,
+      0.02238449488708808,
+      0.03542896844947255,
+      0.0033039572053597623,
+      0.002549794228200655,
+      0.023726114297371936,
+      0.0017309062610200488,
+      0.09051461462336619,
+      0.022624848744351,
+      0.1289316374484415
+    ],
+    [
+      0.0023495171797064626,
+      0.027126722844691593,
+      0.00831415135817014,
+      0.025267818526762246,
+      0.39885617107581883,
+      0.09927824643135381,
+      0.08530940615377329,
+      0.10107536218887118,
+      0.005119347648299637,
+      0.023566130876389754,
+      0.02095144589303548,
+      0.010029304597940904,
+      0.08971997890520336,
+      0.10303639631998335
+    ],
+    [
+      0.05314431113031073,
+      0.0012791400229448008,
+      0.06326200139625199,
+      0.012107562156624346,
+      0.04535670643456563,
+      0.29124212977951724,
+      0.12964959847862267,
+      0.2141161270972169,
+      0.01010374751070251,
+      0.09795384995480343,
+      0.006257539259681201,
+      0.0028328750429673223,
+      0.0702937612949882,
+      0.002400650440803126
+    ],
+    [
+      0.024057126613496245,
+      0.07189237277976897,
+      0.04287699858050232,
+      0.027454729319651833,
+      0.033025962987113924,
+      0.06513189076240859,
+      0.38922300073297017,
+      0.1676110893533614,
+      0.03916638156790865,
+      0.02925427205615399,
+      0.00661182800879754,
+      0.08188084761033894,
+      0.008021689626603382,
+      0.01379181000092395
+    ],
+    [
+      0.01894340276101502,
+      0.06908469433499792,
+      0.06065955042704952,
+      0.006623030300079758,
+      0.041732522298760226,
+      0.011407295692833757,
+      0.09460770272041032,
+      0.4542555533002617,
+      0.13800293696783428,
+      0.04107169635277532,
+      0.02152382232155892,
+      0.010729874965532618,
+      0.0004988012439829872,
+      0.0308591163129078
+    ],
+    [
+      0.01851733012119291,
+      0.09248755359614731,
+      0.006991419443826694,
+      0.08265564252643595,
+      0.0172860938914281,
+      0.014165608889485195,
+      0.012845377944495188,
+      0.03313759886459478,
+      0.3060503795686322,
+      0.16736415570617139,
+      0.011071002343965384,
+      0.061273184100190836,
+      0.0491712972460473,
+      0.12698335575738692
+    ],
+    [
+      0.02552720349394226,
+      0.044170549580594014,
+      0.00866967523593871,
+      0.023484299688207994,
+      0.0033450421298111726,
+      0.12677934725982368,
+      0.014131087846392625,
+      0.04077707196237045,
+      0.07791767371204622,
+      0.35127953320759436,
+      0.13223036089592444,
+      0.017459789541156796,
+      0.06105120321950383,
+      0.07317716222669328
+    ],
+    [
+      0.10375547447352243,
+      0.015216351862946256,
+      0.04885043830986683,
+      0.037152114524645286,
+      0.12554586926280267,
+      0.009911165987707181,
+      0.03544904217924711,
+      0.006077091541120572,
+      0.024348415170604043,
+      0.025657010862004344,
+      0.4032533378943652,
+      0.15133382938035586,
+      0.001246411751409679,
+      0.012203446799402369
+    ],
+    [
+      0.1295827044508477,
+      0.0064532674819618155,
+      0.04564848002006032,
+      0.09991760886540997,
+      0.0033580341671781413,
+      0.03181489193495571,
+      0.02931473006258266,
+      0.02116144368358797,
+      0.027690065970097058,
+      0.06109017230462807,
+      0.1580346619209965,
+      0.25893152865008323,
+      0.10745406081447734,
+      0.019548349673133562
+    ],
+    [
+      0.023825980537513853,
+      0.006087309190882646,
+      0.15403882417552836,
+      0.03542399295316726,
+      0.0237381146085288,
+      0.09758703738102684,
+      0.060444573628679665,
+      0.002946787433421159,
+      0.02590496599568226,
+      0.033693111268572704,
+      0.05270222882954123,
+      0.027889196502666972,
+      0.3314576773903119,
+      0.12426020010447643
+    ],
+    [
+      0.16562341495072275,
+      0.0755108344407748,
+      0.0031758433297644647,
+      0.01895314385377468,
+      0.002475704263353507,
+      0.06125059410618785,
+      0.025112940217567277,
+      0.0009327476476957329,
+      0.10968155249571344,
+      0.050648337899669826,
+      0.06560585714667451,
+      0.09526098936947125,
+      0.019183308056954725,
+      0.30658473222167515
+    ]
+  ]
+}

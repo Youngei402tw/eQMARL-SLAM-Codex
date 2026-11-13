@@ -1,0 +1,5 @@
+method,selected_config,mean_validation_surplus
+dqn,h64-lr1e3,0.32348489733878527
+double_dqn,h64-lr1e3,0.3208604478122046
+ppo,h64-lr1e3,0.3247393485888218
+recurrent_ppo,h64-lr1e3,0.30471936005478106

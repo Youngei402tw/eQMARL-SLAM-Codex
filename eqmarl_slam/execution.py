@@ -206,6 +206,18 @@ def execute(config_path, source_receipt):
         elif config["experiment"] == "budgeted-entanglement-release-audit":
             from .diagnostics24 import run_diagnostics
             diagnostics = run_diagnostics(config, output, emit, progress=progress)
+        elif config["experiment"] == "qip-learned-baselines":
+            from .diagnostics26 import run_diagnostics
+            diagnostics = run_diagnostics(config, output, emit, progress=progress)
+        elif config["experiment"] == "qip-robustness-scaling":
+            from .diagnostics27 import run_diagnostics
+            diagnostics = run_diagnostics(config, output, emit, progress=progress)
+        elif config["experiment"] == "qip-confirmatory":
+            from .diagnostics28 import run_diagnostics
+            diagnostics = run_diagnostics(config, output, emit, progress=progress)
+        elif config["experiment"] == "qip-release-audit":
+            from .diagnostics29 import run_diagnostics
+            diagnostics = run_diagnostics(config, output, emit, progress=progress)
         elif config["experiment"] == "legacy-reference":
             command = [config["interpreter"], str(ROOT / "eqmarl_slam/reference_probe.py"),
                        "--fixtures", str(ROOT / config["fixtures"]),

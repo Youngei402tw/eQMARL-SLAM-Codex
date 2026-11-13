@@ -1,0 +1,91 @@
+{
+  "allocator_training_decisions": 689952,
+  "learned_evaluation_decisions_primary": 888000,
+  "learned_evaluation_decisions_secondary": 355200,
+  "baseline_policy_decisions": 148000,
+  "total_allocator_decisions": 2081152,
+  "allocator_optimizer_updates": 351756,
+  "certification_optimizer_updates": 204800,
+  "certification_circuit_evaluations": 1843200,
+  "shots": 0,
+  "wall_seconds": 8323.975204911,
+  "cpu_core_hours": 2.312034083611111,
+  "gpu_device_hours": 0,
+  "training_wall_seconds_by_method": {
+    "dqn": 5349.775513789,
+    "ppo": 2103.4706489320015
+  },
+  "parameters_by_method": {
+    "dqn": 9153,
+    "ppo": 18306
+  },
+  "caps": {
+    "wall_seconds": 14400,
+    "decisions": 2500000,
+    "max_cpu_threads": 4
+  },
+  "recorded_job_threads": 1,
+  "reported": {
+    "primitive_steps": 2081152,
+    "decisions": 2081152,
+    "updates": 556556,
+    "wall_seconds": 8323.975204911,
+    "cpu_core_hours": 2.312034083611111,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 1843200,
+    "shots": 0
+  },
+  "notes": [
+    "Decisions exclude the online-reference and future-clairvoyant dynamic programs and the message-oracle arithmetic.",
+    "Circuit evaluations are analytic float64 Bell-correlator evaluations during request certification (9 per optimizer update); no shots were sampled and no hardware was used.",
+    "The reported 'updates' counter sums allocator and certification optimizer updates; this audit reports them separately.",
+    "CPU core-hours are process user+system CPU time."
+  ],
+  "qip_program_runs": {
+    "26-qip-learned-baselines_attempt-01": {
+      "decisions": 0,
+      "updates": 0,
+      "wall_seconds": 5953.967831076,
+      "cpu_core_hours": 1.6537027683333334,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 0,
+      "shots": 0
+    },
+    "26-qip-learned-baselines-recovery_attempt-02": {
+      "decisions": 0,
+      "updates": 0,
+      "wall_seconds": 1.643720658999996,
+      "cpu_core_hours": 0.00038645277777777775,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 0,
+      "shots": 0
+    },
+    "27-qip-robustness-scaling_attempt-01": {
+      "decisions": 1279760,
+      "updates": 126534,
+      "wall_seconds": 2979.0037643650003,
+      "cpu_core_hours": 0.8274107519444445,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 0,
+      "shots": 0
+    },
+    "28-qip-confirmatory_attempt-01": {
+      "decisions": 2081152,
+      "updates": 556556,
+      "wall_seconds": 8323.975204911,
+      "cpu_core_hours": 2.312034083611111,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 1843200,
+      "shots": 0
+    }
+  },
+  "qip_program_totals": {
+    "decisions": 3360912.0,
+    "updates": 683090.0,
+    "wall_seconds": 17258.590521011,
+    "cpu_core_hours": 4.793534056666667,
+    "gpu_device_hours": 0.0,
+    "circuit_evaluations": 1843200.0,
+    "shots": 0.0
+  }
+}

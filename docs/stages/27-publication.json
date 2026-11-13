@@ -1,0 +1,15 @@
+{
+  "stage": "27",
+  "branch": "stage/27-qip-robustness-scaling",
+  "repository": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+  "source_commit": "29f6baebee699b73ffb51b2156bfdbc693543ae0",
+  "results_commit": "60ad022b30be04926443a04b9998883c499ffe97",
+  "remote_ref": "refs/heads/stage/27-qip-robustness-scaling",
+  "remote_sha_verified": "60ad022b30be04926443a04b9998883c499ffe97",
+  "bundle": "experiments/27/27-qip-robustness-scaling_attempt-01",
+  "bundle_valid": true,
+  "metrics_rows": 428,
+  "metrics_sha256": "b78f3f631f0ebf89815dcb71203146b1e123be2588ca1b93eba04b38ff3c80e1",
+  "freeze_sha256": "ff34ffbb5a30053555de83494c937980ad4f91c5e4e87f2401833cf173df60ef",
+  "verified": true
+}

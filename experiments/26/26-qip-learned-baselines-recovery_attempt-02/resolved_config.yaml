@@ -1,0 +1,74 @@
+{
+  "run_id": "26-qip-learned-baselines-recovery_attempt-02",
+  "stage": "26",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "profile": "diagnostic",
+  "experiment": "qip-learned-baselines",
+  "hypothesis": "The complete failed-run raw rows recover all registered method and ablation outcomes without repeating training or accessing test data.",
+  "method": "hash-locked-analysis-only-recovery",
+  "dependency_completion_commit": "f67f866828efd6e84ba00fa6998f910b7e7ed4a1",
+  "wall_seconds": 600,
+  "max_primitive_steps": 100,
+  "max_cpu_threads": 1,
+  "recovery_from": "experiments/26/26-qip-learned-baselines_attempt-01",
+  "failed_source_commit": "e1f5af6b124e098cc801649a425be896d2603d0a",
+  "failed_metrics_sha256": "793f34959848482c8300aeb58cf13a01edff177b408325224944accd05ec02d6",
+  "methods": [
+    "dqn",
+    "double_dqn",
+    "ppo",
+    "recurrent_ppo"
+  ],
+  "proposed_method": "double_dqn",
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    },
+    "test": {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+    }
+  },
+  "model": {
+    "actor": "none; analysis-only recovery",
+    "encoder": "none",
+    "critic": "none",
+    "parameter_counts": {
+      "recovered_checkpoints": 32
+    },
+    "optimizer": "none"
+  },
+  "quantum": {
+    "device": "none; analysis-only recovery",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "none",
+    "dtype": "recorded",
+    "entanglement": "recorded prior outcomes",
+    "observables": [
+      "recorded parity-success values"
+    ],
+    "noise": null,
+    "resource_accounting": "recovery wall time plus reconstructed prior resource ledger"
+  },
+  "action_modes": "no policy execution",
+  "checkpoint_selection": "recover registered final checkpoints without reselection",
+  "analysis_version": "qip-learned-baselines-recovery-v1",
+  "interpretation": "Analysis-only recovery of a complete failed bundle; no repeated training and no test access."
+}

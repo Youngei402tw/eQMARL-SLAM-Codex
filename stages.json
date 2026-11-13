@@ -451,10 +451,10 @@
       "status": "passed",
       "dependency_completion_commit": "4a4a5e027d44b0573287925106368c5a6a4883e7",
       "branch_created_from_commit": "4a4a5e027d44b0573287925106368c5a6a4883e7",
-      "source_commit": "89c56587c962a47b8ec78db910a00a604e43efa5"
-      ,"results_commit": "4cdae6894767d01dd4c5071677226d23f678aa66",
-      "publication_receipt": "docs/stages/22-publication.json"
-      ,"completion_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba"
+      "source_commit": "89c56587c962a47b8ec78db910a00a604e43efa5",
+      "results_commit": "4cdae6894767d01dd4c5071677226d23f678aa66",
+      "publication_receipt": "docs/stages/22-publication.json",
+      "completion_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba"
     },
     {
       "id": "23",
@@ -466,15 +466,14 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/23-budgeted-entanglement-confirmatory.md",
-      "status": "planned",
-      "branch_created": true,
       "status": "completed_null_result",
+      "branch_created": true,
       "dependency_completion_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
       "branch_created_from_commit": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
-      "source_commit": "9bb4207edb19509fe842f6e1028a912100402bdb"
-      ,"results_commit": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c",
-      "publication_receipt": "docs/stages/23-publication.json"
-      ,"completion_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1"
+      "source_commit": "9bb4207edb19509fe842f6e1028a912100402bdb",
+      "results_commit": "f2a1ceecce7d0fa13ddeb66b29708f0419466a6c",
+      "publication_receipt": "docs/stages/23-publication.json",
+      "completion_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1"
     },
     {
       "id": "24",
@@ -486,15 +485,108 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/24-budgeted-entanglement-release.md",
-      "status": "planned",
-      "branch_created": true,
       "status": "passed",
+      "branch_created": true,
       "dependency_completion_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
       "branch_created_from_commit": "e6fefb7f1b4b78b87d4c090e07e99a3191a84ad1",
       "source_commit": "a33578a66830e6289e510187a3a06f6ed28629e6",
       "results_commit": "ae49896ae8e345c41cf0f2b0c71f1eb5feb5a50f",
       "publication_receipt": "docs/stages/24-publication.json",
       "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5"
+    },
+    {
+      "id": "25",
+      "name": "qip-extension-plan",
+      "title": "Prospective robust entanglement-routing study for QIP",
+      "branch": "stage/25-qip-extension-plan",
+      "depends_on": [
+        "24"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/25-qip-extension-plan.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
+      "branch_created_from_commit": "894ca11c1a90b12397e201835e655b7962835c04",
+      "source_commit": "dcf958dc69813b1bc4fa64c06510ba71ca077286",
+      "results_commit": "dcf958dc69813b1bc4fa64c06510ba71ca077286",
+      "publication_receipt": "docs/stages/25-publication.json",
+      "completion_commit": "f67f866828efd6e84ba00fa6998f910b7e7ed4a1"
+    },
+    {
+      "id": "26",
+      "name": "qip-learned-baselines",
+      "title": "Learned allocator benchmarks and mechanism ablations",
+      "branch": "stage/26-qip-learned-baselines",
+      "depends_on": [
+        "25"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/26-qip-learned-baselines.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "f67f866828efd6e84ba00fa6998f910b7e7ed4a1",
+      "branch_created_from_commit": "f67f866828efd6e84ba00fa6998f910b7e7ed4a1",
+      "source_commit": "e1f5af6b124e098cc801649a425be896d2603d0a",
+      "results_commit": "0da2e6046671a03d2ff6de06c1fcbf7b1bbe8fe1",
+      "publication_receipt": "docs/stages/26-publication.json",
+      "completion_commit": "65b6d5d851c1af77292e0f4ef4be5679e719c7a7"
+    },
+    {
+      "id": "27",
+      "name": "qip-robustness-scaling",
+      "title": "Robustness, scaling, and confirmatory freeze",
+      "branch": "stage/27-qip-robustness-scaling",
+      "depends_on": [
+        "26"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/27-qip-robustness-scaling.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "65b6d5d851c1af77292e0f4ef4be5679e719c7a7",
+      "branch_created_from_commit": "65b6d5d851c1af77292e0f4ef4be5679e719c7a7",
+      "source_commit": "29f6baebee699b73ffb51b2156bfdbc693543ae0",
+      "results_commit": "60ad022b30be04926443a04b9998883c499ffe97",
+      "publication_receipt": "docs/stages/27-publication.json",
+      "completion_commit": "93038f28f791f1d6099d89a6eedf17e8dbb036c1"
+    },
+    {
+      "id": "28",
+      "name": "qip-confirmatory",
+      "title": "Locked robust entanglement-routing evaluation",
+      "branch": "stage/28-qip-confirmatory",
+      "depends_on": [
+        "27"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/28-qip-confirmatory.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "93038f28f791f1d6099d89a6eedf17e8dbb036c1",
+      "branch_created_from_commit": "93038f28f791f1d6099d89a6eedf17e8dbb036c1",
+      "source_commit": "3d3ea45ab610a4752a61ac41456aeb5ae009998e",
+      "results_commit": "915ccba8fe9d3be524e4d2e8346302fd52aff7cf",
+      "publication_receipt": "docs/stages/28-publication.json",
+      "completion_commit": "66d13965bfed17a18d2b2c8310baa755c0aeb38a"
+    },
+    {
+      "id": "29",
+      "name": "qip-release",
+      "title": "Quantum Information Processing paper and release audit",
+      "branch": "stage/29-qip-release",
+      "depends_on": [
+        "28"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/29-qip-release.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "66d13965bfed17a18d2b2c8310baa755c0aeb38a",
+      "branch_created_from_commit": "66d13965bfed17a18d2b2c8310baa755c0aeb38a",
+      "source_commit": "865932a368e4a280165c583d59b2550c44769553",
+      "results_commit": "709938ef520f91555015a2cf853d159081e1eeff",
+      "publication_receipt": "docs/stages/29-publication.json"
     }
   ],
   "recommended_execution_order": [
@@ -522,6 +614,11 @@
     "21",
     "22",
     "23",
-    "24"
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29"
   ]
 }

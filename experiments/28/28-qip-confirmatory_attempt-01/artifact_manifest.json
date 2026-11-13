@@ -1,0 +1,242 @@
+{
+  "artifacts": [
+    {
+      "path": "checkpoints/dqn-seed-28000.pt",
+      "size_bytes": 40751,
+      "sha256": "48373b7203c30961d12119ff04b8f1e9eace1b55914a50a5164269e2ff4f39b8",
+      "purpose": "dqn-seed-28000.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/dqn-seed-28001.pt",
+      "size_bytes": 40751,
+      "sha256": "cb68911a2f9906bfc8e74ffdedc17e624a1f00815351abbeecdbcab5e10a0024",
+      "purpose": "dqn-seed-28001.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/dqn-seed-28002.pt",
+      "size_bytes": 40751,
+      "sha256": "90f55123d31b0724d16586f244bb795e23f04c62a9863d3e618970237329dc70",
+      "purpose": "dqn-seed-28002.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/dqn-seed-28003.pt",
+      "size_bytes": 40751,
+      "sha256": "574faa62c403ae0c30d9219426f8005bdc5254ab88bb44211f48d4c88736e8cb",
+      "purpose": "dqn-seed-28003.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/dqn-seed-28004.pt",
+      "size_bytes": 40751,
+      "sha256": "533869fae4f97e09184f384a135bcad9d2dd8e381b65aa313ba7981469d18731",
+      "purpose": "dqn-seed-28004.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/dqn-seed-28005.pt",
+      "size_bytes": 40751,
+      "sha256": "ca9a2a546b8fecdf1b4e4aced1c8779489c4366ae7381ad397cac7e6d352b592",
+      "purpose": "dqn-seed-28005.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/dqn-seed-28006.pt",
+      "size_bytes": 40751,
+      "sha256": "f25b03413633822570a1a7bbf0d8d11cb528f4019512857fbb3de300d6b88a4e",
+      "purpose": "dqn-seed-28006.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/dqn-seed-28007.pt",
+      "size_bytes": 40751,
+      "sha256": "70245165f6d2d2e912297ed0147369e426715267186373bcfd800c2aada03499",
+      "purpose": "dqn-seed-28007.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/dqn-seed-28008.pt",
+      "size_bytes": 40751,
+      "sha256": "bbf4842be2cebf0d0397d54018b8c9f029677e02e01a66c5c529a9fc3c71c981",
+      "purpose": "dqn-seed-28008.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/dqn-seed-28009.pt",
+      "size_bytes": 40751,
+      "sha256": "0a93e66a9dd45e9a69cce137f46bd4f99d3cb711265d1b6196548eb4e0995941",
+      "purpose": "dqn-seed-28009.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/dqn-seed-28010.pt",
+      "size_bytes": 40751,
+      "sha256": "e0db9823f91711356b047364a66e682586fb986f6b858d02aa15b90a8c811653",
+      "purpose": "dqn-seed-28010.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/dqn-seed-28011.pt",
+      "size_bytes": 40751,
+      "sha256": "0da1df37b0764e36a97992ca7fe71ce02d2d5c9b75ad7b3b53fe54fdda7130b8",
+      "purpose": "dqn-seed-28011.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/ppo-seed-28000.pt",
+      "size_bytes": 80077,
+      "sha256": "ed005886e424b0f0ebbdf3a2ed8db0c08649b488fa7b984e0032302512987cc2",
+      "purpose": "ppo-seed-28000.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/ppo-seed-28001.pt",
+      "size_bytes": 80077,
+      "sha256": "b687515aeae7a308d434d088c86f84b7c91cc0f43b65cdb10aadc4c80badf211",
+      "purpose": "ppo-seed-28001.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/ppo-seed-28002.pt",
+      "size_bytes": 80077,
+      "sha256": "569441d9e699034d85b99be1d8a6483b5ae2b675e5ad3aace044897c7c0a5a2e",
+      "purpose": "ppo-seed-28002.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/ppo-seed-28003.pt",
+      "size_bytes": 80077,
+      "sha256": "d89cd59d032e2cb7bc06af2de0960167cd4572275f13dcaeaaffda138801cd52",
+      "purpose": "ppo-seed-28003.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/ppo-seed-28004.pt",
+      "size_bytes": 80077,
+      "sha256": "367546668b93538d930a25372b71de726a9ae767c23c85ab0361a5d937aba5fb",
+      "purpose": "ppo-seed-28004.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/ppo-seed-28005.pt",
+      "size_bytes": 80077,
+      "sha256": "fc4e2a7fc93e95b9b2c1e9216aaf78a6063a0f27642c6be72747257af7586873",
+      "purpose": "ppo-seed-28005.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/ppo-seed-28006.pt",
+      "size_bytes": 80077,
+      "sha256": "281e4e639d2e40e230a981926e7ce5ad99c528e909be29893b91e2e48ebf6378",
+      "purpose": "ppo-seed-28006.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/ppo-seed-28007.pt",
+      "size_bytes": 80077,
+      "sha256": "a6ee95ce32fd8c42691c4ede507c2e9431605a72f5422c5873b908396680f8d8",
+      "purpose": "ppo-seed-28007.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/ppo-seed-28008.pt",
+      "size_bytes": 80077,
+      "sha256": "4a786dd2d8185fba27f6e529b68edf98ad24d701127c6d3585625fbd3f5d9209",
+      "purpose": "ppo-seed-28008.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/ppo-seed-28009.pt",
+      "size_bytes": 80077,
+      "sha256": "8a079cba3bcf2e2e82457cf879b98148cfceb6a6f579308ceaf93571ff8679fb",
+      "purpose": "ppo-seed-28009.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/ppo-seed-28010.pt",
+      "size_bytes": 80077,
+      "sha256": "268c09c4f0b490609b02fd319d7189b0dbff59a66770f6f5b165466734798e5c",
+      "purpose": "ppo-seed-28010.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "checkpoints/ppo-seed-28011.pt",
+      "size_bytes": 80077,
+      "sha256": "807667ad0fe718567aba7a666630b6cda865886002742eb4e62ceeec15382dc2",
+      "purpose": "ppo-seed-28011.pt",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "confirmatory_analysis.json",
+      "size_bytes": 2305,
+      "sha256": "e2b4838e52baca942e4890e7a8bfdf02a7ca5948e6b1b0cc19e00a127d246e01",
+      "purpose": "confirmatory_analysis.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "diagnostics.json",
+      "size_bytes": 2893,
+      "sha256": "01b72019f58d3b8bb2212241467cbf0b928aced4d73fbb7d2afcd2fa63ad556b",
+      "purpose": "diagnostics.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "episode_results.jsonl",
+      "size_bytes": 17585160,
+      "sha256": "22ffe5611552ccb77536f04a1e532c5814b533b1e80ac8fa9fd42b59e36abb48",
+      "purpose": "episode_results.jsonl",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "manifest.json",
+      "size_bytes": 5428,
+      "sha256": "f4a199174ac11eadd2e285181573db6d1937dce1cd19af955dea48b942a8f4dd",
+      "purpose": "manifest.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "metrics.jsonl",
+      "size_bytes": 32963,
+      "sha256": "320fa6803d0b89aca2b5ec6711959c91b685e54ec8adc5025fa9ea3c464ab100",
+      "purpose": "metrics.jsonl",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "report.md",
+      "size_bytes": 753,
+      "sha256": "42b288a30e3a483898e2fe1faba0f78c1d920804b0c72c25dde8d9f7991f10cd",
+      "purpose": "report.md",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "resolved_config.yaml",
+      "size_bytes": 3371,
+      "sha256": "03987b1d5b76bff1e92d8f0f8a6d81ca1b314d9c616b9a485725bf1805930e23",
+      "purpose": "resolved_config.yaml",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "source_publication.json",
+      "size_bytes": 209,
+      "sha256": "27b61e088722a428d78e8724c180ac6120ef54c2a5b7487764383650593efd0f",
+      "purpose": "source_publication.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "summary.json",
+      "size_bytes": 3486,
+      "sha256": "727b5d6e24ffd9f7e613a29c6770a3a424e3d616454cecbc709c992129c34c36",
+      "purpose": "summary.json",
+      "retention": "permanent_git_history"
+    },
+    {
+      "path": "test_certificates.json",
+      "size_bytes": 11376,
+      "sha256": "11f9dd085cf73180983095829825f64764bd229a512bf4c62edf46db41a16ea2",
+      "purpose": "test_certificates.json",
+      "retention": "permanent_git_history"
+    }
+  ]
+}

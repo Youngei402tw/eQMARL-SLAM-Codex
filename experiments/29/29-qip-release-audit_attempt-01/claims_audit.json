@@ -1,0 +1,133 @@
+{
+  "supported": [
+    {
+      "claim": "Stage 23: learned allocator beats myopic greedy in the four-agent budgeted benchmark",
+      "evidence": [
+        0.19141234750541908,
+        0.20432305473382828
+      ],
+      "seeds_above_greedy": 16
+    },
+    {
+      "claim": "Stage 28: PPO beats greedy on sealed catalogs (registered primary test 2)",
+      "evidence": [
+        0.26879639576851816,
+        0.2829802224906608
+      ]
+    },
+    {
+      "claim": "Stage 28: PPO and DQN practically equivalent within 5% of online-reference surplus (registered primary test 3)",
+      "evidence": [
+        -0.023957991472028272,
+        -0.0011365287923108774
+      ],
+      "margin": 0.040299961144506236
+    },
+    {
+      "claim": "Stage 26: removing budget, horizon, gain magnitude, or gain location reduces validation surplus",
+      "evidence": {
+        "no_budget": 0.2165499251840326,
+        "no_horizon": 0.14153028363982834,
+        "binary_gain": 0.18814369725179858,
+        "shuffled_gain": 0.16394633637081527
+      }
+    },
+    {
+      "claim": "Stages 27-28: heralded generation loss degrades surplus gradually",
+      "evidence": {
+        "stage27_ppo": {
+          "ideal": 0.32729064467983937,
+          "heralded-0.9": 0.29802757707890126,
+          "heralded-0.75": 0.25256939890173574,
+          "heralded-0.5": 0.1634697396525492
+        },
+        "stage28_ppo": {
+          "ideal_first_100": 0.689174367901869,
+          "heralded-0.75": 0.5134189522219822,
+          "heralded-0.5": 0.32983465406733253
+        }
+      }
+    }
+  ],
+  "null_or_failed": [
+    {
+      "claim": "Stage 23: one-sided 95% lower bound of fraction of online DP surplus exceeds 0.90",
+      "outcome": "failed",
+      "evidence": 0.8768401935694357
+    },
+    {
+      "claim": "Stage 26: registered Double DQN improves over the strongest learned comparator",
+      "outcome": "null",
+      "evidence": -0.0038789007766172334
+    },
+    {
+      "claim": "Stage 27: broad robustness to Werner noise",
+      "outcome": "failed",
+      "evidence": {
+        "dqn": {
+          "visibility-0.9": 0.010122504396519315,
+          "visibility-0.8": 0.0
+        },
+        "double_dqn": {
+          "visibility-0.9": 0.013920508198886334,
+          "visibility-0.8": 0.0
+        },
+        "ppo": {
+          "visibility-0.9": 0.0,
+          "visibility-0.8": 0.0
+        },
+        "recurrent_ppo": {
+          "visibility-0.9": 0.0,
+          "visibility-0.8": 0.0
+        }
+      }
+    },
+    {
+      "claim": "Stage 28: PPO superior to DQN (registered primary test 1)",
+      "outcome": "null",
+      "evidence": [
+        -0.026495434626090913,
+        0.0003764142406331305
+      ]
+    },
+    {
+      "claim": "Stage 28: per-catalog PPO>DQN after Holm adjustment",
+      "outcome": "null on all four catalogs",
+      "evidence": [
+        1.0,
+        0.068359375,
+        1.0,
+        0.095947265625
+      ]
+    },
+    {
+      "claim": "Stage 28: surplus under Werner visibility 0.8 and 0.6",
+      "outcome": "zero (collapse)",
+      "evidence": {
+        "visibility-0.8": 0.0,
+        "visibility-0.6": 0.0
+      }
+    }
+  ],
+  "qualifications": [
+    {
+      "severity": "material",
+      "check": "test_public_dynamics_overlap",
+      "detail": "Sealed test catalogs qip-test-horizon-a4-path, qip-test-id-a4-complete reuse the public Markov dynamics (transition matrix, active-edge pattern, urgencies) of training catalogs; only their request types are fresh. Fully fresh test catalogs: qip-test-topology-a6-ring, qip-test-scale-a8-sparse."
+    },
+    {
+      "severity": "material",
+      "check": "validation_public_dynamics_overlap",
+      "detail": "A validation catalog reuses a development catalog's public dynamics; Stage 26-27 validation was not fully independent for that catalog."
+    }
+  ],
+  "not_claimed": [
+    "new Bell violation",
+    "quantum computational speedup",
+    "hardware evidence",
+    "decentralized allocator",
+    "general quantum advantage beyond the certified XOR request family and tested resource models",
+    "PPO superiority over DQN",
+    "near-oracle (90%) performance"
+  ]
+}

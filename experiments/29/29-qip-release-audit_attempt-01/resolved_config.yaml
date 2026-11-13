@@ -1,0 +1,103 @@
+{
+  "run_id": "29-qip-release-audit_attempt-01",
+  "stage": "29",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "profile": "diagnostic",
+  "experiment": "qip-release-audit",
+  "hypothesis": "Independent reconstruction from raw rows, certificates, checkpoints, and git history reproduces every registered Stage 28 decision, interval, threshold, and resource count, together with the earlier failed and null claims.",
+  "method": "independent-raw-row-certificate-checkpoint-split-lock-and-resource-audit",
+  "dependency_completion_commit": "66d13965bfed17a18d2b2c8310baa755c0aeb38a",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 0,
+  "max_cpu_threads": 2,
+  "confirmatory_bundle": "experiments/28/28-qip-confirmatory_attempt-01",
+  "stage28_config": "configs/stage28/28-qip-confirmatory_attempt-01.yaml",
+  "stage28_source_commit": "3d3ea45ab610a4752a61ac41456aeb5ae009998e",
+  "freeze": {
+    "path": "experiments/27/27-qip-robustness-scaling_attempt-01/stage28-freeze.json",
+    "sha256": "ff34ffbb5a30053555de83494c937980ad4f91c5e4e87f2401833cf173df60ef"
+  },
+  "freeze_commit": "60ad022b30be04926443a04b9998883c499ffe97",
+  "test_lock_commit": "dcf958dc69813b1bc4fa64c06510ba71ca077286",
+  "secondary_sequences_per_catalog": 100,
+  "bundles": [
+    "experiments/23/23-budgeted-entanglement-confirmatory_attempt-01",
+    "experiments/26/26-qip-learned-baselines_attempt-01",
+    "experiments/26/26-qip-learned-baselines-recovery_attempt-02",
+    "experiments/27/27-qip-robustness-scaling_attempt-01",
+    "experiments/28/28-qip-confirmatory_attempt-01"
+  ],
+  "pre_test_bundles": [
+    "experiments/26/26-qip-learned-baselines_attempt-01",
+    "experiments/26/26-qip-learned-baselines-recovery_attempt-02",
+    "experiments/27/27-qip-robustness-scaling_attempt-01"
+  ],
+  "program_bundles": [
+    "experiments/26/26-qip-learned-baselines_attempt-01",
+    "experiments/26/26-qip-learned-baselines-recovery_attempt-02",
+    "experiments/27/27-qip-robustness-scaling_attempt-01",
+    "experiments/28/28-qip-confirmatory_attempt-01"
+  ],
+  "stage23_bundle": "experiments/23/23-budgeted-entanglement-confirmatory_attempt-01",
+  "stage26_attempt": "experiments/26/26-qip-learned-baselines_attempt-01",
+  "stage26_recovery": "experiments/26/26-qip-learned-baselines-recovery_attempt-02",
+  "stage27_bundle": "experiments/27/27-qip-robustness-scaling_attempt-01",
+  "recorded_findings": [
+    {"severity": "disclosure", "check": "runtime_lock_drift", "detail": "Stages 26-28 ran with torch 2.15.0+cpu and numpy 2.5.4 while requirements.lock pins torch 2.14.1+cpu and numpy 2.4.6; the manifests record the actual versions."},
+    {"severity": "disclosure", "check": "ppo_value_baseline_scale", "detail": "The PPO value head is fit to standardized returns, while the advantage subtracts its raw output from unstandardized returns; it acts as a learned state-dependent offset rather than a calibrated baseline. Retained as implemented and frozen."},
+    {"severity": "disclosure", "check": "updates_counter_mixes_sources", "detail": "The Stage 28 'updates' counter sums allocator optimizer updates and request-certification optimizer updates; the audit separates them."},
+    {"severity": "disclosure", "check": "secondary_gate_constant", "detail": "Stage 28 sets registered_secondary_conditions_complete=True unconditionally; the audit independently verifies 19,200 secondary rows with exact pairing."},
+    {"severity": "disclosure", "check": "matching_not_logged", "detail": "Per-step matchings are not stored in raw rows; feasibility rests on the evaluator's raising check and the empty violation list."}
+  ],
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": null,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    },
+    "test": {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+    }
+  },
+  "model": {
+    "actor": "none; independent audit",
+    "encoder": "none",
+    "critic": "none",
+    "parameter_counts": {
+      "audited_checkpoints": 24
+    },
+    "optimizer": "none"
+  },
+  "quantum": {
+    "device": "independent exact classical enumeration, analytic Bell evaluation at recorded angles, and XOR-game SDP",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "none",
+    "dtype": "float64",
+    "entanglement": "audited frozen Bell request policies",
+    "observables": [
+      "recorded expected parity success"
+    ],
+    "noise": null,
+    "resource_accounting": "raw-row reconstruction; no allocator decisions, training, or shots"
+  },
+  "action_modes": "raw-only reconstruction; no policy execution",
+  "checkpoint_selection": "all 24 final checkpoints hashed and loaded; none selected",
+  "analysis_version": "qip-release-audit-v1",
+  "interpretation": "Independent release audit of the locked Stage 28 study and earlier QIP-extension claims; no new performance claim."
+}

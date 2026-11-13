@@ -1,0 +1,111 @@
+{
+  "run_id": "28-qip-confirmatory_attempt-01",
+  "source_commit": "3d3ea45ab610a4752a61ac41456aeb5ae009998e",
+  "config_sha256": "03987b1d5b76bff1e92d8f0f8a6d81ca1b314d9c616b9a485725bf1805930e23",
+  "metrics_sha256": "320fa6803d0b89aca2b5ec6711959c91b685e54ec8adc5025fa9ea3c464ab100",
+  "metrics_rows": 88,
+  "analysis_version": "qip-confirmatory-v1",
+  "passed": true,
+  "gates": {
+    "twenty_four_models_complete": true,
+    "all_test_catalogs_evaluated": true,
+    "no_budget_or_matching_violation": true,
+    "finite_primary_values": true,
+    "registered_secondary_conditions_complete": true
+  },
+  "resources_consumed": {
+    "primitive_steps": 2081152,
+    "decisions": 2081152,
+    "updates": 556556,
+    "wall_seconds": 8323.975204911,
+    "cpu_core_hours": 2.312034083611111,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 1843200,
+    "shots": 0
+  },
+  "interpretation": "Locked final study; all superiority, equivalence, robustness, and null outcomes are reported separately.",
+  "analysis": {
+    "method_means": {
+      "ppo": 0.694626328713571,
+      "dqn": 0.7064751825747444,
+      "classical_exact": 0.0,
+      "random": 0.22632494755570226,
+      "static": 0.2353939719117989,
+      "greedy": 0.41828470686936636,
+      "online_reference": 0.8059992228901247,
+      "future_clairvoyant": 0.8426428009141236,
+      "message_oracle": 20.033149971515897
+    },
+    "ppo_minus_dqn": -0.011848853861173356,
+    "ppo_minus_dqn_95": [
+      -0.026495434626090913,
+      0.0003764142406331305
+    ],
+    "ppo_minus_dqn_90": [
+      -0.023957991472028272,
+      -0.0011365287923108774
+    ],
+    "ppo_minus_greedy": 0.2763416218442047,
+    "ppo_minus_greedy_95": [
+      0.26879639576851816,
+      0.2829802224906608
+    ],
+    "online_reference_mean": 0.8059992228901247,
+    "equivalence_margin": 0.040299961144506236,
+    "scientific_tests": {
+      "ppo_superior_to_dqn": false,
+      "ppo_superior_to_greedy": true,
+      "ppo_dqn_equivalent_within_5pct_online_reference": true
+    },
+    "catalog_tests": [
+      {
+        "catalog_id": "qip-test-id-a4-complete",
+        "ppo_mean": 0.48552488321810955,
+        "dqn_mean": 0.5442175175243369,
+        "raw_p": 1.0,
+        "holm_p": 1.0
+      },
+      {
+        "catalog_id": "qip-test-topology-a6-ring",
+        "ppo_mean": 0.5269408121655385,
+        "dqn_mean": 0.5028080618384605,
+        "raw_p": 0.01708984375,
+        "holm_p": 0.068359375
+      },
+      {
+        "catalog_id": "qip-test-scale-a8-sparse",
+        "ppo_mean": 1.1433791025790072,
+        "dqn_mean": 1.1674915043780836,
+        "raw_p": 0.935302734375,
+        "holm_p": 1.0
+      },
+      {
+        "catalog_id": "qip-test-horizon-a4-path",
+        "ppo_mean": 0.6226605168916287,
+        "dqn_mean": 0.6113836465580971,
+        "raw_p": 0.031982421875,
+        "holm_p": 0.095947265625
+      }
+    ],
+    "secondary_condition_means": {
+      "heralded-0.5": 0.32983465406733253,
+      "heralded-0.75": 0.5134189522219822,
+      "visibility-0.6": 0.0,
+      "visibility-0.8": 0.0
+    },
+    "test_visibility_thresholds": {
+      "min": 0.8490951802261378,
+      "median": 0.9619517647194811,
+      "mean": 0.9562044484056084,
+      "max": 1.0
+    },
+    "violations": [],
+    "execution_gates": {
+      "twenty_four_models_complete": true,
+      "all_test_catalogs_evaluated": true,
+      "no_budget_or_matching_violation": true,
+      "finite_primary_values": true,
+      "registered_secondary_conditions_complete": true
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "stage": "26",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "runs": [
+    {
+      "run_id": "26-qip-learned-baselines_attempt-01",
+      "status": "failed",
+      "config_path": "configs/stage26/26-qip-learned-baselines_attempt-01.yaml",
+      "config_sha256": "e76a4e68baf2574916f847737a393bdbbcfe78c756460a3732485ef4b8e64f73",
+      "result_path": "experiments/26/26-qip-learned-baselines_attempt-01",
+      "failure_reason": "All registered science completed; bundle closure rejected a NumPy boolean during JSON serialization."
+    },
+    {
+      "run_id": "26-qip-learned-baselines-recovery_attempt-02",
+      "status": "completed",
+      "config_path": "configs/stage26/26-qip-learned-baselines-recovery_attempt-02.yaml",
+      "config_sha256": "a06e4a1d53c820fabeb59894ce46227ddac0ddb1963e1e6c9642f978e0beca0b",
+      "result_path": "experiments/26/26-qip-learned-baselines-recovery_attempt-02"
+    }
+  ]
+}

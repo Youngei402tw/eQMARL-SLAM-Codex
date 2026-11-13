@@ -1,0 +1,29 @@
+catalog_id,label,method,mean_surplus,seed_sd,fraction_of_online_reference
+qip-test-id-a4-complete,4-agent complete (fresh requests),random,0.17337970673339442,0.0,0.2996116638325165
+qip-test-id-a4-complete,4-agent complete (fresh requests),static,0.24867533192038535,0.0,0.42972751168242374
+qip-test-id-a4-complete,4-agent complete (fresh requests),greedy,0.3230595084503293,0.0,0.5582683156371671
+qip-test-id-a4-complete,4-agent complete (fresh requests),dqn,0.5442175175243369,0.009027456937040646,0.9404440634046977
+qip-test-id-a4-complete,4-agent complete (fresh requests),ppo,0.48552488321810955,0.045715625457300194,0.8390192879767254
+qip-test-id-a4-complete,4-agent complete (fresh requests),online_reference,0.578681432209909,0.0,1.0
+qip-test-id-a4-complete,4-agent complete (fresh requests),future_clairvoyant,0.6006382472962141,0.0,1.0379428367045662
+qip-test-topology-a6-ring,6-agent ring,random,0.20551667051500408,0.0,0.34861609710039787
+qip-test-topology-a6-ring,6-agent ring,static,0.18643857438879785,0.0,0.31625409262184306
+qip-test-topology-a6-ring,6-agent ring,greedy,0.2996424235664308,0.0,0.5082807733682465
+qip-test-topology-a6-ring,6-agent ring,dqn,0.5028080618384605,0.022083947189023616,0.8529088354219055
+qip-test-topology-a6-ring,6-agent ring,ppo,0.5269408121655385,0.023208111138682926,0.8938450047858894
+qip-test-topology-a6-ring,6-agent ring,online_reference,0.5895214599221945,0.0,1.0
+qip-test-topology-a6-ring,6-agent ring,future_clairvoyant,0.6263746344447136,0.0,1.0625137115914034
+qip-test-scale-a8-sparse,8-agent sparse,random,0.32892864509276115,0.0,0.24304761614001505
+qip-test-scale-a8-sparse,8-agent sparse,static,0.2829191590782721,0.0,0.20905089356057732
+qip-test-scale-a8-sparse,8-agent sparse,greedy,0.7427724624834955,0.0,0.5488396314348096
+qip-test-scale-a8-sparse,8-agent sparse,dqn,1.1674915043780836,0.05147653006907685,0.8626674241849357
+qip-test-scale-a8-sparse,8-agent sparse,ppo,1.1433791025790072,0.04001522328017004,0.8448506062698434
+qip-test-scale-a8-sparse,8-agent sparse,online_reference,1.3533506327553186,0.0,1.0
+qip-test-scale-a8-sparse,8-agent sparse,future_clairvoyant,1.402690443009138,0.0,1.0364575218421905
+qip-test-horizon-a4-path,"4-agent path, horizon 24",random,0.1974747678816493,0.0,0.28112553588046885
+qip-test-horizon-a4-path,"4-agent path, horizon 24",static,0.2235428222597402,0.0,0.31823607833110773
+qip-test-horizon-a4-path,"4-agent path, horizon 24",greedy,0.3076644329772098,0.0,0.43799179773648517
+qip-test-horizon-a4-path,"4-agent path, horizon 24",dqn,0.6113836465580971,0.016495644008812513,0.8703671720237633
+qip-test-horizon-a4-path,"4-agent path, horizon 24",ppo,0.6226605168916287,0.015557125530330984,0.8864209506891401
+qip-test-horizon-a4-path,"4-agent path, horizon 24",online_reference,0.7024433666730765,0.0,1.0
+qip-test-horizon-a4-path,"4-agent path, horizon 24",future_clairvoyant,0.7408678789064288,0.0,1.054701224406658

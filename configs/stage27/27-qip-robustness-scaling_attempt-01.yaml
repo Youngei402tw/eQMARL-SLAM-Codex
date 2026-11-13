@@ -1,0 +1,154 @@
+{
+  "run_id": "27-qip-robustness-scaling_attempt-01",
+  "stage": "27",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "profile": "pilot",
+  "experiment": "qip-robustness-scaling",
+  "hypothesis": "Resource-aware learned allocation retains useful surplus across graph, horizon, budget, visibility, and heralded-loss changes on non-test catalogs.",
+  "method": "fresh-seed-four-method-robustness-and-scaling-study",
+  "dependency_completion_commit": "65b6d5d851c1af77292e0f4ef4be5679e719c7a7",
+  "wall_seconds": 10800,
+  "max_primitive_steps": 1500000,
+  "max_cpu_threads": 4,
+  "split_lock": {
+    "path": "configs/data/qip_v1/split-lock.json",
+    "sha256": "1e61b2a1cfb884c8f21219d3e29f670d8ac50c918d4ad2f2c4c54982b9d44ea8"
+  },
+  "certificate_bundle": {
+    "path": "experiments/26/26-qip-learned-baselines_attempt-01/non_test_certificates.json",
+    "sha256": "bab199d79db156dc2bbd8d27d0c7099afaadddf80af0e5c9cbd1a171e0420f82"
+  },
+  "methods": [
+    "dqn",
+    "double_dqn",
+    "ppo",
+    "recurrent_ppo"
+  ],
+  "selected_configs": {
+    "dqn": {
+      "name": "h64-lr1e3",
+      "hidden": 64,
+      "learning_rate": 0.001,
+      "episodes": 1800
+    },
+    "double_dqn": {
+      "name": "h64-lr1e3",
+      "hidden": 64,
+      "learning_rate": 0.001,
+      "episodes": 1800
+    },
+    "ppo": {
+      "name": "h64-lr1e3",
+      "hidden": 64,
+      "learning_rate": 0.001,
+      "episodes": 1800,
+      "rollout_episodes": 16,
+      "epochs": 4
+    },
+    "recurrent_ppo": {
+      "name": "h64-lr1e3",
+      "hidden": 64,
+      "learning_rate": 0.001,
+      "episodes": 1800,
+      "rollout_episodes": 16,
+      "epochs": 4
+    }
+  },
+  "fresh_seeds_per_method": 3,
+  "training_seed_start": 27100,
+  "evaluation_seed_start": 127000,
+  "evaluation_sequences": 200,
+  "conditions": [
+    {
+      "name": "ideal",
+      "visibility": 1.0,
+      "heralded_success": 1.0
+    },
+    {
+      "name": "visibility-0.9",
+      "visibility": 0.9,
+      "heralded_success": 1.0
+    },
+    {
+      "name": "visibility-0.8",
+      "visibility": 0.8,
+      "heralded_success": 1.0
+    },
+    {
+      "name": "visibility-0.7",
+      "visibility": 0.7,
+      "heralded_success": 1.0
+    },
+    {
+      "name": "visibility-0.6",
+      "visibility": 0.6,
+      "heralded_success": 1.0
+    },
+    {
+      "name": "heralded-0.9",
+      "visibility": 1.0,
+      "heralded_success": 0.9
+    },
+    {
+      "name": "heralded-0.75",
+      "visibility": 1.0,
+      "heralded_success": 0.75
+    },
+    {
+      "name": "heralded-0.5",
+      "visibility": 1.0,
+      "heralded_success": 0.5
+    }
+  ],
+  "seed_streams": {
+    "model_init": 27100,
+    "critic_init": 27100,
+    "map": null,
+    "evaluation_map": 127000,
+    "sensor": null,
+    "action": 37100,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    },
+    "test": {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+    }
+  },
+  "model": {
+    "actor": "masked graph-conditioned learned allocator",
+    "encoder": "permutation-invariant public-edge encoder",
+    "critic": "registered method-specific Q or value model",
+    "parameter_counts": {
+      "reported_per_checkpoint": true
+    },
+    "optimizer": "Adam at selected Stage 26 settings"
+  },
+  "quantum": {
+    "device": "analytic Werner visibility and heralded-generation model",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "none during allocator training",
+    "dtype": "float32 allocator over float64 certificates",
+    "entanglement": "one attempted pair per selected edge",
+    "observables": [
+      "expected and sampled parity success"
+    ],
+    "noise": "Werner visibility and independent heralded success",
+    "resource_accounting": "attempts, decisions, updates, wall time, and shots"
+  },
+  "action_modes": "deterministic final checkpoint on paired validation sequences",
+  "checkpoint_selection": "fixed Stage 26 configuration; final checkpoint",
+  "analysis_version": "qip-robustness-scaling-v1",
+  "interpretation": "Non-final robustness and scaling evidence used only to freeze Stage 28."
+}
