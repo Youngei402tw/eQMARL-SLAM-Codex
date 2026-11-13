@@ -64,3 +64,16 @@ The registered falsifier therefore fired: a two-parameter pacing rule tuned on v
 | dqn | 0.7065 | 87.7% | 0.8351 | 86.0% |
 
 **Resources.** 77.5 wall-seconds, 0.0210 CPU core-hours, 1,736,000 allocator decisions, no training, and no shots. Attempt-01 used about the same.
+
+## Manuscript
+
+The anonymized TMLR manuscript is `docs/paper/tmlr/BELLROUTE_TMLR.{tex,pdf}`. It has 14 pages and builds with no LaTeX errors, overfull boxes, or undefined references. It is reframed around the registered outcome:
+- The learned allocators beat greedy, as registered in Stage 28.
+- A validation-tuned bid-price rule beats every learned seed, as registered in Stage 30.
+- Certainty-equivalent DP with no logged dynamics is near-optimal.
+- The split leak found by the audit is disclosed, and every result is also reported on the fully fresh catalogs.
+
+All 195 result macros the paper uses come from `docs/paper/tmlr/generated/numbers30.tex` (this stage) and `docs/paper/generated/numbers.tex` (the Stage-29 audit), and all appear verbatim in the PDF text. Data figures are built from `docs/paper/tmlr/figure_data/*.csv`, which are hashed in `SHA256SUMS`. Before submission, the author must:
+- prepare anonymized supplementary material;
+- avoid dual submission with the QIP draft.
+See `docs/paper/tmlr/SUBMISSION_CHECKLIST.md`.

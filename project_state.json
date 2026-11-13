@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-11-13T07:33:25+00:00",
+  "updated_utc": "2026-11-13T07:42:10+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -17,7 +17,7 @@
   "current_branch": "stage/30-tmlr-benchmark",
   "dependency_commit": "d577eac9903f985a231d053be91e8d4a0b99d63d",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "stage30_results_pending",
+  "publication_status": "stage30_manuscript_pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -61,7 +61,7 @@
     "stage/29-qip-release": "d577eac9903f985a231d053be91e8d4a0b99d63d"
   },
   "blockers": [],
-  "next_action": "Publish Stage 30 results, then build the anonymized TMLR manuscript.",
+  "next_action": "Publish the TMLR manuscript commit, check Actions, and record the Stage 30 publication receipt.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
