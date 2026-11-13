@@ -1,0 +1,131 @@
+{
+  "passed": true,
+  "gates": {
+    "no_test_data": true,
+    "references_dominate_rules": true,
+    "finite": true
+  },
+  "resources": {
+    "primitive_steps": 805000,
+    "decisions": 805000,
+    "updates": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "summary": {
+    "gate_fraction": 0.95,
+    "qualifies": {
+      "A_generate_and_store": true,
+      "B_hidden_regime": true
+    },
+    "decision": "proceed_with:A_generate_and_store,B_hidden_regime",
+    "variants": {
+      "A_generate_and_store": {
+        "settings": {
+          "capacity": 3,
+          "gen_prob": 0.25,
+          "decay": 0.985,
+          "bid_price": {
+            "alpha": [
+              0.5,
+              0.75,
+              1.0,
+              1.5,
+              2.0,
+              2.5
+            ],
+            "prior_weight": [
+              0,
+              10,
+              40
+            ]
+          }
+        },
+        "selected": {
+          "alpha": 2.0,
+          "prior_weight": 40,
+          "dev_fraction": 0.9363741968594684
+        },
+        "validation": {
+          "qip-validation-a3-ring": {
+            "optimal": 0.20085657202199378,
+            "greedy": 0.19312048314269264,
+            "bid_price": 0.19351424973301665
+          },
+          "qip-validation-a4-sparse": {
+            "optimal": 0.3874916516414445,
+            "greedy": 0.3656002027895627,
+            "bid_price": 0.3667429255221944
+          },
+          "qip-validation-a6-path": {
+            "optimal": 0.44421573524696223,
+            "greedy": 0.4010007315652425,
+            "bid_price": 0.41683191381818535
+          },
+          "qip-validation-a6-star": {
+            "optimal": 0.2713649936207553,
+            "greedy": 0.2610193948947245,
+            "bid_price": 0.2559245928733645
+          }
+        },
+        "greedy_fraction": 0.9362019380139919,
+        "best_rule_fraction": 0.9456141606130182,
+        "min_catalog_rule_fraction": 0.9383546793686792
+      },
+      "B_hidden_regime": {
+        "settings": {
+          "beta": 1.0,
+          "bid_price": {
+            "alpha": [
+              0.5,
+              0.75,
+              1.0,
+              1.25,
+              1.5
+            ],
+            "prior_weight": [
+              0,
+              20,
+              80
+            ]
+          }
+        },
+        "selected": {
+          "alpha": 0.5,
+          "prior_weight": 20,
+          "dev_fraction": 0.9475879022766192
+        },
+        "validation": {
+          "qip-validation-a3-ring": {
+            "belief_dp": 0.14119232477620247,
+            "greedy": 0.09672628557309514,
+            "bid_price": 0.12231350133940579,
+            "regime_oracle": 0.14972380091249943
+          },
+          "qip-validation-a4-sparse": {
+            "belief_dp": 0.4234924759753048,
+            "greedy": 0.24713576470687987,
+            "bid_price": 0.4074297552071512,
+            "regime_oracle": 0.43428183571994305
+          },
+          "qip-validation-a6-path": {
+            "belief_dp": 0.6006280857995152,
+            "greedy": 0.29665735460072756,
+            "bid_price": 0.5757728438526392,
+            "regime_oracle": 0.6237263399362564
+          },
+          "qip-validation-a6-star": {
+            "belief_dp": 0.3432199012339115,
+            "greedy": 0.25326698799431324,
+            "bid_price": 0.3252701207213104,
+            "regime_oracle": 0.3546124172657728
+          }
+        },
+        "greedy_fraction": 0.5924872167925592,
+        "best_rule_fraction": 0.9484621300286173,
+        "min_catalog_rule_fraction": 0.866290016353788,
+        "regime_oracle_over_belief": 1.0356714858869938
+      }
+    }
+  }
+}

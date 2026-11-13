@@ -69,3 +69,20 @@ Run `31-headroom-pilot_attempt-01` is registered as planned (`configs/stage31/31
 **Disclosure.** These settings were chosen in an unregistered exploratory sweep on the development catalogs. In that sweep, rules tuned separately for each catalog reached 94.5–96% of the optimum for A and 95.6–96.4% of the belief-state optimum for B.
 
 **Design.** The registered run tunes each rule with a single shared parameter set on the development catalogs and then scores it on the four held-out validation catalogs. The gate is 95%.
+
+## 31a result
+
+Run `31-headroom-pilot_attempt-01` ran from source `1e12f30cd092b7bae8b6d74fdc33be567216aab8`. Its status is **completed**, and its gates passed. Registered decision: **`proceed_with:A_generate_and_store,B_hidden_regime`**.
+
+| Variant | Greedy / reference | Best dev-tuned rule / reference (validation) | Worst catalog | Selected rule |
+|---|---|---|---|---|
+| A, generate-and-store | 93.6% | **94.6%** | 93.8% | alpha=2.0, omega=40 |
+| B, hidden regime | 59.2% | **94.8%** | 86.6% | alpha=0.5, omega=20 |
+
+In variant B, knowing the regime outright is worth only 3.6% over the belief-state optimum.
+
+**Interpretation.** Both variants pass the registered 95% gate, but by small margins. The best simple rule leaves only about 5% of the reference surplus for learning to capture. In v1 the learned allocators finished about 11 points *below* bid-price. Beating a rule that is already within about 5% of optimal would therefore require a large improvement in learner quality. These are thin margins, and a negative 31d outcome is the more likely one.
+
+**Resources.** 57 wall-seconds, 805,000 decisions, no training, no test data.
+
+**Next.** Stages 31b–31d (fresh collision-free splits, learner development, one locked test) need explicit user approval for a CPU budget of up to 10 h.
