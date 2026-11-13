@@ -1,0 +1,6 @@
+condition,mean_validation_surplus
+full,0.3208604478122046
+binary_gain,0.18814369725179858
+no_budget,0.2165499251840326
+no_horizon,0.14153028363982834
+shuffled_gain,0.16394633637081527

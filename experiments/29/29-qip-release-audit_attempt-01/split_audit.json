@@ -1,0 +1,213 @@
+{
+  "request_type_counts": {
+    "development": 18,
+    "validation": 12,
+    "test": 16
+  },
+  "type_id_overlap": {
+    "development-validation": 0,
+    "development-test": 0,
+    "validation-test": 0
+  },
+  "content_overlap": {
+    "development-validation": 0,
+    "development-test": 0,
+    "validation-test": 0
+  },
+  "catalogs_use_only_own_split_types": true,
+  "training_catalogs_exclude_test": true,
+  "test_catalogs_are_test_split": true,
+  "split_lock_entries": [
+    {
+      "path": "configs/data/qip_v1/development-a3-path-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/development-a3-ring-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/development-a4-complete-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/development-a4-path-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/development-a4-ring-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/development-a4-star-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/development-a6-path-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/development-a6-star-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/test-id-a4-complete-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/test-topology-a6-ring-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/test-scale-a8-sparse-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/test-horizon-a4-path-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/validation-a3-ring-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/validation-a4-sparse-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/validation-a6-path-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/validation-a6-star-catalog.json",
+      "match": true
+    },
+    {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "match": true
+    }
+  ],
+  "split_lock_hashes_match": true,
+  "training_catalog_ids": [
+    "qip-development-a3-path",
+    "qip-development-a3-ring",
+    "qip-development-a4-complete",
+    "qip-development-a4-path",
+    "qip-development-a4-ring",
+    "qip-development-a4-star",
+    "qip-development-a6-path",
+    "qip-development-a6-star",
+    "qip-validation-a3-ring",
+    "qip-validation-a4-sparse",
+    "qip-validation-a6-path",
+    "qip-validation-a6-star"
+  ],
+  "test_catalog_ids": [
+    "qip-test-id-a4-complete",
+    "qip-test-topology-a6-ring",
+    "qip-test-scale-a8-sparse",
+    "qip-test-horizon-a4-path"
+  ],
+  "public_dynamics_overlap": [
+    {
+      "catalog_a": "qip-development-a3-ring",
+      "catalog_b": "qip-validation-a3-ring",
+      "generator_seed_a": 25202,
+      "generator_seed_b": 25202,
+      "identical_transition_matrix": true,
+      "identical_active_edge_and_urgency_pattern": true,
+      "same_edge_list": true,
+      "horizon": [
+        10,
+        8
+      ],
+      "budget": [
+        4,
+        2
+      ]
+    },
+    {
+      "catalog_a": "qip-development-a4-complete",
+      "catalog_b": "qip-test-id-a4-complete",
+      "generator_seed_a": 25203,
+      "generator_seed_b": 25203,
+      "identical_transition_matrix": true,
+      "identical_active_edge_and_urgency_pattern": true,
+      "same_edge_list": true,
+      "horizon": [
+        10,
+        10
+      ],
+      "budget": [
+        6,
+        6
+      ]
+    },
+    {
+      "catalog_a": "qip-development-a4-star",
+      "catalog_b": "qip-test-horizon-a4-path",
+      "generator_seed_a": 25206,
+      "generator_seed_b": 25206,
+      "identical_transition_matrix": true,
+      "identical_active_edge_and_urgency_pattern": true,
+      "same_edge_list": false,
+      "horizon": [
+        12,
+        24
+      ],
+      "budget": [
+        4,
+        6
+      ]
+    }
+  ],
+  "test_catalogs_sharing_training_dynamics": [
+    {
+      "catalog_a": "qip-development-a4-complete",
+      "catalog_b": "qip-test-id-a4-complete",
+      "generator_seed_a": 25203,
+      "generator_seed_b": 25203,
+      "identical_transition_matrix": true,
+      "identical_active_edge_and_urgency_pattern": true,
+      "same_edge_list": true,
+      "horizon": [
+        10,
+        10
+      ],
+      "budget": [
+        6,
+        6
+      ]
+    },
+    {
+      "catalog_a": "qip-development-a4-star",
+      "catalog_b": "qip-test-horizon-a4-path",
+      "generator_seed_a": 25206,
+      "generator_seed_b": 25206,
+      "identical_transition_matrix": true,
+      "identical_active_edge_and_urgency_pattern": true,
+      "same_edge_list": false,
+      "horizon": [
+        12,
+        24
+      ],
+      "budget": [
+        4,
+        6
+      ]
+    }
+  ],
+  "test_catalogs_with_fresh_dynamics": [
+    "qip-test-topology-a6-ring",
+    "qip-test-scale-a8-sparse"
+  ],
+  "cause": "scripts/generate_qip_splits.py seeds catalogs with split_seed + 100 + offset, so development, validation, and test seeds 25202-25208 collide; catalogs with equal seeds and equal edge counts draw identical active-edge patterns, urgencies, and transition matrices. Request types are drawn from disjoint split-specific lists."
+}

@@ -1,0 +1,6 @@
+condition,visibility,heralded_success,ppo_mean_surplus,seed_sd,sequences_per_catalog
+ideal,1.0,1.0,0.689174367901869,0.016742141155688766,100
+visibility-0.8,0.8,1.0,0.0,0.0,100
+visibility-0.6,0.6,1.0,0.0,0.0,100
+heralded-0.75,1.0,0.75,0.5134189522219822,0.010924878040302836,100
+heralded-0.5,1.0,0.5,0.32983465406733253,0.007815988453898822,100

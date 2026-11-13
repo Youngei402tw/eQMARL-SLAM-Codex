@@ -1,0 +1,28 @@
+{
+  "sealed_files_unchanged_since_stage25_lock": {
+    "configs/data/qip_v1/test-request-types.json": true,
+    "configs/data/qip_v1/test-id-a4-complete-catalog.json": true,
+    "configs/data/qip_v1/test-topology-a6-ring-catalog.json": true,
+    "configs/data/qip_v1/test-scale-a8-sparse-catalog.json": true,
+    "configs/data/qip_v1/test-horizon-a4-path-catalog.json": true
+  },
+  "commits_touching_sealed_files_after_lock": {
+    "configs/data/qip_v1/test-request-types.json": [],
+    "configs/data/qip_v1/test-id-a4-complete-catalog.json": [],
+    "configs/data/qip_v1/test-topology-a6-ring-catalog.json": [],
+    "configs/data/qip_v1/test-scale-a8-sparse-catalog.json": [],
+    "configs/data/qip_v1/test-horizon-a4-path-catalog.json": []
+  },
+  "test_identifiers_in_pre_stage28_bundles": {
+    "experiments/26/26-qip-learned-baselines_attempt-01": [],
+    "experiments/26/26-qip-learned-baselines-recovery_attempt-02": [],
+    "experiments/27/27-qip-robustness-scaling_attempt-01": []
+  },
+  "freeze_commit_is_ancestor_of_stage28_source": true,
+  "freeze_file_unchanged_since_freeze_commit": true,
+  "stage28_attempts": [
+    "28-qip-confirmatory_attempt-01"
+  ],
+  "final_checkpoints_only": true,
+  "post_test_changes": "None. Stage 29 performs no training, tuning, selection, seed removal, or budget extension."
+}

@@ -1,0 +1,21 @@
+{
+  "learned_rows": 67200,
+  "attempted_plus_unused_equals_budget": true,
+  "attempted_within_budget": true,
+  "unused_nonnegative": true,
+  "surplus_nonnegative": true,
+  "recorded_violations": [],
+  "mean_pairs_unused_by_catalog": {
+    "qip-test-id-a4-complete": 1.6866071428571427,
+    "qip-test-topology-a6-ring": 1.1654761904761906,
+    "qip-test-scale-a8-sparse": 1.459345238095238,
+    "qip-test-horizon-a4-path": 1.5398809523809525
+  },
+  "maximum_simultaneous_pairs": {
+    "qip-test-id-a4-complete": 2,
+    "qip-test-topology-a6-ring": 2,
+    "qip-test-scale-a8-sparse": 2,
+    "qip-test-horizon-a4-path": 2
+  },
+  "matching_evidence": "Per-step matchings are not stored in raw rows. Feasibility is enforced by the evaluator, which raises on any infeasible or endpoint-sharing action; the run completed with an empty violation list, so every evaluated action was a feasible matching. This audit cannot independently replay matchings without allocator decisions, which the Stage 29 cap forbids."
+}

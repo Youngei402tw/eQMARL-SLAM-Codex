@@ -1,0 +1,4 @@
+test,estimate,lower,upper,interval,threshold_low,threshold_high,decision
+ppo_minus_dqn_superiority,-0.011848853861173356,-0.026495434626090913,0.0003764142406331305,two-sided 95% (lower bound used),0.0,,False
+ppo_minus_dqn_equivalence,-0.011848853861173356,-0.023957991472028272,-0.0011365287923108774,two-sided 90%,-0.040299961144506236,0.040299961144506236,True
+ppo_minus_greedy_superiority,0.2763416218442047,0.26879639576851816,0.2829802224906608,two-sided 95% (lower bound used),0.0,,True

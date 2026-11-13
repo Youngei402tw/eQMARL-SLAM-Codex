@@ -580,10 +580,11 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/29-qip-release.md",
-      "status": "in_progress",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "66d13965bfed17a18d2b2c8310baa755c0aeb38a",
-      "branch_created_from_commit": "66d13965bfed17a18d2b2c8310baa755c0aeb38a"
+      "branch_created_from_commit": "66d13965bfed17a18d2b2c8310baa755c0aeb38a",
+      "source_commit": "865932a368e4a280165c583d59b2550c44769553"
     }
   ],
   "recommended_execution_order": [

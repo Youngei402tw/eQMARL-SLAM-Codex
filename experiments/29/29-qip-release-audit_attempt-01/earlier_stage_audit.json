@@ -1,0 +1,523 @@
+{
+  "stage23": {
+    "ber_marl_mean": 0.5064155553028137,
+    "greedy": 0.30838651009881746,
+    "random": 0.22684514444013137,
+    "static": 0.2247810942275097,
+    "online_dp": 0.5712162176582192,
+    "future_clairvoyant": 0.5832639032012966,
+    "fraction_of_online_dp_mean": 0.8865566831749545,
+    "fraction_of_online_dp_overall": 0.8865566831749545,
+    "fraction_one_sided_95_lower": 0.8768401935694357,
+    "difference_vs_greedy_95": [
+      0.19141234750541908,
+      0.20432305473382828
+    ],
+    "seeds": 16,
+    "seeds_above_greedy": 16,
+    "gates": {
+      "paired_95_lower_above_zero": true,
+      "improvement_at_least_5pct_dp": true,
+      "one_sided_dp_fraction_lower_above_0_90": false,
+      "one_sided_surplus_lower_above_zero": true,
+      "budget_and_matching_exact": true
+    }
+  },
+  "stage26": {
+    "methods": {
+      "dqn": {
+        "selected": "h64-lr1e3",
+        "score": 0.32348489733878527,
+        "all_candidates": {
+          "h32-lr3e4": 0.3165398004744202,
+          "h64-lr3e4": 0.3096079612585405,
+          "h64-lr1e3": 0.32348489733878527
+        }
+      },
+      "double_dqn": {
+        "selected": "h64-lr1e3",
+        "score": 0.3208604478122046,
+        "all_candidates": {
+          "h32-lr3e4": 0.30656964103380835,
+          "h64-lr3e4": 0.31390650138724596,
+          "h64-lr1e3": 0.3208604478122046
+        }
+      },
+      "ppo": {
+        "selected": "h64-lr1e3",
+        "score": 0.3247393485888218,
+        "all_candidates": {
+          "h32-lr1e4": 0.2313410663457277,
+          "h64-lr3e4": 0.3102893334425365,
+          "h64-lr1e3": 0.3247393485888218
+        }
+      },
+      "recurrent_ppo": {
+        "selected": "h64-lr1e3",
+        "score": 0.30471936005478106,
+        "all_candidates": {
+          "h32-lr1e4": 0.21006752365035938,
+          "h64-lr3e4": 0.23380667145519207,
+          "h64-lr1e3": 0.30471936005478106
+        }
+      }
+    },
+    "ablations": {
+      "no_budget": 0.2165499251840326,
+      "no_horizon": 0.14153028363982834,
+      "binary_gain": 0.18814369725179858,
+      "shuffled_gain": 0.16394633637081527
+    },
+    "double_dqn_minus_ppo": -0.0038789007766172334,
+    "recorded": {
+      "method_scores": {
+        "dqn": 0.32348489733878527,
+        "double_dqn": 0.3208604478122046,
+        "ppo": 0.3247393485888218,
+        "recurrent_ppo": 0.30471936005478106
+      },
+      "ablation_scores": {
+        "binary_gain": 0.18814369725179858,
+        "no_budget": 0.2165499251840326,
+        "no_horizon": 0.14153028363982834,
+        "shuffled_gain": 0.16394633637081527
+      }
+    },
+    "reproduced": true
+  },
+  "stage27": {
+    "means": {
+      "dqn": {
+        "ideal": 0.32198075361472245,
+        "visibility-0.9": 0.010122504396519315,
+        "visibility-0.8": 0.0,
+        "visibility-0.7": 0.0,
+        "visibility-0.6": 0.0,
+        "heralded-0.9": 0.29464796519527836,
+        "heralded-0.75": 0.2485499208009181,
+        "heralded-0.5": 0.1593303578354729
+      },
+      "double_dqn": {
+        "ideal": 0.32054246636495615,
+        "visibility-0.9": 0.013920508198886334,
+        "visibility-0.8": 0.0,
+        "visibility-0.7": 0.0,
+        "visibility-0.6": 0.0,
+        "heralded-0.9": 0.2924055113829672,
+        "heralded-0.75": 0.2462500269889521,
+        "heralded-0.5": 0.15959108206598707
+      },
+      "ppo": {
+        "ideal": 0.32729064467983937,
+        "visibility-0.9": 0.0,
+        "visibility-0.8": 0.0,
+        "visibility-0.7": 0.0,
+        "visibility-0.6": 0.0,
+        "heralded-0.9": 0.29802757707890126,
+        "heralded-0.75": 0.25256939890173574,
+        "heralded-0.5": 0.1634697396525492
+      },
+      "recurrent_ppo": {
+        "ideal": 0.3225131045064578,
+        "visibility-0.9": 0.0,
+        "visibility-0.8": 0.0,
+        "visibility-0.7": 0.0,
+        "visibility-0.6": 0.0,
+        "heralded-0.9": 0.2938203132090469,
+        "heralded-0.75": 0.24804017555744695,
+        "heralded-0.5": 0.1620038247651731
+      }
+    },
+    "per_catalog": {
+      "dqn": {
+        "ideal": {
+          "qip-validation-a3-ring": 0.12708155301089089,
+          "qip-validation-a4-sparse": 0.32939056408902007,
+          "qip-validation-a6-path": 0.5334378932540615,
+          "qip-validation-a6-star": 0.2980130041049172
+        },
+        "visibility-0.9": {
+          "qip-validation-a3-ring": 0.0009350039192941041,
+          "qip-validation-a4-sparse": 0.016425002859905363,
+          "qip-validation-a6-path": 0.017876542868713537,
+          "qip-validation-a6-star": 0.005253467938164249
+        },
+        "visibility-0.8": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "visibility-0.7": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "visibility-0.6": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "heralded-0.9": {
+          "qip-validation-a3-ring": 0.11435244625123837,
+          "qip-validation-a4-sparse": 0.30179588686985276,
+          "qip-validation-a6-path": 0.48793937887996436,
+          "qip-validation-a6-star": 0.27450414878005786
+        },
+        "heralded-0.75": {
+          "qip-validation-a3-ring": 0.09878956895321607,
+          "qip-validation-a4-sparse": 0.25254996805451807,
+          "qip-validation-a6-path": 0.4128842544121047,
+          "qip-validation-a6-star": 0.22997589178383349
+        },
+        "heralded-0.5": {
+          "qip-validation-a3-ring": 0.06616482793353497,
+          "qip-validation-a4-sparse": 0.1610874297780295,
+          "qip-validation-a6-path": 0.26093538481121265,
+          "qip-validation-a6-star": 0.14913378881911438
+        }
+      },
+      "double_dqn": {
+        "ideal": {
+          "qip-validation-a3-ring": 0.1295688822399825,
+          "qip-validation-a4-sparse": 0.324476389400661,
+          "qip-validation-a6-path": 0.5258778079537054,
+          "qip-validation-a6-star": 0.30224678586547576
+        },
+        "visibility-0.9": {
+          "qip-validation-a3-ring": 0.002927234539141258,
+          "qip-validation-a4-sparse": 0.025500722656336922,
+          "qip-validation-a6-path": 0.019217963162809614,
+          "qip-validation-a6-star": 0.008036112437257542
+        },
+        "visibility-0.8": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "visibility-0.7": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "visibility-0.6": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "heralded-0.9": {
+          "qip-validation-a3-ring": 0.11618380348818998,
+          "qip-validation-a4-sparse": 0.2953673457168043,
+          "qip-validation-a6-path": 0.48023750791947045,
+          "qip-validation-a6-star": 0.27783338840740424
+        },
+        "heralded-0.75": {
+          "qip-validation-a3-ring": 0.10039439108222724,
+          "qip-validation-a4-sparse": 0.24836334320406117,
+          "qip-validation-a6-path": 0.4039115433767438,
+          "qip-validation-a6-star": 0.2323308302927762
+        },
+        "heralded-0.5": {
+          "qip-validation-a3-ring": 0.06758988835848867,
+          "qip-validation-a4-sparse": 0.15998035828893384,
+          "qip-validation-a6-path": 0.26002097697307663,
+          "qip-validation-a6-star": 0.1507731046434492
+        }
+      },
+      "ppo": {
+        "ideal": {
+          "qip-validation-a3-ring": 0.12718833782399694,
+          "qip-validation-a4-sparse": 0.3507527447243532,
+          "qip-validation-a6-path": 0.552938774768263,
+          "qip-validation-a6-star": 0.2782827214027444
+        },
+        "visibility-0.9": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "visibility-0.8": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "visibility-0.7": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "visibility-0.6": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "heralded-0.9": {
+          "qip-validation-a3-ring": 0.11314369608337681,
+          "qip-validation-a4-sparse": 0.3172684399907788,
+          "qip-validation-a6-path": 0.5070563678319255,
+          "qip-validation-a6-star": 0.25464180440952383
+        },
+        "heralded-0.75": {
+          "qip-validation-a3-ring": 0.09781228664020697,
+          "qip-validation-a4-sparse": 0.2675707462305824,
+          "qip-validation-a6-path": 0.42955612200001875,
+          "qip-validation-a6-star": 0.21533844073613484
+        },
+        "heralded-0.5": {
+          "qip-validation-a3-ring": 0.06485377197464308,
+          "qip-validation-a4-sparse": 0.17403486850361027,
+          "qip-validation-a6-path": 0.2727577621117234,
+          "qip-validation-a6-star": 0.1422325560202201
+        }
+      },
+      "recurrent_ppo": {
+        "ideal": {
+          "qip-validation-a3-ring": 0.13273653776074448,
+          "qip-validation-a4-sparse": 0.33797108148535093,
+          "qip-validation-a6-path": 0.5290687116980552,
+          "qip-validation-a6-star": 0.2902760870816807
+        },
+        "visibility-0.9": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "visibility-0.8": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "visibility-0.7": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "visibility-0.6": {
+          "qip-validation-a3-ring": 0.0,
+          "qip-validation-a4-sparse": 0.0,
+          "qip-validation-a6-path": 0.0,
+          "qip-validation-a6-star": 0.0
+        },
+        "heralded-0.9": {
+          "qip-validation-a3-ring": 0.11833792841682832,
+          "qip-validation-a4-sparse": 0.3048733325116337,
+          "qip-validation-a6-path": 0.4858847116306424,
+          "qip-validation-a6-star": 0.2661852802770833
+        },
+        "heralded-0.75": {
+          "qip-validation-a3-ring": 0.10247033872331181,
+          "qip-validation-a4-sparse": 0.2570242524519563,
+          "qip-validation-a6-path": 0.4086443768193324,
+          "qip-validation-a6-star": 0.22402173423518737
+        },
+        "heralded-0.5": {
+          "qip-validation-a3-ring": 0.06780695347736279,
+          "qip-validation-a4-sparse": 0.16798467851554352,
+          "qip-validation-a6-path": 0.2639001343895992,
+          "qip-validation-a6-star": 0.1483235326781869
+        }
+      }
+    },
+    "references": {
+      "ideal": {
+        "qip-validation-a3-ring": {
+          "greedy": 0.10231228545308117,
+          "online_reference": 0.1493009354732931
+        },
+        "qip-validation-a4-sparse": {
+          "greedy": 0.2486662800423801,
+          "online_reference": 0.3962781830132008
+        },
+        "qip-validation-a6-path": {
+          "greedy": 0.2781129931285977,
+          "online_reference": 0.612268209066242
+        },
+        "qip-validation-a6-star": {
+          "greedy": 0.23134806470014155,
+          "online_reference": 0.32696656764484944
+        }
+      },
+      "visibility-0.9": {
+        "qip-validation-a3-ring": {
+          "greedy": 0.004858353711897507,
+          "online_reference": 0.010083375669782981
+        },
+        "qip-validation-a4-sparse": {
+          "greedy": 0.012749484633095562,
+          "online_reference": 0.039526430792175236
+        },
+        "qip-validation-a6-path": {
+          "greedy": 0.01553641919977963,
+          "online_reference": 0.0707482862751931
+        },
+        "qip-validation-a6-star": {
+          "greedy": 0.019792835371335967,
+          "online_reference": 0.038731252652360125
+        }
+      },
+      "visibility-0.8": {
+        "qip-validation-a3-ring": {
+          "greedy": 0.0,
+          "online_reference": 0.0
+        },
+        "qip-validation-a4-sparse": {
+          "greedy": 0.0,
+          "online_reference": 0.0
+        },
+        "qip-validation-a6-path": {
+          "greedy": 0.0,
+          "online_reference": 0.0
+        },
+        "qip-validation-a6-star": {
+          "greedy": 0.0,
+          "online_reference": 0.0
+        }
+      },
+      "visibility-0.7": {
+        "qip-validation-a3-ring": {
+          "greedy": 0.0,
+          "online_reference": 0.0
+        },
+        "qip-validation-a4-sparse": {
+          "greedy": 0.0,
+          "online_reference": 0.0
+        },
+        "qip-validation-a6-path": {
+          "greedy": 0.0,
+          "online_reference": 0.0
+        },
+        "qip-validation-a6-star": {
+          "greedy": 0.0,
+          "online_reference": 0.0
+        }
+      },
+      "visibility-0.6": {
+        "qip-validation-a3-ring": {
+          "greedy": 0.0,
+          "online_reference": 0.0
+        },
+        "qip-validation-a4-sparse": {
+          "greedy": 0.0,
+          "online_reference": 0.0
+        },
+        "qip-validation-a6-path": {
+          "greedy": 0.0,
+          "online_reference": 0.0
+        },
+        "qip-validation-a6-star": {
+          "greedy": 0.0,
+          "online_reference": 0.0
+        }
+      },
+      "heralded-0.9": {
+        "qip-validation-a3-ring": {
+          "greedy": 0.09226113854907457,
+          "online_reference": 0.1338894586078823
+        },
+        "qip-validation-a4-sparse": {
+          "greedy": 0.2217503945156932,
+          "online_reference": 0.3514503218792379
+        },
+        "qip-validation-a6-path": {
+          "greedy": 0.25155223567038776,
+          "online_reference": 0.5487646180950105
+        },
+        "qip-validation-a6-star": {
+          "greedy": 0.2062276592478156,
+          "online_reference": 0.29429085098207
+        }
+      },
+      "heralded-0.75": {
+        "qip-validation-a3-ring": {
+          "greedy": 0.07644765465520326,
+          "online_reference": 0.11069525497965517
+        },
+        "qip-validation-a4-sparse": {
+          "greedy": 0.18626371360383928,
+          "online_reference": 0.2901862879469991
+        },
+        "qip-validation-a6-path": {
+          "greedy": 0.21030577134341003,
+          "online_reference": 0.4498087801225483
+        },
+        "qip-validation-a6-star": {
+          "greedy": 0.17152909878641368,
+          "online_reference": 0.24057602691464125
+        }
+      },
+      "heralded-0.5": {
+        "qip-validation-a3-ring": {
+          "greedy": 0.04827491700649263,
+          "online_reference": 0.07388075682334602
+        },
+        "qip-validation-a4-sparse": {
+          "greedy": 0.1255675604287535,
+          "online_reference": 0.20238200503401457
+        },
+        "qip-validation-a6-path": {
+          "greedy": 0.1397753438912332,
+          "online_reference": 0.3034741693548858
+        },
+        "qip-validation-a6-star": {
+          "greedy": 0.11604505863040686,
+          "online_reference": 0.16612672795541583
+        }
+      }
+    },
+    "catalog_metadata": {
+      "qip-validation-a3-ring": {
+        "agents": 3,
+        "topology": "ring",
+        "horizon": 8,
+        "budget": 2
+      },
+      "qip-validation-a4-sparse": {
+        "agents": 4,
+        "topology": "sparse_random",
+        "horizon": 12,
+        "budget": 4
+      },
+      "qip-validation-a6-path": {
+        "agents": 6,
+        "topology": "path",
+        "horizon": 16,
+        "budget": 6
+      },
+      "qip-validation-a6-star": {
+        "agents": 6,
+        "topology": "star",
+        "horizon": 10,
+        "budget": 4
+      }
+    },
+    "positive_gain_fractions": {
+      "ideal": 0.5476190476190477,
+      "visibility-0.9": 0.09523809523809523,
+      "visibility-0.8": 0.0,
+      "visibility-0.7": 0.0,
+      "visibility-0.6": 0.0,
+      "heralded-0.9": 0.5476190476190477,
+      "heralded-0.75": 0.5476190476190477,
+      "heralded-0.5": 0.5476190476190477
+    },
+    "reproduced": true,
+    "non_test_visibility_thresholds": {
+      "min": 0.8510766118526288,
+      "median": 0.9823871214824884,
+      "max": 1.0,
+      "count": 30
+    }
+  }
+}

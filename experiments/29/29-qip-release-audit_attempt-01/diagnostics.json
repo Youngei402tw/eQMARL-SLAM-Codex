@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "gates": {
+    "all_bundles_valid": true,
+    "freeze_hash_matches": true,
+    "bundle_source_is_frozen_commit": true,
+    "bundle_status_completed": true,
+    "bundle_config_hash_matches_committed_config": true,
+    "raw_rows_complete_and_paired": true,
+    "registered_analysis_reproduced": true,
+    "decisions_stable_under_alternate_bootstrap_stream": true,
+    "certificates_independently_verified": true,
+    "visibility_thresholds_reproduced": true,
+    "checkpoints_hash_identity_and_config": true,
+    "exactly_one_final_checkpoint_per_model": true,
+    "budget_and_matching_safety": true,
+    "request_type_splits_disjoint": true,
+    "test_lock_compliance": true,
+    "resource_accounting_reconciled": true,
+    "within_registered_caps": true,
+    "earlier_stage_numbers_reproduced": true
+  },
+  "findings": [
+    {
+      "severity": "material",
+      "check": "test_public_dynamics_overlap",
+      "detail": "Sealed test catalogs qip-test-horizon-a4-path, qip-test-id-a4-complete reuse the public Markov dynamics (transition matrix, active-edge pattern, urgencies) of training catalogs; only their request types are fresh. Fully fresh test catalogs: qip-test-topology-a6-ring, qip-test-scale-a8-sparse."
+    },
+    {
+      "severity": "material",
+      "check": "validation_public_dynamics_overlap",
+      "detail": "A validation catalog reuses a development catalog's public dynamics; Stage 26-27 validation was not fully independent for that catalog."
+    },
+    {
+      "severity": "disclosure",
+      "check": "runtime_lock_drift",
+      "detail": "Stages 26-28 ran with torch 2.15.0+cpu and numpy 2.5.4 while requirements.lock pins torch 2.14.1+cpu and numpy 2.4.6; the manifests record the actual versions."
+    },
+    {
+      "severity": "disclosure",
+      "check": "ppo_value_baseline_scale",
+      "detail": "The PPO value head is fit to standardized returns, while the advantage subtracts its raw output from unstandardized returns; it acts as a learned state-dependent offset rather than a calibrated baseline. Retained as implemented and frozen."
+    },
+    {
+      "severity": "disclosure",
+      "check": "updates_counter_mixes_sources",
+      "detail": "The Stage 28 'updates' counter sums allocator optimizer updates and request-certification optimizer updates; the audit separates them."
+    },
+    {
+      "severity": "disclosure",
+      "check": "secondary_gate_constant",
+      "detail": "Stage 28 sets registered_secondary_conditions_complete=True unconditionally; the audit independently verifies 19,200 secondary rows with exact pairing."
+    },
+    {
+      "severity": "disclosure",
+      "check": "matching_not_logged",
+      "detail": "Per-step matchings are not stored in raw rows; feasibility rests on the evaluator's raising check and the empty violation list."
+    }
+  ],
+  "resources": {
+    "primitive_steps": 0,
+    "decisions": 0,
+    "updates": 0,
+    "circuit_evaluations": 16,
+    "shots": 0
+  },
+  "summary": {
+    "scientific_tests": {
+      "ppo_superior_to_dqn": false,
+      "ppo_superior_to_greedy": true,
+      "ppo_dqn_equivalent_within_5pct_online_reference": true
+    },
+    "method_means": {
+      "ppo": 0.694626328713571,
+      "dqn": 0.7064751825747444,
+      "classical_exact": 0.0,
+      "random": 0.22632494755570226,
+      "static": 0.2353939719117989,
+      "greedy": 0.41828470686936636,
+      "online_reference": 0.8059992228901247,
+      "future_clairvoyant": 0.8426428009141236,
+      "message_oracle": 20.033149971515897
+    },
+    "visibility_thresholds": {
+      "min": 0.8490951802261378,
+      "median": 0.9619517647194811,
+      "mean": 0.9562044484056084,
+      "max": 1.0
+    }
+  }
+}
