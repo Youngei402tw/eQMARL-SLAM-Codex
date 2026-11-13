@@ -1,0 +1,167 @@
+{
+  "run_id": "31-regime-development_attempt-01",
+  "stage": "31",
+  "protocol_id": "bellroute-harder-variants-v1",
+  "profile": "tuning",
+  "experiment": "harder-variant-development",
+  "hypothesis": "On the hidden-regime variant, the best equally tuned learner (PPO, recurrent PPO, or DQN) is not futile relative to the strongest validation-tuned bid-price rule (within 5% of the belief-state DP mean on validation).",
+  "method": "equal tuning (6 configs x 3 seeds x 3 learners, 2000 episodes) on development regime maps; selection and bid-price tuning on validation; registered futility rule; freeze for the locked test",
+  "dependency_completion_commit": "e1ed982f2ff8a29346f43295a3e457dc9cfe4a1c",
+  "wall_seconds": 10800,
+  "max_primitive_steps": 10000000,
+  "max_cpu_threads": 4,
+  "workers": 4,
+  "v1_freeze": {
+    "path": "experiments/27/27-qip-robustness-scaling_attempt-01/stage28-freeze.json",
+    "sha256": "ff34ffbb5a30053555de83494c937980ad4f91c5e4e87f2401833cf173df60ef"
+  },
+  "beta": 1.0,
+  "variant_choice": "Variant B only: its action space matches the existing learners; variant A (store) would need a new action encoder and is not pursued in Stage 31.",
+  "methods": [
+    "ppo",
+    "recurrent_ppo",
+    "dqn"
+  ],
+  "learner_configs": [
+    {
+      "name": "h32-lr3e-4",
+      "hidden": 32,
+      "learning_rate": 0.0003
+    },
+    {
+      "name": "h64-lr3e-4",
+      "hidden": 64,
+      "learning_rate": 0.0003
+    },
+    {
+      "name": "h64-lr1e-3",
+      "hidden": 64,
+      "learning_rate": 0.001
+    },
+    {
+      "name": "h128-lr3e-4",
+      "hidden": 128,
+      "learning_rate": 0.0003
+    },
+    {
+      "name": "h128-lr1e-3",
+      "hidden": 128,
+      "learning_rate": 0.001
+    },
+    {
+      "name": "h64-lr3e-3",
+      "hidden": 64,
+      "learning_rate": 0.003
+    }
+  ],
+  "ppo_value_baseline": "calibrated (advantage on standardized returns); changed from Stages 26-28",
+  "development_seeds": [
+    31000,
+    31001,
+    31002
+  ],
+  "development_episodes": 2000,
+  "validation_seed_start": 3300000,
+  "validation_sequences": 300,
+  "bid_price": {
+    "alpha": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "prior_weight": [
+      0,
+      5,
+      20,
+      80,
+      320
+    ]
+  },
+  "futility_margin_fraction": 0.05,
+  "test_lock": {
+    "path": "configs/data/qip_v2/split-lock.json",
+    "sha256": "2467d5b023ee5b47a5743721502b20aaaa5ed57475fb8567eae3d96b15637e90"
+  },
+  "locked_seeds": [
+    31100,
+    31101,
+    31102,
+    31103,
+    31104,
+    31105,
+    31106,
+    31107,
+    31108,
+    31109,
+    31110,
+    31111
+  ],
+  "locked_episodes": 4000,
+  "locked_evaluation_seed_start": 3400000,
+  "locked_evaluation_sequences": 500,
+  "certificate_seed": 315000,
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 931000,
+  "decision_rule": {
+    "primary": "candidate learner minus frozen bid-price rule, mean over the four qip_v2 sealed catalogs; seed-level percentile bootstrap (unit: 12 locked training seeds)",
+    "learned_superior": "95% lower bound > 0",
+    "rule_superior": "95% upper bound < 0",
+    "otherwise": "inconclusive",
+    "secondary": "learner minus greedy; fractions of the belief-state DP reference; regime-oracle gap; per-catalog means (descriptive)"
+  },
+  "seed_streams": {
+    "model_init": 31000,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": 3300000,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    },
+    "test": {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+    }
+  },
+  "model": {
+    "actor": "masked graph-conditioned PPO, recurrent PPO (GRU), and DQN allocators",
+    "encoder": "permutation-invariant public-edge encoder",
+    "critic": "PPO state value (calibrated) or DQN target Q network",
+    "parameter_counts": {
+      "reported_per_checkpoint": true
+    },
+    "optimizer": "Adam; 6-config grid"
+  },
+  "quantum": {
+    "device": "archived non-test analytic request certificates",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "float32 allocator learning",
+    "dtype": "float64",
+    "entanglement": "one budgeted pair per served edge",
+    "observables": [
+      "recorded expected parity success"
+    ],
+    "noise": "ideal; latent demand regime",
+    "resource_accounting": "decisions, updates; no circuits or shots"
+  },
+  "action_modes": "sampled during training; argmax at evaluation",
+  "checkpoint_selection": "final checkpoint; candidate = best mean validation score over seeds",
+  "analysis_version": "harder-variant-development-v1",
+  "interpretation": "Development on non-test data; the qip_v2 test split is hash-referenced but never opened."
+}

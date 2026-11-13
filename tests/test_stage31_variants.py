@@ -61,3 +61,19 @@ def test_regime_belief_update_and_reference_ordering():
     belief = np.mean([m.run(x, lambda st, b, r, pi, z: act(st, b, r, pi)) for x in seeds])
     greedy = np.mean([m.run(x, lambda st, b, r, pi, z: greedy_action(m.base, st, b, r)) for x in seeds])
     assert belief >= greedy
+
+
+def test_regime_maps_and_learner_wrappers_run():
+    from pathlib import Path as _P
+    import tempfile
+    from eqmarl_slam import diagnostics31b as d
+    maps = d.regime_maps(DEV[:1], CERTS, 1.0)
+    assert len(maps) == 2 and all(np.allclose(np.asarray(m.catalog["transition"]).sum(1), 1) for m in maps)
+    assert not np.allclose(maps[0].catalog["transition"], maps[1].catalog["transition"])
+    regime = RegimeMDP(DEV[0], CERTS, 1.0)
+    with tempfile.TemporaryDirectory() as tmp:
+        for method in ("dqn", "ppo", "recurrent_ppo"):
+            result = d._train_job({"method": method, "config": {"name": "t", "hidden": 16, "learning_rate": 1e-3, "episodes": 4},
+                                   "seed": 0, "maps": maps, "eval": {"x": regime}, "eval_seeds": [0, 1],
+                                   "out": _P(tmp) / f"{method}.pt"})
+            assert len(result["scores"]["x"]) == 2 and all(np.isfinite(result["scores"]["x"]))

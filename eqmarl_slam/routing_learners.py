@@ -171,7 +171,10 @@ class RecurrentActorCritic(torch.nn.Module):
 
 
 def train_ppo(maps: list[RobustRoutingMDP], seed: int, episodes: int, hidden: int, learning_rate: float,
-              *, recurrent: bool, feature_mode: str = "full", rollout_episodes: int = 16, epochs: int = 4):
+              *, recurrent: bool, feature_mode: str = "full", rollout_episodes: int = 16, epochs: int = 4,
+              calibrated_value: bool = False):
+    # calibrated_value=True (Stage 31+) subtracts the value head from *standardized* returns, the scale it is
+    # trained on; the default reproduces the frozen Stage 26-28 behaviour (raw-return advantage).
     torch.manual_seed(seed); np.random.seed(seed); random.seed(seed)
     model = RecurrentActorCritic(hidden) if recurrent else FeedForwardActorCritic(hidden)
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate); rng = np.random.default_rng(seed + 200003)
@@ -211,7 +214,10 @@ def train_ppo(maps: list[RobustRoutingMDP], seed: int, episodes: int, hidden: in
                     else:
                         actions, dist, value = model.distribution_value(mdp, row["state"], row["budget"], row["remaining"], feature_mode)
                     choice = torch.tensor(row["action_index"]); logp = dist.log_prob(choice)
-                    advantage = (torch.tensor(row["return"]) - value).detach()
+                    if calibrated_value:
+                        advantage = ((torch.tensor(row["return"]) - norm_mean) / norm_std - value).detach()
+                    else:
+                        advantage = (torch.tensor(row["return"]) - value).detach()
                     ratio = torch.exp(logp - row["old_logp"])
                     policy_terms.append(-torch.min(ratio * advantage, torch.clamp(ratio, 0.8, 1.2) * advantage))
                     target = (torch.tensor(row["return"]) - norm_mean) / norm_std

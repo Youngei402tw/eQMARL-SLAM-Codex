@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-11-13T10:31:08+00:00",
+  "updated_utc": "2026-11-13T10:38:47+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -10,14 +10,14 @@
     "url": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
     "last_check": "Stages 10-14 merged through PRs 11-15; all 120 confirmatory bundles and the Stage14 release audit were freshly retrieved and hash-validated."
   },
-  "authorized_current_scope": "Stage 31a headroom pilot only; training stages need explicit approval.",
+  "authorized_current_scope": "Stage 31a-31d, up to 10 cumulative CPU wall-hours; user approval 2026-11-13.",
   "active_stage": "31",
   "stage_status": "in_progress",
   "training_runs_executed": 411,
   "current_branch": "stage/31-harder-variants",
   "dependency_commit": "e1ed982f2ff8a29346f43295a3e457dc9cfe4a1c",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "stage31a_results_pending",
+  "publication_status": "stage31_development_source_pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -62,7 +62,7 @@
     "stage/30-tmlr-benchmark": "9f9a3f613efce04d81d785019835422699cecf6b"
   },
   "blockers": [],
-  "next_action": "Await user approval for Stage 31b-31d (fresh splits, learner development, locked test; up to 10 CPU wall-hours).",
+  "next_action": "Publish source, run 31-regime-development_attempt-01.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",

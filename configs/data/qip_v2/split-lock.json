@@ -1,0 +1,33 @@
+{
+  "note": "Fresh Stage-31 sealed test split; development and validation reuse qip_v1.",
+  "protocol_id": "bellroute-harder-variants-v1",
+  "schema_version": "qip-split-lock-v2",
+  "test": {
+    "catalogs": [
+      {
+        "catalog_id": "qip2-test-a4-complete",
+        "path": "configs/data/qip_v2/test-a4-complete-catalog.json",
+        "sha256": "f6627a501cd8b5c143ef76e4d985cc92338820cd531def11b78bf5d5c9f06f45"
+      },
+      {
+        "catalog_id": "qip2-test-a5-ring",
+        "path": "configs/data/qip_v2/test-a5-ring-catalog.json",
+        "sha256": "8ccd9feb6935963893b2fd3374c1cb1106ba1b09df49e332dca3992e3df292d7"
+      },
+      {
+        "catalog_id": "qip2-test-a8-sparse",
+        "path": "configs/data/qip_v2/test-a8-sparse-catalog.json",
+        "sha256": "abef0875e89b249a46d0b73df77beeecfd424c992c96187dec86dde4ee288783"
+      },
+      {
+        "catalog_id": "qip2-test-a6-path-h24",
+        "path": "configs/data/qip_v2/test-a6-path-h24-catalog.json",
+        "sha256": "878b0202df35d2a66b7a79444fa01b56b5de7eda5a9fc86840609a759bd08915"
+      }
+    ],
+    "request_types": {
+      "path": "configs/data/qip_v2/test-request-types.json",
+      "sha256": "c1098430dfd72923f08f10fb561ea2ae92900c29c1a1bcd405c778c264024476"
+    }
+  }
+}

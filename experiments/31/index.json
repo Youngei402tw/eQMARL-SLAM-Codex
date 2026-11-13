@@ -8,6 +8,12 @@
       "config_path": "configs/stage31/31-headroom-pilot_attempt-01.yaml",
       "config_sha256": "f9d100d4eaaba2d381613c2769c536afed7ef317ec8040b2c520b57475683fa0",
       "result_path": "experiments/31/31-headroom-pilot_attempt-01"
+    },
+    {
+      "run_id": "31-regime-development_attempt-01",
+      "status": "planned",
+      "config_path": "configs/stage31/31-regime-development_attempt-01.yaml",
+      "config_sha256": "7daeb50d91330b55b81f098a7f2077244ff2498365c29164afb27822aad7445a"
     }
   ]
 }

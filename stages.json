@@ -622,7 +622,7 @@
       "branch_created": true,
       "dependency_completion_commit": "e1ed982f2ff8a29346f43295a3e457dc9cfe4a1c",
       "branch_created_from_commit": "9f9a3f613efce04d81d785019835422699cecf6b",
-      "authorized_scope": "31a headroom pilot only (user: 'continue', 2026-11-13); learner training (31b-31d) needs separate approval"
+      "authorized_scope": "31a-31d; user approved option 1 (full study, up to 10 CPU wall-hours) on 2026-11-13"
     }
   ],
   "recommended_execution_order": [

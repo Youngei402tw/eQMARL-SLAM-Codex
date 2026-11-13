@@ -86,3 +86,25 @@ In variant B, knowing the regime outright is worth only 3.6% over the belief-sta
 **Resources.** 57 wall-seconds, 805,000 decisions, no training, no test data.
 
 **Next.** Stages 31b–31d (fresh collision-free splits, learner development, one locked test) need explicit user approval for a CPU budget of up to 10 h.
+
+## 31b–31d registration (user approved the full study, cap 10 CPU wall-hours)
+
+**Variant.** Stage 31 continues with variant **B (hidden regime) only**. It uses the existing learners' action space; variant A would need a new action encoder and is not pursued.
+
+**31b: fresh test split.** `scripts/generate_qip_v2_test.py` writes `configs/data/qip_v2/`:
+- 16 fresh request types and four sealed catalogs: 4-agent complete, 5-agent ring, 8-agent sparse, and 6-agent path with H = 24;
+- seeds derived from SHA-256 of unique labels;
+- generation fails on any reuse of v1 dynamics or request contents.
+
+The split lock is committed and hashed in the development config. Its contents have not been inspected.
+
+**31c: development** (`31-regime-development_attempt-01`).
+- PPO, recurrent PPO, and DQN are tuned equally: 6 configurations × 3 seeds × 2,000 episodes on the development regime maps. PPO now uses a calibrated value baseline.
+- Each learner is scored on the validation catalogs (300 sequences each).
+- The bid-price rule is tuned on validation over 35 configurations.
+- **Futility rule:** stop before the locked test if the best learner's validation mean is below the best rule's mean minus 5% of the belief-state DP mean.
+
+**31d: locked test** (to be registered after development, with the freeze hash).
+- 12 fresh seeds of the candidate learner, 4,000 episodes each, trained on development and validation.
+- One evaluation on qip_v2, 500 sequences per catalog.
+- **Primary:** candidate minus frozen bid-price, seed bootstrap. The result is learned superior, rule superior, or inconclusive.
