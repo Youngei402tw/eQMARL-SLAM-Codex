@@ -1,0 +1,12 @@
+{
+  "stage": "30",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "runs": [
+    {
+      "run_id": "30-tmlr-baselines_attempt-01",
+      "status": "planned",
+      "config_path": "configs/stage30/30-tmlr-baselines_attempt-01.yaml",
+      "config_sha256": "0cd834271a577459092455b0d29f0e764bb9507f269a0cf3916a0564bf55f236"
+    }
+  ]
+}
