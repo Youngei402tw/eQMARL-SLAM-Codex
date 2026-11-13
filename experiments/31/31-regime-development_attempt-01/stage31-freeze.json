@@ -1,0 +1,102 @@
+{
+  "schema_version": "stage31-freeze-v1",
+  "variant": "B_hidden_regime",
+  "beta": 1.0,
+  "candidate": {
+    "method": "recurrent_ppo",
+    "config": {
+      "name": "h64-lr3e-3",
+      "hidden": 64,
+      "learning_rate": 0.003,
+      "episodes": 4000
+    }
+  },
+  "rule": {
+    "alpha": 0.75,
+    "prior_weight": 80
+  },
+  "validation": {
+    "candidate_mean": 0.32285145347937944,
+    "rule_mean": 0.36788972130355735,
+    "belief_dp_mean": 0.37891774805262685,
+    "greedy_mean": 0.2277495742806544,
+    "candidate_means": {
+      "ppo:h32-lr3e-4": 0.30017371877717475,
+      "ppo:h64-lr3e-4": 0.30392145493585204,
+      "ppo:h64-lr1e-3": 0.3166174830020302,
+      "ppo:h128-lr3e-4": 0.2791622482157416,
+      "ppo:h128-lr1e-3": 0.30704149725122587,
+      "ppo:h64-lr3e-3": 0.2887490853605171,
+      "recurrent_ppo:h32-lr3e-4": 0.24747482942106824,
+      "recurrent_ppo:h64-lr3e-4": 0.25006188690507164,
+      "recurrent_ppo:h64-lr1e-3": 0.311890247915354,
+      "recurrent_ppo:h128-lr3e-4": 0.26481199955153795,
+      "recurrent_ppo:h128-lr1e-3": 0.31454887840896845,
+      "recurrent_ppo:h64-lr3e-3": 0.32285145347937944,
+      "dqn:h32-lr3e-4": 0.30775166324443287,
+      "dqn:h64-lr3e-4": 0.30367035831169537,
+      "dqn:h64-lr1e-3": 0.3115270070315132,
+      "dqn:h128-lr3e-4": 0.29529896619419255,
+      "dqn:h128-lr1e-3": 0.31335910419571317,
+      "dqn:h64-lr3e-3": 0.28440052585107173
+    }
+  },
+  "futility_stop": true,
+  "test_lock": {
+    "path": "configs/data/qip_v2/split-lock.json",
+    "sha256": "2467d5b023ee5b47a5743721502b20aaaa5ed57475fb8567eae3d96b15637e90"
+  },
+  "test_lock_content_sha256": "2467d5b023ee5b47a5743721502b20aaaa5ed57475fb8567eae3d96b15637e90",
+  "test_catalogs": [
+    {
+      "catalog_id": "qip2-test-a4-complete",
+      "path": "configs/data/qip_v2/test-a4-complete-catalog.json",
+      "sha256": "f6627a501cd8b5c143ef76e4d985cc92338820cd531def11b78bf5d5c9f06f45"
+    },
+    {
+      "catalog_id": "qip2-test-a5-ring",
+      "path": "configs/data/qip_v2/test-a5-ring-catalog.json",
+      "sha256": "8ccd9feb6935963893b2fd3374c1cb1106ba1b09df49e332dca3992e3df292d7"
+    },
+    {
+      "catalog_id": "qip2-test-a8-sparse",
+      "path": "configs/data/qip_v2/test-a8-sparse-catalog.json",
+      "sha256": "abef0875e89b249a46d0b73df77beeecfd424c992c96187dec86dde4ee288783"
+    },
+    {
+      "catalog_id": "qip2-test-a6-path-h24",
+      "path": "configs/data/qip_v2/test-a6-path-h24-catalog.json",
+      "sha256": "878b0202df35d2a66b7a79444fa01b56b5de7eda5a9fc86840609a759bd08915"
+    }
+  ],
+  "test_request_types": {
+    "path": "configs/data/qip_v2/test-request-types.json",
+    "sha256": "c1098430dfd72923f08f10fb561ea2ae92900c29c1a1bcd405c778c264024476"
+  },
+  "locked_seeds": [
+    31100,
+    31101,
+    31102,
+    31103,
+    31104,
+    31105,
+    31106,
+    31107,
+    31108,
+    31109,
+    31110,
+    31111
+  ],
+  "evaluation_seed_start": 3400000,
+  "evaluation_sequences": 500,
+  "certificate_seed": 315000,
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 931000,
+  "decision_rule": {
+    "primary": "candidate learner minus frozen bid-price rule, mean over the four qip_v2 sealed catalogs; seed-level percentile bootstrap (unit: 12 locked training seeds)",
+    "learned_superior": "95% lower bound > 0",
+    "rule_superior": "95% upper bound < 0",
+    "otherwise": "inconclusive",
+    "secondary": "learner minus greedy; fractions of the belief-state DP reference; regime-oracle gap; per-catalog means (descriptive)"
+  }
+}

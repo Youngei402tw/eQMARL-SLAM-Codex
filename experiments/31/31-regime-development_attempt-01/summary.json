@@ -1,0 +1,64 @@
+{
+  "run_id": "31-regime-development_attempt-01",
+  "source_commit": "5d1885f4e55f443c2fad75a67bdb01ada3d05010",
+  "config_sha256": "7daeb50d91330b55b81f098a7f2077244ff2498365c29164afb27822aad7445a",
+  "metrics_sha256": "81a48e6cb8b65a771cb5abb6a1dd60273c487a0b84287e53d2f1b79fd7d0e608",
+  "metrics_rows": 90,
+  "analysis_version": "harder-variant-development-v1",
+  "passed": true,
+  "gates": {
+    "all_trials_complete": true,
+    "test_files_not_opened": true,
+    "finite": true
+  },
+  "resources_consumed": {
+    "primitive_steps": 2497800,
+    "decisions": 2497800,
+    "updates": 430866,
+    "wall_seconds": 2670.7018761709996,
+    "cpu_core_hours": 2.7426122625000002,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "interpretation": "Development on non-test data; the qip_v2 test split is hash-referenced but never opened.",
+  "analysis": {
+    "candidate": "recurrent_ppo:h64-lr3e-3",
+    "candidate_validation_mean": 0.32285145347937944,
+    "best_rule": {
+      "alpha": 0.75,
+      "prior_weight": 80,
+      "catalog_means": {
+        "qip-validation-a3-ring": 0.13324362779036164,
+        "qip-validation-a4-sparse": 0.41436447034279505,
+        "qip-validation-a6-path": 0.5875418008118868,
+        "qip-validation-a6-star": 0.3364089862691859
+      },
+      "mean": 0.36788972130355735
+    },
+    "belief_dp_validation_mean": 0.37891774805262685,
+    "candidate_fraction_of_belief": 0.8520357126015102,
+    "rule_fraction_of_belief": 0.970895987834442,
+    "candidate_means": {
+      "ppo:h32-lr3e-4": 0.30017371877717475,
+      "ppo:h64-lr3e-4": 0.30392145493585204,
+      "ppo:h64-lr1e-3": 0.3166174830020302,
+      "ppo:h128-lr3e-4": 0.2791622482157416,
+      "ppo:h128-lr1e-3": 0.30704149725122587,
+      "ppo:h64-lr3e-3": 0.2887490853605171,
+      "recurrent_ppo:h32-lr3e-4": 0.24747482942106824,
+      "recurrent_ppo:h64-lr3e-4": 0.25006188690507164,
+      "recurrent_ppo:h64-lr1e-3": 0.311890247915354,
+      "recurrent_ppo:h128-lr3e-4": 0.26481199955153795,
+      "recurrent_ppo:h128-lr1e-3": 0.31454887840896845,
+      "recurrent_ppo:h64-lr3e-3": 0.32285145347937944,
+      "dqn:h32-lr3e-4": 0.30775166324443287,
+      "dqn:h64-lr3e-4": 0.30367035831169537,
+      "dqn:h64-lr1e-3": 0.3115270070315132,
+      "dqn:h128-lr3e-4": 0.29529896619419255,
+      "dqn:h128-lr1e-3": 0.31335910419571317,
+      "dqn:h64-lr3e-3": 0.28440052585107173
+    },
+    "futility_stop": true
+  }
+}

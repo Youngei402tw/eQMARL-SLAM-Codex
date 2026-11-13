@@ -108,3 +108,30 @@ The split lock is committed and hashed in the development config. Its contents h
 - 12 fresh seeds of the candidate learner, 4,000 episodes each, trained on development and validation.
 - One evaluation on qip_v2, 500 sequences per catalog.
 - **Primary:** candidate minus frozen bid-price, seed bootstrap. The result is learned superior, rule superior, or inconclusive.
+
+## 31c result: the futility stop fired, so the locked test was not run
+
+Run `31-regime-development_attempt-01` ran from source `5d1885f4e55f443c2fad75a67bdb01ada3d05010`. Its status is **completed**: all 54 trials ran and all gates passed.
+
+The validation-tuned bid-price rule (alpha = 0.75, omega = 80) reached 0.3679, which is **97.1%** of the belief-state DP reference (0.3789). The best configuration of each learner (mean over 3 seeds) scored:
+
+| Best configuration per learner | Validation mean | Of belief-state DP |
+|---|---|---|
+| recurrent_ppo:h64-lr3e-3 | 0.3229 | 85.2% |
+| ppo:h64-lr1e-3 | 0.3166 | 83.6% |
+| dqn:h128-lr1e-3 | 0.3134 | 82.7% |
+
+The best learner (`recurrent_ppo:h64-lr3e-3`) trails the rule by 0.0450. That exceeds the registered futility margin of 5% of the belief-DP mean (0.0189), so **`futility_stop = true`**.
+
+As registered, the locked test (31d) was **not** run, and the qip_v2 sealed split was **never opened**. It remains available, unused, for any future protocol.
+
+**Interpretation.** On the hidden-regime variant, which has 5% headroom by construction and where history carries information, equally tuned deep RL learners score about 12 points below a two-parameter pacing rule. The candidate learner is recurrent PPO, the only one that can infer the regime. This replicates the Stage-30 finding on a variant designed to favour learning.
+
+**Caveat.** The best configuration sits at the edge of the grid (learning rate 3e-3, the largest tried). A different budget might help learners somewhat, but the gap is about 2.5 times the futility margin.
+
+**Stage status: `completed_null_result`.**
+
+**Resources:**
+- 31a: 57 s.
+- 31c: 0.74 wall-hours, 2.74 CPU core-hours, 2,497,800 decisions, 430,866 updates.
+- Total: about 0.76 of the 10-hour cap.

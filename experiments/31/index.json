@@ -11,9 +11,10 @@
     },
     {
       "run_id": "31-regime-development_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config_path": "configs/stage31/31-regime-development_attempt-01.yaml",
-      "config_sha256": "7daeb50d91330b55b81f098a7f2077244ff2498365c29164afb27822aad7445a"
+      "config_sha256": "7daeb50d91330b55b81f098a7f2077244ff2498365c29164afb27822aad7445a",
+      "result_path": "experiments/31/31-regime-development_attempt-01"
     }
   ]
 }
