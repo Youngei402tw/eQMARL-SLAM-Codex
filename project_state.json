@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-11-13T11:24:27+00:00",
+  "updated_utc": "2026-11-13T11:26:45+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -17,7 +17,7 @@
   "current_branch": "stage/31-harder-variants",
   "dependency_commit": "e1ed982f2ff8a29346f43295a3e457dc9cfe4a1c",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "stage31_results_pending",
+  "publication_status": "stage31_manuscript_pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",

@@ -135,3 +135,7 @@ As registered, the locked test (31d) was **not** run, and the qip_v2 sealed spli
 - 31a: 57 s.
 - 31c: 0.74 wall-hours, 2.74 CPU core-hours, 2,497,800 decisions, 430,866 updates.
 - Total: about 0.76 of the 10-hour cap.
+
+## Manuscript update
+
+The TMLR manuscript (`docs/paper/tmlr/BELLROUTE_TMLR.pdf`, 16 pages) now has a §6.5 on the harder variants and an updated abstract, contributions, discussion, and conclusion. The new numbers are generated from the hash-checked 31a and 31c bundles: `generated/numbers30.tex` and `figure_data/tmlr_regime_validation.csv`. All 211 macros the paper uses appear verbatim in the PDF text. The request-weight range is corrected to {1, 2, 3, 4}, matching the data.
