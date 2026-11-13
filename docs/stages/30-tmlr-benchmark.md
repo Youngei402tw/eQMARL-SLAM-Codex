@@ -35,4 +35,4 @@ The registered decision rule is in `configs/stage30/30-tmlr-baselines_attempt-01
 - `eqmarl_slam/bellroute_env.py`, a Gymnasium environment that reproduces the archived evaluator exactly (tested).
 - The anonymized TMLR manuscript under `docs/paper/tmlr/`.
 
-Run `30-tmlr-baselines_attempt-01` is registered as planned.
+Run `30-tmlr-baselines_attempt-01` was registered as planned. It passed every execution gate, but the final archive validation rejected it because the run-manifest schema's stage enum stopped at `29`. That bundle is retained as `failed_archive_validation`. After the schema fix, run `30-tmlr-baselines_attempt-02`, identical apart from its run ID, is registered as planned.

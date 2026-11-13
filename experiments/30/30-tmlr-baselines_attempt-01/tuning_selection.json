@@ -1,0 +1,19 @@
+{
+  "bid_price": {
+    "alpha": 0.75,
+    "prior_weight": 80,
+    "validation_mean": 0.3533915068889037
+  },
+  "certainty_equivalent": {
+    "rho_development": 0.34701125348395934,
+    "kappa_by_warmup": {
+      "0": null,
+      "1": 8,
+      "3": 128,
+      "10": 8,
+      "30": 0.5,
+      "100": 0.5
+    }
+  },
+  "test_data_loaded": false
+}

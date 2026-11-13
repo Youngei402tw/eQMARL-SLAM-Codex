@@ -4,9 +4,17 @@
   "runs": [
     {
       "run_id": "30-tmlr-baselines_attempt-01",
-      "status": "planned",
+      "status": "failed_archive_validation",
       "config_path": "configs/stage30/30-tmlr-baselines_attempt-01.yaml",
-      "config_sha256": "0cd834271a577459092455b0d29f0e764bb9507f269a0cf3916a0564bf55f236"
+      "config_sha256": "0cd834271a577459092455b0d29f0e764bb9507f269a0cf3916a0564bf55f236",
+      "result_path": "experiments/30/30-tmlr-baselines_attempt-01",
+      "failure_reason": "Execution gates passed; final archive validation rejected stage ID '30', which the run-manifest schema enum did not yet list. Fixed in the schema; rerun as attempt-02 with an otherwise identical config. Results of this attempt were not inspected before the rerun."
+    },
+    {
+      "run_id": "30-tmlr-baselines_attempt-02",
+      "status": "planned",
+      "config_path": "configs/stage30/30-tmlr-baselines_attempt-02.yaml",
+      "config_sha256": "304221cbccc92224c1a4f5d23c090a23d36d041a7e969638b1d53fd7c6b059f2"
     }
   ]
 }
