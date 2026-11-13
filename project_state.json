@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-11-13T05:32:05+00:00",
+  "updated_utc": "2026-11-13T05:35:14+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -17,7 +17,7 @@
   "current_branch": "stage/29-qip-release",
   "dependency_commit": "66d13965bfed17a18d2b2c8310baa755c0aeb38a",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "stage29_results_pending",
+  "publication_status": "complete_remote_verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -57,10 +57,11 @@
     "stage/25-qip-extension-plan": "dcf958dc69813b1bc4fa64c06510ba71ca077286",
     "stage/26-qip-learned-baselines": "0da2e6046671a03d2ff6de06c1fcbf7b1bbe8fe1",
     "stage/27-qip-robustness-scaling": "60ad022b30be04926443a04b9998883c499ffe97",
-    "stage/28-qip-confirmatory": "915ccba8fe9d3be524e4d2e8346302fd52aff7cf"
+    "stage/28-qip-confirmatory": "915ccba8fe9d3be524e4d2e8346302fd52aff7cf",
+    "stage/29-qip-release": "709938ef520f91555015a2cf853d159081e1eeff"
   },
   "blockers": [],
-  "next_action": "Publish and verify Stage 29 results, check GitHub Actions, and record the publication receipt.",
+  "next_action": "Registered QIP extension complete; author actions in docs/paper/SUBMISSION_CHECKLIST.md.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
@@ -72,10 +73,10 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "29",
+  "next_stage": null,
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
-  "next_stage_status": "planned",
+  "next_stage_status": "none_registered",
   "completed_stage_budgets": {
     "01": {
       "cap_wall_seconds": 86400,

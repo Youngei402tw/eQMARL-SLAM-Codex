@@ -1,0 +1,15 @@
+{
+  "stage": "29",
+  "branch": "stage/29-qip-release",
+  "repository": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+  "source_commit": "865932a368e4a280165c583d59b2550c44769553",
+  "results_commit": "709938ef520f91555015a2cf853d159081e1eeff",
+  "remote_ref": "refs/heads/stage/29-qip-release",
+  "remote_sha_verified": "709938ef520f91555015a2cf853d159081e1eeff",
+  "bundle": "experiments/29/29-qip-release-audit_attempt-01",
+  "paper_pdf": "docs/paper/QIP_ROBUST_ENTANGLEMENT_ROUTING.pdf",
+  "paper_pdf_sha256": "d28d3ec9d1c8014bcee40f44ecebce00c2430b4b536deac4c7e666c8a27d81fd",
+  "github_actions": "success https://github.com/Youngei402tw/eQMARL-SLAM-Codex/actions/runs/43372771838",
+  "verified": true,
+  "verified_utc": "2026-11-13T05:35:14+00:00"
+}
