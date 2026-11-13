@@ -1,0 +1,111 @@
+{
+  "run_id": "31-headroom-pilot_attempt-01",
+  "stage": "31",
+  "protocol_id": "bellroute-harder-variants-v1",
+  "profile": "diagnostic",
+  "experiment": "harder-variant-headroom",
+  "hypothesis": "At least one harder BellRoute variant (generate-and-store with decoherence, or a hidden demand regime) leaves the best development-tuned equal-information rule at or below 95% of its optimal (or belief-state) reference on held-out validation catalogs, creating room for learning.",
+  "method": "development-only shared-parameter tuning of bid-price rules, validation-catalog scoring against exact DP (A) and 41-point belief-state DP (B); no training, no test data",
+  "dependency_completion_commit": "e1ed982f2ff8a29346f43295a3e457dc9cfe4a1c",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 20000000,
+  "max_cpu_threads": 2,
+  "freeze": {
+    "path": "experiments/27/27-qip-robustness-scaling_attempt-01/stage28-freeze.json",
+    "sha256": "ff34ffbb5a30053555de83494c937980ad4f91c5e4e87f2401833cf173df60ef"
+  },
+  "gate_fraction": 0.95,
+  "variant_a": {
+    "capacity": 3,
+    "gen_prob": 0.25,
+    "decay": 0.985,
+    "bid_price": {
+      "alpha": [
+        0.5,
+        0.75,
+        1.0,
+        1.5,
+        2.0,
+        2.5
+      ],
+      "prior_weight": [
+        0,
+        10,
+        40
+      ]
+    }
+  },
+  "variant_b": {
+    "beta": 1.0,
+    "bid_price": {
+      "alpha": [
+        0.5,
+        0.75,
+        1.0,
+        1.25,
+        1.5
+      ],
+      "prior_weight": [
+        0,
+        20,
+        80
+      ]
+    }
+  },
+  "variant_setting_selection": "Variant parameters were chosen by an unregistered exploratory sweep on the development catalogs (the settings with the most apparent headroom for in-sample-tuned rules); this run re-tunes rules with one shared parameter set and scores on held-out validation catalogs.",
+  "tuning_seed_start": 3100000,
+  "tuning_sequences": 200,
+  "evaluation_seed_start": 3200000,
+  "evaluation_sequences": 500,
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": 3200000,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    },
+    "test": {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+    }
+  },
+  "model": {
+    "actor": "non-learned rules and exact/belief DP references",
+    "encoder": "none",
+    "critic": "none",
+    "parameter_counts": {
+      "rule_parameters": 2
+    },
+    "optimizer": "grid search on development catalogs"
+  },
+  "quantum": {
+    "device": "archived non-test analytic request certificates",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "none",
+    "dtype": "float64",
+    "entanglement": "one stored or budgeted pair per served edge",
+    "observables": [
+      "recorded expected parity success"
+    ],
+    "noise": "variant A: Werner decay of stored pairs; variant B: ideal",
+    "resource_accounting": "allocator decisions; no training, circuits, or shots"
+  },
+  "action_modes": "deterministic rules and DP policies on paired seeded sequences",
+  "checkpoint_selection": "none",
+  "analysis_version": "harder-variant-headroom-v1",
+  "interpretation": "Design diagnostic deciding whether learner development on a harder variant is worthwhile; no learned model and no test data."
+}

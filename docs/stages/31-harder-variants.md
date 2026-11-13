@@ -1,6 +1,6 @@
 # Stage 31 — Can learning beat strong rules when pacing is not enough? (proposal)
 
-**Status: planned. No branch, no code, and no runs yet.** Execution needs explicit approval from the user, because it starts a new research direction and spends several CPU-hours on training.
+**Status: 31a in progress.** The user said "continue", which authorizes only the cheap headroom pilot (31a): development and validation data, no training, no test data. Learner training (31b–31d) still needs explicit approval.
 
 ## Why
 
@@ -57,3 +57,15 @@ The current manuscript stands on its own and can be submitted now. A positive St
 1. Approve variant A, B, or both for the 31a pilot.
 2. Approve the 10-hour CPU cap for 31b–31d. This does not apply if the 31a gate stops the stage.
 3. Choose whether to submit the TMLR paper now or wait for Stage 31.
+
+## 31a registration
+
+Run `31-headroom-pilot_attempt-01` is registered as planned (`configs/stage31/31-headroom-pilot_attempt-01.yaml`).
+
+**Fixed settings.**
+- Variant A: capacity 3, generation probability 0.25 per round, storage decay 0.985 per round.
+- Variant B: tilt beta = 1.
+
+**Disclosure.** These settings were chosen in an unregistered exploratory sweep on the development catalogs. In that sweep, rules tuned separately for each catalog reached 94.5–96% of the optimum for A and 95.6–96.4% of the belief-state optimum for B.
+
+**Design.** The registered run tunes each rule with a single shared parameter set on the development catalogs and then scores it on the four held-out validation catalogs. The gate is 95%.

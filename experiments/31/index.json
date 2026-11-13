@@ -1,0 +1,12 @@
+{
+  "stage": "31",
+  "protocol_id": "bellroute-harder-variants-v1",
+  "runs": [
+    {
+      "run_id": "31-headroom-pilot_attempt-01",
+      "status": "planned",
+      "config_path": "configs/stage31/31-headroom-pilot_attempt-01.yaml",
+      "config_sha256": "f9d100d4eaaba2d381613c2769c536afed7ef317ec8040b2c520b57475683fa0"
+    }
+  ]
+}
