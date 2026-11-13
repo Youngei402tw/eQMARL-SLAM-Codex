@@ -599,10 +599,13 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/30-tmlr-benchmark.md",
-      "status": "in_progress",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "d577eac9903f985a231d053be91e8d4a0b99d63d",
-      "branch_created_from_commit": "d577eac9903f985a231d053be91e8d4a0b99d63d"
+      "branch_created_from_commit": "d577eac9903f985a231d053be91e8d4a0b99d63d",
+      "source_commit": "03d4b07edc75862960d77c0ec070c33dfa2daa53",
+      "results_commit": "bd193689083ae4a27b86d795e3b40acd6de319ed",
+      "publication_receipt": "docs/stages/30-publication.json"
     }
   ],
   "recommended_execution_order": [

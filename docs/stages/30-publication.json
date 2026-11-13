@@ -1,0 +1,21 @@
+{
+  "stage": "30",
+  "branch": "stage/30-tmlr-benchmark",
+  "repository": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+  "source_commits": {
+    "attempt-01": "586c6b92245f130bbd3ae8eeae05183abf6aa9b9",
+    "attempt-02": "03d4b07edc75862960d77c0ec070c33dfa2daa53"
+  },
+  "results_commit": "bd193689083ae4a27b86d795e3b40acd6de319ed",
+  "manuscript_commit": "ec918cdf45d941236aeccd7ac8001167cd58c984",
+  "remote_ref": "refs/heads/stage/30-tmlr-benchmark",
+  "remote_sha_verified": "ec918cdf45d941236aeccd7ac8001167cd58c984",
+  "bundle": "experiments/30/30-tmlr-baselines_attempt-02",
+  "retained_failed_bundle": "experiments/30/30-tmlr-baselines_attempt-01",
+  "registered_decision": "bid_price_superior",
+  "paper_pdf": "docs/paper/tmlr/BELLROUTE_TMLR.pdf",
+  "paper_pdf_sha256": "930bff5bdf0f330011465300003dd16e356b0dc00a8c0eaa7e4f892a5dfef347",
+  "github_actions": "success https://github.com/Youngei402tw/eQMARL-SLAM-Codex/actions/runs/43387696986",
+  "verified": true,
+  "verified_utc": "2026-11-13T07:45:07+00:00"
+}
