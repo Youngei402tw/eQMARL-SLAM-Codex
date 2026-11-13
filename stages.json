@@ -605,7 +605,22 @@
       "branch_created_from_commit": "d577eac9903f985a231d053be91e8d4a0b99d63d",
       "source_commit": "03d4b07edc75862960d77c0ec070c33dfa2daa53",
       "results_commit": "bd193689083ae4a27b86d795e3b40acd6de319ed",
-      "publication_receipt": "docs/stages/30-publication.json"
+      "publication_receipt": "docs/stages/30-publication.json",
+      "completion_commit": "e1ed982f2ff8a29346f43295a3e457dc9cfe4a1c"
+    },
+    {
+      "id": "31",
+      "name": "harder-variants",
+      "title": "Harder BellRoute variants where pacing rules may fail (proposal)",
+      "branch": "stage/31-harder-variants",
+      "depends_on": [
+        "30"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/31-harder-variants.md",
+      "status": "planned",
+      "branch_created": false,
+      "requires_user_approval": true
     }
   ],
   "recommended_execution_order": [
@@ -639,6 +654,7 @@
     "27",
     "28",
     "29",
-    "30"
+    "30",
+    "31"
   ]
 }

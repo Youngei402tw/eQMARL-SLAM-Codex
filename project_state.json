@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-11-13T07:45:07+00:00",
+  "updated_utc": "2026-11-13T10:15:51+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -62,7 +62,7 @@
     "stage/30-tmlr-benchmark": "ec918cdf45d941236aeccd7ac8001167cd58c984"
   },
   "blockers": [],
-  "next_action": "Author actions for TMLR submission in docs/paper/tmlr/SUBMISSION_CHECKLIST.md (anonymized supplement; no dual submission with the QIP draft).",
+  "next_action": "User decisions for the Stage 31 proposal (docs/stages/31-harder-variants.md); TMLR submission author actions in docs/paper/tmlr/SUBMISSION_CHECKLIST.md.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
@@ -74,10 +74,10 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": null,
+  "next_stage": "31",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
-  "next_stage_status": "none_registered",
+  "next_stage_status": "planned_awaiting_user_approval",
   "completed_stage_budgets": {
     "01": {
       "cap_wall_seconds": 86400,
