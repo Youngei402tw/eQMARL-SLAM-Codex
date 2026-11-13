@@ -36,3 +36,31 @@ The registered decision rule is in `configs/stage30/30-tmlr-baselines_attempt-01
 - The anonymized TMLR manuscript under `docs/paper/tmlr/`.
 
 Run `30-tmlr-baselines_attempt-01` was registered as planned. It passed every execution gate, but the final archive validation rejected it because the run-manifest schema's stage enum stopped at `29`. That bundle is retained as `failed_archive_validation`. After the schema fix, run `30-tmlr-baselines_attempt-02`, identical apart from its run ID, is registered as planned.
+
+## Result
+
+Run `30-tmlr-baselines_attempt-02` ran from source `03d4b07edc75862960d77c0ec070c33dfa2daa53`. Its status is **completed** and all six execution gates passed. The evaluator reproduced the archived Stage-28 greedy and online-DP rows with a maximum absolute error of 0.0. The retained attempt-01 bundle produced identical method means.
+
+**Validation-only selection.** The selected bid-price configuration was alpha = 0.75 and prior_weight = 80, with a validation mean of 0.3534. The best Stage-26 learners scored 0.3235–0.3247 on the same validation catalogs (under different sequences). For certainty-equivalent DP, the development self-loop was rho = 0.3470, and the selected kappa for each K was {"0": null, "1": 8, "3": 128, "10": 8, "30": 0.5, "100": 0.5}.
+
+**Registered primary decision: `bid_price_superior`.** PPO minus bid-price was -0.0890, with 95% CI [-0.0964, -0.0821]. The heuristic was ahead of all 12 PPO seeds. DQN minus bid-price was -0.0772, with 95% CI [-0.0864, -0.0675]. On the two fully fresh catalogs, PPO minus bid-price was -0.1035, with 95% CI [-0.1124, -0.0950].
+
+The registered falsifier therefore fired: a two-parameter pacing rule tuned on validation data dominates both learned allocators. The Stage-28 result that the learners beat greedy still stands, but the claim that learned allocators are a strong solution to this benchmark is withdrawn.
+
+**Certainty-equivalent DP** matched online DP even with K = 0 logged sequences (registered break-even K = 0). With the catalog's public state table and only a generic self-loop prior, planning loses almost nothing relative to knowing the true transition matrix. Most of the learners' shortfall is therefore budget pacing against the future gain distribution, not dynamics prediction.
+
+| Method | Mean (all) | Of online DP | Mean (fresh) | Of online DP (fresh) |
+|---|---|---|---|---|
+| greedy_recomputed | 0.4183 | 51.9% | 0.5212 | 53.7% |
+| online_dp_recomputed | 0.8060 | 100.0% | 0.9714 | 100.0% |
+| bid_price | 0.7836 | 97.2% | 0.9386 | 96.6% |
+| ce_dp_k0 | 0.8052 | 99.9% | 0.9704 | 99.9% |
+| ce_dp_k1 | 0.8045 | 99.8% | 0.9687 | 99.7% |
+| ce_dp_k3 | 0.8054 | 99.9% | 0.9705 | 99.9% |
+| ce_dp_k10 | 0.8030 | 99.6% | 0.9658 | 99.4% |
+| ce_dp_k30 | 0.8043 | 99.8% | 0.9703 | 99.9% |
+| ce_dp_k100 | 0.8057 | 100.0% | 0.9711 | 100.0% |
+| ppo | 0.6946 | 86.2% | 0.8352 | 86.0% |
+| dqn | 0.7065 | 87.7% | 0.8351 | 86.0% |
+
+**Resources.** 77.5 wall-seconds, 0.0210 CPU core-hours, 1,736,000 allocator decisions, no training, and no shots. Attempt-01 used about the same.

@@ -1,0 +1,125 @@
+{
+  "run_id": "30-tmlr-baselines_attempt-02",
+  "stage": "30",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "profile": "diagnostic",
+  "experiment": "tmlr-stronger-baselines",
+  "hypothesis": "On the sealed Stage-28 catalogs, the frozen PPO allocator's advantage over greedy survives a validation-tuned budget-pacing (bid-price) heuristic; a certainty-equivalent DP planner needs a measurable amount of logged test-catalog public data to match the zero-shot learned allocator.",
+  "method": "validation-only tuning of bid-price threshold and certainty-equivalent DP, single sealed-catalog evaluation, paired comparison with archived Stage-28 learned rows",
+  "dependency_completion_commit": "d577eac9903f985a231d053be91e8d4a0b99d63d",
+  "wall_seconds": 3600,
+  "max_primitive_steps": 3000000,
+  "max_cpu_threads": 2,
+  "freeze": {
+    "path": "experiments/27/27-qip-robustness-scaling_attempt-01/stage28-freeze.json",
+    "sha256": "ff34ffbb5a30053555de83494c937980ad4f91c5e4e87f2401833cf173df60ef"
+  },
+  "stage28_bundle": "experiments/28/28-qip-confirmatory_attempt-01",
+  "fresh_catalogs": [
+    "qip-test-topology-a6-ring",
+    "qip-test-scale-a8-sparse"
+  ],
+  "tuning": {
+    "validation_seed_start": 330000,
+    "validation_sequences_per_catalog": 500,
+    "validation_warmup_seed_start": 340000,
+    "bid_price": {
+      "alpha": [
+        0.5,
+        0.75,
+        1.0,
+        1.25,
+        1.5,
+        2.0,
+        3.0
+      ],
+      "prior_weight": [
+        0,
+        5,
+        20,
+        80,
+        320
+      ]
+    },
+    "certainty_equivalent": {
+      "warmup_episodes": [
+        0,
+        1,
+        3,
+        10,
+        30,
+        100
+      ],
+      "kappa": [
+        0.5,
+        2,
+        8,
+        32,
+        128
+      ]
+    }
+  },
+  "test_warmup_seed_start": 940000,
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 930000,
+  "registered_decision_rule": {
+    "primary": "PPO minus tuned bid-price, mean over the four sealed catalogs, seed-level percentile bootstrap (unit: the 12 frozen Stage-28 PPO training seeds; the heuristic is deterministic).",
+    "learned_superior": "95% lower bound > 0",
+    "bid_price_superior": "95% upper bound < 0",
+    "otherwise": "inconclusive",
+    "secondary": "Same contrast for DQN, and for both learners on the two fully fresh catalogs; certainty-equivalent DP results are descriptive, reported as the smallest registered warm-up size whose mean reaches the PPO mean (or none).",
+    "post_lock_status": "The sealed catalogs were opened in Stage 28. These comparators never touched them before this run, and no learned model is retrained, reselected, or re-evaluated."
+  },
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": 228000,
+    "sensor": null,
+    "action": 810000,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    },
+    "test": {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+    }
+  },
+  "model": {
+    "actor": "non-learned: tuned bid-price threshold; certainty-equivalent finite-horizon DP",
+    "encoder": "none",
+    "critic": "none",
+    "parameter_counts": {
+      "bid_price_tuned_parameters": 2,
+      "certainty_equivalent_tuned_parameters": 1
+    },
+    "optimizer": "grid search on validation catalogs only"
+  },
+  "quantum": {
+    "device": "archived Stage-28 analytic request certificates (hash-verified)",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "none",
+    "dtype": "float64 planning, float32 gains as in the evaluator",
+    "entanglement": "one attempted pair per selected edge",
+    "observables": [
+      "binary parity success"
+    ],
+    "noise": "ideal only",
+    "resource_accounting": "allocator decisions and DP solves; no training, circuits, or shots"
+  },
+  "action_modes": "deterministic masked matchings on paired sealed sequences",
+  "checkpoint_selection": "none; archived learned rows are read, no checkpoint is loaded",
+  "analysis_version": "tmlr-baselines-v1",
+  "interpretation": "Post-lock comparator evaluation requested for a machine-learning venue; it adds baselines and does not alter any Stage-28 decision."
+}

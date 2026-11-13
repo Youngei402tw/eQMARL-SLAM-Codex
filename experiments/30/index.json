@@ -12,9 +12,10 @@
     },
     {
       "run_id": "30-tmlr-baselines_attempt-02",
-      "status": "planned",
+      "status": "completed",
       "config_path": "configs/stage30/30-tmlr-baselines_attempt-02.yaml",
-      "config_sha256": "304221cbccc92224c1a4f5d23c090a23d36d041a7e969638b1d53fd7c6b059f2"
+      "config_sha256": "304221cbccc92224c1a4f5d23c090a23d36d041a7e969638b1d53fd7c6b059f2",
+      "result_path": "experiments/30/30-tmlr-baselines_attempt-02"
     }
   ]
 }
