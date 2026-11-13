@@ -618,11 +618,14 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/31-harder-variants.md",
-      "status": "in_progress",
+      "status": "completed_null_result",
       "branch_created": true,
       "dependency_completion_commit": "e1ed982f2ff8a29346f43295a3e457dc9cfe4a1c",
       "branch_created_from_commit": "9f9a3f613efce04d81d785019835422699cecf6b",
-      "authorized_scope": "31a-31d; user approved option 1 (full study, up to 10 CPU wall-hours) on 2026-11-13"
+      "authorized_scope": "31a-31d; user approved option 1 (full study, up to 10 CPU wall-hours) on 2026-11-13",
+      "source_commit": "5d1885f4e55f443c2fad75a67bdb01ada3d05010",
+      "results_commit": "ec8766de0676ba70dff73021e856f9527face19f",
+      "publication_receipt": "docs/stages/31-publication.json"
     }
   ],
   "recommended_execution_order": [

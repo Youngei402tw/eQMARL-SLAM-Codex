@@ -1,0 +1,26 @@
+{
+  "stage": "31",
+  "branch": "stage/31-harder-variants",
+  "repository": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+  "outcome": "completed_null_result (registered futility stop; locked test not run; qip_v2 test split never opened)",
+  "source_commits": {
+    "31a": "1e12f30cd092b7bae8b6d74fdc33be567216aab8",
+    "31c": "5d1885f4e55f443c2fad75a67bdb01ada3d05010"
+  },
+  "results_commits": {
+    "31a": "bf376a9387b3e569d86b2d9823e90e78f0762328",
+    "31c": "ec8766de0676ba70dff73021e856f9527face19f"
+  },
+  "manuscript_commit": "2e302c11a8d13228b95a97d79f94cde76a5ecb1b",
+  "remote_ref": "refs/heads/stage/31-harder-variants",
+  "remote_sha_verified": "2e302c11a8d13228b95a97d79f94cde76a5ecb1b",
+  "bundles": [
+    "experiments/31/31-headroom-pilot_attempt-01",
+    "experiments/31/31-regime-development_attempt-01"
+  ],
+  "paper_pdf": "docs/paper/tmlr/BELLROUTE_TMLR.pdf",
+  "paper_pdf_sha256": "801c1a1e125cdfd4a507a3a1caa14a7a62a4bfa3bfe755a3247b6691d1984486",
+  "github_actions": "success https://github.com/Youngei402tw/eQMARL-SLAM-Codex/actions/runs/43417175702",
+  "verified": true,
+  "verified_utc": "2026-11-13T11:29:34+00:00"
+}
