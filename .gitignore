@@ -21,3 +21,4 @@ tmp/
 
 # LaTeX build products (the final PDF is copied next to the source).
 docs/paper/build/
+docs/paper/tmlr/build/

@@ -121,6 +121,10 @@ Certify the sealed test request family, train fresh independent seeds using only
 
 Reproduce tables and figures from raw Stage 28 records, verify hashes and archives, rewrite the manuscript for the scope and conventions of *Quantum Information Processing*, and compile a submission-ready LaTeX/PDF package. Gate: scientific claims match the registered outcomes; all code, resolved configurations, raw results, diagnostics, and required artifacts are remotely retrievable; the repository workflow passes.
 
+## Stage 30 — Machine-learning venue revision
+
+Authorized by the user on 2026-11-13 after Stage 29. Add the two comparators a machine-learning reviewer requires: a validation-tuned budget-pacing (bid-price) heuristic and certainty-equivalent DP with logged public data. Evaluate them once on the sealed catalogs against the archived Stage-28 learned rows, without retraining or reselecting any model. Release a Gymnasium interface and prepare an anonymized TMLR manuscript. Gate: tuning precedes any test access, the evaluator reproduces archived Stage-28 rows, every outcome is reported against its registered rule, and all artifacts are remotely retrievable.
+
 The [experiment protocol](EXPERIMENT_PROTOCOL.md) controls budget semantics; [compute_profiles.json](../configs/compute_profiles.json) is the machine-readable representation. Resolve any disagreement before execution. The initial stage cap is 24 cumulative active execution wall-hours across runs, attempts, and resumed sessions. A restart, new branch, or renamed run must not reset consumed budget. More restrictive per-run and host limits also apply. Record CPU core-hours and GPU device-hours separately; they are not interchangeable budget units.
 
 ## Stage 00 — Plan and repository foundation

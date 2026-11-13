@@ -586,7 +586,26 @@
       "branch_created_from_commit": "66d13965bfed17a18d2b2c8310baa755c0aeb38a",
       "source_commit": "865932a368e4a280165c583d59b2550c44769553",
       "results_commit": "709938ef520f91555015a2cf853d159081e1eeff",
-      "publication_receipt": "docs/stages/29-publication.json"
+      "publication_receipt": "docs/stages/29-publication.json",
+      "completion_commit": "d577eac9903f985a231d053be91e8d4a0b99d63d"
+    },
+    {
+      "id": "30",
+      "name": "tmlr-benchmark",
+      "title": "Machine-learning venue revision: stronger baselines, Gymnasium release, TMLR manuscript",
+      "branch": "stage/30-tmlr-benchmark",
+      "depends_on": [
+        "29"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/30-tmlr-benchmark.md",
+      "status": "passed",
+      "branch_created": true,
+      "dependency_completion_commit": "d577eac9903f985a231d053be91e8d4a0b99d63d",
+      "branch_created_from_commit": "d577eac9903f985a231d053be91e8d4a0b99d63d",
+      "source_commit": "03d4b07edc75862960d77c0ec070c33dfa2daa53",
+      "results_commit": "bd193689083ae4a27b86d795e3b40acd6de319ed",
+      "publication_receipt": "docs/stages/30-publication.json"
     }
   ],
   "recommended_execution_order": [
@@ -619,6 +638,7 @@
     "26",
     "27",
     "28",
-    "29"
+    "29",
+    "30"
   ]
 }

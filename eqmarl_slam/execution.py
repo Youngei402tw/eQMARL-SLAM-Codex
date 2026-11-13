@@ -218,6 +218,9 @@ def execute(config_path, source_receipt):
         elif config["experiment"] == "qip-release-audit":
             from .diagnostics29 import run_diagnostics
             diagnostics = run_diagnostics(config, output, emit, progress=progress)
+        elif config["experiment"] == "tmlr-stronger-baselines":
+            from .diagnostics30 import run_diagnostics
+            diagnostics = run_diagnostics(config, output, emit, progress=progress)
         elif config["experiment"] == "legacy-reference":
             command = [config["interpreter"], str(ROOT / "eqmarl_slam/reference_probe.py"),
                        "--fixtures", str(ROOT / config["fixtures"]),

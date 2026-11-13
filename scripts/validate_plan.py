@@ -37,7 +37,7 @@ EXPECTED_BRANCHES = [
     "stage/24-budgeted-entanglement-release",
     "stage/25-qip-extension-plan", "stage/26-qip-learned-baselines",
     "stage/27-qip-robustness-scaling", "stage/28-qip-confirmatory",
-    "stage/29-qip-release",
+    "stage/29-qip-release", "stage/30-tmlr-benchmark",
 ]
 
 
