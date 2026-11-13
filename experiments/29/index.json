@@ -1,0 +1,12 @@
+{
+  "stage": "29",
+  "protocol_id": "robust-entanglement-routing-v1",
+  "runs": [
+    {
+      "run_id": "29-qip-release-audit_attempt-01",
+      "status": "planned",
+      "config_path": "configs/stage29/29-qip-release-audit_attempt-01.yaml",
+      "config_sha256": "b4100272f5ce2aa505908777064484cad9d91bd3b8b28fb2be5c26e7acd69c85"
+    }
+  ]
+}

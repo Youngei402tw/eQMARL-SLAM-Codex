@@ -18,3 +18,6 @@ tmp/
 
 # experiments/ and checkpoint extensions are intentionally not blanket-ignored.
 # Archive policy: docs/GITHUB_WORKFLOW.md.
+
+# LaTeX build products (the final PDF is copied next to the source).
+docs/paper/build/

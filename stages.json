@@ -567,7 +567,8 @@
       "branch_created_from_commit": "93038f28f791f1d6099d89a6eedf17e8dbb036c1",
       "source_commit": "3d3ea45ab610a4752a61ac41456aeb5ae009998e",
       "results_commit": "915ccba8fe9d3be524e4d2e8346302fd52aff7cf",
-      "publication_receipt": "docs/stages/28-publication.json"
+      "publication_receipt": "docs/stages/28-publication.json",
+      "completion_commit": "66d13965bfed17a18d2b2c8310baa755c0aeb38a"
     },
     {
       "id": "29",
@@ -579,8 +580,10 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/29-qip-release.md",
-      "status": "planned",
-      "branch_created": false
+      "status": "in_progress",
+      "branch_created": true,
+      "dependency_completion_commit": "66d13965bfed17a18d2b2c8310baa755c0aeb38a",
+      "branch_created_from_commit": "66d13965bfed17a18d2b2c8310baa755c0aeb38a"
     }
   ],
   "recommended_execution_order": [
