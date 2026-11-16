@@ -1,0 +1,168 @@
+{
+  "run_id": "32-learner-strength_attempt-01",
+  "stage": "32",
+  "protocol_id": "bellroute-learner-strength-v1",
+  "profile": "tuning",
+  "experiment": "learner-strength",
+  "hypothesis": "With a wider grid (past the previous edge), 2.4-3.2x longer training, a calibrated PPO value baseline, and 6 seeds, the best learner still trails the validation-tuned bid-price rule on fresh validation sequences of BellRoute v1.",
+  "method": "PPO and DQN, 6 configs x 2 seeds on development catalogs with learning-curve checkpoints, then 4 extra seeds of each selected config; selection and rule tuning on validation selection sequences; final comparison on disjoint validation comparison sequences",
+  "dependency_completion_commit": "f8b6536c398abc6787fa1f6d39ffb6a25a66cc3d",
+  "wall_seconds": 16200,
+  "max_primitive_steps": 20000000,
+  "max_cpu_threads": 4,
+  "workers": 4,
+  "v1_freeze": {
+    "path": "experiments/27/27-qip-robustness-scaling_attempt-01/stage28-freeze.json",
+    "sha256": "ff34ffbb5a30053555de83494c937980ad4f91c5e4e87f2401833cf173df60ef"
+  },
+  "methods": [
+    "ppo",
+    "dqn"
+  ],
+  "learner_configs": [
+    {
+      "name": "h64-lr1e-3",
+      "hidden": 64,
+      "learning_rate": 0.001
+    },
+    {
+      "name": "h64-lr3e-3",
+      "hidden": 64,
+      "learning_rate": 0.003
+    },
+    {
+      "name": "h64-lr1e-2",
+      "hidden": 64,
+      "learning_rate": 0.01
+    },
+    {
+      "name": "h256-lr1e-3",
+      "hidden": 256,
+      "learning_rate": 0.001
+    },
+    {
+      "name": "h256-lr3e-3",
+      "hidden": 256,
+      "learning_rate": 0.003
+    },
+    {
+      "name": "h256-lr1e-2",
+      "hidden": 256,
+      "learning_rate": 0.01
+    }
+  ],
+  "grid_edge_suffix": "lr1e-2",
+  "episodes": {
+    "ppo": 8000,
+    "dqn": 6000
+  },
+  "curve_checkpoints": [
+    2000,
+    4000
+  ],
+  "grid_seeds": [
+    32000,
+    32001
+  ],
+  "extra_seeds": [
+    32002,
+    32003,
+    32004,
+    32005
+  ],
+  "method_seed_offset": {
+    "ppo": 0,
+    "dqn": 1000
+  },
+  "selection_seed_start": 3500000,
+  "selection_sequences": 200,
+  "comparison_seed_start": 3600000,
+  "comparison_sequences": 500,
+  "bid_price": {
+    "alpha": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "prior_weight": [
+      0,
+      5,
+      20,
+      80,
+      320
+    ]
+  },
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 932000,
+  "previous_best": {
+    "stage26_validation": {
+      "dqn": 0.3235,
+      "double_dqn": 0.3209,
+      "ppo": 0.3247,
+      "recurrent_ppo": 0.3047
+    },
+    "note": "different sequences; context only"
+  },
+  "decision_rule": {
+    "primary": "best method (by selection-sequence mean of its selected config) minus the selected bid-price rule, mean over the 4 validation catalogs on comparison sequences; percentile bootstrap over its 6 seeds",
+    "gap_persists": "95% upper bound < 0",
+    "learner_superior": "95% lower bound > 0",
+    "otherwise": "inconclusive",
+    "secondary": "same contrast for the other method; fractions of online DP; learning curves at 2000/4000/final episodes; whether the selected config is at the new grid edge"
+  },
+  "seed_streams": {
+    "model_init": 32000,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": 3500000,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    },
+    "test": {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+    }
+  },
+  "model": {
+    "actor": "masked graph-conditioned PPO (calibrated value) and DQN",
+    "encoder": "permutation-invariant public-edge encoder",
+    "critic": "PPO state value or DQN target network",
+    "parameter_counts": {
+      "reported_per_checkpoint": true
+    },
+    "optimizer": "Adam; 6-config grid incl. lr 1e-2 and width 256"
+  },
+  "quantum": {
+    "device": "archived non-test analytic request certificates",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "float32 allocator learning",
+    "dtype": "float64",
+    "entanglement": "one budgeted pair per served edge",
+    "observables": [
+      "recorded expected parity success"
+    ],
+    "noise": "ideal",
+    "resource_accounting": "decisions, updates; no circuits or shots"
+  },
+  "action_modes": "sampled in training; argmax at evaluation",
+  "checkpoint_selection": "final checkpoint; config chosen by selection-sequence mean",
+  "analysis_version": "learner-strength-v1",
+  "interpretation": "Reviewer-risk check on non-test data only; it cannot change any locked decision."
+}

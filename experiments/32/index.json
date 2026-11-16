@@ -1,0 +1,12 @@
+{
+  "stage": "32",
+  "protocol_id": "bellroute-learner-strength-v1",
+  "runs": [
+    {
+      "run_id": "32-learner-strength_attempt-01",
+      "status": "planned",
+      "config_path": "configs/stage32/32-learner-strength_attempt-01.yaml",
+      "config_sha256": "6a411692d53802789c89d089953764574a4d9170f3734713468371889ed87d4f"
+    }
+  ]
+}

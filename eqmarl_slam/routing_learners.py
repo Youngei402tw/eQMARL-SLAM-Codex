@@ -83,7 +83,9 @@ def choose_q(model: ActionScore, mdp: RobustRoutingMDP, state: int, budget: int,
 
 
 def train_q(maps: list[RobustRoutingMDP], seed: int, episodes: int, hidden: int, learning_rate: float,
-            *, double: bool, feature_mode: str = "full", batch_size: int = 64, target_interval: int = 200):
+            *, double: bool, feature_mode: str = "full", batch_size: int = 64, target_interval: int = 200,
+            on_checkpoint=None, checkpoints=()):
+    # on_checkpoint(model, episodes_done) is called after the listed episode counts (Stage 32 learning curves).
     torch.manual_seed(seed); np.random.seed(seed); random.seed(seed)
     online = ActionScore(hidden); target = copy.deepcopy(online)
     optimizer = torch.optim.Adam(online.parameters(), lr=learning_rate)
@@ -130,6 +132,8 @@ def train_q(maps: list[RobustRoutingMDP], seed: int, episodes: int, hidden: int,
                 if updates % target_interval == 0:
                     target.load_state_dict(online.state_dict())
         returns.append(episode_return)
+        if on_checkpoint is not None and episode + 1 in checkpoints:
+            on_checkpoint(online, episode + 1)
     return online, {"episodes": episodes, "decisions": decisions, "updates": updates,
                     "final_100_return": float(np.mean(returns[-100:])), "final_100_loss": float(np.mean(losses[-100:])),
                     "wall_seconds": time.perf_counter() - started, "parameters": sum(p.numel() for p in online.parameters())}
@@ -172,7 +176,7 @@ class RecurrentActorCritic(torch.nn.Module):
 
 def train_ppo(maps: list[RobustRoutingMDP], seed: int, episodes: int, hidden: int, learning_rate: float,
               *, recurrent: bool, feature_mode: str = "full", rollout_episodes: int = 16, epochs: int = 4,
-              calibrated_value: bool = False):
+              calibrated_value: bool = False, on_checkpoint=None, checkpoints=()):
     # calibrated_value=True (Stage 31+) subtracts the value head from *standardized* returns, the scale it is
     # trained on; the default reproduces the frozen Stage 26-28 behaviour (raw-return advantage).
     torch.manual_seed(seed); np.random.seed(seed); random.seed(seed)
@@ -225,6 +229,11 @@ def train_ppo(maps: list[RobustRoutingMDP], seed: int, episodes: int, hidden: in
             loss = torch.stack(policy_terms).mean() + 0.5 * torch.stack(value_terms).mean() - 0.01 * torch.stack(entropy_terms).mean()
             optimizer.zero_grad(); loss.backward(); torch.nn.utils.clip_grad_norm_(model.parameters(), 5.0); optimizer.step()
             losses.append(float(loss.detach())); updates += 1
+        done_episodes = min(episodes, batch_start + rollout_episodes)
+        if on_checkpoint is not None:
+            for mark in checkpoints:
+                if batch_start < mark <= done_episodes:
+                    on_checkpoint(model, mark)
     return model, {"episodes": episodes, "decisions": decisions, "updates": updates,
                    "final_100_return": float(np.mean(returns_log[-100:])), "final_100_loss": float(np.mean(losses[-100:])),
                    "wall_seconds": time.perf_counter() - started, "parameters": sum(p.numel() for p in model.parameters())}

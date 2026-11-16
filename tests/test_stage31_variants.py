@@ -77,3 +77,13 @@ def test_regime_maps_and_learner_wrappers_run():
                                    "seed": 0, "maps": maps, "eval": {"x": regime}, "eval_seeds": [0, 1],
                                    "out": _P(tmp) / f"{method}.pt"})
             assert len(result["scores"]["x"]) == 2 and all(np.isfinite(result["scores"]["x"]))
+
+
+def test_trainer_checkpoint_hook_fires_once_per_mark():
+    from eqmarl_slam.robust_routing import RobustRoutingMDP
+    from eqmarl_slam.routing_learners import train_ppo, train_q
+    maps = [RobustRoutingMDP(DEV[0], CERTS)]
+    for trainer, kwargs in ((train_q, {"double": False}), (train_ppo, {"recurrent": False, "calibrated_value": True, "rollout_episodes": 4})):
+        seen = []
+        trainer(maps, 0, 12, 8, 1e-3, on_checkpoint=lambda model, done: seen.append(done), checkpoints=(4, 8, 12), **kwargs)
+        assert seen == [4, 8, 12]
