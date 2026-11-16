@@ -10,10 +10,10 @@
 
 | File | Purpose |
 |---|---|
-| `BELLROUTE_TMLR.pdf` | Anonymized submission PDF (TMLR style, 16 pages including appendix) |
+| `BELLROUTE_TMLR.pdf` | Anonymized submission PDF (TMLR style, 17 pages including appendix) |
 | `BELLROUTE_TMLR.tex`, `references.bib` | Source |
 | `BELLROUTE_TMLR-source.zip` | Self-contained source that compiles on its own (`make submission`) |
-| `make_tmlr_assets.py` | Regenerates `generated/numbers30.tex`, `figure_data/*.csv`, and `figures/*.pdf` from the hash-checked Stage-28, Stage-30 and Stage-31 bundles |
+| `make_tmlr_assets.py` | Regenerates `generated/numbers30.tex`, `generated/strength_table.tex`, `figure_data/*.csv`, and `figures/*.pdf` from the hash-checked Stage-28, 30, 31 and 32 bundles |
 | `figure_data/SHA256SUMS` | Hashes of every plotted data file |
 
 To rebuild: `make PYTHON=/path/to/venv/python` (needs latexmk). Stage-28/29 numbers come from `../generated/numbers.tex`.
@@ -24,11 +24,12 @@ To rebuild: `make PYTHON=/path/to/venv/python` (needs latexmk). Stage-28/29 numb
 2. **Do not submit the QIP manuscript at the same time.** It also states the request weights as w ∈ {1,2,3}, but the data use {1,2,3,4}; the TMLR version is corrected. TMLR forbids dual submission. The two papers share data, so choose one. This version reports the stronger-baseline result, and the QIP version predates it and overstates the learned claim. If you still want a QIP paper, it must be revised to include the Stage-30 result.
 3. **Prepare anonymized supplementary material** (at most 100 MB, ZIP).
    - The repository is not anonymous: its name, git authors, `AGENTS.md`, `project_state.json`, and the manifests contain your identity and GitHub URL.
-   - Either upload a scrubbed copy of `eqmarl_slam/`, `configs/`, `tests/`, `experiments/28`, `experiments/30`, `experiments/31`, and `scripts/`, or use an anonymizing mirror such as anonymous.4open.science.
+   - Either upload a scrubbed copy of `eqmarl_slam/`, `configs/`, `tests/`, `experiments/28`, `experiments/30`, `experiments/31`, `experiments/32`, and `scripts/`, or use an anonymizing mirror such as anonymous.4open.science.
    - Do not link to the GitHub repository during review.
 4. **Check that the paper's claims match the archived outcomes**:
    - the registered Stage-28 decisions;
    - the Stage-30 decision `bid_price_superior`;
+   - the Stage-31 futility stop and the Stage-32 decision `gap_persists`;
    - the audit's material finding on the split leak.
    All numbers are macros generated from the bundles; do not hand-edit them.
 5. **On OpenReview**:
@@ -45,7 +46,7 @@ To rebuild: `make PYTHON=/path/to/venv/python` (needs latexmk). Stage-28/29 numb
 | Likely objection | Where the paper answers it |
 |---|---|
 | "The baselines were added after the test set was opened." | §5 and Limitations. The comparators were registered before running, tuned only on validation, and the selection was written to disk before any sealed file was read. They never informed a locked decision. The result also goes *against* the authors' learned method. |
-| "The learners were under-tuned." | §6.3 "Learner limitations" concedes this and narrows the claim to what was tested under equal opportunity. |
+| "The learners were under-tuned." | §6.3 and Appendix D. A registered learner-strength check (Stage 32; wider grid, about 3× longer training, calibrated PPO value baseline, 6 seeds) gave `gap_persists`: PPO reached 88.2% of the optimum against 96.7% for the rule, CI of the difference [−0.037, −0.028]. The remaining caveat is that only MLP learners were tested. |
 | "Is the quantum part necessary?" | Introduction and §3.1. The quantum part is presented as a source of exactly certified rewards and of a fidelity threshold, not as a quantum-advantage claim. |
 | "Maybe a different variant would favour learning." | §6.5: two harder variants were registered and tested. The hidden-regime study stopped at its preregistered futility rule, and its fresh test split was never opened. |
 | "Split leakage." | §7. All results are reported on the fully fresh catalogs as well. |

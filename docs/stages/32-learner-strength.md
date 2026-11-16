@@ -26,7 +26,7 @@ Run `32-learner-strength_attempt-01` was registered before it ran.
 
 ## Result: the gap persists
 
-Run `32-learner-strength_attempt-01` ran from source `d66cd394107162f5b30d4d46eb2af5cbd5672e07`. Its status is **completed**: all 36 trials ran and all gates passed. Registered decision: **`gap_persists`**.
+Run `32-learner-strength_attempt-01` ran from source `d66cd394107162f5b30d4d46eb2af5cbd5672e07`. Its status is **completed**: all 32 trials ran (2 methods × (6 configurations × 2 seeds + 4 extra seeds)) and all gates passed. Registered decision: **`gap_persists`**.
 
 **Rule.** The validation-tuned bid-price rule (alpha = 0.75, prior weight = 320) scored:
 - 0.3628 on the selection sequences;
@@ -74,3 +74,14 @@ Greedy reaches 59.3% of the optimum.
 - 12,073 wall-seconds (3.35 h, within the 4.5 h cap) and 11.86 CPU core-hours.
 - 4,586,200 decisions and 1,134,992 updates.
 - No GPU, no shots, and no test data.
+
+## Manuscript update
+
+The TMLR manuscript (`docs/paper/tmlr/BELLROUTE_TMLR.pdf`, 17 pages) changes as follows:
+- **§6.3:** the "learner limitations" paragraph is replaced by the registered check and its result.
+- **Appendix D:** new, with the full configuration table `generated/strength_table.tex`.
+- **Abstract, contributions, limitations, conclusion, and compute appendix:** each gains one sentence.
+
+Numbers come from the hash-checked bundle through `make_tmlr_assets.py`: the `ls*` macros and `figure_data/tmlr_learner_strength.csv`.
+
+**Correction.** An earlier version of this report said "36 trials". The run trained 32 models, as the configuration specifies.

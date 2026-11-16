@@ -13,7 +13,7 @@
   "authorized_current_scope": "Stage 32 learner-strength check on development/validation data, cap 4.5 wall-hours; user approval 2026-11-16.",
   "active_stage": "32",
   "stage_status": "in_progress",
-  "training_runs_executed": 447,
+  "training_runs_executed": 443,
   "current_branch": "stage/32-learner-strength",
   "dependency_commit": "f8b6536c398abc6787fa1f6d39ffb6a25a66cc3d",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
