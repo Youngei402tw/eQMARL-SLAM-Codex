@@ -49,3 +49,11 @@ To rebuild: `make PYTHON=/path/to/venv/python` (needs latexmk). Stage-28/29 numb
 | "Is the quantum part necessary?" | Introduction and §3.1. The quantum part is presented as a source of exactly certified rewards and of a fidelity threshold, not as a quantum-advantage claim. |
 | "Maybe a different variant would favour learning." | §6.5: two harder variants were registered and tested. The hidden-regime study stopped at its preregistered futility rule, and its fresh test split was never opened. |
 | "Split leakage." | §7. All results are reported on the fully fresh catalogs as well. |
+
+## Overleaf sync
+
+The manuscript is mirrored to a separate private repository, `bellroute-tmlr-paper`, which is linked to Overleaf through GitHub sync. There the paper is `main.tex`.
+
+- **Export from here:** run `make overleaf DEST=/path/to/bellroute-tmlr-paper` and commit in that checkout. This replaces only the paper files.
+- **Edits made in Overleaf:** push them to GitHub from Overleaf, pull them in the mirror checkout, and port the prose changes back into `BELLROUTE_TMLR.tex` here.
+- **Generated files:** never hand-edit `generated/` or `figures/` in the mirror.

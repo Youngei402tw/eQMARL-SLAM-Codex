@@ -3,7 +3,7 @@ MAIN := BELLROUTE_TMLR
 BUILD_DIR ?= build
 PYTHON ?= python
 
-.PHONY: all assets pdf submission clean
+.PHONY: all assets pdf submission overleaf clean
 
 all: pdf
 
@@ -28,3 +28,12 @@ submission: pdf
 
 clean:
 	rm -rf $(BUILD_DIR)
+
+# Export the self-contained source to an Overleaf-synced GitHub checkout (DEST), with the paper as main.tex.
+# Only paper files are replaced; anything else in DEST (e.g. .git, README.md) is left alone.
+overleaf: submission
+	test -n "$(DEST)" && test -d "$(DEST)/.git"
+	rm -rf "$(DEST)/figures" "$(DEST)/generated"
+	cp -r $(BUILD_DIR)/src/figures $(BUILD_DIR)/src/generated "$(DEST)/"
+	cp $(BUILD_DIR)/src/references.bib $(BUILD_DIR)/src/tmlr.sty $(BUILD_DIR)/src/tmlr.bst $(BUILD_DIR)/src/fancyhdr.sty "$(DEST)/"
+	cp $(BUILD_DIR)/src/$(MAIN).tex "$(DEST)/main.tex"
