@@ -638,11 +638,14 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/32-learner-strength.md",
-      "status": "in_progress",
+      "status": "completed",
       "branch_created": true,
       "dependency_completion_commit": "f8b6536c398abc6787fa1f6d39ffb6a25a66cc3d",
       "branch_created_from_commit": "f8b6536c398abc6787fa1f6d39ffb6a25a66cc3d",
-      "authorized_scope": "User approval 2026-11-16 ('please proceed') after the reviewer-risk assessment; cap 4.5 wall-hours, development/validation data only"
+      "authorized_scope": "User approval 2026-11-16 ('please proceed') after the reviewer-risk assessment; cap 4.5 wall-hours, development/validation data only",
+      "source_commit": "d66cd394107162f5b30d4d46eb2af5cbd5672e07",
+      "results_commit": "931646de7ae6946fee0f31a2393a451ea88605c4",
+      "publication_receipt": "docs/stages/32-publication.json"
     }
   ],
   "recommended_execution_order": [

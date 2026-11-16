@@ -1,0 +1,20 @@
+{
+  "stage": "32",
+  "branch": "stage/32-learner-strength",
+  "repository": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+  "outcome": "completed (registered decision gap_persists; development/validation data only; no test data)",
+  "source_commit": "d66cd394107162f5b30d4d46eb2af5cbd5672e07",
+  "results_commit": "931646de7ae6946fee0f31a2393a451ea88605c4",
+  "manuscript_commit": "099d181d8bd610b7aff9a37d3db2d858587ab33f",
+  "remote_ref": "refs/heads/stage/32-learner-strength",
+  "remote_sha_verified": "099d181d8bd610b7aff9a37d3db2d858587ab33f",
+  "bundles": [
+    "experiments/32/32-learner-strength_attempt-01"
+  ],
+  "paper_pdf": "docs/paper/tmlr/BELLROUTE_TMLR.pdf",
+  "paper_pdf_sha256": "c8137509a5d77d1ad9c04a272a2b88b1d6af0f37468fc61e44c7f32d9b761e7b",
+  "paper_mirror_commit": "812be511e340b689124e16f82c5511ad26fc27ed",
+  "github_actions": "success https://github.com/Youngei402tw/eQMARL-SLAM-Codex/actions/runs/43895105166",
+  "verified": true,
+  "verified_utc": "2026-11-16T15:30:00+00:00"
+}
