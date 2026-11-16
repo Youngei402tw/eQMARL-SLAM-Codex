@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "gates": {
+    "all_trials_complete": true,
+    "no_test_data": true,
+    "selection_comparison_disjoint": true,
+    "finite": true
+  },
+  "resources": {
+    "primitive_steps": 4586200,
+    "decisions": 4586200,
+    "updates": 1134992,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "summary": {
+    "decision": "gap_persists",
+    "best_method": "ppo",
+    "per_method": {
+      "ppo": {
+        "config": "h64-lr3e-3",
+        "seeds": 6,
+        "selection_mean": 0.3342889695280853,
+        "comparison_mean": 0.32602857538529983,
+        "minus_rule": -0.031596560619460985,
+        "minus_rule_ci95": [
+          -0.03726971768339468,
+          -0.027882502705479623
+        ],
+        "seeds_above_rule": 0,
+        "fraction_online_dp": 0.8818614961310659,
+        "curve": {
+          "2000": 0.3257190960661198,
+          "4000": 0.3351797779339056,
+          "8000": 0.3342889695280853
+        }
+      },
+      "dqn": {
+        "config": "h64-lr3e-3",
+        "seeds": 6,
+        "selection_mean": 0.3042579801467946,
+        "comparison_mean": 0.3010978744863532,
+        "minus_rule": -0.05652726151840756,
+        "minus_rule_ci95": [
+          -0.06497164354162907,
+          -0.044966030309908034
+        ],
+        "seeds_above_rule": 0,
+        "fraction_online_dp": 0.8144274524483646,
+        "curve": {
+          "2000": 0.32102541270665824,
+          "4000": 0.31611479742530113,
+          "6000": 0.3042579801467946
+        }
+      }
+    },
+    "rule": {
+      "alpha": 0.75,
+      "prior_weight": 320,
+      "comparison_mean": 0.3576251360047608,
+      "fraction_online_dp": 0.9673257539420397
+    },
+    "greedy_fraction_online_dp": 0.5928648062959057,
+    "online_dp_mean": 0.36970496706757694,
+    "previous_best_validation": {
+      "stage26_validation": {
+        "dqn": 0.3235,
+        "double_dqn": 0.3209,
+        "ppo": 0.3247,
+        "recurrent_ppo": 0.3047
+      },
+      "note": "different sequences; context only"
+    },
+    "selected_at_grid_edge": {
+      "ppo": false,
+      "dqn": false
+    }
+  }
+}

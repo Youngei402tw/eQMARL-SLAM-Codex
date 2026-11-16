@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-11-16T10:03:00+00:00",
+  "updated_utc": "2026-11-16T15:10:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -13,11 +13,11 @@
   "authorized_current_scope": "Stage 32 learner-strength check on development/validation data, cap 4.5 wall-hours; user approval 2026-11-16.",
   "active_stage": "32",
   "stage_status": "in_progress",
-  "training_runs_executed": 411,
+  "training_runs_executed": 447,
   "current_branch": "stage/32-learner-strength",
   "dependency_commit": "f8b6536c398abc6787fa1f6d39ffb6a25a66cc3d",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "stage32_source_pending",
+  "publication_status": "stage32_manuscript_pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -63,7 +63,7 @@
     "stage/31-harder-variants": "f8b6536c398abc6787fa1f6d39ffb6a25a66cc3d"
   },
   "blockers": [],
-  "next_action": "Publish Stage 32 source; run the registered learner-strength check.",
+  "next_action": "Publish Stage 32 results; add the learner-strength result to the TMLR manuscript.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
@@ -554,6 +554,13 @@
   "last_progress_utc": "2026-10-28T09:10:00+00:00",
   "stage_budget": {
     "stage": "32",
-    "setup_wall_seconds_charged": 0
+    "cap_wall_seconds": 16200,
+    "setup_wall_seconds_charged": 0,
+    "active_wall_seconds": 12073.044861295,
+    "cpu_core_hours": 11.857503283888889,
+    "decisions": 4586200,
+    "updates": 1134992,
+    "circuit_evaluations": 0,
+    "shots": 0
   }
 }
