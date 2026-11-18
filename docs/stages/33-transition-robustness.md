@@ -81,5 +81,14 @@ Run `33-transition-robustness_attempt-01` ran from source `07ecbbf5d265a8b37cf61
 - It does not hold for chains with strong successor structure. There, knowing P is worth a few points, which a planner can recover from little data.
 - The main conclusion, that strong pacing rules leave little headroom for learning, is unchanged.
 - Caveats:
-  - only validation catalogs (horizon 8–24, budget 2–6) were tested;
+  - only the 4 validation catalogs (3–6 agents, horizon 8–16, budget 2–6) were tested;
   - no learner was trained on these variants.
+
+## Manuscript update
+
+The TMLR manuscript (`docs/paper/tmlr/BELLROUTE_TMLR.pdf`, now 18 pages) changes as follows:
+- **§6.3:** new paragraph, "How far the dynamics result extends".
+- **Discussion and limitations:** each gains one sentence.
+- **Appendix E:** new, "Robustness to the transition matrix", with the generated table `generated/transition_table.tex`.
+
+Numbers come from the hash-checked bundle through `make_tmlr_assets.py`: the `tr*` macros and `figure_data/tmlr_transition_robustness.csv`.

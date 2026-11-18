@@ -310,6 +310,14 @@ Three observations locate the learners' shortfall. They are diagnostic, not conf
 
 \paragraph{Dynamics are nearly irrelevant; pacing is not.} CE-DP with a generic prior is as good as DP with the true $P$. So knowing \emph{how} demand evolves is worth almost nothing here. Knowing \emph{what} gains can appear (the state table) and how many units remain is worth almost everything. The bid-price rule estimates the gain distribution from training catalogs and the current episode, which is enough to reach 97\%. The learners must infer the same pacing behaviour from 2{,}500 episodes of reward signal. They reach 86--88\%.
 
+\paragraph{How far the dynamics result extends.} All catalogs come from one generator whose chains mix fast (self-loop probabilities 0.31--0.37). A registered check rebuilt the four validation catalogs under \trVariants{} transition matrices, keeping each state table, and compared the rules with online DP under each (\cref{app:transitions}).
+\begin{itemize}[leftmargin=*]
+  \item \emph{Pacing generalizes.} The retuned bid-price rule kept \trBpMin--\trBpMax\% of the optimum under every matrix, against \trGreedyMin--\trGreedyMax\% for greedy.
+  \item \emph{The stay probability barely matters.} CE-DP with the default guess kept at least \trCeOkMin\% under every matrix but one, from chains that almost never repeat a state to chains that repeat it 90\% of the time.
+  \item \emph{Predictable structure does matter.} When each state has an 80\%-likely successor, the default guess fell to \trCeSucc\%. Ten logged episodes restored \trCeSuccKten\%, and 100 restored \trCeSuccKhundred\%.
+\end{itemize}
+So ``dynamics are nearly irrelevant'' holds for the generator's fast-mixing chains and for merely persistent ones, but not for chains with strong successor structure. The finding that pacing captures most of the optimum holds throughout.
+
 \paragraph{The development ablations agree.} Removing the remaining-budget feature from Double DQN cost \ablDropNoBudget\% of validation surplus, and removing remaining time cost \ablDropNoHorizon\% (\cref{app:training}). These two inputs are exactly the quantities that set the bid-price threshold. The learners use them, but less precisely than a closed-form quantile rule.
 
 \paragraph{The gap was visible before the test split.} On validation catalogs, the selected bid-price rule scored \bpValMean, while the four tuned learners scored \develRPPO--\develPPO{} in development (on different sequences of the same catalogs). Had the bid-price rule been in the original baseline set, the learned claim would most likely not have been registered as the primary hypothesis.
@@ -378,13 +386,14 @@ All code, configurations, hash-locked splits, raw records, checkpoints, and audi
 \end{itemize}
 Preregistration did its job here: it made the negative result unambiguous and prevented post hoc re-framing. But preregistration cannot fix a weak baseline set chosen in advance.
 
-\paragraph{What the benchmark is good for.} \bellroute{} remains useful precisely because its optimum is computable. Learners can be measured on an absolute scale, against strong simple rules, and under controlled distribution shift in graph size, horizon, budget, and resource noise. Our two harder variants (\cref{sec:harder}) did not create meaningful room for learning: pacing rules stayed within about 5\% of optimal. Variants that remove more structure remain open, for example unknown or non-stationary state tables, partial observability of requests, or decentralized allocation. A method that beats tuned pacing rules on such variants would be strong evidence for learning.
+\paragraph{What the benchmark is good for.} \bellroute{} remains useful precisely because its optimum is computable. Learners can be measured on an absolute scale, against strong simple rules, and under controlled distribution shift in graph size, horizon, budget, and resource noise. Our two harder variants (\cref{sec:harder}) did not create meaningful room for learning: pacing rules stayed within about 5\% of optimal. Chains with strong successor structure are one place where knowing the dynamics is worth a few points (\cref{app:transitions}). Other variants that remove more structure remain open, for example unknown or non-stationary state tables, partial observability of requests, or decentralized allocation. A method that beats tuned pacing rules on such variants would be strong evidence for learning.
 
 \paragraph{Limitations.}
 \begin{itemize}[leftmargin=*]
   \item The study has 12 seeds per learner, four test catalogs, at most eight agents, and 14-state chains.
   \item The comparators were evaluated after the test split had been opened. They had no prior access to it and were registered before running, but this is weaker than inclusion in the original lock.
   \item Two test catalogs leak public dynamics (\cref{sec:audit}).
+  \item All catalogs come from one generator with fast-mixing dynamics. A registered check on rebuilt transition matrices (\cref{app:transitions}) found that the pacing result holds, but that the near-irrelevance of the dynamics does not extend to chains with strong successor structure. No learner was trained on those variants.
   \item Rewards are analytic expectations over private inputs; no game rounds are sampled.
   \item The locked study's tuning budget was small. A registered check with a wider grid, about three times longer training, and a calibrated value baseline did not change the conclusion (\cref{sec:why}), but it covered only MLP learners on the v1 catalogs.
   \item The quantum layer is idealized: single-hop links, Werner noise, and independent heralding, with no hardware.
@@ -505,6 +514,39 @@ PPO (sealed) & \noiseIdealHundred & -- & \noiseHerSevenFive & \noiseHerFive & --
 \caption{Learner-strength check on validation catalogs. Both columns average all seeds of a configuration (2 per configuration, 6 for the selected one); configurations were selected on the 2 grid seeds only. Comparison means use fresh sequences. Source: \texttt{figure\_data/tmlr\_learner\_strength.csv}.}
 \label{tab:strength}
 \input{generated/strength_table.tex}
+\end{table}
+
+%======================================================================
+\section{Robustness to the transition matrix}\label{app:transitions}
+%======================================================================
+
+\paragraph{Design.} Each of the four validation catalogs was rebuilt under \trVariants{} transition matrices. The state table, horizon, and budget were kept, and only $P$ changed.
+\begin{itemize}[leftmargin=*]
+  \item \emph{Stay $s$:} the self-loop probability is set to $s$, and the off-diagonal mass keeps its original proportions.
+  \item \emph{Successor $w$:} with weight $w$, each state moves to one fixed other state (a derangement seeded by the catalog identifier). Otherwise it follows the original $P$.
+  \item \emph{Rare jackpot:} the state with the highest one-round value is entered about 12.5 times less often, and persists with probability 0.5 once entered.
+\end{itemize}
+
+\paragraph{Methods.}
+\begin{itemize}[leftmargin=*]
+  \item \emph{Bid-price:} the rule was scored with its frozen Stage-30 parameters, and also retuned for each matrix over the same 35-point grid on 200 tuning sequences per catalog.
+  \item \emph{CE-DP:} it used the default guess ($\rho=\rhoDev$, no data), or 10 or 100 logged episodes with $\kappa$ frozen from the comparator study.
+  \item \emph{Evaluation:} all methods were scored on 500 disjoint sequences per catalog. No learner was trained and no test data were read.
+\end{itemize}
+
+\paragraph{Registered decisions and disclosure.} The registered decisions were:
+\begin{itemize}[leftmargin=*]
+  \item \emph{H1 (supported):} the retuned bid-price rule keeps at least 90\% under every matrix.
+  \item \emph{H2 (not supported for successor 0.8):} CE-DP with the default guess keeps at least 98\% under every matrix.
+  \item \emph{H3 (supported):} where H2 fails, 100 logged episodes restore at least 98\%.
+\end{itemize}
+An unregistered sweep on the development catalogs preceded registration. The thresholds were set with its outcome known, and H2 was expected to fail for structured chains. The check used \trWallSeconds{} wall-seconds of CPU time.
+
+\begin{table}[H]
+\centering\small
+\caption{Percentage of online-DP surplus on the four validation catalogs under rebuilt transition matrices. ``Stay'' is the mean self-loop probability. Source: \texttt{figure\_data/tmlr\_transition\_robustness.csv}.}
+\label{tab:transitions}
+\input{generated/transition_table.tex}
 \end{table}
 
 %======================================================================
