@@ -638,7 +638,7 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/32-learner-strength.md",
-      "status": "completed",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "f8b6536c398abc6787fa1f6d39ffb6a25a66cc3d",
       "branch_created_from_commit": "f8b6536c398abc6787fa1f6d39ffb6a25a66cc3d",
