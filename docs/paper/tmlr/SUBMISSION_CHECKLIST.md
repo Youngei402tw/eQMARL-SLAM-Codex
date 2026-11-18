@@ -10,7 +10,7 @@
 
 | File | Purpose |
 |---|---|
-| `BELLROUTE_TMLR.pdf` | Anonymized submission PDF (TMLR style, 18 pages including appendix) |
+| `BELLROUTE_TMLR.pdf` | Anonymized submission PDF (TMLR style, 19 pages including appendix) |
 | `BELLROUTE_TMLR.tex`, `references.bib` | Source |
 | `BELLROUTE_TMLR-source.zip` | Self-contained source that compiles on its own (`make submission`) |
 | `make_tmlr_assets.py` | Regenerates `generated/numbers30.tex`, `generated/strength_table.tex`, `generated/transition_table.tex`, `figure_data/*.csv`, and `figures/*.pdf` from the hash-checked Stage-28 and 30–33 bundles |

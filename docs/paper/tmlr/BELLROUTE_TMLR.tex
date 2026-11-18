@@ -175,11 +175,29 @@ All methods act on the same feasible sets and the same paired evaluation sequenc
 
 \paragraph{Comparators added after the locked study.} We added two comparators after the locked study, registered before they were run.
 \begin{itemize}[leftmargin=*]
-  \item \emph{Bid-price threshold.} For each state, take the edge gains of the best two-pair matching. Pool these ``slot gains'' from the training catalogs into a reference distribution with total weight $\omega$, and add every slot gain observed so far in the current episode with weight one. In round $t$, set the threshold $\theta_t$ to the $1-\alpha b_t/(2k_t)$ quantile of this mixture, or to zero if $\alpha b_t\ge 2k_t$. Then serve the best feasible matching whose every edge has $G_e\ge\theta_t$ and $G_e>0$. The rule spends freely when budget is plentiful relative to time and becomes selective as the budget tightens. This is the logic of bid-price control \citep{gallego1994optimal,talluri2004theory}. It has two parameters, $(\alpha,\omega)$, and never sees $P$.
-  \item \emph{Certainty-equivalent DP (CE-DP).} Estimate $P$ from $K$ logged public state sequences of the catalog, as the posterior mean under a Dirichlet prior. The prior's mean puts probability $\rho$ on staying in the current state and spreads $1-\rho$ evenly over the other 13 states; $\kappa$ is the prior's total mass. Here $\rho$ is the average probability of staying in the same state over the training catalogs: \rhoDev{} on the development catalogs during validation tuning, and \rhoFull{} on the development and validation catalogs for the sealed evaluation (per-catalog values range from 0.31 to 0.37). With $K=0$ the estimate equals the prior and $\kappa$ has no effect. The planner then assumes that the current state persists with probability $\rho$ and otherwise moves to any other state with equal probability, ignoring the structure of the true $P$. Then solve the finite-horizon Bellman recursion exactly on the estimate \citep{bertsekas2017dynamic}. CE-DP requires the catalog's public state table and, for $K>0$, logged data from the test catalog. The learners receive neither, so CE-DP is an informed reference rather than an equal-information competitor.
+  \item \emph{Bid-price threshold.} For each public state $s$, let $g_1(s)\ge g_2(s)$ be the edge gains of its best matching of at most two edges (a missing edge counts as $0$); these are the state's two \emph{slot gains}. Pooling the slot gains of every state of the training catalogs gives a reference list $\mathcal R=\{r_1,\dots,r_N\}$. During an episode the rule also records the slot gains of every state seen so far, $\mathcal O_t=\{o_1,\dots,o_{m_t}\}$. Its threshold is a quantile of the weighted mixture that gives each reference gain weight $\omega/N$ (total weight $\omega$) and each observed gain weight one:
+  \begin{equation}
+    \theta_t=\begin{cases}0, & \alpha\,b_t\ge 2k_t,\\[2pt] Q_{\,1-\alpha b_t/(2k_t)}\Bigl(\sum_{i=1}^{N}\tfrac{\omega}{N}\,\delta_{r_i}+\sum_{j=1}^{m_t}\delta_{o_j}\Bigr), & \text{otherwise,}\end{cases}
+    \label{eq:bidprice}
+  \end{equation}
+  where $Q_q(\mu)$ is the smallest value at which the cumulative weight of $\mu$ reaches the fraction $q$ of its total. The quantity $\alpha b_t/(2k_t)$ is the share of the remaining request slots that the budget can afford (at most two per round), scaled by $\alpha$. The rule serves the highest-gain feasible matching $M\in\M(s_t,b_t)$ whose every edge has $G_e>0$ and $G_e\ge\theta_t$, and serves nothing if no edge qualifies. It spends freely when budget is plentiful relative to time and becomes selective as the budget tightens, which is the logic of bid-price control \citep{gallego1994optimal,talluri2004theory}. It has two parameters, $(\alpha,\omega)$, and never sees $P$. For example, with $\alpha=0.75$, one unit left, and ten rounds to go, the threshold is the $0.9625$ quantile, so only roughly the top 4\% of gains are served.
+  \item \emph{Certainty-equivalent DP (CE-DP).} CE-DP replaces the unknown $P$ by an estimate $\hat P$ and then plans as if $\hat P$ were true. The estimate is the posterior mean under a Dirichlet prior whose mean $\Pi_\rho$ puts probability $\rho$ on staying in the current state and spreads the rest evenly over the other $|S|-1=13$ states:
+  \begin{equation}
+    \Pi_\rho(s,s')=\begin{cases}\rho, & s'=s,\\ (1-\rho)/(|S|-1), & s'\ne s,\end{cases}
+    \qquad
+    \hat P(s,s')=\frac{n(s,s')+\kappa\,\Pi_\rho(s,s')}{n(s)+\kappa},
+    \label{eq:cedp-prior}
+  \end{equation}
+  where $n(s,s')$ counts the observed transitions from $s$ to $s'$ in $K$ logged public state sequences of the catalog, $n(s)=\sum_{s'}n(s,s')$, and $\kappa$ is the prior's total mass. The stay probability $\rho$ is the mean self-loop probability of the training catalogs, $\rho=\frac{1}{|\mathcal C|}\sum_{c\in\mathcal C}\frac{1}{|S|}\sum_{s}P_c(s,s)$: \rhoDev{} over the development catalogs during validation tuning, and \rhoFull{} over the development and validation catalogs for the sealed evaluation (per-catalog values range from 0.31 to 0.37). With $K=0$ every count is zero, so $\hat P=\Pi_\rho$ and $\kappa$ has no effect. The planner then assumes that the current state persists with probability $\rho$ and otherwise moves to any other state with equal probability, ignoring the structure of the true $P$. CE-DP then solves the finite-horizon Bellman recursion exactly \citep{bertsekas2017dynamic}:
+  \begin{equation}
+    V_0\equiv 0,\qquad
+    V_k(s,b)=\max_{M\in\M(s,b)}\Bigl[\,G(s,M)+\sum_{s'}\hat P(s,s')\,V_{k-1}\bigl(s',\,b-|M|\bigr)\Bigr],
+    \label{eq:bellman}
+  \end{equation}
+  with $G(s,M)=\sum_{e\in M}G_e$, and in round $t$ it plays the maximizing $M$ for $(s_t,b_t,k_t)$. CE-DP requires the catalog's public state table and, for $K>0$, logged data from the test catalog. The learners receive neither, so CE-DP is an informed reference rather than an equal-information competitor.
 \end{itemize}
 
-\paragraph{References.} \emph{Online DP} knows the true $P$ and is the optimal non-anticipative policy. The \emph{future-clairvoyant} reference knows the realized state sequence. We report surplus as a fraction of online DP throughout.
+\paragraph{References.} \emph{Online DP} solves \cref{eq:bellman} with the true $P$ in place of $\hat P$; it is the optimal non-anticipative policy, and it differs from CE-DP only in the transition matrix it plans with. The \emph{future-clairvoyant} reference knows the realized state sequence. We report surplus as a fraction of online DP throughout.
 
 \begin{table}[t]
 \centering
