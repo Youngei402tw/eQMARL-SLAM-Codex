@@ -658,11 +658,14 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/33-transition-robustness.md",
-      "status": "in_progress",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "07074c268257d5245ff7c7f29a8e13332b65ca44",
       "branch_created_from_commit": "07074c268257d5245ff7c7f29a8e13332b65ca44",
-      "authorized_scope": "User approval 2026-11-18 ('yes proceed') to register the transition-matrix sweep and add a limitation; validation catalogs only, cap 0.5 wall-hours"
+      "authorized_scope": "User approval 2026-11-18 ('yes proceed') to register the transition-matrix sweep and add a limitation; validation catalogs only, cap 0.5 wall-hours",
+      "source_commit": "07ecbbf5d265a8b37cf6106c45c70ee6c3ef68a2",
+      "results_commit": "f89a0b6a5d165dda797c1ea5da00fd3262bbeb1f",
+      "publication_receipt": "docs/stages/33-publication.json"
     }
   ],
   "recommended_execution_order": [

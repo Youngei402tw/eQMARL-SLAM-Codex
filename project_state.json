@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-11-18T07:45:00+00:00",
+  "updated_utc": "2026-11-18T08:10:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Stage 33 transition-robustness check on validation catalogs, cap 0.5 wall-hours; user approval 2026-11-18.",
   "active_stage": "33",
-  "stage_status": "in_progress",
+  "stage_status": "passed",
   "training_runs_executed": 443,
   "current_branch": "stage/33-transition-robustness",
   "dependency_commit": "07074c268257d5245ff7c7f29a8e13332b65ca44",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "stage33_manuscript_pending",
+  "publication_status": "complete_remote_verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -61,10 +61,11 @@
     "stage/29-qip-release": "d577eac9903f985a231d053be91e8d4a0b99d63d",
     "stage/30-tmlr-benchmark": "9f9a3f613efce04d81d785019835422699cecf6b",
     "stage/31-harder-variants": "f8b6536c398abc6787fa1f6d39ffb6a25a66cc3d",
-    "stage/32-learner-strength": "07074c268257d5245ff7c7f29a8e13332b65ca44"
+    "stage/32-learner-strength": "07074c268257d5245ff7c7f29a8e13332b65ca44",
+    "stage/33-transition-robustness": "c3a0fca1b69ce100694babc412d55ea128679238"
   },
   "blockers": [],
-  "next_action": "Publish Stage 33 results; add the transition-robustness result to the TMLR manuscript.",
+  "next_action": "Author actions for TMLR submission (docs/paper/tmlr/SUBMISSION_CHECKLIST.md). The sealed qip_v2 test split remains unused.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
@@ -76,10 +77,10 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "33",
+  "next_stage": null,
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
-  "next_stage_status": "in_progress",
+  "next_stage_status": "none_registered",
   "completed_stage_budgets": {
     "01": {
       "cap_wall_seconds": 86400,

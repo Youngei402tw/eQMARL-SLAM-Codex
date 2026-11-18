@@ -1,0 +1,21 @@
+{
+  "stage": "33",
+  "branch": "stage/33-transition-robustness",
+  "repository": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+  "outcome": "passed (H1 supported; H2 not supported for successor 0.8, as disclosed in advance; H3 supported; validation catalogs only; no test data)",
+  "source_commit": "07ecbbf5d265a8b37cf6106c45c70ee6c3ef68a2",
+  "refused_launch_source": "6910eb5d0ae585ad2e96dd8247506c73d014b4d3",
+  "results_commit": "f89a0b6a5d165dda797c1ea5da00fd3262bbeb1f",
+  "manuscript_commit": "c3a0fca1b69ce100694babc412d55ea128679238",
+  "remote_ref": "refs/heads/stage/33-transition-robustness",
+  "remote_sha_verified": "c3a0fca1b69ce100694babc412d55ea128679238",
+  "bundles": [
+    "experiments/33/33-transition-robustness_attempt-01"
+  ],
+  "paper_pdf": "docs/paper/tmlr/BELLROUTE_TMLR.pdf",
+  "paper_pdf_sha256": "fd5548e73929928acea9c1b97aab622f516466c5fd75c1ec6efe2e48912af4c8",
+  "paper_mirror_commit": "130e981b0f6bd5910c1651b8e1580c6bd146477b",
+  "github_actions": "success https://github.com/Youngei402tw/eQMARL-SLAM-Codex/actions/runs/44260560541",
+  "verified": true,
+  "verified_utc": "2026-11-18T08:10:00+00:00"
+}
