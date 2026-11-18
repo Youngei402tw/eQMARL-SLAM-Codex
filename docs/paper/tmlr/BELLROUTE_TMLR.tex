@@ -93,7 +93,46 @@ We do not claim a quantum advantage, a new nonlocal game, or hardware evidence. 
 
 \subsection{Requests with certified values}\label{sec:requests}
 
-\paragraph{The game behind a request.} Each request is a short cooperative game between the two agents at the ends of an edge, Alice and Bob. A referee sends Alice a question $x\in\{0,1,2\}$ and Bob a question $y\in\{0,1,2\}$. Each answers with one bit, $a$ and $b$. They win if the parity of their answers matches a target bit that depends on both questions, $a\xor b=f_\tau(x,y)$. The question pair is drawn from a public distribution $\pi_\tau(x,y)=w_{xy}/\sum_{x',y'}w_{x'y'}$ with integer weights $w_{xy}\in\{1,2,3,4\}$. The predicate $f_\tau$ and the weights $w$ together define the request \emph{type} $\tau$. Alice and Bob may agree on a strategy in advance, but they cannot communicate once the questions arrive. Alice therefore never knows $y$, and Bob never knows $x$. Games of this form are XOR games \citep{cleve2004consequences}. The best known is CHSH \citep{clauser1969proposed}: there are two questions per player, $f(x,y)=x\wedge y$, and the distribution is uniform. Its best classical winning probability is $3/4$, and with a shared Bell pair it rises to $\cos^2(\pi/8)\approx0.854$. Our types are random $3\times3$ generalizations of it. Each split draws its own types: the entries of $f_\tau$ are independent fair bits, and the weights are independent and uniform on $\{1,2,3,4\}$.
+Each request asks a pair of agents to play a short cooperative game, and a Bell pair helps them win it. We first describe the simplest such game, CHSH, and then the generalization our requests use.
+
+\paragraph{The CHSH game.} Two players, Alice and Bob, sit apart and cannot communicate. A referee flips two fair coins and sends Alice a question $x\in\{0,1\}$ and Bob a question $y\in\{0,1\}$. Each replies with one bit, $a$ and $b$. They win if
+\begin{equation}
+  a\xor b \;=\; x\wedge y ,
+  \label{eq:chsh}
+\end{equation}
+that is, their answers must \emph{differ} when both questions are 1 and \emph{agree} otherwise \citep{clauser1969proposed}. The difficulty is that Alice does not know $y$ and Bob does not know $x$. They may agree on a plan in advance, but once the questions arrive each must answer alone.
+\begin{itemize}[leftmargin=*]
+  \item \emph{Classical players win at most 3/4 of the time.} A deterministic plan fixes Alice's answers $a_0,a_1$ to her two questions and Bob's answers $b_0,b_1$ to his. Winning all four question pairs would require $a_0\xor b_0=0$, $a_0\xor b_1=0$, $a_1\xor b_0=0$, and $a_1\xor b_1=1$. XOR-ing the four left-hand sides gives 0, because each answer appears twice, but XOR-ing the right-hand sides gives 1. So every plan loses at least one of the four equally likely pairs. ``Always answer 0'' wins exactly three (\cref{tab:chsh}). Shared randomness only mixes deterministic plans, so it cannot do better.
+  \item \emph{With a shared Bell pair they win about 85\% of the time.} Each player measures their half of the pair along an angle chosen by their question: Alice uses $\alpha_0=0$ or $\alpha_1=\pi/2$, and Bob uses $\beta_0=\pi/4$ or $\beta_1=-\pi/4$. The two outcomes agree with probability $\tfrac12[1+\cos(\alpha_x-\beta_y)]$. The angles are chosen so that every question pair is won with the same probability, $\cos^2(\pi/8)\approx0.854$. No quantum strategy does better; this is Tsirelson's bound \citep{tsirelson1980quantum}.
+\end{itemize}
+Entanglement cannot be used to send a message, since each player's own answer is a fair coin whatever the other does. It only correlates the answers more strongly than any classical plan can.
+
+\begin{table}[H]
+\centering\small
+\caption{The CHSH game. The classical plan ``both always answer 0'' wins three of the four question pairs. The quantum strategy (angles in the text) wins each pair with probability $\cos^2(\pi/8)$.}
+\label{tab:chsh}
+\begin{tabular}{@{}cc|cc|cc|c@{}}
+\toprule
+\multicolumn{2}{c|}{Questions} & Target & Probability & \multicolumn{2}{c|}{Classical plan $a=b=0$} & With a Bell pair \\
+$x$ & $y$ & $x\wedge y$ & & $a\xor b$ & wins? & win probability \\
+\midrule
+0 & 0 & 0 & 1/4 & 0 & yes & 0.854 \\
+0 & 1 & 0 & 1/4 & 0 & yes & 0.854 \\
+1 & 0 & 0 & 1/4 & 0 & yes & 0.854 \\
+1 & 1 & 1 & 1/4 & 0 & \textbf{no} & 0.854 \\
+\midrule
+\multicolumn{4}{l|}{Winning probability} & \multicolumn{2}{c|}{$0.750$} & $0.854$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{From CHSH to the requests in BellRoute.} A BellRoute request is a generalized CHSH game, an \emph{XOR game} \citep{cleve2004consequences}. The players still win when $a\xor b$ equals a target bit, but three things change:
+\begin{enumerate}[leftmargin=*]
+  \item each player has three possible questions, $x,y\in\{0,1,2\}$, instead of two;
+  \item the target is an arbitrary table of bits $f_\tau(x,y)$ instead of $x\wedge y$;
+  \item question pairs are not equally likely. Pair $(x,y)$ is asked with probability $\pi_\tau(x,y)=w_{xy}/\sum_{x',y'}w_{x'y'}$, where the weights $w_{xy}\in\{1,2,3,4\}$.
+\end{enumerate}
+The target table $f_\tau$ and the weights $w$ together define a request \emph{type} $\tau$. Each split draws its own types: the nine target bits are independent fair coins, and the nine weights are independent and uniform on $\{1,2,3,4\}$. Depending on the draw, a Bell pair may help a lot, a little, or not at all. Some target tables can be met perfectly by a classical plan, and then entanglement adds nothing.
 
 \paragraph{Classical value.} Without entanglement, shared randomness cannot beat the best deterministic strategy. A deterministic strategy is a map $a(x)$ for Alice and $b(y)$ for Bob, so there are $2^3\times2^3=64$ strategy pairs. The classical value $V_C(\tau)$ is the largest winning probability among them, found by enumeration.
 
