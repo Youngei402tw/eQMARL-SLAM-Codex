@@ -93,16 +93,31 @@ We do not claim a quantum advantage, a new nonlocal game, or hardware evidence. 
 
 \subsection{Requests with certified values}\label{sec:requests}
 
-A request type $\tau$ is a weighted two-player XOR game. Inputs are $x,y\in\{0,1,2\}$, drawn from a public distribution $\pi_\tau(x,y)\propto w_{xy}$ with integer weights $w_{xy}\in\{1,2,3,4\}$. Outputs are bits $a,b\in\{0,1\}$. The request is won if $a\xor b=f_\tau(x,y)$ for a public predicate $f_\tau$. The two endpoints may agree on a strategy beforehand but cannot communicate after seeing their inputs. The classical value $V_C(\tau)$ is the maximum over the $64$ deterministic strategy pairs, computed exactly. With a shared Bell pair $|\Phi^+\rangle$ and input-dependent measurement angles, the winning probability is
+\paragraph{The game behind a request.} Each request is a short cooperative game between the two agents at the ends of an edge, Alice and Bob. A referee sends Alice a question $x\in\{0,1,2\}$ and Bob a question $y\in\{0,1,2\}$. Each answers with one bit, $a$ and $b$. They win if the parity of their answers matches a target bit that depends on both questions, $a\xor b=f_\tau(x,y)$. The question pair is drawn from a public distribution $\pi_\tau(x,y)=w_{xy}/\sum_{x',y'}w_{x'y'}$ with integer weights $w_{xy}\in\{1,2,3,4\}$. The predicate $f_\tau$ and the weights $w$ together define the request \emph{type} $\tau$. Alice and Bob may agree on a strategy in advance, but they cannot communicate once the questions arrive. Alice therefore never knows $y$, and Bob never knows $x$. Games of this form are XOR games \citep{cleve2004consequences}. The best known is CHSH \citep{clauser1969proposed}: there are two questions per player, $f(x,y)=x\wedge y$, and the distribution is uniform. Its best classical winning probability is $3/4$, and with a shared Bell pair it rises to $\cos^2(\pi/8)\approx0.854$. Our types are random $3\times3$ generalizations of it. Each split draws its own types: the entries of $f_\tau$ are independent fair bits, and the weights are independent and uniform on $\{1,2,3,4\}$.
+
+\paragraph{Classical value.} Without entanglement, shared randomness cannot beat the best deterministic strategy. A deterministic strategy is a map $a(x)$ for Alice and $b(y)$ for Bob, so there are $2^3\times2^3=64$ strategy pairs. The classical value $V_C(\tau)$ is the largest winning probability among them, found by enumeration.
+
+\paragraph{Quantum value.} With a shared Bell pair $|\Phi^+\rangle$, Alice measures her half in a basis at an angle $\alpha_x$ that depends on her question, and Bob measures at an angle $\beta_y$. Their outcomes then agree with probability $\tfrac12[1+\cos(\alpha_x-\beta_y)]$, and the winning probability is
 \begin{equation}
   V_Q(\tau;\alpha,\beta)=\sum_{x,y}\pi_\tau(x,y)\,\tfrac12\bigl[1+(-1)^{f_\tau(x,y)}\cos(\alpha_x-\beta_y)\bigr].
 \end{equation}
-We maximize this over the six angles and certify the result against the XOR-game SDP bound, which is tight and attained by a maximally entangled state \citep{tsirelson1980quantum,cleve2004consequences}. Serving a request on edge $e$ with public urgency $u_e\in\{1,2,3,5\}$ yields the certified gain
+We maximize this over the six angles. We then certify the result against the semidefinite-programming (SDP) bound for XOR games, which is tight and attained by a maximally entangled state \citep{tsirelson1980quantum,cleve2004consequences}. Across the \nonTestTypes{} development and validation types, the optimized value matches the SDP bound to within $\sdpMaxDev$.
+
+\paragraph{A worked example.} \Cref{tab:xor} shows one development type. The best classical strategy, $a=(0,0,1)$ for Alice and $b=(0,1,1)$ for Bob, wins seven of the nine question pairs. It loses two pairs carrying \xorLost{} of the \xorWeightTotal{} units of weight, so $V_C=\xorClassical$. No classical strategy can win all nine, because the targets are inconsistent with any parity assignment. Measuring a shared Bell pair at optimized angles wins with probability $V_Q=\xorBell$. A Bell pair is therefore worth $\xorGap$ in winning probability for this type.
+
+\begin{table}[H]
+\centering\small
+\caption{Development request type \texttt{qip-development-type-000}. Each cell gives the target bit $f(x,y)$ and the weight $w_{xy}$; $^{\times}$ marks the question pairs lost by the best classical strategy.}
+\label{tab:xor}
+\input{generated/xor_example.tex}
+\end{table}
+
+\paragraph{Certified gain.} Serving a request on edge $e$ with public urgency $u_e\in\{1,2,3,5\}$ yields the certified gain
 \begin{equation}
   G_e=u_e\,\max\{0,\,V_Q(\tau_e)-V_C(\tau_e)\}.
   \label{eq:gain}
 \end{equation}
-Gains are small, typically a few percent of winning probability. Some types have zero gain (\testPositiveTypes{} of \testTypes{} sealed test types have a positive gap), so serving every visible request is never automatically useful. For an RL reader, the essential point is that $G_e$ is an exact, public number attached to each active edge.
+Here $u_e$ is the request's urgency, which scales how much the endpoints care about winning. Gains are small. Among the \nonTestTypes{} non-test types, \nonTestPositive{} have a positive quantum gap, with a median of \gapMedian{} and a maximum of \gapMax{} in winning probability. Some types have zero gain (\testPositiveTypes{} of \testTypes{} sealed test types have a positive gap), so serving every visible request is never automatically useful. For an RL reader, the essential point is that $G_e$ is an exact, public number attached to each active edge.
 
 \subsection{Catalogs, dynamics, and the decision problem}\label{sec:mdp}
 
@@ -148,15 +163,32 @@ where the fraction is one under ideal resources. The rewards integrate analytica
 \label{fig:overview}
 \end{figure}
 
+\paragraph{The network model.} Agents are the nodes of a quantum network, and an edge is a link over which one Bell pair can be delivered directly to its two endpoints (single hop, no entanglement swapping). The matching constraint models each node taking part in at most one entangled pair per round. The cap of two pairs per round models the distribution capacity of the network. These are modelling choices; \cref{sec:discussion} lists their limits.
+
+\paragraph{How catalogs are generated.} Every catalog is produced by one generator from a seed (\cref{fig:network,tab:catalogs}).
+\begin{itemize}[leftmargin=*]
+  \item \emph{Graph.} A path, ring, star, or complete graph on $n$ agents, or a \emph{sparse} graph: a path through all agents plus $\lfloor n/2\rfloor$ extra edges chosen at random.
+  \item \emph{States.} Each of the 14 states activates a random subset of edges, with size drawn uniformly between $\min(2,|E|)$ and $|E|$. Each active edge gets a request type drawn uniformly from the split's types and an urgency from $\{1,2,3,5\}$ with probabilities $0.45, 0.30, 0.15, 0.10$. The same type can therefore be worth different amounts on different edges.
+  \item \emph{Dynamics.} The transition matrix starts from independent $\mathrm{Gamma}(1,1)$ entries. The generator adds 7 to each self-loop and 2.5 to the move from state $i$ to state $i+1$ (cyclically), then normalizes each row. Across the training catalogs, the mean self-loop probability is \genStayMin--\genStayMax, and the mean probability of moving to the next state in the cycle is \genNextMin--\genNextMax. Demand therefore persists for a few rounds and drifts mildly in one direction around the cycle.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{fig_network.pdf}
+\caption{How catalogs are formed. \emph{Top:} the five graph families, drawn from actual catalogs. \emph{Bottom:} the first four of the 14 public states of the development complete graph on four agents. Each state activates some edges, and each active edge carries a request whose certified gain is shown. A feasible action is a matching of at most two edges, for example the edges labelled 0.231 and 0.031 cannot both be served in state 4 because they share agent 1.}
+\label{fig:network}
+\end{figure}
+
 \subsection{Splits, transfer, and resource noise}\label{sec:splits}
 
-Request types were generated independently per split (18 development, 12 validation, and 16 test types), with disjoint identifiers and contents. Eight development and four validation catalogs cover three to six agents on path, ring, star, complete, and sparse graphs. The four sealed test catalogs are listed below. Catalogs marked $^\dagger$ share their public dynamics with a development catalog (\cref{sec:audit}).
-\begin{itemize}[leftmargin=*]
-  \item a four-agent complete graph with fresh requests$^\dagger$ ($H=10$, $B=6$);
-  \item an unseen six-agent ring ($H=16$, $B=6$);
-  \item an unseen eight-agent sparse graph with 11 edges ($H=24$, $B=10$);
-  \item a four-agent path with a long horizon$^\dagger$ ($H=24$, $B=6$).
-\end{itemize}
+Request types were generated independently per split (18 development, 12 validation, and 16 test types), with disjoint identifiers and contents. Eight development and four validation catalogs cover three to six agents on path, ring, star, complete, and sparse graphs. \Cref{tab:catalogs} lists every catalog. Two sealed test catalogs use graphs larger than any seen in training, a six-agent ring and an eight-agent sparse graph with 11 edges, and one uses a longer horizon ($H=24$). Catalogs marked $^\dagger$ share their public dynamics with a development catalog (\cref{sec:audit}).
+
+\begin{table}[H]
+\centering\small
+\caption{All catalogs. ``Requests/state'' is the mean number of active requests per state. ``Stay'' and ``Next'' are the mean probabilities of staying in the same state and of moving to the next state in the generator's cycle. $^\dagger$Public dynamics shared with a development catalog.}
+\label{tab:catalogs}
+\input{generated/catalog_table.tex}
+\end{table}
 Two optional imperfections are modelled. Under \emph{Werner noise} with visibility $v$, the Bell value becomes $\tfrac12+v(V_Q-\tfrac12)$. Under \emph{heralded loss}, each attempted unit succeeds with probability $p_h$ and is consumed either way.
 
 \subsection{Interface}\label{sec:gym}
