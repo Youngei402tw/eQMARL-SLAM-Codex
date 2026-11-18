@@ -216,7 +216,7 @@ def main():
     ce_fracs = [float(r[2]) for r in ce_rows]
     macros = {
         "bpAlpha": f"{sel30['bid_price']['alpha']:g}", "bpPrior": f"{sel30['bid_price']['prior_weight']:g}",
-        "bpValMean": f4(sel30["bid_price"]["validation_mean"]), "rhoDev": f3(sel30["certainty_equivalent"]["rho_development"]),
+        "bpValMean": f4(sel30["bid_price"]["validation_mean"]), "rhoDev": f3(sel30["certainty_equivalent"]["rho_development"]), "rhoFull": f3(rho_training()),
         "bpConfigs": str(len(tuning["bid_price"])), "ceConfigs": str(len(tuning["certainty_equivalent"])),
         "bpMean": f4(mm["bid_price"]["all"]), "bpFrac": pct(mm["bid_price"]["fraction_online_all"]),
         "bpFracFresh": pct(mm["bid_price"]["fraction_online_fresh"]),
@@ -245,6 +245,17 @@ def main():
     lines += [f"\\newcommand{{\\{k}}}{{{v}}}" for k, v in sorted(macros.items())]
     (HERE / "generated" / "numbers30.tex").write_text("\n".join(lines) + "\n")
     print(json.dumps(macros, indent=1))
+
+
+def rho_training():
+    """Mean self-loop probability of the development + validation catalogs (the CE-DP prior used on the sealed catalogs)."""
+    freeze = json.loads((ROOT / "experiments/27/27-qip-robustness-scaling_attempt-01/stage28-freeze.json").read_text())
+    loops = []
+    for ref in freeze["training_catalogs"]["development"] + freeze["training_catalogs"]["validation"]:
+        if sha(ROOT / ref["path"]) != ref["sha256"]:
+            raise SystemExit(f"hash mismatch: {ref['path']}")
+        loops.append(np.mean(np.diag(np.asarray(json.loads((ROOT / ref["path"]).read_text())["transition"], float))))
+    return float(np.mean(loops))
 
 
 def stage31_assets():

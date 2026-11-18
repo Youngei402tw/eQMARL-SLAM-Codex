@@ -106,7 +106,7 @@ Gains are small, typically a few percent of winning probability. Some types have
 
 \subsection{Catalogs, dynamics, and the decision problem}\label{sec:mdp}
 
-A \emph{catalog} fixes a graph with $n\le8$ agents and edge set $E$, a horizon $H$, a budget $B$, and a Markov chain $P$ over 14 public \emph{states}. Each state lists its active edges, together with their request types and urgencies. Episodes start in a uniformly random state with budget $b_1=B$. In round $t$ the allocator observes the current gains, the remaining budget $b_t$, and the remaining time $k_t=H-t+1$. It picks a matching from
+A \emph{catalog} fixes a graph with $n\le8$ agents and edge set $E$, a horizon $H$, a budget $B$, and a Markov chain $P$ over 14 public \emph{states}. Each state lists its active edges, together with their request types and urgencies. Episodes start in a uniformly random state with budget $b_1=B$.  In round $t$ the allocator observes the current gains, the remaining budget $b_t$, and the remaining time $k_t=H-t+1$. It picks a matching from
 \begin{equation}
   \M(s_t,b_t)=\bigl\{M\subseteq E_{s_t}:\ |M|\le\min(2,b_t),\ \text{edges of $M$ pairwise vertex-disjoint}\bigr\},
 \end{equation}
@@ -115,6 +115,8 @@ which always contains the empty set. Each selected edge consumes one unit, so $b
   r_t=\sum_{e\in M_t}G_e\cdot\frac{\#\{\text{heralded successes in }M_t\}}{|M_t|},\qquad S=\sum_{t=1}^H r_t ,
 \end{equation}
 where the fraction is one under ideal resources. The rewards integrate analytically over private inputs, so the only randomness in an episode is the public state sequence. The learned allocators never observe $P$. \Cref{fig:overview} summarizes one round.
+
+\paragraph{State table versus dynamics.} The 14 states and their requests form the catalog's public \emph{state table}. It says which combinations of requests can occur and what each is worth. The transition matrix $P$ says how likely each state is to follow each other one. The two are separate pieces of knowledge, and the methods we compare differ in which they have (\cref{tab:fairness}). Online DP knows both. CE-DP knows the table but must guess $P$. The learners and the bid-price rule see neither: they observe only the current state's requests, the remaining budget, and the remaining time.
 
 \begin{figure}[t]
 \centering
@@ -174,7 +176,7 @@ All methods act on the same feasible sets and the same paired evaluation sequenc
 \paragraph{Comparators added after the locked study.} We added two comparators after the locked study, registered before they were run.
 \begin{itemize}[leftmargin=*]
   \item \emph{Bid-price threshold.} For each state, take the edge gains of the best two-pair matching. Pool these ``slot gains'' from the training catalogs into a reference distribution with total weight $\omega$, and add every slot gain observed so far in the current episode with weight one. In round $t$, set the threshold $\theta_t$ to the $1-\alpha b_t/(2k_t)$ quantile of this mixture, or to zero if $\alpha b_t\ge 2k_t$. Then serve the best feasible matching whose every edge has $G_e\ge\theta_t$ and $G_e>0$. The rule spends freely when budget is plentiful relative to time and becomes selective as the budget tightens. This is the logic of bid-price control \citep{gallego1994optimal,talluri2004theory}. It has two parameters, $(\alpha,\omega)$, and never sees $P$.
-  \item \emph{Certainty-equivalent DP (CE-DP).} Estimate $P$ from $K$ logged public state sequences of the catalog, as the posterior mean under a Dirichlet prior. The prior puts mass $\rho$ on staying in the current state and spreads the rest uniformly, with total mass $\kappa$, and $\rho$ is the mean self-loop probability of the development catalogs. Then solve the finite-horizon Bellman recursion exactly on the estimate \citep{bertsekas2017dynamic}. CE-DP requires the catalog's public state table and, for $K>0$, logged data from the test catalog. The learners receive neither, so CE-DP is an informed reference rather than an equal-information competitor.
+  \item \emph{Certainty-equivalent DP (CE-DP).} Estimate $P$ from $K$ logged public state sequences of the catalog, as the posterior mean under a Dirichlet prior. The prior's mean puts probability $\rho$ on staying in the current state and spreads $1-\rho$ evenly over the other 13 states; $\kappa$ is the prior's total mass. Here $\rho$ is the average probability of staying in the same state over the training catalogs: \rhoDev{} on the development catalogs during validation tuning, and \rhoFull{} on the development and validation catalogs for the sealed evaluation (per-catalog values range from 0.31 to 0.37). With $K=0$ the estimate equals the prior and $\kappa$ has no effect. The planner then assumes that the current state persists with probability $\rho$ and otherwise moves to any other state with equal probability, ignoring the structure of the true $P$. Then solve the finite-horizon Bellman recursion exactly on the estimate \citep{bertsekas2017dynamic}. CE-DP requires the catalog's public state table and, for $K>0$, logged data from the test catalog. The learners receive neither, so CE-DP is an informed reference rather than an equal-information competitor.
 \end{itemize}
 
 \paragraph{References.} \emph{Online DP} knows the true $P$ and is the optimal non-anticipative policy. The \emph{future-clairvoyant} reference knows the realized state sequence. We report surplus as a fraction of online DP throughout.
@@ -192,7 +194,7 @@ Random, Greedy & nothing (random: not even gains) & --- \\
 Static & fixed per-edge-index priorities & training-catalog gains \\
 DQN, Double DQN, PPO, Rec.\ PPO & graph size; edge activity (rec.\ PPO: memory) & 12 training catalogs; 3 configs $\times$ 2 seeds \\
 \textbf{Bid-price} & slot gains seen earlier in the episode & training gains; \bpConfigs{} configs on validation \\
-\textbf{CE-DP} ($K$ sequences) & public state table and state identity; $K$ logged test-catalog sequences & $\rho$ from development; $\kappa$ on validation \\
+\textbf{CE-DP} ($K$ sequences) & public state table and state identity; $K$ logged test-catalog sequences & $\rho$ from training catalogs; $\kappa$ on validation \\
 Online DP & true transition matrix $P$ & --- \\
 Future-clairvoyant & realized future states & --- \\
 \bottomrule
