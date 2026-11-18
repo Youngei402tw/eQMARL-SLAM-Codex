@@ -103,11 +103,16 @@ We do not claim a quantum advantage, a new nonlocal game, or hardware evidence. 
 \end{equation}
 We maximize this over the six angles. We then certify the result against the semidefinite-programming (SDP) bound for XOR games, which is tight and attained by a maximally entangled state \citep{tsirelson1980quantum,cleve2004consequences}. Across the \nonTestTypes{} development and validation types, the optimized value matches the SDP bound to within $\sdpMaxDev$.
 
-\paragraph{A worked example.} \Cref{tab:xor} shows one development type. The best classical strategy, $a=(0,0,1)$ for Alice and $b=(0,1,1)$ for Bob, wins seven of the nine question pairs. It loses two pairs carrying \xorLost{} of the \xorWeightTotal{} units of weight, so $V_C=\xorClassical$. No classical strategy can win all nine, because the targets are inconsistent with any parity assignment. Measuring a shared Bell pair at optimized angles wins with probability $V_Q=\xorBell$. A Bell pair is therefore worth $\xorGap$ in winning probability for this type.
+\paragraph{A worked example.} \Cref{tab:xor} spells out one development type, one row per question pair $(x,y)$. The \emph{target} column is the bit $f(x,y)$ that the players' answers must XOR to. The \emph{weight} $w_{xy}$ sets how often that question pair is asked: its probability is $\pi(x,y)=w_{xy}/\xorWeightTotal$, since the nine weights sum to \xorWeightTotal.
+\begin{itemize}[leftmargin=*]
+  \item \emph{Classical play.} The best classical strategy fixes Alice's answer to each of her questions, $a=(0,0,1)$, and Bob's, $b=(0,1,1)$. Its answers XOR to the target on seven of the nine question pairs. It loses the two pairs marked \textbf{no}, which carry \xorLost{} of the \xorWeightTotal{} units of weight, so $V_C=1-\xorLost/\xorWeightTotal=\xorClassical$. No classical strategy wins all nine pairs, because the nine targets cannot all be written as $a(x)\oplus b(y)$.
+  \item \emph{Play with a Bell pair.} The players measure at the optimized angles and win each question pair with the probability in the last column. Averaging those probabilities with weights $\pi$ gives $V_Q=\xorBell$. The quantum strategy wins no pair with certainty, but it spreads its success. It wins the heavy pair $(\xorRecX,\xorRecY)$ (weight \xorRecW), which classical play always loses, with probability \xorRecQ. It nearly gives up the light pair $(\xorWorstX,\xorWorstY)$ (weight \xorWorstW), winning it with probability \xorWorstQ. The other seven pairs, which classical play always wins, are won with probability \xorOtherMin--\xorOtherMax. The weighted average comes out higher than the classical value.
+\end{itemize}
+A Bell pair is therefore worth $V_Q-V_C=\xorGap$ in winning probability for this type.
 
 \begin{table}[H]
 \centering\small
-\caption{Development request type \texttt{qip-development-type-000}. Each cell gives the target bit $f(x,y)$ and the weight $w_{xy}$; $^{\times}$ marks the question pairs lost by the best classical strategy.}
+\caption{A worked request type (\texttt{qip-development-type-000}). Each row is one question pair: Alice receives $x$ and Bob receives $y$. \emph{Target}: the bit $f(x,y)$ that the answers must XOR to. \emph{Weight} and \emph{probability}: how often the pair is asked. \emph{Best classical strategy}: the players' fixed answers $a(x)$ and $b(y)$, their XOR, and whether it hits the target. \emph{With a Bell pair}: the probability of winning that pair at the optimized measurement angles.}
 \label{tab:xor}
 \input{generated/xor_example.tex}
 \end{table}
