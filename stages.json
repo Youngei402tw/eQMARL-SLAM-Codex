@@ -645,7 +645,24 @@
       "authorized_scope": "User approval 2026-11-16 ('please proceed') after the reviewer-risk assessment; cap 4.5 wall-hours, development/validation data only",
       "source_commit": "d66cd394107162f5b30d4d46eb2af5cbd5672e07",
       "results_commit": "931646de7ae6946fee0f31a2393a451ea88605c4",
-      "publication_receipt": "docs/stages/32-publication.json"
+      "publication_receipt": "docs/stages/32-publication.json",
+      "completion_commit": "07074c268257d5245ff7c7f29a8e13332b65ca44"
+    },
+    {
+      "id": "33",
+      "name": "transition-robustness",
+      "title": "Robustness of the Stage-30 conclusions to the transition matrix (v1 validation catalogs, non-test data)",
+      "branch": "stage/33-transition-robustness",
+      "depends_on": [
+        "32"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/33-transition-robustness.md",
+      "status": "in_progress",
+      "branch_created": true,
+      "dependency_completion_commit": "07074c268257d5245ff7c7f29a8e13332b65ca44",
+      "branch_created_from_commit": "07074c268257d5245ff7c7f29a8e13332b65ca44",
+      "authorized_scope": "User approval 2026-11-18 ('yes proceed') to register the transition-matrix sweep and add a limitation; validation catalogs only, cap 0.5 wall-hours"
     }
   ],
   "recommended_execution_order": [
@@ -681,6 +698,7 @@
     "29",
     "30",
     "31",
-    "32"
+    "32",
+    "33"
   ]
 }

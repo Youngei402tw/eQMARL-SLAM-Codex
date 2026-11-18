@@ -39,6 +39,7 @@ EXPECTED_BRANCHES = [
     "stage/27-qip-robustness-scaling", "stage/28-qip-confirmatory",
     "stage/29-qip-release", "stage/30-tmlr-benchmark",
     "stage/31-harder-variants", "stage/32-learner-strength",
+    "stage/33-transition-robustness",
 ]
 
 

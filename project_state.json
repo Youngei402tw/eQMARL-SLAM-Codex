@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-11-16T15:30:00+00:00",
+  "updated_utc": "2026-11-18T10:00:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -10,14 +10,14 @@
     "url": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
     "last_check": "Stages 10-14 merged through PRs 11-15; all 120 confirmatory bundles and the Stage14 release audit were freshly retrieved and hash-validated."
   },
-  "authorized_current_scope": "Stage 32 learner-strength check on development/validation data, cap 4.5 wall-hours; user approval 2026-11-16.",
-  "active_stage": "32",
-  "stage_status": "completed",
+  "authorized_current_scope": "Stage 33 transition-robustness check on validation catalogs, cap 0.5 wall-hours; user approval 2026-11-18.",
+  "active_stage": "33",
+  "stage_status": "in_progress",
   "training_runs_executed": 443,
-  "current_branch": "stage/32-learner-strength",
-  "dependency_commit": "f8b6536c398abc6787fa1f6d39ffb6a25a66cc3d",
+  "current_branch": "stage/33-transition-robustness",
+  "dependency_commit": "07074c268257d5245ff7c7f29a8e13332b65ca44",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "complete_remote_verified",
+  "publication_status": "stage33_source_pending",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -61,10 +61,10 @@
     "stage/29-qip-release": "d577eac9903f985a231d053be91e8d4a0b99d63d",
     "stage/30-tmlr-benchmark": "9f9a3f613efce04d81d785019835422699cecf6b",
     "stage/31-harder-variants": "f8b6536c398abc6787fa1f6d39ffb6a25a66cc3d",
-    "stage/32-learner-strength": "099d181d8bd610b7aff9a37d3db2d858587ab33f"
+    "stage/32-learner-strength": "07074c268257d5245ff7c7f29a8e13332b65ca44"
   },
   "blockers": [],
-  "next_action": "Author actions for TMLR submission (docs/paper/tmlr/SUBMISSION_CHECKLIST.md). The sealed qip_v2 test split remains unused.",
+  "next_action": "Publish Stage 33 source; run the registered transition-robustness check.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
@@ -76,10 +76,10 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": null,
+  "next_stage": "33",
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
-  "next_stage_status": "none_registered",
+  "next_stage_status": "in_progress",
   "completed_stage_budgets": {
     "01": {
       "cap_wall_seconds": 86400,
@@ -523,6 +523,18 @@
         "circuit_evaluations": 0,
         "shots": 0
       }
+    },
+    "32": {
+      "cap_wall_seconds": 16200,
+      "consumed_wall_seconds": 12073.044861295,
+      "setup_wall_seconds_charged": 0,
+      "recorded_experiment_resources": {
+        "cpu_core_hours": 11.857503283888889,
+        "decisions": 4586200,
+        "updates": 1134992,
+        "circuit_evaluations": 0,
+        "shots": 0
+      }
     }
   },
   "training_counter_definition": "Task optimizer executions including smoke/failed archive attempts; repeated attempts are not independent trained seeds.",
@@ -554,14 +566,7 @@
   },
   "last_progress_utc": "2026-10-28T09:10:00+00:00",
   "stage_budget": {
-    "stage": "32",
-    "cap_wall_seconds": 16200,
-    "setup_wall_seconds_charged": 0,
-    "active_wall_seconds": 12073.044861295,
-    "cpu_core_hours": 11.857503283888889,
-    "decisions": 4586200,
-    "updates": 1134992,
-    "circuit_evaluations": 0,
-    "shots": 0
+    "stage": "33",
+    "setup_wall_seconds_charged": 0
   }
 }

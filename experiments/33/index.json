@@ -1,0 +1,12 @@
+{
+  "stage": "33",
+  "protocol_id": "bellroute-transition-robustness-v1",
+  "runs": [
+    {
+      "run_id": "33-transition-robustness_attempt-01",
+      "status": "planned",
+      "config_path": "configs/stage33/33-transition-robustness_attempt-01.yaml",
+      "config_sha256": "33b1b67c7a572bd081abf86c19fef5f0b28818ccb596adbfb3bd74371b3be617"
+    }
+  ]
+}
