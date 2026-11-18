@@ -267,7 +267,7 @@ No per-catalog PPO--DQN contrast survived Holm adjustment (\cref{app:secondary})
 
 \begin{table}[t]
 \centering
-\caption{Mean surplus on the sealed catalogs; parentheses give the percentage of online-DP surplus. Learned rows average 12 seeds $\times$ 500 sequences. Other rows use the same 500 sequences. Bid-price and CE-DP (post-lock comparators, tuned on validation only) are below the rule. $^\dagger$Public dynamics shared with a development catalog.}
+\caption{Results on the sealed catalogs. Each cell gives the percentage of online-DP surplus, with the mean surplus in parentheses. Learned rows average 12 seeds $\times$ 500 sequences. Other rows use the same 500 sequences. Bid-price and CE-DP (post-lock comparators, tuned on validation only) are below the rule. $^\dagger$Public dynamics shared with a development catalog.}
 \label{tab:main}
 \small
 \setlength{\tabcolsep}{4pt}
@@ -275,18 +275,7 @@ No per-catalog PPO--DQN contrast survived Holm adjustment (\cref{app:secondary})
 \toprule
 Method & \shortstack{4-agent\\complete$^\dagger$} & \shortstack{6-agent\\ring} & \shortstack{8-agent\\sparse} & \shortstack{4-agent path\\$H{=}24^\dagger$} & Overall \\
 \midrule
-Random & \catCmpRandom & \catRingRandom & \catSparseRandom & \catPathRandom & \meanRandom \\
-Static & \catCmpStatic & \catRingStatic & \catSparseStatic & \catPathStatic & \meanStatic \\
-Greedy & \catCmpGreedy{} (\fracCmpGreedy) & \catRingGreedy{} (\fracRingGreedy) & \catSparseGreedy{} (\fracSparseGreedy) & \catPathGreedy{} (\fracPathGreedy) & \meanGreedy{} (\fracGreedy) \\
-DQN & \catCmpDQN{} (\fracCmpDQN) & \catRingDQN{} (\fracRingDQN) & \catSparseDQN{} (\fracSparseDQN) & \catPathDQN{} (\fracPathDQN) & \meanDQN{} (\fracDQN) \\
-PPO & \catCmpPPO{} (\fracCmpPPO) & \catRingPPO{} (\fracRingPPO) & \catSparsePPO{} (\fracSparsePPO) & \catPathPPO{} (\fracPathPPO) & \meanPPO{} (\fracPPO) \\
-\midrule
-\textbf{Bid-price} & \textbf{\catCmpBp} (\fracCmpBp) & \textbf{\catRingBp} (\fracRingBp) & \textbf{\catSparseBp} (\fracSparseBp) & \textbf{\catPathBp} (\fracPathBp) & \textbf{\bpMean} (\bpFrac) \\
-CE-DP, $K{=}0$ & \catCmpCeZero{} (\fracCmpCeZero) & \catRingCeZero{} (\fracRingCeZero) & \catSparseCeZero{} (\fracSparseCeZero) & \catPathCeZero{} (\fracPathCeZero) & \ceZeroMean{} (\ceZeroFrac) \\
-\midrule
-Online DP (true $P$) & \catCmpOnline & \catRingOnline & \catSparseOnline & \catPathOnline & \meanOnline \\
-Future-clairvoyant & \catCmpFuture & \catRingFuture & \catSparseFuture & \catPathFuture & \meanFuture \\
-\bottomrule
+\input{generated/main_table.tex}
 \end{tabular}
 \end{table}
 
@@ -335,6 +324,8 @@ Three observations locate the learners' shortfall. They are diagnostic, not conf
   \item \emph{Predictable structure does matter.} When each state has an 80\%-likely successor, the default guess fell to \trCeSucc\%. Ten logged episodes restored \trCeSuccKten\%, and 100 restored \trCeSuccKhundred\%.
 \end{itemize}
 So ``dynamics are nearly irrelevant'' holds for the generator's fast-mixing chains and for merely persistent ones, but not for chains with strong successor structure. The finding that pacing captures most of the optimum holds throughout.
+
+\paragraph{Foresight is worth little.} The future-clairvoyant reference knows the realized sequence of states in advance and spends the budget optimally for that sequence. No real allocator can match it. It earns only \foresightGain\% more than online DP (\cref{tab:main}), so online DP already captures \onlineOfFuture\% of what perfect foresight could achieve. Uncertainty about the future therefore costs little here. The learners' larger shortfall comes from pacing, not from an unpredictable future.
 
 \paragraph{The development ablations agree.} Removing the remaining-budget feature from Double DQN cost \ablDropNoBudget\% of validation surplus, and removing remaining time cost \ablDropNoHorizon\% (\cref{app:training}). These two inputs are exactly the quantities that set the bid-price threshold. The learners use them, but less precisely than a closed-form quantile rule.
 
@@ -529,7 +520,7 @@ PPO (sealed) & \noiseIdealHundred & -- & \noiseHerSevenFive & \noiseHerFive & --
 
 \begin{table}[H]
 \centering\small
-\caption{Learner-strength check on validation catalogs. Both columns average all seeds of a configuration (2 per configuration, 6 for the selected one); configurations were selected on the 2 grid seeds only. Comparison means use fresh sequences. Source: \texttt{figure\_data/tmlr\_learner\_strength.csv}.}
+\caption{Learner-strength check on validation catalogs. Both columns average all seeds of a configuration (2 per configuration, 6 for the selected one); configurations were selected on the 2 grid seeds only. The comparison column uses fresh sequences and gives the percentage of online-DP surplus (\lsOnlineMean) with the mean surplus in parentheses. Source: \texttt{figure\_data/tmlr\_learner\_strength.csv}.}
 \label{tab:strength}
 \input{generated/strength_table.tex}
 \end{table}
