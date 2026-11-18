@@ -1,0 +1,153 @@
+{
+  "run_id": "33-transition-robustness_attempt-01",
+  "stage": "33",
+  "protocol_id": "bellroute-transition-robustness-v1",
+  "profile": "tuning",
+  "experiment": "transition-robustness",
+  "hypothesis": "H1: a validation-tuned bid-price rule keeps >= 90% of online DP under every registered transition-matrix variant. H2 (expected to fail for structured dynamics, per an unregistered development-catalog sweep): CE-DP with the generic default guess and no logged data keeps >= 98% under every variant. H3: where H2 fails, CE-DP with 100 logged episodes recovers >= 98%.",
+  "method": "Rebuild each of the 4 validation catalogs under 7 registered transition-matrix variants (state tables unchanged). Tune the bid-price rule per variant on tuning sequences; score greedy, frozen and retuned bid-price, CE-DP (default guess, matched stay probability, 10 and 100 logged episodes) and online DP on disjoint evaluation sequences. No learners, no test data.",
+  "dependency_completion_commit": "07074c268257d5245ff7c7f29a8e13332b65ca44",
+  "wall_seconds": 1800,
+  "max_primitive_steps": 60000000,
+  "max_cpu_threads": 4,
+  "workers": 4,
+  "v1_freeze": {
+    "path": "experiments/27/27-qip-robustness-scaling_attempt-01/stage28-freeze.json",
+    "sha256": "ff34ffbb5a30053555de83494c937980ad4f91c5e4e87f2401833cf173df60ef"
+  },
+  "variants": [
+    {
+      "name": "as generated",
+      "kind": "as_generated"
+    },
+    {
+      "name": "stay 0.05",
+      "kind": "stay",
+      "stay": 0.05
+    },
+    {
+      "name": "stay 0.7",
+      "kind": "stay",
+      "stay": 0.7
+    },
+    {
+      "name": "stay 0.9",
+      "kind": "stay",
+      "stay": 0.9
+    },
+    {
+      "name": "successor 0.5",
+      "kind": "successor",
+      "strength": 0.5
+    },
+    {
+      "name": "successor 0.8",
+      "kind": "successor",
+      "strength": 0.8
+    },
+    {
+      "name": "rare jackpot",
+      "kind": "rare_jackpot",
+      "entry_scale": 0.08,
+      "jackpot_stay": 0.5
+    }
+  ],
+  "default_rho": 0.34701125348395934,
+  "default_rho_note": "mean self-loop probability of the 8 development catalogs (Stage-30 tuning value); not computed from validation catalogs",
+  "frozen_bid_price": {
+    "alpha": 0.75,
+    "prior_weight": 80,
+    "note": "Stage-30 validation selection"
+  },
+  "bid_price": {
+    "alpha": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "prior_weight": [
+      0,
+      5,
+      20,
+      80,
+      320
+    ]
+  },
+  "ce_dp_logged": {
+    "10": 8,
+    "100": 0.5
+  },
+  "ce_dp_logged_note": "kappa per logged-episode count frozen from the Stage-30 validation selection",
+  "tuning_seed_start": 3800000,
+  "tuning_sequences": 200,
+  "evaluation_seed_start": 3900000,
+  "evaluation_sequences": 500,
+  "logging_seed_start": 3950000,
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 933000,
+  "decision_rule": {
+    "h1_threshold": 0.9,
+    "h2_threshold": 0.98,
+    "h3_logged_episodes": 100,
+    "h1": "bid_price_retuned overall fraction of online DP (ratio of catalog-averaged means, evaluation sequences) >= 0.90 for every variant",
+    "h2": "ce_dp_default overall fraction >= 0.98 for every variant; failing variants are listed",
+    "h3": "for every variant failing H2, ce_dp_k100 overall fraction >= 0.98",
+    "reporting": "sequence-level percentile bootstrap 95% intervals and worst-catalog fractions are descriptive"
+  },
+  "exploratory_disclosure": "An unregistered sweep of 6 of these variants on the 8 development catalogs (150 tuning / 400 evaluation sequences) gave CE-DP default 96.1-99.6% (worst catalog 81.8% under successor 0.8) and bid-price 93.9-96.9%. This run evaluates validation catalogs only.",
+  "seed_streams": {
+    "model_init": null,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": 3900000,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    },
+    "test": {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+    }
+  },
+  "model": {
+    "actor": "none (no learner trained)",
+    "encoder": null,
+    "critic": null,
+    "parameter_counts": {
+      "reported_per_checkpoint": false
+    },
+    "optimizer": null
+  },
+  "quantum": {
+    "device": "archived non-test analytic request certificates",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "none (analytic certified gains)",
+    "dtype": "float64",
+    "entanglement": "one budgeted pair per served edge",
+    "observables": [
+      "recorded expected parity success"
+    ],
+    "noise": "ideal",
+    "resource_accounting": "decisions; no circuits or shots"
+  },
+  "action_modes": "deterministic rules and planners",
+  "checkpoint_selection": "none",
+  "analysis_version": "transition-robustness-v1",
+  "interpretation": "Generalization check on non-test data only; it cannot change any locked decision."
+}

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "gates": {
+    "all_variants_complete": true,
+    "no_test_data": true,
+    "tuning_evaluation_disjoint": true,
+    "finite": true
+  },
+  "resources": {
+    "primitive_steps": 3542000,
+    "decisions": 3542000,
+    "updates": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "summary": {
+    "h1_pacing_generalizes": true,
+    "h2_dynamics_irrelevant_everywhere": false,
+    "h2_failing_variants": [
+      "successor 0.8"
+    ],
+    "h3_logged_data_recovers": true
+  }
+}

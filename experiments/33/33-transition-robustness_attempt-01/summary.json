@@ -1,0 +1,34 @@
+{
+  "run_id": "33-transition-robustness_attempt-01",
+  "source_commit": "07ecbbf5d265a8b37cf6106c45c70ee6c3ef68a2",
+  "config_sha256": "33b1b67c7a572bd081abf86c19fef5f0b28818ccb596adbfb3bd74371b3be617",
+  "metrics_sha256": "f823ce37c3954e92df755b4e2c5cf54e002cb3bb2a31a2c973b6430b6f5e52ef",
+  "metrics_rows": 7,
+  "analysis_version": "transition-robustness-v1",
+  "passed": true,
+  "gates": {
+    "all_variants_complete": true,
+    "no_test_data": true,
+    "tuning_evaluation_disjoint": true,
+    "finite": true
+  },
+  "resources_consumed": {
+    "primitive_steps": 3542000,
+    "decisions": 3542000,
+    "updates": 0,
+    "wall_seconds": 58.05001834400014,
+    "cpu_core_hours": 0.047125325555555556,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "interpretation": "Generalization check on non-test data only; it cannot change any locked decision.",
+  "analysis": {
+    "h1_pacing_generalizes": true,
+    "h2_dynamics_irrelevant_everywhere": false,
+    "h2_failing_variants": [
+      "successor 0.8"
+    ],
+    "h3_logged_data_recovers": true
+  }
+}
