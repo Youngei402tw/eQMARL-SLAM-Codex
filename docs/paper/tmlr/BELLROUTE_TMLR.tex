@@ -134,13 +134,29 @@ $x$ & $y$ & $x\wedge y$ & & $a\xor b$ & wins? & win probability \\
 \end{enumerate}
 The target table $f_\tau$ and the weights $w$ together define a request \emph{type} $\tau$. Each split draws its own types: the nine target bits are independent fair coins, and the nine weights are independent and uniform on $\{1,2,3,4\}$. Depending on the draw, a Bell pair may help a lot, a little, or not at all. Some target tables can be met perfectly by a classical plan, and then entanglement adds nothing.
 
-\paragraph{Classical value.} Without entanglement, shared randomness cannot beat the best deterministic strategy. A deterministic strategy is a map $a(x)$ for Alice and $b(y)$ for Bob, so there are $2^3\times2^3=64$ strategy pairs. The classical value $V_C(\tau)$ is the largest winning probability among them, found by enumeration.
+\paragraph{Finding the best classical strategy.} Without entanglement, the players can only fix an answer for each question in advance. A deterministic strategy is a pair of maps $a(x)$ and $b(y)$, so with three questions each there are $2^3\times2^3=64$ strategy pairs. Shared randomness does not help: a randomized strategy is a mixture of deterministic ones, and its winning probability is the same mixture of theirs, so it can never exceed the best of them. We therefore compute the classical value exactly by enumerating all 64 pairs:
+\begin{equation}
+  V_C(\tau)=\max_{a,b}\;\sum_{x,y}\pi_\tau(x,y)\,\mathbf 1\bigl[a(x)\xor b(y)=f_\tau(x,y)\bigr].
+\end{equation}
+The maximizing pair is stored with each type (\cref{tab:xor} shows one).
 
-\paragraph{Quantum value.} With a shared Bell pair $|\Phi^+\rangle$, Alice measures her half in a basis at an angle $\alpha_x$ that depends on her question, and Bob measures at an angle $\beta_y$. Their outcomes then agree with probability $\tfrac12[1+\cos(\alpha_x-\beta_y)]$, and the winning probability is
+\paragraph{Finding the best quantum strategy.} With a shared Bell pair $|\Phi^+\rangle$, Alice measures her half in a basis at an angle $\alpha_x$ that depends on her question, and Bob measures at an angle $\beta_y$. Their outcomes agree with probability $\tfrac12[1+\cos(\alpha_x-\beta_y)]$, so the winning probability is
 \begin{equation}
   V_Q(\tau;\alpha,\beta)=\sum_{x,y}\pi_\tau(x,y)\,\tfrac12\bigl[1+(-1)^{f_\tau(x,y)}\cos(\alpha_x-\beta_y)\bigr].
+  \label{eq:vq}
 \end{equation}
-We maximize this over the six angles. We then certify the result against the semidefinite-programming (SDP) bound for XOR games, which is tight and attained by a maximally entangled state \citep{tsirelson1980quantum,cleve2004consequences}. Across the \nonTestTypes{} development and validation types, the optimized value matches the SDP bound to within $\sdpMaxDev$.
+We find good angles and then prove that no quantum strategy can do better.
+\begin{enumerate}[leftmargin=*]
+  \item \emph{Search.} We maximize \cref{eq:vq} over the six angles by gradient ascent (Adam, step size $0.05$, 800 steps, double precision) from 16 random starting points drawn uniformly in $[-\pi,\pi)$, and keep the best result. This gives an achievable strategy, but on its own it is only a lower bound: the search could stop at a local optimum, and the angle family covers only some of the possible quantum strategies.
+  \item \emph{Certificate.} For XOR games the best value over \emph{all} quantum strategies, with any entangled state and any measurements, is the value of a semidefinite program \citep{tsirelson1980quantum,cleve2004consequences}:
+  \begin{equation}
+    V_Q^{*}(\tau)=\tfrac12\Bigl(1+\max_{X\succeq0,\ X_{ii}=1}\ \sum_{x,y}\pi_\tau(x,y)\,(-1)^{f_\tau(x,y)}\,X_{x,\,3+y}\Bigr),
+    \label{eq:sdp}
+  \end{equation}
+  where $X$ is a $6\times6$ positive semidefinite matrix with unit diagonal, the Gram matrix of one unit vector per question. We solve it with CVXPY and the Clarabel solver at tolerances of $10^{-10}$ \citep{diamond2016cvxpy}.
+  \item \emph{Check.} If the searched value matches $V_Q^{*}$, the search found an optimal strategy and $V_Q$ is certified. Across the \nonTestTypes{} development and validation types, the two agree to within $\sdpMaxDev$. The simple angle family therefore loses nothing for these games, and the same check is applied to the sealed test types.
+\end{enumerate}
+For CHSH, the same procedure returns $3/4$ classically and $\cos^2(\pi/8)$ with a Bell pair.
 
 \paragraph{A worked example.} \Cref{tab:xor} spells out one development type, one row per question pair $(x,y)$. The \emph{target} column is the bit $f(x,y)$ that the players' answers must XOR to. The \emph{weight} $w_{xy}$ sets how often that question pair is asked: its probability is $\pi(x,y)=w_{xy}/\xorWeightTotal$, since the nine weights sum to \xorWeightTotal.
 \begin{itemize}[leftmargin=*]
