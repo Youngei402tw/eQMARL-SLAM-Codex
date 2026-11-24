@@ -678,11 +678,14 @@
       ],
       "initial_status": "planned",
       "report": "docs/stages/34-unified-confirmatory.md",
-      "status": "in_progress",
+      "status": "passed",
       "branch_created": true,
       "dependency_completion_commit": "cd030dadd6044cbb298bc9a97c5d0956a4c51f33",
       "branch_created_from_commit": "cd030dadd6044cbb298bc9a97c5d0956a4c51f33",
-      "authorized_scope": "User approval 2026-11-24 to rerun the whole comparison with the test data seen once; CPU only, cap 6 wall-hours"
+      "authorized_scope": "User approval 2026-11-24 to rerun the whole comparison with the test data seen once; CPU only, cap 6 wall-hours",
+      "source_commit": "fd6744e138fe8cf97fc843b4252f5bb6b8bc753a",
+      "results_commit": "e2163f6c0da8a45de861a0534081281d2af78292",
+      "publication_receipt": "docs/stages/34-publication.json"
     }
   ],
   "recommended_execution_order": [

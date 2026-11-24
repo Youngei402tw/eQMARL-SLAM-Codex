@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "updated_utc": "2026-11-24T13:00:00+00:00",
+  "updated_utc": "2026-11-24T10:35:00+00:00",
   "repository": {
     "owner": "Youngei402tw",
     "name": "eQMARL-SLAM-Codex",
@@ -12,12 +12,12 @@
   },
   "authorized_current_scope": "Stage 34 unified confirmatory evaluation on the sealed qip_v2 split (opened once), cap 6 wall-hours; user approval 2026-11-24.",
   "active_stage": "34",
-  "stage_status": "in_progress",
-  "training_runs_executed": 443,
+  "stage_status": "passed",
+  "training_runs_executed": 467,
   "current_branch": "stage/34-unified-confirmatory",
   "dependency_commit": "cd030dadd6044cbb298bc9a97c5d0956a4c51f33",
   "completion_commit": "328bae8e83a3b7a4afc1e8b8be098362e4c1c4e5",
-  "publication_status": "stage34_manuscript_pending",
+  "publication_status": "complete_remote_verified",
   "verified_remote_commits": {
     "bootstrap_main": "457a8e36e505c2efe89920cf0f31a314e1e020ae",
     "stage/00-plan": "1c14d2ad833be18b1d46d0d402ab915fe4c19e26",
@@ -62,10 +62,11 @@
     "stage/30-tmlr-benchmark": "9f9a3f613efce04d81d785019835422699cecf6b",
     "stage/31-harder-variants": "f8b6536c398abc6787fa1f6d39ffb6a25a66cc3d",
     "stage/32-learner-strength": "07074c268257d5245ff7c7f29a8e13332b65ca44",
-    "stage/33-transition-robustness": "cd030dadd6044cbb298bc9a97c5d0956a4c51f33"
+    "stage/33-transition-robustness": "cd030dadd6044cbb298bc9a97c5d0956a4c51f33",
+    "stage/34-unified-confirmatory": "c2495a23d5f115b48834b7c704ee1fc953d8514b"
   },
   "blockers": [],
-  "next_action": "Publish Stage 34 results; make the single-opening confirmatory result the headline of the TMLR manuscript.",
+  "next_action": "Author actions for TMLR submission (docs/paper/tmlr/SUBMISSION_CHECKLIST.md). The qip_v2 test split has now been opened once (Stage 34); no unopened test split remains.",
   "budgeted_entanglement_final_test_accessed": true,
   "budgeted_entanglement_test_lock_source": "ebfeacabe3158e6c360da9bd303e851361fab4ba",
   "planning_validation": "passed",
@@ -77,10 +78,10 @@
     "typed compute counters",
     "schema and numerical tolerance consistency"
   ],
-  "next_stage": "34",
+  "next_stage": null,
   "verification_note": "Stage 00 completion verified against retained remote branch and indexed main; Stage 01 uses source-before-run receipts and fresh retrieval.",
   "completion_commit_location": "Following stage registry or stage PR records the immutable completion SHA; no self-referential commit hash.",
-  "next_stage_status": "in_progress",
+  "next_stage_status": "none_registered",
   "completed_stage_budgets": {
     "01": {
       "cap_wall_seconds": 86400,

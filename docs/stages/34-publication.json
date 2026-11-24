@@ -1,0 +1,25 @@
+{
+  "stage": "34",
+  "branch": "stage/34-unified-confirmatory",
+  "repository": "https://github.com/Youngei402tw/eQMARL-SLAM-Codex",
+  "outcome": "passed (primary: bid_price_superior, PPO - bid-price -0.047 [-0.053, -0.043]; PPO superior to greedy; DQN vs bid-price: bid_price_superior; PPO-DQN not equivalent; sealed qip_v2 test split opened once)",
+  "source_commit": "fd6744e138fe8cf97fc843b4252f5bb6b8bc753a",
+  "results_commit": "e2163f6c0da8a45de861a0534081281d2af78292",
+  "manuscript_commit": "c2495a23d5f115b48834b7c704ee1fc953d8514b",
+  "remote_ref": "refs/heads/stage/34-unified-confirmatory",
+  "remote_sha_verified": "c2495a23d5f115b48834b7c704ee1fc953d8514b",
+  "bundles": [
+    "experiments/34/34-unified-confirmatory_attempt-01"
+  ],
+  "paper_pdf": "docs/paper/tmlr/BELLROUTE_TMLR.pdf",
+  "paper_pdf_sha256": "20bc5dcc368635a17228bbcd0650ed1cebb1859f813ea86f6cd68d92b24b8102",
+  "short_paper_pdf": "docs/paper/tmlr/BELLROUTE_TMLR_SHORT.pdf",
+  "short_paper_pdf_sha256": "498e576b91642aac77429c581811b0acb6be304ab1c49c2255f8fae78b7109c5",
+  "paper_mirror_commit": "6df02035854f3b5458dcb035455e6079b290da8b",
+  "github_actions": {
+    "results_commit": "success https://github.com/Youngei402tw/eQMARL-SLAM-Codex/actions/runs/45373904768",
+    "manuscript_commit": "success https://github.com/Youngei402tw/eQMARL-SLAM-Codex/actions/runs/45374795256"
+  },
+  "verified": true,
+  "verified_utc": "2026-11-24T10:35:00+00:00"
+}
