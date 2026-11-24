@@ -1,0 +1,246 @@
+\documentclass[10pt]{article}
+\usepackage{tmlr}
+% Short version of BELLROUTE_TMLR.tex. Same data, numbers, and figures; condensed prose.
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage[nameinlink,capitalise]{cleveref}
+
+\hypersetup{
+  pdftitle={Beating Greedy Is Not Enough: A Preregistered Benchmark for Budgeted Allocation of Certified Entanglement},
+  pdfauthor={Anonymous},
+  colorlinks=true, linkcolor=blue!50!black, citecolor=blue!50!black, urlcolor=blue!50!black,
+}
+
+\input{../generated/numbers.tex}
+\input{generated/numbers30.tex}
+\graphicspath{{figures/}{../figures/}}
+
+\newcommand{\xor}{\mathbin{\oplus}}
+\newcommand{\M}{\mathcal{M}}
+\setlist{itemsep=1pt,topsep=2pt}
+
+\title{Beating Greedy Is Not Enough: A Preregistered Benchmark for Budgeted Allocation of Certified Entanglement}
+
+\author{\name Anonymous authors \email anonymous@example.com \\
+\addr Paper under double-blind review}
+
+\def\month{MM}
+\def\year{YYYY}
+\def\openreview{\url{https://openreview.net/forum?id=XXXX}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We introduce BellRoute, a benchmark in which an allocator spends a fixed budget of entangled Bell pairs on requests whose values are exactly certified, so the optimal policy is computable. In a preregistered study with sealed test data, deep RL allocators beat greedy allocation decisively (PPO minus greedy $\ppoMinusGreedy$, 95\% CI $[\ppoMinusGreedyLo,\ppoMinusGreedyHi]$), reaching \fracPPO--\fracDQN\% of the optimum against \fracGreedy\% for greedy. A two-parameter bid-price rule from revenue management, registered afterwards and tuned only on validation data, reached \bpFrac\% and beat every learned seed (PPO minus rule $\ppoMinusBp$, CI $[\ppoMinusBpLo,\ppoMinusBpHi]$). A planner that knows only which requests can occur reached \ceZeroFrac\%. Three registered follow-ups confirmed the gap: stronger learner tuning (\lsPPOFrac\% against \lsRuleFrac\%), a harder variant designed to favour learning (stopped for futility), and six alternative transition matrices. The learned gain over greedy is real, but in budgeted allocation the right baseline is a pacing rule, and preregistration cannot fix a weak baseline set chosen in advance.
+\end{abstract}
+
+%======================================================================
+\section{Introduction}\label{sec:intro}
+%======================================================================
+
+Learned policies are often compared only with baselines that are easy to beat, which can yield clean, statistically convincing gains that say little about whether learning was needed \citep{henderson2018deep,rajeswaran2017towards,mania2018simple,patterson2024empirical}. We document one such case from the inside. Our study was preregistered, its test data were sealed, every number was audited, and the learned result held. It still overstated the case for deep RL, because the strongest registered baseline was greedy.
+
+The problem is budgeted allocation: each round, pairs of agents request a scarce resource, and an allocator decides which requests to serve before the budget runs out. Our instance comes from quantum networking. The resource is a Bell pair, and each request is a two-player game that entanglement helps win \citep{clauser1969proposed,cleve2004consequences}. Its value can be computed exactly, so every reward is certified and the optimal policy is computable.
+
+\paragraph{Contributions.}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{A benchmark with certified rewards and a computable optimum}, released as a Gymnasium environment with sealed splits (\cref{sec:benchmark}).
+  \item \textbf{A preregistered comparison of deep RL allocators} that beat greedy and transfer to larger graphs (\cref{sec:locked}).
+  \item \textbf{A registered strong-baseline test that withdraws the learned claim}: a two-parameter pacing rule beats every learned seed (\cref{sec:strong}).
+  \item \textbf{Three registered follow-ups and an audit} showing that the conclusion survives stronger tuning, a harder variant, and other dynamics (\cref{sec:followups,sec:audit}).
+\end{enumerate}
+We claim no quantum advantage; the quantum part supplies exact, structured rewards.
+
+\paragraph{Related work.} Simple policies often rival deep RL, and conclusions depend on seeds, tuning budgets, and reporting \citep{rajeswaran2017towards,mania2018simple,agarwal2021deep}. Budgeted allocation is a finite-horizon MDP solvable by DP when the model is known \citep{puterman1994markov,bertsekas2017dynamic}, and revenue management has long used bid-price rules that accept a request only if its value exceeds the marginal value of capacity \citep{gallego1994optimal,talluri2004theory,adelman2007dynamic}. Quantum-network work studies how to distribute and route entanglement \citep{wehner2018quantum,pant2019routing}; we study which application requests deserve a scarce pair.
+
+%======================================================================
+\section{The BellRoute benchmark}\label{sec:benchmark}
+%======================================================================
+
+\subsection{Requests: XOR games with certified values}\label{sec:requests}
+
+\paragraph{The CHSH game.} Alice and Bob cannot communicate. A referee sends Alice a random bit $x$ and Bob a random bit $y$; each answers with a bit, $a$ and $b$, and they win if $a\xor b=x\wedge y$. Winning all four question pairs would require $a_0\xor b_0=a_0\xor b_1=a_1\xor b_0=0$ and $a_1\xor b_1=1$, which is impossible (XOR-ing the left sides gives 0, the right sides 1), so classical players win at most $3/4$ of the time. If they share a Bell pair and measure at angles chosen by their questions, they win with probability $\cos^2(\pi/8)\approx0.854$, the quantum maximum \citep{tsirelson1980quantum}.
+
+\paragraph{BellRoute requests.} Each request is a generalized CHSH game, an XOR game \citep{cleve2004consequences}: each player gets one of three questions, the target is a random table of bits $f_\tau(x,y)$, and question pairs are asked with probability $\pi_\tau(x,y)\propto w_{xy}$, with random weights $w_{xy}\in\{1,2,3,4\}$. The classical value $V_C(\tau)$ is found by checking all $2^3\times2^3=64$ deterministic plans (shared randomness cannot do better). With a Bell pair measured at angles $\alpha_x$ and $\beta_y$, the winning probability is
+\begin{equation}
+  V_Q(\tau)=\textstyle\sum_{x,y}\pi_\tau(x,y)\,\tfrac12\bigl[1+(-1)^{f_\tau(x,y)}\cos(\alpha_x-\beta_y)\bigr].
+\end{equation}
+We maximize it over the six angles by gradient ascent from 16 random starts and certify the result against the XOR-game semidefinite program, which bounds every quantum strategy \citep{tsirelson1980quantum,cleve2004consequences}; the two agree to within $\sdpMaxDev$ for every type. Serving a request on edge $e$ with urgency $u_e\in\{1,2,3,5\}$ yields the certified gain
+\begin{equation}
+  G_e=u_e\,\max\{0,\,V_Q(\tau_e)-V_C(\tau_e)\}.
+\end{equation}
+Gains are small (median \gapMedian{} in winning probability among the \nonTestPositive{} of \nonTestTypes{} non-test types with a positive gap), and some requests are worth nothing. \Cref{app:xor} works through one type.
+
+\subsection{The decision problem}\label{sec:mdp}
+
+A \emph{catalog} fixes a graph of $n\le8$ agents, a horizon $H$, a budget $B$, and 14 public \emph{states}, each a set of active edges carrying requests. The 14 states form the catalog's \emph{state table}. A Markov chain $P$ moves between states. In round $t$ the allocator sees the current gains, the remaining budget $b_t$, and the remaining time $k_t$, and serves a matching
+\begin{equation}
+  M_t\in\M(s_t,b_t)=\bigl\{M\subseteq E_{s_t}:\ |M|\le\min(2,b_t),\ \text{no two edges of $M$ share an agent}\bigr\},
+\end{equation}
+earning $\sum_{e\in M_t}G_e$ and spending $|M_t|$ pairs. The matching constraint models each node joining at most one pair per round. Rewards are exact expectations, so the only randomness is the state sequence. Catalogs come from one generator: a path, ring, star, complete, or sparse graph; random active edges, types, and urgencies per state; and a random transition matrix in which demand persists (stay probability 0.31--0.37) and drifts mildly around a cycle (\cref{fig:network}; all catalogs in \cref{app:xor}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig_network.pdf}
+\caption{\emph{Top:} the five graph families. \emph{Bottom:} four of the 14 states of one catalog, with each request's certified gain. Edges that share an agent cannot be served in the same round.}
+\label{fig:network}
+\end{figure}
+
+\paragraph{Splits.} Request types and catalogs were generated separately for development (8 catalogs), validation (4), and test (4). The four sealed test catalogs include two graphs larger than any seen in training (a six-agent ring and an eight-agent sparse graph) and one long horizon. Optional Werner noise and heralded loss model imperfect pairs.
+
+%======================================================================
+\section{Allocators}\label{sec:methods}
+%======================================================================
+
+\paragraph{Learned.} DQN \citep{mnih2015human}, Double DQN \citep{vanhasselt2016deep}, PPO \citep{schulman2017proximal}, and recurrent PPO share a permutation-invariant encoder that scores each feasible matching from per-edge gains plus the remaining budget and time (\cref{app:training}).
+
+\paragraph{Registered with the locked study.} \emph{Greedy} serves the highest-gain matching now; \emph{random} and \emph{static} are weaker.
+
+\paragraph{Added afterwards (registered before running, tuned on validation only).}
+\begin{itemize}[leftmargin=*]
+  \item \emph{Bid-price rule.} Serve a request only if its gain exceeds a threshold $\theta_t$: the $1-\alpha b_t/(2k_t)$ quantile of a mixture of training-catalog gains (total weight $\omega$) and the gains seen so far in the episode (weight one each), or $\theta_t=0$ if $\alpha b_t\ge2k_t$. The threshold rises as pairs become scarce relative to the rounds left. It has two parameters, $(\alpha,\omega)$, and never sees $P$.
+  \item \emph{Certainty-equivalent DP (CE-DP).} Plan exactly with the state table and a guessed transition matrix $\hat P$: stay with probability $\rho$ (the training average, \rhoFull) and otherwise move to any other state with equal probability. Logged episodes, if any, update this guess by counting transitions. It solves
+  \begin{equation}
+    V_k(s,b)=\max_{M\in\M(s,b)}\Bigl[\,G(s,M)+\textstyle\sum_{s'}\hat P(s,s')\,V_{k-1}\bigl(s',b-|M|\bigr)\Bigr],\qquad V_0\equiv0.
+    \label{eq:bellman}
+  \end{equation}
+\end{itemize}
+
+\paragraph{References.} \emph{Online DP} solves \cref{eq:bellman} with the true $P$; it is the best any real allocator can do and defines 100\%. The \emph{future-clairvoyant} reference knows the realized state sequence in advance and is unreachable. CE-DP sees the state table, which the learners and the bid-price rule do not, so it is a reference rather than an equal-information competitor.
+
+%======================================================================
+\section{Protocol}\label{sec:protocol}
+%======================================================================
+
+Every phase committed its code, configuration, and hash-locked inputs before running. The locked study trained 12 fresh PPO and 12 fresh DQN models (2{,}500 episodes each) on the 12 training catalogs and evaluated each once on 500 sequences per sealed catalog. It registered three tests with seed-level percentile bootstrap intervals \citep{efron1993introduction}: PPO superior to greedy, PPO superior to DQN, and PPO--DQN equivalence within $\pm5\%$ of the optimum. After an independent audit, we registered the two comparators with the primary test ``PPO minus bid-price'', tuned them on validation data only, and wrote the selection to disk before reading any sealed file.
+
+%======================================================================
+\section{Results}\label{sec:results}
+%======================================================================
+
+\subsection{Locked study: learners beat greedy}\label{sec:locked}
+
+PPO beat greedy by $\ppoMinusGreedy$ (95\% CI $[\ppoMinusGreedyLo,\ppoMinusGreedyHi]$), with all 12 seeds ahead. PPO was not superior to DQN, and the two were practically equivalent. The learners reached \fracPPO\% and \fracDQN\% of the optimum against \fracGreedy\% for greedy, and they transferred to the unseen larger graphs (\cref{tab:main}).
+
+\begin{table}[t]
+\centering
+\caption{Sealed test catalogs: percentage of the online-DP optimum, with mean surplus in parentheses. Learned rows average 12 seeds. $^\dagger$Dynamics shared with a development catalog (\cref{sec:audit}).}
+\label{tab:main}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Method & \shortstack{4-agent\\complete$^\dagger$} & \shortstack{6-agent\\ring} & \shortstack{8-agent\\sparse} & \shortstack{4-agent path\\$H{=}24^\dagger$} & Overall \\
+\midrule
+\input{generated/main_table.tex}
+\end{tabular}
+\end{table}
+
+\subsection{A two-parameter rule beats every learned seed}\label{sec:strong}
+
+The registered primary test resolved \emph{bid-price superior}. The rule reached \bpFrac\% of the optimum, and PPO minus bid-price was $\ppoMinusBp$ (95\% CI $[\ppoMinusBpLo,\ppoMinusBpHi]$), with no PPO seed ahead; DQN minus bid-price was $\dqnMinusBp$. The result holds on the two fully fresh catalogs alone (bid-price \bpFracFresh\%). CE-DP with no logged data reached \ceZeroFrac\% (\cref{fig:fraction}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig_fraction_online.pdf}
+\caption{Percentage of the optimum on each sealed catalog. Dots are individual PPO and DQN seeds.}
+\label{fig:fraction}
+\end{figure}
+
+\paragraph{Why the simple rules win.} Knowing \emph{what} gains can appear and how many pairs remain is worth almost everything; knowing \emph{how} demand evolves is worth almost nothing, since CE-DP with a crude guess of $P$ nearly matches the optimum. Even perfect foresight adds only \foresightGain\% over online DP. The learners' shortfall is therefore budget pacing, which a closed-form quantile rule does better than a network trained on reward. Consistently, removing the remaining-budget or remaining-time input hurt the learners most in development (\cref{app:training}). The gap was already visible on validation data before the test was opened.
+
+\subsection{Three registered follow-ups}\label{sec:followups}
+
+All three use development and validation data only and cannot change a locked decision.
+\begin{itemize}[leftmargin=*]
+  \item \emph{Were the learners under-tuned?} With a wider grid (widths up to 256, learning rates up to $10^{-2}$), about three times longer training, a calibrated PPO value baseline, and 6 seeds, PPO reached \lsPPOFrac\% of the optimum against \lsRuleFrac\% for the rule (difference $\lsPPOMinusRule$, CI $[\lsPPOLo,\lsPPOHi]$). PPO plateaued by 4{,}000 episodes, and DQN declined with longer training (\cref{app:strength}).
+  \item \emph{A harder variant designed for learning.} In a variant with a hidden demand regime that only history reveals, the best learner (\rgBestName) reached \rgBestFrac\% of the belief-state optimum against \rgRuleFrac\% for the rule. The preregistered futility rule stopped the study, and its fresh test split was never opened.
+  \item \emph{Other dynamics.} Under six alternative transition matrices and the original, the bid-price rule kept \trBpMin--\trBpMax\% of the optimum. CE-DP's crude guess held at $\ge$\trCeOkMin\% except when each state has an 80\%-likely successor (\trCeSucc\%), where ten logged episodes restored \trCeSuccKten\% (\cref{app:transitions}). Pacing generalizes; the near-irrelevance of the dynamics holds only for weakly structured chains.
+\end{itemize}
+
+%======================================================================
+\section{Audit}\label{sec:audit}
+%======================================================================
+
+A separate module re-derived every locked-study number from raw records, to within $10^{-9}$, and re-certified every sealed request. It also found a real defect: a seed collision made two sealed test catalogs reuse the dynamics of development catalogs (their requests are fresh). Every conclusion holds on the two fully fresh catalogs alone. Code, splits, records, and checkpoints are provided as anonymized supplementary material, and every number in this paper is generated from them.
+
+%======================================================================
+\section{Discussion and limitations}\label{sec:discussion}
+%======================================================================
+
+In budgeted allocation, greedy is a straw man because it ignores the opportunity cost of a unit. We recommend registering at least one pacing rule and one certainty-equivalent planner among the baselines, and reporting learners as a percentage of an exact optimum next to them, so that ``86\% of optimal'' is read against ``97\% from two parameters''. Preregistration made our negative result unambiguous, but it cannot fix a weak baseline set chosen in advance.
+
+\emph{Limitations.} The study is small (at most eight agents, 14 states, four test catalogs). The comparators were added after the test split was opened, although they were registered before running and tuned only on validation data. Two test catalogs leak dynamics. All catalogs come from one generator, and only MLP learners were tested. The quantum model is idealized (single-hop links, no hardware).
+
+%======================================================================
+\section{Conclusion}\label{sec:conclusion}
+%======================================================================
+
+Deep RL beat greedy decisively and transferred to larger graphs, yet a two-parameter pacing rule beat every learned model, and three registered follow-ups left the gap in place. BellRoute's exact optimum makes such comparisons precise, and our record shows how a careful study can still overclaim when its baselines are too weak.
+
+\subsubsection*{Broader impact statement}
+This work concerns resource allocation in simulated quantum networks and RL evaluation methodology. Its message, to compare learned controllers with strong classical rules, should reduce unnecessary complexity in deployed systems.
+
+\subsubsection*{Use of AI tools}
+The experiment code, analysis, audit, and drafts of this manuscript were produced with AI coding assistants under the authors' direction within a recorded, version-controlled protocol. The authors reviewed the work and take responsibility for its content.
+
+\bibliography{references}
+\bibliographystyle{tmlr}
+
+\appendix
+
+\section{A worked request type and all catalogs}\label{app:xor}
+
+\Cref{tab:xor} shows one development request type. The best classical plan, $a=(0,0,1)$ and $b=(0,1,1)$, wins seven of the nine question pairs, giving $V_C=\xorClassical$. With a Bell pair the players win $V_Q=\xorBell$: they win no pair with certainty, but they win the heavy pair $(\xorRecX,\xorRecY)$, which the classical plan always loses, with probability \xorRecQ.
+
+\begin{table}[H]
+\centering\small
+\caption{Request type \texttt{qip-development-type-000}, one row per question pair.}
+\label{tab:xor}
+\input{generated/xor_example.tex}
+\end{table}
+
+\begin{table}[H]
+\centering\small
+\caption{All catalogs. ``Stay'' and ``Next'' are mean probabilities of staying in the same state and of moving to the next state in the generator's cycle. $^\dagger$Dynamics shared with a development catalog.}
+\input{generated/catalog_table.tex}
+\end{table}
+
+\section{Learner training}\label{app:training}
+
+Learners use Adam \citep{kingma2015adam}, gradient clipping at 5, and reward scale 10. DQN uses a 20{,}000-transition replay buffer, minibatches of 64, and target copies every 200 updates; PPO uses 16-episode rollouts and 4 epochs of the clipped objective. Each learner was tuned over three (width, learning-rate) configurations with two seeds on development data; all selected width 64 and learning rate $10^{-3}$. In Double DQN ablations, removing the remaining-budget input cost \ablDropNoBudget\% of validation surplus and removing the remaining-time input cost \ablDropNoHorizon\%.
+
+\section{Learner-strength check}\label{app:strength}
+
+Configurations were selected on 200 validation sequences per catalog using 2 seeds each, the selected one was retrained with 4 more seeds, and all methods were compared on 500 fresh sequences per catalog. The registered decision was \texttt{\lsDecision}.
+
+\begin{table}[H]
+\centering\small
+\caption{Learner-strength check on validation catalogs. The comparison column gives the percentage of the online-DP optimum (\lsOnlineMean), with the mean surplus in parentheses.}
+\input{generated/strength_table.tex}
+\end{table}
+
+\section{Robustness to the transition matrix}\label{app:transitions}
+
+Each validation catalog was rebuilt under each transition matrix, keeping its state table. ``Stay $s$'' sets the self-loop probability to $s$; ``successor $w$'' sends each state to a fixed other state with probability $w$; ``rare jackpot'' makes the most valuable state rare but persistent. The bid-price rule was retuned for each matrix on separate tuning sequences.
+
+\begin{table}[H]
+\centering\small
+\caption{Percentage of the online-DP optimum on the validation catalogs under rebuilt transition matrices.}
+\input{generated/transition_table.tex}
+\end{table}
+
+\end{document}

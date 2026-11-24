@@ -12,6 +12,7 @@
 |---|---|
 | `BELLROUTE_TMLR.pdf` | Anonymized submission PDF (TMLR style, 23 pages including appendix) |
 | `BELLROUTE_TMLR.tex`, `references.bib` | Source |
+| `BELLROUTE_TMLR_SHORT.tex` / `.pdf` | Condensed version (9 pages including appendix): same data, numbers, and figures, shorter prose. Build with `make short`. In the Overleaf mirror it is `short.tex`. |
 | `BELLROUTE_TMLR-source.zip` | Self-contained source that compiles on its own (`make submission`) |
 | `make_tmlr_assets.py` | Regenerates `generated/numbers30.tex`, `generated/main_table.tex`, `generated/xor_example.tex`, `generated/catalog_table.tex`, `generated/strength_table.tex`, `generated/transition_table.tex`, `figure_data/*.csv`, and `figures/*.pdf` (including `fig_network.pdf`) from the hash-checked catalogs, certificates, and Stage-28 and 30–33 bundles |
 | `figure_data/SHA256SUMS` | Hashes of every plotted data file |
