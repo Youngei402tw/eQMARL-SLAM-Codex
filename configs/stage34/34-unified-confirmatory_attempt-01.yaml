@@ -1,0 +1,158 @@
+{
+  "run_id": "34-unified-confirmatory_attempt-01",
+  "stage": "34",
+  "protocol_id": "bellroute-unified-confirmatory-v1",
+  "profile": "confirmatory",
+  "experiment": "unified-confirmatory",
+  "hypothesis": "Primary: on a sealed test split opened once, with every method fixed beforehand, the selected PPO learner minus the validation-tuned bid-price rule has a seed-bootstrap 95% interval entirely below zero (bid-price superior). Secondary: PPO superior to greedy; DQN versus bid-price; PPO-DQN equivalence within 5% of the online-DP mean.",
+  "method": "Tune the bid-price rule on the validation catalogs only and write the selection; train 12 fresh PPO (calibrated value) and 12 fresh DQN models on the 12 training catalogs with the Stage-32 validation-selected configurations and save checkpoints; then load the hash-locked qip_v2 test split, certify its request types, and evaluate greedy, bid-price, CE-DP (no data), online DP, the future-clairvoyant reference, and all 24 models once on the same 500 sequences per catalog.",
+  "dependency_completion_commit": "cd030dadd6044cbb298bc9a97c5d0956a4c51f33",
+  "wall_seconds": 21600,
+  "max_primitive_steps": 200000000,
+  "max_cpu_threads": 4,
+  "workers": 4,
+  "v1_freeze": {
+    "path": "experiments/27/27-qip-robustness-scaling_attempt-01/stage28-freeze.json",
+    "sha256": "ff34ffbb5a30053555de83494c937980ad4f91c5e4e87f2401833cf173df60ef"
+  },
+  "test_split_lock": {
+    "path": "configs/data/qip_v2/split-lock.json",
+    "sha256": "2467d5b023ee5b47a5743721502b20aaaa5ed57475fb8567eae3d96b15637e90"
+  },
+  "methods": [
+    "ppo",
+    "dqn"
+  ],
+  "learner_configs": {
+    "ppo": {
+      "name": "h64-lr3e-3",
+      "hidden": 64,
+      "learning_rate": 0.003,
+      "episodes": 8000,
+      "calibrated_value": true
+    },
+    "dqn": {
+      "name": "h64-lr3e-3",
+      "hidden": 64,
+      "learning_rate": 0.003,
+      "episodes": 6000
+    }
+  },
+  "learner_config_source": "Stage 32 validation selection (configs chosen on validation catalogs only)",
+  "training_seeds": {
+    "ppo": [
+      34000,
+      34001,
+      34002,
+      34003,
+      34004,
+      34005,
+      34006,
+      34007,
+      34008,
+      34009,
+      34010,
+      34011
+    ],
+    "dqn": [
+      34100,
+      34101,
+      34102,
+      34103,
+      34104,
+      34105,
+      34106,
+      34107,
+      34108,
+      34109,
+      34110,
+      34111
+    ]
+  },
+  "bid_price": {
+    "alpha": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "prior_weight": [
+      0,
+      5,
+      20,
+      80,
+      320
+    ]
+  },
+  "validation_seed_start": 3700000,
+  "validation_sequences": 500,
+  "evaluation_seed_start": 4000000,
+  "evaluation_sequences": 500,
+  "certificate_seed": 934500,
+  "certificate_tolerance": 1e-06,
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 934000,
+  "equivalence_margin_fraction_online": 0.05,
+  "decision_rule": {
+    "primary": "PPO minus bid-price, mean over the four sealed catalogs with equal weight; percentile bootstrap over the 12 PPO training seeds",
+    "bid_price_superior": "95% upper bound < 0",
+    "learned_superior": "95% lower bound > 0",
+    "otherwise": "inconclusive",
+    "secondary": "PPO minus greedy (superior if 95% lower bound > 0); DQN minus bid-price (same three-way rule); PPO-DQN equivalence if the paired 90% interval lies within +/-5% of the online-DP mean; fractions of online DP, CE-DP and the future-clairvoyant reference are descriptive",
+    "single_opening": "the sealed split is read only after tuning_selection.json and training_complete.json are written; no method is changed afterwards"
+  },
+  "seed_streams": {
+    "model_init": 34000,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": 4000000,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    },
+    "test": {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+    }
+  },
+  "model": {
+    "actor": "masked graph-conditioned PPO (calibrated value) and DQN",
+    "encoder": "permutation-invariant public-edge encoder",
+    "critic": "PPO state value or DQN target network",
+    "parameter_counts": {
+      "reported_per_checkpoint": true
+    },
+    "optimizer": "Adam; Stage-32-selected width 64, learning rate 3e-3"
+  },
+  "quantum": {
+    "device": "analytic request certificates computed at evaluation for the sealed types",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "float32 allocator learning",
+    "dtype": "float64",
+    "entanglement": "one budgeted pair per served edge",
+    "observables": [
+      "recorded expected parity success"
+    ],
+    "noise": "ideal",
+    "resource_accounting": "decisions, updates; no circuits or shots"
+  },
+  "action_modes": "sampled in training; argmax at evaluation",
+  "checkpoint_selection": "final checkpoint",
+  "analysis_version": "unified-confirmatory-v1",
+  "interpretation": "Single confirmatory evaluation of all methods on a test split opened exactly once."
+}

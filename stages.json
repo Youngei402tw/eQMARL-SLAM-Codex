@@ -665,7 +665,24 @@
       "authorized_scope": "User approval 2026-11-18 ('yes proceed') to register the transition-matrix sweep and add a limitation; validation catalogs only, cap 0.5 wall-hours",
       "source_commit": "07ecbbf5d265a8b37cf6106c45c70ee6c3ef68a2",
       "results_commit": "f89a0b6a5d165dda797c1ea5da00fd3262bbeb1f",
-      "publication_receipt": "docs/stages/33-publication.json"
+      "publication_receipt": "docs/stages/33-publication.json",
+      "completion_commit": "cd030dadd6044cbb298bc9a97c5d0956a4c51f33"
+    },
+    {
+      "id": "34",
+      "name": "unified-confirmatory",
+      "title": "Unified confirmatory evaluation of learners and strong baselines on a sealed split opened once",
+      "branch": "stage/34-unified-confirmatory",
+      "depends_on": [
+        "33"
+      ],
+      "initial_status": "planned",
+      "report": "docs/stages/34-unified-confirmatory.md",
+      "status": "in_progress",
+      "branch_created": true,
+      "dependency_completion_commit": "cd030dadd6044cbb298bc9a97c5d0956a4c51f33",
+      "branch_created_from_commit": "cd030dadd6044cbb298bc9a97c5d0956a4c51f33",
+      "authorized_scope": "User approval 2026-11-24 to rerun the whole comparison with the test data seen once; CPU only, cap 6 wall-hours"
     }
   ],
   "recommended_execution_order": [
@@ -702,6 +719,7 @@
     "30",
     "31",
     "32",
-    "33"
+    "33",
+    "34"
   ]
 }
