@@ -99,7 +99,7 @@ earning $\sum_{e\in M_t}G_e$ and spending $|M_t|$ pairs. The matching constraint
 \label{fig:network}
 \end{figure}
 
-\paragraph{Splits.} Request types and catalogs were generated separately for development (8 catalogs), validation (4), and test (4). The four sealed test catalogs include two graphs larger than any seen in training (a six-agent ring and an eight-agent sparse graph) and one long horizon. Optional Werner noise and heralded loss model imperfect pairs.
+\paragraph{Splits.} Request types and catalogs were generated separately for development (8 catalogs), validation (4), and test (4). The four sealed test catalogs include two graphs larger than any seen in training (a six-agent ring and an eight-agent sparse graph) and one long horizon. Two optional imperfections model real hardware. Under heralded loss, a pair fails with some probability and is consumed anyway; PPO then keeps \ratioHerSevenFive{} of its surplus at 75\% success and \ratioHerFive{} at 50\%. Under Werner noise, pairs have reduced fidelity, and every method's surplus vanishes at visibility $v\le0.8$, because no sealed request keeps a quantum advantage there (the lowest fidelity threshold is \thrTestMin).
 
 %======================================================================
 \section{Allocators}\label{sec:methods}
@@ -107,25 +107,34 @@ earning $\sum_{e\in M_t}G_e$ and spending $|M_t|$ pairs. The matching constraint
 
 \paragraph{Learned.} DQN \citep{mnih2015human}, Double DQN \citep{vanhasselt2016deep}, PPO \citep{schulman2017proximal}, and recurrent PPO share a permutation-invariant encoder that scores each feasible matching from per-edge gains plus the remaining budget and time (\cref{app:training}).
 
-\paragraph{Registered with the locked study.} \emph{Greedy} serves the highest-gain matching now; \emph{random} and \emph{static} are weaker.
+\paragraph{Simple baselines in the original study.} \emph{Greedy} serves the highest-gain matching now; \emph{random} and \emph{static} are weaker.
 
-\paragraph{Added afterwards (registered before running, tuned on validation only).}
+\paragraph{Strong comparators added after the original study.} These two were specified in writing before they were run, and their parameters were chosen using validation catalogs only (\cref{sec:protocol}).
 \begin{itemize}[leftmargin=*]
-  \item \emph{Bid-price rule.} Serve a request only if its gain exceeds a threshold $\theta_t$: the $1-\alpha b_t/(2k_t)$ quantile of a mixture of training-catalog gains (total weight $\omega$) and the gains seen so far in the episode (weight one each), or $\theta_t=0$ if $\alpha b_t\ge2k_t$. The threshold rises as pairs become scarce relative to the rounds left. It has two parameters, $(\alpha,\omega)$, and never sees $P$.
-  \item \emph{Certainty-equivalent DP (CE-DP).} Plan exactly with the state table and a guessed transition matrix $\hat P$: stay with probability $\rho$ (the training average, \rhoFull) and otherwise move to any other state with equal probability. Logged episodes, if any, update this guess by counting transitions. It solves
+  \item \emph{Bid-price rule.} Serve the best matching whose every edge has a positive gain of at least
+  \begin{equation}
+    \theta_t=\begin{cases}0, & \alpha b_t\ge 2k_t,\\ Q_{\,1-\alpha b_t/(2k_t)}\bigl(\mathcal R_\omega\cup\mathcal O_t\bigr), & \text{otherwise,}\end{cases}
+    \label{eq:bidprice}
+  \end{equation}
+  where $Q_q$ is the $q$-quantile of a weighted mixture of the gains seen in the training catalogs (total weight $\omega$) and the gains seen so far in this episode (weight one each). The term $\alpha b_t/(2k_t)$ is the share of the remaining request slots the budget can afford (at most two per round), so the threshold rises as pairs become scarce. The rule has two parameters, $(\alpha,\omega)$, and never sees $P$. For example, with $\alpha=0.75$, one pair and ten rounds left, only roughly the top 4\% of gains are served.
+  \item \emph{Certainty-equivalent DP (CE-DP).} Its role is diagnostic: it separates knowing \emph{which} requests can occur (the state table) from knowing \emph{how} demand evolves ($P$). It plans exactly with the state table and a crude guess $\hat P$: stay in the current state with probability $\rho$ (the training average, \rhoFull) and otherwise move to any other state with equal probability. Logged episodes, if any, update the guess by counting transitions. It solves
   \begin{equation}
     V_k(s,b)=\max_{M\in\M(s,b)}\Bigl[\,G(s,M)+\textstyle\sum_{s'}\hat P(s,s')\,V_{k-1}\bigl(s',b-|M|\bigr)\Bigr],\qquad V_0\equiv0.
     \label{eq:bellman}
   \end{equation}
 \end{itemize}
 
-\paragraph{References.} \emph{Online DP} solves \cref{eq:bellman} with the true $P$; it is the best any real allocator can do and defines 100\%. The \emph{future-clairvoyant} reference knows the realized state sequence in advance and is unreachable. CE-DP sees the state table, which the learners and the bid-price rule do not, so it is a reference rather than an equal-information competitor.
+\paragraph{References.} \emph{Online DP} solves \cref{eq:bellman} with the true $P$; it is the best any real allocator can do and defines 100\%. The \emph{future-clairvoyant} reference knows the realized state sequence in advance and is unreachable. CE-DP sees the state table, which the learners and the bid-price rule do not, so it is a reference rather than an equal-information competitor. Its result does not hinge on the value of $\rho$: in a registered check, replacing $\rho$ by the true average stay probability of each rebuilt chain changed CE-DP by at most \trMatchMaxDiff{} points (\cref{app:transitions}).
 
 %======================================================================
 \section{Protocol}\label{sec:protocol}
 %======================================================================
 
-Every phase committed its code, configuration, and hash-locked inputs before running. The locked study trained 12 fresh PPO and 12 fresh DQN models (2{,}500 episodes each) on the 12 training catalogs and evaluated each once on 500 sequences per sealed catalog. It registered three tests with seed-level percentile bootstrap intervals \citep{efron1993introduction}: PPO superior to greedy, PPO superior to DQN, and PPO--DQN equivalence within $\pm5\%$ of the optimum. After an independent audit, we registered the two comparators with the primary test ``PPO minus bid-price'', tuned them on validation data only, and wrote the selection to disk before reading any sealed file.
+\paragraph{Terms.} \emph{Preregistered} means that, before each experiment ran, we committed to a public repository its hypotheses, configuration, data, and the rule that would decide the outcome, so none could be changed after seeing results. \emph{Sealed} or \emph{locked} test catalogs were generated at the start, fixed by a cryptographic hash, and not opened until the final evaluation. \emph{Tuned on validation only} means that every setting of every method was chosen on separate validation catalogs, never on the test catalogs.
+
+\paragraph{Original study.} The locked study trained 12 fresh PPO and 12 fresh DQN models (2{,}500 episodes each) on the 12 training catalogs and evaluated each once on 500 sequences per sealed catalog. It registered three tests with seed-level percentile bootstrap intervals \citep{efron1993introduction}: PPO superior to greedy, PPO superior to DQN, and PPO--DQN equivalence within $\pm5\%$ of the optimum. 
+
+\paragraph{Comparator study.} After an independent audit of the original study, we registered the two comparators with the primary test ``PPO minus bid-price'': bid-price superior if the 95\% interval lies below zero, learned superior if above, inconclusive otherwise. We tuned them on the four validation catalogs (500 sequences each) over \bpConfigs{} bid-price and \ceConfigs{} CE-DP configurations, and the code wrote the selection to disk before reading any sealed file. The learned results were read from the original study's archive; no model was retrained.
 
 %======================================================================
 \section{Results}\label{sec:results}
@@ -133,7 +142,7 @@ Every phase committed its code, configuration, and hash-locked inputs before run
 
 \subsection{Locked study: learners beat greedy}\label{sec:locked}
 
-PPO beat greedy by $\ppoMinusGreedy$ (95\% CI $[\ppoMinusGreedyLo,\ppoMinusGreedyHi]$), with all 12 seeds ahead. PPO was not superior to DQN, and the two were practically equivalent. The learners reached \fracPPO\% and \fracDQN\% of the optimum against \fracGreedy\% for greedy, and they transferred to the unseen larger graphs (\cref{tab:main}).
+PPO beat greedy by $\ppoMinusGreedy$ (95\% CI $[\ppoMinusGreedyLo,\ppoMinusGreedyHi]$), with all 12 seeds ahead. PPO was not superior to DQN, and the two were practically equivalent: the 90\% interval of their difference, $[\ppoMinusDqnLoNinety,\ppoMinusDqnHiNinety]$, lies within the registered margin of $\pm\eqMargin$. The learners reached \fracPPO\% and \fracDQN\% of the optimum against \fracGreedy\% for greedy, and they transferred to the unseen larger graphs (\cref{tab:main}).
 
 \begin{table}[t]
 \centering
@@ -160,14 +169,14 @@ The registered primary test resolved \emph{bid-price superior}. The rule reached
 \label{fig:fraction}
 \end{figure}
 
-\paragraph{Why the simple rules win.} Knowing \emph{what} gains can appear and how many pairs remain is worth almost everything; knowing \emph{how} demand evolves is worth almost nothing, since CE-DP with a crude guess of $P$ nearly matches the optimum. Even perfect foresight adds only \foresightGain\% over online DP. The learners' shortfall is therefore budget pacing, which a closed-form quantile rule does better than a network trained on reward. Consistently, removing the remaining-budget or remaining-time input hurt the learners most in development (\cref{app:training}). The gap was already visible on validation data before the test was opened.
+\paragraph{Why the simple rules win.} Knowing \emph{what} gains can appear and how many pairs remain is worth almost everything; knowing \emph{how} demand evolves is worth almost nothing, since CE-DP with a crude guess of $P$ nearly matches the optimum. Even perfect foresight adds only \foresightGain\% over online DP. The learners' shortfall is therefore budget pacing, which a closed-form quantile rule does better than a network trained on reward. Consistently, removing the remaining-budget or remaining-time input hurt the learners most in development (\cref{app:training}). The gap was already visible before the test was opened: on validation catalogs the selected rule scored \bpValMean, while the tuned learners had scored \develRPPO--\develPPO{} in development.
 
 \subsection{Three registered follow-ups}\label{sec:followups}
 
 All three use development and validation data only and cannot change a locked decision.
 \begin{itemize}[leftmargin=*]
   \item \emph{Were the learners under-tuned?} With a wider grid (widths up to 256, learning rates up to $10^{-2}$), about three times longer training, a calibrated PPO value baseline, and 6 seeds, PPO reached \lsPPOFrac\% of the optimum against \lsRuleFrac\% for the rule (difference $\lsPPOMinusRule$, CI $[\lsPPOLo,\lsPPOHi]$). PPO plateaued by 4{,}000 episodes, and DQN declined with longer training (\cref{app:strength}).
-  \item \emph{A harder variant designed for learning.} In a variant with a hidden demand regime that only history reveals, the best learner (\rgBestName) reached \rgBestFrac\% of the belief-state optimum against \rgRuleFrac\% for the rule. The preregistered futility rule stopped the study, and its fresh test split was never opened.
+  \item \emph{A harder variant designed for learning.} In a variant with a hidden demand regime that only history reveals, the best learner (\rgBestName) reached \rgBestFrac\% of the optimum for that variant against \rgRuleFrac\% for the rule. The registered futility rule stopped the study before its test, and its fresh test split was never opened (\cref{app:regime}).
   \item \emph{Other dynamics.} Under six alternative transition matrices and the original, the bid-price rule kept \trBpMin--\trBpMax\% of the optimum. CE-DP's crude guess held at $\ge$\trCeOkMin\% except when each state has an 80\%-likely successor (\trCeSucc\%), where ten logged episodes restored \trCeSuccKten\% (\cref{app:transitions}). Pacing generalizes; the near-irrelevance of the dynamics holds only for weakly structured chains.
 \end{itemize}
 
@@ -232,6 +241,10 @@ Configurations were selected on 200 validation sequences per catalog using 2 see
 \caption{Learner-strength check on validation catalogs. The comparison column gives the percentage of the online-DP optimum (\lsOnlineMean), with the mean surplus in parentheses.}
 \input{generated/strength_table.tex}
 \end{table}
+
+\section{The hidden-regime variant}\label{app:regime}
+
+Each episode secretly draws a ``rich'' or ``lean'' demand regime that tilts the transition matrix, and the current state alone does not reveal it. The optimum is a DP over the state and the posterior probability of each regime (a belief-state DP); knowing the regime outright would add only \hrRegimeOracle\% to it. DQN, PPO, and recurrent PPO were tuned equally (6 configurations, 3 seeds, 2{,}000 episodes each) and selected on validation catalogs, where the bid-price rule was also tuned. The registered futility rule stopped the study if the best learner trailed the rule on validation by more than 5\% of the optimum (\rgMargin); the gap was \rgGap.
 
 \section{Robustness to the transition matrix}\label{app:transitions}
 

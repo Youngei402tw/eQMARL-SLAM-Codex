@@ -535,7 +535,8 @@ def stage33_assets():
             "trCeStayNineMatched": pc(by["stay 0.9"]["ce_dp_matched_stay"]["fraction_online_dp"]),
             "trGreedyMin": pc(min(r["methods"]["greedy"]["fraction_online_dp"] for r in d["table"])),
             "trGreedyMax": pc(max(r["methods"]["greedy"]["fraction_online_dp"] for r in d["table"])),
-            "trWallSeconds": f"{m33['wall_seconds']:.0f}"}
+            "trWallSeconds": f"{m33['wall_seconds']:.0f}",
+            "trMatchMaxDiff": f"{100 * max(abs(r['methods']['ce_dp_matched_stay']['fraction_online_dp'] - r['methods']['ce_dp_default']['fraction_online_dp']) for r in d['table']):.1f}"}
 
 
 if __name__ == "__main__":
