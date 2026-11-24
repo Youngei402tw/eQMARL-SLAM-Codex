@@ -44,23 +44,23 @@
 \maketitle
 
 \begin{abstract}
-We introduce BellRoute, a benchmark in which an allocator spends a fixed budget of entangled Bell pairs on requests whose values are exactly certified, so the optimal policy is computable. In a preregistered study with sealed test data, deep RL allocators beat greedy allocation decisively (PPO minus greedy $\ppoMinusGreedy$, 95\% CI $[\ppoMinusGreedyLo,\ppoMinusGreedyHi]$), reaching \fracPPO--\fracDQN\% of the optimum against \fracGreedy\% for greedy. A two-parameter bid-price rule from revenue management, evaluated in a second registered study and tuned only on validation data, reached \bpFrac\% and beat every learned seed (PPO minus rule $\ppoMinusBp$, CI $[\ppoMinusBpLo,\ppoMinusBpHi]$). A planner that knows only which requests can occur reached \ceZeroFrac\%. Three registered follow-ups confirmed the gap: stronger learner tuning (\lsPPOFrac\% against \lsRuleFrac\%), a harder variant designed to favour learning (stopped for futility), and six alternative transition matrices. The learned gain over greedy is real, but in budgeted allocation the right baseline is a pacing rule, and preregistration cannot fix a weak baseline set chosen in advance.
+We introduce BellRoute, a benchmark in which an allocator spends a fixed budget of entangled Bell pairs on requests whose values are exactly certified, so the optimal policy is computable. We compare deep RL allocators with simple and strong baselines in a preregistered evaluation: every method, including a two-parameter bid-price rule from revenue management, was fixed using training and validation data only, and then a fresh sealed test split was opened once. PPO beat greedy allocation decisively (difference $\cfPpoMinusGreedy$, 95\% CI $[\cfPpoMinusGreedyLo,\cfPpoMinusGreedyHi]$), reaching \cfFracPpo\% of the optimum against \cfFracGreedy\% for greedy (DQN: \cfFracDqn\%). Yet the bid-price rule reached \cfFracBp\% and beat every PPO seed (PPO minus rule $\cfPpoMinusBp$, CI $[\cfPpoMinusBpLo,\cfPpoMinusBpHi]$), and a planner that knows only which requests can occur reached \cfFracCe\%. Registered follow-ups found the same gap under stronger learner tuning, in a harder variant designed to favour learning (stopped for futility), and under six alternative transition matrices. An earlier evaluation of ours, whose strongest baseline was greedy, had reported a clean learned win. The learned gain over greedy is real, but in budgeted allocation the right baseline is a pacing rule, and preregistration cannot fix a weak baseline set chosen in advance.
 \end{abstract}
 
 %======================================================================
 \section{Introduction}\label{sec:intro}
 %======================================================================
 
-Learned policies are often compared only with baselines that are easy to beat, which can yield clean, statistically convincing gains that say little about whether learning was needed \citep{henderson2018deep,rajeswaran2017towards,mania2018simple,patterson2024empirical}. We document one such case from the inside. Our study was preregistered, its test data were sealed, every number was audited, and the learned result held. It still overstated the case for deep RL, because the strongest registered baseline was greedy.
+Learned policies are often compared only with baselines that are easy to beat, which can yield clean, statistically convincing gains that say little about whether learning was needed \citep{henderson2018deep,rajeswaran2017towards,mania2018simple,patterson2024empirical}. We document one such case from the inside. Our first evaluation was preregistered, its test data were sealed, every number was audited, and the learned result held. It still overstated the case for deep RL, because its strongest registered baseline was greedy. Adding a two-parameter pacing rule reversed the conclusion, and we confirmed the reversal in a new evaluation in which every method was fixed before a fresh test split was opened, once.
 
 The problem is budgeted allocation: each round, pairs of agents request a scarce resource, and an allocator decides which requests to serve before the budget runs out. Our instance comes from quantum networking. The resource is a Bell pair, and each request is a two-player game that entanglement helps win \citep{clauser1969proposed,cleve2004consequences}. Its value can be computed exactly, so every reward is certified and the optimal policy is computable.
 
 \paragraph{Contributions.}
 \begin{enumerate}[leftmargin=*]
   \item \textbf{A benchmark with certified rewards and a computable optimum}, released as a Gymnasium environment with sealed splits (\cref{sec:benchmark}).
-  \item \textbf{A preregistered comparison of deep RL allocators} that beat greedy and transfer to larger graphs (\cref{sec:locked}).
-  \item \textbf{A registered strong-baseline test that withdraws the learned claim}: a two-parameter pacing rule beats every learned seed (\cref{sec:strong}).
-  \item \textbf{Three registered follow-ups and an audit} showing that the conclusion survives stronger tuning, a harder variant, and other dynamics (\cref{sec:followups,sec:audit}).
+  \item \textbf{A preregistered, single-opening comparison} of deep RL allocators with simple and strong baselines: learners beat greedy and generalize to a larger graph and a longer horizon, but a two-parameter pacing rule beats every learned seed (\cref{sec:results}).
+  \item \textbf{Registered follow-ups and an audit} showing that the conclusion survives stronger tuning, a harder variant, and other dynamics (\cref{sec:followups,sec:audit}).
+  \item \textbf{A documented case} of how a careful, preregistered study can overclaim when its baselines are weak (\cref{sec:discussion,app:earlier}).
 \end{enumerate}
 We claim no quantum advantage; the quantum part supplies exact, structured rewards.
 
@@ -99,7 +99,7 @@ earning $\sum_{e\in M_t}G_e$ and spending $|M_t|$ pairs. The matching constraint
 \label{fig:network}
 \end{figure}
 
-\paragraph{Splits.} Request types and catalogs were generated separately for development (8 catalogs), validation (4), and test (4). The four sealed test catalogs include two graphs larger than any seen in training (a six-agent ring and an eight-agent sparse graph) and one long horizon. Two optional imperfections model real hardware. Under heralded loss, a pair fails with some probability and is consumed anyway; PPO then keeps \ratioHerSevenFive{} of its surplus at 75\% success and \ratioHerFive{} at 50\%. Under Werner noise, pairs have reduced fidelity, and every method's surplus vanishes at visibility $v\le0.8$, because no sealed request keeps a quantum advantage there (the lowest fidelity threshold is \thrTestMin).
+\paragraph{Splits.} Request types and catalogs were generated with separate seeds for development (8 catalogs), validation (4), and test (4). The four sealed test catalogs include a graph larger than any seen in training (an eight-agent sparse graph) and a longer horizon ($H=24$). The environment also offers two optional imperfections that model real hardware, heralded loss and Werner noise (\cref{app:earlier}).
 
 %======================================================================
 \section{Allocators}\label{sec:methods}
@@ -130,52 +130,54 @@ earning $\sum_{e\in M_t}G_e$ and spending $|M_t|$ pairs. The matching constraint
 \section{Protocol}\label{sec:protocol}
 %======================================================================
 
-\paragraph{Terms.} \emph{Preregistered} means that, before each experiment ran, we committed to a public repository its hypotheses, configuration, data, and the rule that would decide the outcome, so none could be changed after seeing results. \emph{Sealed} or \emph{locked} test catalogs were generated at the start, fixed by a cryptographic hash, and not opened until the final evaluation. \emph{Tuned on validation only} means that every setting of every method was chosen on separate validation catalogs, never on the test catalogs.
+\paragraph{Terms.} \emph{Preregistered} means that, before each experiment ran, we committed to a public repository its hypotheses, configuration, data, and the rule that would decide the outcome, so none could be changed after seeing results. \emph{Sealed} or \emph{locked} test catalogs were generated with fresh seeds, fixed by a cryptographic hash, and read by no script until the final evaluation, which opened them exactly once. \emph{Tuned on validation only} means that every setting of every method was chosen on separate validation catalogs, never on the test catalogs.
 
-\paragraph{Study 1: learners against simple baselines.} We trained 12 fresh PPO and 12 fresh DQN models (2{,}500 episodes each) on the 12 training catalogs and evaluated each once on 500 sequences per sealed catalog. It registered three tests with seed-level percentile bootstrap intervals \citep{efron1993introduction}: PPO superior to greedy, PPO superior to DQN, and PPO--DQN equivalence within $\pm5\%$ of the optimum. 
+\paragraph{Everything fixed before the test.} Before any test file was read, the evaluation code (i) tuned the bid-price rule over \bpConfigs{} configurations on the four validation catalogs (500 sequences each) and wrote the selection, $\alpha=\cfAlpha$ and $\omega=\cfOmega$, to disk; (ii) trained 12 fresh PPO and 12 fresh DQN models on the 12 training catalogs and saved every checkpoint. The learners use the configurations selected on validation catalogs in our learner-strength check (\cref{sec:followups}): width 64, learning rate $3\times10^{-3}$, 8{,}000 episodes for PPO with a calibrated value baseline, and 6{,}000 for DQN. CE-DP uses $\rho=\cfRho$, the mean stay probability of the training catalogs. Only then did the code read the sealed split, re-certify its 16 request types (largest SDP gap \cfSdpMax), and evaluate every method once on the same 500 sequences per catalog. The run took \cfWallHours{} hours on four CPU cores.
 
-\paragraph{Study 2: strong baselines.} After an independent audit of Study 1, we registered a second study of the two strong baselines, with the primary test ``PPO minus bid-price'': bid-price superior if the 95\% interval lies below zero, learned superior if above, inconclusive otherwise. We tuned them on the four validation catalogs (500 sequences each) over \bpConfigs{} bid-price and \ceConfigs{} CE-DP configurations, and the code wrote the selection to disk before reading any sealed file. The learned results were read from Study 1's archive; no model was retrained. Because the test catalogs had been opened once for Study 1, nothing from that opening was used to design or tune Study 2.
+\paragraph{Registered tests.} All contrasts average the four catalogs with equal weight and use seed-level percentile bootstrap intervals with 20{,}000 resamples \citep{efron1993introduction}. The primary test is PPO minus bid-price: bid-price superior if the 95\% interval lies below zero, learned superior if above, inconclusive otherwise. The secondary tests are PPO superior to greedy, DQN against bid-price (same three-way rule), and PPO--DQN equivalence (90\% interval within $\pm5\%$ of the online-DP mean).
+
+\paragraph{Earlier evaluation.} This design followed an earlier evaluation on a different sealed split (\cref{app:earlier}). Its strongest registered baseline was greedy, and the strong baselines were added after it. None of its test data are reused here: the generator of the current split rejects any reuse of earlier dynamics or requests.
 
 %======================================================================
 \section{Results}\label{sec:results}
 %======================================================================
 
-\subsection{Study 1: learners beat greedy}\label{sec:locked}
+\subsection{Learners beat greedy}\label{sec:locked}
 
-PPO beat greedy by $\ppoMinusGreedy$ (95\% CI $[\ppoMinusGreedyLo,\ppoMinusGreedyHi]$), with all 12 seeds ahead. PPO was not superior to DQN, and the two were practically equivalent: the 90\% interval of their difference, $[\ppoMinusDqnLoNinety,\ppoMinusDqnHiNinety]$, lies within the registered margin of $\pm\eqMargin$. The learners reached \fracPPO\% and \fracDQN\% of the optimum against \fracGreedy\% for greedy, and they transferred to the unseen larger graphs (\cref{tab:main}).
+PPO beat greedy by $\cfPpoMinusGreedy$ (95\% CI $[\cfPpoMinusGreedyLo,\cfPpoMinusGreedyHi]$), with all 12 seeds ahead, and DQN by $\cfDqnMinusGreedy$. The learners reached \cfFracPpo\% (PPO) and \cfFracDqn\% (DQN) of the optimum against \cfFracGreedy\% for greedy, and PPO kept at least \cfFracMinPpo\% on every catalog, including the larger graph and the longer horizon (\cref{tab:main}). PPO and DQN were not equivalent: PPO was better by $\cfPpoMinusDqn$, with a 90\% interval $[\cfPpoMinusDqnLoNinety,\cfPpoMinusDqnHiNinety]$ outside the margin of $\pm\cfEqMargin$.
 
 \begin{table}[t]
 \centering
-\caption{Sealed test catalogs: percentage of the online-DP optimum, with mean surplus in parentheses. Learned rows average 12 seeds. $^\dagger$Dynamics shared with a development catalog (\cref{sec:audit}).}
+\caption{Sealed test catalogs, opened once: percentage of the online-DP optimum, with mean surplus in parentheses. Learned rows average 12 seeds. CE-DP can exceed 100\% slightly through sampling noise.}
 \label{tab:main}
 \small
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{@{}lccccc@{}}
 \toprule
-Method & \shortstack{4-agent\\complete$^\dagger$} & \shortstack{6-agent\\ring} & \shortstack{8-agent\\sparse} & \shortstack{4-agent path\\$H{=}24^\dagger$} & Overall \\
+Method & \shortstack{4-agent\\complete} & \shortstack{5-agent\\ring} & \shortstack{8-agent\\sparse} & \shortstack{6-agent path\\$H{=}24$} & Overall \\
 \midrule
-\input{generated/main_table.tex}
+\input{generated/confirm_table.tex}
 \end{tabular}
 \end{table}
 
-\subsection{Study 2: a two-parameter rule beats every learned seed}\label{sec:strong}
+\subsection{A two-parameter rule beats every learned seed}\label{sec:strong}
 
-The registered primary test resolved \emph{bid-price superior}. The rule reached \bpFrac\% of the optimum, and PPO minus bid-price was $\ppoMinusBp$ (95\% CI $[\ppoMinusBpLo,\ppoMinusBpHi]$), with no PPO seed ahead; DQN minus bid-price was $\dqnMinusBp$. The result holds on the two fully fresh catalogs alone (bid-price \bpFracFresh\%). CE-DP with no logged data reached \ceZeroFrac\% (\cref{fig:fraction}).
+The registered primary test resolved \emph{bid-price superior}. The rule reached \cfFracBp\% of the optimum (\cfFracMinBp--\cfFracMaxBp\% on every catalog), and PPO minus bid-price was $\cfPpoMinusBp$ (95\% CI $[\cfPpoMinusBpLo,\cfPpoMinusBpHi]$), with no PPO seed ahead; the best seed reached \cfPpoBestSeedFrac\%. DQN minus bid-price was $\cfDqnMinusBp$ (CI $[\cfDqnMinusBpLo,\cfDqnMinusBpHi]$), also \emph{bid-price superior}. The rule closes \cfGapClosed\% of the gap between PPO and the optimum. CE-DP with no logged data reached \cfFracCe\% (\cref{fig:fraction}).
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{fig_fraction_online.pdf}
+\includegraphics[width=\textwidth]{fig_confirm.pdf}
 \caption{Percentage of the optimum on each sealed catalog. Dots are individual PPO and DQN seeds.}
 \label{fig:fraction}
 \end{figure}
 
-\paragraph{Why the simple rules win.} Knowing \emph{what} gains can appear and how many pairs remain is worth almost everything; knowing \emph{how} demand evolves is worth almost nothing, since CE-DP with a crude guess of $P$ nearly matches the optimum. Even perfect foresight adds only \foresightGain\% over online DP. The learners' shortfall is therefore budget pacing, which a closed-form quantile rule does better than a network trained on reward. Consistently, removing the remaining-budget or remaining-time input hurt the learners most in development (\cref{app:training}). The gap was already visible before the test was opened: on validation catalogs the selected rule scored \bpValMean, while the tuned learners had scored \develRPPO--\develPPO{} in development.
+\paragraph{Why the simple rules win.} Knowing \emph{what} gains can appear and how many pairs remain is worth almost everything; knowing \emph{how} demand evolves is worth almost nothing, since CE-DP with a crude guess of $P$ nearly matches the optimum. Even perfect foresight adds only \cfForesight\% over online DP. The learners' shortfall is therefore budget pacing, which a closed-form quantile rule does better than a network trained on reward. Consistently, removing the remaining-budget or remaining-time input hurt the learners most in development (\cref{app:training}). The gap was already visible before the test was opened: on validation catalogs the learner-strength check found PPO at \lsPPOFrac\% of the optimum against \lsRuleFrac\% for the rule.
 
 \subsection{Three registered follow-ups}\label{sec:followups}
 
-All three use development and validation data only and cannot change a locked decision.
+All three use development and validation data only; none reads test data.
 \begin{itemize}[leftmargin=*]
-  \item \emph{Were the learners under-tuned?} With a wider grid (widths up to 256, learning rates up to $10^{-2}$), about three times longer training, a calibrated PPO value baseline, and 6 seeds, PPO reached \lsPPOFrac\% of the optimum against \lsRuleFrac\% for the rule (difference $\lsPPOMinusRule$, CI $[\lsPPOLo,\lsPPOHi]$). PPO plateaued by 4{,}000 episodes, and DQN declined with longer training (\cref{app:strength}).
+  \item \emph{Were the learners under-tuned?} With a wider grid (widths up to 256, learning rates up to $10^{-2}$), about three times longer training, a calibrated PPO value baseline, and 6 seeds, PPO reached \lsPPOFrac\% of the optimum against \lsRuleFrac\% for the rule (difference $\lsPPOMinusRule$, CI $[\lsPPOLo,\lsPPOHi]$). PPO plateaued by 4{,}000 episodes, and DQN declined with longer training (\cref{app:strength}). The configurations it selected are the ones used in the main evaluation.
   \item \emph{A harder variant designed for learning.} In a variant with a hidden demand regime that only history reveals, the best learner (\rgBestName) reached \rgBestFrac\% of the optimum for that variant against \rgRuleFrac\% for the rule. The registered futility rule stopped the study before its test, and its fresh test split was never opened (\cref{app:regime}).
   \item \emph{Other dynamics.} Under six alternative transition matrices and the original, the bid-price rule kept \trBpMin--\trBpMax\% of the optimum. CE-DP's crude guess held at $\ge$\trCeOkMin\% except when each state has an 80\%-likely successor (\trCeSucc\%), where ten logged episodes restored \trCeSuccKten\% (\cref{app:transitions}). Pacing generalizes; the near-irrelevance of the dynamics holds only for weakly structured chains.
 \end{itemize}
@@ -184,21 +186,21 @@ All three use development and validation data only and cannot change a locked de
 \section{Audit}\label{sec:audit}
 %======================================================================
 
-A separate module re-derived every locked-study number from raw records, to within $10^{-9}$, and re-certified every sealed request. It also found a real defect: a seed collision made two sealed test catalogs reuse the dynamics of development catalogs (their requests are fresh). Every conclusion holds on the two fully fresh catalogs alone. Code, splits, records, and checkpoints are provided as anonymized supplementary material, and every number in this paper is generated from them.
+A separate module re-derived every number of the earlier evaluation from raw records, to within $10^{-9}$, and re-certified every sealed request. It also found a real defect there: a seed collision made two of the earlier test catalogs reuse the dynamics of development catalogs (their requests were fresh). The current split's generator rejects such reuse. The paper's build script re-derives every number of the main evaluation from the raw episode records, again to within $10^{-9}$. Code, splits, records, and checkpoints are provided as anonymized supplementary material, and every number in this paper is generated from them.
 
 %======================================================================
 \section{Discussion and limitations}\label{sec:discussion}
 %======================================================================
 
-In budgeted allocation, greedy is a straw man because it ignores the opportunity cost of a unit. We recommend registering at least one pacing rule and one certainty-equivalent planner among the baselines, and reporting learners as a percentage of an exact optimum next to them, so that ``86\% of optimal'' is read against ``97\% from two parameters''. Preregistration made our negative result unambiguous, but it cannot fix a weak baseline set chosen in advance.
+In budgeted allocation, greedy is a straw man because it ignores the opportunity cost of a unit. Our earlier evaluation shows the consequence (\cref{app:earlier}). With greedy as the strongest registered baseline, it found PPO superior to greedy by $\ppoMinusGreedy$ (95\% CI $[\ppoMinusGreedyLo,\ppoMinusGreedyHi]$), a clean, audited, preregistered result. A bid-price rule added afterwards beat every learned seed, and the main evaluation reproduced that reversal on fresh data with everything fixed in advance. We recommend registering at least one pacing rule and one certainty-equivalent planner among the baselines, and reporting learners as a percentage of an exact optimum next to them, so that ``\cfFracPpo\% of optimal'' is read against ``\cfFracBp\% from two parameters''. Preregistration made our negative result unambiguous, but it cannot fix a weak baseline set chosen in advance.
 
-\emph{Limitations.} The study is small (at most eight agents, 14 states, four test catalogs). Study 2 was run after the test catalogs had been opened for Study 1; it was registered before running and tuned only on validation data, but a single preregistration covering both studies would have been stronger. Two test catalogs leak dynamics. All catalogs come from one generator, and only MLP learners were tested. The quantum model is idealized (single-hop links, no hardware).
+\emph{Limitations.} The study is small (at most eight agents, 14 states, four test catalogs). Which strong baselines to include was decided after the earlier evaluation, though on different test data. \cfPpoSame{} of the 12 PPO seeds converged to the same test score, so PPO's interval reflects little training variance. All catalogs come from one generator, and only MLP learners were tested. The quantum model is idealized (single-hop links, no hardware).
 
 %======================================================================
 \section{Conclusion}\label{sec:conclusion}
 %======================================================================
 
-Deep RL beat greedy decisively and transferred to larger graphs, yet a two-parameter pacing rule beat every learned model, and three registered follow-ups left the gap in place. BellRoute's exact optimum makes such comparisons precise, and our record shows how a careful study can still overclaim when its baselines are too weak.
+Deep RL beat greedy decisively and transferred to a larger graph and a longer horizon, yet on a fresh test split opened once, with every method fixed in advance, a two-parameter pacing rule beat every learned model, and three registered follow-ups left the gap in place. BellRoute's exact optimum makes such comparisons precise, and our record shows how a careful study can still overclaim when its baselines are too weak.
 
 \subsubsection*{Broader impact statement}
 This work concerns resource allocation in simulated quantum networks and RL evaluation methodology. Its message, to compare learned controllers with strong classical rules, should reduce unnecessary complexity in deployed systems.
@@ -224,13 +226,36 @@ The experiment code, analysis, audit, and drafts of this manuscript were produce
 
 \begin{table}[H]
 \centering\small
-\caption{All catalogs. ``Stay'' and ``Next'' are mean probabilities of staying in the same state and of moving to the next state in the generator's cycle. $^\dagger$Dynamics shared with a development catalog.}
+\caption{All catalogs. ``Stay'' and ``Next'' are mean probabilities of staying in the same state and of moving to the next state in the generator's cycle. ``Earlier test'' is the split of \cref{app:earlier}; $^\dagger$dynamics shared with a development catalog.}
 \input{generated/catalog_table.tex}
+\end{table}
+
+\section{The earlier evaluation}\label{app:earlier}
+
+The earlier evaluation used a separate sealed split (``Earlier test'' in the catalog table). It had two parts.
+
+\emph{Learners against simple baselines.} We trained 12 PPO and 12 DQN models (width 64, learning rate $10^{-3}$, 2{,}500 episodes each) and registered three tests: PPO superior to greedy, PPO superior to DQN, and PPO--DQN equivalence within $\pm5\%$ of the optimum. PPO beat greedy by $\ppoMinusGreedy$ (95\% CI $[\ppoMinusGreedyLo,\ppoMinusGreedyHi]$), with all seeds ahead; PPO was not superior to DQN, and the two were equivalent (90\% interval $[\ppoMinusDqnLoNinety,\ppoMinusDqnHiNinety]$ within $\pm\eqMargin$). The learners reached \fracPPO\% and \fracDQN\% of the optimum against \fracGreedy\% for greedy.
+
+\emph{Strong baselines.} After an independent audit, we registered a test of the bid-price rule and CE-DP on the same split. Both were tuned on validation catalogs only, and the code wrote their selection to disk before reading any sealed file; the learned results were read from the archive. The primary test resolved \emph{bid-price superior}: PPO minus bid-price was $\ppoMinusBp$ (CI $[\ppoMinusBpLo,\ppoMinusBpHi]$), and the rule reached \bpFrac\% against \ceZeroFrac\% for CE-DP. The result also held on the two catalogs whose dynamics were fresh (bid-price \bpFracFresh\%). Because this test came after the split had been opened, we repeated the whole comparison on a fresh split (\cref{sec:protocol}).
+
+\emph{Imperfect hardware.} Under heralded loss, a pair fails with some probability and is consumed anyway; PPO then kept \ratioHerSevenFive{} of its surplus at 75\% success and \ratioHerFive{} at 50\%. Under Werner noise, pairs have reduced fidelity, and every method's surplus vanished at visibility $v\le0.8$, because no sealed request kept a quantum advantage there (the lowest fidelity threshold was \thrTestMin).
+
+\begin{table}[H]
+\centering
+\caption{Earlier sealed test catalogs: percentage of the online-DP optimum, with mean surplus in parentheses. Learned rows average 12 seeds. $^\dagger$Dynamics shared with a development catalog.}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Method & \shortstack{4-agent\\complete$^\dagger$} & \shortstack{6-agent\\ring} & \shortstack{8-agent\\sparse} & \shortstack{4-agent path\\$H{=}24^\dagger$} & Overall \\
+\midrule
+\input{generated/main_table.tex}
+\end{tabular}
 \end{table}
 
 \section{Learner training}\label{app:training}
 
-Learners use Adam \citep{kingma2015adam}, gradient clipping at 5, and reward scale 10. DQN uses a 20{,}000-transition replay buffer, minibatches of 64, and target copies every 200 updates; PPO uses 16-episode rollouts and 4 epochs of the clipped objective. Each learner was tuned over three (width, learning-rate) configurations with two seeds on development data; all selected width 64 and learning rate $10^{-3}$. In Double DQN ablations, removing the remaining-budget input cost \ablDropNoBudget\% of validation surplus and removing the remaining-time input cost \ablDropNoHorizon\%.
+Learners use Adam \citep{kingma2015adam}, gradient clipping at 5, and reward scale 10. DQN uses a 20{,}000-transition replay buffer, minibatches of 64, and target copies every 200 updates; PPO uses 16-episode rollouts and 4 epochs of the clipped objective. For the earlier evaluation, each learner was tuned over three (width, learning-rate) configurations with two seeds on development data; all selected width 64 and learning rate $10^{-3}$. The main evaluation uses the configurations selected in \cref{app:strength}. In Double DQN ablations, removing the remaining-budget input cost \ablDropNoBudget\% of validation surplus and removing the remaining-time input cost \ablDropNoHorizon\%.
 
 \section{Learner-strength check}\label{app:strength}
 
