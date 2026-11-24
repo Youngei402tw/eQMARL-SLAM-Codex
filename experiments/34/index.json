@@ -4,9 +4,10 @@
   "runs": [
     {
       "run_id": "34-unified-confirmatory_attempt-01",
-      "status": "planned",
+      "status": "completed",
       "config_path": "configs/stage34/34-unified-confirmatory_attempt-01.yaml",
-      "config_sha256": "e718acf6f81f18721eb2f69275ac723b708d262e69c6556e9e4a5ed793ea262d"
+      "config_sha256": "e718acf6f81f18721eb2f69275ac723b708d262e69c6556e9e4a5ed793ea262d",
+      "decision": "bid_price_superior"
     }
   ]
 }

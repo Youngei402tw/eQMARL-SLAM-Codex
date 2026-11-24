@@ -1,0 +1,176 @@
+{
+  "schema_version": "0.1.0",
+  "run_id": "34-unified-confirmatory_attempt-01",
+  "stage": "34",
+  "protocol_id": "bellroute-unified-confirmatory-v1",
+  "hypothesis": "Primary: on a sealed test split opened once, with every method fixed beforehand, the selected PPO learner minus the validation-tuned bid-price rule has a seed-bootstrap 95% interval entirely below zero (bid-price superior). Secondary: PPO superior to greedy; DQN versus bid-price; PPO-DQN equivalence within 5% of the online-DP mean.",
+  "method": "Tune the bid-price rule on the validation catalogs only and write the selection; train 12 fresh PPO (calibrated value) and 12 fresh DQN models on the 12 training catalogs with the Stage-32 validation-selected configurations and save checkpoints; then load the hash-locked qip_v2 test split, certify its request types, and evaluate greedy, bid-price, CE-DP (no data), online DP, the future-clairvoyant reference, and all 24 models once on the same 500 sequences per catalog.",
+  "status": "completed",
+  "source_commit": "fd6744e138fe8cf97fc843b4252f5bb6b8bc753a",
+  "dependency_completion_commit": "cd030dadd6044cbb298bc9a97c5d0956a4c51f33",
+  "dirty_tree": false,
+  "config_sha256": "e718acf6f81f18721eb2f69275ac723b708d262e69c6556e9e4a5ed793ea262d",
+  "seed_streams": {
+    "model_init": 34000,
+    "critic_init": null,
+    "map": null,
+    "evaluation_map": 4000000,
+    "sensor": null,
+    "action": null,
+    "quantum_shots": null,
+    "communication": null
+  },
+  "split_manifests": {
+    "train": null,
+    "development": {
+      "path": "configs/data/qip_v1/development-request-types.json",
+      "sha256": "cc9a46793186e9bb1bd588c21d4d555db6c4d0a6a921021f4f8b41356496071c"
+    },
+    "validation": {
+      "path": "configs/data/qip_v1/validation-request-types.json",
+      "sha256": "7368d5e01bd2f34e73646a74f65246da3e07e69e51604a0ecb9a5d7d43fd1f46"
+    },
+    "test": {
+      "path": "configs/data/qip_v1/test-request-types.json",
+      "sha256": "4a25aaf95a279ce384637fb6aa1bf8e699750e45a1fa2959549c6ccd8d6c7ee0"
+    }
+  },
+  "runtime": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "lockfile_sha256": "21a2ba693acfa172b5b0a4a04b49f14e5cb8372e75eb3fe6e5753dbab0f3a146",
+    "platform": "Linux-6.18.44-fc-v819-x86_64-with-glibc2.39",
+    "hardware": {
+      "device": "CPU",
+      "available_cpus": 4,
+      "max_job_threads": 1
+    },
+    "dependencies": {
+      "jsonschema-specifications": "2025.9.1",
+      "urllib3": "2.8.0",
+      "filelock": "4.2.4",
+      "charset-normalizer": "3.5.2",
+      "rpds-py": "2026.9.1",
+      "scipy-openblas32": "0.3.34.237.2",
+      "setuptools": "84.2.0",
+      "jsonschema": "4.26.0",
+      "termcolor": "3.3.0",
+      "requests": "2.34.2",
+      "packaging": "26.3",
+      "Jinja2": "3.1.6",
+      "pluggy": "1.7.0",
+      "numpy": "2.4.6",
+      "sympy": "1.14.0",
+      "gymnasium": "1.4.0",
+      "highspy": "1.15.1",
+      "Pygments": "2.21.0",
+      "cloudpickle": "3.1.2",
+      "pennylane": "0.45.1",
+      "appdirs": "1.4.4",
+      "gast": "0.7.0",
+      "fsspec": "2026.9.0",
+      "joblib": "1.6.0",
+      "PyYAML": "6.0.3",
+      "osqp": "1.1.3",
+      "scipy": "1.17.1",
+      "referencing": "0.37.0",
+      "kiwisolver": "1.5.1",
+      "certifi": "2026.10.19",
+      "cffi": "2.1.1",
+      "idna": "3.20",
+      "networkx": "3.6.1",
+      "pillow": "13.0.0",
+      "python-dateutil": "4.0.0",
+      "scs": "3.3.1",
+      "fonttools": "4.68.0",
+      "pennylane_lightning": "0.45.0",
+      "diastatic-malt": "2.15.3",
+      "sparsediffpy": "0.6.1",
+      "attrs": "26.1.0",
+      "pip": "24.0",
+      "pycparser": "3.12",
+      "cachetools": "7.2.4",
+      "matplotlib": "3.10.7",
+      "pytest": "9.1.1",
+      "qdldl": "0.1.9.post1",
+      "cycler": "0.12.1",
+      "gtsam": "4.3.0",
+      "cvxpy": "1.9.3",
+      "rustworkx": "0.18.1",
+      "contourpy": "1.4.0",
+      "iniconfig": "2.3.1",
+      "mpmath": "1.3.0",
+      "clarabel": "0.11.1",
+      "Farama-Notifications": "0.0.6",
+      "autoray": "0.8.4",
+      "typing_extensions": "4.16.0",
+      "tzdata": "2026.6",
+      "tomlkit": "0.15.2",
+      "torch": "2.14.1+cpu",
+      "autograd": "1.8.0",
+      "MarkupSafe": "3.0.4",
+      "pyparsing": "3.3.3"
+    }
+  },
+  "model": {
+    "actor": "masked graph-conditioned PPO (calibrated value) and DQN",
+    "encoder": "permutation-invariant public-edge encoder",
+    "critic": "PPO state value or DQN target network",
+    "parameter_counts": {
+      "reported_per_checkpoint": true
+    },
+    "optimizer": "Adam; Stage-32-selected width 64, learning rate 3e-3"
+  },
+  "quantum": {
+    "device": "analytic request certificates computed at evaluation for the sealed types",
+    "wires": 2,
+    "shots": null,
+    "diff_method": "float32 allocator learning",
+    "dtype": "float64",
+    "entanglement": "one budgeted pair per served edge",
+    "observables": [
+      "recorded expected parity success"
+    ],
+    "noise": "ideal",
+    "resource_accounting": "decisions, updates; no circuits or shots"
+  },
+  "budget": {
+    "profile": "confirmatory",
+    "primitive_steps": 200000000,
+    "wall_seconds": 21600
+  },
+  "resources_consumed": {
+    "primitive_steps": 3810000,
+    "decisions": 3810000,
+    "updates": 851244,
+    "wall_seconds": 6483.526793626,
+    "cpu_core_hours": 6.741792250277778,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "execution_segments": [
+    {
+      "started_utc": "2026-11-24T08:29:49.914740+00:00",
+      "ended_utc": "2026-11-24T10:17:53.481235+00:00",
+      "primitive_steps": 3810000,
+      "decisions": 3810000,
+      "updates": 851244,
+      "wall_seconds": 6483.526793626,
+      "cpu_core_hours": 6.741792250277778,
+      "gpu_device_hours": 0,
+      "circuit_evaluations": 0,
+      "shots": 0
+    }
+  ],
+  "evaluation": {
+    "policy_mode": "sampled in training; argmax at evaluation",
+    "checkpoint_selection": "final checkpoint",
+    "metrics_protocol": "bellroute-unified-confirmatory-v1"
+  },
+  "artifacts": "artifact_manifest.json",
+  "failure": null,
+  "publication": {
+    "status": "pending",
+    "source_remote_verified": true
+  }
+}

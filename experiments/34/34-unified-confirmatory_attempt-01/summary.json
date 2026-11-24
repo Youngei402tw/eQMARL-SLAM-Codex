@@ -1,0 +1,33 @@
+{
+  "run_id": "34-unified-confirmatory_attempt-01",
+  "source_commit": "fd6744e138fe8cf97fc843b4252f5bb6b8bc753a",
+  "config_sha256": "e718acf6f81f18721eb2f69275ac723b708d262e69c6556e9e4a5ed793ea262d",
+  "metrics_sha256": "048986d0d9a6944c601c06c1e18b44bdd29ac863c0a9d682ff732a49b886404b",
+  "metrics_rows": 61,
+  "analysis_version": "unified-confirmatory-v1",
+  "passed": true,
+  "gates": {
+    "all_models_trained": true,
+    "all_models_evaluated": true,
+    "certificates_within_tolerance": true,
+    "selection_written_before_test": true,
+    "finite": true
+  },
+  "resources_consumed": {
+    "primitive_steps": 3810000,
+    "decisions": 3810000,
+    "updates": 851244,
+    "wall_seconds": 6483.526793626,
+    "cpu_core_hours": 6.741792250277778,
+    "gpu_device_hours": 0,
+    "circuit_evaluations": 0,
+    "shots": 0
+  },
+  "interpretation": "Single confirmatory evaluation of all methods on a test split opened exactly once.",
+  "analysis": {
+    "decision_primary": "bid_price_superior",
+    "ppo_superior_to_greedy": true,
+    "dqn_vs_bid_price": "bid_price_superior",
+    "ppo_dqn_equivalent": false
+  }
+}

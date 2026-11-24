@@ -1,0 +1,12 @@
+{
+  "bid_price": {
+    "alpha": 0.75,
+    "prior_weight": 320,
+    "validation_mean": 0.35839154407940804
+  },
+  "certainty_equivalent": {
+    "warmup_episodes": 0,
+    "rho_training": 0.3462859624670091
+  },
+  "test_data_loaded": false
+}
