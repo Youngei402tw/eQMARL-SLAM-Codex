@@ -322,12 +322,13 @@ The work ran in registered stages. Each stage committed and published its code, 
 
 \paragraph{Main evaluation.} Before any test file was read, the evaluation code tuned the bid-price rule over \bpConfigs{} configurations on the four validation catalogs (500 sequences each) and wrote the selection to disk. It then trained 12 fresh PPO and 12 fresh DQN models on the 12 development and validation catalogs, with the configurations selected in the learner-strength check (width 64, learning rate $3\times10^{-3}$; PPO with a calibrated value baseline for 8{,}000 episodes, DQN for 6{,}000), and saved every checkpoint. CE-DP used $K=0$ and $\rho=\cfRho$. Only then did the code read the test split, re-certify its 16 request types (largest SDP gap \cfSdpMax), and evaluate every method once on the same 500 paired sequences per catalog.
 
-\paragraph{Registered tests.} The unit of analysis is the training seed. A seed's score is its mean surplus, averaged with equal weight over the four catalogs. Intervals are percentile bootstraps over seeds with 20{,}000 resamples \citep{efron1993introduction}.
+\paragraph{Registered tests.} We compare two methods by the difference in their mean surplus. For example, ``PPO minus bid-price'' is PPO's mean surplus minus the rule's, each averaged over 500 sequences per catalog and then with equal weight over the four test catalogs; a negative value means PPO earned less. Each learner has 12 training seeds, and its score varies with the seed. To account for this, we compute a 95\% interval for each difference by resampling the seeds 20{,}000 times (a percentile bootstrap, \citealp{efron1993introduction}). The decision rule was fixed in advance:
 \begin{itemize}[leftmargin=*]
-  \item \emph{Primary test:} PPO minus bid-price. The outcome is ``learned superior'' if the 95\% lower bound is $>0$, ``bid-price superior'' if the upper bound is $<0$, and inconclusive otherwise.
-  \item \emph{Secondary tests:} PPO superior to greedy (95\% lower bound above 0); DQN minus bid-price, with the same three-way rule; and PPO--DQN equivalence (the 90\% interval lies inside $\pm5\%$ of the online-DP mean).
-  \item \emph{Descriptive:} each method's fraction of online DP, CE-DP, the future-clairvoyant reference, and per-catalog means.
+  \item if the whole interval lies below zero, the second method wins (for the primary test, ``bid-price superior'');
+  \item if it lies above zero, the first method wins (``learned superior'');
+  \item if it contains zero, the test is inconclusive.
 \end{itemize}
+The \emph{primary test} is PPO minus bid-price. The \emph{secondary tests} are PPO minus greedy, DQN minus bid-price, and PPO minus DQN. For the last, we call the two learners \emph{equivalent} (practically the same) if the whole 90\% interval lies within $\pm5\%$ of the online-DP mean surplus. We also report, without a test, each method's percentage of online DP, CE-DP, the future-clairvoyant reference, and per-catalog means.
 
 %======================================================================
 \section{Results}\label{sec:results}
